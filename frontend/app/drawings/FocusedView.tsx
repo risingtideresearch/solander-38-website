@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import {
   LiaArrowLeftSolid,
   LiaArrowRightSolid,
@@ -9,6 +10,7 @@ import styles from "./styles.module.scss";
 import imageSetStyles from "./../components/image-set.module.scss";
 import { BiCollapseAlt, BiLink } from "react-icons/bi";
 import { Image } from "../components/Image";
+import { Modal } from "../components/Modal/Modal";
 
 function parseDateFromDescription(str: string | null | undefined): Date | null {
   if (!str) return null;
@@ -61,6 +63,22 @@ export function FocusedView({
   popover = false,
   title,
 }) {
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft" && index > 0) {
+        onPrev();
+      } else if (e.key === "ArrowRight" && index < all.length - 1) {
+        onNext();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onPrev, onNext, index, all.length]);
+
   if (!asset) {
     return <></>;
   }
@@ -68,30 +86,9 @@ export function FocusedView({
   const total = all.length;
   const isSanityImage = asset._type == "image";
 
-  return (
-    <div
-      className={"pane " + styles["focused-view"]}
-      style={
-        popover
-          ? {
-              position: "fixed",
-              padding: "0.5rem",
-              top: 0,
-              left: 0,
-              zIndex: 100,
-              height: "100vh",
-              overflow: "auto",
-            }
-          : {}
-      }
-    >
-      <div
-      // style={popover ? {
-      //   position: "absolute",
-      //   top: "3.25rem",
-      //   zIndex: 1,
-      // } : {}}
-      >
+  const content = (
+    <div className={"pane " + styles["focused-view"]}>
+      <div>
         {popover ? (
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {title ? <h3>{title}</h3> : <span></span>}
@@ -229,7 +226,7 @@ export function FocusedView({
               </a>
             </div>
             <div className={styles["focused-view__body"]}>
-              <div style={{ position: 'relative'}}>
+              <div style={{ position: "relative" }}>
                 <img
                   src={asset.rel_path}
                   style={{
@@ -251,7 +248,16 @@ export function FocusedView({
           </>
         )}
       </div>
-      {/* <pre>{drawing.extracted_text}</pre> */}
     </div>
   );
+
+  if (popover) {
+    return (
+      <Modal isOpen={true} onClose={onClose} fullScreen={true}>
+        {content}
+      </Modal>
+    );
+  }
+
+  return content;
 }

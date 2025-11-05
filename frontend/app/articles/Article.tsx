@@ -1,7 +1,7 @@
 import { PortableText } from "next-sanity";
 import { Canvas3D } from "../anatomy/three-d/Canvas3D";
 import styles from "./page.module.scss";
-import TogglePane from "../components/TogglePane/TogglePane";
+import AnatomyPane from "./AnatomyPane/AnatomyPane";
 import Link from "next/link";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import ImageSet from "../components/ImageSet";
@@ -47,7 +47,7 @@ const components = {
         </figure>
       ),
     models3D: ({ value }) => (
-      <TogglePane
+      <AnatomyPane
         title={`Anatomy / superstructure jig`}
         defaultSize={{ height: "30rem" }}
         expandedSize={{ height: "100%" }}
@@ -76,7 +76,7 @@ const components = {
             }}
           />
         </div>
-      </TogglePane>
+      </AnatomyPane>
     ),
     person: ({ value }) => {
       return (
@@ -178,7 +178,7 @@ export default async function Article({ data, navigation }) {
             <p>{data.subtitle}</p>
           </div>
           {data.relatedModels && (
-            <TogglePane
+            <AnatomyPane
               title={`Anatomy / ${data.title}`}
               defaultSize={{ maxHeight: "30rem", aspectRatio: 1 }}
               expandedSize={{ height: "100%" }}
@@ -204,7 +204,7 @@ export default async function Article({ data, navigation }) {
                   }}
                 />
               </div>
-            </TogglePane>
+            </AnatomyPane>
           )}
         </div>
 
