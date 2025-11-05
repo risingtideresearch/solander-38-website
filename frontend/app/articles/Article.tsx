@@ -15,6 +15,7 @@ const components = {
           assets={value.imageSet}
           title={value.title}
           variableSize={false}
+          popover={true}
         />
         {value.caption && <figcaption>{value.caption}</figcaption>}
       </figure>

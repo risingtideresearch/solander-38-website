@@ -14,6 +14,11 @@ export type Article = {
   title: string;
   slug: string;
   relatedModels: Array<string>;
+  section: {
+    name: string;
+    slug: string;
+  };
+  content: Array<unknown>;
 };
 
 type GLBExportMetadata = {

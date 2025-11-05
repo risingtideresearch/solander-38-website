@@ -11,17 +11,17 @@ import styles from './image-set.module.scss';
 interface ImageSetProps {
   assets: unknown[];
   defaultUUID?: string;
-  updateURL?: boolean;
   variableSize?: boolean;
   title?: string;
+  popover?: boolean;
 }
 
 export default function ImageSet({
   assets,
   defaultUUID,
-  updateURL = false,
   variableSize = false,
   title,
+  popover,
 }: ImageSetProps) {
   const [focusIndex, setFocusIndex] = useState(
     defaultUUID ? assets.findIndex((a: any) => a.uuid === defaultUUID) : -1
@@ -35,19 +35,6 @@ export default function ImageSet({
     if (focusIndex < assets.length - 1) setFocusIndex(focusIndex + 1);
   };
 
-  useEffect(() => {
-    if (updateURL) {
-      if (focusIndex === -1) {
-        window.history.pushState(null, "", "/drawings");
-      } else {
-        const asset = assets[focusIndex] as any;
-        if (asset?.uuid) {
-          window.history.pushState(null, "", `/drawings/file/${asset.uuid}`);
-        }
-      }
-    }
-  }, [focusIndex, updateURL, assets]);
-
   const focusedAsset = focusIndex > -1 ? assets[focusIndex] : null;
 
   return (
@@ -60,7 +47,7 @@ export default function ImageSet({
           onPrev={handlePrev}
           onNext={handleNext}
           onClose={() => setFocusIndex(-1)}
-          popover={true}
+          popover={popover}
           title={title}
         />
       ) : (

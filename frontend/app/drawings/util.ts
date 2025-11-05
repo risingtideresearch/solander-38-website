@@ -1,3 +1,5 @@
+import { Article } from "../anatomy/page";
+
 export const cleanFilename = (asset): string => {
   if (!asset) {
     return "";
@@ -20,3 +22,41 @@ export const cleanFilename = (asset): string => {
 
   return clean;
 };
+
+/**
+ *
+ */
+export type DrawingsArticleDictionary = {
+  [key: string]: Array<{
+    slug: string;
+    title: string;
+    section: {
+      slug: string;
+      title: string;
+    };
+  }>;
+};
+export function getDrawingArticleDictionary(articles: Array<Article>): DrawingsArticleDictionary {
+  const dictionary = {};
+
+  articles.forEach((article) => {
+    article.content?.forEach((p) => {
+      if (p.imageSet) {
+        p.imageSet?.forEach((item) => {
+          if (item._type == "drawingImage") {
+            if (!dictionary[item.drawing]) {
+              dictionary[item.drawing] = [];
+            }
+            dictionary[item.drawing].push({
+              slug: article.slug,
+              title: article.title,
+              section: article.section,
+            });
+          }
+        });
+      }
+    });
+  });
+
+  return dictionary;
+}

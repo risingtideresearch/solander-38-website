@@ -3,7 +3,8 @@ import path from "path";
 import TableOfContents from "@/app/toc/TableOfContents";
 import Drawings from "../../Drawings";
 import Navigation from "@/app/components/Navigation";
-import { fetchSections } from "@/sanity/lib/utils";
+import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
+import { getDrawingArticleDictionary } from "../../util";
 
 export async function generateStaticParams() {
   const drawingsPath = path.join(
@@ -38,17 +39,21 @@ export default async function Page({
   
   const sections = await fetchSections();
 
+  const articles = await fetchArticles();
+  const drawingsArticleDictionary = getDrawingArticleDictionary(articles.data);
+
   return (
     <>
-      <TableOfContents sections={sections.data?.sections || []}>
+      {/* <TableOfContents sections={sections.data?.sections || []}> */}
         <Navigation />
         <main style={{ paddingLeft: "16.5rem" }}>
           <Drawings
             drawings={drawings}
             defaultUUID={slug}
+            drawingsArticleDictionary={drawingsArticleDictionary}
           />
         </main>
-      </TableOfContents>
+      {/* </TableOfContents> */}
     </>
   );
 }

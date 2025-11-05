@@ -61,7 +61,8 @@ export function FocusedView({
   index,
   all,
   popover = false,
-  title,
+  title = "",
+  children = null
 }) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

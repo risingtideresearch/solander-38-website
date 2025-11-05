@@ -247,7 +247,17 @@ export const articlesQuery = (slug?: string) => {
     "section": *[_type=="sections"][0].sections[references(^._id)][0] {
       name,
       "slug": slug.current
-    }
+    },
+    content[]{
+      _type == 'imageSet' => {
+        ...,
+        imageSet[]{
+          _type == 'drawingImage' => {
+            ...,
+          }
+        }
+      },
+    }   
   }`;
 };
 

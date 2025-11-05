@@ -3,17 +3,20 @@
 import { useState } from "react";
 import { Drawing } from "./types";
 import DrawingsGallery from "./DrawingsGallery";
+import { DrawingsArticleDictionary } from "./util";
 
 interface DrawingsProps {
-    drawings: {
-        files: Array<Drawing>,
-    },
-    defaultUUID?: string
+  drawings: {
+    files: Array<Drawing>;
+  };
+  defaultUUID?: string;
+  drawingsArticleDictionary: DrawingsArticleDictionary;
 }
 
 export default function Drawings({
   drawings,
   defaultUUID,
+  drawingsArticleDictionary,
 }: DrawingsProps) {
   const [search, setSearch] = useState("");
 
@@ -34,17 +37,19 @@ export default function Drawings({
           const val = e.target.value;
           setSearch(val);
 
-        //   if (val.trim() != "") {
-        //     setFocusIndex(-1);
-        //     window.history.pushState(null, "", "/drawings");
-        //   }
+          //   if (val.trim() != "") {
+          //     setFocusIndex(-1);
+          //     window.history.pushState(null, "", "/drawings");
+          //   }
         }}
       />
 
-      <DrawingsGallery drawings={drawings}
+      <DrawingsGallery
+        drawings={drawings}
         search={search}
         defaultUUID={defaultUUID}
-        />
+        drawingsArticleDictionary={drawingsArticleDictionary}
+      />
     </div>
   );
 }

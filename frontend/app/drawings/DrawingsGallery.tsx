@@ -1,11 +1,14 @@
 "use client";
 
-import { useContext, useState, useMemo, useEffect } from "react";
+import { useContext, useState, useMemo, useEffect, useRef } from "react";
 import { TOCContext } from "../toc/TableOfContents";
 import { FocusedView } from "./FocusedView";
 import { Drawing, DrawingGroup } from "./types";
 import { SYSTEM_ORDER } from "../consts";
-import ImageSet from "../components/ImageSet";
+import { DrawingCard } from "./DrawingCard";
+import styles from "./styles.module.scss";
+import { DrawingsArticleDictionary } from "./util";
+import RelatedArticles from "./RelatedArticles";
 
 function GroupHeader({ label, count }) {
   return (
@@ -67,8 +70,8 @@ function sortDrawingsByTime(drawings) {
     .sort((a, b) => a.filename.localeCompare(b.filename))
     .sort((a, b) =>
       (b.date_info?.date || "2024-01-01").localeCompare(
-        a.date_info?.date || "2024-01-01"
-      )
+        a.date_info?.date || "2024-01-01",
+      ),
     );
 }
 
@@ -102,6 +105,7 @@ function getGroupLabel(drawing: Drawing, mode) {
   }
   return drawing.group;
 }
+
 function groupDrawings(drawings: Drawing[], mode): DrawingGroup[] {
   const groups: DrawingGroup[] = [];
 
@@ -131,18 +135,23 @@ interface DrawingsGalleryProps {
   };
   search?: string;
   defaultUUID?: string;
+  drawingsArticleDictionary: DrawingsArticleDictionary;
 }
 
 export default function DrawingsGallery({
   drawings,
   search = "",
   defaultUUID,
+  drawingsArticleDictionary,
 }: DrawingsGalleryProps) {
   const toc = useContext(TOCContext);
+  const scrollPositionRef = useRef(0);
+  const isPopStateRef = useRef(false);
+
   const filteredAndSorted = useMemo(() => {
     const sourceData = drawings.files;
 
-    const filtered = filterDrawings(sourceData, search, null); //toc.section);
+    const filtered = filterDrawings(sourceData, search, null);
 
     return toc.mode === "date"
       ? sortDrawingsByTime(filtered)
@@ -150,58 +159,114 @@ export default function DrawingsGallery({
   }, [drawings, toc.mode, toc.section, search]);
 
   const [focusIndex, setFocusIndex] = useState(
-    defaultUUID ? filteredAndSorted.findIndex((d) => d.uuid == defaultUUID) : -1
+    defaultUUID
+      ? filteredAndSorted.findIndex((d) => d.uuid == defaultUUID)
+      : -1,
   );
-
-  // useEffect(() => {
-  //   window.history.pushState(null, '', `/drawings${focusIndex > -1 ? '/' + filteredAndSorted[focusIndex].uuid : ''}`)
-  // }, [focusIndex])
-
-  // useEffect(() => {
-  //   if (focusIndex > -1) {
-  //     setFocusIndex(-1);
-  //   }
-  // }, [toc.mode]);
 
   const groupedDrawings: Array<DrawingGroup> = groupDrawings(
     filteredAndSorted,
-    toc.mode
+    toc.mode,
   );
 
   const handlePrev = () => {
-    if (focusIndex > 0) setFocusIndex(focusIndex - 1);
-  };
-
-  const handleNext = () => {
-    if (focusIndex < filteredAndSorted.length - 1)
-      setFocusIndex(focusIndex + 1);
-  };
-
-  useEffect(() => {
-    if (focusIndex == -1) {
-      window.history.pushState(null, "", "/drawings");
-      // router.push("/drawings");
-    } else {
+    if (focusIndex > 0) {
+      const newIndex = focusIndex - 1;
+      setFocusIndex(newIndex);
       window.history.pushState(
         null,
         "",
-        `/drawings/file/${filteredAndSorted[focusIndex].uuid}`
+        `/drawings/file/${filteredAndSorted[newIndex].uuid}`,
       );
-      // router.push(`/drawings/file/${filteredAndSorted[focusIndex].uuid}`)
+    }
+  };
+
+  const handleNext = () => {
+    if (focusIndex < filteredAndSorted.length - 1) {
+      const newIndex = focusIndex + 1;
+      setFocusIndex(newIndex);
+      window.history.pushState(
+        null,
+        "",
+        `/drawings/file/${filteredAndSorted[newIndex].uuid}`,
+      );
+    }
+  };
+
+  const handleClick = (asset: Drawing) => {
+    // Save scroll position before opening focused view
+    scrollPositionRef.current = window.scrollY;
+
+    const newIndex = filteredAndSorted.indexOf(asset);
+    setFocusIndex(newIndex);
+    window.history.pushState(null, "", `/drawings/file/${asset.uuid}`);
+  };
+
+  const handleClose = () => {
+    setFocusIndex(-1);
+    window.history.pushState(null, "", "/drawings");
+  };
+
+  // Restore scroll position when returning to gallery
+  useEffect(() => {
+    if (focusIndex === -1 && scrollPositionRef.current > 0) {
+      // Use setTimeout to ensure DOM is ready
+      setTimeout(() => {
+        window.scrollTo(0, scrollPositionRef.current);
+      }, 0);
     }
   }, [focusIndex]);
+
+  // Handle browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      isPopStateRef.current = true;
+      const path = window.location.pathname;
+
+      if (path === "/drawings") {
+        setFocusIndex(-1);
+      } else if (path.startsWith("/drawings/file/")) {
+        const uuid = path.split("/drawings/file/")[1];
+        const index = filteredAndSorted.findIndex((d) => d.uuid === uuid);
+        if (index !== -1) {
+          // Save scroll position when navigating away via back button
+          if (focusIndex === -1) {
+            scrollPositionRef.current = window.scrollY;
+          }
+          setFocusIndex(index);
+        }
+      }
+
+      // Reset flag after state update
+      setTimeout(() => {
+        isPopStateRef.current = false;
+      }, 0);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [filteredAndSorted, focusIndex]);
+
+  console.log(drawingsArticleDictionary);
 
   return (
     <>
       {focusIndex > -1 ? (
-        <FocusedView
-          asset={filteredAndSorted[focusIndex]}
-          index={focusIndex}
-          all={filteredAndSorted}
-          onPrev={handlePrev}
-          onNext={handleNext}
-          onClose={() => setFocusIndex(-1)}
-        />
+        <>
+          <RelatedArticles uuid={filteredAndSorted[focusIndex].uuid} drawingsArticleDictionary={drawingsArticleDictionary}/>
+          <FocusedView
+            asset={filteredAndSorted[focusIndex]}
+            index={focusIndex}
+            all={filteredAndSorted}
+            onPrev={handlePrev}
+            onNext={handleNext}
+            popover={false}
+            onClose={handleClose}
+          />
+        </>
       ) : (
         <div>
           {groupedDrawings.map((group, groupIndex) => (
@@ -210,15 +275,24 @@ export default function DrawingsGallery({
                 marginTop: groupIndex === 0 ? 0 : "4rem",
                 display: "grid",
                 gridTemplateColumns: "1fr 12rem ",
+                paddingTop: "5rem",
+                marginBottom: "-5rem",
               }}
               key={group.label + groupIndex}
+              id={group.label.toLowerCase().replaceAll(" ", "-")}
             >
-              <ImageSet
-                assets={group.drawings}
-                onClick={(drawing) =>
-                  setFocusIndex(filteredAndSorted.indexOf(drawing))
-                }
-              />
+              <div className={styles.gallery}>
+                {group.drawings.map((asset: Drawing) => {
+                  return (
+                    <DrawingCard
+                      key={asset.id}
+                      drawing={asset}
+                      onClick={() => handleClick(asset)}
+                    />
+                  );
+                })}
+              </div>
+
               <GroupHeader label={group.label} count={group.drawings.length} />
             </section>
           ))}
