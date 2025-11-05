@@ -207,17 +207,14 @@ export default function DrawingsGallery({
     window.history.pushState(null, "", "/drawings");
   };
 
-  // Restore scroll position when returning to gallery
   useEffect(() => {
     if (focusIndex === -1 && scrollPositionRef.current > 0) {
-      // Use setTimeout to ensure DOM is ready
       setTimeout(() => {
         window.scrollTo(0, scrollPositionRef.current);
       }, 0);
-    }
+    } 
   }, [focusIndex]);
 
-  // Handle browser back/forward buttons
   useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
       isPopStateRef.current = true;
@@ -237,7 +234,6 @@ export default function DrawingsGallery({
         }
       }
 
-      // Reset flag after state update
       setTimeout(() => {
         isPopStateRef.current = false;
       }, 0);
@@ -250,13 +246,14 @@ export default function DrawingsGallery({
     };
   }, [filteredAndSorted, focusIndex]);
 
-  console.log(drawingsArticleDictionary);
-
   return (
     <>
       {focusIndex > -1 ? (
         <>
-          <RelatedArticles uuid={filteredAndSorted[focusIndex].uuid} drawingsArticleDictionary={drawingsArticleDictionary}/>
+          <RelatedArticles
+            uuid={filteredAndSorted[focusIndex].uuid}
+            drawingsArticleDictionary={drawingsArticleDictionary}
+          />
           <FocusedView
             asset={filteredAndSorted[focusIndex]}
             index={focusIndex}
@@ -275,8 +272,6 @@ export default function DrawingsGallery({
                 marginTop: groupIndex === 0 ? 0 : "4rem",
                 display: "grid",
                 gridTemplateColumns: "1fr 12rem ",
-                paddingTop: "5rem",
-                marginBottom: "-5rem",
               }}
               key={group.label + groupIndex}
               id={group.label.toLowerCase().replaceAll(" ", "-")}

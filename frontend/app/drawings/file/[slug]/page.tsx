@@ -37,7 +37,7 @@ export default async function Page({
 
   const drawings = JSON.parse(drawingsData);
   
-  const sections = await fetchSections();
+  // const sections = await fetchSections();
 
   const articles = await fetchArticles();
   const drawingsArticleDictionary = getDrawingArticleDictionary(articles.data);

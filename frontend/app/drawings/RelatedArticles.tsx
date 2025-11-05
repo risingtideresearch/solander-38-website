@@ -20,6 +20,7 @@ export default function RelatedArticle({
           left: "0.5rem",
           width: "15rem",
           padding: "0.5rem",
+          zIndex: 100
         }}
       >
         <h6>Related articles</h6>
