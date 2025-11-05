@@ -60,8 +60,13 @@ type BoundingBox = {
 export function computeCombinedBoundingBox(
   boxes: BoundingBox[], 
 ): Box3 {
-  if (boxes.length === 0) {
-    throw new Error("Cannot compute bounding box from empty array");
+  if (!boxes || boxes.length === 0) {
+    console.error("Cannot compute bounding box from empty array");
+
+    return new Box3(
+      new Vector3(0, 0, 0),
+      new Vector3(0, 0, 0)
+    );
   }
 
   const scale = INCHES_TO_METERS;
