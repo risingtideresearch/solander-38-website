@@ -22,15 +22,14 @@ export default async function Page() {
 
   return (
     <>
-      <TableOfContents sections={sections?.data.sections || []}>
+      {/* <TableOfContents sections={sections?.data.sections || []}> */}
         <Navigation />
-        <main style={{ paddingLeft: "16.5rem" }}>
           <Drawings
             drawings={drawings}
             drawingsArticleDictionary={drawingsArticleDictionary}
+            sections={sections?.data.sections || []}
           />
-        </main>
-      </TableOfContents>
+      {/* </TableOfContents> */}
     </>
   );
 }

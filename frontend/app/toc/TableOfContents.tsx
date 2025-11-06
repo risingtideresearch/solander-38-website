@@ -3,128 +3,6 @@
 import styles from "./toc.module.scss";
 import { createContext, useEffect, useState } from "react";
 
-/**
- *
- */
-export const getSections = () => {
-  return [
-    {
-      name: "Overview",
-      slug: "overview",
-      chapters: [
-        {
-          name: "Self-sufficiency",
-        },
-        {
-          name: "Technical specifications",
-        },
-      ],
-    },
-    {
-      name: "Power architecture",
-      slug: "power-architecture",
-      chapters: [
-        {
-          name: "Solar panels",
-        },
-        {
-          name: "Battery",
-        },
-      ],
-    },
-    {
-      name: "Superstructure",
-      slug: "superstructure",
-      chapters: [
-        {
-          name: "Jig",
-        },
-        {
-          name: "Aluminum build",
-        },
-        {
-          name: "Wireways",
-        },
-      ],
-    },
-    {
-      name: "Control",
-      slug: "control",
-      chapters: [
-        {
-          name: "CAN bus",
-        },
-        {
-          name: "Automation",
-        },
-        {
-          name: "Electrical steering",
-        },
-        {
-          name: "Mechanical steering",
-        },
-      ],
-    },
-    {
-      name: "Propulsion",
-      slug: "propulsion",
-      chapters: [
-        {
-          name: "Rudder, propellers, and struts",
-        },
-        {
-          name: "Motors",
-        },
-      ],
-    },
-    {
-      name: "Body",
-      slug: "body",
-      chapters: [
-        {
-          name: "Hull and deck",
-        },
-        {
-          name: "Laminate schedule",
-        },
-        {
-          name: "Areas of high vs normal core",
-        },
-      ],
-    },
-    {
-      name: "Water & heating systems",
-      slug: "water-heating-systems",
-      chapters: [
-        {
-          name: "Cooling",
-        },
-        {
-          name: "Fresh water",
-        },
-      ],
-    },
-    {
-      name: "Outfitting & interior",
-      slug: "outfitting-interior",
-      chapters: [
-        {
-          name: "Cabinetry",
-        },
-        {
-          name: "Table inlay",
-        },
-        {
-          name: "Tread plate",
-        },
-        {
-          name: "Railings",
-        },
-      ],
-    },
-  ];
-};
-
 const dates = [
   "2025-09",
   "2025-08",
@@ -154,6 +32,7 @@ export default function TableOfContents({
   modes = ["system", "date"],
   defaultSystem = "",
   materials = [],
+  hide,
 }) {
   const [mode, setMode] = useState("system");
   const [section, setSection] = useState(
@@ -170,7 +49,7 @@ export default function TableOfContents({
 
   return (
     <TOCContext.Provider value={{ mode, section, setSection, article }}>
-      <div className={"pane toc " + styles.toc}>
+      <div className={"pane toc " + styles.toc} style={{ display: hide ? 'none' : ''}}>
         {/* <h2 className="uppercase-mono">Table of Contents</h2> */}
         <div
           style={{

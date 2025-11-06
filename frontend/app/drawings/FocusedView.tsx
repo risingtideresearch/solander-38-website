@@ -105,17 +105,18 @@ export function FocusedView({
             </button>
           </div>
         ) : (
-          <button
-            style={{
-              display: "inline-flex",
-              gap: "0.5rem",
-              backdropFilter: "none",
-            }}
-            onClick={onClose}
-          >
-            <LiaArrowLeftSolid />
-            drawings
-          </button>
+          // <button
+          //   style={{
+          //     display: "inline-flex",
+          //     gap: "0.5rem",
+          //     backdropFilter: "none",
+          //   }}
+          //   onClick={onClose}
+          // >
+          //   <LiaArrowLeftSolid />
+          //   drawings
+          // </button>
+          null
         )}
 
         <div
