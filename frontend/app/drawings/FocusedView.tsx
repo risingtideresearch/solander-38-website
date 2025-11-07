@@ -175,7 +175,7 @@ export function FocusedView({
                 </a>
                 <a
                   download
-                  href={encodeURIComponent(
+                  href={'/drawings/' + encodeURIComponent(
                     asset.source_pdf_full_path.replace(
                       "../frontend/public/drawings",
                       "",
