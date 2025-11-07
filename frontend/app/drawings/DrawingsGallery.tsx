@@ -273,7 +273,13 @@ export default function DrawingsGallery({
             gridTemplateColumns: "1fr 12rem ",
           }}
         >
-          <div className={styles.gallery}>{visibleDrawings}</div>
+          <div style={{ minHeight: "100vh" }}>
+            {visibleDrawings.length > 0 ? (
+              <div className={styles.gallery}>{visibleDrawings}</div>
+            ) : (
+              <div>No drawings</div>
+            )}
+          </div>
         </main>
       )}
     </>
