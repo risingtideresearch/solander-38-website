@@ -32,7 +32,7 @@ export type DrawingsArticleDictionary = {
     title: string;
     section: {
       slug: string;
-      title: string;
+      name: string;
     };
   }>;
 };

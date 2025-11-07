@@ -12,15 +12,9 @@ export default function RelatedArticle({
   if (drawingsArticleDictionary[uuid]) {
     return (
       <div
-        className="pane"
         style={{
           border: "1px solid",
           borderBottom: "none",
-          position: "fixed",
-          top: "6rem",
-          left: "0.5rem",
-          width: "15rem",
-          zIndex: 100,
         }}
       >
         <h6 style={{ padding: "0.5rem" }}>Related articles</h6>
@@ -36,7 +30,8 @@ export default function RelatedArticle({
                 }}
                 key={article.slug}
               >
-                {article.title}
+                <h6 style={{margin: '0 0 0.25rem 0'}}>{article.section.name}</h6>
+                <span>{article.title}</span>
               </a>
             );
           })}

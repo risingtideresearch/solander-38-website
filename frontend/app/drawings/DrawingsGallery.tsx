@@ -146,8 +146,7 @@ export default function DrawingsGallery({
       : sortDrawingsByGroup(filtered);
   }, [drawings, toc.article, toc.section, toc.mode, search]);
 
-  // Derive the current focused drawing and its index from the UUID
-  const focusedDrawing = useMemo(
+  const focusedDrawing: Drawing = useMemo(
     () => filteredAndSorted.find((d) => d.uuid === focusUUID),
     [filteredAndSorted, focusUUID],
   );
@@ -231,7 +230,7 @@ export default function DrawingsGallery({
     };
   }, [filteredAndSorted, focusUUID]);
 
-  const visibleDrawings = [];
+  const visibleDrawings: Array<React.JSX.Element> = [];
   groupedDrawings.forEach((group) => {
     group.drawings.forEach((asset: Drawing) => {
       visibleDrawings.push(
@@ -248,10 +247,37 @@ export default function DrawingsGallery({
     <>
       {focusedDrawing ? (
         <>
-          <RelatedArticles
-            uuid={focusedDrawing.uuid}
-            drawingsArticleDictionary={drawingsArticleDictionary}
-          />
+          <div
+            className="pane"
+            style={{
+              position: "fixed",
+              top: "6rem",
+              left: "0.5rem",
+              width: "15rem",
+              zIndex: 100,
+            }}
+          >
+            <RelatedArticles
+              uuid={focusedDrawing.uuid}
+              drawingsArticleDictionary={drawingsArticleDictionary}
+            />
+
+            {/* <div style={{marginTop: '2rem'}}>
+              <img
+                src={focusedDrawing.rel_path}
+                width={240}
+                height={(240 * focusedDrawing.height) / focusedDrawing.width}
+                loading="lazy"
+                // alt={focusedDrawing.filename}
+              />
+              <p
+                className={`${styles["focused-view__uuid-label"]} uppercase-mono`}
+                style={{ fontSize: "0.5rem" }}
+              >
+                {focusedDrawing.uuid}
+              </p>
+            </div> */}
+          </div>
           <main style={{ paddingLeft: "19rem" }}>
             <FocusedView
               asset={focusedDrawing}

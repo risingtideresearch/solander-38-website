@@ -4,11 +4,12 @@ import {
   LiaArrowLeftSolid,
   LiaArrowRightSolid,
   LiaDownloadSolid,
+  LiaLinkSolid,
 } from "react-icons/lia";
 import { cleanFilename } from "./util";
 import styles from "./styles.module.scss";
 import imageSetStyles from "./../components/image-set.module.scss";
-import { BiCollapseAlt, BiLink } from "react-icons/bi";
+import { BiCollapseAlt } from "react-icons/bi";
 import { Image } from "../components/Image";
 import { Modal } from "../components/Modal/Modal";
 
@@ -171,7 +172,7 @@ export function FocusedView({
               <div className={styles["focused-header__title"]}>
                 <p>{cleanFilename(asset)}</p>
                 <a href={`/drawings/file/${asset.uuid}`}>
-                  <BiLink size={18} />
+                  <LiaLinkSolid size={18} />
                 </a>
                 <a
                   download
@@ -194,6 +195,7 @@ export function FocusedView({
                     height={asset.height}
                     width={asset.width}
                     loading="lazy"
+                    alt={asset}
                   />
                   <p className={`${styles["focused-view__uuid-label"]} uppercase-mono`}>
                     {asset.uuid}
