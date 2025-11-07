@@ -7,44 +7,8 @@ import { DrawingCard } from "./DrawingCard";
 import styles from "./styles.module.scss";
 import { DrawingsArticleDictionary } from "./util";
 import RelatedArticles from "./RelatedArticles";
-import { Section } from "@/sanity/sanity.types";
 
-function GroupHeader({ label, count }) {
-  return (
-    <div
-      style={{
-        position: "sticky",
-        top: "3.25rem",
-        zIndex: 10,
-        marginBottom: "2rem",
-        marginLeft: "0.5rem",
-        height: "min-content",
-        width: "11.5rem",
-      }}
-    >
-      <div
-        style={{
-          margin: 0,
-          border: "1px solid",
-          display: "block",
-          padding: "0.25rem 0.5rem",
-        }}
-      >
-        <h5 style={{ margin: "0 0 0.5rem 0" }}>{label}</h5>
-        <h6>
-          {count} drawing{count > 1 ? "s" : ""}
-        </h6>
-      </div>
-    </div>
-  );
-}
-
-function filterDrawings(
-  drawings,
-  searchTerm,
-  articleSlug,
-  drawingsArticleDictionary,
-) {
+function filterDrawings(drawings, searchTerm, toc, drawingsArticleDictionary) {
   const lowerSearch = searchTerm.toLowerCase();
   return drawings.filter((d) => {
     const group = d.group?.toLowerCase() || "";
@@ -61,10 +25,14 @@ function filterDrawings(
       );
     }
 
-    if (articleSlug) {
+    if (toc.article) {
       return (drawingsArticleDictionary[d.uuid] || []).find(
-        (article) => article.slug == articleSlug,
+        (article) => article.slug == toc.article,
       );
+    }
+
+    if (toc.section) {
+      return group.replace(" & ", "-").replaceAll(" ", "-") == toc.section;
     }
     return true;
   });
@@ -138,7 +106,8 @@ interface DrawingsGalleryProps {
   drawings: {
     files: Array<Drawing>;
   };
-  search?: string;
+  search: string;
+  resetSearch: () => void;
   focusUUID: string | null;
   setFocusUUID: (uuid: string | null) => void;
   drawingsArticleDictionary: DrawingsArticleDictionary;
@@ -146,14 +115,21 @@ interface DrawingsGalleryProps {
 
 export default function DrawingsGallery({
   drawings,
-  search = "",
+  search,
+  resetSearch,
   drawingsArticleDictionary,
   focusUUID,
-  setFocusUUID
+  setFocusUUID,
 }: DrawingsGalleryProps) {
   const toc = useContext(TOCContext);
   const scrollPositionRef = useRef(0);
   const isPopStateRef = useRef(false);
+
+  // useEffect(() => {
+  //   if (search) {
+  //     resetSearch()
+  //   }
+  // }, [toc.section, toc.article, toc.mode])
 
   const filteredAndSorted = useMemo(() => {
     const sourceData = drawings.files;
@@ -161,14 +137,14 @@ export default function DrawingsGallery({
     const filtered = filterDrawings(
       sourceData,
       search,
-      toc.article,
+      toc,
       drawingsArticleDictionary,
     );
 
     return toc.mode === "date"
       ? sortDrawingsByTime(filtered)
       : sortDrawingsByGroup(filtered);
-  }, [drawings, toc.article, toc.mode, search]);
+  }, [drawings, toc.article, toc.section, toc.mode, search]);
 
   // Derive the current focused drawing and its index from the UUID
   const focusedDrawing = useMemo(
@@ -255,6 +231,19 @@ export default function DrawingsGallery({
     };
   }, [filteredAndSorted, focusUUID]);
 
+  const visibleDrawings = [];
+  groupedDrawings.forEach((group) => {
+    group.drawings.forEach((asset: Drawing) => {
+      visibleDrawings.push(
+        <DrawingCard
+          key={asset.id}
+          drawing={asset}
+          onClick={() => handleClick(asset)}
+        />,
+      );
+    });
+  });
+
   return (
     <>
       {focusedDrawing ? (
@@ -263,7 +252,7 @@ export default function DrawingsGallery({
             uuid={focusedDrawing.uuid}
             drawingsArticleDictionary={drawingsArticleDictionary}
           />
-          <main style={{ paddingLeft: "16.5rem" }}>
+          <main style={{ paddingLeft: "19rem" }}>
             <FocusedView
               asset={focusedDrawing}
               index={focusIndex}
@@ -278,38 +267,13 @@ export default function DrawingsGallery({
       ) : (
         <main
           style={{
-            paddingLeft: "16.5rem",
+            paddingLeft: "19rem",
             // marginTop: groupIndex === 0 ? 0 : "4rem",
             display: "grid",
             gridTemplateColumns: "1fr 12rem ",
           }}
         >
-          <div className={styles.gallery}>
-            {groupedDrawings.map((group, groupIndex) => (
-              // <section
-              //   style={{
-              //     marginTop: groupIndex === 0 ? 0 : "4rem",
-              //     display: "grid",
-              //     gridTemplateColumns: "1fr 12rem ",
-              //   }}
-              //   key={group.label + groupIndex}
-              //   id={group.label.toLowerCase().replaceAll(" ", "-")}
-              // >
-              <>
-                {group.drawings.map((asset: Drawing) => {
-                  return (
-                    <DrawingCard
-                      key={asset.id}
-                      drawing={asset}
-                      onClick={() => handleClick(asset)}
-                    />
-                  );
-                })}
-              </>
-              /* <GroupHeader label={group.label} count={group.drawings.length} /> */
-              // </section>
-            ))}
-          </div>
+          <div className={styles.gallery}>{visibleDrawings}</div>
         </main>
       )}
     </>

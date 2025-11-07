@@ -34,7 +34,8 @@
     width: 16.5rem;
     z-index: 1;
 
-    > div {
+    > div,
+    &__row {
       display: grid;
       grid-template-columns: 6rem 1fr;
       &:not(:last-child) {

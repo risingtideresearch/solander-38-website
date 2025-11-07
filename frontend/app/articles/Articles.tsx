@@ -1,8 +1,7 @@
-import Link from "next/link";
 import styles from "./page.module.scss";
 import { fetchSections } from "@/sanity/lib/utils";
 
-export default async function Articles({ }) {
+export default async function Articles({ subtitles }) {
   const { data } = await fetchSections();
 
   return (
@@ -19,6 +18,7 @@ export default async function Articles({ }) {
                 <a href={`/article/${article.slug}`}>
                   <h2 style={{margin: '0.5rem 0'}}>{article.title}</h2>
                 </a>
+                  {subtitles ? <p>{article.subtitle}</p> : null}
               </div>
             ))}
           </ol>

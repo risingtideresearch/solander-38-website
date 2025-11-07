@@ -15,21 +15,25 @@ export default function RelatedArticle({
         className="pane"
         style={{
           border: "1px solid",
+          borderBottom: "none",
           position: "fixed",
           top: "6rem",
           left: "0.5rem",
           width: "15rem",
-          padding: "0.5rem",
-          zIndex: 100
+          zIndex: 100,
         }}
       >
-        <h6>Related articles</h6>
-        <div>
+        <h6 style={{ padding: "0.5rem" }}>Related articles</h6>
+        <div style={{ borderTop: "1px solid" }}>
           {drawingsArticleDictionary[uuid].map((article) => {
             return (
               <a
                 href={`/article/${article.slug}`}
-                style={{ marginTop: "0.5rem", display: "block" }}
+                style={{
+                  padding: "0.5rem",
+                  display: "block",
+                  borderBottom: "1px solid",
+                }}
                 key={article.slug}
               >
                 {article.title}

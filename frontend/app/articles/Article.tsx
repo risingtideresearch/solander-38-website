@@ -80,12 +80,8 @@ const components = {
       </AnatomyPane>
     ),
     person: ({ value }) => {
-      return (
-        <span>
-          {value?.name}
-        </span>
-      )
-    } 
+      return <span>{value?.name}</span>;
+    },
   },
 };
 
@@ -96,7 +92,7 @@ export default async function Article({ data, navigation }) {
 
   // hardcode jig 3d model
   const jigIndex = data.content.findIndex(
-    (section) => section.title == "Jig booklet"
+    (section) => section.title == "Jig booklet",
   );
   if (jigIndex > -1) {
     data.content.splice(jigIndex, 0, { _type: "models3D" });
@@ -130,11 +126,11 @@ export default async function Article({ data, navigation }) {
         ) : (
           <></>
         )}
-        <div>
+        {/* <div>
           <h6>Published</h6>
 
           <h6>{published.toLocaleDateString()}</h6>
-        </div>
+        </div> */}
         {updated.toLocaleDateString() != published.toLocaleDateString() && (
           <div>
             <h6>Updated</h6>

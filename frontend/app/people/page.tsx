@@ -14,7 +14,7 @@ export default async function Page() {
         materials={materials_index.unique_materials}
       > */}
       <Navigation />
-      <main>
+      <main style={{paddingLeft: '16.5rem'}}>
         {people.data.sort((a,b) => a.name.localeCompare(b.name)).map(person => {
           return (
             <div key={person._id}>

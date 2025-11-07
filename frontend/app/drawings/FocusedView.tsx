@@ -62,7 +62,6 @@ export function FocusedView({
   all,
   popover = false,
   title = "",
-  children = null
 }) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -88,167 +87,122 @@ export function FocusedView({
   const isSanityImage = asset._type == "image";
 
   const content = (
-    <div className={"pane " + styles["focused-view"]}>
+    <div
+      className={`pane ${styles["focused-view"]} ${popover ? styles["focused-view--popover"] : ""}`}
+    >
       <div>
         {popover ? (
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            {title ? <h3>{title}</h3> : <span></span>}
-            <button
-              style={{
-                display: "inline-flex",
-                gap: "0.5rem",
-                backdropFilter: "none",
-              }}
-              onClick={onClose}
-            >
-              <BiCollapseAlt size={18} />
-            </button>
-          </div>
-        ) : (
-          // <button
-          //   style={{
-          //     display: "inline-flex",
-          //     gap: "0.5rem",
-          //     backdropFilter: "none",
-          //   }}
-          //   onClick={onClose}
-          // >
-          //   <LiaArrowLeftSolid />
-          //   drawings
-          // </button>
-          null
-        )}
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "20rem 1fr",
-            backdropFilter: "none",
-          }}
-        >
-          <div className={styles["focused-header"]}>
-            <div
-              style={{
-                display: "inline-flex",
-                gap: "1.5rem",
-                alignItems: "center",
-              }}
-            >
-              {isSanityImage ? (
-                <h6>
-                  <span>{getSanityImageId(asset)}</span>
-                  <span>{getSanityImageDate(asset.asset)}</span>
-                  <span>{asset.group}</span>
-                </h6>
-              ) : (
-                <h6>
-                  <span>{asset.id}</span>
-                  <span>
-                    {" "}
-                    {asset.date_info ? asset.date_info.date : "<no date>"}
-                  </span>
-                  <span>{asset.group}</span>
-                  <span>HJN</span>
-                </h6>
-              )}
-            </div>
-          </div>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              marginLeft: "auto",
-            }}
-          >
-            <button
-              style={{
-                display: "inline-flex",
-                alignItems: "flex-start",
-                textAlign: "left",
-                gap: "0.25rem",
-                backdropFilter: "none",
-              }}
-              onClick={onPrev}
-              disabled={index === 0}
-            >
-              <LiaArrowLeftSolid size={14} /> {cleanFilename(all[index - 1])}
-            </button>
-            <button
-              style={{
-                display: "inline-flex",
-                alignItems: "flex-start",
-                textAlign: "right",
-                gap: "0.25rem",
-                backdropFilter: "none",
-              }}
-              onClick={onNext}
-              disabled={index === total - 1}
-            >
-              {cleanFilename(all[index + 1])} <LiaArrowRightSolid size={14} />
-            </button>
-          </div>
-        </div>
-        {isSanityImage ? (
-          <>
-            <div className={styles["focused-header__title"]}>
-              <p>
-                {asset.asset?.title ||
-                  asset.asset?.originalFilename ||
-                  "<no title>"}
-              </p>
-            </div>
-            <div
-              className={`${styles["focused-view__body"]} ${imageSetStyles["image-set--photo"]}`}
-            >
-              <Image
-                key={(asset as any)._key}
-                src={asset}
-                alt={"todo: add alt text"}
-              />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className={styles["focused-header__title"]}>
-              <p>{cleanFilename(asset)}</p>
-              <a href={`/drawings/file/${asset.uuid}`}>
-                <BiLink size={18} />
-              </a>
-              <a
-                download
-                href={encodeURIComponent(
-                  asset.source_pdf_full_path.replace(
-                    "../frontend/public/drawings",
-                    ""
-                  )
-                )}
+          title ? (
+            <div className={styles["focused-view__title-row"]}>
+              <h6>{title}</h6>
+              <button
+                className={styles["collapse-button"]}
+                onClick={onClose}
               >
-                <h6>PDF&nbsp;</h6>
-                <LiaDownloadSolid />
-              </a>
+                <BiCollapseAlt size={18} />
+              </button>
             </div>
-            <div className={styles["focused-view__body"]}>
-              <div style={{ position: "relative" }}>
-                <img
-                  src={asset.rel_path}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                  height={asset.height}
-                  width={asset.width}
-                  loading="lazy"
-                />
-                <p
-                  style={{ position: "absolute", bottom: 0, left: "0.5rem" }}
-                  className="uppercase-mono"
-                >
-                  {asset.uuid}
-                </p>
+          ) : (
+            <span></span>
+          )
+        ) : null}
+
+        <div>
+          <div className={styles["focused-view__grid"]}>
+            <div className={styles["focused-header"]}>
+              <div className={styles["focused-header__metadata"]}>
+                {isSanityImage ? (
+                  <h6>
+                    <span>{getSanityImageId(asset)}</span>
+                    <span>{getSanityImageDate(asset.asset)}</span>
+                    <span>{asset.group}</span>
+                  </h6>
+                ) : (
+                  <h6>
+                    <span>{asset.id}</span>
+                    <span>
+                      {" "}
+                      {asset.date_info ? asset.date_info.date : "<no date>"}
+                    </span>
+                    <span>{asset.group}</span>
+                    <span>HJN</span>
+                  </h6>
+                )}
               </div>
             </div>
-          </>
-        )}
+            <div className={styles["focused-view__nav-buttons"]}>
+              <button
+                className={`${styles["nav-button"]} ${styles["nav-button--left"]}`}
+                onClick={onPrev}
+                disabled={index === 0}
+              >
+                <LiaArrowLeftSolid size={14} /> {cleanFilename(all[index - 1])}
+              </button>
+              <button
+                className={`${styles["nav-button"]} ${styles["nav-button--right"]}`}
+                onClick={onNext}
+                disabled={index === total - 1}
+              >
+                {cleanFilename(all[index + 1])} <LiaArrowRightSolid size={14} />
+              </button>
+            </div>
+          </div>
+          {isSanityImage ? (
+            <>
+              <div className={styles["focused-header__title"]}>
+                <p>
+                  {asset.asset?.title ||
+                    asset.asset?.originalFilename ||
+                    "<no title>"}
+                </p>
+              </div>
+              <div
+                className={`${styles["focused-view__body"]} ${imageSetStyles["image-set--photo"]}`}
+              >
+                <Image
+                  key={(asset as any)._key}
+                  src={asset}
+                  alt={"todo: add alt text"}
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className={styles["focused-header__title"]}>
+                <p>{cleanFilename(asset)}</p>
+                <a href={`/drawings/file/${asset.uuid}`}>
+                  <BiLink size={18} />
+                </a>
+                <a
+                  download
+                  href={encodeURIComponent(
+                    asset.source_pdf_full_path.replace(
+                      "../frontend/public/drawings",
+                      "",
+                    ),
+                  )}
+                >
+                  <h6>PDF&nbsp;</h6>
+                  <LiaDownloadSolid />
+                </a>
+              </div>
+              <div className={styles["focused-view__body"]}>
+                <div className={styles["focused-view__image-container"]}>
+                  <img
+                    className={styles["focused-image"]}
+                    src={asset.rel_path}
+                    height={asset.height}
+                    width={asset.width}
+                    loading="lazy"
+                  />
+                  <p className={`${styles["focused-view__uuid-label"]} uppercase-mono`}>
+                    {asset.uuid}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

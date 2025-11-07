@@ -7,10 +7,10 @@ import { Canvas3D } from "./three-d/Canvas3D";
 import { ClippingPlaneControls } from "./three-d/ClippingPlaneControls";
 
 export type ControlSettings = {
-  transparent: boolean;
+  transparent?: boolean;
   expand: boolean;
-  units: Units;
-  monochrome: boolean;
+  units?: Units;
+  monochrome?: boolean;
 };
 
 export interface ClippingPlanes {

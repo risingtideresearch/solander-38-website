@@ -289,8 +289,9 @@ export const sectionsQuery = (slug?: string) => {
       articles[]->{
         _id,
         title,
+        subtitle,
         "slug": slug.current,
-        relatedModels[]
+        relatedModels[],
       }
     }
   }`;

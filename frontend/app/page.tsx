@@ -307,12 +307,14 @@ export default async function Page() {
       <Articles />
 
       <div>
-        <img
-          style={{ display: "block", margin: "0 auto", maxWidth: "700px" }}
-          // width={1280}
-          // height={861}
-          src="/images/solander38.png"
-        />
+        <Link href="/anatomy" style={{width: 'min-content'}}>
+          <img
+            style={{ display: "block", margin: "0 auto", maxWidth: "700px" }}
+            // width={1280}
+            // height={861}
+            src="/images/solander38.png"
+          />
+        </Link>
       </div>
       {/* <main>
         <div className="narrow">

@@ -217,7 +217,7 @@ export function Canvas3D({
           padding: "0.5rem",
           maxWidth: "50vw",
           zIndex: 10,
-          opacity: displayHovered && !displayHovered.hide ? 1 : 0,
+          opacity: displayHovered ? 1 : 0,
           transition: "opacity 0.2s ease-in-out",
           border: "1px solid",
           pointerEvents: "none",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Drawing } from "./types";
 import DrawingsGallery from "./DrawingsGallery";
 import { DrawingsArticleDictionary } from "./util";
@@ -28,6 +28,11 @@ export default function Drawings({
     defaultUUID || null,
   );
 
+  const handleReset = () => {
+    setFocusUUID(null);
+    window.history.pushState(null, "", "/drawings");
+  };
+
   return (
     <TableOfContents sections={sections} hide={focusUUID}>
       {focusUUID ? (
@@ -40,7 +45,7 @@ export default function Drawings({
             left: "0.5rem",
             backdropFilter: "none",
           }}
-          onClick={() => setFocusUUID(null)}
+          onClick={handleReset}
         >
           <LiaArrowLeftSolid />
           All drawings
@@ -67,6 +72,7 @@ export default function Drawings({
       <DrawingsGallery
         drawings={drawings}
         search={search}
+        resetSearch={() => setSearch('')}
         drawingsArticleDictionary={drawingsArticleDictionary}
         focusUUID={focusUUID}
         setFocusUUID={setFocusUUID}

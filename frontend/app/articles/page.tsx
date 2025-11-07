@@ -8,7 +8,7 @@ export default async function Page() {
     <div>
       {/* <TableOfContents modes={["system"]}> */}
         <Navigation />
-        <Articles />
+        <Articles subtitles={true}/>
       {/* </TableOfContents> */}
     </div>
   );

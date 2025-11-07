@@ -1,6 +1,5 @@
 import { promises as fs } from "fs";
 import path from "path";
-import TableOfContents from "../toc/TableOfContents";
 import Navigation from "../components/Navigation";
 import Drawings from "./Drawings";
 import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
@@ -22,14 +21,12 @@ export default async function Page() {
 
   return (
     <>
-      {/* <TableOfContents sections={sections?.data.sections || []}> */}
-        <Navigation />
-          <Drawings
-            drawings={drawings}
-            drawingsArticleDictionary={drawingsArticleDictionary}
-            sections={sections?.data.sections || []}
-          />
-      {/* </TableOfContents> */}
+      <Navigation />
+      <Drawings
+        drawings={drawings}
+        drawingsArticleDictionary={drawingsArticleDictionary}
+        sections={sections?.data.sections || []}
+      />
     </>
   );
 }
