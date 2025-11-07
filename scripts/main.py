@@ -2,8 +2,15 @@ from material_extractor import create_material_index
 from pdf_to_png import convert_all_pdfs
 import shutil
 import os
+import argparse
 
 if __name__ == "__main__":
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Process 3D models and drawings')
+    parser.add_argument('--skip-pdf', action='store_true', 
+                        help='Skip PDF conversion and only process models')
+    args = parser.parse_args()
+    
     folder_path = '../frontend/public/models'
     output_json = '../frontend/public/script-output/material_index_simple.json'
     
@@ -25,16 +32,19 @@ if __name__ == "__main__":
     else:
         print(f"⚠️  Model manifest not found: {model_manifest_path}")
     
-    # convert drawings to pngs
-    convert_all_pdfs()
-    
-    # Copy drawing manifest
-    if os.path.exists(drawing_manifest_path):
-        dest_path = os.path.join(sanity_output_path, 'drawing_conversion_manifest.json')
-        shutil.copy2(drawing_manifest_path, dest_path)
-        print(f"✅ Copied drawing manifest to: {dest_path}")
+    # Convert drawings to pngs (skip if flag is set)
+    if not args.skip_pdf:
+        convert_all_pdfs()
+        
+        # Copy drawing manifest
+        if os.path.exists(drawing_manifest_path):
+            dest_path = os.path.join(sanity_output_path, 'drawing_conversion_manifest.json')
+            shutil.copy2(drawing_manifest_path, dest_path)
+            print(f"✅ Copied drawing manifest to: {dest_path}")
+        else:
+            print(f"⚠️  Drawing manifest not found: {drawing_manifest_path}")
     else:
-        print(f"⚠️  Drawing manifest not found: {drawing_manifest_path}")
+        print("⏭️  Skipping PDF conversion (--skip-pdf flag set)")
     
     # Copy material index
     if os.path.exists(output_json):
