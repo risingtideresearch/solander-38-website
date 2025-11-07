@@ -1,7 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
-import Navigation from "../../components/Navigation";
 import Article from "../../articles/Article";
 import { matchArticleDrawings } from "@/app/articles/util";
 
@@ -86,7 +85,6 @@ export default async function Page({ params }) {
 
   return (
     <div>
-      <Navigation />
       <Article data={dataWithMatchedDrawings} navigation={navigation} />
     </div>
   );

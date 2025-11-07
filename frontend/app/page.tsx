@@ -1,14 +1,9 @@
 import Link from "next/link";
-import { tempPhotoMapping } from "./temp-utils";
-// import TableOfContents from "./articles/TableOfContents";
-import styles from "./home.module.scss";
-import Navigation from "@/app/components/Navigation";
 import Articles from "./articles/Articles";
 
 export default async function Page() {
   return (
     <div>
-      <Navigation />
       <section>
         <figure
           className="page-module-scss-module__w6G8Aq__full_image"

@@ -3,7 +3,6 @@ import path from "path";
 import TableOfContents from "@/app/toc/TableOfContents";
 import { fetchAnnotations, fetchSections } from "@/sanity/lib/utils";
 import Anatomy from "../Anatomy";
-import Navigation from "@/app/components/Navigation";
 import styles from "./../page.module.scss";
 
 export default async function Page({
@@ -39,7 +38,6 @@ export default async function Page({
         defaultSystem={slug}
         materials={materials_index.unique_materials}
       >
-        <Navigation />
         <Anatomy
           content={{
             annotations: annotations.data,

@@ -226,3 +226,23 @@ figcaption {
     color-scheme: dark;
   }
 } */
+
+
+footer {
+  border-top: 1px solid;
+  padding: 2rem 0.5rem;
+  margin-top: 10rem;
+
+  h6 {
+    font-weight: 600;
+    margin: 1rem 0;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    svg {
+      height: 1rem;
+      width: auto;
+    }
+  }
+}

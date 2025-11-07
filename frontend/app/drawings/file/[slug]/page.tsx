@@ -1,7 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
 import Drawings from "../../Drawings";
-import Navigation from "@/app/components/Navigation";
 import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
 import { getDrawingArticleDictionary } from "../../util";
 
@@ -42,14 +41,11 @@ export default async function Page({
   const drawingsArticleDictionary = getDrawingArticleDictionary(articles.data);
 
   return (
-    <>
-      <Navigation />
-      <Drawings
-        drawings={drawings}
-        defaultUUID={slug}
-        drawingsArticleDictionary={drawingsArticleDictionary}
-        sections={sections?.data.sections || []}
-      />
-    </>
+    <Drawings
+      drawings={drawings}
+      defaultUUID={slug}
+      drawingsArticleDictionary={drawingsArticleDictionary}
+      sections={sections?.data.sections || []}
+    />
   );
 }

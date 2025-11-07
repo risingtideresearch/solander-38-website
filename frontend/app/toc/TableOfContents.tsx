@@ -32,7 +32,7 @@ export default function TableOfContents({
   modes = ["system", "date"],
   defaultSystem = "",
   materials = [],
-  hide,
+  hide = false,
 }) {
   const [mode, setMode] = useState("system");
   const [section, setSection] = useState(

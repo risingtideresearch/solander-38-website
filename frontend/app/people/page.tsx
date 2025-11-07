@@ -1,6 +1,4 @@
-import { fetchPeople, fetchSections } from "@/sanity/lib/utils";
-import Navigation from "../components/Navigation";
-
+import { fetchPeople } from "@/sanity/lib/utils";
 
 export default async function Page() {
   const people = await fetchPeople();
@@ -13,7 +11,6 @@ export default async function Page() {
         modes={["system", "material"]}
         materials={materials_index.unique_materials}
       > */}
-      <Navigation />
       <main style={{paddingLeft: '16.5rem'}}>
         {people.data.sort((a,b) => a.name.localeCompare(b.name)).map(person => {
           return (

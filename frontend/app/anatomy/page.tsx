@@ -8,7 +8,6 @@ import {
 import Anatomy from "./Anatomy";
 import TableOfContents from "@/app/toc/TableOfContents";
 import styles from "./page.module.scss";
-import Navigation from "../components/Navigation";
 
 export type Article = {
   title: string;
@@ -61,8 +60,6 @@ export default async function Page() {
   const sections = await fetchSections();
   const articles = await fetchArticles();
 
-  console.log(articles);
-
   return (
     <div className={styles.page}>
       <TableOfContents
@@ -70,7 +67,6 @@ export default async function Page() {
         modes={["system", "material"]}
         materials={materials_index.unique_materials}
       >
-        <Navigation />
         <Anatomy
           content={{
             annotations: [], //annotations.data,

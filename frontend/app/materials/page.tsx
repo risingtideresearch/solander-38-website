@@ -1,9 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { fetchAnnotations, fetchSections } from "@/sanity/lib/utils";
-import TableOfContents from "@/app/toc/TableOfContents";
-// import styles from "./page.module.scss";
-import Navigation from "../components/Navigation";
+import { fetchSections } from "@/sanity/lib/utils";
 import { Canvas3D } from "../anatomy/three-d/Canvas3D";
 
 export default async function Page() {
@@ -55,7 +52,6 @@ export default async function Page() {
         modes={["system", "material"]}
         materials={materials_index.unique_materials}
       > */}
-      <Navigation />
       <div
         style={{
           display: "grid",
