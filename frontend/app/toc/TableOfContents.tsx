@@ -3,22 +3,6 @@
 import styles from "./toc.module.scss";
 import { createContext, useEffect, useState } from "react";
 
-const dates = [
-  "2025-09",
-  "2025-08",
-  "2025-07",
-  "2025-06",
-  "2025-05",
-  "2025-04",
-  "2025-02",
-  "2025-01",
-  "2024-12",
-  "2024-11",
-  "2024-09",
-  "2024-08",
-  "2024-02",
-];
-
 export const TOCContext = createContext({
   mode: "system",
   section: "overview",
@@ -29,7 +13,7 @@ export const TOCContext = createContext({
 export default function TableOfContents({
   children,
   sections,
-  modes = ["system", "date"],
+  modes = ["system"],
   defaultSystem = "",
   materials = [],
   hide = false,
@@ -111,16 +95,6 @@ export default function TableOfContents({
                   {/* ) : (
                     <></>
                   )} */}
-                </li>
-              );
-            })}
-          </ol>
-        ) : mode == "date" ? (
-          <ol>
-            {dates.map((section) => {
-              return (
-                <li key={section}>
-                  <h6 style={{ margin: "0.5rem" }}>{section}</h6>
                 </li>
               );
             })}

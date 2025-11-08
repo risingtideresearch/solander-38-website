@@ -1,10 +1,14 @@
-import { BiSearch } from "react-icons/bi";
-import styles from "./search.module.scss";
+import path from "path";
+import { promises as fs } from "fs";
+import SearchClient from "./SearchClient";
 
-export default function Search() {
-  return (
-    <button className={'pane ' + styles.search__button}>
-      <BiSearch size={18} />
-    </button>
+export default async function Search() {
+  const drawingsPath = path.join(
+    process.cwd(),
+    "public/drawings/output_images/conversion_manifest.json",
   );
+  const drawingsData = await fs.readFile(drawingsPath, "utf8");
+  const drawings = JSON.parse(drawingsData);
+  
+  return <SearchClient drawings={drawings.files} />;
 }

@@ -6,6 +6,7 @@ export type Drawing = {
   height: number;
   width: number;
   group: string;
+  extracted_text: string;
   date_info: {
     date: string;
     month: number;

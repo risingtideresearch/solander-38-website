@@ -51,29 +51,30 @@ export default function Drawings({
           All drawings
         </button>
       ) : (
-        <input
-          type="text"
-          placeholder="search"
-          value={search}
-          style={{
-            border: "1px solid",
-            position: "fixed",
-            top: "3.25rem",
-            left: "0.5rem",
-            width: "15rem",
-          }}
-          onChange={(e) => {
-            const val = e.target.value;
-            setSearch(val);
-          }}
-        />
+        // <input
+        //   type="text"
+        //   placeholder="search"
+        //   value={search}
+        //   style={{
+        //     border: "1px solid",
+        //     position: "fixed",
+        //     top: "3.25rem",
+        //     left: "0.5rem",
+        //     width: "15rem",
+        //   }}
+        //   onChange={(e) => {
+        //     const val = e.target.value;
+        //     setSearch(val);
+        //   }}
+        // />
+        <></>
       )}
 
       <DrawingsGallery
         drawings={drawings}
         search={search}
-        resetSearch={() => setSearch('')}
         drawingsArticleDictionary={drawingsArticleDictionary}
+        defaultUUID={defaultUUID}
         focusUUID={focusUUID}
         setFocusUUID={setFocusUUID}
       />

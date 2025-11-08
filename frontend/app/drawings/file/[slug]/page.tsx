@@ -25,7 +25,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
+  
   const drawingsPath = path.join(
     process.cwd(),
     "public/drawings/output_images/conversion_manifest.json",

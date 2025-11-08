@@ -160,11 +160,6 @@ export default async function Article({ data, navigation }) {
       </div>
       <main className={styles.page}>
         <div
-          style={{
-            display: "grid",
-            gap: "1rem",
-            gridTemplateColumns: "1fr 30rem",
-          }}
           className={styles.page__header}
         >
           <div>

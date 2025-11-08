@@ -1,6 +1,6 @@
 import { createDataAttribute, CreateDataAttributeProps } from "next-sanity";
 import { dataset, projectId, studioUrl } from "./api";
-import { annotationsQuery, articlesQuery, peopleQuery, sectionsQuery } from "./queries";
+import { annotationsQuery, articlesQuery, peopleQuery, searchQuery, sectionsQuery } from "./queries";
 import { sanityFetch } from "./live";
 
 export async function fetchAnnotations(models_manifest) {

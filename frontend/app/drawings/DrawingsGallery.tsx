@@ -107,7 +107,7 @@ interface DrawingsGalleryProps {
     files: Array<Drawing>;
   };
   search: string;
-  resetSearch: () => void;
+  defaultUUID?: string | null;
   focusUUID: string | null;
   setFocusUUID: (uuid: string | null) => void;
   drawingsArticleDictionary: DrawingsArticleDictionary;
@@ -116,8 +116,8 @@ interface DrawingsGalleryProps {
 export default function DrawingsGallery({
   drawings,
   search,
-  resetSearch,
   drawingsArticleDictionary,
+  defaultUUID,
   focusUUID,
   setFocusUUID,
 }: DrawingsGalleryProps) {
@@ -134,17 +134,14 @@ export default function DrawingsGallery({
   const filteredAndSorted = useMemo(() => {
     const sourceData = drawings.files;
 
-    const filtered = filterDrawings(
-      sourceData,
-      search,
-      toc,
-      drawingsArticleDictionary,
-    );
+    const filtered = defaultUUID
+      ? sourceData
+      : filterDrawings(sourceData, search, toc, drawingsArticleDictionary);
 
     return toc.mode === "date"
       ? sortDrawingsByTime(filtered)
       : sortDrawingsByGroup(filtered);
-  }, [drawings, toc.article, toc.section, toc.mode, search]);
+  }, [drawings, toc.article, toc.section, toc.mode, search, defaultUUID]);
 
   const focusedDrawing: Drawing = useMemo(
     () => filteredAndSorted.find((d) => d.uuid === focusUUID),
