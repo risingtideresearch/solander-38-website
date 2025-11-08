@@ -23,7 +23,14 @@
   }
 
   &__header {
-    margin: 3rem 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 30rem;
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+      margin-top: 16rem;
+    }
   }
 
   &__metadata {
