@@ -12,11 +12,7 @@ interface IDrawingCard {
 export function DrawingCard({ drawing, onClick }: IDrawingCard) {
   return (
     <a
-      onClick={(e) => {
-        e.stopPropagation();
-        onClick();
-      }}
-      // href={`/drawings/${drawing.uuid}`}
+      href={`/drawings/file/${drawing.uuid}`}
       className={styles["drawing-card"]}
     >
       <h6>
