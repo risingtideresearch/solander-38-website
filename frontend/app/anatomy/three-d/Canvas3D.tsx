@@ -32,6 +32,7 @@ type Canvas3DProps = {
   };
   setActiveAnnotation: () => void;
   height?: string | number;
+  limitInteraction: boolean;
 };
 
 const CAMERA_INITIAL_POSITION = [0, 0, 0] as const;
@@ -47,6 +48,7 @@ export function Canvas3D({
   filteredLayers,
   content,
   setActiveAnnotation,
+  limitInteraction = false,
   height = "100vh",
 }: Canvas3DProps) {
   const groupRef = useRef<Group>(null);
@@ -276,11 +278,13 @@ export function Canvas3D({
             preset="sunset"
           />
 
-          <RaycastHandler
-            clippingPlanes={clippingPlanes}
-            setHovered={setHovered}
-          />
-
+          {!limitInteraction && (
+            <RaycastHandler
+              clippingPlanes={clippingPlanes}
+              setHovered={setHovered}
+            />
+          )}
+          
           <ambientLight intensity={0.4} />
           {directionalLights}
 
@@ -316,6 +320,7 @@ export function Canvas3D({
             enableDamping={false}
             autoRotate={autoRotate}
             autoRotateSpeed={0.3}
+            enableZoom={!limitInteraction}
           />
         </Canvas>
 

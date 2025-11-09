@@ -24,8 +24,6 @@ export default function Anatomy({ content }: IAnatomy) {
   const memoModels = useMemo(() => processModels(content.models_manifest), []);
   const systems = useMemo(() => getSystemMap(memoModels), [memoModels]);
 
-  console.log(toc.article, content.articles, content.models_manifest);
-
   const active =
     toc.mode == "system"
       ? toc.section != "overview"
@@ -49,24 +47,22 @@ export default function Anatomy({ content }: IAnatomy) {
           key: toc.section,
         };
 
-  // useEffect(() => {
-  //   if (toc.mode == "system") {
-  //     window.history.pushState(null, "", `/anatomy/${toc.section}`);
-  //   } else {
-  //     window.history.pushState(null, "", `/anatomy/overview`);
-  //   }
-  // }, [toc.section]);
-
   const filteredLayers = useMemo(() => {
     let arr: string[] = memoModels.map((m) => m.filename) || [];
-    console.log(memoModels);
 
     if (search) {
       arr = arr.filter((layer) => {
         return layer.toLowerCase().includes(search.toLowerCase());
       });
     } else {
-      if (active && active.key != "overview") {
+      if (toc.article) {
+        console.log(
+          (content.articles || []).find((d) => d.slug == toc.article),
+        );
+        arr =
+          (content.articles || []).find((d) => d.slug == toc.article)
+            ?.relatedModels || arr;
+      } else if (active && active.key != "overview") {
         if (active.type == "system") {
           arr = systems[active.key]?.children;
         } else if (active.type == "material") {
@@ -76,14 +72,6 @@ export default function Anatomy({ content }: IAnatomy) {
             ),
           );
         }
-      }
-      if (toc.article) {
-        console.log(
-          (content.articles || []).find((d) => d.slug == toc.article),
-        );
-        arr =
-          (content.articles || []).find((d) => d.slug == toc.article)
-            ?.relatedModels || arr;
       }
     }
 
@@ -109,6 +97,14 @@ export default function Anatomy({ content }: IAnatomy) {
     }),
     [filteredLayers],
   );
+
+  useEffect(() => {
+    if (toc.article) {
+      window.history.pushState(null, "", `/anatomy/${toc.article}`);
+    } else if (toc.section) {
+      window.history.pushState(null, "", `/anatomy/${toc.section}`);
+    }
+  }, [toc.article, toc.section])
 
   // useEffect(() => {
   //   if (activeAnnotation && !visibleAnnotations) {

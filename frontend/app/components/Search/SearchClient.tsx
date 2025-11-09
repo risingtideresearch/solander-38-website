@@ -15,7 +15,9 @@ export default function SearchClient({ drawings }) {
   const [value, setValue] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -23,18 +25,46 @@ export default function SearchClient({ drawings }) {
         setActive(false);
         setValue("");
         setResults([]);
+        setSelectedIndex(-1);
+      }
+
+      // Keyboard navigation for results
+      if (active && results.length > 0) {
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          setSelectedIndex((prev) =>
+            prev < results.length - 1 ? prev + 1 : prev,
+          );
+        } else if (e.key === "ArrowUp") {
+          e.preventDefault();
+          setSelectedIndex((prev) => (prev > 0 ? prev - 1 : -1));
+        } else if (e.key === "Enter" && selectedIndex >= 0) {
+          e.preventDefault();
+          const result = results[selectedIndex];
+          window.location.href = getURL(result);
+        }
+      }
+
+      // CMD/CTRL + K to open search
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        setActive(true);
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [active, results, selectedIndex]);
 
   useEffect(() => {
     if (active && inputRef.current) {
       inputRef.current.focus();
     }
   }, [active]);
+
+  useEffect(() => {
+    setSelectedIndex(-1);
+  }, [results]);
 
   useEffect(() => {
     const searchDocuments = async () => {
@@ -64,12 +94,13 @@ export default function SearchClient({ drawings }) {
 
     const timeoutId = setTimeout(searchDocuments, 200);
     return () => clearTimeout(timeoutId);
-  }, [value]);
+  }, [value, drawings]);
 
-  const handleBlur = () => {
-    if (!loading && results.length == 0) {
-      setActive(false);
-    }
+  const handleClose = () => {
+    setActive(false);
+    setValue("");
+    setResults([]);
+    setSelectedIndex(-1);
   };
 
   const getURL = (doc) => {
@@ -86,71 +117,135 @@ export default function SearchClient({ drawings }) {
   return (
     <>
       {active && (
-        <div className={"pane " + styles.search__input}>
-          <input
-            ref={inputRef}
-            type="search"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            // onBlur={handleBlur}
-            placeholder="Search"
-          />
-          {!loading && value && results.length === 0 && (
-            <div className={styles.search__no_results}>No results found</div>
-          )}
-          {(results.length > 0 || loading) && (
-            <div className={styles.search__results}>
-              {results.map((result: any) => (
-                <div key={result._id} className={styles.search__result}>
-                  <a
-                    href={getURL(result)}
-                    style={{
-                      margin: "0.5rem 0",
-                      display: "block",
-                    }}
-                  >
-                    <p
-                      style={{
-                        display: "inline-flex",
-                        gap: "1.5rem",
-                        alignItems: "center",
-                        margin: 0,
-                      }}
-                    >
-                      <span>{result.title || result.filename}</span>
+        <>
+          <div
+            className={styles.search__backdrop}
+            onClick={handleClose}
+            aria-hidden="true"
+          ></div>
 
-                      <span
+          <div
+            className={styles.search__input}
+            role="search"
+            aria-label="Site search"
+          >
+            <label htmlFor="search" className="sr-only">
+              Search articles and drawings
+            </label>
+            <input
+              id="search"
+              ref={inputRef}
+              type="search"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              placeholder="Search"
+              aria-expanded={results.length > 0}
+              aria-controls="search-results"
+              aria-activedescendant={
+                selectedIndex >= 0
+                  ? `search-result-${selectedIndex}`
+                  : undefined
+              }
+              autoComplete="off"
+              aria-describedby="search-instructions"
+            />
+
+            <div id="search-instructions" className="sr-only">
+              Use arrow keys to navigate results, Enter to select, Escape to
+              close
+            </div>
+
+            {!loading && value && results.length === 0 && (
+              <div
+                className={styles.search__no_results}
+                role="status"
+                aria-live="polite"
+              >
+                No results found for "{value}"
+              </div>
+            )}
+
+            {(results.length > 0 || loading) && (
+              <div
+                id="search-results"
+                ref={resultsRef}
+                className={styles.search__results}
+                role="listbox"
+                aria-label="Search results"
+              >
+                {results.map((result: any, index: number) => (
+                  <div
+                    key={result._id || result.uuid}
+                    id={`search-result-${index}`}
+                    className={`${styles.search__result} ${
+                      selectedIndex === index
+                        ? styles.search__result_selected
+                        : ""
+                    }`}
+                    role="option"
+                    aria-selected={selectedIndex === index}
+                  >
+                    <a
+                      href={getURL(result)}
+                      style={{
+                        margin: "0.5rem 0",
+                        display: "block",
+                      }}
+                      tabIndex={-1}
+                      onFocus={() => setSelectedIndex(index)}
+                    >
+                      <p
                         style={{
-                          fontSize: "0.75rem",
-                          textTransform: "uppercase",
-                          background: colors[result._type],
-                          padding: "0.25rem",
-                          lineHeight: "1.2em",
-                          display: "inline",
+                          display: "inline-flex",
+                          gap: "1.5rem",
+                          alignItems: "center",
+                          margin: 0,
                         }}
                       >
-                        {result._type}
-                      </span>
-                    </p>
-                    {/* <p style={{ fontSize: "0.75rem", margin: 0 }}>
-                      {result.matchedSnippet || ""}
-                    </p> */}
-                  </a>
-                </div>
-              ))}
-              {loading && (
-                <div className={styles.search__loading}>Searching...</div>
-              )}
-            </div>
-          )}
-        </div>
+                        <span>{result.title || result.filename}</span>
+
+                        <span
+                          style={{
+                            fontSize: "0.75rem",
+                            textTransform: "uppercase",
+                            background: colors[result._type],
+                            padding: "0.25rem",
+                            lineHeight: "1.2em",
+                            display: "inline",
+                            color: "#000",
+                          }}
+                          aria-label={`Type: ${result._type}`}
+                        >
+                          {result._type}
+                        </span>
+                      </p>
+                    </a>
+                  </div>
+                ))}
+                {loading && (
+                  <div
+                    className={styles.search__loading}
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Searching...
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        </>
       )}
+
       <button
         className={"pane " + styles.search__button}
         onClick={() => setActive((prev) => !prev)}
-        aria-label="Search"
+        aria-label={active ? "Close search" : "Open search"}
+        aria-expanded={active}
+        aria-controls={active ? "search-results" : undefined}
+        title="Search (⌘K)"
       >
-        <BiSearch size={18} />
+        <BiSearch size={18} aria-hidden="true" />
       </button>
     </>
   );

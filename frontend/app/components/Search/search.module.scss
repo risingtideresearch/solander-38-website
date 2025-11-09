@@ -1,7 +1,7 @@
 .search {
   &__button {
     position: fixed;
-    z-index: 101;
+    z-index: 1000;
     top: 0.5rem;
     right: 0.5rem;
     border: 1px solid;
@@ -9,7 +9,7 @@
 
   &__input {
     position: fixed;
-    z-index: 101;
+    z-index: 1000;
     width: calc(50% - 2.9375rem);
     top: 0.5rem;
     right: 2.4375rem;
@@ -41,5 +41,21 @@
     border-top: none;
     max-height: calc(100vh - 3rem);
     overflow: auto;
+    background: #ffffff;
+  }
+
+  &__result_selected,
+  &__result:hover {
+    span:first-child {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    z-index: 999;
   }
 }

@@ -14,22 +14,23 @@ export default function TableOfContents({
   children,
   sections,
   modes = ["system"],
-  defaultSystem = "",
+  defaultSection = "",
+  defaultArticle = null,
   materials = [],
   hide = false,
 }) {
   const [mode, setMode] = useState("system");
   const [section, setSection] = useState(
-    (sections.find((section) => section.slug == defaultSystem) || sections[0])
+    (sections.find((section) => section.slug == defaultSection) || sections[0])
       .slug
   );
-  const [article, setArticle] = useState(null);
+  const [article, setArticle] = useState(defaultArticle);
 
-  useEffect(() => {
-    if (article) {
-      setArticle(null);
-    }
-  }, [section]);
+  // useEffect(() => {
+  //   if (article) {
+  //     setArticle(null);
+  //   }
+  // }, [section]);
 
   return (
     <TOCContext.Provider value={{ mode, section, setSection, article }}>

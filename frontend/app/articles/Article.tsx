@@ -50,6 +50,7 @@ const components = {
     models3D: ({ value }) => (
       <AnatomyPane
         title={`Anatomy / superstructure jig`}
+        url={`/anatomy/superstructure-jig`}
         defaultSize={{ height: "30rem" }}
         expandedSize={{ height: "100%" }}
       >
@@ -75,6 +76,7 @@ const components = {
             settings={{
               expand: false,
             }}
+            limitInteraction={true}
           />
         </div>
       </AnatomyPane>
@@ -172,6 +174,7 @@ export default async function Article({ data, navigation }) {
           {data.relatedModels && (
             <AnatomyPane
               title={`Anatomy / ${data.title}`}
+              url={`/anatomy/${data.slug.current}`}
               defaultSize={{ maxHeight: "30rem", aspectRatio: 1 }}
               expandedSize={{ height: "100%" }}
             >
@@ -194,6 +197,7 @@ export default async function Article({ data, navigation }) {
                   settings={{
                     expand: false,
                   }}
+                  limitInteraction={true}
                 />
               </div>
             </AnatomyPane>
