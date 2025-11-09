@@ -284,7 +284,7 @@ export function Canvas3D({
               setHovered={setHovered}
             />
           )}
-          
+
           <ambientLight intensity={0.4} />
           {directionalLights}
 
@@ -320,6 +320,8 @@ export function Canvas3D({
             enableDamping={false}
             autoRotate={autoRotate}
             autoRotateSpeed={0.3}
+            maxDistance={22}
+            minDistance={1}
             enableZoom={!limitInteraction}
           />
         </Canvas>
