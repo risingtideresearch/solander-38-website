@@ -208,8 +208,21 @@ export function Canvas3D({
     [],
   );
 
-  const hoverDisplay = useMemo(
-    () => (
+  const hoverDisplay = useMemo(() => {
+    if (!displayHovered) {
+      return <></>
+    }
+    const parts = displayHovered.name.split("__");
+    const first = parts[0];
+    const secondToLast = parts[parts.length - 2];
+    const last = parts[parts.length - 1];
+
+    const result = [first];
+    if (parts.length > 2 && secondToLast !== first) {
+      result.push(secondToLast);
+    }
+    result.push(last);
+    return (
       <div
         className="pane"
         style={{
@@ -225,19 +238,18 @@ export function Canvas3D({
           pointerEvents: "none",
         }}
       >
-        {displayHovered?.name.split("__").map((n, i, x) => (
+        {result.map((n, i, x) => (
           <span
             key={n}
-            style={{ fontSize: i < x.length - 1 ? "0.75em" : "1em" }}
+            style={{ fontSize: i == 0 ? "0.75em" : "1em" }}
           >
-            {n}
-            <br />
+            {i == 0 ? n : n.replace('(for website)', '').replace('surfs', '').replace('mesh', '').toLowerCase()}
+            {i == 0 ? <br /> : <>&nbsp;</>}
           </span>
         ))}
       </div>
-    ),
-    [displayHovered],
-  );
+    );
+  }, [displayHovered]);
 
   const canvasRef = useRef(null);
 
