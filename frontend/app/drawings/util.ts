@@ -30,6 +30,7 @@ export type DrawingsArticleDictionary = {
   [key: string]: Array<{
     slug: string;
     title: string;
+    _id: string;
     section: {
       slug: string;
       name: string;
@@ -51,6 +52,7 @@ export function getDrawingArticleDictionary(articles: Array<Article>): DrawingsA
               slug: article.slug,
               title: article.title,
               section: article.section,
+              _id: article.id,
             });
           }
         });

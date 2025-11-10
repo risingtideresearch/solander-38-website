@@ -39,7 +39,6 @@ export default async function Page({
   if (defaultArticle) {
     defaultSection = defaultArticle.section;
   }
-    console.log(defaultSection, defaultArticle)
 
   return (
     <div className={styles.page}>
@@ -47,8 +46,9 @@ export default async function Page({
         sections={sections?.data.sections || []}
         modes={["system", "material"]}
         defaultSection={defaultSection?.slug || null}
-        defaultArticle={defaultArticle?.slug || null}
+        defaultArticle={defaultArticle || null}
         materials={materials_index.unique_materials}
+        showArticleLink={true}
       >
         <Anatomy
           content={{

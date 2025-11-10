@@ -3,7 +3,6 @@
 import { useContext, useEffect, useMemo, useState } from "react";
 import ThreeDContainer from "./ThreeDContainer";
 import { TOCContext } from "../toc/TableOfContents";
-import AnnotationsList from "./AnnotationsList";
 import {
   processModels,
   getSystemMap,
@@ -26,25 +25,25 @@ export default function Anatomy({ content }: IAnatomy) {
 
   const active =
     toc.mode == "system"
-      ? toc.section != "overview"
-        ? toc.section == "water-heating-systems"
+      ? toc.section.slug != "overview"
+        ? toc.section.slug == "water-heating-systems"
           ? {
               type: "system",
               key: "water_heating systems".toUpperCase(),
             }
-          : toc.section == "outfitting-interior"
+          : toc.section.slug == "outfitting-interior"
             ? {
                 type: "system",
-                key: toc.section.replaceAll("-", "_").toUpperCase(),
+                key: toc.section.slug.replaceAll("-", "_").toUpperCase(),
               }
             : {
                 type: "system",
-                key: toc.section.replaceAll("-", " ").toUpperCase(),
+                key: toc.section.slug.replaceAll("-", " ").toUpperCase(),
               }
         : null
       : {
           type: toc.mode,
-          key: toc.section,
+          key: toc.section.slug,
         };
 
   const filteredLayers = useMemo(() => {
@@ -55,23 +54,16 @@ export default function Anatomy({ content }: IAnatomy) {
         return layer.toLowerCase().includes(search.toLowerCase());
       });
     } else {
-      if (toc.article) {
-        console.log(
-          (content.articles || []).find((d) => d.slug == toc.article),
+      if (active && active.type == "material") {
+        arr = arr.filter((m) =>
+          (content.materials_index.material_index[m] || []).includes(
+            toc.material,
+          ),
         );
-        arr =
-          (content.articles || []).find((d) => d.slug == toc.article)
-            ?.relatedModels || arr;
+      } else if (toc.article) {
+        arr = toc.article?.relatedModels || arr;
       } else if (active && active.key != "overview") {
-        if (active.type == "system") {
-          arr = systems[active.key]?.children;
-        } else if (active.type == "material") {
-          arr = arr.filter((m) =>
-            (content.materials_index.material_index[m] || []).includes(
-              active.key,
-            ),
-          );
-        }
+        arr = systems[active.key]?.children;
       }
     }
 
@@ -81,7 +73,7 @@ export default function Anatomy({ content }: IAnatomy) {
     );
 
     return arr;
-  }, [active, systems, search, activeAnnotation, toc.article]);
+  }, [active, systems, search, activeAnnotation, toc.article, toc.material]);
 
   const filteredContent = useMemo(
     () => ({
@@ -100,21 +92,11 @@ export default function Anatomy({ content }: IAnatomy) {
 
   useEffect(() => {
     if (toc.article) {
-      window.history.pushState(null, "", `/anatomy/${toc.article}`);
-    } else if (toc.section) {
-      window.history.pushState(null, "", `/anatomy/${toc.section}`);
+      window.history.pushState(null, "", `/anatomy/${toc.article.slug}`);
+    } else if (toc.section.slug) {
+      window.history.pushState(null, "", `/anatomy/${toc.section.slug}`);
     }
-  }, [toc.article, toc.section])
-
-  // useEffect(() => {
-  //   if (activeAnnotation && !visibleAnnotations) {
-  //     setVisibleAnnotations(true);
-  //     toc.setSection(activeAnnotation.system);
-  //   }
-  //   if (activeAnnotation) {
-  //     setSearch("");
-  //   }
-  // }, [activeAnnotation]);
+  }, [toc.article, toc.section.slug]);
 
   const boundingBox = computeCombinedBoundingBox(
     memoModels

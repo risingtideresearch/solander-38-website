@@ -9,9 +9,7 @@ import {
 import { cleanFilename } from "./util";
 import styles from "./styles.module.scss";
 import imageSetStyles from "./../components/image-set.module.scss";
-import { BiCollapseAlt } from "react-icons/bi";
 import { Image } from "../components/Image";
-import { Modal } from "../components/Modal/Modal";
 
 function parseDateFromDescription(str: string | null | undefined): Date | null {
   if (!str) return null;
@@ -61,7 +59,6 @@ export function FocusedView({
   onClose,
   index,
   all,
-  popover = false,
   title = "",
 }) {
   useEffect(() => {
@@ -89,24 +86,9 @@ export function FocusedView({
 
   const content = (
     <div
-      className={`pane ${styles["focused-view"]} ${popover ? styles["focused-view--popover"] : ""}`}
+      className={`pane ${styles["focused-view"]}`}
     >
       <div>
-        {popover ? (
-          title ? (
-            <div className={styles["focused-view__title-row"]}>
-              <h6>{title}</h6>
-              <button
-                className={styles["collapse-button"]}
-                onClick={onClose}
-              >
-                <BiCollapseAlt size={18} />
-              </button>
-            </div>
-          ) : (
-            <span></span>
-          )
-        ) : null}
 
         <div>
           <div className={styles["focused-view__grid"]}>
@@ -208,14 +190,6 @@ export function FocusedView({
       </div>
     </div>
   );
-
-  if (popover) {
-    return (
-      <Modal isOpen={true} onClose={onClose} fullScreen={true}>
-        {content}
-      </Modal>
-    );
-  }
 
   return content;
 }

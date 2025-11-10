@@ -27,12 +27,12 @@ function filterDrawings(drawings, searchTerm, toc, drawingsArticleDictionary) {
 
     if (toc.article) {
       return (drawingsArticleDictionary[d.uuid] || []).find(
-        (article) => article.slug == toc.article,
+        (article) => article.slug == toc.article.slug,
       );
     }
 
-    if (toc.section) {
-      return group.replace(" & ", "-").replaceAll(" ", "-") == toc.section;
+    if (toc.section.slug) {
+      return group.replace(" & ", "-").replaceAll(" ", "-") == toc.section.slug;
     }
     return true;
   });
@@ -275,14 +275,13 @@ export default function DrawingsGallery({
               </p>
             </div> */}
           </div>
-          <main style={{ paddingLeft: "19rem" }}>
+          <main style={{ paddingLeft: "16.125rem", paddingRight: '3.5rem' }}>
             <FocusedView
               asset={focusedDrawing}
               index={focusIndex}
               all={filteredAndSorted}
               onPrev={handlePrev}
               onNext={handleNext}
-              popover={false}
               onClose={handleClose}
             />
           </main>
@@ -290,10 +289,10 @@ export default function DrawingsGallery({
       ) : (
         <main
           style={{
-            paddingLeft: "19rem",
+            paddingLeft: "18rem",
             // marginTop: groupIndex === 0 ? 0 : "4rem",
             display: "grid",
-            gridTemplateColumns: "1fr 12rem ",
+            gridTemplateColumns: "1fr 4rem",
           }}
         >
           <div style={{ minHeight: "100vh" }}>

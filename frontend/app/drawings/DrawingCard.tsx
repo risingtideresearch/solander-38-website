@@ -6,10 +6,9 @@ import { cleanFilename } from "./util";
 
 interface IDrawingCard {
   drawing: Drawing;
-  onClick: () => void;
 }
 
-export function DrawingCard({ drawing, onClick }: IDrawingCard) {
+export function DrawingCard({ drawing }: IDrawingCard) {
   return (
     <a
       href={`/drawings/file/${drawing.uuid}`}

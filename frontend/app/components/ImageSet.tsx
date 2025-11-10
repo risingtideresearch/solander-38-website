@@ -13,7 +13,6 @@ interface ImageSetProps {
   defaultUUID?: string;
   variableSize?: boolean;
   title?: string;
-  popover?: boolean;
 }
 
 export default function ImageSet({
@@ -21,7 +20,6 @@ export default function ImageSet({
   defaultUUID,
   variableSize = false,
   title,
-  popover,
 }: ImageSetProps) {
   const [focusIndex, setFocusIndex] = useState(
     defaultUUID ? assets.findIndex((a: any) => a.uuid === defaultUUID) : -1
@@ -47,7 +45,6 @@ export default function ImageSet({
           onPrev={handlePrev}
           onNext={handleNext}
           onClose={() => setFocusIndex(-1)}
-          popover={popover}
           title={title}
         />
       ) : (
@@ -75,14 +72,13 @@ export default function ImageSet({
                   key={(asset as any)._key}
                   src={asset}
                   alt={asset.altText || "todo: add alt text"}
-                  onClick={() => setFocusIndex(index)}
+                  // onClick={() => setFocusIndex(index)}
                 />
               </div>
             ) : (
               <DrawingCard
                 key={(asset as any).id}
                 drawing={asset as Drawing}
-                onClick={() => setFocusIndex(index)}
               />
             )
           )}

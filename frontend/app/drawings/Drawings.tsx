@@ -6,7 +6,7 @@ import DrawingsGallery from "./DrawingsGallery";
 import { DrawingsArticleDictionary } from "./util";
 import { Section } from "@/sanity/sanity.types";
 import TableOfContents from "../toc/TableOfContents";
-import { LiaArrowLeftSolid } from "react-icons/lia";
+import { LiaLongArrowAltLeftSolid } from "react-icons/lia";
 
 interface DrawingsProps {
   drawings: {
@@ -44,10 +44,11 @@ export default function Drawings({
             gap: "0.5rem",
             left: "0.5rem",
             backdropFilter: "none",
+            alignItems: "center",
           }}
           onClick={handleReset}
         >
-          <LiaArrowLeftSolid />
+          <LiaLongArrowAltLeftSolid size={18} />
           All drawings
         </button>
       ) : (
