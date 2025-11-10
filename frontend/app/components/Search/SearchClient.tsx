@@ -202,7 +202,7 @@ export default function SearchClient({ drawings }) {
                           margin: 0,
                         }}
                       >
-                        <span>{result.title || result.filename}</span>
+                        <span>{result.title || result.clean_filename}</span>
 
                         <span
                           style={{

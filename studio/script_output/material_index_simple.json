@@ -20,6 +20,7 @@
     "Polished Stainless Steel",
     "Solar panels",
     "Starboard (HDPE)",
+    "Trampoline (1)",
     "White Matte Paint",
     "Windows & portlights",
     "Wood"
@@ -211,6 +212,9 @@
     "SUPERSTRUCTURE__instr panel & wireway__rmvbl panels material TBD.glb": [
       "White Matte Paint"
     ],
+    "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__anchor beam.glb": [
+      "Default_Material"
+    ],
     "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM__sensors.glb": [
       "Default_Material"
     ],
@@ -283,6 +287,9 @@
     "BODY__HULLS & DECKS__PORTLIGHTS__portlight cut-out edge.glb": [
       "Fiberglass"
     ],
+    "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__cross beam.glb": [
+      "Aluminum"
+    ],
     "OUTFITTING_INTERIOR__Isotherm Drawer 55 – Frost Free Freezer.glb": [
       "Default_Material"
     ],
@@ -353,10 +360,6 @@
     "SUPERSTRUCTURE__WIREWAYS__ww parts surfs__int-int penetrations GREEN.glb": [
       "Aluminum"
     ],
-    "OUTFITTING_INTERIOR__fwd trampoline & beam ROUGH.glb": [
-      "Default_Material",
-      "Aluminum"
-    ],
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__1_2_ acrylic.glb": [
       "Bronze tinted acrylic"
     ],
@@ -386,6 +389,9 @@
     ],
     "CONTROL__STEERING__steering tunnels.glb": [
       "Fiberglass"
+    ],
+    "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__trampoline.glb": [
+      "Trampoline (1)"
     ],
     "OUTFITTING_INTERIOR__BATTERY CMPT__access panel WRK__coaming (scribed to hull).glb": [
       "Default_Material"
@@ -437,6 +443,7 @@
       "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Furuno SCX-20 satellite compass.glb",
       "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Searchlight D-SS PRO Driving Pod.glb",
       "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Signal Mate LED Anchor Light.glb",
+      "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__anchor beam.glb",
       "OUTFITTING_INTERIOR__INT. FURNISHING__dbl mattress.glb",
       "OUTFITTING_INTERIOR__Isotherm Drawer 55 – Frost Free Freezer.glb",
       "OUTFITTING_INTERIOR__Isotherm Drawer 65 - FROST FREE Refrigerator.glb",
@@ -445,7 +452,6 @@
       "OUTFITTING_INTERIOR__SIMPLIFIED ANCHOR WINCH.glb",
       "OUTFITTING_INTERIOR___ugly corner_ options__small corner box.glb",
       "OUTFITTING_INTERIOR__cleats.glb",
-      "OUTFITTING_INTERIOR__fwd trampoline & beam ROUGH.glb",
       "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__WM CABINET__36_ long version approx_ summer 2025.glb",
       "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__cabinet surfaces.glb",
       "OUTFITTING_INTERIOR__helm seat.glb",
@@ -526,8 +532,8 @@
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__CH other materials.glb",
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__SIMPLIFIED TRACK HARDWARE.glb",
       "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__FWD MAST & MOUNTS.glb",
+      "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__cross beam.glb",
       "OUTFITTING_INTERIOR__SIMPLIFIED CTR DECK TRACKS.glb",
-      "OUTFITTING_INTERIOR__fwd trampoline & beam ROUGH.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal.glb",
       "SUPERSTRUCTURE__WINDOWS__rough window hardware & trim__window trim surfs.glb",
@@ -592,6 +598,9 @@
     ],
     "Bronze tinted acrylic": [
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__1_2_ acrylic.glb"
+    ],
+    "Trampoline (1)": [
+      "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__trampoline.glb"
     ]
   }
 }

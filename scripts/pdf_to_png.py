@@ -22,6 +22,14 @@ def sanitize_path(path):
     """
     return path.replace('#', '')
 
+def clean_filename(name):
+    """Clean filename for display by removing common patterns"""
+    clean = name
+    clean = clean.replace("Solander 38", "")
+    clean = re.sub(r'\d{1,2}-\d{1,2}-\d{2}', '', clean)  # Remove date pattern
+    clean = re.sub(r'\s*\.png', '', clean)  # Remove .png with optional whitespace
+    clean = clean.replace(" HJN", "")
+    return clean.strip()  # Remove leading/trailing whitespace
 
 def rename_files_with_hash(root_directory):
     """
@@ -238,7 +246,8 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
         
         # Save each image as a separate PNG file
         for i, image in enumerate(images):
-            output_filename = os.path.join(output_folder, f"{pdf_base_name} page {i+1}.png")
+            page_suffix = f" page {i+1}" if total_pages > 1 else ""
+            output_filename = os.path.join(output_folder, f"{pdf_base_name}{page_suffix}.png")
             image.save(output_filename, "PNG")
             
             ### DISABLE FOR NOW
@@ -276,6 +285,7 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
             # Create file info dictionary
             file_info = {
                 "filename": os.path.basename(output_filename),
+                "clean_filename": clean_filename(os.path.basename(output_filename)),
                 "id": id,
                 "uuid": uuid,
                 "rel_path": rel_path,
@@ -465,6 +475,7 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
             uuid_mapping[info["uuid"]] = {
                 "rel_path": info["rel_path"],
                 "filename": info["filename"],
+                "clean_filename": info["clean_filename"],
                 "id": info["id"],
                 "group": info["group"],
                 "source_pdf_full_path": info["source_pdf_full_path"],
