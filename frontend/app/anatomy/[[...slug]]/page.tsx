@@ -32,8 +32,6 @@ export default async function Page({
 
   const articles = await fetchArticles();
 
-  console.log(sections, articles)
-
   let defaultSection = sections.data.sections.find(section => section.slug == slug);
   const defaultArticle = articles.data.find(article => article.slug == slug)
   if (defaultArticle) {
@@ -52,9 +50,8 @@ export default async function Page({
       >
         <Anatomy
           content={{
-            annotations: annotations.data,
             models_manifest: models_manifest,
-            materials_index: materials_index,
+            material_index: materials_index.material_index,
             articles: articles.data
           }}
         />

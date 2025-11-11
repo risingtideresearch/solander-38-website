@@ -1,5 +1,6 @@
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { DrawingsArticleDictionary } from "./util";
+import styles from "./../articles/page.module.scss";
 
 interface RelatedArticlesProps {
   uuid: string;
@@ -13,13 +14,24 @@ export default function RelatedArticle({
   if (drawingsArticleDictionary[uuid]) {
     return (
       <div
+        // className={styles.page__metadata}
         style={{
           border: "1px solid",
-          borderBottom: "none",
+          position: "static",
+          marginTop: "1rem",
         }}
       >
+        {/* {drawingsArticleDictionary[uuid].map((article) => {
+          return (
+            <div key={article._id}>
+              <h6>Article</h6>
+              <a href={`/article/${article.slug}`}><h6>{article.title}</h6></a> 
+            </div>
+          );
+        })}
+      </div> */}
         <h6 style={{ padding: "0.5rem" }}>Related articles</h6>
-        <div style={{ borderTop: "1px solid", borderBottom: "1px solid" }}>
+        <div style={{ borderTop: "1px solid"}}>
           {drawingsArticleDictionary[uuid].map((article) => {
             return (
               <div
@@ -28,16 +40,25 @@ export default function RelatedArticle({
                   padding: "0.5rem",
                 }}
               >
-                <a
+                <p
                   style={{
-                    display: "flex",
-                    gap: "0.5rem",
+                    margin: 0,
+                    lineHeight: "1.2em",
+                    textWrap: "initial",
                   }}
-                  href={`/article/${article.slug}`}
                 >
-                  {article.title}
-                  <LiaLongArrowAltRightSolid size={18} />
-                </a>
+                  <a
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                    }}
+                    href={`/article/${article.slug}`}
+                  >
+                    {article.title}
+                    <LiaLongArrowAltRightSolid size={18} />
+                  </a>
+                </p>
                 {/* <p style={{ margin: 0, fontSize: "0.75rem" }}>
                   {article.subtitle}
                 </p> */}

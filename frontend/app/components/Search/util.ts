@@ -6,11 +6,11 @@ export function searchDrawings(drawings, query: string): Array<unknown> {
   return drawings
     .filter(
       (file: Drawing) =>
-        file.filename.toLowerCase().includes(lowerQuery) ||
+        file.clean_filename.toLowerCase().includes(lowerQuery) ||
         file.extracted_text?.toLowerCase().includes(lowerQuery),
     )
     .map((file: Drawing) => {
-      const filenameMatch = file.filename.toLowerCase().includes(lowerQuery);
+      const filenameMatch = file.clean_filename.toLowerCase().includes(lowerQuery);
       const textMatch = file.extracted_text?.toLowerCase().includes(lowerQuery);
       
       let matchedSnippet = '';
@@ -35,7 +35,7 @@ export function searchDrawings(drawings, query: string): Array<unknown> {
         ...file,
         _type: "drawing",
         matchType: filenameMatch ? 'filename' : 'text',
-        matchedSnippet: matchedSnippet || file.filename,
+        matchedSnippet: matchedSnippet || file.clean_filename,
         query: query, 
       };
     })

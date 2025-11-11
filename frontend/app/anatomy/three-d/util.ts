@@ -5,15 +5,28 @@ export enum Units {
   Feet = "Feet",
 }
 
-export const processModels = (
-  models_manifest
-): { filename: string; bounding_box: BoundingBox }[] => {
+export type Model = {
+  filename: string;
+  bounding_box: BoundingBox;
+};
+export type ModelManifest = {
+  exported_layers: Array<{
+    filename: string;
+    bounding_box: BoundingBox;
+    file_size: number;
+  }>;
+  export_info: {
+    timestamp_end: Date;
+  }
+};
+
+export type MaterialIndex = {
+  [key: string]: Array<string>
+}
+
+export const processModels = (models_manifest: ModelManifest): Array<Model> => {
   return models_manifest.exported_layers
-    .filter(
-      (d) =>
-        d.file_size > 0 &&
-        d.file_size < 100000000 
-    )
+    .filter((d) => d.file_size > 0 && d.file_size < 100000000)
     .map((d) => ({
       filename: d.filename,
       bounding_box: d.bounding_box,
@@ -22,7 +35,7 @@ export const processModels = (
 
 export type SystemsMap = { [key: string]: { children: string[]; i: number } };
 export const getSystemMap = (
-  layers: Array<{ filename: string }>
+  layers: Array<{ filename: string }>,
 ): SystemsMap => {
   const systemsMap: SystemsMap = {};
 
@@ -57,16 +70,11 @@ type BoundingBox = {
   dimensions: { width: number; depth: number; height: number };
 };
 
-export function computeCombinedBoundingBox(
-  boxes: BoundingBox[], 
-): Box3 {
+export function computeCombinedBoundingBox(boxes: BoundingBox[]): Box3 {
   if (!boxes || boxes.length === 0) {
     console.error("Cannot compute bounding box from empty array");
 
-    return new Box3(
-      new Vector3(0, 0, 0),
-      new Vector3(0, 0, 0)
-    );
+    return new Box3(new Vector3(0, 0, 0), new Vector3(0, 0, 0));
   }
 
   const scale = INCHES_TO_METERS;
@@ -74,30 +82,30 @@ export function computeCombinedBoundingBox(
   // Rhino: X, Y, Z → Three.js: X, Z, Y (swap Y and Z)
   const combinedMin = {
     x: boxes[0].min.x * scale,
-    y: boxes[0].min.z * scale,  // Rhino Z → Three.js Y
-    z: boxes[0].min.y * scale,  // Rhino Y → Three.js Z
+    y: boxes[0].min.z * scale, // Rhino Z → Three.js Y
+    z: boxes[0].min.y * scale, // Rhino Y → Three.js Z
   };
 
   const combinedMax = {
     x: boxes[0].max.x * scale,
-    y: boxes[0].max.z * scale,  // Rhino Z → Three.js Y
-    z: boxes[0].max.y * scale,  // Rhino Y → Three.js Z
+    y: boxes[0].max.z * scale, // Rhino Z → Three.js Y
+    z: boxes[0].max.y * scale, // Rhino Y → Three.js Z
   };
 
   for (let i = 1; i < boxes.length; i++) {
     const box = boxes[i];
-    
+
     combinedMin.x = Math.min(combinedMin.x, box.min.x * scale);
-    combinedMin.y = Math.min(combinedMin.y, box.min.z * scale);  // Rhino Z → Three.js Y
-    combinedMin.z = Math.min(combinedMin.z, box.min.y * scale);  // Rhino Y → Three.js Z
-    
+    combinedMin.y = Math.min(combinedMin.y, box.min.z * scale); // Rhino Z → Three.js Y
+    combinedMin.z = Math.min(combinedMin.z, box.min.y * scale); // Rhino Y → Three.js Z
+
     combinedMax.x = Math.max(combinedMax.x, box.max.x * scale);
-    combinedMax.y = Math.max(combinedMax.y, box.max.z * scale);  // Rhino Z → Three.js Y
-    combinedMax.z = Math.max(combinedMax.z, box.max.y * scale);  // Rhino Y → Three.js Z
+    combinedMax.y = Math.max(combinedMax.y, box.max.z * scale); // Rhino Z → Three.js Y
+    combinedMax.z = Math.max(combinedMax.z, box.max.y * scale); // Rhino Y → Three.js Z
   }
 
   return new Box3(
     new Vector3(combinedMin.x, combinedMin.y, combinedMin.z),
-    new Vector3(combinedMax.x, combinedMax.y, combinedMax.z)
+    new Vector3(combinedMax.x, combinedMax.y, combinedMax.z),
   );
 }

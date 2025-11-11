@@ -7,9 +7,17 @@ import {
   processModels,
   getSystemMap,
   computeCombinedBoundingBox,
+  ModelManifest,
+  MaterialIndex,
 } from "./three-d/util";
 import Info from "./Info";
-import { AnatomyContent } from "./page";
+import { Article } from "@/sanity/sanity.types";
+
+type AnatomyContent = {
+  material_index: MaterialIndex;
+  models_manifest: ModelManifest;
+  articles: Array<Article>;
+}
 
 interface IAnatomy {
   content: AnatomyContent;
@@ -56,7 +64,7 @@ export default function Anatomy({ content }: IAnatomy) {
     } else {
       if (active && active.type == "material") {
         arr = arr.filter((m) =>
-          (content.materials_index.material_index[m] || []).includes(
+          (content.material_index[m] || []).includes(
             toc.material,
           ),
         );
@@ -72,27 +80,14 @@ export default function Anatomy({ content }: IAnatomy) {
       memoModels.find((layer) => layer.filename == name),
     );
 
-    return arr;
+    return Array.from(new Set(arr));
   }, [active, systems, search, activeAnnotation, toc.article, toc.material]);
 
-  const filteredContent = useMemo(
-    () => ({
-      ...content,
-      annotations: activeAnnotation
-        ? [activeAnnotation]
-        : content.annotations.filter((note) => {
-            // show annotation only when assocated model(s) are visible
-            return note.relatedModels.find((model) =>
-              filteredLayers.includes(model),
-            );
-          }),
-    }),
-    [filteredLayers],
-  );
+  const filteredContent = content;
 
   useEffect(() => {
     if (toc.article) {
-      window.history.pushState(null, "", `/anatomy/${toc.article.slug}`);
+      window.history.pushState(null, "", `/anatomy/${toc.article?.slug}`);
     } else if (toc.section.slug) {
       window.history.pushState(null, "", `/anatomy/${toc.section.slug}`);
     }

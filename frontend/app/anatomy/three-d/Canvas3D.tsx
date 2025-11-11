@@ -32,7 +32,8 @@ type Canvas3DProps = {
   };
   setActiveAnnotation: () => void;
   height?: string | number;
-  limitInteraction: boolean;
+  // use for article models
+  limitInteraction?: boolean;
 };
 
 const CAMERA_INITIAL_POSITION = [0, 0, 0] as const;
@@ -202,7 +203,7 @@ export function Canvas3D({
           key={index}
           position={pos}
           intensity={0.5}
-          color={"orange"}
+          color={"#ffffff"}
         />
       )),
     [],
@@ -210,7 +211,7 @@ export function Canvas3D({
 
   const hoverDisplay = useMemo(() => {
     if (!displayHovered) {
-      return <></>
+      return <></>;
     }
     const parts = displayHovered.name.split("__");
     const first = parts[0];
@@ -230,7 +231,7 @@ export function Canvas3D({
           bottom: "0.5rem",
           left: "0.5rem",
           padding: "0.5rem",
-          maxWidth: "50vw",
+          maxWidth: "25rem",
           zIndex: 10,
           opacity: displayHovered ? 1 : 0,
           transition: "opacity 0.2s ease-in-out",
@@ -241,9 +242,20 @@ export function Canvas3D({
         {result.map((n, i, x) => (
           <span
             key={n}
-            style={{ fontSize: i == 0 ? "0.75em" : "1em" }}
+            style={{
+              fontSize: i == 0 ? "0.75rem" : "1rem",
+              margin: 0,
+            }}
           >
-            {i == 0 ? n : n.replace('(for website)', '').replace('surfs', '').replace('mesh', '').toLowerCase()}
+            {i == 0
+              ? n
+              : n
+                  .toLowerCase()
+                  .replace("(for website)", "")
+                  .replace("surfs", "")
+                  .replace("mesh", "")
+                  .replaceAll("_", " ")
+                  .replaceAll("  ", " ")}
             {i == 0 ? <br /> : <>&nbsp;</>}
           </span>
         ))}
@@ -330,8 +342,8 @@ export function Canvas3D({
           <OrbitControls
             ref={controlsRef}
             enableDamping={false}
-            autoRotate={autoRotate}
-            autoRotateSpeed={0.3}
+            autoRotate={autoRotate && !displayHovered}
+            autoRotateSpeed={0.2}
             maxDistance={22}
             minDistance={1}
             enableZoom={!limitInteraction}

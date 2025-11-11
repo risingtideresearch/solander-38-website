@@ -2,7 +2,6 @@
 
 import { Drawing } from "./types";
 import styles from "./styles.module.scss";
-import { cleanFilename } from "./util";
 
 interface IDrawingCard {
   drawing: Drawing;
@@ -19,7 +18,7 @@ export function DrawingCard({ drawing }: IDrawingCard) {
         <span> {drawing.date_info ? drawing.date_info.date : "<no date>"}</span>
         <span>{drawing.group}</span>
       </h6>
-      <p>{cleanFilename(drawing)}</p>
+      <p>{drawing.clean_filename}</p>
       <img
         src={drawing.rel_path}
         height={drawing.height}

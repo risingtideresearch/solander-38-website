@@ -9,6 +9,7 @@ export const TOCContext = createContext({
   section: { slug: "overview", relatedArticles: [] },
   article: null,
   material: "Alum 5052",
+  resetSection: () => {},
 });
 
 export default function TableOfContents({
@@ -20,6 +21,7 @@ export default function TableOfContents({
   materials = [],
   hide = false,
   showArticleLink = false,
+  showArticles = true,
 }) {
   const [mode, setMode] = useState("system");
   const [section, setSection] = useState(
@@ -28,8 +30,14 @@ export default function TableOfContents({
   const [article, setArticle] = useState(defaultArticle);
   const [material, setMaterial] = useState("Alum 5052");
 
+  function resetSection() {
+    setSection(sections[0]);
+  }
+
   return (
-    <TOCContext.Provider value={{ mode, section, article, material }}>
+    <TOCContext.Provider
+      value={{ mode, section, article, material, resetSection }}
+    >
       <div className={styles.toc__container}>
         <div
           className={"pane toc " + styles.toc}
@@ -80,23 +88,27 @@ export default function TableOfContents({
                     >
                       {s.name}
                     </h6>
-                    <ol style={{ height: s.slug == section.slug ? "auto" : 0 }}>
-                      {s.articles?.map((a) => (
-                        <li
-                          onClick={() => setArticle(a)}
-                          style={{ cursor: "pointer" }}
-                          key={a._id}
-                        >
-                          <span
-                            style={{
-                              fontWeight: a.slug == article?.slug ? 600 : 400,
-                            }}
+                    {showArticles && (
+                      <ol
+                        style={{ height: s.slug == section.slug ? "auto" : 0 }}
+                      >
+                        {s.articles?.map((a) => (
+                          <li
+                            onClick={() => setArticle(a)}
+                            style={{ cursor: "pointer" }}
+                            key={a._id}
                           >
-                            {a.title}
-                          </span>
-                        </li>
-                      ))}
-                    </ol>
+                            <span
+                              style={{
+                                fontWeight: a.slug == article?.slug ? 600 : 400,
+                              }}
+                            >
+                              {a.title}
+                            </span>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                   </li>
                 );
               })}
@@ -122,7 +134,9 @@ export default function TableOfContents({
             <></>
           )}
         </div>
-        {showArticleLink && mode == "system" && (article ? [article] : section.articles || []).length > 0 ? (
+        {showArticleLink &&
+        mode == "system" &&
+        (article ? [article] : section.articles || []).length > 0 ? (
           <div
             className="pane"
             style={{
@@ -137,7 +151,9 @@ export default function TableOfContents({
                 <div
                   key={a._id}
                   style={{
-                    padding: "0.5rem",
+                    padding: "0 0.5rem",
+                    margin: "0.5rem 0",
+                    lineHeight: "1.2em",
                   }}
                 >
                   <a
@@ -150,7 +166,7 @@ export default function TableOfContents({
                     {a.title}
                     <LiaLongArrowAltRightSolid size={18} />
                   </a>
-                  <p style={{ margin: 0, fontSize: "0.75rem" }}>{a.subtitle}</p>
+                  {/* <p style={{ margin: 0, fontSize: "0.75rem" }}>{a.subtitle}</p> */}
                 </div>
               ))}
             </div>

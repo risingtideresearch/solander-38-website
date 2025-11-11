@@ -1,6 +1,7 @@
 export type Drawing = {
   id: string;
   filename: string;
+  clean_filename: string;
   uuid: string;
   rel_path: string;
   height: number;

@@ -48,6 +48,34 @@ export const article = defineType({
       title: 'Related 3D model layers',
       description:
         'By default, entire section will be shown (e.g. Propulsion) or use this list to override models shown',
+      validation: (Rule) =>
+        Rule.custom((models: string[] | undefined) => {
+          if (!models || models.length === 0) return true
+
+          // Check for empty values
+          const hasEmptyValues = models.some((model) => !model || model.trim() === '')
+          if (hasEmptyValues) {
+            return 'Empty values are not allowed'
+          }
+
+          // Check for duplicates
+          const seen = new Map<string, number>()
+          const duplicates: string[] = []
+
+          models.forEach((model) => {
+            const count = seen.get(model) || 0
+            seen.set(model, count + 1)
+            if (count === 1) {
+              duplicates.push(model)
+            }
+          })
+
+          if (duplicates.length > 0) {
+            return `Duplicate models found: ${duplicates.join(', ')}`
+          }
+
+          return true
+        }),
       of: [
         defineField({
           name: 'model',

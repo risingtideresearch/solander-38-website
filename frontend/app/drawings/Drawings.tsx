@@ -27,50 +27,9 @@ export default function Drawings({
   const [focusUUID, setFocusUUID] = useState<string | null>(
     defaultUUID || null,
   );
-
-  const handleReset = () => {
-    setFocusUUID(null);
-    window.history.pushState(null, "", "/drawings");
-  };
-
+  
   return (
-    <TableOfContents sections={sections} hide={focusUUID}>
-      {focusUUID ? (
-        <button
-          style={{
-            position: "fixed",
-            top: "3.5rem",
-            display: "inline-flex",
-            gap: "0.5rem",
-            left: "0.5rem",
-            backdropFilter: "none",
-            alignItems: "center",
-          }}
-          onClick={handleReset}
-        >
-          <LiaLongArrowAltLeftSolid size={18} />
-          All drawings
-        </button>
-      ) : (
-        // <input
-        //   type="text"
-        //   placeholder="search"
-        //   value={search}
-        //   style={{
-        //     border: "1px solid",
-        //     position: "fixed",
-        //     top: "3.25rem",
-        //     left: "0.5rem",
-        //     width: "15rem",
-        //   }}
-        //   onChange={(e) => {
-        //     const val = e.target.value;
-        //     setSearch(val);
-        //   }}
-        // />
-        <></>
-      )}
-
+    <TableOfContents sections={sections} hide={focusUUID} showArticles={false}>
       <DrawingsGallery
         drawings={drawings}
         search={search}
