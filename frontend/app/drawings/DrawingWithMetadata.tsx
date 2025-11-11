@@ -1,7 +1,6 @@
 import { LiaDownloadSolid } from "react-icons/lia";
 import styles from "./styles.module.scss";
-import { BiLink } from "react-icons/bi";
-import { cleanFilename } from "./util";
+import { LiaLinkSolid } from "react-icons/lia";
 
 export function DrawingWithMetadata({ drawing }) {
   if (!drawing) {
@@ -38,9 +37,9 @@ export function DrawingWithMetadata({ drawing }) {
         </div>
 
         <div className={"pane " + styles["focused-header__title"]}>
-          <p>{cleanFilename(drawing)}</p>
+          <p>{drawing.clean_filename}</p>
           <a href={`/drawings/file/${drawing.uuid}`}>
-            <BiLink size={18} />
+            <LiaLinkSolid size={18} />
           </a>
           <a
             download

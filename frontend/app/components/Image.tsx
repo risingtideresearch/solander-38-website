@@ -69,7 +69,6 @@ export function Image(
       finalHeight = Math.round(assetHeight * croppedHeightRatio)
     }
     
-    // If only one dimension is specified, calculate the other maintaining aspect ratio
     if (width && !height && assetWidth && assetHeight) {
       const croppedAspectRatio = (assetWidth * croppedWidthRatio) / (assetHeight * croppedHeightRatio)
       finalHeight = Math.round((typeof width === 'string' ? parseInt(width, 10) : width) / croppedAspectRatio)

@@ -4,6 +4,10 @@
   row-gap: 0.75rem;
   column-gap: 0.75rem;
   align-items: end;
+
+  @media screen and (min-width: 1800px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .drawing-card {
@@ -32,12 +36,6 @@
     border-top: none;
   }
 
-  &--popover {
-    padding: 0.5rem;
-    width: 100vw;
-    min-height: 100vh;
-  }
-
   &__title-row {
     display: flex;
     flex-direction: row;
@@ -49,12 +47,6 @@
     display: grid;
     grid-template-columns: 20rem 1fr;
     backdrop-filter: none;
-  }
-
-  &__nav-buttons {
-    display: inline-flex;
-    align-items: center;
-    margin-left: auto;
   }
 
   &__image-container {

@@ -32,7 +32,7 @@ const DrawingDropdownInput = React.forwardRef<HTMLInputElement, StringInputProps
 
     useEffect(() => {
       const mapped = data.files.map(file => ({
-        title: file.filename,
+        title: file.clean_filename,
         value: file.uuid,
       }));
       setOptions(mapped);

@@ -7,6 +7,8 @@ import { DrawingCard } from "./DrawingCard";
 import styles from "./styles.module.scss";
 import { DrawingsArticleDictionary } from "./util";
 import RelatedArticles from "./RelatedArticles";
+import { LiaLongArrowAltLeftSolid } from "react-icons/lia";
+import DrawingNav from "./DrawingNav";
 
 function filterDrawings(drawings, searchTerm, toc, drawingsArticleDictionary) {
   const lowerSearch = searchTerm.toLowerCase();
@@ -27,12 +29,12 @@ function filterDrawings(drawings, searchTerm, toc, drawingsArticleDictionary) {
 
     if (toc.article) {
       return (drawingsArticleDictionary[d.uuid] || []).find(
-        (article) => article.slug == toc.article,
+        (article) => article.slug == toc.article.slug,
       );
     }
 
-    if (toc.section) {
-      return group.replace(" & ", "-").replaceAll(" ", "-") == toc.section;
+    if (toc.section.slug) {
+      return group.replace(" & ", "-").replaceAll(" ", "-") == toc.section.slug;
     }
     return true;
   });
@@ -107,7 +109,7 @@ interface DrawingsGalleryProps {
     files: Array<Drawing>;
   };
   search: string;
-  resetSearch: () => void;
+  defaultUUID?: string | null;
   focusUUID: string | null;
   setFocusUUID: (uuid: string | null) => void;
   drawingsArticleDictionary: DrawingsArticleDictionary;
@@ -116,14 +118,15 @@ interface DrawingsGalleryProps {
 export default function DrawingsGallery({
   drawings,
   search,
-  resetSearch,
   drawingsArticleDictionary,
+  defaultUUID,
   focusUUID,
   setFocusUUID,
 }: DrawingsGalleryProps) {
   const toc = useContext(TOCContext);
   const scrollPositionRef = useRef(0);
   const isPopStateRef = useRef(false);
+  const hasLoadedDefault = useRef(false);
 
   // useEffect(() => {
   //   if (search) {
@@ -134,20 +137,21 @@ export default function DrawingsGallery({
   const filteredAndSorted = useMemo(() => {
     const sourceData = drawings.files;
 
-    const filtered = filterDrawings(
-      sourceData,
-      search,
-      toc,
-      drawingsArticleDictionary,
-    );
+    const filtered =
+      defaultUUID && !hasLoadedDefault.current
+        ? sourceData
+        : filterDrawings(sourceData, search, toc, drawingsArticleDictionary);
+
+    if (!hasLoadedDefault.current) {
+      hasLoadedDefault.current = true;
+    }
 
     return toc.mode === "date"
       ? sortDrawingsByTime(filtered)
       : sortDrawingsByGroup(filtered);
-  }, [drawings, toc.article, toc.section, toc.mode, search]);
+  }, [drawings, toc.article, toc.section, toc.mode, search, defaultUUID]);
 
-  // Derive the current focused drawing and its index from the UUID
-  const focusedDrawing = useMemo(
+  const focusedDrawing: Drawing = useMemo(
     () => filteredAndSorted.find((d) => d.uuid === focusUUID),
     [filteredAndSorted, focusUUID],
   );
@@ -231,7 +235,7 @@ export default function DrawingsGallery({
     };
   }, [filteredAndSorted, focusUUID]);
 
-  const visibleDrawings = [];
+  const visibleDrawings: Array<React.JSX.Element> = [];
   groupedDrawings.forEach((group) => {
     group.drawings.forEach((asset: Drawing) => {
       visibleDrawings.push(
@@ -244,23 +248,55 @@ export default function DrawingsGallery({
     });
   });
 
+  const handleReset = () => {
+    setFocusUUID(null);
+    window.history.pushState(null, "", "/drawings");
+    toc.resetSection();
+  };
+
   return (
     <>
       {focusedDrawing ? (
         <>
-          <RelatedArticles
-            uuid={focusedDrawing.uuid}
-            drawingsArticleDictionary={drawingsArticleDictionary}
-          />
-          <main style={{ paddingLeft: "19rem" }}>
-            <FocusedView
-              asset={focusedDrawing}
-              index={focusIndex}
-              all={filteredAndSorted}
+          <div
+            className="pane"
+            style={{
+              position: "fixed",
+              top: "6rem",
+              left: "0.5rem",
+              zIndex: 100,
+            }}
+          >
+            <DrawingNav 
+              prev={filteredAndSorted[focusIndex - 1]}
+              next={filteredAndSorted[focusIndex + 1]}
               onPrev={handlePrev}
               onNext={handleNext}
-              popover={false}
-              onClose={handleClose}
+              />
+            <RelatedArticles
+              uuid={focusedDrawing.uuid}
+              drawingsArticleDictionary={drawingsArticleDictionary}
+            />
+
+            {/* <div style={{marginTop: '2rem'}}>
+              <img
+                src={focusedDrawing.rel_path}
+                width={240}
+                height={(240 * focusedDrawing.height) / focusedDrawing.width}
+                loading="lazy"
+                // alt={focusedDrawing.filename}
+              />
+              <p
+                className={`${styles["focused-view__uuid-label"]} uppercase-mono`}
+                style={{ fontSize: "0.5rem" }}
+              >
+                {focusedDrawing.uuid}
+              </p>
+            </div> */}
+          </div>
+          <main style={{ paddingLeft: "19rem", paddingRight: "3.5rem" }}>
+            <FocusedView
+              asset={focusedDrawing}
             />
           </main>
         </>
@@ -270,10 +306,17 @@ export default function DrawingsGallery({
             paddingLeft: "19rem",
             // marginTop: groupIndex === 0 ? 0 : "4rem",
             display: "grid",
-            gridTemplateColumns: "1fr 12rem ",
+            gridTemplateColumns: "1fr 4rem",
           }}
         >
           <div style={{ minHeight: "100vh" }}>
+            {/* {toc.article ?
+              <div>
+                Drawings in <strong>{toc.article.title}</strong>
+                </div>
+              :
+              <></>
+            } */}
             {visibleDrawings.length > 0 ? (
               <div className={styles.gallery}>{visibleDrawings}</div>
             ) : (

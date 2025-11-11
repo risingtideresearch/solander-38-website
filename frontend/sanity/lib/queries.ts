@@ -364,3 +364,19 @@ export const componentPartQuery = (slug: string) => `
 }
 
 `;
+
+export const searchQuery = (query: string) => `
+*[_type in ["article"] && (
+  title match $query + "*" ||
+  name match $query + "*" ||
+  content[].children[].text match $query + "*" ||
+  authors[]->.name match $query + "*"
+)][0...30]{
+  _id,
+  _type,
+  title,
+  slug,
+  authors[]->{
+    name
+  }
+}`;

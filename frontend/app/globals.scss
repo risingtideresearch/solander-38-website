@@ -43,7 +43,8 @@ body {
 
 .bg--grid {
   background: var(--background);
-  background-image: repeating-linear-gradient(
+  background-image:
+    repeating-linear-gradient(
       0deg,
       #eee 0px,
       #eee 1px,
@@ -79,7 +80,6 @@ h2 {
 h3 {
   font-size: 1.375rem;
   text-transform: uppercase;
-  font-family: var(--font-departure-mono);
   font-weight: 400;
   margin: 0;
 }
@@ -91,7 +91,8 @@ h6 {
   margin: 0;
 }
 
-p, li {
+p,
+li {
   margin: 0.75em 0;
   line-height: 1.6em;
   text-wrap: pretty;
@@ -171,8 +172,8 @@ details {
 
 main {
   margin: 0;
-  padding: 3.5rem 0.5rem;
-  max-width: 100rem;
+  padding: 6rem 0.5rem;
+  max-width: 120rem;
 }
 
 section {
@@ -227,7 +228,6 @@ figcaption {
   }
 } */
 
-
 footer {
   border-top: 1px solid;
   padding: 2rem 0.5rem;
@@ -245,4 +245,17 @@ footer {
       width: auto;
     }
   }
+}
+
+// use for screen readers
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

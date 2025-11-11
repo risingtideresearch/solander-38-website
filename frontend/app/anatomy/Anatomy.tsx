@@ -3,14 +3,21 @@
 import { useContext, useEffect, useMemo, useState } from "react";
 import ThreeDContainer from "./ThreeDContainer";
 import { TOCContext } from "../toc/TableOfContents";
-import AnnotationsList from "./AnnotationsList";
 import {
   processModels,
   getSystemMap,
   computeCombinedBoundingBox,
+  ModelManifest,
+  MaterialIndex,
 } from "./three-d/util";
 import Info from "./Info";
-import { AnatomyContent } from "./page";
+import { Article } from "@/sanity/sanity.types";
+
+type AnatomyContent = {
+  material_index: MaterialIndex;
+  models_manifest: ModelManifest;
+  articles: Array<Article>;
+}
 
 interface IAnatomy {
   content: AnatomyContent;
@@ -24,66 +31,47 @@ export default function Anatomy({ content }: IAnatomy) {
   const memoModels = useMemo(() => processModels(content.models_manifest), []);
   const systems = useMemo(() => getSystemMap(memoModels), [memoModels]);
 
-  console.log(toc.article, content.articles, content.models_manifest);
-
   const active =
     toc.mode == "system"
-      ? toc.section != "overview"
-        ? toc.section == "water-heating-systems"
+      ? toc.section.slug != "overview"
+        ? toc.section.slug == "water-heating-systems"
           ? {
               type: "system",
               key: "water_heating systems".toUpperCase(),
             }
-          : toc.section == "outfitting-interior"
+          : toc.section.slug == "outfitting-interior"
             ? {
                 type: "system",
-                key: toc.section.replaceAll("-", "_").toUpperCase(),
+                key: toc.section.slug.replaceAll("-", "_").toUpperCase(),
               }
             : {
                 type: "system",
-                key: toc.section.replaceAll("-", " ").toUpperCase(),
+                key: toc.section.slug.replaceAll("-", " ").toUpperCase(),
               }
         : null
       : {
           type: toc.mode,
-          key: toc.section,
+          key: toc.section.slug,
         };
-
-  // useEffect(() => {
-  //   if (toc.mode == "system") {
-  //     window.history.pushState(null, "", `/anatomy/${toc.section}`);
-  //   } else {
-  //     window.history.pushState(null, "", `/anatomy/overview`);
-  //   }
-  // }, [toc.section]);
 
   const filteredLayers = useMemo(() => {
     let arr: string[] = memoModels.map((m) => m.filename) || [];
-    console.log(memoModels);
 
     if (search) {
       arr = arr.filter((layer) => {
         return layer.toLowerCase().includes(search.toLowerCase());
       });
     } else {
-      if (active && active.key != "overview") {
-        if (active.type == "system") {
-          arr = systems[active.key]?.children;
-        } else if (active.type == "material") {
-          arr = arr.filter((m) =>
-            (content.materials_index.material_index[m] || []).includes(
-              active.key,
-            ),
-          );
-        }
-      }
-      if (toc.article) {
-        console.log(
-          (content.articles || []).find((d) => d.slug == toc.article),
+      if (active && active.type == "material") {
+        arr = arr.filter((m) =>
+          (content.material_index[m] || []).includes(
+            toc.material,
+          ),
         );
-        arr =
-          (content.articles || []).find((d) => d.slug == toc.article)
-            ?.relatedModels || arr;
+      } else if (toc.article) {
+        arr = toc.article?.relatedModels || arr;
+      } else if (active && active.key != "overview") {
+        arr = systems[active.key]?.children;
       }
     }
 
@@ -92,33 +80,18 @@ export default function Anatomy({ content }: IAnatomy) {
       memoModels.find((layer) => layer.filename == name),
     );
 
-    return arr;
-  }, [active, systems, search, activeAnnotation, toc.article]);
+    return Array.from(new Set(arr));
+  }, [active, systems, search, activeAnnotation, toc.article, toc.material]);
 
-  const filteredContent = useMemo(
-    () => ({
-      ...content,
-      annotations: activeAnnotation
-        ? [activeAnnotation]
-        : content.annotations.filter((note) => {
-            // show annotation only when assocated model(s) are visible
-            return note.relatedModels.find((model) =>
-              filteredLayers.includes(model),
-            );
-          }),
-    }),
-    [filteredLayers],
-  );
+  const filteredContent = content;
 
-  // useEffect(() => {
-  //   if (activeAnnotation && !visibleAnnotations) {
-  //     setVisibleAnnotations(true);
-  //     toc.setSection(activeAnnotation.system);
-  //   }
-  //   if (activeAnnotation) {
-  //     setSearch("");
-  //   }
-  // }, [activeAnnotation]);
+  useEffect(() => {
+    if (toc.article) {
+      window.history.pushState(null, "", `/anatomy/${toc.article?.slug}`);
+    } else if (toc.section.slug) {
+      window.history.pushState(null, "", `/anatomy/${toc.section.slug}`);
+    }
+  }, [toc.article, toc.section.slug]);
 
   const boundingBox = computeCombinedBoundingBox(
     memoModels

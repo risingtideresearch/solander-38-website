@@ -2,21 +2,15 @@
 
 import { Drawing } from "./types";
 import styles from "./styles.module.scss";
-import { cleanFilename } from "./util";
 
 interface IDrawingCard {
   drawing: Drawing;
-  onClick: () => void;
 }
 
-export function DrawingCard({ drawing, onClick }: IDrawingCard) {
+export function DrawingCard({ drawing }: IDrawingCard) {
   return (
     <a
-      onClick={(e) => {
-        e.stopPropagation();
-        onClick();
-      }}
-      // href={`/drawings/${drawing.uuid}`}
+      href={`/drawings/file/${drawing.uuid}`}
       className={styles["drawing-card"]}
     >
       <h6>
@@ -24,7 +18,7 @@ export function DrawingCard({ drawing, onClick }: IDrawingCard) {
         <span> {drawing.date_info ? drawing.date_info.date : "<no date>"}</span>
         <span>{drawing.group}</span>
       </h6>
-      <p>{cleanFilename(drawing)}</p>
+      <p>{drawing.clean_filename}</p>
       <img
         src={drawing.rel_path}
         height={drawing.height}

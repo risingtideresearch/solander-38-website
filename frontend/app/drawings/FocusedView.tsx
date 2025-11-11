@@ -1,16 +1,7 @@
-"use client";
-import { useEffect } from "react";
-import {
-  LiaArrowLeftSolid,
-  LiaArrowRightSolid,
-  LiaDownloadSolid,
-} from "react-icons/lia";
-import { cleanFilename } from "./util";
+import { LiaDownloadSolid, LiaLinkSolid } from "react-icons/lia";
 import styles from "./styles.module.scss";
 import imageSetStyles from "./../components/image-set.module.scss";
-import { BiCollapseAlt, BiLink } from "react-icons/bi";
 import { Image } from "../components/Image";
-import { Modal } from "../components/Modal/Modal";
 
 function parseDateFromDescription(str: string | null | undefined): Date | null {
   if (!str) return null;
@@ -53,60 +44,16 @@ function getSanityImageId(asset): string {
   return "IM-" + asset._key.slice(0, 5).toUpperCase();
 }
 
-export function FocusedView({
-  asset,
-  onPrev,
-  onNext,
-  onClose,
-  index,
-  all,
-  popover = false,
-  title = "",
-}) {
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft" && index > 0) {
-        onPrev();
-      } else if (e.key === "ArrowRight" && index < all.length - 1) {
-        onNext();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [onPrev, onNext, index, all.length]);
-
+export function FocusedView({ asset }) {
   if (!asset) {
     return <></>;
   }
 
-  const total = all.length;
   const isSanityImage = asset._type == "image";
 
   const content = (
-    <div
-      className={`pane ${styles["focused-view"]} ${popover ? styles["focused-view--popover"] : ""}`}
-    >
+    <div className={`pane ${styles["focused-view"]}`}>
       <div>
-        {popover ? (
-          title ? (
-            <div className={styles["focused-view__title-row"]}>
-              <h6>{title}</h6>
-              <button
-                className={styles["collapse-button"]}
-                onClick={onClose}
-              >
-                <BiCollapseAlt size={18} />
-              </button>
-            </div>
-          ) : (
-            <span></span>
-          )
-        ) : null}
-
         <div>
           <div className={styles["focused-view__grid"]}>
             <div className={styles["focused-header"]}>
@@ -129,22 +76,6 @@ export function FocusedView({
                   </h6>
                 )}
               </div>
-            </div>
-            <div className={styles["focused-view__nav-buttons"]}>
-              <button
-                className={`${styles["nav-button"]} ${styles["nav-button--left"]}`}
-                onClick={onPrev}
-                disabled={index === 0}
-              >
-                <LiaArrowLeftSolid size={14} /> {cleanFilename(all[index - 1])}
-              </button>
-              <button
-                className={`${styles["nav-button"]} ${styles["nav-button--right"]}`}
-                onClick={onNext}
-                disabled={index === total - 1}
-              >
-                {cleanFilename(all[index + 1])} <LiaArrowRightSolid size={14} />
-              </button>
             </div>
           </div>
           {isSanityImage ? (
@@ -169,18 +100,21 @@ export function FocusedView({
           ) : (
             <>
               <div className={styles["focused-header__title"]}>
-                <p>{cleanFilename(asset)}</p>
+                <p>{asset.clean_filename}</p>
                 <a href={`/drawings/file/${asset.uuid}`}>
-                  <BiLink size={18} />
+                  <LiaLinkSolid size={18} />
                 </a>
                 <a
                   download
-                  href={'/drawings/' + encodeURIComponent(
-                    asset.source_pdf_full_path.replace(
-                      "../frontend/public/drawings",
-                      "",
-                    ),
-                  )}
+                  href={
+                    "/drawings/" +
+                    encodeURIComponent(
+                      asset.source_pdf_full_path.replace(
+                        "../frontend/public/drawings",
+                        "",
+                      ),
+                    )
+                  }
                 >
                   <h6>PDF&nbsp;</h6>
                   <LiaDownloadSolid />
@@ -194,8 +128,11 @@ export function FocusedView({
                     height={asset.height}
                     width={asset.width}
                     loading="lazy"
+                    alt={asset}
                   />
-                  <p className={`${styles["focused-view__uuid-label"]} uppercase-mono`}>
+                  <p
+                    className={`${styles["focused-view__uuid-label"]} uppercase-mono`}
+                  >
                     {asset.uuid}
                   </p>
                 </div>
@@ -206,14 +143,6 @@ export function FocusedView({
       </div>
     </div>
   );
-
-  if (popover) {
-    return (
-      <Modal isOpen={true} onClose={onClose} fullScreen={true}>
-        {content}
-      </Modal>
-    );
-  }
 
   return content;
 }

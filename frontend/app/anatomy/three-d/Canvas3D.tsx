@@ -32,6 +32,8 @@ type Canvas3DProps = {
   };
   setActiveAnnotation: () => void;
   height?: string | number;
+  // use for article models
+  limitInteraction?: boolean;
 };
 
 const CAMERA_INITIAL_POSITION = [0, 0, 0] as const;
@@ -47,6 +49,7 @@ export function Canvas3D({
   filteredLayers,
   content,
   setActiveAnnotation,
+  limitInteraction = false,
   height = "100vh",
 }: Canvas3DProps) {
   const groupRef = useRef<Group>(null);
@@ -200,14 +203,27 @@ export function Canvas3D({
           key={index}
           position={pos}
           intensity={0.5}
-          color={"orange"}
+          color={"#ffffff"}
         />
       )),
     [],
   );
 
-  const hoverDisplay = useMemo(
-    () => (
+  const hoverDisplay = useMemo(() => {
+    if (!displayHovered) {
+      return <></>;
+    }
+    const parts = displayHovered.name.split("__");
+    const first = parts[0];
+    const secondToLast = parts[parts.length - 2];
+    const last = parts[parts.length - 1];
+
+    const result = [first];
+    if (parts.length > 2 && secondToLast !== first) {
+      result.push(secondToLast);
+    }
+    result.push(last);
+    return (
       <div
         className="pane"
         style={{
@@ -215,7 +231,7 @@ export function Canvas3D({
           bottom: "0.5rem",
           left: "0.5rem",
           padding: "0.5rem",
-          maxWidth: "50vw",
+          maxWidth: "25rem",
           zIndex: 10,
           opacity: displayHovered ? 1 : 0,
           transition: "opacity 0.2s ease-in-out",
@@ -223,19 +239,29 @@ export function Canvas3D({
           pointerEvents: "none",
         }}
       >
-        {displayHovered?.name.split("__").map((n, i, x) => (
+        {result.map((n, i, x) => (
           <span
             key={n}
-            style={{ fontSize: i < x.length - 1 ? "0.75em" : "1em" }}
+            style={{
+              fontSize: i == 0 ? "0.75rem" : "1rem",
+              margin: 0,
+            }}
           >
-            {n}
-            <br />
+            {i == 0
+              ? n
+              : n
+                  .toLowerCase()
+                  .replace("(for website)", "")
+                  .replace("surfs", "")
+                  .replace("mesh", "")
+                  .replaceAll("_", " ")
+                  .replaceAll("  ", " ")}
+            {i == 0 ? <br /> : <>&nbsp;</>}
           </span>
         ))}
       </div>
-    ),
-    [displayHovered],
-  );
+    );
+  }, [displayHovered]);
 
   const canvasRef = useRef(null);
 
@@ -276,10 +302,12 @@ export function Canvas3D({
             preset="sunset"
           />
 
-          <RaycastHandler
-            clippingPlanes={clippingPlanes}
-            setHovered={setHovered}
-          />
+          {!limitInteraction && (
+            <RaycastHandler
+              clippingPlanes={clippingPlanes}
+              setHovered={setHovered}
+            />
+          )}
 
           <ambientLight intensity={0.4} />
           {directionalLights}
@@ -314,8 +342,11 @@ export function Canvas3D({
           <OrbitControls
             ref={controlsRef}
             enableDamping={false}
-            autoRotate={autoRotate}
-            autoRotateSpeed={0.3}
+            autoRotate={autoRotate && !displayHovered}
+            autoRotateSpeed={0.2}
+            maxDistance={22}
+            minDistance={1}
+            enableZoom={!limitInteraction}
           />
         </Canvas>
 

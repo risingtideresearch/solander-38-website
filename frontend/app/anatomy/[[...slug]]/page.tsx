@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import TableOfContents from "@/app/toc/TableOfContents";
-import { fetchAnnotations, fetchSections } from "@/sanity/lib/utils";
+import { fetchAnnotations, fetchArticles, fetchSections } from "@/sanity/lib/utils";
 import Anatomy from "../Anatomy";
 import styles from "./../page.module.scss";
 
@@ -30,19 +30,29 @@ export default async function Page({
 
   const sections = await fetchSections();
 
+  const articles = await fetchArticles();
+
+  let defaultSection = sections.data.sections.find(section => section.slug == slug);
+  const defaultArticle = articles.data.find(article => article.slug == slug)
+  if (defaultArticle) {
+    defaultSection = defaultArticle.section;
+  }
+
   return (
     <div className={styles.page}>
       <TableOfContents
         sections={sections?.data.sections || []}
         modes={["system", "material"]}
-        defaultSystem={slug}
+        defaultSection={defaultSection?.slug || null}
+        defaultArticle={defaultArticle || null}
         materials={materials_index.unique_materials}
+        showArticleLink={true}
       >
         <Anatomy
           content={{
-            annotations: annotations.data,
             models_manifest: models_manifest,
-            materials_index: materials_index,
+            material_index: materials_index.material_index,
+            articles: articles.data
           }}
         />
       </TableOfContents>

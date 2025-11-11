@@ -32,9 +32,9 @@ export default async function Page() {
         </figure>
 
         <div
-          className="pane"
           style={{
             position: "sticky",
+            background: "#fff",
             top: "20%",
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -46,9 +46,9 @@ export default async function Page() {
           }}
         >
           <h1
-            className="uppercase-mono"
             style={{
-              fontSize: "3.25rem",
+              fontSize: "3rem",
+              textTransform: "uppercase",
               padding: "0.5rem",
               margin: 0,
               borderBottom: "1px solid",
@@ -60,7 +60,6 @@ export default async function Page() {
           </h1>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -70,7 +69,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -80,7 +78,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -90,7 +87,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -100,7 +96,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -110,7 +105,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -120,7 +114,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -130,7 +123,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -140,7 +132,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -150,7 +141,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -160,7 +150,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -170,7 +159,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -180,7 +168,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -190,7 +177,6 @@ export default async function Page() {
           </h6>
           <h6
             style={{
-              fontSize: "0.875rem",
               padding: "0.5rem",
               borderBottom: "1px solid",
               borderRight: "1px solid",
@@ -223,7 +209,7 @@ export default async function Page() {
             className="uppercase-mono"
             style={{
               position: "absolute",
-              fontSize: "0.5rem",
+              fontSize: "0.625rem",
               bottom: "0px",
               left: "0.5rem",
             }}
@@ -255,7 +241,7 @@ export default async function Page() {
             className="uppercase-mono"
             style={{
               position: "absolute",
-              fontSize: "0.5rem",
+              fontSize: "0.625rem",
               bottom: "0",
               left: "0.5rem",
             }}
@@ -302,7 +288,7 @@ export default async function Page() {
       <Articles />
 
       <div>
-        <Link href="/anatomy" style={{width: 'min-content'}}>
+        <Link href="/anatomy" style={{ width: "min-content" }}>
           <img
             style={{ display: "block", margin: "0 auto", maxWidth: "700px" }}
             // width={1280}

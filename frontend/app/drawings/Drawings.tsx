@@ -6,7 +6,7 @@ import DrawingsGallery from "./DrawingsGallery";
 import { DrawingsArticleDictionary } from "./util";
 import { Section } from "@/sanity/sanity.types";
 import TableOfContents from "../toc/TableOfContents";
-import { LiaArrowLeftSolid } from "react-icons/lia";
+import { LiaLongArrowAltLeftSolid } from "react-icons/lia";
 
 interface DrawingsProps {
   drawings: {
@@ -27,53 +27,14 @@ export default function Drawings({
   const [focusUUID, setFocusUUID] = useState<string | null>(
     defaultUUID || null,
   );
-
-  const handleReset = () => {
-    setFocusUUID(null);
-    window.history.pushState(null, "", "/drawings");
-  };
-
+  
   return (
-    <TableOfContents sections={sections} hide={focusUUID}>
-      {focusUUID ? (
-        <button
-          style={{
-            position: "fixed",
-            top: "3.5rem",
-            display: "inline-flex",
-            gap: "0.5rem",
-            left: "0.5rem",
-            backdropFilter: "none",
-          }}
-          onClick={handleReset}
-        >
-          <LiaArrowLeftSolid />
-          All drawings
-        </button>
-      ) : (
-        <input
-          type="text"
-          placeholder="search"
-          value={search}
-          style={{
-            border: "1px solid",
-            position: "fixed",
-            top: "3.25rem",
-            left: "0.5rem",
-            width: "15rem",
-          }}
-          onChange={(e) => {
-            const val = e.target.value;
-            setSearch(val);
-          }}
-        />
-      )}
-
+    <TableOfContents sections={sections} hide={focusUUID} showArticles={false}>
       <DrawingsGallery
         drawings={drawings}
         search={search}
-        resetSearch={() => setSearch('')}
         drawingsArticleDictionary={drawingsArticleDictionary}
+        defaultUUID={defaultUUID}
         focusUUID={focusUUID}
         setFocusUUID={setFocusUUID}
       />

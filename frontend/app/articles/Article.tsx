@@ -15,7 +15,6 @@ const components = {
           assets={value.imageSet}
           title={value.title}
           variableSize={false}
-          popover={true}
         />
         {value.caption && <figcaption>{value.caption}</figcaption>}
       </figure>
@@ -50,6 +49,7 @@ const components = {
     models3D: ({ value }) => (
       <AnatomyPane
         title={`Anatomy / superstructure jig`}
+        url={`/anatomy/superstructure-jig`}
         defaultSize={{ height: "30rem" }}
         expandedSize={{ height: "100%" }}
       >
@@ -75,6 +75,7 @@ const components = {
             settings={{
               expand: false,
             }}
+            limitInteraction={true}
           />
         </div>
       </AnatomyPane>
@@ -126,18 +127,18 @@ export default async function Article({ data, navigation }) {
         ) : (
           <></>
         )}
-        {/* <div>
-          <h6>Published</h6>
-
-          <h6>{published.toLocaleDateString()}</h6>
-        </div> */}
-        {updated.toLocaleDateString() != published.toLocaleDateString() && (
+        {updated.toLocaleDateString() && (
           <div>
             <h6>Updated</h6>
 
             <h6>{updated.toLocaleDateString()}</h6>
           </div>
         )}
+        <div>
+          <h6>System</h6>
+
+          <h6>{data.section}</h6>
+        </div>
         {navigation.next && (
           <div>
             <h6>Next</h6>
@@ -159,14 +160,7 @@ export default async function Article({ data, navigation }) {
         )}
       </div>
       <main className={styles.page}>
-        <div
-          style={{
-            display: "grid",
-            gap: "1rem",
-            gridTemplateColumns: "1fr 30rem",
-          }}
-          className={styles.page__header}
-        >
+        <div className={styles.page__header}>
           <div>
             <Link href={"/articles/"}>
               <h6>{data.section || ""}</h6>
@@ -177,6 +171,7 @@ export default async function Article({ data, navigation }) {
           {data.relatedModels && (
             <AnatomyPane
               title={`Anatomy / ${data.title}`}
+              url={`/anatomy/${data.slug.current}`}
               defaultSize={{ maxHeight: "30rem", aspectRatio: 1 }}
               expandedSize={{ height: "100%" }}
             >
@@ -199,6 +194,7 @@ export default async function Article({ data, navigation }) {
                   settings={{
                     expand: false,
                   }}
+                  limitInteraction={true}
                 />
               </div>
             </AnatomyPane>
