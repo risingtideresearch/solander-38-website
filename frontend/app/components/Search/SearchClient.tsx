@@ -241,7 +241,6 @@ export default function SearchClient({ drawings }) {
         className={"pane " + styles.search__button}
         onClick={() => setActive((prev) => !prev)}
         aria-label={active ? "Close search" : "Open search"}
-        aria-expanded={active}
         aria-controls={active ? "search-results" : undefined}
         title="Search (⌘K)"
       >

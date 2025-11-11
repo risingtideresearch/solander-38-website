@@ -202,7 +202,7 @@ export default async function Page() {
             height="3400"
             width="2200"
             loading="lazy"
-            src="/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview elevation views 4-10-25 page 1.png"
+            src="/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview elevation views 4-10-25.png"
             style={{ display: "block", maxWidth: "100%", height: "auto" }}
           />
           <p
@@ -234,7 +234,7 @@ export default async function Page() {
             height="2200"
             width="3400"
             loading="lazy"
-            src="/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview profile 4-10-25 page 1.png"
+            src="/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview profile 4-10-25.png"
             style={{ display: "block", maxWidth: "100%", height: "auto" }}
           />
           <p
