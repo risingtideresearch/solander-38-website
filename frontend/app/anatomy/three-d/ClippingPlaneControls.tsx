@@ -121,7 +121,7 @@ export function ClippingPlaneControls({
           <BiX size={18} />
         </button>
 
-        <CheckboxControl
+        {/* <CheckboxControl
           label="expand"
           checked={settings.expand}
           onChange={() => toggleSetting("expand")}
@@ -137,7 +137,7 @@ export function ClippingPlaneControls({
           label="monochrome"
           checked={settings.monochrome}
           onChange={() => toggleSetting("monochrome")}
-        />
+        /> */}
 
         <label>
           <select

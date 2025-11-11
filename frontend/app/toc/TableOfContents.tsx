@@ -140,7 +140,7 @@ export default function TableOfContents({
           <div
             className="pane"
             style={{
-              marginTop: "0.5rem",
+              marginTop: "0.75rem",
               border: "1px solid",
               width: "15rem",
             }}
