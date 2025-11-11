@@ -30,7 +30,7 @@ export default function DrawingNav({ prev, next, onPrev, onNext }) {
       {next && (
         <div>
           <h6>Next</h6>
-          <a onClick={(e) => e.stopPropagation()} style={{ textAlign: "left" }} onClick={onNext}>
+          <a onClick={(e) => {e.stopPropagation(); onNext(); }} style={{ textAlign: "left" }}>
             <LiaArrowRightSolid size={18} />
             <h6>{next.clean_filename}</h6>
           </a>
@@ -40,7 +40,7 @@ export default function DrawingNav({ prev, next, onPrev, onNext }) {
         <div>
           <h6>Prev</h6>
 
-          <a onClick={(e) => e.stopPropagation()} style={{ textAlign: "left" }} onClick={onPrev}>
+          <a onClick={(e) => {e.stopPropagation(); onPrev()}} style={{ textAlign: "left" }}>
             <LiaArrowLeftSolid size={18} />
             <h6>{prev.clean_filename}</h6>
           </a>

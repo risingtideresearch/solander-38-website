@@ -161,7 +161,7 @@ export default function SearchClient({ drawings }) {
                 role="status"
                 aria-live="polite"
               >
-                No results found for "{value}"
+                No results found for &quot;{value}&quot;
               </div>
             )}
 
