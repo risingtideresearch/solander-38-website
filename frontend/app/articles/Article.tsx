@@ -14,7 +14,6 @@ const components = {
         <ImageSet
           assets={value.imageSet}
           title={value.title}
-          variableSize={false}
         />
         {value.caption && <figcaption>{value.caption}</figcaption>}
       </figure>
@@ -96,7 +95,7 @@ export default async function Article({ data, navigation }) {
     (section) => section.title == "Jig booklet",
   );
   if (jigIndex > -1) {
-    data.content.splice(jigIndex, 0, { _type: "models3D" });
+    data.content.splice(jigIndex + 1, 0, { _type: "models3D" });
   }
   return (
     <>
