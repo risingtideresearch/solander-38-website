@@ -16,6 +16,9 @@ export default function ImageSet({ assets, title }: ImageSetProps) {
         {title && <h3>{title}</h3>}
         <div
           className={drawingStyles.gallery}
+          style={{
+            gridTemplateColumns: "1fr 1fr",
+          }}
         >
           {assets.map((asset, index) =>
             (asset as any)._type === "image" ? (
