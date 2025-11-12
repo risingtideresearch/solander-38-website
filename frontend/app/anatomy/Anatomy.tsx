@@ -69,7 +69,7 @@ export default function Anatomy({ content }: IAnatomy) {
           ),
         );
       } else if (toc.article) {
-        arr = toc.article?.relatedModels || arr;
+        arr = toc.article?.relatedModels || systems[toc.article?.section.toUpperCase()]?.children || arr;
       } else if (active && active.key != "overview") {
         arr = systems[active.key]?.children;
       }

@@ -275,7 +275,10 @@ export const sectionsQuery = (slug?: string) => {
         articles[]->{
           _id,
           title,
+          subtitle,
           "slug": slug.current,
+          relatedModels[],
+          "section": ^.slug.current
         }
       }
     }`;
@@ -292,6 +295,7 @@ export const sectionsQuery = (slug?: string) => {
         subtitle,
         "slug": slug.current,
         relatedModels[],
+        "section": ^.slug.current
       }
     }
   }`;
