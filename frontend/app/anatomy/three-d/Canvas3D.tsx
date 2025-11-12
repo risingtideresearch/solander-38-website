@@ -210,14 +210,9 @@ export function Canvas3D({
     }
     const parts = displayHovered.name.split("__");
     const first = parts[0];
-    const secondToLast = parts[parts.length - 2];
     const last = parts[parts.length - 1];
 
-    const result = [first];
-    if (parts.length > 2 && secondToLast !== first) {
-      result.push(secondToLast);
-    }
-    result.push(last);
+    const result = [first, last];
     return (
       <div
         className="pane"
@@ -234,24 +229,16 @@ export function Canvas3D({
           pointerEvents: "none",
         }}
       >
-        {result.map((n, i, x) => (
+        {result.map((n, i) => (
           <span
-            key={n}
+            key={n + i}
             style={{
               fontSize: i == 0 ? "0.75rem" : "1rem",
               margin: 0,
             }}
           >
-            {i == 0
-              ? n
-              : n
-                  .toLowerCase()
-                  .replace("(for website)", "")
-                  .replace("surfs", "")
-                  .replace("mesh", "")
-                  .replaceAll("_", " ")
-                  .replaceAll("  ", " ")}
-            {i == 0 ? <br /> : <>&nbsp;</>}
+            {n}
+            {i == 0 ? <br /> : <></>}
           </span>
         ))}
       </div>
@@ -330,8 +317,7 @@ export function Canvas3D({
                   clippingPlanes={clippingPlanesValues}
                   settings={{
                     transparent:
-                      settings.transparent &&
-                      contextualLayers.includes(url)
+                      settings.transparent && contextualLayers.includes(url),
                   }}
                 />
               ))}
