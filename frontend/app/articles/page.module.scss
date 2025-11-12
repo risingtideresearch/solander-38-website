@@ -6,8 +6,7 @@
   }
 
   p {
-    max-width: 75ch;
-
+    font-size: 1.0625rem;
     a {
       text-decoration: underline;
       text-underline-offset: 2px;
@@ -20,6 +19,17 @@
 
   h3 {
     margin: 3rem 0 1rem 0;
+  }
+
+  figure {
+    width: max-content;
+    margin: 3rem 0;
+  }
+
+  p,
+  figure,
+  div:not(.page__header) {
+    max-width: 52rem;
   }
 
   &__header {
@@ -68,12 +78,6 @@
     p {
       max-width: 100%;
     }
-  }
-
-  figure {
-    width: max-content;
-    max-width: 100%;
-    margin: 3rem 0;
   }
 
   &__toc {
