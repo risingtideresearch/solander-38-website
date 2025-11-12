@@ -17,6 +17,7 @@ import ScalingLines3D from "./ScalingLines3D";
 // import Annotations3D from "./Annotations3D";
 import { ControlSettings } from "../ThreeDContainer";
 import RaycastHandler from "./RaycastHandler";
+import { contextualLayers } from "./util";
 
 export interface ClippingPlanes {
   [key: string]: Plane;
@@ -25,12 +26,8 @@ export interface ClippingPlanes {
 type Canvas3DProps = {
   clippingPlanes: { [key: string]: Plane };
   filteredLayers: Array<string>;
-  settings: ControlSettings;
-  boundingBox: Box3 | null;
-  content: {
-    annotations: Array<unknown>;
-  };
-  setActiveAnnotation: () => void;
+  settings?: ControlSettings | object;
+  boundingBox?: Box3 | null;
   height?: string | number;
   // use for article models
   limitInteraction?: boolean;
@@ -44,11 +41,9 @@ const CAMERA_DIRECTION = new Vector3(0.5, 0.25, 0.625);
 
 export function Canvas3D({
   clippingPlanes,
-  settings,
+  settings = {},
   boundingBox,
   filteredLayers,
-  content,
-  setActiveAnnotation,
   limitInteraction = false,
   height = "100vh",
 }: Canvas3DProps) {
@@ -165,7 +160,7 @@ export function Canvas3D({
   useEffect(() => {
     try {
       if (
-        modelsLoaded.size === filteredLayers.length &&
+        modelsLoaded.size >= filteredLayers.length &&
         filteredLayers.length > 0 &&
         !centered
       ) {
@@ -313,17 +308,6 @@ export function Canvas3D({
           {directionalLights}
 
           <Suspense fallback={null}>
-            <group ref={groupRef}>
-              {filteredLayers.map((url: string) => (
-                <Model3D
-                  key={url}
-                  url={url}
-                  onLoad={() => handleModelLoad(url)}
-                  clippingPlanes={clippingPlanesValues}
-                  settings={settings}
-                />
-              ))}
-            </group>
             {boundingBox && (
               <>
                 <ScalingLines3D
@@ -337,6 +321,21 @@ export function Canvas3D({
                 /> */}
               </>
             )}
+            <group ref={groupRef}>
+              {filteredLayers.map((url: string) => (
+                <Model3D
+                  key={url}
+                  url={url}
+                  onLoad={() => handleModelLoad(url)}
+                  clippingPlanes={clippingPlanesValues}
+                  settings={{
+                    transparent:
+                      settings.transparent &&
+                      contextualLayers.includes(url)
+                  }}
+                />
+              ))}
+            </group>
           </Suspense>
 
           <OrbitControls

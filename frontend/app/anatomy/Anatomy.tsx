@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext, useEffect, useMemo, useState } from "react";
-import ThreeDContainer from "./ThreeDContainer";
+import ThreeDContainer, { ControlSettings } from "./ThreeDContainer";
 import { TOCContext } from "../toc/TableOfContents";
 import {
   processModels,
@@ -9,6 +9,8 @@ import {
   computeCombinedBoundingBox,
   ModelManifest,
   MaterialIndex,
+  contextualLayers,
+  Units,
 } from "./three-d/util";
 import Info from "./Info";
 import { Article } from "@/sanity/sanity.types";
@@ -17,11 +19,29 @@ type AnatomyContent = {
   material_index: MaterialIndex;
   models_manifest: ModelManifest;
   articles: Array<Article>;
-}
+};
 
 interface IAnatomy {
   content: AnatomyContent;
 }
+
+const INITIAL_SETTINGS: ControlSettings = {
+  transparent: true,
+  units: Units.Feet,
+  expand: false,
+  monochrome: false,
+};
+
+const slugToRhinoSystem = (slug: string) => {
+  switch (slug) {
+    case "water-heating-systems":
+      return "water_heating systems".toUpperCase();
+    case "outfitting-interior":
+      return slug.replaceAll("-", "_").toUpperCase();
+    default:
+      return slug.replaceAll("-", " ").toUpperCase();
+  }
+};
 
 export default function Anatomy({ content }: IAnatomy) {
   const toc = useContext(TOCContext);
@@ -30,24 +50,15 @@ export default function Anatomy({ content }: IAnatomy) {
   const [search, setSearch] = useState("");
   const memoModels = useMemo(() => processModels(content.models_manifest), []);
   const systems = useMemo(() => getSystemMap(memoModels), [memoModels]);
+  const [settings, setSettings] = useState<ControlSettings>(INITIAL_SETTINGS);
 
   const active =
     toc.mode == "system"
       ? toc.section.slug != "overview"
-        ? toc.section.slug == "water-heating-systems"
-          ? {
-              type: "system",
-              key: "water_heating systems".toUpperCase(),
-            }
-          : toc.section.slug == "outfitting-interior"
-            ? {
-                type: "system",
-                key: toc.section.slug.replaceAll("-", "_").toUpperCase(),
-              }
-            : {
-                type: "system",
-                key: toc.section.slug.replaceAll("-", " ").toUpperCase(),
-              }
+        ? {
+            type: "system",
+            key: slugToRhinoSystem(toc.section.slug),
+          }
         : null
       : {
           type: toc.mode,
@@ -61,16 +72,14 @@ export default function Anatomy({ content }: IAnatomy) {
       arr = arr.filter((layer) => {
         return layer.toLowerCase().includes(search.toLowerCase());
       });
-    } else {
-      if (active && active.type == "material") {
+    } else if (active) {
+      if (active.type == "material") {
         arr = arr.filter((m) =>
-          (content.material_index[m] || []).includes(
-            toc.material,
-          ),
+          (content.material_index[m] || []).includes(toc.material),
         );
       } else if (toc.article) {
-        arr = toc.article?.relatedModels || systems[toc.article?.section.toUpperCase()]?.children || arr;
-      } else if (active && active.key != "overview") {
+        arr = toc.article?.relatedModels || systems[active.key]?.children || [];
+      } else if (active.key != "overview") {
         arr = systems[active.key]?.children;
       }
     }
@@ -83,8 +92,6 @@ export default function Anatomy({ content }: IAnatomy) {
     return Array.from(new Set(arr));
   }, [active, systems, search, activeAnnotation, toc.article, toc.material]);
 
-  const filteredContent = content;
-
   useEffect(() => {
     if (toc.article) {
       window.history.pushState(null, "", `/anatomy/${toc.article?.slug}`);
@@ -95,7 +102,11 @@ export default function Anatomy({ content }: IAnatomy) {
 
   const boundingBox = computeCombinedBoundingBox(
     memoModels
-      .filter((m) => filteredLayers.includes(m.filename))
+      .filter(
+        (m) =>
+          filteredLayers.includes(m.filename) &&
+          (!contextualLayers.includes(m.filename) || filteredLayers.includes(m.filename)),
+      )
       .map((m) => m.bounding_box),
   );
 
@@ -119,14 +130,10 @@ export default function Anatomy({ content }: IAnatomy) {
         }}
       />
       <ThreeDContainer
-        content={filteredContent}
-        setActiveAnnotation={(note) =>
-          setActiveAnnotation((prev) =>
-            !prev || prev?._id != note._id ? note : null,
-          )
-        }
         filteredLayers={filteredLayers}
         boundingBox={boundingBox}
+        settings={settings}
+        setSettings={setSettings}
       />
       {/* <AnnotationsList
         content={filteredContent.annotations}

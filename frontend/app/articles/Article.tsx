@@ -7,15 +7,13 @@ import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import ImageSet from "../components/ImageSet";
 import { Image } from "../components/Image";
 import { formatDate } from "../utils";
+import { contextualLayers } from "../anatomy/three-d/util";
 
 const components = {
   types: {
     imageSet: ({ value }) => (
       <figure>
-        <ImageSet
-          assets={value.imageSet}
-          title={value.title}
-        />
+        <ImageSet assets={value.imageSet} title={value.title} />
         {value.caption && <figcaption>{value.caption}</figcaption>}
       </figure>
     ),
@@ -69,12 +67,6 @@ const components = {
               "DECK JIG__TRANSV FRAMES.glb",
               "DECK JIG__DECK SKINS.glb",
             ]}
-            content={{
-              annotations: [],
-            }}
-            settings={{
-              expand: false,
-            }}
             limitInteraction={true}
           />
         </div>
@@ -87,7 +79,6 @@ const components = {
 };
 
 export default async function Article({ data, navigation }) {
-  console.log(data);
   const updated = new Date(data._updatedAt);
   const published = new Date(data._createdAt);
 
@@ -98,6 +89,7 @@ export default async function Article({ data, navigation }) {
   if (jigIndex > -1) {
     data.content.splice(jigIndex + 1, 0, { _type: "models3D" });
   }
+
   return (
     <>
       {/* <input
@@ -166,6 +158,15 @@ export default async function Article({ data, navigation }) {
               <h6>{data.section || ""}</h6>
             </Link>
             <h1>{data.title}</h1>
+            {data.authors ? (
+              <div>
+                <h6>
+                  By {data.authors.map((author) => author.name).join(",")}
+                </h6>
+              </div>
+            ) : (
+              <></>
+            )}
             <p>{data.subtitle}</p>
           </div>
           {data.relatedModels && (
@@ -187,12 +188,16 @@ export default async function Article({ data, navigation }) {
                 <Canvas3D
                   height={"100%"}
                   clippingPlanes={{}}
-                  filteredLayers={data.relatedModels}
-                  content={{
-                    annotations: [],
-                  }}
+                  filteredLayers={[
+                    ...data.relatedModels.filter((layer) =>
+                      !contextualLayers.includes(layer),
+                    ),
+                    ...contextualLayers,
+                  ]}
                   settings={{
-                    expand: false,
+                    transparent: !data.relatedModels.some((val) =>
+                      contextualLayers.includes(val),
+                    ),
                   }}
                   limitInteraction={true}
                 />

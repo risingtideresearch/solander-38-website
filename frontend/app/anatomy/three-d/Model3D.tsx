@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useMemo, useCallback } from "react";
 import { useGLTF } from "@react-three/drei";
 import { DoubleSide, Mesh, Vector3, Box3, Plane, Color, Group } from "three";
-import * as THREE from "three";
 import { ControlSettings } from "../ThreeDContainer";
 
 type Model3DProps = {
@@ -14,7 +13,7 @@ type Model3DProps = {
 
 const ORIGINAL_POSITION = [0, 0, 0] as const;
 const EXPLOSION_MULTIPLIER = 1.5;
-const TRANSPARENT_OPACITY = 0.5;
+const TRANSPARENT_OPACITY = 0.15;
 const OPAQUE_OPACITY = 1.0;
 
 export function Model3D({
@@ -95,33 +94,33 @@ export function Model3D({
     onLoad?.();
   }, [scene, layerName, url, configureMesh]);
 
-  useEffect(() => {
-    if (!ref.current) return;
+  // useEffect(() => {
+  //   if (!ref.current) return;
 
-    ref.current.children.forEach((child) => {
-      const childId = child.uuid;
-      const originalPos = originalPositions.current.get(childId);
+  //   ref.current.children.forEach((child) => {
+  //     const childId = child.uuid;
+  //     const originalPos = originalPositions.current.get(childId);
 
-      if (!originalPos) {
-        originalPositions.current.set(childId, child.position.clone());
-        return;
-      }
+  //     if (!originalPos) {
+  //       originalPositions.current.set(childId, child.position.clone());
+  //       return;
+  //     }
 
-      if (settings.expand) {
-        tempBox.current.setFromObject(child);
-        const size = tempBox.current.getSize(tempSize.current);
-        const explosionDistance = size.y * EXPLOSION_MULTIPLIER;
+  //     if (settings.expand) {
+  //       tempBox.current.setFromObject(child);
+  //       const size = tempBox.current.getSize(tempSize.current);
+  //       const explosionDistance = size.y * EXPLOSION_MULTIPLIER;
 
-        child.position.set(
-          originalPos.x,
-          originalPos.y + explosionDistance,
-          originalPos.z,
-        );
-      } else {
-        child.position.copy(originalPos);
-      }
-    });
-  }, [settings.expand]);
+  //       child.position.set(
+  //         originalPos.x,
+  //         originalPos.y + explosionDistance,
+  //         originalPos.z,
+  //       );
+  //     } else {
+  //       child.position.copy(originalPos);
+  //     }
+  //   });
+  // }, [settings.expand]);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -134,88 +133,100 @@ export function Model3D({
           : [mesh.material];
 
         materials.forEach((mat) => {
-          mat.transparent = settings.transparent;
+          // Store original color if not already stored
+          if (!mat.userData.originalColor) {
+            mat.userData.originalColor = mat.color.clone();
+          }
+
+          mat.transparent = settings.transparent || false;
+          mat.depthWrite = !settings.transparent;
           mat.opacity = settings.transparent
             ? TRANSPARENT_OPACITY
             : OPAQUE_OPACITY;
           mat.clippingPlanes = clippingPlanes;
+
+          if (settings.transparent) {
+            mat.color.set(0xf0f8ff);
+          } else {
+            mat.color.copy(mat.userData.originalColor); 
+          }
         });
       }
     });
   }, [scene, settings.transparent, clippingPlanes]);
 
-  useEffect(() => {
-    if (!ref.current) return;
+  // useEffect(() => {
+  //   if (!ref.current) return;
 
-    scene.traverse((child) => {
-      if ((child as Mesh).isMesh) {
-        const mesh = child as Mesh;
+  //   scene.traverse((child) => {
+  //     if ((child as Mesh).isMesh) {
+  //       const mesh = child as Mesh;
 
-        if (settings.monochrome) {
-          if (!mesh.userData.originalMaterial) {
-            mesh.userData.originalMaterial = mesh.material;
-          }
+  //       if (settings.monochrome) {
+  //         if (!mesh.userData.originalMaterial) {
+  //           mesh.userData.originalMaterial = mesh.material;
+  //         }
 
-          const whiteMaterial = new THREE.MeshStandardMaterial({
-            color: 0xffffff,
-            metalness: 0,
-            roughness: 0.8,
-            side: DoubleSide,
-            clippingPlanes: clippingPlanes,
-          });
+  //         const whiteMaterial = new THREE.MeshStandardMaterial({
+  //           color: 0xffffff,
+  //           metalness: 0,
+  //           roughness: 0.8,
+  //           side: DoubleSide,
+  //           clippingPlanes: clippingPlanes,
+  //         });
 
-          mesh.material = whiteMaterial;
+  //         mesh.material = whiteMaterial;
 
-          // if (!mesh.userData.edgesLine) {
-          //   const edges = new THREE.EdgesGeometry(mesh.geometry, 15);
-          //   const lineMaterial = new THREE.LineBasicMaterial({
-          //     color: 0x000000,
-          //     linewidth: 3,
-          //   });
-          //   const edgesLine = new THREE.LineSegments(edges, lineMaterial);
-          //   mesh.add(edgesLine);
-          //   mesh.userData.edgesLine = edgesLine;
-          // }
-        } else {
-          if (mesh.userData.originalMaterial) {
-            mesh.material = mesh.userData.originalMaterial;
-            mesh.userData.originalMaterial = null;
-          }
+  //         // if (!mesh.userData.edgesLine) {
+  //         //   const edges = new THREE.EdgesGeometry(mesh.geometry, 15);
+  //         //   const lineMaterial = new THREE.LineBasicMaterial({
+  //         //     color: 0x000000,
+  //         //     linewidth: 3,
+  //         //   });
+  //         //   const edgesLine = new THREE.LineSegments(edges, lineMaterial);
+  //         //   mesh.add(edgesLine);
+  //         //   mesh.userData.edgesLine = edgesLine;
+  //         // }
+  //       } else {
+  //         if (mesh.userData.originalMaterial) {
+  //           mesh.material = mesh.userData.originalMaterial;
+  //           mesh.userData.originalMaterial = null;
+  //         }
 
-          if (mesh.userData.edgesLine) {
-            mesh.remove(mesh.userData.edgesLine);
-            mesh.userData.edgesLine.geometry.dispose();
-            mesh.userData.edgesLine.material.dispose();
-            mesh.userData.edgesLine = null;
-          }
-        }
-      }
-    });
+  //         if (mesh.userData.edgesLine) {
+  //           mesh.remove(mesh.userData.edgesLine);
+  //           mesh.userData.edgesLine.geometry.dispose();
+  //           mesh.userData.edgesLine.material.dispose();
+  //           mesh.userData.edgesLine = null;
+  //         }
+  //       }
+  //     }
+  //   });
 
-    return () => {
-      if (settings.monochrome && ref.current) {
-        scene.traverse((child) => {
-          if ((child as Mesh).isMesh) {
-            const mesh = child as Mesh;
-            if (mesh.material !== mesh.userData.originalMaterial) {
-              if (Array.isArray(mesh.material)) {
-                mesh.material.forEach((m) => m.dispose());
-              } else {
-                mesh.material?.dispose();
-              }
-            }
+  //   return () => {
+  //     if (settings.monochrome && ref.current) {
+  //       scene.traverse((child) => {
+  //         if ((child as Mesh).isMesh) {
+  //           const mesh = child as Mesh;
+  //           if (mesh.material !== mesh.userData.originalMaterial) {
+  //             if (Array.isArray(mesh.material)) {
+  //               mesh.material.forEach((m) => m.dispose());
+  //             } else {
+  //               mesh.material?.dispose();
+  //             }
+  //           }
 
-            if (mesh.userData.edgesLine) {
-              mesh.remove(mesh.userData.edgesLine);
-              mesh.userData.edgesLine.geometry.dispose();
-              mesh.userData.edgesLine.material.dispose();
-              mesh.userData.edgesLine = null;
-            }
-          }
-        });
-      }
-    };
-  }, [scene, settings.monochrome, clippingPlanes]);
+  //           if (mesh.userData.edgesLine) {
+  //             mesh.remove(mesh.userData.edgesLine);
+  //             mesh.userData.edgesLine.geometry.dispose();
+  //             mesh.userData.edgesLine.material.dispose();
+  //             mesh.userData.edgesLine = null;
+  //           }
+  //         }
+  //       });
+  //     }
+  //   };
+  // }, [scene, settings.monochrome, clippingPlanes]);
 
   return (
     <primitive

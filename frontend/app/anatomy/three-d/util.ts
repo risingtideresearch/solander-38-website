@@ -5,6 +5,13 @@ export enum Units {
   Feet = "Feet",
 }
 
+export const contextualLayers = [
+  "BODY__CTR BEAM__ctr beam inside surfaces.glb",
+  "BODY__HULLS & DECKS__MESH H&D (for website)__MESH HULL.glb",
+  "BODY__CTR BEAM__ctr beam outside surfaces.glb",
+  "BODY__HULLS & DECKS__MESH H&D (for website)__MESH DECK.glb",
+];
+
 export type Model = {
   filename: string;
   bounding_box: BoundingBox;
@@ -17,12 +24,12 @@ export type ModelManifest = {
   }>;
   export_info: {
     timestamp_end: Date;
-  }
+  };
 };
 
 export type MaterialIndex = {
-  [key: string]: Array<string>
-}
+  [key: string]: Array<string>;
+};
 
 export const processModels = (models_manifest: ModelManifest): Array<Model> => {
   return models_manifest.exported_layers
