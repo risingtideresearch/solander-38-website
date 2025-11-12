@@ -50,7 +50,7 @@ export default function Anatomy({ content }: IAnatomy) {
   const [search, setSearch] = useState("");
   const memoModels = useMemo(() => processModels(content.models_manifest), []);
   const systems = useMemo(() => getSystemMap(memoModels), [memoModels]);
-  const [settings, setSettings] = useState<ControlSettings>(INITIAL_SETTINGS);
+  const [settings, setSettings] = useState<ControlSettings>({ transparent: (!toc.article || toc.article?.slug != 'hull-and-deck') && toc.section.slug != 'overview', units: Units.Feet});
 
   const active =
     toc.mode == "system"

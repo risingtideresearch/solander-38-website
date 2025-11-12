@@ -195,9 +195,7 @@ export default async function Article({ data, navigation }) {
                     ...contextualLayers,
                   ]}
                   settings={{
-                    transparent: !data.relatedModels.some((val) =>
-                      contextualLayers.includes(val),
-                    ),
+                    transparent: data.slug.current != 'hull-and-deck' && data.section != 'overview',
                   }}
                   limitInteraction={true}
                 />
