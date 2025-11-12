@@ -1,8 +1,9 @@
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import styles from "./../articles/page.module.scss";
 import { useEffect } from "react";
+import { formatDate } from "../utils";
 
-export default function DrawingNav({ prev, next, onPrev, onNext }) {
+export default function DrawingNav({ prev, next, onPrev, onNext, drawing }) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft" && prev) {
@@ -27,6 +28,14 @@ export default function DrawingNav({ prev, next, onPrev, onNext }) {
         position: "static",
       }}
     >
+      <div>
+        <h6>Date</h6>
+        <h6>{drawing.date_info ? formatDate(drawing.date_info.date) : '<no date>'}</h6>
+      </div>
+      <div>
+        <h6>System</h6>
+        <h6>{drawing.group}</h6>
+      </div>
       {next && (
         <div>
           <h6>Next</h6>

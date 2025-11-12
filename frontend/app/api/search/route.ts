@@ -10,7 +10,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ results: [] });
     }
 
-    const results = await client.fetch(searchQuery(query), {query: query});
+    const results = await client.fetch(searchQuery(), {query: query});
 
     return NextResponse.json({ results });
   } catch (error) {

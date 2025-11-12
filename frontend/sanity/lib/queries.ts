@@ -365,11 +365,12 @@ export const componentPartQuery = (slug: string) => `
 
 `;
 
-export const searchQuery = (query: string) => `
+export const searchQuery = () => `
 *[_type in ["article"] && (
   title match $query + "*" ||
   name match $query + "*" ||
   content[].children[].text match $query + "*" ||
+  content[].children[]->name match $query + "*" ||
   authors[]->.name match $query + "*"
 )][0...30]{
   _id,

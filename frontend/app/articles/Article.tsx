@@ -6,6 +6,7 @@ import Link from "next/link";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import ImageSet from "../components/ImageSet";
 import { Image } from "../components/Image";
+import { formatDate } from "../utils";
 
 const components = {
   types: {
@@ -126,11 +127,11 @@ export default async function Article({ data, navigation }) {
         ) : (
           <></>
         )}
-        {updated.toLocaleDateString() && (
+        {formatDate(updated) && (
           <div>
             <h6>Updated</h6>
 
-            <h6>{updated.toLocaleDateString()}</h6>
+            <h6>{formatDate(updated)}</h6>
           </div>
         )}
         <div>

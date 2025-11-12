@@ -2,6 +2,7 @@ import { LiaDownloadSolid, LiaLinkSolid } from "react-icons/lia";
 import styles from "./styles.module.scss";
 import imageSetStyles from "./../components/image-set.module.scss";
 import { Image } from "../components/Image";
+import { formatDate } from "../utils";
 
 function parseDateFromDescription(str: string | null | undefined): Date | null {
   if (!str) return null;
@@ -37,14 +38,14 @@ function getSanityImageDate(asset): string {
     }
   }
 
-  return date ? date.toLocaleDateString() : "";
+  return date ? formatDate(date) : "";
 }
 
 function getSanityImageId(asset): string {
   return "IM-" + asset._key.slice(0, 5).toUpperCase();
 }
 
-export function FocusedView({ asset }) {
+export function DrawingPage({ asset }) {
   if (!asset) {
     return <></>;
   }
@@ -65,15 +66,16 @@ export function FocusedView({ asset }) {
                     <span>{asset.group}</span>
                   </h6>
                 ) : (
-                  <h6>
-                    <span>{asset.id}</span>
-                    <span>
-                      {" "}
-                      {asset.date_info ? asset.date_info.date : "<no date>"}
-                    </span>
-                    <span>{asset.group}</span>
-                    <span>HJN</span>
-                  </h6>
+                  // <h6>
+                  //   <span>{asset.id}</span>
+                  //   <span>
+                  //     {" "}
+                  //     {asset.date_info ? asset.date_info.date : "<no date>"}
+                  //   </span>
+                  //   <span>{asset.group}</span>
+                  //   <span>HJN</span> 
+                  // </h6>
+                  <></>
                 )}
               </div>
             </div>

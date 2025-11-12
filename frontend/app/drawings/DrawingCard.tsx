@@ -2,6 +2,7 @@
 
 import { Drawing } from "./types";
 import styles from "./styles.module.scss";
+import { formatDate } from "../utils";
 
 interface IDrawingCard {
   drawing: Drawing;
@@ -15,7 +16,7 @@ export function DrawingCard({ drawing }: IDrawingCard) {
     >
       <h6>
         <span>{drawing.id}</span>
-        <span> {drawing.date_info ? drawing.date_info.date : "<no date>"}</span>
+        <span> {drawing.date_info ? formatDate(drawing.date_info.date) : "<no date>"}</span>
         <span>{drawing.group}</span>
       </h6>
       <p>{drawing.clean_filename}</p>

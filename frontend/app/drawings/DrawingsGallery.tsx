@@ -1,13 +1,12 @@
 import { useContext, useMemo, useEffect, useRef } from "react";
 import { TOCContext } from "../toc/TableOfContents";
-import { FocusedView } from "./FocusedView";
+import { DrawingPage } from "./DrawingPage";
 import { Drawing, DrawingGroup } from "./types";
 import { SYSTEM_ORDER } from "../consts";
 import { DrawingCard } from "./DrawingCard";
 import styles from "./styles.module.scss";
 import { DrawingsArticleDictionary } from "./util";
 import RelatedArticles from "./RelatedArticles";
-import { LiaLongArrowAltLeftSolid } from "react-icons/lia";
 import DrawingNav from "./DrawingNav";
 
 function filterDrawings(drawings, searchTerm, toc, drawingsArticleDictionary) {
@@ -268,6 +267,7 @@ export default function DrawingsGallery({
             }}
           >
             <DrawingNav 
+              drawing={focusedDrawing}
               prev={filteredAndSorted[focusIndex - 1]}
               next={filteredAndSorted[focusIndex + 1]}
               onPrev={handlePrev}
@@ -295,7 +295,7 @@ export default function DrawingsGallery({
             </div> */}
           </div>
           <main style={{ paddingLeft: "19rem", paddingRight: "3.5rem" }}>
-            <FocusedView
+            <DrawingPage
               asset={focusedDrawing}
             />
           </main>
