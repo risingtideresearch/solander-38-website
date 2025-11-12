@@ -11,7 +11,7 @@ import {person} from './person'
 // import {powerBudget} from './powerBudget'
 // import {schematic} from './schematic'
 // import {timeline} from './timeline'
-import {annotation} from './annotation'
+// import {annotation} from './annotation'
 import { section, sections } from './sections'
 
 export const schemaTypes = [
@@ -28,7 +28,7 @@ export const schemaTypes = [
   // timeline,
   // location,
   // powerBudget,
-  annotation,
+  // annotation,
   section,
   sections,
 ]
