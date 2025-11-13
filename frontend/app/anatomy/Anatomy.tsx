@@ -44,9 +44,10 @@ const slugToRhinoSystem = (slug: string) => {
 };
 
 const isDefaultTransparentBody = (toc) => {
-  return (
-    (!toc.article || toc.article?.slug != "hull-and-deck") &&
-    toc.section.slug != "overview"
+  return !(
+    (toc.section.slug === "body" && !toc.article) ||
+    toc.section.slug === "overview" ||
+    toc.article?.slug === "hull-and-deck"
   );
 };
 
@@ -76,11 +77,10 @@ export default function Anatomy({ content }: IAnatomy) {
         };
 
   useEffect(() => {
-    if (isDefaultTransparentBody(toc)) {
-      if (!settings.transparent) {
-        setSettings((prev) => ({ ...prev, transparent: true }));
-      }
-    }
+    setSettings((prev) => ({
+      ...prev,
+      transparent: isDefaultTransparentBody(toc),
+    }));
   }, [toc.article, toc.section]);
 
   const filteredLayers = useMemo(() => {
