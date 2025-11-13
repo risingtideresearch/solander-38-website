@@ -43,6 +43,13 @@ const slugToRhinoSystem = (slug: string) => {
   }
 };
 
+const isDefaultTransparentBody = (toc) => {
+  return (
+    (!toc.article || toc.article?.slug != "hull-and-deck") &&
+    toc.section.slug != "overview"
+  );
+};
+
 export default function Anatomy({ content }: IAnatomy) {
   const toc = useContext(TOCContext);
   const [visibleAnnotations, setVisibleAnnotations] = useState(false);
@@ -50,7 +57,10 @@ export default function Anatomy({ content }: IAnatomy) {
   const [search, setSearch] = useState("");
   const memoModels = useMemo(() => processModels(content.models_manifest), []);
   const systems = useMemo(() => getSystemMap(memoModels), [memoModels]);
-  const [settings, setSettings] = useState<ControlSettings>({ transparent: (!toc.article || toc.article?.slug != 'hull-and-deck') && toc.section.slug != 'overview', units: Units.Feet});
+  const [settings, setSettings] = useState<ControlSettings>({
+    transparent: isDefaultTransparentBody(toc),
+    units: Units.Feet,
+  });
 
   const active =
     toc.mode == "system"
@@ -64,6 +74,14 @@ export default function Anatomy({ content }: IAnatomy) {
           type: toc.mode,
           key: toc.section.slug,
         };
+
+  useEffect(() => {
+    if (isDefaultTransparentBody(toc)) {
+      if (!settings.transparent) {
+        setSettings((prev) => ({ ...prev, transparent: true }));
+      }
+    }
+  }, [toc.article, toc.section]);
 
   const filteredLayers = useMemo(() => {
     let arr: string[] = memoModels.map((m) => m.filename) || [];
@@ -105,7 +123,8 @@ export default function Anatomy({ content }: IAnatomy) {
       .filter(
         (m) =>
           filteredLayers.includes(m.filename) &&
-          (!contextualLayers.includes(m.filename) || filteredLayers.includes(m.filename)),
+          (!contextualLayers.includes(m.filename) ||
+            filteredLayers.includes(m.filename)),
       )
       .map((m) => m.bounding_box),
   );
