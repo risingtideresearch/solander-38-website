@@ -28,6 +28,18 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
     return { name: object.name };
   };
 
+  const isLayerTransparent = (object: THREE.Object3D): boolean => {
+    const mesh = object as THREE.Mesh;
+    if (!mesh.material) return false;
+
+    const materials = Array.isArray(mesh.material)
+      ? mesh.material
+      : [mesh.material];
+
+    // Check if any material is transparent
+    return materials.some(mat => mat.transparent === true);
+  };
+
   const resetHoveredObject = () => {
     if (hoveredObject.current && originalColor.current) {
       const material = (hoveredObject.current as THREE.Mesh)
@@ -77,6 +89,11 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
 
     return intersects.filter((intersect) => {
       const { point, object } = intersect;
+
+      // Ignore transparent objects
+      if (isLayerTransparent(object)) {
+        return false;
+      }
 
       if (isPointClipped(point)) {
         return false;
