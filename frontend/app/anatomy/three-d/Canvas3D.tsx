@@ -73,7 +73,7 @@ export function Canvas3D({
     } else {
       fadeTimeoutRef.current = setTimeout(() => {
         setDisplayHovered(null);
-      }, 300);
+      }, 100);
     }
 
     return () => {
@@ -332,6 +332,7 @@ export function Canvas3D({
             maxDistance={22}
             minDistance={1}
             enableZoom={!limitInteraction}
+            enablePan={!limitInteraction}
           />
         </Canvas>
 
