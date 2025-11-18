@@ -10,6 +10,9 @@ export default defineCliConfig({
     // set the path relative to the location of sanity.cli.ts.
     aspectsPath: 'aspects',
   },
+  deployment: {
+    appId: process.env.SANITY_STUDIO_APP_ID,
+  },
   /**
    * Enable auto-updates for studios.
    * Learn more at https://www.sanity.io/docs/cli#auto-updates
