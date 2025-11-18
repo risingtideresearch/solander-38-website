@@ -1,4 +1,4 @@
-from material_extractor import create_material_index
+from extract_materials import create_material_index
 from pdf_to_png import convert_all_pdfs
 import shutil
 import os

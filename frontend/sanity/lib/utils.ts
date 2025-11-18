@@ -1,6 +1,12 @@
 import { createDataAttribute, CreateDataAttributeProps } from "next-sanity";
 import { dataset, projectId, studioUrl } from "./api";
-import { annotationsQuery, articlesQuery, peopleQuery, searchQuery, sectionsQuery } from "./queries";
+import {
+  annotationsQuery,
+  articlesQuery,
+  peopleQuery,
+  searchQuery,
+  sectionsQuery,
+} from "./queries";
 import { sanityFetch } from "./live";
 
 export async function fetchAnnotations(models_manifest) {
@@ -11,7 +17,7 @@ export async function fetchAnnotations(models_manifest) {
     // check sanity content against current model manifest
     relatedModels: annotation.relatedModels.filter((model) => {
       return models_manifest.exported_layers.find(
-        (file) => file.filename == model
+        (file) => file.filename == model,
       );
     }),
     i: i + 1,
@@ -36,6 +42,12 @@ export async function fetchArticles(slug?: string) {
  */
 export async function fetchSections(slug?: string) {
   const { data } = await sanityFetch({ query: sectionsQuery(slug) });
+
+  data.sections.forEach((section, i) => {
+    section.articles.forEach((article, j) => {
+      article.articleId = `${i + 1}.${String.fromCharCode(65 + j)}`
+    })
+  });
 
   return { data };
 }

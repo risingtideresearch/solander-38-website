@@ -15,9 +15,10 @@ import * as THREE from "three";
 import { Model3D } from "./Model3D";
 import ScalingLines3D from "./ScalingLines3D";
 // import Annotations3D from "./Annotations3D";
-import { ControlSettings } from "../ThreeDContainer";
 import RaycastHandler from "./RaycastHandler";
-import { contextualLayers } from "./util";
+import { contextualLayers, Model } from "./util";
+import HoverDisplay from "../HoverDisplay";
+import { ControlSettings } from "../Anatomy";
 
 export interface ClippingPlanes {
   [key: string]: Plane;
@@ -29,6 +30,8 @@ type Canvas3DProps = {
   settings?: ControlSettings | object;
   boundingBox?: Box3 | null;
   height?: string | number;
+  materials?: { [key: string]: unknown };
+  memoModels: Array<Model>;
   // use for article models
   limitInteraction?: boolean;
 };
@@ -46,42 +49,22 @@ export function Canvas3D({
   filteredLayers,
   limitInteraction = false,
   height = "100vh",
+  materials = {},
+  memoModels = [],
 }: Canvas3DProps) {
   const groupRef = useRef<Group>(null);
   const cameraRef = useRef<Camera>(null);
   const controlsRef = useRef<OrbitControlsImpl>(null);
   const [centered, setCentered] = useState(false);
   const [modelsLoaded, setModelsLoaded] = useState<Set<string>>(new Set());
-  const [hovered, setHovered] = useState<Object3D | null>(null);
+  const [hovered, setHovered] = useState<Model | null>(null);
   const [autoRotate, setAutoRotate] = useState(true);
-  const [displayHovered, setDisplayHovered] = useState<Object3D | null>(null);
-  const fadeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const tempBox = useRef(new Box3());
   const tempCenter = useRef(new Vector3());
   const tempSize = useRef(new Vector3());
   const tempDirection = useRef(new Vector3());
   const tempNewPos = useRef(new Vector3());
-
-  useEffect(() => {
-    if (hovered) {
-      setDisplayHovered(hovered);
-      if (fadeTimeoutRef.current) {
-        clearTimeout(fadeTimeoutRef.current);
-        fadeTimeoutRef.current = null;
-      }
-    } else {
-      fadeTimeoutRef.current = setTimeout(() => {
-        setDisplayHovered(null);
-      }, 100);
-    }
-
-    return () => {
-      if (fadeTimeoutRef.current) {
-        clearTimeout(fadeTimeoutRef.current);
-      }
-    };
-  }, [hovered]);
 
   const clippingPlanesValues = useMemo(
     () => Object.values(clippingPlanes),
@@ -204,47 +187,6 @@ export function Canvas3D({
     [],
   );
 
-  const hoverDisplay = useMemo(() => {
-    if (!displayHovered) {
-      return <></>;
-    }
-    const parts = displayHovered.name.split("__");
-    const first = parts[0];
-    const last = parts[parts.length - 1];
-
-    const result = [first, last];
-    return (
-      <div
-        className="pane"
-        style={{
-          position: "fixed",
-          bottom: "0.5rem",
-          left: "0.5rem",
-          padding: "0.5rem",
-          maxWidth: "25rem",
-          zIndex: 10,
-          opacity: displayHovered ? 1 : 0,
-          transition: "opacity 0.2s ease-in-out",
-          border: "1px solid",
-          pointerEvents: "none",
-        }}
-      >
-        {result.map((n, i) => (
-          <span
-            key={n + i}
-            style={{
-              fontSize: i == 0 ? "0.75rem" : "1rem",
-              margin: 0,
-            }}
-          >
-            {n}
-            {i == 0 ? <br /> : <></>}
-          </span>
-        ))}
-      </div>
-    );
-  }, [displayHovered]);
-
   const canvasRef = useRef(null);
 
   // const downloadImage = () => {
@@ -287,7 +229,15 @@ export function Canvas3D({
           {!limitInteraction && (
             <RaycastHandler
               clippingPlanes={clippingPlanes}
-              setHovered={setHovered}
+              setHovered={(layer) => {
+                setHovered(
+                  layer
+                    ? memoModels.find(
+                        (d) => layer.name == d.filename.replace(".glb", ""),
+                      ) || null
+                    : null,
+                );
+              }}
             />
           )}
 
@@ -327,7 +277,7 @@ export function Canvas3D({
           <OrbitControls
             ref={controlsRef}
             enableDamping={false}
-            autoRotate={autoRotate && !displayHovered}
+            autoRotate={autoRotate && !hovered}
             autoRotateSpeed={0.2}
             maxDistance={22}
             minDistance={1}
@@ -336,7 +286,7 @@ export function Canvas3D({
           />
         </Canvas>
 
-        {hoverDisplay}
+        <HoverDisplay layer={hovered} materials={materials} />
       </div>
     </div>
   );

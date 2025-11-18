@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useMemo, useCallback } from "react";
 import { useGLTF } from "@react-three/drei";
-import { DoubleSide, Mesh, Vector3, Box3, Plane, Color, Group } from "three";
-import { ControlSettings } from "../ThreeDContainer";
+import { DoubleSide, Mesh, Plane, Color, Group } from "three";
+import { ControlSettings } from "../Anatomy";
 
 type Model3DProps = {
   url: string;
@@ -22,6 +22,7 @@ export function Model3D({
   settings,
 }: Model3DProps) {
   const { scene } = useGLTF("/models/" + url);
+
   const ref = useRef<Group>(null);
   const isInitialized = useRef(false);
 
@@ -109,7 +110,7 @@ export function Model3D({
           if (settings.transparent) {
             mat.color.set(0xf0f8ff);
           } else {
-            mat.color.copy(mat.userData.originalColor); 
+            mat.color.copy(mat.userData.originalColor);
           }
         });
       }

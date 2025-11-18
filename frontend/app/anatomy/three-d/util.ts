@@ -7,19 +7,23 @@ export enum Units {
 
 export const contextualLayers = [
   // "BODY__CTR BEAM__ctr beam inside surfaces.glb",
-  "BODY__HULLS & DECKS__MESH H&D (for website)__MESH HULL.glb",
+  "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb",
   "BODY__CTR BEAM__ctr beam outside surfaces.glb",
-  "BODY__HULLS & DECKS__MESH H&D (for website)__MESH DECK.glb",
+  "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb",
 ];
 
 export type Model = {
   filename: string;
+  layer_name: string;
   bounding_box: BoundingBox;
+  normalized_size: BoundingBox;
 };
 export type ModelManifest = {
   exported_layers: Array<{
     filename: string;
+    layer_name: string;
     bounding_box: BoundingBox;
+    normalized_size: BoundingBox;
     file_size: number;
   }>;
   export_info: {
@@ -36,7 +40,9 @@ export const processModels = (models_manifest: ModelManifest): Array<Model> => {
     .filter((d) => d.file_size > 0 && d.file_size < 100000000)
     .map((d) => ({
       filename: d.filename,
+      layer_name: d.layer_name,
       bounding_box: d.bounding_box,
+      normalized_size: d.normalized_size,
     }));
 };
 
@@ -68,7 +74,7 @@ export const getSystemMap = (
   return systemsMap;
 };
 
-const INCHES_TO_METERS = 0.0254;
+export const INCHES_TO_METERS = 0.0254;
 
 type BoundingBox = {
   min: { x: number; y: number; z: number };

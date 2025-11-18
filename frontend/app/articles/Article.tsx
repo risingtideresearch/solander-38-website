@@ -54,7 +54,7 @@ const components = {
         <div
           className="bg--grid"
           style={{
-            border: "1px solid #eee",
+            border: "1px solid #e6e6e6",
             borderLeft: "none",
             height: "100%",
             width: "100%",
@@ -78,7 +78,7 @@ const components = {
   },
 };
 
-export default async function Article({ data, navigation }) {
+export default async function Article({ data, navigation, materials = [] }) {
   const updated = new Date(data._updatedAt);
   const published = new Date(data._createdAt);
 
@@ -111,6 +111,10 @@ export default async function Article({ data, navigation }) {
       /> */}
 
       <div className={"pane " + styles.page__metadata}>
+        <div>
+          <h6>Article</h6>
+          <h6>{data.articleId}</h6>
+        </div>
         {data.authors ? (
           <div>
             <h6>Author</h6>
@@ -169,39 +173,93 @@ export default async function Article({ data, navigation }) {
             )}
             <p>{data.subtitle}</p>
           </div>
-          {data.relatedModels && (
-            <AnatomyPane
-              title={`Anatomy / ${data.title}`}
-              url={`/anatomy/${data.slug.current}`}
-              defaultSize={{ maxHeight: "30rem", aspectRatio: 1 }}
-              expandedSize={{ height: "100%" }}
-            >
-              <div
-                className="bg--grid"
-                style={{
-                  border: "1px solid #eee",
-                  borderLeft: "none",
-                  height: "100%",
-                  width: "100%",
-                }}
+          <div>
+            {data.relatedModels && (
+              <AnatomyPane
+                title={`Anatomy / ${data.title}`}
+                url={`/anatomy/${data.slug.current}`}
+                defaultSize={{ maxHeight: "30rem", aspectRatio: 1 }}
+                expandedSize={{ height: "100%" }}
               >
-                <Canvas3D
-                  height={"100%"}
-                  clippingPlanes={{}}
-                  filteredLayers={[
-                    ...data.relatedModels.filter((layer) =>
-                      !contextualLayers.includes(layer),
-                    ),
-                    ...contextualLayers,
-                  ]}
-                  settings={{
-                    transparent: data.slug.current != 'hull-and-deck' && data.section != 'overview',
+                <div
+                  className="bg--grid"
+                  style={{
+                    border: "1px solid #eee",
+                    borderLeft: "none",
+                    height: "100%",
+                    width: "100%",
                   }}
-                  limitInteraction={true}
-                />
+                >
+                  <Canvas3D
+                    height={"100%"}
+                    clippingPlanes={{}}
+                    filteredLayers={[
+                      ...data.relatedModels.filter(
+                        (layer) => !contextualLayers.includes(layer),
+                      ),
+                      ...contextualLayers,
+                    ]}
+                    settings={{
+                      transparent:
+                        data.slug.current != "hull-and-deck" &&
+                        data.section != "overview",
+                    }}
+                    limitInteraction={true}
+                  />
+                </div>
+              </AnatomyPane>
+            )}
+
+            <div
+              className={styles.page__metadata}
+              style={{
+                position: "static",
+                width: "auto",
+                margin: "1rem 0 0 0",
+                borderColor: "#e6e6e6",
+              }}
+            >
+              <div>
+                <h6
+                  style={{
+                    borderColor: "#e6e6e6",
+                  }}
+                >
+                  Materials
+                </h6>
+                <div
+                  style={{
+                    padding: 0,
+                    gap: 0,
+                    display: "grid",
+                    gridTemplateColumns: "1fr 1fr",
+                  }}
+                >
+                  {materials.map((material, i, x) => {
+                    return (
+                      <h6
+                        key={material}
+                        style={{
+                          padding: "0.5rem",
+                          width: "100%",
+                          borderBottom:
+                            (i % 2 == 0 && i < x.length - 2) ||
+                            (i % 2 == 1 && i < x.length - 1)
+                              ? "1px solid #e6e6e6"
+                              : "",
+                          borderRight:
+                            i % 2 == 0 && x.length > 1 ? "1px solid #e6e6e6" : "",
+                          borderColor: "#e6e6e6",
+                        }}
+                      >
+                        {material}
+                      </h6>
+                    );
+                  })}
+                </div>
               </div>
-            </AnatomyPane>
-          )}
+            </div>
+          </div>
         </div>
 
         <PortableText value={data.content} components={components} />

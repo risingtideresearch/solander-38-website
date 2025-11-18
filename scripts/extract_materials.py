@@ -5,8 +5,54 @@ Provides functions to extract and index material information from 3D models.
 
 import json
 import os
+import re
 from pathlib import Path
 from typing import List, Dict, Set, Tuple, Optional
+
+
+def clean_material_name(material_name: str) -> Optional[str]:
+    """
+    Clean material name by removing specific terms and stripping whitespace.
+    
+    Args:
+        material_name: Raw material name from GLB file
+        
+    Returns:
+        Cleaned material name, or None if material should be ignored
+    """
+    if not material_name or material_name.strip() == '':
+        return None
+    
+    # Ignore materials with "paint" in the name (case insensitive)
+    if 'paint' in material_name.lower():
+        return None
+    
+    # Terms to strip (case insensitive)
+    terms_to_strip = [
+        'matte',
+        'bronze tinted',
+        '(internals)',
+        '(hull)',
+        'black',
+        'white',
+        'polished',
+        '(1)'
+    ]
+    
+    cleaned = material_name
+    for term in terms_to_strip:
+        # Use word boundaries and case-insensitive matching
+        pattern = re.compile(re.escape(term), re.IGNORECASE)
+        cleaned = pattern.sub('', cleaned)
+    
+    # Strip whitespace and collapse multiple spaces
+    cleaned = ' '.join(cleaned.split())
+    
+    # Return None if nothing remains after cleaning
+    if not cleaned:
+        return None
+    
+    return cleaned
 
 
 def extract_material_names(file_path: str) -> List[str]:
@@ -17,7 +63,7 @@ def extract_material_names(file_path: str) -> List[str]:
         file_path: Path to the GLB file
         
     Returns:
-        List of material names. Returns ['Default_Material'] if no materials found.
+        List of cleaned material names. Returns empty list if no valid materials found.
         
     Raises:
         ImportError: If pygltflib is not installed
@@ -32,13 +78,11 @@ def extract_material_names(file_path: str) -> List[str]:
             for material in gltf.materials:
                 # Handle named vs unnamed materials
                 material_name = getattr(material, 'name', None)
-                if not material_name or material_name.strip() == '':
-                    # Group all unnamed materials as "Default_Material"
-                    material_name = 'Default_Material'
-                material_names.append(material_name)
-        else:
-            # No materials found, use default
-            material_names.append('Default_Material')
+                
+                if material_name:
+                    cleaned_name = clean_material_name(material_name)
+                    if cleaned_name:  # Only add if cleaning didn't eliminate it
+                        material_names.append(cleaned_name)
         
         return material_names
         
@@ -91,7 +135,7 @@ def create_material_index(
         >>> from material_extractor import create_material_index
         >>> index = create_material_index('./models', verbose=False)
         >>> print(index['unique_materials'])
-        ['Default_Material', 'Metal', 'Wood']
+        ['Metal', 'Wood']
         >>> print(index['materials_to_models']['Metal'])
         ['model1.glb', 'model3.glb']
     """
@@ -117,14 +161,17 @@ def create_material_index(
         if verbose:
             print(f"Processing {i}/{len(glb_files)}: {filename}")
         material_names = extract_material_names(file_path)
-        material_index[filename] = material_names
-        all_materials.update(material_names)
         
-        # Add to reverse index
-        for material_name in material_names:
-            if material_name not in materials_to_models:
-                materials_to_models[material_name] = []
-            materials_to_models[material_name].append(filename)
+        # Only index files that have materials
+        if material_names:
+            material_index[filename] = material_names
+            all_materials.update(material_names)
+            
+            # Add to reverse index
+            for material_name in material_names:
+                if material_name not in materials_to_models:
+                    materials_to_models[material_name] = []
+                materials_to_models[material_name].append(filename)
     
     # Sort the model lists for each material
     for material_name in materials_to_models:
@@ -146,7 +193,7 @@ def create_material_index(
             print(f"\nMaterial index written to: {output_json}")
     
     if verbose:
-        print(f"Total files: {len(material_index)}")
+        print(f"Total files indexed: {len(material_index)}")
         print(f"Unique materials: {len(all_materials)}")
         print(f"Total material instances: {sum(len(materials) for materials in material_index.values())}")
         print(f"\nMaterial usage:")
@@ -165,7 +212,7 @@ def get_materials_for_file(file_path: str) -> List[str]:
         file_path: Path to GLB file
         
     Returns:
-        List of material names
+        List of cleaned material names
     """
     return extract_material_names(file_path)
 

@@ -1,4 +1,5 @@
 import rhinoscriptsyntax as rs
+import Rhino.Geometry as rg
 import os
 import re
 import time
@@ -13,6 +14,71 @@ def sanitize_filename(name):
         sanitized = "unnamed_layer"
     
     return sanitized
+
+def get_normalized_object_size(objs):
+    """
+    Calculate the true object size by getting dimensions in local coordinate system.
+    This ignores rotation and gives actual width, depth, height.
+    """
+    if not objs:
+        return None
+    
+    try:
+        # Get all geometry
+        geometries = []
+        for obj in objs:
+            geom = rs.coercegeometry(obj)
+            if geom:
+                geometries.append(geom)
+        
+        if not geometries:
+            return None
+        
+        # Get bounding box aligned to world
+        world_bbox = rg.BoundingBox.Empty
+        for geom in geometries:
+            world_bbox.Union(geom.GetBoundingBox(True))
+        
+        if not world_bbox.IsValid:
+            return None
+        
+        # Calculate oriented bounding box for true dimensions
+        # This finds the smallest box that contains all geometry
+        all_points = []
+        for geom in geometries:
+            # Get sample points from each geometry
+            if hasattr(geom, 'GetBoundingBox'):
+                bbox = geom.GetBoundingBox(True)
+                corners = bbox.GetCorners()
+                all_points.extend(corners)
+        
+        if not all_points:
+            return None
+        
+        # Compute oriented bounding box
+        oriented_bbox = rg.BoundingBox(all_points)
+        
+        # Get dimensions
+        width = oriented_bbox.Max.X - oriented_bbox.Min.X
+        depth = oriented_bbox.Max.Y - oriented_bbox.Min.Y
+        height = oriented_bbox.Max.Z - oriented_bbox.Min.Z
+        
+        # Sort dimensions to get true size (largest to smallest)
+        dimensions = sorted([width, depth, height], reverse=True)
+        
+        return {
+            "length": dimensions[0],  # Longest dimension
+            "width": dimensions[1],   # Middle dimension
+            "height": dimensions[2],  # Shortest dimension
+            "world_aligned": {
+                "x": width,
+                "y": depth,
+                "z": height
+            }
+        }
+    except Exception as e:
+        print(f"  Error calculating normalized size: {e}")
+        return None
 
 def get_bounding_box_info(objs):
     """Calculate bounding box for a list of objects with min/max for each dimension"""
@@ -113,11 +179,16 @@ def export_all_layers_to_glb():
         
         print(f"  Found {len(objs)} objects in layer")
         
-        # Calculate bounding box BEFORE any mesh conversion
+        # Calculate bounding box AND normalized size BEFORE any mesh conversion
         bbox_info = get_bounding_box_info(objs)
+        normalized_size = get_normalized_object_size(objs)
+        
         if bbox_info:
             print(f"  Bounding box: [{bbox_info['min']['x']:.2f}, {bbox_info['min']['y']:.2f}, {bbox_info['min']['z']:.2f}] to [{bbox_info['max']['x']:.2f}, {bbox_info['max']['y']:.2f}, {bbox_info['max']['z']:.2f}]")
             print(f"  Dimensions: {bbox_info['dimensions']['width']:.2f} x {bbox_info['dimensions']['depth']:.2f} x {bbox_info['dimensions']['height']:.2f}")
+        
+        if normalized_size:
+            print(f"  Normalized size: L={normalized_size['length']:.2f}, W={normalized_size['width']:.2f}, H={normalized_size['height']:.2f}")
         
         # Select objects
         rs.SelectObjects(objs)
@@ -323,13 +394,13 @@ def export_all_layers_to_glb():
             file_size = os.path.getsize(filename)
             export_success = True
             print(f"  ✅ Successfully exported with {export_method}: {os.path.basename(filename)} ({file_size} bytes)")
-            # Add to manifest with bounding box info
             manifest["exported_layers"].append({
                 "layer_name": layer,
                 "filename": os.path.basename(filename),
                 "file_size": file_size,
                 "object_count": len(mesh_objs),
                 "bounding_box": bbox_info,
+                "normalized_size": normalized_size,
                 "export_method": export_method,
                 "notes": ""
             })
@@ -338,9 +409,6 @@ def export_all_layers_to_glb():
             print(f"  ❌ All export methods failed for layer: {layer}")
             manifest["failed_layers"].append({
                 "layer_name": layer,
-                "object_count": len(mesh_objs) if mesh_objs else 0,
-                "bounding_box": bbox_info,
-                "export_method": "failed",
                 "notes": "Export failed - no file created"
             })
             # List what we tried to export

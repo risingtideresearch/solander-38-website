@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import { Plane, Box3 } from "three";
-import { Units } from "./util";
+import { Units } from "./three-d/util";
 import { BiSliderAlt, BiX } from "react-icons/bi";
-import { ControlSettings } from "../ThreeDContainer";
+import { ControlSettings } from "./ThreeDContainer";
 import { AxisSlider } from "@/app/components/AxisSlider";
 
 interface ClippingPlaneControlsProps {

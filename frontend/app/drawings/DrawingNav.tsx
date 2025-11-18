@@ -29,6 +29,10 @@ export default function DrawingNav({ prev, next, onPrev, onNext, drawing }) {
       }}
     >
       <div>
+        <h6>ID</h6>
+        <h6>{drawing.id}</h6>
+      </div>
+      <div>
         <h6>Date</h6>
         <h6>{drawing.date_info ? formatDate(drawing.date_info.date) : '<no date>'}</h6>
       </div>

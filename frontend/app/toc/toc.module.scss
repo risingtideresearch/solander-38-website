@@ -2,8 +2,8 @@
   padding: 0 0.5rem;
   width: max-content;
   border: 1px solid;
-  counter-reset: sublist-counter;
   width: 15rem;
+  counter-reset: sublist-counter;
   
   &__container {
     position: fixed;
@@ -21,25 +21,25 @@
     margin: 0.5rem 0;
 
     ol {
-      list-style: none;
-      padding: 0;
+      // list-style: none;
+      padding: 0 0 0 2ch;
       margin: 0.25rem 0 0.25rem 1ch;
       overflow: hidden;
       > li {
-        list-style: none;
+        list-style: lower-alpha;
         margin: 0;
-        padding: 0.25rem 0;
+        padding: 0.25rem 0 0.25rem 0.25rem;
         &::before {
-          text-align: left;
-          counter-increment: sublist-counter;
-          content: counter(sublist-counter, lower-alpha) ".";
-          width: 2ch;
+          // text-align: left;
+          // counter-increment: sublist-counter;
+          // content: counter(sublist-counter, lower-alpha) ".";
+          // width: 2ch;
           margin-right: 1ch;
-          display: inline-block;
+          // display: inline-block;
         }
-        &::marker {
-          content: "";
-        }
+        // &::marker {
+        //   content: "";
+        // }
       }
     }
   }

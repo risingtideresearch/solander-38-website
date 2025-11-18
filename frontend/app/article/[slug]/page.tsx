@@ -78,14 +78,40 @@ export default async function Page({ params }) {
       )
       .map((layer) => layer.filename);
   }
+  const materialsIndexPath = path.join(
+    process.cwd(),
+    "public/script-output/material_index_simple.json",
+  );
+  const materialsIndexData = await fs.readFile(materialsIndexPath, "utf8");
+  const materials_index = JSON.parse(materialsIndexData) || {};
+
+  const getMaterials = (acc, layer) => {
+    materials_index.material_index[layer]?.forEach((material) => {
+      acc.add(material);
+    });
+    return acc;
+  };
+  const relatedMaterials = dataWithMatchedDrawings.relatedModels.reduce(
+    getMaterials,
+    new Set(),
+  );
 
   dataWithMatchedDrawings.relatedModels = Array.from(
     new Set(dataWithMatchedDrawings.relatedModels),
   );
 
+  dataWithMatchedDrawings.articleId = sections.data.sections
+    .map((section) => section.articles)
+    .flat()
+    .find((article) => article._id == dataWithMatchedDrawings._id)?.articleId;
+
   return (
     <div>
-      <Article data={dataWithMatchedDrawings} navigation={navigation} />
+      <Article
+        data={dataWithMatchedDrawings}
+        navigation={navigation}
+        materials={Array.from(relatedMaterials)}
+      />
     </div>
   );
 }
