@@ -12,8 +12,7 @@ export function DrawingCard({ drawing }: IDrawingCard) {
   return (
     <a
       href={`/drawings/file/${drawing.uuid}`}
-      className={styles["drawing-card"]}
-      style={{ gridRow: drawing.height > drawing.width ? 'span 2' : '' }}
+      className={styles["drawing-card"] + (drawing.height > drawing.width ? " drawing-card--portrait" : "")}
     >
       <h6>
         <span>{drawing.id}</span>

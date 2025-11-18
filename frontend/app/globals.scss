@@ -222,6 +222,12 @@ figcaption {
   }
 }
 
+.article {
+  .drawing-card--portrait {
+    grid-row: span 2;
+  }
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -155,7 +155,7 @@ export default async function Article({ data, navigation, materials = [] }) {
           </div>
         )}
       </div>
-      <main className={styles.page}>
+      <main className={styles.page + " article"}>
         <div className={styles.page__header}>
           <div>
             <Link href={"/articles/"}>

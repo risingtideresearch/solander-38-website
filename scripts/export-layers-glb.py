@@ -456,6 +456,14 @@ def export_all_layers_to_glb():
     manifest["export_info"]["failed_exports"] = len(manifest["failed_layers"])
     manifest["export_info"]["skipped_exports"] = len(manifest["skipped_layers"])
     manifest["export_info"]["total_file_size"] = sum(layer["file_size"] for layer in manifest["exported_layers"])
+     
+    # Get unit information
+    unit_system_id = rs.UnitSystem()
+    unit_name = rs.UnitSystemName(abbreviate=False)
+    manifest["export_info"]["units"] = {
+        "id": unit_system_id,
+        "name": unit_name
+    }
     
     try:
         with open(manifest_filename, 'w') as f:
