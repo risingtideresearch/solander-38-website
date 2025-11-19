@@ -155,7 +155,10 @@ export default function Anatomy({ content }: IAnatomy) {
   const boundingBox = computeCombinedBoundingBox(visibleModelsBBoxes);
 
   const layersToRender = settings.transparent
-    ? [...filteredLayers.filter(layer => !contextualLayers.includes(layer)), ...contextualLayers]
+    ? [
+        ...filteredLayers.filter((layer) => !contextualLayers.includes(layer)),
+        ...contextualLayers,
+      ]
     : filteredLayers;
 
   return (
@@ -177,7 +180,7 @@ export default function Anatomy({ content }: IAnatomy) {
           setSearch(val);
         }}
       /> */}
-      
+
       <Canvas3D
         clippingPlanes={clippingPlanes}
         filteredLayers={layersToRender}
@@ -201,14 +204,14 @@ export default function Anatomy({ content }: IAnatomy) {
         style={{
           position: "absolute",
           right: "0.5rem",
-          top: "8rem",
+          top: "5.5rem",
           border: "1px solid",
         }}
       >
         {settings.transparent ? (
           <svg
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 200 200"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -220,8 +223,8 @@ export default function Anatomy({ content }: IAnatomy) {
           </svg>
         ) : (
           <svg
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 200 200"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -241,3 +244,4 @@ export default function Anatomy({ content }: IAnatomy) {
       />
     </div>
   );
+}

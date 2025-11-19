@@ -45,7 +45,7 @@ export async function fetchSections(slug?: string) {
 
   data.sections.forEach((section, i) => {
     section.articles.forEach((article, j) => {
-      article.articleId = `${i + 1}.${String.fromCharCode(65 + j)}`
+      article.articleId = `${i + 1}–${String.fromCharCode(65 + j)}`
     })
   });
 

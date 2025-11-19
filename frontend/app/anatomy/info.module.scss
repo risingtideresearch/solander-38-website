@@ -1,15 +1,15 @@
 .info {
   position: fixed;
   z-index: 10;
-  right: 2.5rem;
+  right: 0.5rem;
   margin-right: -1px;
-  top: 5.5rem;
+  bottom: 2.5rem;
   width: max-content;
   max-width: 32rem;
   padding: 0.5rem;
-  border: 1px solid;
   max-height: calc(100% - 4rem);
   overflow: auto;
+  border: 1px solid;
 
   &__header {
     border: 1px solid;
@@ -20,6 +20,27 @@
       &:not(:last-child) {
         border-right: 1px solid;
         white-space: nowrap;
+      }
+    }
+  }
+
+  &__button {
+    position: fixed;
+    backdrop-filter: none;
+    background: none;
+    bottom: 0.5rem;
+    right: 0.5rem;
+
+    svg {
+      fill: #959595;
+    }
+
+    &:hover {
+      background: none;
+      svg {
+        &:hover {
+          fill: #000;
+        }
       }
     }
   }

@@ -20,7 +20,7 @@ export default function Info({ visible, setVisible, lastUpdated }) {
             Last updated
           </h6>
 
-          <button
+          {/* <button
             onClick={() => setVisible(false)}
             style={{
               position: "absolute",
@@ -30,7 +30,7 @@ export default function Info({ visible, setVisible, lastUpdated }) {
             }}
           >
             <BiX size={18} />
-          </button>
+          </button> */}
 
           <div>
             <p>{lastUpdated}</p>
@@ -38,14 +38,9 @@ export default function Info({ visible, setVisible, lastUpdated }) {
         </div>
       )}
       <button
-        className="pane"
-        onClick={() => setVisible((prev) => !prev)}
-        style={{
-          position: "fixed",
-          right: "0.5rem",
-          top: "5.5rem",
-          border: "1px solid",
-        }}
+        className={styles.info__button}
+        onMouseEnter={() => setVisible(true)}
+        onMouseLeave={() => setVisible(false)}
       >
         <BiInfoCircle size={18} />
       </button>
