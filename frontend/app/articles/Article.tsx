@@ -248,7 +248,9 @@ export default async function Article({ data, navigation, materials = [] }) {
                               ? "1px solid #e6e6e6"
                               : "",
                           borderRight:
-                            i % 2 == 0 && x.length > 1 ? "1px solid #e6e6e6" : "",
+                            i % 2 == 0 && x.length > 1
+                              ? "1px solid #e6e6e6"
+                              : "",
                           borderColor: "#e6e6e6",
                         }}
                       >

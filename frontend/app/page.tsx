@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Articles from "./articles/Articles";
 
 export default async function Page() {
   return (
@@ -30,8 +29,11 @@ export default async function Page() {
             src="https://cdn.sanity.io/images/qjczz6gi/production/e21b1aedbbe89872b8039061dd51771bb848d5eb-4032x3024.jpg?h=2880&amp;w=3840&amp;auto=format&amp;fit=min"
           />
         </figure>
+        <h1>
+          Solander 38
+        </h1>
 
-        <div
+        {/* <div
           style={{
             position: "sticky",
             background: "#fff",
@@ -184,7 +186,7 @@ export default async function Page() {
           >
             10 knots
           </h6>
-        </div>
+        </div> */}
         <div style={{ height: 1000 }}></div>
         <div
           style={{
@@ -193,7 +195,7 @@ export default async function Page() {
             marginBottom: "3rem",
             border: "1px solid",
             top: "6rem",
-            marginLeft: "50%",
+            marginLeft: "20%",
             width: "27%",
             transform: "translate(-50%, 0) rotate(-5deg)",
           }}
@@ -225,7 +227,7 @@ export default async function Page() {
             marginBottom: "3rem",
             border: "1px solid",
             top: "17rem",
-            marginLeft: "50%",
+            marginLeft: "19%",
             width: "32%",
             transform: "translate(-50%, 0) rotate(4deg)",
           }}
@@ -285,7 +287,6 @@ export default async function Page() {
         </div>
         <div style={{ height: 1000 }}></div>*/}
       </section>
-      <Articles />
 
       <div>
         <Link href="/anatomy" style={{ width: "min-content" }}>

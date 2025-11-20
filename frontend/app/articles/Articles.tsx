@@ -14,11 +14,23 @@ export default async function Articles({ subtitles }) {
           </h6>
           <ol>
             {(section.articles || []).map((article) => (
-              <div key={article._id}>
-                <a href={`/article/${article.slug}`}>
-                  <h2 style={{margin: '0.5rem 0'}}>{article.title}</h2>
-                </a>
-                  {subtitles ? <p>{article.subtitle}</p> : null}
+              <div key={article._id} style={{ marginBottom: '1.5rem'}}>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "0.5rem 1fr",
+                    gap: "0.5rem",
+                    margin: "0.5rem 0",
+                  }}
+                >
+                  <h6 style={{ display: "block", marginLeft: "-1rem", marginTop: '0.25rem' }}>
+                    {article.articleId}
+                  </h6>
+                  <a href={`/article/${article.slug}`}>
+                    <h2 style={{ margin: "0" }}>{article.title}</h2>
+                  </a>
+                </div>
+                <div style={{marginLeft: '1rem'}}>{subtitles ? <p>{article.subtitle}</p> : null}</div>
               </div>
             ))}
           </ol>
