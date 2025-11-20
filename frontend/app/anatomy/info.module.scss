@@ -1,15 +1,16 @@
 .info {
-  position: fixed;
+  position: absolute;
   z-index: 10;
-  right: 0.5rem;
+  right: 2.5rem;
   margin-right: -1px;
-  bottom: 2.5rem;
+  top: 8rem;
   width: max-content;
-  max-width: 32rem;
+  max-width: 24rem;
   padding: 0.5rem;
   max-height: calc(100% - 4rem);
   overflow: auto;
   border: 1px solid;
+  pointer-events: none;
 
   &__header {
     border: 1px solid;
@@ -28,19 +29,17 @@
     position: fixed;
     backdrop-filter: none;
     background: none;
-    bottom: 0.5rem;
+    top: 8rem;
     right: 0.5rem;
 
     svg {
-      fill: #959595;
+      fill: #000;
     }
 
     &:hover {
       background: none;
       svg {
-        &:hover {
-          fill: #000;
-        }
+        fill: #000;
       }
     }
   }

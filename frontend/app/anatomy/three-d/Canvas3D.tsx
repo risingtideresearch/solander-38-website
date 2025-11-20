@@ -7,7 +7,12 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
-import { Environment, OrbitControls } from "@react-three/drei";
+import {
+  Environment,
+  GizmoHelper,
+  GizmoViewcube,
+  OrbitControls,
+} from "@react-three/drei";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import { Canvas } from "@react-three/fiber";
 import { Vector3, Box3, Group, Object3D, Camera, Plane } from "three";
@@ -16,7 +21,7 @@ import { Model3D } from "./Model3D";
 import ScalingLines3D from "./ScalingLines3D";
 // import Annotations3D from "./Annotations3D";
 import RaycastHandler from "./RaycastHandler";
-import { contextualLayers, Model } from "./util";
+import { contextualLayers, MaterialIndex, Model } from "./util";
 import HoverDisplay from "../HoverDisplay";
 import { ControlSettings } from "../Anatomy";
 
@@ -30,7 +35,7 @@ type Canvas3DProps = {
   settings?: ControlSettings | object;
   boundingBox?: Box3 | null;
   height?: string | number;
-  materials?: { [key: string]: unknown };
+  materials?: MaterialIndex;
   memoModels: Array<Model>;
   // use for article models
   limitInteraction?: boolean;
@@ -154,22 +159,8 @@ export function Canvas3D({
     }
   }, [modelsLoaded.size, filteredLayers.length, centered]);
 
-  // const measureBounds = useCallback(() => {
-  //   if (groupRef.current && setScalingBoundingBox) {
-  //     tempBox.current.setFromObject(groupRef.current);
-  //     setScalingBoundingBox(tempBox.current.clone());
-  //   }
-  // }, [setScalingBoundingBox]);
-
-  // useEffect(() => {
-  //   if (groupRef.current && modelsLoaded.size > 0) {
-  //     requestAnimationFrame(() => {
-  //       requestAnimationFrame(measureBounds);
-  //     });
-  //   }
-  // }, [filteredLayers, modelsLoaded.size, measureBounds, settings.expand]);
-
   const handleCanvasCreated = useCallback(({ camera, gl }) => {
+    console.log(camera)
     cameraRef.current = camera;
     gl.localClippingEnabled = true;
   }, []);
@@ -277,13 +268,27 @@ export function Canvas3D({
           <OrbitControls
             ref={controlsRef}
             enableDamping={false}
-            autoRotate={autoRotate && !hovered}
+            autoRotate={autoRotate && !hovered && limitInteraction}
             autoRotateSpeed={0.2}
             maxDistance={22}
             minDistance={1}
             enableZoom={!limitInteraction}
             enablePan={!limitInteraction}
+            makeDefault
           />
+          {!limitInteraction && (
+            <GizmoHelper alignment="bottom-right" margin={[90, 90]}>
+              <group scale={[1.2, 1.2, 1.2]}>
+                <GizmoViewcube
+                  faces={["Bow", "Stern", "Deck", "Keel", "Starboard", "Port"]}
+                  color="rgba(255, 255, 255, 0.22)"
+                  hoverColor="#ffc020"
+                  textColor="#000000"
+                  font="18px Helvetica"
+                />
+              </group>
+            </GizmoHelper>
+          )}
         </Canvas>
 
         <HoverDisplay layer={hovered} materials={materials} />

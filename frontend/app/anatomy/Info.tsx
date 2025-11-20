@@ -32,8 +32,8 @@ export default function Info({ visible, setVisible, lastUpdated }) {
             <BiX size={18} />
           </button> */}
 
-          <div>
-            <p>{lastUpdated}</p>
+          <div style={{ marginTop: '0.5rem'}}>
+            <h6>{lastUpdated}</h6>
           </div>
         </div>
       )}
