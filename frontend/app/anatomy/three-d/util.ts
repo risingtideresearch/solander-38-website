@@ -122,3 +122,150 @@ export function computeCombinedBoundingBox(boxes: BoundingBox[]): Box3 {
     new Vector3(combinedMax.x, combinedMax.y, combinedMax.z),
   );
 }
+
+export const weightData = {
+  "POWER ARCHITECTURE__SIMPLIFIED BATT RACKS.glb": {
+    quantity: 8,
+    weightPerUnit: 200,
+  },
+  "POWER ARCHITECTURE__SOLAR__SIMPLIFIED SOLAR PANELS.glb": {
+    quantity: 15,
+    weightPerUnit: 61,
+  },
+  "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__WM CABINET__watermaker cabinet.glb": {
+    quantity: 1,
+    weightPerUnit: 60,
+  },
+  "OUTFITTING_INTERIOR__Isotherm Drawer 65 - FROST FREE Refrigerator.glb": {
+    quantity: 1,
+    weightPerUnit: 70,
+  },
+  "OUTFITTING_INTERIOR__Isotherm Drawer 55 \u2013 Frost Free Freezer.glb": {
+    quantity: 1,
+    weightPerUnit: 70,
+  },
+  "OUTFITTING_INTERIOR__helm seat.glb": {
+    quantity: 1,
+    weightPerUnit: 150,
+  },
+  "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__workbench.glb": {
+    quantity: 1,
+    weightPerUnit: 150,
+  },
+  "WATER_HEATING SYSTEMS__TANKS__hot water tank (model_).glb": {
+    quantity: 1,
+    weightPerUnit: 54,
+  },
+  "WATER_HEATING SYSTEMS__TANKS__holding tank 25 gal TOD 85-1532WH.glb": {
+    quantity: 1,
+    weightPerUnit: 110,
+  },
+  "WATER_HEATING SYSTEMS__TANKS__port FW tank (35 gal) Todd MFG __85-1525WH.glb": {
+    quantity: 1,
+    weightPerUnit: 150,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb": {
+    quantity: 1,
+    weightPerUnit: 578,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb": {
+    quantity: 1,
+    weightPerUnit: 111,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb": {
+    quantity: 1,
+    weightPerUnit: 143,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": {
+    quantity: 1,
+    weightPerUnit: 106,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb": {
+    quantity: 1,
+    weightPerUnit: 296,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": {
+    quantity: 1,
+    weightPerUnit: 303,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": {
+    quantity: 1,
+    weightPerUnit: 200,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": {
+    quantity: 1,
+    weightPerUnit: 51,
+  },
+  "SUPERSTRUCTURE__WINDOWS__window panes.glb": {
+    quantity: 1,
+    weightPerUnit: 64,
+  },
+  "BODY__INTERNALS__soles & bhds.glb": {
+    quantity: 1,
+    weightPerUnit: 365.7,
+  },
+  "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__cross beam.glb": {
+    quantity: 1,
+    weightPerUnit: 150,
+  },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__COTEK SP-3000 (3000W) inverter.glb": {
+    quantity: 1,
+    weightPerUnit: 18,
+  },
+  "CONTROL__STEERING__STEERING COMPONENTS__autopilot DD1.glb": {
+    quantity: 1,
+    weightPerUnit: 26.5,
+  },
+  "PROPULSION__20W Bell Marine Motor__MOTOR CONTROLLER APPROX.glb": {
+    quantity: 2,
+    weightPerUnit: 40,
+  },
+  "PROPULSION__20W Bell Marine Motor__SIMPLIFIED 20W Bell surfs.glb": {
+    quantity: 2,
+    weightPerUnit: 225,
+  },
+  "WATER_HEATING SYSTEMS__Headhunter Royal Flush Espresso.glb": {
+    quantity: 1,
+    weightPerUnit: 50,
+  },
+  "OUTFITTING_INTERIOR__portland pudgy__PORTLAND PUDGY SIMPLIFIED.glb": {
+    quantity: 1,
+    weightPerUnit: 128,
+  },
+  "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb": {
+    quantity: 2,
+    weightPerUnit: 15,
+  },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__victron lynx distributor.glb": {
+    quantity: 3,
+    weightPerUnit: 5,
+  },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__IMO-2108 4 string - DC disconnect.glb": {
+    quantity: 1,
+    weightPerUnit: 3,
+  },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__MPPT250_70-Tr solar charge controller.glb": {
+    quantity: 4,
+    weightPerUnit: 6.6,
+  },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__Orion 360W isolated DC-DC converter.glb": {
+    quantity: 3,
+    weightPerUnit: 4,
+  },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__ELCON HK-J 6.6KW charger.glb": {
+    quantity: 2,
+    weightPerUnit: 25.5,
+  },
+  "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb": {
+    quantity: 1,
+    weightPerUnit: 2501.8,
+  },
+  "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb": {
+    quantity: 1,
+    weightPerUnit: 1796.9,
+  },
+  "BODY__CTR BEAM__ctr beam outside surfaces.glb": {
+    quantity: 1,
+    weightPerUnit: 984.3,
+  },
+};
