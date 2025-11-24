@@ -104,10 +104,15 @@
 
   .full_image {
     position: relative;
-    margin-left: -19rem;
+    margin-left: -18rem;
     left: 0;
     width: 100vw;
-    max-width: 100rem;
+    max-width: 120rem;
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      margin-left: 0;
+    }
 
     img {
       width: 100%;
