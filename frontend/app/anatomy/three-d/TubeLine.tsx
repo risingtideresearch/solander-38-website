@@ -1,4 +1,3 @@
-
 import * as THREE from "three";
 
 export type AxisLine = {
@@ -12,15 +11,12 @@ interface TubeLineArgs {
   radius?: number;
 }
 
-function TubeLine({ line, radius = 0.002 }: TubeLineArgs) {
+function TubeLine({ line, radius = 0.003 }: TubeLineArgs) {
   const { points } = line;
 
   const validPoints = points.filter((point) => {
     const isValid =
-      point &&
-      isFinite(point.x) &&
-      isFinite(point.y) &&
-      isFinite(point.z)
+      point && isFinite(point.x) && isFinite(point.y) && isFinite(point.z);
 
     if (!isValid) {
       console.warn(`Invalid point detected in line ${line.key}:`, point);
@@ -39,7 +35,7 @@ function TubeLine({ line, radius = 0.002 }: TubeLineArgs) {
   const curve = new THREE.CatmullRomCurve3(validPoints);
 
   return (
-    <mesh key={line.key}>
+    <mesh key={line.key} userData={{ ignore: true }}>
       <tubeGeometry
         args={[
           curve, // The curve to follow

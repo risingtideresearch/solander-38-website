@@ -29,23 +29,14 @@ interface IAnatomy {
 
 export type ControlSettings = {
   transparent?: boolean;
-  expand: boolean;
+  // expand: boolean;
   units?: Units;
-  monochrome?: boolean;
+  // monochrome?: boolean;
 };
 
 export interface ClippingPlanes {
   [key: string]: Plane;
 }
-
-const INITIAL_CLIPPING_PLANES: ClippingPlanes = {
-  x1: new Plane(new Vector3(1, 0, 0), 13),
-  x2: new Plane(new Vector3(-1, 0, 0), 2),
-  y1: new Plane(new Vector3(0, 1, 0), 10),
-  y2: new Plane(new Vector3(0, -1, 0), 10),
-  z1: new Plane(new Vector3(0, 0, 1), 5),
-  z2: new Plane(new Vector3(0, 0, -1), 5),
-};
 
 const slugToRhinoSystem = (slug: string) => {
   switch (slug) {
@@ -76,18 +67,14 @@ export default function Anatomy({ content }: IAnatomy) {
   const [settings, setSettings] = useState<ControlSettings>({
     transparent: isDefaultTransparentBody(toc),
     units: Units.Feet,
-    expand: false,
   });
-  const [clippingPlanes, setClippingPlanes] = useState<ClippingPlanes>(
-    INITIAL_CLIPPING_PLANES,
-  );
-
-  const handleSetClippingPlane = useCallback((dir: string, value: Plane) => {
-    setClippingPlanes((prev) => ({
-      ...prev,
-      [dir]: value,
-    }));
-  }, []);
+  const [clippingValues, setClippingValues] = useState<{
+    value: [number, number];
+    axis: "x" | "y" | "z";
+  }>({
+    value: [0, 1],
+    axis: "x",
+  });
 
   const active =
     toc.mode == "system"
@@ -152,6 +139,7 @@ export default function Anatomy({ content }: IAnatomy) {
           filteredLayers.includes(m.filename)),
     )
     .map((m) => m.bounding_box);
+
   const boundingBox = computeCombinedBoundingBox(visibleModelsBBoxes);
 
   const layersToRender = settings.transparent
@@ -160,6 +148,33 @@ export default function Anatomy({ content }: IAnatomy) {
         ...contextualLayers,
       ]
     : filteredLayers;
+
+  const getClippingPlanes = useCallback(() => {
+    if (!boundingBox) return [];
+
+    const axisVector = {
+      x: new Vector3(1, 0, 0),
+      y: new Vector3(0, 1, 0),
+      z: new Vector3(0, 0, 1),
+    }[clippingValues.axis];
+
+    // Get the min/max for the selected axis
+    const axisIndex = { x: 0, y: 1, z: 2 }[clippingValues.axis];
+    const min = boundingBox.min.getComponent(axisIndex);
+    const max = boundingBox.max.getComponent(axisIndex);
+
+    // Map 0-1 values to actual world coordinates
+    const clipMin = min + clippingValues.value[0] * (max - min);
+    const clipMax = min + clippingValues.value[1] * (max - min);
+
+    // Create planes
+    // Plane equation: normal · point + constant = 0
+    // For clipping, we want to keep everything where normal · point + constant > 0
+    return [
+      new Plane(axisVector, -clipMin),
+      new Plane(axisVector?.clone().negate(), clipMax),
+    ];
+  }, [clippingValues, boundingBox]);
 
   return (
     <div>
@@ -182,7 +197,8 @@ export default function Anatomy({ content }: IAnatomy) {
       /> */}
 
       <Canvas3D
-        clippingPlanes={clippingPlanes}
+        clippingPlanes={getClippingPlanes()}
+        clippingValues={clippingValues}
         filteredLayers={layersToRender}
         settings={settings}
         boundingBox={boundingBox}
@@ -191,10 +207,8 @@ export default function Anatomy({ content }: IAnatomy) {
       />
 
       <ClippingPlaneControls
-        settings={settings}
-        setSettings={setSettings}
-        setClippingPlane={handleSetClippingPlane}
-        boundingBox={boundingBox}
+        clippingValues={clippingValues}
+        setClippingValues={(axis, value) => setClippingValues({ axis, value })}
       />
 
       <button
@@ -204,7 +218,7 @@ export default function Anatomy({ content }: IAnatomy) {
         style={{
           position: "absolute",
           right: "0.5rem",
-          top: "5.5rem",
+          top: "3rem",
           border: "1px solid",
         }}
       >

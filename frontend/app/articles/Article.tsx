@@ -62,7 +62,6 @@ const components = {
         >
           <Canvas3D
             height={"100%"}
-            clippingPlanes={{}}
             filteredLayers={[
               "DECK JIG__TRANSV FRAMES.glb",
               "DECK JIG__DECK SKINS.glb",
@@ -80,7 +79,6 @@ const components = {
 
 export default async function Article({ data, navigation, materials = [] }) {
   const updated = new Date(data._updatedAt);
-  const published = new Date(data._createdAt);
 
   // hardcode jig 3d model
   const jigIndex = data.content.findIndex(
@@ -111,6 +109,13 @@ export default async function Article({ data, navigation, materials = [] }) {
       /> */}
 
       <div className={"pane " + styles.page__metadata}>
+        {/* {data.isLive ? (
+          <div style={{ background: "var(--accent)" }}>
+            <h6 style={{ gridColumn: "span 2" }}>In progress</h6>
+          </div>
+        ) : (
+          <></>
+        )} */}
         <div>
           <h6>Article</h6>
           <h6>{data.articleId}</h6>
@@ -192,7 +197,6 @@ export default async function Article({ data, navigation, materials = [] }) {
                 >
                   <Canvas3D
                     height={"100%"}
-                    clippingPlanes={{}}
                     filteredLayers={[
                       ...data.relatedModels.filter(
                         (layer) => !contextualLayers.includes(layer),

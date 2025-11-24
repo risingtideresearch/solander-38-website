@@ -178,6 +178,7 @@ export const articlesQuery = (slug?: string) => {
   if (slug) {
     return `*[_type=="article" && slug.current == "${slug}"]{
       ...,
+      isLive,
       "section": *[_type=="sections"][0].sections[references(^._id)][0].name,
       authors[]->{
         name
@@ -243,6 +244,7 @@ export const articlesQuery = (slug?: string) => {
     _id,
     title,
     relatedModels[],
+    isLive,
     "slug": slug.current,
     "section": *[_type=="sections"][0].sections[references(^._id)][0] {
       name,

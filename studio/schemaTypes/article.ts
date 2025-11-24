@@ -16,6 +16,10 @@ export const article = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'isLive',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'subtitle',
       type: 'text',
     }),

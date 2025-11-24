@@ -57,7 +57,7 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
     const mesh = object as THREE.Mesh;
     const material = mesh.material as THREE.MeshBasicMaterial;
 
-    if (material && material.color) {
+    if (material && material.color && !object.userData.ignore) {
       if (hoveredObject.current && hoveredObject.current !== object) {
         resetHoveredObject();
       }
@@ -73,9 +73,8 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
   const isPointClipped = (point: THREE.Vector3): boolean => {
     if (!clippingPlanes) return false;
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    for (const [_key, plane] of Object.entries(clippingPlanes)) {
-      if (plane.distanceToPoint(point) < 0) {
+    for (let i = 0; i < clippingPlanes.length; i += 1) {
+      if (clippingPlanes[i].distanceToPoint(point) < 0) {
         return true;
       }
     }

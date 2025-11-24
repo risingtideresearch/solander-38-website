@@ -18,6 +18,7 @@ export type Model = {
   bounding_box: BoundingBox;
   normalized_size: BoundingBox;
 };
+
 export type ModelManifest = {
   exported_layers: Array<{
     filename: string;
@@ -132,10 +133,11 @@ export const weightData = {
     quantity: 15,
     weightPerUnit: 61,
   },
-  "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__WM CABINET__watermaker cabinet.glb": {
-    quantity: 1,
-    weightPerUnit: 60,
-  },
+  "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__WM CABINET__watermaker cabinet.glb":
+    {
+      quantity: 1,
+      weightPerUnit: 60,
+    },
   "OUTFITTING_INTERIOR__Isotherm Drawer 65 - FROST FREE Refrigerator.glb": {
     quantity: 1,
     weightPerUnit: 70,
@@ -160,10 +162,11 @@ export const weightData = {
     quantity: 1,
     weightPerUnit: 110,
   },
-  "WATER_HEATING SYSTEMS__TANKS__port FW tank (35 gal) Todd MFG __85-1525WH.glb": {
-    quantity: 1,
-    weightPerUnit: 150,
-  },
+  "WATER_HEATING SYSTEMS__TANKS__port FW tank (35 gal) Todd MFG __85-1525WH.glb":
+    {
+      quantity: 1,
+      weightPerUnit: 150,
+    },
   "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb": {
     quantity: 1,
     weightPerUnit: 578,
@@ -172,10 +175,11 @@ export const weightData = {
     quantity: 1,
     weightPerUnit: 111,
   },
-  "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb": {
-    quantity: 1,
-    weightPerUnit: 143,
-  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb":
+    {
+      quantity: 1,
+      weightPerUnit: 143,
+    },
   "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": {
     quantity: 1,
     weightPerUnit: 106,
@@ -196,6 +200,10 @@ export const weightData = {
     quantity: 1,
     weightPerUnit: 51,
   },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": {
+    quantity: 1,
+    weightPerUnit: 40,
+  },
   "SUPERSTRUCTURE__WINDOWS__window panes.glb": {
     quantity: 1,
     weightPerUnit: 64,
@@ -208,10 +216,11 @@ export const weightData = {
     quantity: 1,
     weightPerUnit: 150,
   },
-  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__COTEK SP-3000 (3000W) inverter.glb": {
-    quantity: 1,
-    weightPerUnit: 18,
-  },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__COTEK SP-3000 (3000W) inverter.glb":
+    {
+      quantity: 1,
+      weightPerUnit: 18,
+    },
   "CONTROL__STEERING__STEERING COMPONENTS__autopilot DD1.glb": {
     quantity: 1,
     weightPerUnit: 26.5,
@@ -240,18 +249,21 @@ export const weightData = {
     quantity: 3,
     weightPerUnit: 5,
   },
-  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__IMO-2108 4 string - DC disconnect.glb": {
-    quantity: 1,
-    weightPerUnit: 3,
-  },
-  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__MPPT250_70-Tr solar charge controller.glb": {
-    quantity: 4,
-    weightPerUnit: 6.6,
-  },
-  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__Orion 360W isolated DC-DC converter.glb": {
-    quantity: 3,
-    weightPerUnit: 4,
-  },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__IMO-2108 4 string - DC disconnect.glb":
+    {
+      quantity: 1,
+      weightPerUnit: 3,
+    },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__MPPT250_70-Tr solar charge controller.glb":
+    {
+      quantity: 4,
+      weightPerUnit: 6.6,
+    },
+  "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__Orion 360W isolated DC-DC converter.glb":
+    {
+      quantity: 3,
+      weightPerUnit: 4,
+    },
   "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__ELCON HK-J 6.6KW charger.glb": {
     quantity: 2,
     weightPerUnit: 25.5,

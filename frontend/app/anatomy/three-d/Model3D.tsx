@@ -7,7 +7,7 @@ import { ControlSettings } from "../Anatomy";
 type Model3DProps = {
   url: string;
   onLoad?: () => void;
-  clippingPlanes: Plane[];
+  clippingPlanes?: Plane[];
   settings: ControlSettings;
 };
 
@@ -18,7 +18,7 @@ const OPAQUE_OPACITY = 1.0;
 export function Model3D({
   url,
   onLoad,
-  clippingPlanes,
+  clippingPlanes = [],
   settings,
 }: Model3DProps) {
   const { scene } = useGLTF("/models/" + url);
@@ -31,7 +31,9 @@ export function Model3D({
   const configureMaterial = useCallback(
     (mat) => {
       mat.side = DoubleSide;
-      mat.clippingPlanes = clippingPlanes;
+      if (!settings.transparent) {
+        mat.clippingPlanes = clippingPlanes;
+      }
 
       if (mat.name == "Plastic") {
         (mat.color as Color).set(1, 0.3, 0);
@@ -47,7 +49,7 @@ export function Model3D({
         }
       }
     },
-    [clippingPlanes],
+    [clippingPlanes, settings],
   );
 
   const configureMesh = useCallback(
@@ -105,7 +107,7 @@ export function Model3D({
           mat.opacity = settings.transparent
             ? TRANSPARENT_OPACITY
             : OPAQUE_OPACITY;
-          mat.clippingPlanes = clippingPlanes;
+          mat.clippingPlanes = settings.transparent ? [] : clippingPlanes;
 
           if (settings.transparent) {
             mat.color.set(0xf0f8ff);

@@ -10,29 +10,29 @@ import React, {
 import {
   Environment,
   GizmoHelper,
-  GizmoViewcube,
   OrbitControls,
 } from "@react-three/drei";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import { Canvas } from "@react-three/fiber";
-import { Vector3, Box3, Group, Object3D, Camera, Plane } from "three";
+import { Vector3, Box3, Group, Camera, Plane } from "three";
 import * as THREE from "three";
 import { Model3D } from "./Model3D";
 import ScalingLines3D from "./ScalingLines3D";
-// import Annotations3D from "./Annotations3D";
 import RaycastHandler from "./RaycastHandler";
 import { contextualLayers, MaterialIndex, Model } from "./util";
 import HoverDisplay from "../HoverDisplay";
 import { ControlSettings } from "../Anatomy";
+import { GizmoViewcube } from "./GizmoViewcube";
 
 export interface ClippingPlanes {
   [key: string]: Plane;
 }
 
 type Canvas3DProps = {
-  clippingPlanes: { [key: string]: Plane };
+  clippingPlanes?: Array<Plane>;
+  clippingValues?: { value: [number, number]; axis: 'x' | 'y' | 'z' };
   filteredLayers: Array<string>;
-  settings?: ControlSettings | object;
+  settings?: ControlSettings;
   boundingBox?: Box3 | null;
   height?: string | number;
   materials?: MaterialIndex;
@@ -49,6 +49,7 @@ const CAMERA_DIRECTION = new Vector3(0.5, 0.25, 0.625);
 
 export function Canvas3D({
   clippingPlanes,
+  clippingValues,
   settings = {},
   boundingBox,
   filteredLayers,
@@ -70,11 +71,6 @@ export function Canvas3D({
   const tempSize = useRef(new Vector3());
   const tempDirection = useRef(new Vector3());
   const tempNewPos = useRef(new Vector3());
-
-  const clippingPlanesValues = useMemo(
-    () => Object.values(clippingPlanes),
-    [clippingPlanes],
-  );
 
   const handleModelLoad = useCallback((url: string) => {
     setModelsLoaded((prev) => {
@@ -127,7 +123,9 @@ export function Canvas3D({
 
     tempBox.current.setFromObject(groupRef.current);
     const center = tempBox.current.getCenter(tempCenter.current);
-    center.y -= 0.5;
+    if (!limitInteraction) {
+      center.y -= 0.5;
+    }
     const size = tempBox.current.getSize(tempSize.current);
     const maxDim = Math.max(size.x, size.y, size.z);
     const fitDistance = maxDim * FIT_DISTANCE_MULTIPLIER;
@@ -160,7 +158,6 @@ export function Canvas3D({
   }, [modelsLoaded.size, filteredLayers.length, centered]);
 
   const handleCanvasCreated = useCallback(({ camera, gl }) => {
-    console.log(camera)
     cameraRef.current = camera;
     gl.localClippingEnabled = true;
   }, []);
@@ -236,11 +233,12 @@ export function Canvas3D({
           {directionalLights}
 
           <Suspense fallback={null}>
-            {boundingBox && (
+            {boundingBox && clippingValues && (
               <>
                 <ScalingLines3D
                   boundingBox={boundingBox}
                   unit={settings.units}
+                  clippingValues={clippingValues}
                 />
 
                 {/* <Annotations3D
@@ -255,7 +253,7 @@ export function Canvas3D({
                   key={url}
                   url={url}
                   onLoad={() => handleModelLoad(url)}
-                  clippingPlanes={clippingPlanesValues}
+                  clippingPlanes={clippingPlanes}
                   settings={{
                     transparent:
                       settings.transparent && contextualLayers.includes(url),
@@ -264,24 +262,37 @@ export function Canvas3D({
               ))}
             </group>
           </Suspense>
+          {/* <mesh
+            position={[-6, -49, 0]}
+            rotation={[Math.PI / 2, 0, 0]}
+            scale={[220, 220, 100]}
+          >
+            <boxGeometry />
+            <meshBasicMaterial
+              color="rgba(31, 64, 103, 1)"
+              opacity={0.8}
+              transparent={true}
+              side={THREE.DoubleSide}
+            />
+          </mesh> */}
 
           <OrbitControls
             ref={controlsRef}
             enableDamping={false}
             autoRotate={autoRotate && !hovered && limitInteraction}
             autoRotateSpeed={0.2}
-            maxDistance={22}
+            maxDistance={25}
             minDistance={1}
             enableZoom={!limitInteraction}
             enablePan={!limitInteraction}
             makeDefault
           />
           {!limitInteraction && (
-            <GizmoHelper alignment="bottom-right" margin={[90, 90]}>
+            <GizmoHelper alignment="bottom-right" margin={[110, 90]}>
               <group scale={[1.2, 1.2, 1.2]}>
                 <GizmoViewcube
                   faces={["Bow", "Stern", "Deck", "Keel", "Starboard", "Port"]}
-                  color="rgba(255, 255, 255, 0.22)"
+                  color="rgb(255, 255, 255)"
                   hoverColor="#ffc020"
                   textColor="#000000"
                   font="18px Helvetica"

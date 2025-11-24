@@ -3,7 +3,7 @@ import path from "path";
 import TableOfContents from "@/app/toc/TableOfContents";
 import { fetchAnnotations, fetchArticles, fetchSections } from "@/sanity/lib/utils";
 import Anatomy from "../Anatomy";
-import styles from "./../page.module.scss";
+import styles from "./page.module.scss";
 
 export default async function Page({
   params,
