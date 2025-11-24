@@ -186,15 +186,15 @@ export const weightData = {
   },
   "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb": {
     quantity: 1,
-    weightPerUnit: 296,
+    weightPerUnit: 284,
   },
   "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": {
     quantity: 1,
-    weightPerUnit: 303,
+    weightPerUnit: 161.5,
   },
   "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": {
     quantity: 1,
-    weightPerUnit: 200,
+    weightPerUnit: 58.5,
   },
   "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": {
     quantity: 1,
@@ -202,7 +202,7 @@ export const weightData = {
   },
   "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": {
     quantity: 1,
-    weightPerUnit: 40,
+    weightPerUnit: 61,
   },
   "SUPERSTRUCTURE__WINDOWS__window panes.glb": {
     quantity: 1,
@@ -243,7 +243,7 @@ export const weightData = {
   },
   "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb": {
     quantity: 2,
-    weightPerUnit: 15,
+    weightPerUnit: 21,
   },
   "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__victron lynx distributor.glb": {
     quantity: 3,
@@ -268,16 +268,16 @@ export const weightData = {
     quantity: 2,
     weightPerUnit: 25.5,
   },
-  "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb": {
-    quantity: 1,
-    weightPerUnit: 2501.8,
-  },
-  "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb": {
-    quantity: 1,
-    weightPerUnit: 1796.9,
-  },
-  "BODY__CTR BEAM__ctr beam outside surfaces.glb": {
-    quantity: 1,
-    weightPerUnit: 984.3,
-  },
+  // "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 2501.8,
+  // },
+  // "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 1796.9,
+  // },
+  // "BODY__CTR BEAM__ctr beam outside surfaces.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 984.3,
+  // },
 };

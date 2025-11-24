@@ -133,8 +133,8 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
               {"Weight (LB)"}
             </h6>
             <h6 style={{ padding: "0.5rem" }}>
-              {weightData[displayLayer?.filename].quantity *
-                weightData[displayLayer?.filename].weightPerUnit}
+              {Math.round(weightData[displayLayer?.filename].quantity *
+                weightData[displayLayer?.filename].weightPerUnit)}
               {weightData[displayLayer?.filename].quantity > 1
                 ? ` (${weightData[displayLayer?.filename].weightPerUnit} / unit)`
                 : ""}
