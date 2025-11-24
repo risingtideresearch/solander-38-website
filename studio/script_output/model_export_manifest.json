@@ -2161,40 +2161,80 @@
       "notes": ""
     },
     {
-      "layer_name": "PROPULSION::SIMPLIFIED propeller & strut",
-      "filename": "PROPULSION__SIMPLIFIED propeller & strut.glb",
-      "file_size": 5660920,
-      "object_count": 4,
+      "layer_name": "PROPULSION::SIMPLIFIED STRUT",
+      "filename": "PROPULSION__SIMPLIFIED STRUT.glb",
+      "file_size": 1185812,
+      "object_count": 2,
       "bounding_box": {
         "min": {
-          "x": -407.8210772234526,
-          "y": -95.8539882306802,
+          "x": -403.613525390625,
+          "y": -94.00000010991712,
           "z": -3.1244308728579857
         },
         "max": {
           "x": -391.4920349121094,
-          "y": 95.8539882306802,
+          "y": 94.00000010991712,
           "z": 16.940425872802734
         },
         "center": {
-          "x": -399.656556067781,
+          "x": -397.5527801513672,
           "y": 0.0,
           "z": 6.9079974999723746
         },
         "dimensions": {
-          "width": 16.329042311343244,
-          "depth": 191.7079764613604,
+          "width": 12.121490478515625,
+          "depth": 188.00000021983425,
           "height": 20.06485674566072
         }
       },
       "normalized_size": {
-        "length": 191.7079764613604,
+        "length": 188.00000021983425,
         "width": 20.06485674566072,
-        "height": 16.329042311343244,
+        "height": 12.121490478515625,
         "world_aligned": {
-          "x": 16.329042311343244,
-          "y": 191.7079764613604,
+          "x": 12.121490478515625,
+          "y": 188.00000021983425,
           "z": 20.06485674566072
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "PROPULSION::SIMPLIFIED PROPELLER",
+      "filename": "PROPULSION__SIMPLIFIED PROPELLER.glb",
+      "file_size": 2274896,
+      "object_count": 8,
+      "bounding_box": {
+        "min": {
+          "x": -407.8210772234526,
+          "y": -95.85398820516946,
+          "z": -2.8170416629394612
+        },
+        "max": {
+          "x": -403.6710258718349,
+          "y": 95.85398820516946,
+          "z": 11.673791397595595
+        },
+        "center": {
+          "x": -405.7460515476438,
+          "y": 0.0,
+          "z": 4.428374867328067
+        },
+        "dimensions": {
+          "width": 4.150051351617719,
+          "depth": 191.70797641033892,
+          "height": 14.490833060535056
+        }
+      },
+      "normalized_size": {
+        "length": 191.70797641033892,
+        "width": 14.490833060535056,
+        "height": 4.150051351617719,
+        "world_aligned": {
+          "x": 4.150051351617719,
+          "y": 191.70797641033892,
+          "z": 14.490833060535056
         }
       },
       "export_method": "standard",
@@ -5145,18 +5185,22 @@
     }
   ],
   "export_info": {
-    "total_layers_found": 336,
-    "export_path": "/Users/shelby/Documents/_/rtrf documentation/rhino/exports-5",
-    "timestamp_start": "2025-11-18 10:51:44",
+    "total_layers_found": 337,
+    "export_path": "/Users/shelby/Documents/_/rtrf documentation/rhino/exports-6",
+    "timestamp_start": "2025-11-24 14:29:39",
     "format": "GLB",
-    "timestamp_end": "2025-11-18 10:59:06",
+    "timestamp_end": "2025-11-24 14:36:01",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
     },
-    "successful_exports": 128,
+    "successful_exports": 129,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 46015032
+    "total_file_size": 43814820,
+    "units": {
+      "id": 8,
+      "name": "inch"
+    }
   }
 }

@@ -49,7 +49,7 @@
       "Plastic"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": [
-      "Aluminum"
+      "Alum 6061"
     ],
     "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1_ X 1_8_ alum angle (8982K4).glb": [
       "Alum 6061"
@@ -85,7 +85,7 @@
       "Fiberglass"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal pipe.glb": [
-      "Aluminum"
+      "Alum 6061"
     ],
     "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Simrad HALO20+ Radar.glb": [
       "Plastic"
@@ -95,9 +95,6 @@
     ],
     "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__FWD MAST & MOUNTS.glb": [
       "Aluminum"
-    ],
-    "PROPULSION__SIMPLIFIED propeller & strut.glb": [
-      "Bronze"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia flange brackets.glb": [
       "Alum 5052"
@@ -119,6 +116,9 @@
     ],
     "SUPERSTRUCTURE__WIREWAYS__ww parts surfs__int-int penetrations.glb": [
       "Aluminum"
+    ],
+    "PROPULSION__SIMPLIFIED PROPELLER.glb": [
+      "Bronze"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb": [
       "Stainless Steel"
@@ -201,6 +201,9 @@
     "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb": [
       "Composite sandwich"
     ],
+    "PROPULSION__SIMPLIFIED STRUT.glb": [
+      "Bronze"
+    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": [
       "Alum 5052"
     ],
@@ -257,8 +260,6 @@
       "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__FWD MAST & MOUNTS.glb",
       "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__cross beam.glb",
       "OUTFITTING_INTERIOR__SIMPLIFIED CTR DECK TRACKS.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal pipe.glb",
       "SUPERSTRUCTURE__WINDOWS__rough window hardware & trim__window trim surfs.glb",
       "SUPERSTRUCTURE__WIREWAYS__ww parts surfs__int-ext penetrations.glb",
       "SUPERSTRUCTURE__WIREWAYS__ww parts surfs__int-int penetrations.glb",
@@ -286,6 +287,8 @@
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal pipe.glb",
       "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1 1_2_ X 1_8_ alum angle (8982K87).glb",
       "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1_ X 1_8_ alum angle (8982K4).glb"
     ],
@@ -324,7 +327,8 @@
       "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb"
     ],
     "Bronze": [
-      "PROPULSION__SIMPLIFIED propeller & strut.glb",
+      "PROPULSION__SIMPLIFIED PROPELLER.glb",
+      "PROPULSION__SIMPLIFIED STRUT.glb",
       "WATER_HEATING SYSTEMS__KEEL COOLERS__keel cooler surfaces.glb"
     ],
     "plastic": [
