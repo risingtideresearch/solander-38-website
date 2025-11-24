@@ -64,6 +64,7 @@ export default function Anatomy({ content }: IAnatomy) {
   const [search, setSearch] = useState("");
   const memoModels = useMemo(() => processModels(content.models_manifest), []);
   const systems = useMemo(() => getSystemMap(memoModels), [memoModels]);
+  const [loaded, setLoaded] = useState(false);
   const [settings, setSettings] = useState<ControlSettings>({
     transparent: isDefaultTransparentBody(toc),
     units: Units.Feet,
@@ -204,11 +205,13 @@ export default function Anatomy({ content }: IAnatomy) {
         boundingBox={boundingBox}
         materials={content.material_index}
         memoModels={memoModels}
+        handleLoaded={() => setLoaded(true)}
       />
 
       <ClippingPlaneControls
         clippingValues={clippingValues}
         setClippingValues={(axis, value) => setClippingValues({ axis, value })}
+        loaded={loaded}
       />
 
       <button

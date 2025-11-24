@@ -7,11 +7,7 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
-import {
-  Environment,
-  GizmoHelper,
-  OrbitControls,
-} from "@react-three/drei";
+import { Environment, GizmoHelper, OrbitControls } from "@react-three/drei";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import { Canvas } from "@react-three/fiber";
 import { Vector3, Box3, Group, Camera, Plane } from "three";
@@ -30,7 +26,7 @@ export interface ClippingPlanes {
 
 type Canvas3DProps = {
   clippingPlanes?: Array<Plane>;
-  clippingValues?: { value: [number, number]; axis: 'x' | 'y' | 'z' };
+  clippingValues?: { value: [number, number]; axis: "x" | "y" | "z" };
   filteredLayers: Array<string>;
   settings?: ControlSettings;
   boundingBox?: Box3 | null;
@@ -57,6 +53,7 @@ export function Canvas3D({
   height = "100vh",
   materials = {},
   memoModels = [],
+  handleLoaded,
 }: Canvas3DProps) {
   const groupRef = useRef<Group>(null);
   const cameraRef = useRef<Camera>(null);
@@ -151,6 +148,10 @@ export function Canvas3D({
         !centered
       ) {
         centerCamera();
+
+        if (handleLoaded) {
+          handleLoaded();
+        }
       }
     } catch (e) {
       console.warn(e);

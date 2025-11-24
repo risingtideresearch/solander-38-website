@@ -6,16 +6,16 @@ import { MdOutlineFlip } from "react-icons/md";
 interface ClippingPlaneControlsProps {
   clippingValues: { axis: "x" | "y" | "z"; value: [number, number] };
   setClippingValues: (axis: "x" | "y" | "z", value: [number, number]) => void;
+  loaded: boolean;
 }
 
 export function ClippingPlaneControls({
   clippingValues,
   setClippingValues,
+  loaded,
 }: ClippingPlaneControlsProps) {
-
   return (
     <div style={{ position: "fixed", top: "5.5rem", right: "0.5rem" }}>
-
       {/* <label>
           <select
             value={settings.units}
@@ -40,13 +40,15 @@ export function ClippingPlaneControls({
           alignItems: "center",
         }}
       >
-        <AxisSlider
-          min={0}
-          max={1}
-          value={clippingValues.value}
-          axis={clippingValues.axis}
-          handleChange={setClippingValues}
-        />
+        <span style={{ opacity: loaded ? 1 : 0, transition: "400ms opacity" }}>
+          <AxisSlider
+            min={0}
+            max={1}
+            value={clippingValues.value}
+            axis={clippingValues.axis}
+            handleChange={setClippingValues}
+          />
+        </span>
         <button
           style={{ border: "1px solid" }}
           onClick={() =>
@@ -73,6 +75,8 @@ export function ClippingPlaneControls({
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+            opacity: loaded ? 1 : 0,
+            transition: "400ms opacity",
           }}
         >
           {clippingValues.axis == "x" ? (
