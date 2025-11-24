@@ -49,7 +49,6 @@ const components = {
         title={`Anatomy / superstructure jig`}
         url={`/anatomy/superstructure-jig`}
         defaultSize={{ height: "30rem" }}
-        expandedSize={{ height: "100%" }}
       >
         <div
           className="bg--grid"
@@ -107,59 +106,6 @@ export default async function Article({ data, navigation, materials = [] }) {
         //   setSearch(val);
         // }}
       /> */}
-
-      <div className={"pane " + styles.page__metadata}>
-        {/* {data.isLive ? (
-          <div style={{ background: "var(--accent)" }}>
-            <h6 style={{ gridColumn: "span 2" }}>In progress</h6>
-          </div>
-        ) : (
-          <></>
-        )} */}
-        <div>
-          <h6>Article</h6>
-          <h6>{data.articleId}</h6>
-        </div>
-        {data.authors ? (
-          <div>
-            <h6>Author</h6>
-            <h6>{data.authors.map((author) => author.name).join(",")}</h6>
-          </div>
-        ) : (
-          <></>
-        )}
-        {formatDate(updated) && (
-          <div>
-            <h6>Updated</h6>
-
-            <h6>{formatDate(updated)}</h6>
-          </div>
-        )}
-        <div>
-          <h6>System</h6>
-
-          <h6>{data.section}</h6>
-        </div>
-        {navigation.next && (
-          <div>
-            <h6>Next</h6>
-            <a href={`/article/${navigation.next.slug}`}>
-              <LiaArrowRightSolid size={18} />
-              <h6>{navigation.next.title}</h6>
-            </a>
-          </div>
-        )}
-        {navigation.prev && (
-          <div>
-            <h6>Prev</h6>
-
-            <a href={`/article/${navigation.prev.slug}`}>
-              <LiaArrowLeftSolid size={18} />
-              <h6>{navigation.prev.title}</h6>
-            </a>
-          </div>
-        )}
-      </div>
       <main className={styles.page + " article"}>
         <div className={styles.page__header}>
           <div>
@@ -215,13 +161,7 @@ export default async function Article({ data, navigation, materials = [] }) {
             )}
 
             <div
-              className={styles.page__metadata}
-              style={{
-                position: "static",
-                width: "auto",
-                margin: "1rem 0 0 0",
-                borderColor: "#e6e6e6",
-              }}
+              className={`${styles.page__metadata} ${styles.page__materials}`}
             >
               <div>
                 <h6
@@ -270,6 +210,59 @@ export default async function Article({ data, navigation, materials = [] }) {
 
         <PortableText value={data.content} components={components} />
       </main>
+
+      <div className={"pane " + styles.page__metadata}>
+        {/* {data.isLive ? (
+          <div style={{ background: "var(--accent)" }}>
+            <h6 style={{ gridColumn: "span 2" }}>In progress</h6>
+          </div>
+        ) : (
+          <></>
+        )} */}
+        <div>
+          <h6>Article</h6>
+          <h6>{data.articleId}</h6>
+        </div>
+        {data.authors ? (
+          <div>
+            <h6>Author</h6>
+            <h6>{data.authors.map((author) => author.name).join(",")}</h6>
+          </div>
+        ) : (
+          <></>
+        )}
+        {formatDate(updated) && (
+          <div>
+            <h6>Updated</h6>
+
+            <h6>{formatDate(updated)}</h6>
+          </div>
+        )}
+        <div>
+          <h6>System</h6>
+
+          <h6>{data.section}</h6>
+        </div>
+        {navigation.next && (
+          <div>
+            <h6>Next</h6>
+            <a href={`/article/${navigation.next.slug}`}>
+              <LiaArrowRightSolid size={18} />
+              <h6>{navigation.next.title}</h6>
+            </a>
+          </div>
+        )}
+        {navigation.prev && (
+          <div>
+            <h6>Prev</h6>
+
+            <a href={`/article/${navigation.prev.slug}`}>
+              <LiaArrowLeftSolid size={18} />
+              <h6>{navigation.prev.title}</h6>
+            </a>
+          </div>
+        )}
+      </div>
     </>
   );
 }

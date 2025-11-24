@@ -27,9 +27,9 @@
   }
 
   p,
-  figure,
-  div:not(.page__header) {
-    max-width: 52rem;
+  figure {
+    width: 52rem;
+    max-width: 100%;
   }
 
   &__header {
@@ -38,8 +38,8 @@
     grid-template-columns: 1fr 30rem;
 
     @media screen and (max-width: 800px) {
-      grid-template-columns: 1fr;
-      margin-top: 16rem;
+      display: block;
+      margin-top: 10rem;
     }
   }
 
@@ -50,6 +50,12 @@
     top: 5.5rem;
     width: 16.5rem;
     z-index: 1;
+
+    @media screen and (max-width: 800px) {
+      position: relative;
+      top: 0;
+      margin-top: 5rem;
+    }
 
     > div,
     &__row {
@@ -72,6 +78,15 @@
         }
       }
     }
+  }
+
+  &__materials {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 1rem 0 0 0;
+    border-color: #e6e6e6;
+    width: 100%;
   }
 
   &__drawing {

@@ -1,26 +1,12 @@
 .anatomy-pane {
   position: relative;
-  &--expanded {
+  @media screen and (max-width: 800px) {
     width: calc(100vw - 1rem);
-    height: calc(100vh - 1rem);
-    position: fixed;
-    z-index: 10;
-    right: 0.5rem;
-    top: 0.5rem;
-    border: 1px solid;
-    grid-column: span 2;
   }
   &__header {
     border: 1px solid;
     display: inline-flex;
     flex-direction: row;
-  }
-  button {
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    top: 0;
-    backdrop-filter: none;
   }
   h6 {
     padding: 0.5rem;
