@@ -5,7 +5,7 @@ export default async function Articles({ subtitles }) {
   const { data } = await fetchSections();
 
   return (
-    <main className={styles.page}>
+    <main className={styles.page} >
       {(data.sections || []).map((section, i) => (
         <section key={section._key} className={styles.page__toc}>
           <h6>

@@ -22,14 +22,13 @@
   }
 
   figure {
-    width: max-content;
     margin: 3rem 0;
   }
 
   p,
   figure {
-    width: 52rem;
-    max-width: 100%;
+    max-width: 52rem;
+    width: 100%;
   }
 
   &__header {
