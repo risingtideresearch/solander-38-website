@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import {
   INCHES_TO_METERS,
   MaterialIndex,
   Model,
+  systemWeightData,
   weightData,
 } from "./three-d/util";
+import { TOCContext } from "../toc/TableOfContents";
 
 interface HoverDisplayProps {
   layer: Model | null;
@@ -29,6 +31,7 @@ const formatFeetInches = (totalInches) => {
 export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
   const [displayLayer, setDisplayLayer] = useState(layer);
   const [isVisible, setIsVisible] = useState(false);
+  const { article } = useContext(TOCContext);
 
   useEffect(() => {
     if (layer && layer.layer_name) {
@@ -72,7 +75,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "7rem 1fr",
+          gridTemplateColumns: "8.25rem 1fr",
           borderTop: "1px solid",
         }}
       >
@@ -90,7 +93,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "7rem 1fr",
+            gridTemplateColumns: "8.25rem 1fr",
             borderTop: "1px solid",
           }}
         >
@@ -104,13 +107,29 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
       ) : (
         <></>
       )}
-      {weightData[displayLayer?.filename] ? (
+
+      {systemWeightData[displayLayer?.system] && !article ? (
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "8.25rem 1fr",
+            borderTop: "1px solid",
+          }}
+        >
+          <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
+            {`${displayLayer.system} weight (lb)`}
+          </h6>
+          <h6 style={{ padding: "0.5rem" }}>
+            {systemWeightData[displayLayer?.system].weight}
+          </h6>
+        </div>
+      ) : weightData[displayLayer?.filename] ? (
         <>
           {weightData[displayLayer?.filename].quantity > 1 && (
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "7rem 1fr",
+                gridTemplateColumns: "8.25rem 1fr",
                 borderTop: "1px solid",
               }}
             >
@@ -125,7 +144,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "7rem 1fr",
+              gridTemplateColumns: "8.25rem 1fr",
               borderTop: "1px solid",
             }}
           >
@@ -133,8 +152,10 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
               {"Weight (LB)"}
             </h6>
             <h6 style={{ padding: "0.5rem" }}>
-              {Math.round(weightData[displayLayer?.filename].quantity *
-                weightData[displayLayer?.filename].weightPerUnit)}
+              {Math.round(
+                weightData[displayLayer?.filename].quantity *
+                  weightData[displayLayer?.filename].weightPerUnit,
+              )}
               {weightData[displayLayer?.filename].quantity > 1
                 ? ` (${weightData[displayLayer?.filename].weightPerUnit} / unit)`
                 : ""}
@@ -148,7 +169,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "7rem 1fr",
+            gridTemplateColumns: "8.25rem 1fr",
             borderTop: "1px solid",
           }}
         >

@@ -33,6 +33,7 @@ type Canvas3DProps = {
   height?: string | number;
   materials?: MaterialIndex;
   memoModels: Array<Model>;
+  handleLoaded?: () => void;
   // use for article models
   limitInteraction?: boolean;
 };

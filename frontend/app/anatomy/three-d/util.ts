@@ -17,6 +17,7 @@ export type Model = {
   layer_name: string;
   bounding_box: BoundingBox;
   normalized_size: BoundingBox;
+  system: string;
 };
 
 export type ModelManifest = {
@@ -44,6 +45,7 @@ export const processModels = (models_manifest: ModelManifest): Array<Model> => {
       layer_name: d.layer_name,
       bounding_box: d.bounding_box,
       normalized_size: d.normalized_size,
+      system: d.filename.split("__")[0],
     }));
 };
 
@@ -167,51 +169,47 @@ export const weightData = {
       quantity: 1,
       weightPerUnit: 150,
     },
-  "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb": {
-    quantity: 1,
-    weightPerUnit: 578,
-  },
-  "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb": {
-    quantity: 1,
-    weightPerUnit: 111,
-  },
-  "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb":
-    {
-      quantity: 1,
-      weightPerUnit: 143,
-    },
-  "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": {
-    quantity: 1,
-    weightPerUnit: 106,
-  },
-  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb": {
-    quantity: 1,
-    weightPerUnit: 284,
-  },
-  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": {
-    quantity: 1,
-    weightPerUnit: 161.5,
-  },
-  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": {
-    quantity: 1,
-    weightPerUnit: 58.5,
-  },
-  "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": {
-    quantity: 1,
-    weightPerUnit: 51,
-  },
-  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": {
-    quantity: 1,
-    weightPerUnit: 61,
-  },
-  "SUPERSTRUCTURE__WINDOWS__window panes.glb": {
-    quantity: 1,
-    weightPerUnit: 64,
-  },
-  "BODY__INTERNALS__soles & bhds.glb": {
-    quantity: 1,
-    weightPerUnit: 365.7,
-  },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 578,
+  // },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 111,
+  // },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb":
+  //   {
+  //     quantity: 1,
+  //     weightPerUnit: 143,
+  //   },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 106,
+  // },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 284,
+  // },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 161.5,
+  // },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 58.5,
+  // },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 51,
+  // },
+  // "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 61,
+  // },
+  // "SUPERSTRUCTURE__WINDOWS__window panes.glb": {
+  //   quantity: 1,
+  //   weightPerUnit: 64,
+  // },
   "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__cross beam.glb": {
     quantity: 1,
     weightPerUnit: 150,
@@ -268,6 +266,14 @@ export const weightData = {
     quantity: 2,
     weightPerUnit: 25.5,
   },
+  "BODY__INTERNALS__soles & bhds.glb": {
+    quantity: 1,
+    weightPerUnit: 365.7 + 47 + 366 + 265 + 211,
+  },
+  "BODY__INTERNALS__stringers.glb": {
+    quantity: 4,
+    weightPerUnit: 20,
+  }
   // "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb": {
   //   quantity: 1,
   //   weightPerUnit: 2501.8,
@@ -280,4 +286,13 @@ export const weightData = {
   //   quantity: 1,
   //   weightPerUnit: 984.3,
   // },
+};
+
+export const systemWeightData = {
+  BODY: {
+    weight: 6700,
+  },
+  SUPERSTRUCTURE: {
+    weight: 578 + 111 + 143 + 106 + 284 + 161.5 + 58.5 + 51 + 61 + 64,
+  },
 };
