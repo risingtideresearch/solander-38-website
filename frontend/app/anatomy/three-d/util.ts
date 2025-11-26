@@ -121,8 +121,8 @@ export function computeCombinedBoundingBox(boxes: BoundingBox[]): Box3 {
   }
 
   return new Box3(
-    new Vector3(combinedMin.x, combinedMin.y, combinedMin.z),
-    new Vector3(combinedMax.x, combinedMax.y, combinedMax.z),
+    new Vector3(combinedMin.x, combinedMin.y, combinedMin.z).multiply(new Vector3(1.001, 1.001, 1.001)),
+    new Vector3(combinedMax.x, combinedMax.y, combinedMax.z).multiply(new Vector3(1.001, 1.001, 1.001)),
   );
 }
 
@@ -169,47 +169,47 @@ export const weightData = {
       quantity: 1,
       weightPerUnit: 150,
     },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 578,
-  // },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 111,
-  // },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb":
-  //   {
-  //     quantity: 1,
-  //     weightPerUnit: 143,
-  //   },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 106,
-  // },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 284,
-  // },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 161.5,
-  // },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 58.5,
-  // },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 51,
-  // },
-  // "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 61,
-  // },
-  // "SUPERSTRUCTURE__WINDOWS__window panes.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 64,
-  // },
+  "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb": {
+    quantity: 1,
+    weightPerUnit: 578,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb": {
+    quantity: 1,
+    weightPerUnit: 111,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb":
+    {
+      quantity: 1,
+      weightPerUnit: 143,
+    },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": {
+    quantity: 1,
+    weightPerUnit: 106,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb": {
+    quantity: 1,
+    weightPerUnit: 284,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": {
+    quantity: 1,
+    weightPerUnit: 161.5,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": {
+    quantity: 1,
+    weightPerUnit: 58.5,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": {
+    quantity: 1,
+    weightPerUnit: 51,
+  },
+  "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": {
+    quantity: 1,
+    weightPerUnit: 61,
+  },
+  "SUPERSTRUCTURE__WINDOWS__window panes.glb": {
+    quantity: 2,
+    weightPerUnit: 32,
+  },
   "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__cross beam.glb": {
     quantity: 1,
     weightPerUnit: 150,

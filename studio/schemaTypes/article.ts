@@ -129,6 +129,7 @@ export const article = defineType({
                       components: {
                         input: DrawingDropdownInput,
                       },
+                      validation: (rule) => rule.required(),
                     }),
                   ],
                   preview: {

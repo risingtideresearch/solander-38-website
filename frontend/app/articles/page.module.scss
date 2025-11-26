@@ -5,7 +5,8 @@
     margin-top: 5rem;
   }
 
-  p {
+  p,
+  li {
     font-size: 1.0625rem;
     a {
       text-decoration: underline;
@@ -26,7 +27,8 @@
   }
 
   p,
-  figure {
+  figure,
+  ul {
     max-width: 52rem;
     width: 100%;
   }
