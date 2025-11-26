@@ -1,12 +1,16 @@
 .gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 0.75rem;
   column-gap: 0.75rem;
   align-items: end;
 
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
+  }
+
+  &__page {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

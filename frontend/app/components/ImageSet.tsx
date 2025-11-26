@@ -15,7 +15,7 @@ export default function ImageSet({ assets, title }: ImageSetProps) {
       <div>
         {title && <h3>{title}</h3>}
         <div
-          className={drawingStyles.gallery}
+          className={`${drawingStyles.gallery} ${drawingStyles.gallery__page}`}
         >
           {assets.map((asset, index) =>
             (asset as any)._type === "image" ? (
