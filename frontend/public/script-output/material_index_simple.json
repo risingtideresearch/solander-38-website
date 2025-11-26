@@ -21,6 +21,9 @@
     "plastic"
   ],
   "material_index": {
+    "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb": [
+      "Alum 5052"
+    ],
     "SUPERSTRUCTURE__WIREWAYS__ww parts surfs__thru-collars.glb": [
       "Aluminum"
     ],
@@ -32,9 +35,6 @@
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": [
       "Alum 6061"
-    ],
-    "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb": [
-      "Fiberglass"
     ],
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch other hardware.glb": [
       "Aluminum"
@@ -129,9 +129,6 @@
     "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__3_8_ 316L SS bolts.glb": [
       "Stainless Steel"
     ],
-    "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder nom. 1_ SCH40 pipe alum.glb": [
-      "Alum 5052"
-    ],
     "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb": [
       "Composite sandwich"
     ],
@@ -174,6 +171,9 @@
     "SUPERSTRUCTURE__WINDOWS__window panes.glb": [
       "Windows & portlights"
     ],
+    "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb": [
+      "Fiberglass"
+    ],
     "BODY__HULLS & DECKS__PORTLIGHTS__portlight cut-out edge.glb": [
       "Fiberglass"
     ],
@@ -192,9 +192,6 @@
     "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__workbench.glb": [
       "Wood"
     ],
-    "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb": [
-      "Alum 5052"
-    ],
     "BODY__INTERNALS__stringers.glb": [
       "Composite sandwich"
     ],
@@ -212,9 +209,6 @@
     ],
     "DECK JIG__TRANSV FRAMES.glb": [
       "Particle board"
-    ],
-    "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb": [
-      "Alum 6061"
     ],
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__1_2_ acrylic.glb": [
       "acrylic"
@@ -246,6 +240,9 @@
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": [
       "Alum 6061"
     ],
+    "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb": [
+      "Alum 6061"
+    ],
     "BODY__HULLS & DECKS__PORTLIGHTS__portlight surfs.glb": [
       "Windows & portlights"
     ],
@@ -254,6 +251,17 @@
     ]
   },
   "materials_to_models": {
+    "Alum 5052": [
+      "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb",
+      "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia flange brackets.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__railing flanges.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK FLANGES.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb"
+    ],
     "Aluminum": [
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__SIMPLIFIED TRACK HARDWARE.glb",
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch other hardware.glb",
@@ -282,7 +290,7 @@
     ],
     "Alum 6061": [
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__6061 sq tube.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb",
+      "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb",
@@ -291,16 +299,6 @@
       "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal pipe.glb",
       "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1 1_2_ X 1_8_ alum angle (8982K87).glb",
       "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1_ X 1_8_ alum angle (8982K4).glb"
-    ],
-    "Fiberglass": [
-      "BODY__HULLS & DECKS__PORTLIGHTS__portlight cut-out edge.glb",
-      "CONTROL__STEERING__steering tunnels.glb",
-      "OUTFITTING_INTERIOR__BATTERY CMPT__wiring conduit__2x2 2_x2_ conduit.glb",
-      "PROPULSION__SHAFTLINE COMPONENTS__stern tube 2_ OD X 1.5_ ID GRP source from fisheries supply.glb",
-      "PROPULSION__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb",
-      "PROPULSION__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__G10 backing plates.glb"
     ],
     "Plastic": [
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__HDPE guide & coaming.glb",
@@ -314,17 +312,15 @@
       "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS.glb",
       "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__workbench.glb"
     ],
-    "Alum 5052": [
-      "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder nom. 1_ SCH40 pipe alum.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia flange brackets.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__railing flanges.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK FLANGES.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb"
+    "Fiberglass": [
+      "BODY__HULLS & DECKS__PORTLIGHTS__portlight cut-out edge.glb",
+      "CONTROL__STEERING__steering tunnels.glb",
+      "OUTFITTING_INTERIOR__BATTERY CMPT__wiring conduit__2x2 2_x2_ conduit.glb",
+      "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb",
+      "PROPULSION__SHAFTLINE COMPONENTS__stern tube 2_ OD X 1.5_ ID GRP source from fisheries supply.glb",
+      "PROPULSION__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb",
+      "PROPULSION__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__G10 backing plates.glb"
     ],
     "Bronze": [
       "PROPULSION__SIMPLIFIED PROPELLER.glb",

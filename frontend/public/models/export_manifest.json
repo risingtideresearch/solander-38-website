@@ -921,166 +921,6 @@
       "notes": ""
     },
     {
-      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::DECK ACCESS STAIRLADDER::stairladder 1/4\" 6061 tread plate",
-      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb",
-      "file_size": 170896,
-      "object_count": 3,
-      "bounding_box": {
-        "min": {
-          "x": -231.47373962402344,
-          "y": -57.7593014644872,
-          "z": 62.49988121445752
-        },
-        "max": {
-          "x": -199.804708204322,
-          "y": -27.126142025691497,
-          "z": 82.71019744873047
-        },
-        "center": {
-          "x": -215.6392239141727,
-          "y": -42.44272174508935,
-          "z": 72.60503933159399
-        },
-        "dimensions": {
-          "width": 31.66903141970144,
-          "depth": 30.633159438795705,
-          "height": 20.210316234272952
-        }
-      },
-      "normalized_size": {
-        "length": 31.66903141970144,
-        "width": 30.633159438795705,
-        "height": 20.210316234272952,
-        "world_aligned": {
-          "x": 31.66903141970144,
-          "y": 30.633159438795705,
-          "z": 20.210316234272952
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::DECK ACCESS STAIRLADDER::stairladder 1/4\" 5052 alum",
-      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb",
-      "file_size": 125508,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -225.4121793573798,
-          "y": -56.30411911010742,
-          "z": 52.65008878371051
-        },
-        "max": {
-          "x": -201.63874415260602,
-          "y": -32.22380811491349,
-          "z": 80.5
-        },
-        "center": {
-          "x": -213.52546175499293,
-          "y": -44.26396361251045,
-          "z": 66.57504439185526
-        },
-        "dimensions": {
-          "width": 23.77343520477379,
-          "depth": 24.080310995193933,
-          "height": 27.84991121628949
-        }
-      },
-      "normalized_size": {
-        "length": 27.84991121628949,
-        "width": 24.080310995193933,
-        "height": 23.77343520477379,
-        "world_aligned": {
-          "x": 23.77343520477379,
-          "y": 24.080310995193933,
-          "z": 27.84991121628949
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::DECK ACCESS STAIRLADDER::stairladder nom. 1\" SCH40 pipe alum",
-      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder nom. 1_ SCH40 pipe alum.glb",
-      "file_size": 423000,
-      "object_count": 9,
-      "bounding_box": {
-        "min": {
-          "x": -231.89539063344827,
-          "y": -56.053311083879805,
-          "z": 54.000362396240234
-        },
-        "max": {
-          "x": -200.35814836832162,
-          "y": -26.47525524118464,
-          "z": 80.75000000319017
-        },
-        "center": {
-          "x": -216.12676950088496,
-          "y": -41.26428316253222,
-          "z": 67.3751811997152
-        },
-        "dimensions": {
-          "width": 31.53724226512665,
-          "depth": 29.578055842695164,
-          "height": 26.749637606949932
-        }
-      },
-      "normalized_size": {
-        "length": 31.53724226512665,
-        "width": 29.578055842695164,
-        "height": 26.749637606949932,
-        "world_aligned": {
-          "x": 31.53724226512665,
-          "y": 29.578055842695164,
-          "z": 26.749637606949932
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::DECK ACCESS STAIRLADDER::stairladder g10 backing pl",
-      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb",
-      "file_size": 46760,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -231.5068739804771,
-          "y": -58.89040652418311,
-          "z": 62.75368118286133
-        },
-        "max": {
-          "x": -203.65645333503983,
-          "y": -55.12229775439204,
-          "z": 82.46204398269744
-        },
-        "center": {
-          "x": -217.58166365775847,
-          "y": -57.00635213928757,
-          "z": 72.60786258277938
-        },
-        "dimensions": {
-          "width": 27.850420645437282,
-          "depth": 3.768108769791077,
-          "height": 19.70836279983611
-        }
-      },
-      "normalized_size": {
-        "length": 27.850420645437282,
-        "width": 19.70836279983611,
-        "height": 3.768108769791077,
-        "world_aligned": {
-          "x": 27.850420645437282,
-          "y": 3.768108769791077,
-          "z": 19.70836279983611
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::TOE-KICKS::TOE-KICK 1/4\" FHMS",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb",
       "file_size": 1495684,
@@ -3641,6 +3481,126 @@
       "notes": ""
     },
     {
+      "layer_name": "OUTFITTING/INTERIOR::DECK ACCESS STAIRLADDER::stairladder 1/4\" 6061 tread plate",
+      "filename": "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb",
+      "file_size": 170860,
+      "object_count": 3,
+      "bounding_box": {
+        "min": {
+          "x": -231.47373962402344,
+          "y": -57.7593014644872,
+          "z": 62.49988121445752
+        },
+        "max": {
+          "x": -199.804708204322,
+          "y": -27.126142025691497,
+          "z": 82.71019744873047
+        },
+        "center": {
+          "x": -215.6392239141727,
+          "y": -42.44272174508935,
+          "z": 72.60503933159399
+        },
+        "dimensions": {
+          "width": 31.66903141970144,
+          "depth": 30.633159438795705,
+          "height": 20.210316234272952
+        }
+      },
+      "normalized_size": {
+        "length": 31.66903141970144,
+        "width": 30.633159438795705,
+        "height": 20.210316234272952,
+        "world_aligned": {
+          "x": 31.66903141970144,
+          "y": 30.633159438795705,
+          "z": 20.210316234272952
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::DECK ACCESS STAIRLADDER::stairladder 1/4\" 5052 alum",
+      "filename": "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb",
+      "file_size": 125476,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -225.4121793573798,
+          "y": -56.30411911010742,
+          "z": 52.65008878371051
+        },
+        "max": {
+          "x": -201.63874415260602,
+          "y": -32.22380811491349,
+          "z": 80.5
+        },
+        "center": {
+          "x": -213.52546175499293,
+          "y": -44.26396361251045,
+          "z": 66.57504439185526
+        },
+        "dimensions": {
+          "width": 23.77343520477379,
+          "depth": 24.080310995193933,
+          "height": 27.84991121628949
+        }
+      },
+      "normalized_size": {
+        "length": 27.84991121628949,
+        "width": 24.080310995193933,
+        "height": 23.77343520477379,
+        "world_aligned": {
+          "x": 23.77343520477379,
+          "y": 24.080310995193933,
+          "z": 27.84991121628949
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::DECK ACCESS STAIRLADDER::stairladder g10 backing pl",
+      "filename": "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb",
+      "file_size": 46728,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -231.5068739804771,
+          "y": -58.89040652418311,
+          "z": 62.75368118286133
+        },
+        "max": {
+          "x": -203.65645333503983,
+          "y": -55.12229775439204,
+          "z": 82.46204398269744
+        },
+        "center": {
+          "x": -217.58166365775847,
+          "y": -57.00635213928757,
+          "z": 72.60786258277938
+        },
+        "dimensions": {
+          "width": 27.850420645437282,
+          "depth": 3.768108769791077,
+          "height": 19.70836279983611
+        }
+      },
+      "normalized_size": {
+        "length": 27.850420645437282,
+        "width": 19.70836279983611,
+        "height": 3.768108769791077,
+        "world_aligned": {
+          "x": 27.850420645437282,
+          "y": 3.768108769791077,
+          "z": 19.70836279983611
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
       "layer_name": "OUTFITTING/INTERIOR::COMPANIONWAY HATCH::1/2\" acrylic",
       "filename": "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__1_2_ acrylic.glb",
       "file_size": 81896,
@@ -5186,18 +5146,18 @@
   ],
   "export_info": {
     "total_layers_found": 337,
-    "export_path": "/Users/shelby/Documents/_/rtrf documentation/rhino/exports-6",
-    "timestamp_start": "2025-11-24 14:29:39",
+    "export_path": "/Users/shelby/Documents/_/rtrf documentation/rhino/exports-7",
+    "timestamp_start": "2025-11-26 09:56:37",
     "format": "GLB",
-    "timestamp_end": "2025-11-24 14:36:01",
+    "timestamp_end": "2025-11-26 10:03:31",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
     },
-    "successful_exports": 129,
+    "successful_exports": 128,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 43814820,
+    "total_file_size": 43391720,
     "units": {
       "id": 8,
       "name": "inch"
