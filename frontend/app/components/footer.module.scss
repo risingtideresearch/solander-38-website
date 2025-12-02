@@ -19,6 +19,10 @@
     align-items: center;
     gap: 0.5rem;
   }
+  
+  h6 {
+    margin: 1rem 0;
+  }
 
   > div {
     display: grid;
@@ -26,12 +30,11 @@
     grid-template-columns: 21rem 1fr;
     position: relative;
     z-index: 1;
-    h6 {
-      margin: 1rem 0;
-    }
 
     @media screen and (max-width: 800px) {
-      display: block;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0;
     }
 
     > div {
@@ -41,6 +44,7 @@
         border-right: 1px solid;
         @media screen and (max-width: 800px) {
           border-right: none;
+          padding-bottom: 5rem;
         }
       }
 
