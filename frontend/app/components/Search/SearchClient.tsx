@@ -106,7 +106,7 @@ export default function SearchClient({ drawings }) {
   const getURL = (doc) => {
     switch (doc._type) {
       case "article":
-        return `/article/${doc.slug.current}`;
+        return `/stories/${doc.slug.current}`;
       case "drawing":
         return `/drawings/file/${doc.uuid}`;
     }

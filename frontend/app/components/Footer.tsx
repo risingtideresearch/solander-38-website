@@ -1,0 +1,62 @@
+import styles from "./footer.module.scss";
+
+export default async function Footer({ children = <></> }) {
+  return (
+    <footer className={styles.footer}>
+      <div>
+        <div>
+          <h6>
+            Solander 38
+            <br />
+            <span style={{ textTransform: "none" }}>
+              is a self-sufficient, solar-electric, coastal&nbsp;cruising power
+              catamaran.
+            </span>
+          </h6>
+          <h6>
+            Rising Tide Research Foundation
+            <br />
+            <span style={{ textTransform: "none" }}>
+              is a not-for-profit society established to conduct open-source
+              research advancing electric boat design and to raise public
+              awareness and understanding of clean-marine technologies.
+            </span>
+          </h6>
+          <h6>
+            This website
+            <br />
+            <span style={{ textTransform: "none" }}>
+              is an effort to document and share designs, processes, and
+              research from building <em>Catalyst</em>, the first Solander 38.
+            </span>
+          </h6>
+          <br />
+          <h6 className={styles.email}>
+            <svg
+              width="59"
+              height="78"
+              viewBox="0 0 59 78"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16.9 77.6C20 68.8 24.8 54.9 26.7 49.5H0L7.7 40.7C18.5 37.7 23.4 39.9 28.3 42C32.8 44 37.2 45.9 44.5 45.3L16.9 77.6Z"
+                fill="#000"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M42.4 0C39.3 8.8 34.5 22.7 32.6 28.1H58.9L51.7 36.8C40.8 39.9 36 37.8 31.1 35.7C26.7 33.8 22.2 31.8 15 32.4L42.4 0Z"
+                fill="#000"
+              />
+            </svg>
+            info@risingtideresearch.org
+          </h6>
+        </div>
+        <div>{children}</div>
+      </div>
+    </footer>
+  );
+}

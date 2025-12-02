@@ -1,6 +1,6 @@
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { DrawingsArticleDictionary } from "./util";
-import styles from "./../articles/page.module.scss";
+import styles from "./../stories/page.module.scss";
 
 interface RelatedArticlesProps {
   uuid: string;
@@ -25,7 +25,7 @@ export default function RelatedArticle({
           return (
             <div key={article._id}>
               <h6>Article</h6>
-              <a href={`/article/${article.slug}`}><h6>{article.title}</h6></a> 
+              <a href={`/stories/${article.slug}`}><h6>{article.title}</h6></a> 
             </div>
           );
         })}
@@ -53,7 +53,7 @@ export default function RelatedArticle({
                       alignItems: "center",
                       gap: "0.5rem",
                     }}
-                    href={`/article/${article.slug}`}
+                    href={`/stories/${article.slug}`}
                   >
                     {article.title}
                     <LiaLongArrowAltRightSolid size={18} />

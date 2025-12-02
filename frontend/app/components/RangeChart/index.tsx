@@ -114,7 +114,7 @@ export default function RangeChart() {
               <path
                 d="M 20 0 L 0 0 0 20"
                 fill="none"
-                stroke="#e6e6e6"
+                stroke="#eeeeee"
                 strokeWidth="1"
               />
             </pattern>

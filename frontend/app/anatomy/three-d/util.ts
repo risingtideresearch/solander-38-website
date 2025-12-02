@@ -121,8 +121,8 @@ export function computeCombinedBoundingBox(boxes: BoundingBox[]): Box3 {
   }
 
   return new Box3(
-    new Vector3(combinedMin.x, combinedMin.y, combinedMin.z).multiply(new Vector3(1.001, 1.001, 1.001)),
-    new Vector3(combinedMax.x, combinedMax.y, combinedMax.z).multiply(new Vector3(1.001, 1.001, 1.001)),
+    new Vector3(combinedMin.x, combinedMin.y, combinedMin.z),
+    new Vector3(combinedMax.x, combinedMax.y, combinedMax.z),
   );
 }
 

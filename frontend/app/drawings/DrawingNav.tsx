@@ -1,5 +1,5 @@
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
-import styles from "./../articles/page.module.scss";
+import styles from "./../stories/page.module.scss";
 import { useEffect } from "react";
 import { formatDate } from "../utils";
 
@@ -31,6 +31,10 @@ export default function DrawingNav({ prev, next, onPrev, onNext, drawing }) {
       <div>
         <h6>ID</h6>
         <h6>{drawing.id}</h6>
+      </div>
+       <div>
+        <h6>uuid</h6>
+        <h6>{drawing.uuid}</h6>
       </div>
       <div>
         <h6>Date</h6>

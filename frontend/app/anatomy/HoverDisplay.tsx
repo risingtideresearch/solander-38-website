@@ -86,6 +86,8 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
             .replace("surfs", "")
             .replace("surfaces", "")
             .replace("mesh", "")
+            .replace("simplified", "")
+            .replace("approx.", "")
             .replace("_", '"')}
         </h6>
       </div>

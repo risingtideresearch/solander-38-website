@@ -1,8 +1,8 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
-import Article from "../../articles/Article";
-import { matchArticleDrawings } from "@/app/articles/util";
+import Article from "../Article";
+import { matchArticleDrawings } from "@/app/stories/util";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -106,12 +106,10 @@ export default async function Page({ params }) {
     .find((article) => article._id == dataWithMatchedDrawings._id)?.articleId;
 
   return (
-    <div>
-      <Article
-        data={dataWithMatchedDrawings}
-        navigation={navigation}
-        materials={Array.from(relatedMaterials)}
-      />
-    </div>
+    <Article
+      data={dataWithMatchedDrawings}
+      navigation={navigation}
+      materials={Array.from(relatedMaterials)}
+    />
   );
 }

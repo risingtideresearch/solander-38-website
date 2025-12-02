@@ -2,7 +2,15 @@ import { fetchPeople } from "@/sanity/lib/utils";
 
 export default async function Page() {
   const people = await fetchPeople();
-  console.log(people)
+  const split = people.data.map((person) => {
+    const [first, last] = person.name.split(" ");
+
+    return {
+      ...person,
+      first,
+      last,
+    };
+  });
 
   return (
     <div>
@@ -11,14 +19,16 @@ export default async function Page() {
         modes={["system", "material"]}
         materials={materials_index.unique_materials}
       > */}
-      <main style={{paddingLeft: '16.5rem'}}>
-        {people.data.sort((a,b) => a.name.localeCompare(b.name)).map(person => {
-          return (
-            <div key={person._id}>
-              {person.name}
-            </div>
-          )
-        })}
+      <main style={{ paddingLeft: "16.5rem" }}>
+        {split
+          .sort((a, b) => a.last.localeCompare(b.last))
+          .map((person) => {
+            return (
+              <div key={person._id}>
+                {person.last}, {person.first}
+              </div>
+            );
+          })}
       </main>
       {/* </TableOfContents> */}
     </div>

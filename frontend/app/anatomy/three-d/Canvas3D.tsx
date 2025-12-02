@@ -283,7 +283,7 @@ export function Canvas3D({
             enableDamping={false}
             autoRotate={autoRotate && !hovered && limitInteraction}
             autoRotateSpeed={0.2}
-            maxDistance={25}
+            maxDistance={30}
             minDistance={1}
             enableZoom={!limitInteraction}
             enablePan={!limitInteraction}

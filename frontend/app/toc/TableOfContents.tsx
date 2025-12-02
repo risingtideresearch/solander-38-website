@@ -61,7 +61,7 @@ export default function TableOfContents({
                 key={type}
                 style={{
                   cursor: "pointer",
-                  fontWeight: mode == type ? 800 : 400,
+                  fontWeight: 400,
                   margin: 0,
                   padding: "0.5rem",
                   borderRight: i < modes.length - 1 ? "1px solid" : "",
@@ -145,7 +145,7 @@ export default function TableOfContents({
               width: "15rem",
             }}
           >
-            <h6 style={{ padding: "0.5rem" }}>Related Articles</h6>
+            <h6 style={{ padding: "0.5rem" }}>Related Stories</h6>
             <div style={{ borderTop: "1px solid" }}>
               {(article ? [article] : section.articles || []).map((a) => (
                 <div
@@ -161,7 +161,7 @@ export default function TableOfContents({
                       display: "flex",
                       gap: "0.5rem",
                     }}
-                    href={`/article/${a.slug}`}
+                    href={`/stories/${a.slug}`}
                   >
                     {a.title}
                     <LiaLongArrowAltRightSolid size={18} />

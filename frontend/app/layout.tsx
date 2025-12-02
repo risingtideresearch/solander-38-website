@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${DepartureMono.variable}`}>
-        <Navigation />
-        <Search />
+        {/* <Navigation />
+        <Search /> */}
         {children}
-        <footer>
+        {/* <footer>
           <div className="wide">
             <h6>
               <svg
@@ -50,7 +50,7 @@ export default function RootLayout({
             </h6>
             <h6>info@risingtideresearch.org</h6>
           </div>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );

@@ -25,7 +25,7 @@ export default async function Navigation({ }) {
       </svg>
 
       <a href={"/"}>Solander 38</a>
-      <a href={"/articles"}>Articles</a>
+      <a href={"/stories"}>Stories</a>
       <a href={"/anatomy"}>Anatomy</a>
       <a href={"/drawings"}>Drawings</a>
       {/* <a href={"/photos"}>Photos</a>

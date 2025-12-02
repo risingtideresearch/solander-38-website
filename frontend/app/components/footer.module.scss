@@ -1,0 +1,52 @@
+.footer {
+  border-top: 1px solid;
+
+  .email {
+    display: grid;
+    grid-template-columns: 0.625rem 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: none;
+    svg {
+      width: 0.75rem;
+      height: auto;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  > div {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 21rem 1fr;
+    position: relative;
+    z-index: 1;
+    h6 {
+      margin: 1rem 0;
+    }
+
+    @media screen and (max-width: 800px) {
+      display: block;
+    }
+
+    > div {
+      padding: 3rem;
+      padding-bottom: 10rem;
+      &:first-child {
+        border-right: 1px solid;
+        @media screen and (max-width: 800px) {
+          border-right: none;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

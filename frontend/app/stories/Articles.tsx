@@ -26,7 +26,7 @@ export default async function Articles({ subtitles }) {
                   <h6 style={{ display: "block", marginLeft: "-1rem", marginTop: '0.25rem' }}>
                     {article.articleId}
                   </h6>
-                  <a href={`/article/${article.slug}`}>
+                  <a href={`/stories/${article.slug}`}>
                     <h2 style={{ margin: "0" }}>{article.title}</h2>
                   </a>
                 </div>

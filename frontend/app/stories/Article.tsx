@@ -116,7 +116,7 @@ export default async function Article({ data, navigation, materials = [] }) {
           <></>
         )} */}
         <div>
-          <h6>Article</h6>
+          <h6>ID</h6>
           <h6>{data.articleId}</h6>
         </div>
         {data.authors ? (
@@ -142,7 +142,7 @@ export default async function Article({ data, navigation, materials = [] }) {
         {navigation.next && (
           <div>
             <h6>Next</h6>
-            <a href={`/article/${navigation.next.slug}`}>
+            <a href={`/stories/${navigation.next.slug}`}>
               <LiaArrowRightSolid size={18} />
               <h6>{navigation.next.title}</h6>
             </a>
@@ -152,7 +152,7 @@ export default async function Article({ data, navigation, materials = [] }) {
           <div>
             <h6>Prev</h6>
 
-            <a href={`/article/${navigation.prev.slug}`}>
+            <a href={`/stories/${navigation.prev.slug}`}>
               <LiaArrowLeftSolid size={18} />
               <h6>{navigation.prev.title}</h6>
             </a>
@@ -162,7 +162,7 @@ export default async function Article({ data, navigation, materials = [] }) {
       <main className={styles.page + " article"}>
         <div className={styles.page__header}>
           <div>
-            <Link href={"/articles/"}>
+            <Link href={"/stories/"}>
               <h6>{data.section || ""}</h6>
             </Link>
             <h1>{data.title}</h1>
