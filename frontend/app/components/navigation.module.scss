@@ -3,7 +3,7 @@
   display: flex;
   gap: 2rem;
   padding: 0.5rem;
-  z-index: 1;
+  z-index: 10;
   border: 1px solid var(--foreground);
   top: 0.5rem;
   left: 0.5rem;
@@ -20,4 +20,15 @@
     width: auto;
     margin-right: -1rem;
   }
+}
+
+.top-bar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 5rem 0.5625rem 0.5rem;
+  border: none;
+  border-bottom: 1px solid;
+  backdrop-filter: none;
+  background: #ffffff;
 }

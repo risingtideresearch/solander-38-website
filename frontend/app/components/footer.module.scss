@@ -30,6 +30,8 @@
     grid-template-columns: 21rem 1fr;
     position: relative;
     z-index: 1;
+    max-width: 92rem;
+    margin: 0 auto;
 
     @media screen and (max-width: 800px) {
       display: flex;

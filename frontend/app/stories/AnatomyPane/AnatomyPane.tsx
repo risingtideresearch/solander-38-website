@@ -4,9 +4,9 @@ import styles from "./anatomy-pane.module.scss";
 
 interface AnatomyPaneProps {
   children: React.ReactNode;
-  title: string;
+  title?: string;
   defaultSize?: React.CSSProperties;
-  url: string;
+  url?: string;
 }
 
 export default function AnatomyPane({
@@ -15,18 +15,13 @@ export default function AnatomyPane({
   defaultSize = {},
   url,
 }: AnatomyPaneProps) {
-
-  const paneContent = (
+  return (
     <div
       className={`pane ${styles["anatomy-pane"]}`}
-      style={defaultSize}
+      style={{ ...defaultSize, background: "none", backdropFilter: "none" }}
     >
-      <h6>
-        <a href={url}>{title}</a>
-      </h6>
+      {title ? <h6>{url ? <a href={url}>{title}</a> : title}</h6> : <></>}
       {children}
     </div>
   );
-
-  return paneContent;
 }

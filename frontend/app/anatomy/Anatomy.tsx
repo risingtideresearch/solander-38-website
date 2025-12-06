@@ -16,6 +16,7 @@ import Info from "./Info";
 import { ClippingPlaneControls } from "./ClippingPlaneControls";
 import { Article } from "@/sanity/sanity.types";
 import { Canvas3D } from "./three-d/Canvas3D";
+import { slugToRhinoSystem } from "../utils";
 
 type AnatomyContent = {
   material_index: MaterialIndex;
@@ -37,17 +38,6 @@ export type ControlSettings = {
 export interface ClippingPlanes {
   [key: string]: Plane;
 }
-
-const slugToRhinoSystem = (slug: string) => {
-  switch (slug) {
-    case "water-heating-systems":
-      return "water_heating systems".toUpperCase();
-    case "outfitting-interior":
-      return slug.replaceAll("-", "_").toUpperCase();
-    default:
-      return slug.replaceAll("-", " ").toUpperCase();
-  }
-};
 
 const isDefaultTransparentBody = (toc) => {
   return !(
@@ -113,7 +103,7 @@ export default function Anatomy({ content }: IAnatomy) {
         arr = toc.article?.relatedModels || systems[active.key]?.children || [];
       } else if (active.key != "overview") {
         arr = systems[active.key]?.children;
-      }
+      } 
     }
 
     // ensure CMS defined related models are in sync with current manifest

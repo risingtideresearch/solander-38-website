@@ -1,8 +1,43 @@
 import styles from "./navigation.module.scss";
 
-export default async function Navigation({ }) {
+export enum URLS {
+  HOME = "/",
+  STORIES = "/stories",
+  ANATOMY = "/anatomy",
+  DRAWINGS = "/drawings",
+  PEOPLE = "/people",
+}
+const nav = [
+  {
+    url: URLS.HOME,
+    label: "Solander 38",
+  },
+  {
+    url: URLS.STORIES,
+    label: "Stories",
+  },
+  {
+    url: URLS.ANATOMY,
+    label: "Anatomy",
+  },
+  {
+    url: URLS.DRAWINGS,
+    label: "Drawings",
+  },
+  {
+    url: URLS.PEOPLE,
+    label: "People",
+  },
+];
+
+interface NavigationProps {
+  type?: string,
+  active?: URLS,
+}
+
+export default async function Navigation({ type, active }: NavigationProps) {
   return (
-    <nav className={`${styles.nav} pane`}>
+    <nav className={`${styles.nav} pane ${type ? styles[type] : ''}`}>
       <svg
         width="59"
         height="78"
@@ -24,13 +59,15 @@ export default async function Navigation({ }) {
         />
       </svg>
 
-      <a href={"/"}>Solander 38</a>
-      <a href={"/stories"}>Stories</a>
-      <a href={"/anatomy"}>Anatomy</a>
-      <a href={"/drawings"}>Drawings</a>
-      {/* <a href={"/photos"}>Photos</a>
-      <a href={"/materials"}>Materials</a> */}
-      <a href={"/people"}>People</a>
+      {nav.map((link) => (
+        <a
+          key={link.label}
+          href={link.url}
+          style={{ fontWeight: active == link.url ? 600 : 400 }}
+        >
+          {link.label}
+        </a>
+      ))}
     </nav>
   );
 }

@@ -32,7 +32,7 @@ type Canvas3DProps = {
   boundingBox?: Box3 | null;
   height?: string | number;
   materials?: MaterialIndex;
-  memoModels: Array<Model>;
+  memoModels?: Array<Model>;
   handleLoaded?: () => void;
   // use for article models
   limitInteraction?: boolean;
@@ -40,8 +40,11 @@ type Canvas3DProps = {
 
 const CAMERA_INITIAL_POSITION = [0, 0, 0] as const;
 const CAMERA_FOV = 30;
-const LIGHT_POSITIONS: Vector3[] = [new Vector3(-3, -4, 0)];
-const FIT_DISTANCE_MULTIPLIER = 2.6;
+const LIGHT_POSITIONS: Vector3[] = [
+  new Vector3(2, 4, -4),
+  // new Vector3(-14, -2, 5),
+];
+const FIT_DISTANCE_MULTIPLIER = 2.55;
 const CAMERA_DIRECTION = new Vector3(0.5, 0.25, 0.625);
 
 export function Canvas3D({
@@ -170,7 +173,7 @@ export function Canvas3D({
         <directionalLight
           key={index}
           position={pos}
-          intensity={0.5}
+          intensity={0.2}
           color={"#ffffff"}
         />
       )),
@@ -249,6 +252,7 @@ export function Canvas3D({
                 /> */}
               </>
             )}
+            
             <group ref={groupRef}>
               {filteredLayers.map((url: string) => (
                 <Model3D
@@ -277,6 +281,19 @@ export function Canvas3D({
               side={THREE.DoubleSide}
             />
           </mesh> */}
+{/* 
+          {LIGHT_POSITIONS.map((light, i) => (
+            <mesh
+              position={light}
+              key={i}
+            >
+              <boxGeometry args={[0.5, 0.5, 0.5]} />
+              <meshBasicMaterial
+                color="rgb(31, 64, 103)"
+                side={THREE.DoubleSide}
+              />
+            </mesh>
+          ))} */}
 
           <OrbitControls
             ref={controlsRef}

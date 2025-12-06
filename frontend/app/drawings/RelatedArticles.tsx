@@ -18,7 +18,7 @@ export default function RelatedArticle({
         style={{
           border: "1px solid",
           position: "static",
-          marginTop: "1rem",
+          margin: "1rem",
         }}
       >
         {/* {drawingsArticleDictionary[uuid].map((article) => {
@@ -30,7 +30,7 @@ export default function RelatedArticle({
           );
         })}
       </div> */}
-        <h6 style={{ padding: "0.5rem" }}>Related articles</h6>
+        <h6 style={{ padding: "0.5rem" }}>Related stories</h6>
         <div style={{ borderTop: "1px solid"}}>
           {drawingsArticleDictionary[uuid].map((article) => {
             return (

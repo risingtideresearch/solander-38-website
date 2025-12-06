@@ -2,22 +2,43 @@
   &__button {
     position: fixed;
     z-index: 1000;
-    top: 0.5rem;
-    right: 0.5rem;
-    border: 1px solid;
+    top: 0rem;
+    right: 0rem;
+    border-left: 1px solid;
+    height: 2rem;
+
+    &.float {
+      right: 0.5rem;
+      top: 0.5rem;
+      border: 1px solid;
+    }
+
+    &:not(.float) {
+      backdrop-filter: none;
+    }
   }
 
   &__input {
     position: fixed;
     z-index: 1000;
     width: calc(50% - 2.9375rem);
-    top: 0.5rem;
-    right: 2.4375rem;
+    top: 0rem;
+    right: 1.875rem;
+
+    &.float {
+      top: 0.5rem;
+      right: 2.4375rem;
+
+      input {
+        border-top: 1px solid;
+      }
+    }
 
     input {
       width: 100%;
       border: 1px solid;
       border-right: none;
+      border-top: none;
       height: 2rem;
       line-height: 2rem;
       padding: 0.5rem;
@@ -25,7 +46,7 @@
       &:active,
       &:focus {
         outline: none;
-        // border-color: #000;
+        border-color: #000;
       }
     }
   }

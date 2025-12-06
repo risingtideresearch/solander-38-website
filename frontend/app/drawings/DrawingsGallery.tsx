@@ -7,7 +7,7 @@ import { DrawingCard } from "./DrawingCard";
 import styles from "./styles.module.scss";
 import { DrawingsArticleDictionary } from "./util";
 import RelatedArticles from "./RelatedArticles";
-import DrawingNav from "./DrawingNav";
+import DrawingNav from "./DrawingMetadata";
 
 function filterDrawings(drawings, searchTerm, toc, drawingsArticleDictionary) {
   const lowerSearch = searchTerm.toLowerCase();
@@ -256,67 +256,25 @@ export default function DrawingsGallery({
   return (
     <>
       {focusedDrawing ? (
-        <>
-          <div
-            className="pane"
-            style={{
-              position: "fixed",
-              top: "6rem",
-              left: "0.5rem",
-              zIndex: 100,
-            }}
-          >
-            <DrawingNav 
-              drawing={focusedDrawing}
-              prev={filteredAndSorted[focusIndex - 1]}
-              next={filteredAndSorted[focusIndex + 1]}
-              onPrev={handlePrev}
-              onNext={handleNext}
-              />
-            <RelatedArticles
-              uuid={focusedDrawing.uuid}
-              drawingsArticleDictionary={drawingsArticleDictionary}
-            />
-
-            {/* <div style={{marginTop: '2rem'}}>
-              <img
-                src={focusedDrawing.rel_path}
-                width={240}
-                height={(240 * focusedDrawing.height) / focusedDrawing.width}
-                loading="lazy"
-                // alt={focusedDrawing.filename}
-              />
-              <p
-                className={`${styles["focused-view__uuid-label"]} uppercase-mono`}
-                style={{ fontSize: "0.5rem" }}
-              >
-                {focusedDrawing.uuid}
-              </p>
-            </div> */}
-          </div>
-          <main style={{ paddingLeft: "19rem", paddingRight: "3.5rem" }}>
+          <main style={{ padding: '0' }}>
             <DrawingPage
               asset={focusedDrawing}
+              handleNext={handleNext}
+              handlePrev={handlePrev}
+              prev={filteredAndSorted[focusIndex - 1]}
+              next={filteredAndSorted[focusIndex + 1]}
+              drawingsArticleDictionary={drawingsArticleDictionary}
             />
           </main>
-        </>
       ) : (
         <main
           style={{
-            paddingLeft: "19rem",
-            // marginTop: groupIndex === 0 ? 0 : "4rem",
+            paddingLeft: "21rem",
             display: "grid",
             gridTemplateColumns: "1fr 4rem",
           }}
         >
           <div style={{ minHeight: "100vh" }}>
-            {/* {toc.article ?
-              <div>
-                Drawings in <strong>{toc.article.title}</strong>
-                </div>
-              :
-              <></>
-            } */}
             {visibleDrawings.length > 0 ? (
               <div className={styles.gallery}>{visibleDrawings}</div>
             ) : (

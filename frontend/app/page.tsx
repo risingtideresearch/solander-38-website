@@ -1,4 +1,5 @@
 import Footer from "./components/Footer";
+import { URLS } from "./components/Navigation";
 import styles from "./home.module.scss";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 
@@ -45,19 +46,19 @@ export default async function Page() {
 
       <Footer>
         <div className={styles.toc}>
-          <a href={"/stories/solander-38"}>
+          <a href={URLS.STORIES}>
             Stories <LiaLongArrowAltRightSolid size={18} />{" "}
           </a>
           <h6>Details from the build, organized by anatomical system</h6>
-          <a href={"/anatomy"}>
+          <a href={URLS.ANATOMY}>
             Anatomy <LiaLongArrowAltRightSolid size={18} />{" "}
           </a>
           <h6>Model of parts and systems</h6>
-          <a href={"/drawings"}>
+          <a href={URLS.DRAWINGS}>
             Drawings <LiaLongArrowAltRightSolid size={18} />{" "}
           </a>
           <h6>Library of fabrication plans</h6>
-          <a href={"/people"}>
+          <a href={URLS.PEOPLE}>
             People <LiaLongArrowAltRightSolid size={18} />{" "}
           </a>
           <h6>Builders, engineers, and researchers involved</h6>

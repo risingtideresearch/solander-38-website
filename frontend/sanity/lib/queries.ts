@@ -278,6 +278,7 @@ export const sectionsQuery = (slug?: string) => {
           _id,
           title,
           subtitle,
+          isLive,
           "slug": slug.current,
           relatedModels[],
           "section": ^.slug.current
@@ -295,6 +296,7 @@ export const sectionsQuery = (slug?: string) => {
         _id,
         title,
         subtitle,
+        isLive,
         "slug": slug.current,
         relatedModels[],
         "section": ^.slug.current

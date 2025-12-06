@@ -1,13 +1,14 @@
 import { PortableText } from "next-sanity";
 import { Canvas3D } from "../anatomy/three-d/Canvas3D";
-import styles from "./page.module.scss";
+import styles from "./article.module.scss";
 import AnatomyPane from "./AnatomyPane/AnatomyPane";
-import Link from "next/link";
-import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import ImageSet from "../components/ImageSet";
 import { Image } from "../components/Image";
 import { formatDate } from "../utils";
 import { contextualLayers } from "../anatomy/three-d/util";
+import { useMemo } from "react";
+import MaterialTable from "./MaterialTable";
+import { dataAttr } from "@/sanity/lib/utils";
 
 const components = {
   types: {
@@ -45,30 +46,35 @@ const components = {
         </figure>
       ),
     models3D: ({ value }) => (
-      <AnatomyPane
-        title={`Anatomy / superstructure jig`}
-        url={`/anatomy/superstructure-jig`}
-        defaultSize={{ height: "30rem" }}
-      >
-        <div
-          className="bg--grid"
-          style={{
-            border: "1px solid #e6e6e6",
-            borderLeft: "none",
-            height: "100%",
-            width: "100%",
+      <>
+        <h2 style={{ maxWidth: '60rem'}}>Superstructure jig</h2>
+        <AnatomyPane
+          defaultSize={{
+            height: "30rem",
+            maxWidth: "60rem",
+            margin: "1rem auto",
           }}
         >
-          <Canvas3D
-            height={"100%"}
-            filteredLayers={[
-              "DECK JIG__TRANSV FRAMES.glb",
-              "DECK JIG__DECK SKINS.glb",
-            ]}
-            limitInteraction={true}
-          />
-        </div>
-      </AnatomyPane>
+          <div
+            className="bg--grid"
+            style={{
+              border: "1px solid #eeeeee",
+              borderLeft: "none",
+              height: "100%",
+              width: "100%",
+            }}
+          >
+            <Canvas3D
+              height={"100%"}
+              filteredLayers={[
+                "DECK JIG__TRANSV FRAMES.glb",
+                "DECK JIG__DECK SKINS.glb",
+              ]}
+              limitInteraction={true}
+            />
+          </div>
+        </AnatomyPane>
+      </>
     ),
     person: ({ value }) => {
       return <span>{value?.name}</span>;
@@ -81,188 +87,86 @@ export default async function Article({ data, navigation, materials = [] }) {
 
   // hardcode jig 3d model
   const jigIndex = data.content.findIndex(
-    (section) => section.title == "Jig booklet",
+    (section) => section._key == "25f8a5680f6c",
   );
   if (jigIndex > -1) {
     data.content.splice(jigIndex + 1, 0, { _type: "models3D" });
   }
 
+  const articleModels = [
+    ...data.relatedModels.filter((layer) => !contextualLayers.includes(layer)),
+    ...contextualLayers,
+  ];
+
   return (
-    <>
-      {/* <input
-        type="text"
-        placeholder="search"
-        // value={search}
-        style={{
-          border: "1px solid",
-          position: "fixed",
-          top: "3.25rem",
-          left: "0.5rem",
-          width: "15rem",
-          zIndex: "1",
-        }}
-        // onChange={(e) => {
-        //   const val = e.target.value;
-        //   setSearch(val);
-        // }}
-      /> */}
-
-      <div className={"pane " + styles.page__metadata}>
-        {/* {data.isLive ? (
-          <div style={{ background: "var(--accent)" }}>
-            <h6 style={{ gridColumn: "span 2" }}>In progress</h6>
-          </div>
-        ) : (
-          <></>
-        )} */}
+    <main className={`article ${styles.page}`}>
+      <div className={`bg--grid ${styles.header}`}>
         <div>
-          <h6>ID</h6>
-          <h6>{data.articleId}</h6>
-        </div>
-        {data.authors ? (
           <div>
-            <h6>Author</h6>
-            <h6>{data.authors.map((author) => author.name).join(",")}</h6>
+            <h6>{data.section}</h6>
+            <h1>{data.title}</h1>
           </div>
-        ) : (
-          <></>
-        )}
-        {formatDate(updated) && (
-          <div>
+          <AnatomyPane
+            title={`Anatomy / ${data.title}`}
+            url={`/anatomy/${data.slug.current}`}
+            defaultSize={{
+              width: "100%",
+              aspectRatio: 1,
+            }}
+          >
+            <div
+              // className="bg--grid"
+              style={{
+                // border: "1px solid #eee",
+                borderLeft: "none",
+                height: "100%",
+                width: "100%",
+              }}
+            >
+              <Canvas3D
+                height={"100%"}
+                filteredLayers={articleModels || []}
+                settings={{
+                  transparent:
+                    data.slug.current != "hull-and-deck" &&
+                    data.section != "overview",
+                }}
+                limitInteraction={true}
+              />
+            </div>
+          </AnatomyPane>
+        </div>
+      </div>
+      <div className={styles.body}>
+        <div>
+          <div className={`${styles.metadata}`}>
+            <h6>Title</h6>
+            <h6>{data.title}</h6>
+            {data.authors && (
+              <>
+                <h6>Author</h6>
+                <h6 style={{ margin: "0 auto" }}>
+                  {<>{data.authors.map((author) => author.name).join(",")}</>}
+                </h6>
+              </>
+            )}
             <h6>Updated</h6>
-
             <h6>{formatDate(updated)}</h6>
           </div>
-        )}
+        </div>
         <div>
-          <h6>System</h6>
-
-          <h6>{data.section}</h6>
+          <p>
+            <em>{data.subtitle}</em>
+          </p>
+          <PortableText value={data.content} components={components} />
         </div>
-        {navigation.next && (
-          <div>
-            <h6>Next</h6>
-            <a href={`/stories/${navigation.next.slug}`}>
-              <LiaArrowRightSolid size={18} />
-              <h6>{navigation.next.title}</h6>
-            </a>
-          </div>
-        )}
-        {navigation.prev && (
-          <div>
-            <h6>Prev</h6>
-
-            <a href={`/stories/${navigation.prev.slug}`}>
-              <LiaArrowLeftSolid size={18} />
-              <h6>{navigation.prev.title}</h6>
-            </a>
-          </div>
-        )}
       </div>
-      <main className={styles.page + " article"}>
-        <div className={styles.page__header}>
-          <div>
-            <Link href={"/stories/"}>
-              <h6>{data.section || ""}</h6>
-            </Link>
-            <h1>{data.title}</h1>
-            {data.authors ? (
-              <div>
-                <h6>
-                  By {data.authors.map((author) => author.name).join(",")}
-                </h6>
-              </div>
-            ) : (
-              <></>
-            )}
-            <p>{data.subtitle}</p>
-          </div>
-          <div>
-            {data.relatedModels && (
-              <AnatomyPane
-                title={`Anatomy / ${data.title}`}
-                url={`/anatomy/${data.slug.current}`}
-                defaultSize={{ maxHeight: "30rem", aspectRatio: 1 }}
-                expandedSize={{ height: "100%" }}
-              >
-                <div
-                  className="bg--grid"
-                  style={{
-                    border: "1px solid #eee",
-                    borderLeft: "none",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <Canvas3D
-                    height={"100%"}
-                    filteredLayers={[
-                      ...data.relatedModels.filter(
-                        (layer) => !contextualLayers.includes(layer),
-                      ),
-                      ...contextualLayers,
-                    ]}
-                    settings={{
-                      transparent:
-                        data.slug.current != "hull-and-deck" &&
-                        data.section != "overview",
-                    }}
-                    limitInteraction={true}
-                  />
-                </div>
-              </AnatomyPane>
-            )}
-
-            <div
-              className={`${styles.page__metadata} ${styles.page__materials}`}
-            >
-              <div>
-                <h6
-                  style={{
-                    borderColor: "#e6e6e6",
-                  }}
-                >
-                  Materials
-                </h6>
-                <div
-                  style={{
-                    padding: 0,
-                    gap: 0,
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                  }}
-                >
-                  {materials.map((material, i, x) => {
-                    return (
-                      <h6
-                        key={material}
-                        style={{
-                          padding: "0.5rem",
-                          width: "100%",
-                          borderBottom:
-                            (i % 2 == 0 && i < x.length - 2) ||
-                            (i % 2 == 1 && i < x.length - 1)
-                              ? "1px solid #e6e6e6"
-                              : "",
-                          borderRight:
-                            i % 2 == 0 && x.length > 1
-                              ? "1px solid #e6e6e6"
-                              : "",
-                          borderColor: "#e6e6e6",
-                        }}
-                      >
-                        {material}
-                      </h6>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className={styles.body}>
+        <div>
+          <MaterialTable materials={materials} />
         </div>
-
-        <PortableText value={data.content} components={components} />
-      </main>
-    </>
+        <div></div>
+      </div>
+    </main>
   );
 }

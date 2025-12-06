@@ -59,6 +59,11 @@ body {
       transparent 20px
     );
   background-size: 20px 20px;
+  background-position: left top;
+
+  @media screen and (max-width: 800px) {
+    background-position: left bottom;
+  }
 }
 
 * {
@@ -72,7 +77,7 @@ h1 {
 }
 
 h2 {
-  margin: 3rem 0 0 0;
+  margin: 0.5rem 0;
   font-size: 1.75rem;
   font-weight: 400;
 }
@@ -96,6 +101,7 @@ li {
   margin: 0.75em 0;
   line-height: 1.6em;
   text-wrap: pretty;
+  font-size: 0.9375rem;
 }
 
 figure {
@@ -216,9 +222,9 @@ nextjs-portal {
 }
 
 figcaption {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-align: right;
-  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 .big-nav {
@@ -246,6 +252,12 @@ figcaption {
   .drawing-card--portrait {
     grid-row: span 2;
   }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* @media (prefers-color-scheme: dark) {

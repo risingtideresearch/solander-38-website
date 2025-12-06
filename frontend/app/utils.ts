@@ -4,7 +4,7 @@
 export function formatDate(date: string | Date) {
   // return new Date(date).toLocaleDateString();
 
-  date = new Date(date); 
+  date = new Date(date);
 
   const day = date.getDate();
   const month = date.getMonth() + 1;
@@ -15,3 +15,14 @@ export function formatDate(date: string | Date) {
 
   return `${year}–${paddedMonth}–${paddedDay}`;
 }
+
+export const slugToRhinoSystem = (slug: string) => {
+  switch (slug) {
+    case "water-heating-systems":
+      return "water_heating systems".toUpperCase();
+    case "outfitting-interior":
+      return slug.replaceAll("-", "_").toUpperCase();
+    default:
+      return slug.replaceAll("-", " ").toUpperCase();
+  }
+};

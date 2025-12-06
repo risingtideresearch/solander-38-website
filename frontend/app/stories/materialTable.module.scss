@@ -1,0 +1,27 @@
+.materials {
+  width: calc(100% - 1rem);
+  max-width: 46rem;
+  border: 1px solid #eeeeee;
+  margin: 1rem auto 1rem 1rem;
+  position: sticky;
+  top: 4rem;
+  h6 {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    &:nth-child(odd) {
+      border-right: 1px solid #eeeeee;
+    }
+  }
+  > div,
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    &:not(:last-child) {
+      border-bottom: 1px solid #eeeeee;
+    }
+  }
+}

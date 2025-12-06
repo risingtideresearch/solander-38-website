@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DepartureMono } from "./../_fonts";
 
 import "./../globals.scss";
-import Navigation from "./../components/Navigation";
+import Navigation, { URLS } from "./../components/Navigation";
 import Search from "./../components/Search/Search";
 // import Search from "./components/Search/Search";
 
@@ -20,8 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${DepartureMono.variable}`}>
-        <Navigation />
-        <Search />
+        <Navigation active={URLS.ANATOMY} />
+        <Search type='float' />
         {children}
       </body>
     </html>

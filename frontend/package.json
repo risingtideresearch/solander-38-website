@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.14.4",
+    "@next/bundle-analyzer": "^16.0.6",
     "@sanity/client": "^7.12.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/types": "^4.12.0",

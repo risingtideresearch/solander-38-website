@@ -1,0 +1,33 @@
+
+.articles {
+  padding: 8rem 0 0 0;
+  h1 {
+    padding: 0.5rem 3rem;
+  }
+  a {
+    font-weight: 600;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 21rem 1fr;
+
+    > h6 {
+      display: inline-flex;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      margin-left: auto;
+    }
+  }
+  ol {
+    max-width: 40rem;
+    margin: 0.25rem 0 3rem 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  li {
+    margin: 0;
+  }
+}

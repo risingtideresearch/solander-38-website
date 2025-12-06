@@ -10,7 +10,7 @@ const colors = {
   drawing: "#6ee6ff",
 };
 
-export default function SearchClient({ drawings }) {
+export default function SearchClient({ drawings, type }) {
   const [active, setActive] = useState(false);
   const [value, setValue] = useState("");
   const [results, setResults] = useState([]);
@@ -125,7 +125,7 @@ export default function SearchClient({ drawings }) {
           ></div>
 
           <div
-            className={styles.search__input}
+            className={`${styles.search__input} ${type && styles[type]}`}
             role="search"
             aria-label="Site search"
           >
@@ -238,7 +238,7 @@ export default function SearchClient({ drawings }) {
       )}
 
       <button
-        className={"pane " + styles.search__button}
+        className={`pane ${styles.search__button} ${type ? styles[type] : ''}`}
         onClick={() => setActive((prev) => !prev)}
         aria-label={active ? "Close search" : "Open search"}
         aria-controls={active ? "search-results" : undefined}
