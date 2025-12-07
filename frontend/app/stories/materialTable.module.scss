@@ -5,6 +5,9 @@
   margin: 1rem auto 1rem 1rem;
   position: sticky;
   top: 4rem;
+  @media screen and (max-width: 800px) {
+    width: calc(100% - 2rem);
+  }
   h6 {
     margin: 0;
     height: 100%;

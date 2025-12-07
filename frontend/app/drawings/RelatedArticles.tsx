@@ -30,7 +30,7 @@ export default function RelatedArticle({
           );
         })}
       </div> */}
-        <h6 style={{ padding: "0.5rem" }}>Related stories</h6>
+        <h6 style={{ padding: "0.5rem" }}>Stories</h6>
         <div style={{ borderTop: "1px solid"}}>
           {drawingsArticleDictionary[uuid].map((article) => {
             return (

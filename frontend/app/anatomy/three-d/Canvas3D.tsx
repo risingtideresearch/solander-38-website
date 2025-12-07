@@ -44,7 +44,6 @@ const LIGHT_POSITIONS: Vector3[] = [
   new Vector3(2, 4, -4),
   // new Vector3(-14, -2, 5),
 ];
-const FIT_DISTANCE_MULTIPLIER = 2.55;
 const CAMERA_DIRECTION = new Vector3(0.5, 0.25, 0.625);
 
 export function Canvas3D({
@@ -128,10 +127,24 @@ export function Canvas3D({
       center.y -= 0.5;
     }
     const size = tempBox.current.getSize(tempSize.current);
-    const maxDim = Math.max(size.x, size.y, size.z);
-    const fitDistance = maxDim * FIT_DISTANCE_MULTIPLIER;
 
-    tempDirection.current.copy(CAMERA_DIRECTION);
+    const camera = cameraRef.current;
+    const fov = camera.fov * (Math.PI / 180); 
+    const aspect = camera.aspect;
+
+    tempDirection.current.copy(CAMERA_DIRECTION).normalize();
+
+    const boundingSphereRadius =
+      Math.sqrt(size.x * size.x + size.y * size.y + size.z * size.z) / 2;
+      
+    const effectiveFov =
+      aspect < 1 ? 2 * Math.atan(Math.tan(fov / 2) * aspect) : fov;
+
+    const baseDistance = boundingSphereRadius / Math.sin(effectiveFov / 2);
+
+    const FIT_DISTANCE_MULTIPLIER = 1;
+    const fitDistance = baseDistance * FIT_DISTANCE_MULTIPLIER;
+
     const newPos = tempNewPos.current
       .copy(center)
       .add(tempDirection.current.multiplyScalar(fitDistance));
@@ -142,7 +155,7 @@ export function Canvas3D({
     controlsRef.current.update();
 
     setCentered(true);
-  }, []);
+  }, [limitInteraction]);
 
   useEffect(() => {
     try {
@@ -252,7 +265,7 @@ export function Canvas3D({
                 /> */}
               </>
             )}
-            
+
             <group ref={groupRef}>
               {filteredLayers.map((url: string) => (
                 <Model3D
@@ -281,7 +294,7 @@ export function Canvas3D({
               side={THREE.DoubleSide}
             />
           </mesh> */}
-{/* 
+          {/* 
           {LIGHT_POSITIONS.map((light, i) => (
             <mesh
               position={light}
@@ -300,7 +313,7 @@ export function Canvas3D({
             enableDamping={false}
             autoRotate={autoRotate && !hovered && limitInteraction}
             autoRotateSpeed={0.2}
-            maxDistance={30}
+            maxDistance={50}
             minDistance={1}
             enableZoom={!limitInteraction}
             enablePan={!limitInteraction}

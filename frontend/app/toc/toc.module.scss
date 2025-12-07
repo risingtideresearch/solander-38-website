@@ -1,8 +1,7 @@
 .toc {
   padding: 0 0.5rem;
   width: max-content;
-  border: 1px solid;
-  width: 15rem;
+  width: 16.5rem;
   counter-reset: sublist-counter;
   
   &__container {
@@ -53,4 +52,8 @@
       margin-left: 0.5rem;
     }
   }
+}
+
+.outline {
+  border: 1px solid;
 }

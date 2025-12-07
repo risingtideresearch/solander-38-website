@@ -17,11 +17,12 @@ export default function TableOfContents({
   sections,
   modes = ["system"],
   defaultSection = "",
-  defaultArticle,
+  defaultArticle = null,
   materials = [],
   hide = false,
   showArticleLink = false,
   showArticles = true,
+  outline = false,
 }) {
   const [mode, setMode] = useState("system");
   const [section, setSection] = useState(
@@ -40,11 +41,11 @@ export default function TableOfContents({
     >
       <div className={styles.toc__container}>
         <div
-          className={"pane toc " + styles.toc}
+          className={`toc ${styles.toc} ${outline ? `${styles.outline} pane` : ''}`}
           style={{ display: hide ? "none" : "" }}
         >
           {/* <h2 className="uppercase-mono">Table of Contents</h2> */}
-          <div
+          {/* <div
             style={{
               display: "grid",
               gridTemplateColumns: modes.length == 1 ? "1fr" : "1fr 1fr",
@@ -70,7 +71,7 @@ export default function TableOfContents({
                 {type == "system" ? "system" : type}
               </h6>
             ))}
-          </div>
+          </div> */}
           {mode == "system" ? (
             <ol>
               {sections.map((s) => {
@@ -142,10 +143,10 @@ export default function TableOfContents({
             style={{
               marginTop: "0.75rem",
               border: "1px solid",
-              width: "15rem",
+              width: "16.5rem",
             }}
           >
-            <h6 style={{ padding: "0.5rem" }}>Related Stories</h6>
+            <h6 style={{ padding: "0.5rem" }}>Stories</h6>
             <div style={{ borderTop: "1px solid" }}>
               {(article ? [article] : section.articles || []).map((a) => (
                 <div

@@ -6,7 +6,6 @@ import DrawingsGallery from "./DrawingsGallery";
 import { DrawingsArticleDictionary } from "./util";
 import { Section } from "@/sanity/sanity.types";
 import TableOfContents from "../toc/TableOfContents";
-import { LiaLongArrowAltLeftSolid } from "react-icons/lia";
 
 interface DrawingsProps {
   drawings: {
@@ -29,7 +28,7 @@ export default function Drawings({
   );
   
   return (
-    <TableOfContents sections={sections} hide={focusUUID} showArticles={false}>
+    <TableOfContents sections={sections} hide={!!focusUUID} showArticles={false}>
       <DrawingsGallery
         drawings={drawings}
         search={search}

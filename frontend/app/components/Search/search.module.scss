@@ -6,6 +6,7 @@
     right: 0rem;
     border-left: 1px solid;
     height: 2rem;
+    border-bottom: 1px solid;
 
     &.float {
       right: 0.5rem;
@@ -24,6 +25,10 @@
     width: calc(50% - 2.9375rem);
     top: 0rem;
     right: 1.875rem;
+
+    @media screen and (max-width: 800px) {
+      width: calc(100% - 1.875rem);
+    }
 
     &.float {
       top: 0.5rem;

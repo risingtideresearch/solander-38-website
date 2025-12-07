@@ -47,6 +47,7 @@ export default async function Page({
         defaultArticle={defaultArticle || null}
         materials={materials_index.unique_materials}
         showArticleLink={true}
+        outline={true}
       >
         <Anatomy
           content={{

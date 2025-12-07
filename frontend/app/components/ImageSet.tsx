@@ -14,7 +14,6 @@ export default function ImageSet({ assets, title }: ImageSetProps) {
   return (
     <div
       className={`${styles["image-set"]}`}
-      style={{ maxWidth: `${Math.min(60, 30 * assets.length)}rem` }}
     >
       {title && <h4>{title}</h4>}
       <div
