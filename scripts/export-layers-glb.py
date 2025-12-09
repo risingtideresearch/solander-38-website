@@ -149,7 +149,6 @@ def export_all_layers_to_glb():
         "skipped_layers": [],
         "export_info": {
             "total_layers_found": len(layers),
-            "export_path": export_path,
             "timestamp_start": time.strftime("%Y-%m-%d %H:%M:%S"),
             "format": "GLB"
         }

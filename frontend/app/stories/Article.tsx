@@ -47,7 +47,7 @@ const components = {
       ),
     models3D: ({ value }) => (
       <>
-        <h2 style={{ maxWidth: '60rem'}}>Superstructure jig</h2>
+        <h2 style={{ maxWidth: "60rem" }}>Superstructure jig</h2>
         <AnatomyPane
           defaultSize={{
             height: "30rem",
@@ -137,7 +137,7 @@ export default async function Article({ data, navigation, materials = [] }) {
           </AnatomyPane>
         </div>
       </div>
-      <div className={styles.body}>
+      <div className={`section--two-col ${styles.body}`}>
         <div>
           <div className={`${styles.metadata}`}>
             <h6>Title</h6>
@@ -161,7 +161,7 @@ export default async function Article({ data, navigation, materials = [] }) {
           <PortableText value={data.content} components={components} />
         </div>
       </div>
-      <div className={styles.body}>
+      <div className={`section--two-col ${styles.body}`}>
         <div>
           <MaterialTable materials={materials} />
         </div>

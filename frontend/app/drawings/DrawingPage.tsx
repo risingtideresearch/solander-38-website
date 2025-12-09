@@ -75,7 +75,7 @@ export function DrawingPage({
         handlePrev={handlePrev}
         handleNext={handleNext}
       />
-      <div className={`${styles["drawing-page"]}`}>
+      <div className={`section--two-col ${styles["drawing-page"]}`}>
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>
             <DrawingMetadata drawing={asset} />

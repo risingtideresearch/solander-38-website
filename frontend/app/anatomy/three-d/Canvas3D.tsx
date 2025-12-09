@@ -142,7 +142,7 @@ export function Canvas3D({
 
     const baseDistance = boundingSphereRadius / Math.sin(effectiveFov / 2);
 
-    const FIT_DISTANCE_MULTIPLIER = 1;
+    const FIT_DISTANCE_MULTIPLIER = 0.95;
     const fitDistance = baseDistance * FIT_DISTANCE_MULTIPLIER;
 
     const newPos = tempNewPos.current

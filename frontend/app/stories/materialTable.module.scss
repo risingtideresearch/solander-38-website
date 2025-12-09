@@ -1,12 +1,11 @@
 .materials {
-  width: calc(100% - 1rem);
   max-width: 46rem;
   border: 1px solid #eeeeee;
-  margin: 1rem auto 1rem 1rem;
+  margin: 1rem -0.5rem 0.25rem 0;
   position: sticky;
   top: 4rem;
   @media screen and (max-width: 800px) {
-    width: calc(100% - 2rem);
+    margin: 1rem -0.25rem 0.25rem -0.25rem;
   }
   h6 {
     margin: 0;

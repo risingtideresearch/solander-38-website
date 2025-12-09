@@ -18,7 +18,7 @@ export default function RelatedArticle({
         style={{
           border: "1px solid",
           position: "static",
-          margin: "1rem",
+          margin: "1rem 0.5rem",
         }}
       >
         {/* {drawingsArticleDictionary[uuid].map((article) => {

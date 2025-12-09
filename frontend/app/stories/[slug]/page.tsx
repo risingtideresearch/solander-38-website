@@ -90,7 +90,7 @@ export default async function Page({ params }) {
           ].includes(layer.filename);
         }
 
-        return system == dataWithMatchedDrawings.section.replace(" & ", "_");
+        return system == dataWithMatchedDrawings.section?.replace(" & ", "_");
       })
       .map((layer) => layer.filename);
   }

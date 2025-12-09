@@ -1,0 +1,30 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 0.75rem;
+  column-gap: 0.75rem;
+  align-items: start;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__page {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.gallery-container {
+  padding-left: 21rem;
+  padding-right: 4rem;
+  @media screen and (max-width: 800px) {
+    padding: 0;
+    padding-top: 20rem;
+  }
+}

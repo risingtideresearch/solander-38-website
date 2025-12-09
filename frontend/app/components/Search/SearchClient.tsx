@@ -114,6 +114,30 @@ export default function SearchClient({ drawings, type }) {
     return doc.slug ? doc.slug.current : doc._id;
   };
 
+  // Group results by type
+  const groupedResults = results.reduce((acc, result) => {
+    const type = result._type;
+    if (!acc[type]) {
+      acc[type] = [];
+    }
+    acc[type].push(result);
+    return acc;
+  }, {});
+
+  // Get flat index for keyboard navigation
+  const getFlatIndex = (type, indexInGroup) => {
+    let flatIndex = 0;
+    const types = Object.keys(groupedResults).sort();
+
+    for (const t of types) {
+      if (t === type) {
+        return flatIndex + indexInGroup;
+      }
+      flatIndex += groupedResults[t].length;
+    }
+    return flatIndex;
+  };
+
   return (
     <>
       {active && (
@@ -161,7 +185,9 @@ export default function SearchClient({ drawings, type }) {
                 role="status"
                 aria-live="polite"
               >
-                No results found for &quot;{value}&quot;
+                <p style={{ textAlign: "center" }}>
+                  No results found for &quot;{value}&quot;
+                </p>
               </div>
             )}
 
@@ -173,62 +199,64 @@ export default function SearchClient({ drawings, type }) {
                 role="listbox"
                 aria-label="Search results"
               >
-                {results.map((result: any, index: number) => (
-                  <div
-                    key={result._id || result.uuid}
-                    id={`search-result-${index}`}
-                    className={`${styles.search__result} ${
-                      selectedIndex === index
-                        ? styles.search__result_selected
-                        : ""
-                    }`}
-                    role="option"
-                    aria-selected={selectedIndex === index}
-                  >
-                    <a
-                      href={getURL(result)}
-                      style={{
-                        margin: "0.5rem 0",
-                        display: "block",
-                      }}
-                      tabIndex={-1}
-                      onFocus={() => setSelectedIndex(index)}
-                    >
-                      <p
+                {Object.keys(groupedResults)
+                  .sort()
+                  .map((resultType) => (
+                    <div key={resultType}>
+                      <h6
                         style={{
-                          display: "inline-flex",
-                          gap: "1.5rem",
-                          alignItems: "center",
-                          margin: 0,
+                          fontWeight: 600,
                         }}
                       >
-                        <span>{result.title || result.clean_filename}</span>
-
-                        <span
-                          style={{
-                            fontSize: "0.75rem",
-                            textTransform: "uppercase",
-                            background: colors[result._type],
-                            padding: "0.25rem",
-                            lineHeight: "1.2em",
-                            display: "inline",
-                            color: "#000",
-                          }}
-                          aria-label={`Type: ${result._type}`}
-                        >
-                          {result._type}
-                        </span>
-                      </p>
-                    </a>
-                  </div>
-                ))}
+                        {resultType}s
+                      </h6>
+                      {groupedResults[resultType].map(
+                        (result: any, indexInGroup: number) => {
+                          const flatIndex = getFlatIndex(
+                            resultType,
+                            indexInGroup,
+                          );
+                          return (
+                            <div
+                              key={result._id || result.uuid}
+                              id={`search-result-${flatIndex}`}
+                              className={`${styles.search__result} ${
+                                selectedIndex === flatIndex
+                                  ? styles.search__result_selected
+                                  : ""
+                              }`}
+                              role="option"
+                              aria-selected={selectedIndex === flatIndex}
+                            >
+                              <a
+                                href={getURL(result)}
+                                style={{
+                                  margin: "0.5rem 0",
+                                  display: "flex",
+                                  gap: "1rem",
+                                  alignItems: "center",
+                                }}
+                                tabIndex={-1}
+                                onFocus={() => setSelectedIndex(flatIndex)}
+                              >
+                                <h6>{result.id}</h6>
+                                <p style={{ margin: 0 }}>
+                                  {result.title || result.clean_filename}
+                                </p>
+                              </a>
+                            </div>
+                          );
+                        },
+                      )}
+                    </div>
+                  ))}
                 {loading && (
                   <div
                     className={styles.search__loading}
                     role="status"
                     aria-live="polite"
                   >
-                    Searching...
+                    <p style={{ textAlign: "center" }}>Searching...</p>
                   </div>
                 )}
               </div>
@@ -238,7 +266,7 @@ export default function SearchClient({ drawings, type }) {
       )}
 
       <button
-        className={`pane ${styles.search__button} ${type ? styles[type] : ''}`}
+        className={`pane ${styles.search__button} ${type ? styles[type] : ""}`}
         onClick={() => setActive((prev) => !prev)}
         aria-label={active ? "Close search" : "Open search"}
         aria-controls={active ? "search-results" : undefined}

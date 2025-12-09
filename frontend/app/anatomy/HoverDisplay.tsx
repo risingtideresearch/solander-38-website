@@ -79,6 +79,10 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
           borderTop: "1px solid",
         }}
       >
+        {/* <div></div>
+        <div>
+          <img src="https://cdn.sanity.io/images/qjczz6gi/production/2c604bf3ad7e9dd6f12036f4822af0f05e5c5faa-600x600.webp" height={160} />
+        </div> */}
         <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>Part</h6>
         <h6 style={{ padding: "0.5rem", textWrap: "pretty" }}>
           {last

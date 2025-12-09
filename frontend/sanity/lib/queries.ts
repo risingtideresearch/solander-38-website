@@ -164,10 +164,31 @@ export const annotationsQuery = `
 
 /**
  *
+ * 
+    "articles": *[_type=="article" && references(^._id)]{
+      _id,
+      title,
+      "slug": slug.current,
+      isLive,
+      "section": *[_type=="sections"][0].sections[references(^._id)][0] {
+        name,
+        "slug": slug.current
+      }
+    }
  */
 export const peopleQuery = `
 *[_type=="person"]{
-    ...
+    ...,
+    "articlesAsAuthor": *[_type=="article" && isLive == true && ^._id in authors[]->_id]{
+      _id,
+      title,
+      "slug": slug.current
+    },
+    "articlesMentioned": *[_type=="article" && isLive == true && references(^._id) && !defined(authors[_ref == ^.^._id][0])]{
+      _id,
+      title,
+      "slug": slug.current
+    }
 }   
 `;
 

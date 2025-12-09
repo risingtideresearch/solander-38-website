@@ -1,4 +1,4 @@
-import drawingStyles from "./../drawings/styles.module.scss";
+import drawingStyles from "./../drawings/drawings-gallery.module.scss";
 import { DrawingCard } from "../drawings/DrawingCard";
 import { Image } from "../components/Image";
 import { Drawing } from "../drawings/types";
@@ -12,9 +12,7 @@ interface ImageSetProps {
 
 export default function ImageSet({ assets, title }: ImageSetProps) {
   return (
-    <div
-      className={`${styles["image-set"]}`}
-    >
+    <div className={`${styles["image-set"]}`}>
       {title && <h4>{title}</h4>}
       <div
         className={`${drawingStyles.gallery} ${drawingStyles.gallery__page} ${assets.length == 1 ? styles.single : ""}`}
@@ -29,7 +27,11 @@ export default function ImageSet({ assets, title }: ImageSetProps) {
               />
             </div>
           ) : (
-            <DrawingCard key={(asset as any).id} drawing={asset as Drawing} />
+            <DrawingCard
+              key={(asset as any).id}
+              drawing={asset as Drawing}
+              hideMetadata={true}
+            />
           ),
         )}
       </div>

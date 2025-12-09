@@ -8,17 +8,27 @@ interface IDrawingCard {
   drawing: Drawing;
 }
 
-export function DrawingCard({ drawing }: IDrawingCard) {
+export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
   return (
     <a
       href={`/drawings/file/${drawing.uuid}`}
-      className={styles["drawing-card"] + (drawing.height > drawing.width ? " drawing-card--portrait" : "")}
+      className={
+        styles["drawing-card"] +
+        (drawing.height > drawing.width ? " drawing-card--portrait" : "")
+      }
     >
-      <h6>
-        <span>{drawing.id}</span>
-        <span> {drawing.date_info ? formatDate(drawing.date_info.date) : "<no date>"}</span>
-        <span>{drawing.group}</span>
-      </h6>
+      {!hideMetadata && (
+        <h6>
+          <span>{drawing.id}</span>
+          <span>
+            {" "}
+            {drawing.date_info
+              ? formatDate(drawing.date_info.date)
+              : "<no date>"}
+          </span>
+          <span>{drawing.group}</span>
+        </h6>
+      )}
       <p>{drawing.clean_filename}</p>
       <img
         src={drawing.rel_path}

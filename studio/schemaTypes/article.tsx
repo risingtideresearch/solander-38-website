@@ -191,9 +191,39 @@ export const article = defineType({
           ],
           preview: {
             select: {
-              media: 'image',
+              url: 'image.asset.url',
+              title: 'image.asset.title',
+            },
+            prepare({url, title}) {
+              return {
+                media: (
+                  <img
+                    src={url}
+                    alt={title || ''}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                    }}
+                  />
+                ),
+                title,
+                subtitle: 'Edit title in Media tab'
+              }
             },
           },
+          // components: {
+          //   preview: (props: any) => {
+          //     const {media, title} = props
+
+          //     return (
+          //       <div>
+          //         <div style={{maxWidth: '10rem'}}>{media}</div>
+          //         <p style={{fontSize: '0.75em'}}>{title}</p>
+          //       </div>
+          //     )
+          //   },
+          // },
         }),
       ],
     }),

@@ -4,10 +4,8 @@ import { DrawingPage } from "./DrawingPage";
 import { Drawing, DrawingGroup } from "./types";
 import { SYSTEM_ORDER } from "../consts";
 import { DrawingCard } from "./DrawingCard";
-import styles from "./styles.module.scss";
+import styles from "./drawings-gallery.module.scss";
 import { DrawingsArticleDictionary } from "./util";
-import RelatedArticles from "./RelatedArticles";
-import DrawingNav from "./DrawingMetadata";
 
 function filterDrawings(drawings, searchTerm, toc, drawingsArticleDictionary) {
   const lowerSearch = searchTerm.toLowerCase();
@@ -190,11 +188,6 @@ export default function DrawingsGallery({
     window.history.pushState(null, "", `/drawings/file/${asset.uuid}`);
   };
 
-  const handleClose = () => {
-    setFocusUUID(null);
-    window.history.pushState(null, "", "/drawings");
-  };
-
   useEffect(() => {
     if (focusUUID === null && scrollPositionRef.current > 0) {
       setTimeout(() => {
@@ -267,12 +260,7 @@ export default function DrawingsGallery({
             />
           </main>
       ) : (
-        <main
-          style={{
-            paddingLeft: "21rem",
-            display: "grid",
-            gridTemplateColumns: "1fr 4rem",
-          }}
+        <main className={styles['gallery-container']}
         >
           <div style={{ minHeight: "100vh" }}>
             {visibleDrawings.length > 0 ? (
