@@ -29,7 +29,7 @@ export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
           <span>{drawing.group}</span>
         </h6>
       )}
-      <p>{drawing.clean_filename}</p>
+      <p style={{margin: 0}}>{drawing.clean_filename}</p>
       <img
         src={drawing.rel_path}
         height={drawing.height}
