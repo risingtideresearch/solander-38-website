@@ -78,16 +78,34 @@ export default async function Page({ params }) {
         if (dataWithMatchedDrawings.section == "overview") {
           // improve frame rate by reducing unnecessary file loads
           return ![
-            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__cabinet surfaces.glb",
-            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS.glb",
-            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__GALLEY SURFS.glb",
-            "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb",
-            "PROPULSION__20W Bell Marine Motor__SIMPLIFIED 20W Bell surfs.glb",
-            "BODY__INTERNALS__soles & bhds.glb",
-            "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__SIMPLIFIED TRACK HARDWARE.glb",
-            "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch other hardware.glb",
-            "BODY__INTERNALS__stringers.glb",
-          ].includes(layer.filename);
+            "BODY__INTERNALS",
+            "CONTROL__STEERING__STEERING COMPONENTS__tillers",
+            "SUPERSTRUCTURE__WIREWAYS__ww parts surfs",
+            "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM",
+            "POWER ARCHITECTURE__ELEC BOARD COMPONENTS",
+            "OUTFITTING_INTERIOR__SIMPLIFIED CTR DECK TRACKS",
+            "PROPULSION__MOTOR MOUNT",
+            "PROPULSION__20W Bell Marine Motor",
+            "OUTFITTING_INTERIOR__BATTERY CMPT",
+            "WATER_HEATING SYSTEMS__TANKS_",
+            "WATER_HEATING SYSTEMS__HEAT PUMP VENTS",
+            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS",
+            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS",
+            "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base",
+            "CONTROL__STEERING__STEERING SHELVES__port dummy shelf",
+            "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch",
+            "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb",
+            "BODY__CTR BEAM__fwd beam hatches",
+            "BODY__CTR BEAM__ctr beam inside surfaces",
+            "CONTROL__STEERING__STEERING COMPONENTS__JEFA",
+            "WATER_HEATING SYSTEMS__Headhunter",
+            "CONTROL__STEERING__STEERING COMPONENTS__Washer, delri",
+            "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER",
+            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__workbench",
+            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__GALLEY",
+            "CONTROL__STEERING__steering tunnels",
+            "CONTROL__STEERING__STEERING COMPONENTS__autopilot",
+          ].find((n) => layer.filename.startsWith(n));
         }
 
         return system == dataWithMatchedDrawings.section?.replace(" & ", "_");

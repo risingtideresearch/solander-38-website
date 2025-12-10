@@ -70,7 +70,7 @@ const components = {
                 "DECK JIG__TRANSV FRAMES.glb",
                 "DECK JIG__DECK SKINS.glb",
               ]}
-              limitInteraction={true}
+              interaction={'limited'}
             />
           </div>
         </AnatomyPane>
@@ -82,7 +82,7 @@ const components = {
   },
 };
 
-export default async function Article({ data, navigation, materials = [] }) {
+export default async function Article({ data, materials = [] }) {
   const updated = new Date(data._updatedAt);
 
   // hardcode jig 3d model
@@ -131,7 +131,7 @@ export default async function Article({ data, navigation, materials = [] }) {
                     data.slug.current != "hull-and-deck" &&
                     data.section != "overview",
                 }}
-                limitInteraction={true}
+                interaction={'limited'}
               />
             </div>
           </AnatomyPane>

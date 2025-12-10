@@ -35,7 +35,7 @@ type Canvas3DProps = {
   memoModels?: Array<Model>;
   handleLoaded?: () => void;
   // use for article models
-  limitInteraction?: boolean;
+  interaction?: "all" | "limited" | "none";
 };
 
 const CAMERA_INITIAL_POSITION = [0, 0, 0] as const;
@@ -44,7 +44,6 @@ const LIGHT_POSITIONS: Vector3[] = [
   new Vector3(2, 4, -4),
   // new Vector3(-14, -2, 5),
 ];
-const CAMERA_DIRECTION = new Vector3(0.5, 0.25, 0.625);
 
 export function Canvas3D({
   clippingPlanes,
@@ -52,7 +51,7 @@ export function Canvas3D({
   settings = {},
   boundingBox,
   filteredLayers,
-  limitInteraction = false,
+  interaction = "all",
   height = "100vh",
   materials = {},
   memoModels = [],
@@ -71,6 +70,10 @@ export function Canvas3D({
   const tempSize = useRef(new Vector3());
   const tempDirection = useRef(new Vector3());
   const tempNewPos = useRef(new Vector3());
+  const CAMERA_DIRECTION =
+    interaction == "none"
+      ? new Vector3(0.1, 0.1, 0.5)
+      : new Vector3(0.5, 0.25, 0.625);
 
   const handleModelLoad = useCallback((url: string) => {
     setModelsLoaded((prev) => {
@@ -123,20 +126,20 @@ export function Canvas3D({
 
     tempBox.current.setFromObject(groupRef.current);
     const center = tempBox.current.getCenter(tempCenter.current);
-    if (!limitInteraction) {
+    if (interaction != "all") {
       center.y -= 0.5;
     }
     const size = tempBox.current.getSize(tempSize.current);
 
     const camera = cameraRef.current;
-    const fov = camera.fov * (Math.PI / 180); 
+    const fov = camera.fov * (Math.PI / 180);
     const aspect = camera.aspect;
 
     tempDirection.current.copy(CAMERA_DIRECTION).normalize();
 
     const boundingSphereRadius =
       Math.sqrt(size.x * size.x + size.y * size.y + size.z * size.z) / 2;
-      
+
     const effectiveFov =
       aspect < 1 ? 2 * Math.atan(Math.tan(fov / 2) * aspect) : fov;
 
@@ -155,7 +158,7 @@ export function Canvas3D({
     controlsRef.current.update();
 
     setCentered(true);
-  }, [limitInteraction]);
+  }, [interaction]);
 
   useEffect(() => {
     try {
@@ -232,7 +235,7 @@ export function Canvas3D({
             preset="sunset"
           />
 
-          {!limitInteraction && (
+          {interaction == "all" && (
             <RaycastHandler
               clippingPlanes={clippingPlanes}
               setHovered={(layer) => {
@@ -311,15 +314,16 @@ export function Canvas3D({
           <OrbitControls
             ref={controlsRef}
             enableDamping={false}
-            autoRotate={autoRotate && !hovered && limitInteraction}
-            autoRotateSpeed={0.2}
+            autoRotate={autoRotate && !hovered && interaction != "all"}
+            autoRotateSpeed={interaction == 'none' ? 0.4 : 0.2}
             maxDistance={50}
             minDistance={1}
-            enableZoom={!limitInteraction}
-            enablePan={!limitInteraction}
+            enableZoom={interaction == "all"}
+            enablePan={interaction == "all"}
+            // enableRotate={interaction != "none"}
             makeDefault
           />
-          {!limitInteraction && (
+          {interaction == "all" && (
             <GizmoHelper alignment="bottom-right" margin={[110, 90]}>
               <group scale={[1.2, 1.2, 1.2]}>
                 <GizmoViewcube
