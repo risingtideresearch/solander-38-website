@@ -2,11 +2,13 @@
   "unique_materials": [
     "Alum 5052",
     "Alum 6061",
+    "Alum AlMgSi1",
     "Aluminum",
     "Brass",
     "Bronze",
     "Carbon fiber",
     "Composite sandwich",
+    "Delrin",
     "Fiberglass",
     "Particle board",
     "Plastic",
@@ -15,12 +17,19 @@
     "Stainless Steel",
     "Starboard (HDPE)",
     "Trampoline",
+    "Turcite",
     "Windows & portlights",
     "Wood",
     "acrylic",
     "plastic"
   ],
   "material_index": {
+    "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__board.glb": [
+      "Starboard (HDPE)"
+    ],
+    "CONTROL__rudder assembly__SS sleeve.glb": [
+      "Stainless Steel"
+    ],
     "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb": [
       "Alum 5052"
     ],
@@ -39,14 +48,17 @@
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch other hardware.glb": [
       "Aluminum"
     ],
-    "CONTROL__STEERING__STEERING SHELVES__port dummy shelf.glb": [
-      "Composite sandwich"
-    ],
     "OUTFITTING_INTERIOR__portland pudgy__PORTLAND PUDGY SIMPLIFIED.glb": [
       "Plastic"
     ],
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__HDPE guide & coaming.glb": [
-      "Plastic"
+      "Starboard (HDPE)"
+    ],
+    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__EIM V4 (4_ sq tube).glb": [
+      "Alum 6061"
+    ],
+    "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__cabinet surfaces.glb": [
+      "Wood"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": [
       "Alum 6061"
@@ -75,14 +87,20 @@
     "BODY__INTERNALS__soles & bhds.glb": [
       "Composite sandwich"
     ],
+    "CONTROL__ELECTRONIC CONTROL__THROTTLE Bellmarine TFC2-11.glb": [
+      "Stainless Steel"
+    ],
+    "CONTROL__rudder assembly__Turcite bushings.glb": [
+      "Turcite"
+    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__railing flanges.glb": [
       "Alum 5052"
     ],
     "BODY__CTR BEAM__fwd beam hatches.glb": [
       "Composite sandwich"
     ],
-    "PROPULSION__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb": [
-      "Fiberglass"
+    "CONTROL__MECHANICAL STEERING__STEERING SHELVES__port dummy shelf.glb": [
+      "Composite sandwich"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal pipe.glb": [
       "Alum 6061"
@@ -93,6 +111,9 @@
     "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__G10 backing plates.glb": [
       "Fiberglass"
     ],
+    "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__heat pump structure__heat pump cabinet.glb": [
+      "Wood"
+    ],
     "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__FWD MAST & MOUNTS.glb": [
       "Aluminum"
     ],
@@ -102,11 +123,14 @@
     "WATER_HEATING SYSTEMS__KEEL COOLERS__keel cooler surfaces.glb": [
       "Bronze"
     ],
-    "CONTROL__STEERING__STEERING COMPONENTS__JEFA 5T050.glb": [
-      "plastic"
-    ],
     "BODY__CTR BEAM__ctr beam outside surfaces.glb": [
       "Composite sandwich"
+    ],
+    "CONTROL__MECHANICAL STEERING__steering tunnels.glb": [
+      "Fiberglass"
+    ],
+    "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__heat pump structure__heat pump columns.glb": [
+      "Wood"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb": [
       "Alum 6061"
@@ -123,11 +147,11 @@
     "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb": [
       "Stainless Steel"
     ],
-    "PROPULSION__rudder assembly__rudder shaft & foil.glb": [
-      "Carbon fiber"
-    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__3_8_ 316L SS bolts.glb": [
       "Stainless Steel"
+    ],
+    "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__Washer, delrin ø50,5 x ø110 x 4,5mm.glb": [
+      "Delrin"
     ],
     "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb": [
       "Composite sandwich"
@@ -141,32 +165,38 @@
     "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb": [
       "Alum 5052"
     ],
+    "CONTROL__rudder assembly__rudder shaft & foil.glb": [
+      "Carbon fiber"
+    ],
+    "CONTROL__rudder assembly__SS thrust bearing, polished top.glb": [
+      "Stainless Steel"
+    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb": [
       "Alum 5052"
     ],
     "PROPULSION__SHAFTLINE COMPONENTS__stern tube 2_ OD X 1.5_ ID GRP source from fisheries supply.glb": [
       "Fiberglass"
     ],
-    "PROPULSION__rudder assembly__foil top wedge contoured.glb": [
-      "Carbon fiber"
-    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK FLANGES.glb": [
       "Alum 5052"
     ],
-    "CONTROL__STEERING__STEERING COMPONENTS__hand tiller stbd.glb": [
+    "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__hand tiller stbd.glb": [
       "Wood"
-    ],
-    "PROPULSION__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb": [
-      "Fiberglass"
     ],
     "POWER ARCHITECTURE__SOLAR__SIMPLIFIED SOLAR PANELS.glb": [
       "Solar panels"
     ],
+    "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__tillers & draglinks.glb": [
+      "Alum AlMgSi1"
+    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": [
       "Alum 6061"
     ],
-    "PROPULSION__rudder assembly__SS sleeve.glb": [
-      "Stainless Steel"
+    "CONTROL__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb": [
+      "Fiberglass"
+    ],
+    "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__JEFA 5T050ZS.glb": [
+      "plastic"
     ],
     "SUPERSTRUCTURE__WINDOWS__window panes.glb": [
       "Windows & portlights"
@@ -186,11 +216,11 @@
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__SIMPLIFIED TRACK HARDWARE.glb": [
       "Aluminum"
     ],
-    "CONTROL__STEERING__STEERING COMPONENTS__JEFA 5T050ZS.glb": [
-      "plastic"
-    ],
     "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__workbench.glb": [
       "Wood"
+    ],
+    "CONTROL__MECHANICAL STEERING__STEERING SHELVES__P&S rudder shelf.glb": [
+      "Composite sandwich"
     ],
     "BODY__INTERNALS__stringers.glb": [
       "Composite sandwich"
@@ -203,6 +233,12 @@
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": [
       "Alum 5052"
+    ],
+    "CONTROL__rudder assembly__foil top wedge contoured.glb": [
+      "Carbon fiber"
+    ],
+    "CONTROL__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb": [
+      "Fiberglass"
     ],
     "OUTFITTING_INTERIOR__cleats.glb": [
       "Stainless Steel"
@@ -219,11 +255,11 @@
     "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb": [
       "Alum 5052"
     ],
+    "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__JEFA 5T050.glb": [
+      "plastic"
+    ],
     "SUPERSTRUCTURE__instr panel & wireway__instrument panel 1_2_ StarBoard.glb": [
       "Starboard (HDPE)"
-    ],
-    "CONTROL__STEERING__steering tunnels.glb": [
-      "Fiberglass"
     ],
     "OUTFITTING_INTERIOR__BATTERY CMPT__wiring conduit__2x2 2_x2_ conduit.glb": [
       "Fiberglass"
@@ -234,7 +270,7 @@
     "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__trampoline.glb": [
       "Trampoline"
     ],
-    "CONTROL__STEERING__STEERING SHELVES__P&S rudder shelf.glb": [
+    "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__king plank.glb": [
       "Composite sandwich"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": [
@@ -245,12 +281,23 @@
     ],
     "BODY__HULLS & DECKS__PORTLIGHTS__portlight surfs.glb": [
       "Windows & portlights"
-    ],
-    "PROPULSION__rudder assembly__SS thrust bearing, polished top.glb": [
-      "Stainless Steel"
     ]
   },
   "materials_to_models": {
+    "Starboard (HDPE)": [
+      "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__HDPE guide & coaming.glb",
+      "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__board.glb",
+      "SUPERSTRUCTURE__instr panel & wireway__instrument panel 1_2_ StarBoard.glb"
+    ],
+    "Stainless Steel": [
+      "CONTROL__ELECTRONIC CONTROL__THROTTLE Bellmarine TFC2-11.glb",
+      "CONTROL__rudder assembly__SS sleeve.glb",
+      "CONTROL__rudder assembly__SS thrust bearing, polished top.glb",
+      "OUTFITTING_INTERIOR__cleats.glb",
+      "PROPULSION__SHAFTLINE COMPONENTS__shaft__propeller shaft Aquamet 22.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb",
+      "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__3_8_ 316L SS bolts.glb"
+    ],
     "Alum 5052": [
       "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb",
       "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb",
@@ -282,8 +329,9 @@
       "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb",
       "BODY__INTERNALS__soles & bhds.glb",
       "BODY__INTERNALS__stringers.glb",
-      "CONTROL__STEERING__STEERING SHELVES__P&S rudder shelf.glb",
-      "CONTROL__STEERING__STEERING SHELVES__port dummy shelf.glb"
+      "CONTROL__MECHANICAL STEERING__STEERING SHELVES__P&S rudder shelf.glb",
+      "CONTROL__MECHANICAL STEERING__STEERING SHELVES__port dummy shelf.glb",
+      "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__king plank.glb"
     ],
     "Brass": [
       "PROPULSION__SHAFTLINE COMPONENTS__Cutless Bearing brass _Bale_ size.glb"
@@ -291,6 +339,7 @@
     "Alum 6061": [
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__6061 sq tube.glb",
       "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb",
+      "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__EIM V4 (4_ sq tube).glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb",
@@ -301,25 +350,30 @@
       "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1_ X 1_8_ alum angle (8982K4).glb"
     ],
     "Plastic": [
-      "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__HDPE guide & coaming.glb",
       "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Simrad HALO20+ Radar.glb",
       "OUTFITTING_INTERIOR__portland pudgy__PORTLAND PUDGY SIMPLIFIED.glb"
     ],
     "Wood": [
-      "CONTROL__STEERING__STEERING COMPONENTS__hand tiller stbd.glb",
+      "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__hand tiller stbd.glb",
+      "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__cabinet surfaces.glb",
+      "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__heat pump structure__heat pump cabinet.glb",
+      "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__heat pump structure__heat pump columns.glb",
       "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CTR BEAM TABLE.glb",
       "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__GALLEY SURFS.glb",
       "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS.glb",
       "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__workbench.glb"
     ],
+    "Turcite": [
+      "CONTROL__rudder assembly__Turcite bushings.glb"
+    ],
     "Fiberglass": [
       "BODY__HULLS & DECKS__PORTLIGHTS__portlight cut-out edge.glb",
-      "CONTROL__STEERING__steering tunnels.glb",
+      "CONTROL__MECHANICAL STEERING__steering tunnels.glb",
+      "CONTROL__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb",
+      "CONTROL__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb",
       "OUTFITTING_INTERIOR__BATTERY CMPT__wiring conduit__2x2 2_x2_ conduit.glb",
       "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb",
       "PROPULSION__SHAFTLINE COMPONENTS__stern tube 2_ OD X 1.5_ ID GRP source from fisheries supply.glb",
-      "PROPULSION__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb",
-      "PROPULSION__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb",
       "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__G10 backing plates.glb"
     ],
     "Bronze": [
@@ -327,27 +381,25 @@
       "PROPULSION__SIMPLIFIED STRUT.glb",
       "WATER_HEATING SYSTEMS__KEEL COOLERS__keel cooler surfaces.glb"
     ],
-    "plastic": [
-      "CONTROL__STEERING__STEERING COMPONENTS__JEFA 5T050.glb",
-      "CONTROL__STEERING__STEERING COMPONENTS__JEFA 5T050ZS.glb"
-    ],
     "Plywood": [
       "DECK JIG__DECK SKINS.glb"
     ],
-    "Stainless Steel": [
-      "OUTFITTING_INTERIOR__cleats.glb",
-      "PROPULSION__SHAFTLINE COMPONENTS__shaft__propeller shaft Aquamet 22.glb",
-      "PROPULSION__rudder assembly__SS sleeve.glb",
-      "PROPULSION__rudder assembly__SS thrust bearing, polished top.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb",
-      "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__3_8_ 316L SS bolts.glb"
+    "Delrin": [
+      "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__Washer, delrin ø50,5 x ø110 x 4,5mm.glb"
     ],
     "Carbon fiber": [
-      "PROPULSION__rudder assembly__foil top wedge contoured.glb",
-      "PROPULSION__rudder assembly__rudder shaft & foil.glb"
+      "CONTROL__rudder assembly__foil top wedge contoured.glb",
+      "CONTROL__rudder assembly__rudder shaft & foil.glb"
     ],
     "Solar panels": [
       "POWER ARCHITECTURE__SOLAR__SIMPLIFIED SOLAR PANELS.glb"
+    ],
+    "Alum AlMgSi1": [
+      "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__tillers & draglinks.glb"
+    ],
+    "plastic": [
+      "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__JEFA 5T050.glb",
+      "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__JEFA 5T050ZS.glb"
     ],
     "Windows & portlights": [
       "BODY__HULLS & DECKS__PORTLIGHTS__portlight surfs.glb",
@@ -358,9 +410,6 @@
     ],
     "acrylic": [
       "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__1_2_ acrylic.glb"
-    ],
-    "Starboard (HDPE)": [
-      "SUPERSTRUCTURE__instr panel & wireway__instrument panel 1_2_ StarBoard.glb"
     ],
     "Trampoline": [
       "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__trampoline.glb"

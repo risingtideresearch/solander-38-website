@@ -81,6 +81,46 @@
       "notes": ""
     },
     {
+      "layer_name": "POWER ARCHITECTURE::ELEC BOARD COMPONENTS::board",
+      "filename": "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__board.glb",
+      "file_size": 6744,
+      "object_count": 1,
+      "bounding_box": {
+        "min": {
+          "x": -163.07547756116986,
+          "y": -74.52602402271155,
+          "z": 43.3988708079572
+        },
+        "max": {
+          "x": -84.37129974365234,
+          "y": -59.154825419759135,
+          "z": 75.0547103881836
+        },
+        "center": {
+          "x": -123.7233886524111,
+          "y": -66.84042472123534,
+          "z": 59.226790598070394
+        },
+        "dimensions": {
+          "width": 78.70417781751752,
+          "depth": 15.371198602952418,
+          "height": 31.65583958022639
+        }
+      },
+      "normalized_size": {
+        "length": 78.70417781751752,
+        "width": 31.65583958022639,
+        "height": 15.371198602952418,
+        "world_aligned": {
+          "x": 78.70417781751752,
+          "y": 15.371198602952418,
+          "z": 31.65583958022639
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
       "layer_name": "POWER ARCHITECTURE::ELEC BOARD COMPONENTS::MPPT250/70-Tr solar charge controller",
       "filename": "POWER ARCHITECTURE__ELEC BOARD COMPONENTS__MPPT250_70-Tr solar charge controller.glb",
       "file_size": 177908,
@@ -1561,289 +1601,49 @@
       "notes": ""
     },
     {
-      "layer_name": "CONTROL::STEERING::STEERING SHELVES::P&S rudder shelf",
-      "filename": "CONTROL__STEERING__STEERING SHELVES__P&S rudder shelf.glb",
-      "file_size": 16364,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -424.6519470214844,
-          "y": -115.9578562960142,
-          "z": 46.91364963828681
-        },
-        "max": {
-          "x": -407.6519362733352,
-          "y": 116.25140497375008,
-          "z": 47.41365051269531
-        },
-        "center": {
-          "x": -416.1519416474098,
-          "y": 0.14677433886794233,
-          "z": 47.16365007549106
-        },
-        "dimensions": {
-          "width": 17.00001074814918,
-          "depth": 232.20926126976428,
-          "height": 0.5000008744084994
-        }
-      },
-      "normalized_size": {
-        "length": 232.20926126976428,
-        "width": 17.00001074814918,
-        "height": 0.5000008744084994,
-        "world_aligned": {
-          "x": 17.00001074814918,
-          "y": 232.20926126976428,
-          "z": 0.5000008744084994
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "CONTROL::STEERING::STEERING SHELVES::port dummy shelf",
-      "filename": "CONTROL__STEERING__STEERING SHELVES__port dummy shelf.glb",
-      "file_size": 24072,
+      "layer_name": "CONTROL::ELECTRONIC CONTROL::THROTTLE Bellmarine TFC2-11",
+      "filename": "CONTROL__ELECTRONIC CONTROL__THROTTLE Bellmarine TFC2-11.glb",
+      "file_size": 85944,
       "object_count": 3,
       "bounding_box": {
         "min": {
-          "x": -381.04336597182294,
-          "y": 24.308030247963277,
-          "z": 62.28529739379883
+          "x": -204.6241463781363,
+          "y": 1.750342845916748,
+          "z": 92.77455849369682
         },
         "max": {
-          "x": -361.7565612792969,
-          "y": 44.96730848893921,
-          "z": 63.28529823355002
+          "x": -199.04275512695312,
+          "y": 7.250350210941657,
+          "z": 99.50688934326172
         },
         "center": {
-          "x": -371.3999636255599,
-          "y": 34.63766936845124,
-          "z": 62.785297813674426
+          "x": -201.8334507525447,
+          "y": 4.500346528429203,
+          "z": 96.14072391847927
         },
         "dimensions": {
-          "width": 19.28680469252606,
-          "depth": 20.659278240975933,
-          "height": 1.0000008397511948
+          "width": 5.581391251183163,
+          "depth": 5.500007365024909,
+          "height": 6.732330849564903
         }
       },
       "normalized_size": {
-        "length": 20.659278240975933,
-        "width": 19.28680469252606,
-        "height": 1.0000008397511948,
+        "length": 6.732330849564903,
+        "width": 5.581391251183163,
+        "height": 5.500007365024909,
         "world_aligned": {
-          "x": 19.28680469252606,
-          "y": 20.659278240975933,
-          "z": 1.0000008397511948
+          "x": 5.581391251183163,
+          "y": 5.500007365024909,
+          "z": 6.732330849564903
         }
       },
       "export_method": "standard",
       "notes": ""
     },
     {
-      "layer_name": "CONTROL::STEERING::steering tunnels",
-      "filename": "CONTROL__STEERING__steering tunnels.glb",
-      "file_size": 186208,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -386.11838223069816,
-          "y": -70.29523779328196,
-          "z": 52.70145278794042
-        },
-        "max": {
-          "x": -375.41537046579066,
-          "y": 70.29523779328196,
-          "z": 56.201454162597656
-        },
-        "center": {
-          "x": -380.7668763482444,
-          "y": 0.0,
-          "z": 54.451453475269034
-        },
-        "dimensions": {
-          "width": 10.703011764907501,
-          "depth": 140.5904755865639,
-          "height": 3.500001374657238
-        }
-      },
-      "normalized_size": {
-        "length": 140.5904755865639,
-        "width": 10.703011764907501,
-        "height": 3.500001374657238,
-        "world_aligned": {
-          "x": 10.703011764907501,
-          "y": 140.5904755865639,
-          "z": 3.500001374657238
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "CONTROL::STEERING::STEERING COMPONENTS::tillers & draglinks",
-      "filename": "CONTROL__STEERING__STEERING COMPONENTS__tillers & draglinks.glb",
-      "file_size": 2286296,
-      "object_count": 16,
-      "bounding_box": {
-        "min": {
-          "x": -416.27934073194484,
-          "y": -96.59082718495118,
-          "z": 50.29314641265679
-        },
-        "max": {
-          "x": -362.90289297433765,
-          "y": 96.59082718495118,
-          "z": 57.81325593749943
-        },
-        "center": {
-          "x": -389.5911168531412,
-          "y": 0.0,
-          "z": 54.05320117507811
-        },
-        "dimensions": {
-          "width": 53.376447757607195,
-          "depth": 193.18165436990236,
-          "height": 7.520109524842638
-        }
-      },
-      "normalized_size": {
-        "length": 193.18165436990236,
-        "width": 53.376447757607195,
-        "height": 7.520109524842638,
-        "world_aligned": {
-          "x": 53.376447757607195,
-          "y": 193.18165436990236,
-          "z": 7.520109524842638
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "CONTROL::STEERING::STEERING COMPONENTS::JEFA 5T050",
-      "filename": "CONTROL__STEERING__STEERING COMPONENTS__JEFA 5T050.glb",
-      "file_size": 430572,
-      "object_count": 3,
-      "bounding_box": {
-        "min": {
-          "x": -376.0596184803669,
-          "y": -34.93231626859327,
-          "z": 48.11093858490428
-        },
-        "max": {
-          "x": -370.587177535277,
-          "y": 34.9323162685933,
-          "z": 63.60025886348925
-        },
-        "center": {
-          "x": -373.323398007822,
-          "y": 1.4210854715202004e-14,
-          "z": 55.85559872419677
-        },
-        "dimensions": {
-          "width": 5.472440945089886,
-          "depth": 69.86463253718657,
-          "height": 15.48932027858497
-        }
-      },
-      "normalized_size": {
-        "length": 69.86463253718657,
-        "width": 15.48932027858497,
-        "height": 5.472440945089886,
-        "world_aligned": {
-          "x": 5.472440945089886,
-          "y": 69.86463253718657,
-          "z": 15.48932027858497
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "CONTROL::STEERING::STEERING COMPONENTS::JEFA 5T050ZS",
-      "filename": "CONTROL__STEERING__STEERING COMPONENTS__JEFA 5T050ZS.glb",
-      "file_size": 798048,
-      "object_count": 3,
-      "bounding_box": {
-        "min": {
-          "x": -377.3904056132067,
-          "y": -36.538172277978774,
-          "z": 62.69177891216624
-        },
-        "max": {
-          "x": -369.04585790420305,
-          "y": -28.078612282065276,
-          "z": 68.50579071044922
-        },
-        "center": {
-          "x": -373.2181317587049,
-          "y": -32.30839228002203,
-          "z": 65.59878481130772
-        },
-        "dimensions": {
-          "width": 8.344547709003677,
-          "depth": 8.459559995913498,
-          "height": 5.814011798282976
-        }
-      },
-      "normalized_size": {
-        "length": 8.459559995913498,
-        "width": 8.344547709003677,
-        "height": 5.814011798282976,
-        "world_aligned": {
-          "x": 8.344547709003677,
-          "y": 8.459559995913498,
-          "z": 5.814011798282976
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "CONTROL::STEERING::STEERING COMPONENTS::hand tiller stbd",
-      "filename": "CONTROL__STEERING__STEERING COMPONENTS__hand tiller stbd.glb",
-      "file_size": 527080,
-      "object_count": 4,
-      "bounding_box": {
-        "min": {
-          "x": -374.82339800769176,
-          "y": -33.69609579615245,
-          "z": 66.11128583308998
-        },
-        "max": {
-          "x": -338.323389498085,
-          "y": -30.696095796152335,
-          "z": 86.11115264892578
-        },
-        "center": {
-          "x": -356.57339375288836,
-          "y": -32.19609579615239,
-          "z": 76.11121924100789
-        },
-        "dimensions": {
-          "width": 36.500008509606744,
-          "depth": 3.0000000000001137,
-          "height": 19.9998668158358
-        }
-      },
-      "normalized_size": {
-        "length": 36.500008509606744,
-        "width": 19.9998668158358,
-        "height": 3.0000000000001137,
-        "world_aligned": {
-          "x": 36.500008509606744,
-          "y": 3.0000000000001137,
-          "z": 19.9998668158358
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "CONTROL::STEERING::STEERING COMPONENTS::autopilot DD1",
-      "filename": "CONTROL__STEERING__STEERING COMPONENTS__autopilot DD1.glb",
-      "file_size": 193204,
+      "layer_name": "CONTROL::ELECTRONIC CONTROL::autopilot DD1",
+      "filename": "CONTROL__ELECTRONIC CONTROL__autopilot DD1.glb",
+      "file_size": 193168,
       "object_count": 5,
       "bounding_box": {
         "min": {
@@ -1881,9 +1681,569 @@
       "notes": ""
     },
     {
-      "layer_name": "CONTROL::STEERING::STEERING COMPONENTS::Washer, delrin \u00f850,5 x \u00f8110 x 4,5mm",
-      "filename": "CONTROL__STEERING__STEERING COMPONENTS__Washer, delrin \u00f850,5 x \u00f8110 x 4,5mm.glb",
-      "file_size": 148304,
+      "layer_name": "CONTROL::rudder assembly::foil top wedge contoured",
+      "filename": "CONTROL__rudder assembly__foil top wedge contoured.glb",
+      "file_size": 77668,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -423.9473576710501,
+          "y": -91.17104962760357,
+          "z": 17.245879628262344
+        },
+        "max": {
+          "x": -410.6623478394636,
+          "y": 91.17104962760357,
+          "z": 20.343141976949916
+        },
+        "center": {
+          "x": -417.3048527552569,
+          "y": 0.0,
+          "z": 18.79451080260613
+        },
+        "dimensions": {
+          "width": 13.285009831586478,
+          "depth": 182.34209925520713,
+          "height": 3.097262348687572
+        }
+      },
+      "normalized_size": {
+        "length": 182.34209925520713,
+        "width": 13.285009831586478,
+        "height": 3.097262348687572,
+        "world_aligned": {
+          "x": 13.285009831586478,
+          "y": 182.34209925520713,
+          "z": 3.097262348687572
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::rudder assembly::rudder shaft & foil",
+      "filename": "CONTROL__rudder assembly__rudder shaft & foil.glb",
+      "file_size": 694564,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -423.9477651257864,
+          "y": -91.16081009286066,
+          "z": -4.9085318328829874
+        },
+        "max": {
+          "x": -410.6781921386719,
+          "y": 91.16081009286066,
+          "z": 55.72441101074219
+        },
+        "center": {
+          "x": -417.31297863222915,
+          "y": 0.0,
+          "z": 25.4079395889296
+        },
+        "dimensions": {
+          "width": 13.269572987114543,
+          "depth": 182.32162018572132,
+          "height": 60.63294284362517
+        }
+      },
+      "normalized_size": {
+        "length": 182.32162018572132,
+        "width": 60.63294284362517,
+        "height": 13.269572987114543,
+        "world_aligned": {
+          "x": 13.269572987114543,
+          "y": 182.32162018572132,
+          "z": 60.63294284362517
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::rudder assembly::Turcite bushings",
+      "filename": "CONTROL__rudder assembly__Turcite bushings.glb",
+      "file_size": 183428,
+      "object_count": 4,
+      "bounding_box": {
+        "min": {
+          "x": -415.86398640123673,
+          "y": -91.7500004939518,
+          "z": 19.131036691147877
+        },
+        "max": {
+          "x": -412.3639831542969,
+          "y": 91.7500004939518,
+          "z": 48.793148040771484
+        },
+        "center": {
+          "x": -414.1139847777668,
+          "y": 0.0,
+          "z": 33.96209236595968
+        },
+        "dimensions": {
+          "width": 3.5000032469398548,
+          "depth": 183.5000009879036,
+          "height": 29.662111349623608
+        }
+      },
+      "normalized_size": {
+        "length": 183.5000009879036,
+        "width": 29.662111349623608,
+        "height": 3.5000032469398548,
+        "world_aligned": {
+          "x": 3.5000032469398548,
+          "y": 183.5000009879036,
+          "z": 29.662111349623608
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::rudder assembly::SS thrust bearing, polished top",
+      "filename": "CONTROL__rudder assembly__SS thrust bearing, polished top.glb",
+      "file_size": 93568,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -415.8389892578125,
+          "y": -91.72500049395171,
+          "z": 18.205744753642605
+        },
+        "max": {
+          "x": -412.38897705078125,
+          "y": 91.72500049395171,
+          "z": 19.13103675842285
+        },
+        "center": {
+          "x": -414.1139831542969,
+          "y": 0.0,
+          "z": 18.66839075603273
+        },
+        "dimensions": {
+          "width": 3.45001220703125,
+          "depth": 183.45000098790342,
+          "height": 0.9252920047802462
+        }
+      },
+      "normalized_size": {
+        "length": 183.45000098790342,
+        "width": 3.45001220703125,
+        "height": 0.9252920047802462,
+        "world_aligned": {
+          "x": 3.45001220703125,
+          "y": 183.45000098790342,
+          "z": 0.9252920047802462
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::rudder assembly::SS sleeve",
+      "filename": "CONTROL__rudder assembly__SS sleeve.glb",
+      "file_size": 53064,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -415.36398640123673,
+          "y": -91.25000049395177,
+          "z": 19.131036691147862
+        },
+        "max": {
+          "x": -412.8639831542969,
+          "y": 91.25000049395177,
+          "z": 49.52027169900441
+        },
+        "center": {
+          "x": -414.1139847777668,
+          "y": 0.0,
+          "z": 34.32565419507614
+        },
+        "dimensions": {
+          "width": 2.5000032469398548,
+          "depth": 182.50000098790355,
+          "height": 30.38923500785655
+        }
+      },
+      "normalized_size": {
+        "length": 182.50000098790355,
+        "width": 30.38923500785655,
+        "height": 2.5000032469398548,
+        "world_aligned": {
+          "x": 2.5000032469398548,
+          "y": 182.50000098790355,
+          "z": 30.38923500785655
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::rudder assembly::Rudder tube::G10 tube 3\" OD X 2.75\" ID",
+      "filename": "CONTROL__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb",
+      "file_size": 50088,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -415.6139864012369,
+          "y": -91.50000049407126,
+          "z": 22.381036691147877
+        },
+        "max": {
+          "x": -412.6139831542969,
+          "y": 91.50000049407126,
+          "z": 46.543148040771484
+        },
+        "center": {
+          "x": -414.11398477776686,
+          "y": 0.0,
+          "z": 34.46209236595968
+        },
+        "dimensions": {
+          "width": 3.0000032469400253,
+          "depth": 183.00000098814252,
+          "height": 24.162111349623608
+        }
+      },
+      "normalized_size": {
+        "length": 183.00000098814252,
+        "width": 24.162111349623608,
+        "height": 3.0000032469400253,
+        "world_aligned": {
+          "x": 3.0000032469400253,
+          "y": 183.00000098814252,
+          "z": 24.162111349623608
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::rudder assembly::Rudder tube::Molded tube ends for turc bushings",
+      "filename": "CONTROL__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb",
+      "file_size": 354264,
+      "object_count": 4,
+      "bounding_box": {
+        "min": {
+          "x": -415.9914864012367,
+          "y": -91.87750244140625,
+          "z": 18.150386810302734
+        },
+        "max": {
+          "x": -412.2364807128906,
+          "y": 91.87750244140625,
+          "z": 48.793148040771484
+        },
+        "center": {
+          "x": -414.11398355706365,
+          "y": 0.0,
+          "z": 33.47176742553711
+        },
+        "dimensions": {
+          "width": 3.7550056883461025,
+          "depth": 183.7550048828125,
+          "height": 30.64276123046875
+        }
+      },
+      "normalized_size": {
+        "length": 183.7550048828125,
+        "width": 30.64276123046875,
+        "height": 3.7550056883461025,
+        "world_aligned": {
+          "x": 3.7550056883461025,
+          "y": 183.7550048828125,
+          "z": 30.64276123046875
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING SHELVES::P&S rudder shelf",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING SHELVES__P&S rudder shelf.glb",
+      "file_size": 16376,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -424.6519470214844,
+          "y": -115.9578562960142,
+          "z": 46.91364963828681
+        },
+        "max": {
+          "x": -407.6519362733352,
+          "y": 116.25140497375008,
+          "z": 47.41365051269531
+        },
+        "center": {
+          "x": -416.1519416474098,
+          "y": 0.14677433886794233,
+          "z": 47.16365007549106
+        },
+        "dimensions": {
+          "width": 17.00001074814918,
+          "depth": 232.20926126976428,
+          "height": 0.5000008744084994
+        }
+      },
+      "normalized_size": {
+        "length": 232.20926126976428,
+        "width": 17.00001074814918,
+        "height": 0.5000008744084994,
+        "world_aligned": {
+          "x": 17.00001074814918,
+          "y": 232.20926126976428,
+          "z": 0.5000008744084994
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING SHELVES::port dummy shelf",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING SHELVES__port dummy shelf.glb",
+      "file_size": 24080,
+      "object_count": 3,
+      "bounding_box": {
+        "min": {
+          "x": -381.04336597182294,
+          "y": 24.308030247963277,
+          "z": 62.28529739379883
+        },
+        "max": {
+          "x": -361.7565612792969,
+          "y": 44.96730848893921,
+          "z": 63.28529823355002
+        },
+        "center": {
+          "x": -371.3999636255599,
+          "y": 34.63766936845124,
+          "z": 62.785297813674426
+        },
+        "dimensions": {
+          "width": 19.28680469252606,
+          "depth": 20.659278240975933,
+          "height": 1.0000008397511948
+        }
+      },
+      "normalized_size": {
+        "length": 20.659278240975933,
+        "width": 19.28680469252606,
+        "height": 1.0000008397511948,
+        "world_aligned": {
+          "x": 19.28680469252606,
+          "y": 20.659278240975933,
+          "z": 1.0000008397511948
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::MECHANICAL STEERING::steering tunnels",
+      "filename": "CONTROL__MECHANICAL STEERING__steering tunnels.glb",
+      "file_size": 186220,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -386.11838223069816,
+          "y": -70.29523779328196,
+          "z": 52.70145278794042
+        },
+        "max": {
+          "x": -375.41537046579066,
+          "y": 70.29523779328196,
+          "z": 56.201454162597656
+        },
+        "center": {
+          "x": -380.7668763482444,
+          "y": 0.0,
+          "z": 54.451453475269034
+        },
+        "dimensions": {
+          "width": 10.703011764907501,
+          "depth": 140.5904755865639,
+          "height": 3.500001374657238
+        }
+      },
+      "normalized_size": {
+        "length": 140.5904755865639,
+        "width": 10.703011764907501,
+        "height": 3.500001374657238,
+        "world_aligned": {
+          "x": 10.703011764907501,
+          "y": 140.5904755865639,
+          "z": 3.500001374657238
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::tillers & draglinks",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__tillers & draglinks.glb",
+      "file_size": 2286544,
+      "object_count": 16,
+      "bounding_box": {
+        "min": {
+          "x": -416.27934073194484,
+          "y": -96.59082718495118,
+          "z": 50.29314641265679
+        },
+        "max": {
+          "x": -362.90289297433765,
+          "y": 96.59082718495118,
+          "z": 57.81325593749943
+        },
+        "center": {
+          "x": -389.5911168531412,
+          "y": 0.0,
+          "z": 54.05320117507811
+        },
+        "dimensions": {
+          "width": 53.376447757607195,
+          "depth": 193.18165436990236,
+          "height": 7.520109524842638
+        }
+      },
+      "normalized_size": {
+        "length": 193.18165436990236,
+        "width": 53.376447757607195,
+        "height": 7.520109524842638,
+        "world_aligned": {
+          "x": 53.376447757607195,
+          "y": 193.18165436990236,
+          "z": 7.520109524842638
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::JEFA 5T050",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__JEFA 5T050.glb",
+      "file_size": 430584,
+      "object_count": 3,
+      "bounding_box": {
+        "min": {
+          "x": -376.0596184803669,
+          "y": -34.93231626859327,
+          "z": 48.11093858490428
+        },
+        "max": {
+          "x": -370.587177535277,
+          "y": 34.9323162685933,
+          "z": 63.60025886348925
+        },
+        "center": {
+          "x": -373.323398007822,
+          "y": 1.4210854715202004e-14,
+          "z": 55.85559872419677
+        },
+        "dimensions": {
+          "width": 5.472440945089886,
+          "depth": 69.86463253718657,
+          "height": 15.48932027858497
+        }
+      },
+      "normalized_size": {
+        "length": 69.86463253718657,
+        "width": 15.48932027858497,
+        "height": 5.472440945089886,
+        "world_aligned": {
+          "x": 5.472440945089886,
+          "y": 69.86463253718657,
+          "z": 15.48932027858497
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::JEFA 5T050ZS",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__JEFA 5T050ZS.glb",
+      "file_size": 798060,
+      "object_count": 3,
+      "bounding_box": {
+        "min": {
+          "x": -377.3904056132067,
+          "y": -36.538172277978774,
+          "z": 62.69177891216624
+        },
+        "max": {
+          "x": -369.04585790420305,
+          "y": -28.078612282065276,
+          "z": 68.50579071044922
+        },
+        "center": {
+          "x": -373.2181317587049,
+          "y": -32.30839228002203,
+          "z": 65.59878481130772
+        },
+        "dimensions": {
+          "width": 8.344547709003677,
+          "depth": 8.459559995913498,
+          "height": 5.814011798282976
+        }
+      },
+      "normalized_size": {
+        "length": 8.459559995913498,
+        "width": 8.344547709003677,
+        "height": 5.814011798282976,
+        "world_aligned": {
+          "x": 8.344547709003677,
+          "y": 8.459559995913498,
+          "z": 5.814011798282976
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::hand tiller stbd",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__hand tiller stbd.glb",
+      "file_size": 527092,
+      "object_count": 4,
+      "bounding_box": {
+        "min": {
+          "x": -374.82339800769176,
+          "y": -33.69609579615245,
+          "z": 66.11128583308998
+        },
+        "max": {
+          "x": -338.323389498085,
+          "y": -30.696095796152335,
+          "z": 86.11115264892578
+        },
+        "center": {
+          "x": -356.57339375288836,
+          "y": -32.19609579615239,
+          "z": 76.11121924100789
+        },
+        "dimensions": {
+          "width": 36.500008509606744,
+          "depth": 3.0000000000001137,
+          "height": 19.9998668158358
+        }
+      },
+      "normalized_size": {
+        "length": 36.500008509606744,
+        "width": 19.9998668158358,
+        "height": 3.0000000000001137,
+        "world_aligned": {
+          "x": 36.500008509606744,
+          "y": 3.0000000000001137,
+          "z": 19.9998668158358
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::Washer, delrin \u00f850,5 x \u00f8110 x 4,5mm",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__Washer, delrin \u00f850,5 x \u00f8110 x 4,5mm.glb",
+      "file_size": 148548,
       "object_count": 3,
       "bounding_box": {
         "min": {
@@ -1921,9 +2281,9 @@
       "notes": ""
     },
     {
-      "layer_name": "CONTROL::STEERING::STEERING COMPONENTS::locking rings part no. 46040-46054",
-      "filename": "CONTROL__STEERING__STEERING COMPONENTS__locking rings part no. 46040-46054.glb",
-      "file_size": 183168,
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::locking rings part no. 46040-46054",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__locking rings part no. 46040-46054.glb",
+      "file_size": 183180,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -1961,9 +2321,9 @@
       "notes": ""
     },
     {
-      "layer_name": "CONTROL::STEERING::STEERING COMPONENTS::50mm dummy shafts",
-      "filename": "CONTROL__STEERING__STEERING COMPONENTS__50mm dummy shafts.glb",
-      "file_size": 19264,
+      "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::50mm dummy shafts",
+      "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__50mm dummy shafts.glb",
+      "file_size": 19272,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -2235,286 +2595,6 @@
           "x": 76.44308891768071,
           "y": 184.0,
           "z": 14.514674659585618
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "PROPULSION::rudder assembly::foil top wedge contoured",
-      "filename": "PROPULSION__rudder assembly__foil top wedge contoured.glb",
-      "file_size": 77672,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -423.9473576710501,
-          "y": -91.17104962760357,
-          "z": 17.245879628262344
-        },
-        "max": {
-          "x": -410.6623478394636,
-          "y": 91.17104962760357,
-          "z": 20.343141976949916
-        },
-        "center": {
-          "x": -417.3048527552569,
-          "y": 0.0,
-          "z": 18.79451080260613
-        },
-        "dimensions": {
-          "width": 13.285009831586478,
-          "depth": 182.34209925520713,
-          "height": 3.097262348687572
-        }
-      },
-      "normalized_size": {
-        "length": 182.34209925520713,
-        "width": 13.285009831586478,
-        "height": 3.097262348687572,
-        "world_aligned": {
-          "x": 13.285009831586478,
-          "y": 182.34209925520713,
-          "z": 3.097262348687572
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "PROPULSION::rudder assembly::rudder shaft & foil",
-      "filename": "PROPULSION__rudder assembly__rudder shaft & foil.glb",
-      "file_size": 694568,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -423.9477651257864,
-          "y": -91.16081009286066,
-          "z": -4.9085318328829874
-        },
-        "max": {
-          "x": -410.6781921386719,
-          "y": 91.16081009286066,
-          "z": 55.72441101074219
-        },
-        "center": {
-          "x": -417.31297863222915,
-          "y": 0.0,
-          "z": 25.4079395889296
-        },
-        "dimensions": {
-          "width": 13.269572987114543,
-          "depth": 182.32162018572132,
-          "height": 60.63294284362517
-        }
-      },
-      "normalized_size": {
-        "length": 182.32162018572132,
-        "width": 60.63294284362517,
-        "height": 13.269572987114543,
-        "world_aligned": {
-          "x": 13.269572987114543,
-          "y": 182.32162018572132,
-          "z": 60.63294284362517
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "PROPULSION::rudder assembly::Turcite bushings",
-      "filename": "PROPULSION__rudder assembly__Turcite bushings.glb",
-      "file_size": 183188,
-      "object_count": 4,
-      "bounding_box": {
-        "min": {
-          "x": -415.86398640123673,
-          "y": -91.7500004939518,
-          "z": 19.131036691147877
-        },
-        "max": {
-          "x": -412.3639831542969,
-          "y": 91.7500004939518,
-          "z": 48.793148040771484
-        },
-        "center": {
-          "x": -414.1139847777668,
-          "y": 0.0,
-          "z": 33.96209236595968
-        },
-        "dimensions": {
-          "width": 3.5000032469398548,
-          "depth": 183.5000009879036,
-          "height": 29.662111349623608
-        }
-      },
-      "normalized_size": {
-        "length": 183.5000009879036,
-        "width": 29.662111349623608,
-        "height": 3.5000032469398548,
-        "world_aligned": {
-          "x": 3.5000032469398548,
-          "y": 183.5000009879036,
-          "z": 29.662111349623608
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "PROPULSION::rudder assembly::SS thrust bearing, polished top",
-      "filename": "PROPULSION__rudder assembly__SS thrust bearing, polished top.glb",
-      "file_size": 93572,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -415.8389892578125,
-          "y": -91.72500049395171,
-          "z": 18.205744753642605
-        },
-        "max": {
-          "x": -412.38897705078125,
-          "y": 91.72500049395171,
-          "z": 19.13103675842285
-        },
-        "center": {
-          "x": -414.1139831542969,
-          "y": 0.0,
-          "z": 18.66839075603273
-        },
-        "dimensions": {
-          "width": 3.45001220703125,
-          "depth": 183.45000098790342,
-          "height": 0.9252920047802462
-        }
-      },
-      "normalized_size": {
-        "length": 183.45000098790342,
-        "width": 3.45001220703125,
-        "height": 0.9252920047802462,
-        "world_aligned": {
-          "x": 3.45001220703125,
-          "y": 183.45000098790342,
-          "z": 0.9252920047802462
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "PROPULSION::rudder assembly::SS sleeve",
-      "filename": "PROPULSION__rudder assembly__SS sleeve.glb",
-      "file_size": 53068,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -415.36398640123673,
-          "y": -91.25000049395177,
-          "z": 19.131036691147862
-        },
-        "max": {
-          "x": -412.8639831542969,
-          "y": 91.25000049395177,
-          "z": 49.52027169900441
-        },
-        "center": {
-          "x": -414.1139847777668,
-          "y": 0.0,
-          "z": 34.32565419507614
-        },
-        "dimensions": {
-          "width": 2.5000032469398548,
-          "depth": 182.50000098790355,
-          "height": 30.38923500785655
-        }
-      },
-      "normalized_size": {
-        "length": 182.50000098790355,
-        "width": 30.38923500785655,
-        "height": 2.5000032469398548,
-        "world_aligned": {
-          "x": 2.5000032469398548,
-          "y": 182.50000098790355,
-          "z": 30.38923500785655
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "PROPULSION::rudder assembly::Rudder tube::G10 tube 3\" OD X 2.75\" ID",
-      "filename": "PROPULSION__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb",
-      "file_size": 50092,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -415.6139864012369,
-          "y": -91.50000049407126,
-          "z": 22.381036691147877
-        },
-        "max": {
-          "x": -412.6139831542969,
-          "y": 91.50000049407126,
-          "z": 46.543148040771484
-        },
-        "center": {
-          "x": -414.11398477776686,
-          "y": 0.0,
-          "z": 34.46209236595968
-        },
-        "dimensions": {
-          "width": 3.0000032469400253,
-          "depth": 183.00000098814252,
-          "height": 24.162111349623608
-        }
-      },
-      "normalized_size": {
-        "length": 183.00000098814252,
-        "width": 24.162111349623608,
-        "height": 3.0000032469400253,
-        "world_aligned": {
-          "x": 3.0000032469400253,
-          "y": 183.00000098814252,
-          "z": 24.162111349623608
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "PROPULSION::rudder assembly::Rudder tube::Molded tube ends for turc bushings",
-      "filename": "PROPULSION__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb",
-      "file_size": 354268,
-      "object_count": 4,
-      "bounding_box": {
-        "min": {
-          "x": -415.9914864012367,
-          "y": -91.87750244140625,
-          "z": 18.150386810302734
-        },
-        "max": {
-          "x": -412.2364807128906,
-          "y": 91.87750244140625,
-          "z": 48.793148040771484
-        },
-        "center": {
-          "x": -414.11398355706365,
-          "y": 0.0,
-          "z": 33.47176742553711
-        },
-        "dimensions": {
-          "width": 3.7550056883461025,
-          "depth": 183.7550048828125,
-          "height": 30.64276123046875
-        }
-      },
-      "normalized_size": {
-        "length": 183.7550048828125,
-        "width": 30.64276123046875,
-        "height": 3.7550056883461025,
-        "world_aligned": {
-          "x": 3.7550056883461025,
-          "y": 183.7550048828125,
-          "z": 30.64276123046875
         }
       },
       "export_method": "standard",
@@ -3643,7 +3723,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::COMPANIONWAY HATCH::HDPE guide & coaming",
       "filename": "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__HDPE guide & coaming.glb",
-      "file_size": 89264,
+      "file_size": 89272,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -4083,8 +4163,8 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CABINETS::cabinet surfaces",
       "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__cabinet surfaces.glb",
-      "file_size": 350408,
-      "object_count": 20,
+      "file_size": 691548,
+      "object_count": 9,
       "bounding_box": {
         "min": {
           "x": -200.7865025738675,
@@ -4092,38 +4172,118 @@
           "z": 24.999999505925434
         },
         "max": {
-          "x": -84.37129974365234,
-          "y": 78.00000030006458,
-          "z": 90.62535276038284
+          "x": -84.92473428022382,
+          "y": -100.85872650146484,
+          "z": 71.03016086606281
         },
         "center": {
-          "x": -142.57890115875992,
-          "y": -22.34746714485292,
-          "z": 57.812676133154135
+          "x": -142.85561842704567,
+          "y": -111.77683054561763,
+          "z": 48.01508018599412
         },
         "dimensions": {
-          "width": 116.41520283021515,
-          "depth": 200.694934889835,
-          "height": 65.62535325445741
+          "width": 115.86176829364368,
+          "depth": 21.836208088305582,
+          "height": 46.030161360137384
         }
       },
       "normalized_size": {
-        "length": 200.694934889835,
-        "width": 116.41520283021515,
-        "height": 65.62535325445741,
+        "length": 115.86176829364368,
+        "width": 46.030161360137384,
+        "height": 21.836208088305582,
         "world_aligned": {
-          "x": 116.41520283021515,
-          "y": 200.694934889835,
-          "z": 65.62535325445741
+          "x": 115.86176829364368,
+          "y": 21.836208088305582,
+          "z": 46.030161360137384
         }
       },
       "export_method": "standard",
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CABINETS::WM CABINET::watermaker cabinet",
-      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__WM CABINET__watermaker cabinet.glb",
-      "file_size": 44020,
+      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CABINETS::heat pump structure::heat pump cabinet",
+      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__heat pump structure__heat pump cabinet.glb",
+      "file_size": 372696,
+      "object_count": 4,
+      "bounding_box": {
+        "min": {
+          "x": -200.7865009505863,
+          "y": -78.00000030006458,
+          "z": 39.771240234375
+        },
+        "max": {
+          "x": -164.41149795994994,
+          "y": 78.00000030006458,
+          "z": 55.000000327844745
+        },
+        "center": {
+          "x": -182.5989994552681,
+          "y": 0.0,
+          "z": 47.38562028110987
+        },
+        "dimensions": {
+          "width": 36.37500299063635,
+          "depth": 156.00000060012917,
+          "height": 15.228760093469745
+        }
+      },
+      "normalized_size": {
+        "length": 156.00000060012917,
+        "width": 36.37500299063635,
+        "height": 15.228760093469745,
+        "world_aligned": {
+          "x": 36.37500299063635,
+          "y": 156.00000060012917,
+          "z": 15.228760093469745
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CABINETS::heat pump structure::heat pump columns",
+      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__heat pump structure__heat pump columns.glb",
+      "file_size": 379512,
+      "object_count": 4,
+      "bounding_box": {
+        "min": {
+          "x": -200.78650084244975,
+          "y": -78.00000000000003,
+          "z": 28.771241817179728
+        },
+        "max": {
+          "x": -195.2864990234375,
+          "y": 78.00000000000003,
+          "z": 90.62535276038284
+        },
+        "center": {
+          "x": -198.03649993294363,
+          "y": 0.0,
+          "z": 59.69829728878128
+        },
+        "dimensions": {
+          "width": 5.500001819012255,
+          "depth": 156.00000000000006,
+          "height": 61.85411094320311
+        }
+      },
+      "normalized_size": {
+        "length": 156.00000000000006,
+        "width": 61.85411094320311,
+        "height": 5.500001819012255,
+        "world_aligned": {
+          "x": 5.500001819012255,
+          "y": 156.00000000000006,
+          "z": 61.85411094320311
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CABINETS::watermaker cabinet",
+      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__watermaker cabinet.glb",
+      "file_size": 43980,
       "object_count": 3,
       "bounding_box": {
         "min": {
@@ -4203,8 +4363,8 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::SHELF SURFS",
       "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS.glb",
-      "file_size": 628552,
-      "object_count": 17,
+      "file_size": 647424,
+      "object_count": 19,
       "bounding_box": {
         "min": {
           "x": -383.4115000536917,
@@ -4401,8 +4561,8 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::SHOWER AFT STBD::approx parts locs",
-      "filename": "OUTFITTING_INTERIOR__SHOWER AFT STBD__approx parts locs.glb",
+      "layer_name": "OUTFITTING/INTERIOR::SHOWER AFT STBD::shower part locs",
+      "filename": "OUTFITTING_INTERIOR__SHOWER AFT STBD__shower part locs.glb",
       "file_size": 957092,
       "object_count": 4,
       "bounding_box": {
@@ -4563,7 +4723,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::EXT. INSTR. MOUNTS::EIM V4 (4\" sq tube)",
       "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__EIM V4 (4_ sq tube).glb",
-      "file_size": 211020,
+      "file_size": 211272,
       "object_count": 3,
       "bounding_box": {
         "min": {
@@ -5081,9 +5241,9 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::FWD TRAMPOLINE AREA::anchor beam",
-      "filename": "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__anchor beam.glb",
-      "file_size": 11740,
+      "layer_name": "OUTFITTING/INTERIOR::FWD TRAMPOLINE AREA::king plank",
+      "filename": "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__king plank.glb",
+      "file_size": 44040,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5134,30 +5294,29 @@
       "notes": "Skipped - contains CL or baseline"
     },
     {
-      "layer_name": "PROPULSION::SHAFTLINE COMPONENTS::shaft::CL",
+      "layer_name": "CONTROL::rudder assembly::stock CL",
       "export_method": "skipped",
       "notes": "Skipped - contains CL or baseline"
     },
     {
-      "layer_name": "PROPULSION::rudder assembly::stock CL",
+      "layer_name": "PROPULSION::SHAFTLINE COMPONENTS::shaft::CL",
       "export_method": "skipped",
       "notes": "Skipped - contains CL or baseline"
     }
   ],
   "export_info": {
-    "total_layers_found": 337,
-    "export_path": "/Users/shelby/Documents/_/rtrf documentation/rhino/exports-7",
-    "timestamp_start": "2025-11-26 09:56:37",
+    "total_layers_found": 346,
+    "timestamp_start": "2025-12-12 10:49:32",
     "format": "GLB",
-    "timestamp_end": "2025-11-26 10:03:31",
+    "timestamp_end": "2025-12-12 10:56:31",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
     },
-    "successful_exports": 128,
+    "successful_exports": 132,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 43391720,
+    "total_file_size": 44629908,
     "units": {
       "id": 8,
       "name": "inch"
