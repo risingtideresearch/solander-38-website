@@ -19,7 +19,7 @@ export const structure: StructureResolver = (S) => {
         .child(S.document().schemaType('sections').documentId('sections')),
       S.listItem()
         .title('Materials')
-        .id('material')
+        .id('materials')
         .icon(RiStackLine)
         .child(S.document().schemaType('materials').documentId('materials')),
       // S.divider(),

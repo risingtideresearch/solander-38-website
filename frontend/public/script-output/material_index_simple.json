@@ -6,6 +6,7 @@
     "Alum AlMgSi1",
     "Aluminum",
     "Brass",
+    "Bronze",
     "Carbon Fiber",
     "Composite Sandwich",
     "Composite Sandwich (HULL)",
@@ -120,6 +121,9 @@
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia flange brackets.glb": [
       "Alum 5052"
     ],
+    "WATER_HEATING SYSTEMS__KEEL COOLERS__keel cooler surfaces.glb": [
+      "Bronze"
+    ],
     "BODY__CTR BEAM__ctr beam outside surfaces.glb": [
       "Composite Sandwich"
     ],
@@ -137,6 +141,9 @@
     ],
     "SUPERSTRUCTURE__WIREWAYS__ww parts surfs__int-int penetrations.glb": [
       "Aluminum"
+    ],
+    "PROPULSION__SIMPLIFIED PROPELLER.glb": [
+      "Bronze"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb": [
       "Stainless Steel"
@@ -221,6 +228,9 @@
     ],
     "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb": [
       "Composite Sandwich (HULL)"
+    ],
+    "PROPULSION__SIMPLIFIED STRUT.glb": [
+      "Bronze"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": [
       "Alum 5052"

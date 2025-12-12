@@ -29,9 +29,8 @@ def clean_material_name(material_name: str) -> Optional[str]:
     # Color terms to strip (case insensitive)
     colors = [
         'black', 'white', 'red', 'blue', 'green', 'yellow', 'orange', 
-        'purple', 'pink', 'brown', 'gray', 'grey', 'silver', 'gold',
-        'bronze', 'copper', 'beige', 'tan', 'navy', 'teal', 'cyan',
-        'magenta', 'lime', 'olive', 'maroon', 'aqua', 'fuchsia',
+        'purple', 'pink', 'brown', 'gray', 'grey',
+        'beige', 'tan', 'navy', 'teal', 'cyan',
         'dark', 'light', 'bright', 'pale', 'deep'
     ]
     

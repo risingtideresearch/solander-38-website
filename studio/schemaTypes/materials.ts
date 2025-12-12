@@ -16,7 +16,7 @@ export const materials = defineType({
           type: 'material',
         },
       ],
-      // Initialize with one entry per system
+      // Initialize with one entry per material
       initialValue: data.unique_materials.map((material) => ({
         _type: 'material',
         name: material,
@@ -52,4 +52,10 @@ export const material = defineType({
       type: 'text',
     }),
   ],
+  preview: {
+    select: {
+      title: 'name',
+      subtitle: 'description'
+    }
+  }
 })
