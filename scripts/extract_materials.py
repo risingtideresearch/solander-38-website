@@ -9,10 +9,9 @@ import re
 from pathlib import Path
 from typing import List, Dict, Set, Tuple, Optional
 
-
 def clean_material_name(material_name: str) -> Optional[str]:
     """
-    Clean material name by removing specific terms and stripping whitespace.
+    Clean material name by removing colors, specific terms, and normalizing case.
     
     Args:
         material_name: Raw material name from GLB file
@@ -27,22 +26,33 @@ def clean_material_name(material_name: str) -> Optional[str]:
     if 'paint' in material_name.lower():
         return None
     
-    # Terms to strip (case insensitive)
-    terms_to_strip = [
+    # Color terms to strip (case insensitive)
+    colors = [
+        'black', 'white', 'red', 'blue', 'green', 'yellow', 'orange', 
+        'purple', 'pink', 'brown', 'gray', 'grey', 'silver', 'gold',
+        'bronze', 'copper', 'beige', 'tan', 'navy', 'teal', 'cyan',
+        'magenta', 'lime', 'olive', 'maroon', 'aqua', 'fuchsia',
+        'dark', 'light', 'bright', 'pale', 'deep'
+    ]
+    
+    # Other terms to strip (case insensitive)
+    other_terms = [
         'matte',
         'bronze tinted',
+        'tinted',
         '(internals)',
         '(hull)',
-        'black',
-        'white',
         'polished',
-        '(1)'
+        '(1)', '(2)', '(3)', '(4)', '(5)',  # numbered variants
     ]
+    
+    # Combine all terms to strip
+    terms_to_strip = colors + other_terms
     
     cleaned = material_name
     for term in terms_to_strip:
         # Use word boundaries and case-insensitive matching
-        pattern = re.compile(re.escape(term), re.IGNORECASE)
+        pattern = re.compile(r'\b' + re.escape(term) + r'\b', re.IGNORECASE)
         cleaned = pattern.sub('', cleaned)
     
     # Strip whitespace and collapse multiple spaces
@@ -51,6 +61,22 @@ def clean_material_name(material_name: str) -> Optional[str]:
     # Return None if nothing remains after cleaning
     if not cleaned:
         return None
+    
+    # Smart capitalization: preserve acronyms and special formatting
+    words = cleaned.split()
+    normalized_words = []
+    
+    for word in words:
+        # Check if word is in parentheses - preserve what's inside
+        if word.startswith('(') and word.endswith(')'):
+            normalized_words.append(word.upper())  # (HDPE) stays uppercase
+        # Check if word is likely an acronym/code (all caps or mixed case with numbers)
+        elif word.isupper() or (any(c.isupper() for c in word) and any(c.isdigit() for c in word)):
+            normalized_words.append(word)  # Preserve as-is: AlMgSi1, HDPE
+        else:
+            normalized_words.append(word.capitalize())  # Regular words: Plastic, Acrylic
+    
+    cleaned = ' '.join(normalized_words)
     
     return cleaned
 
@@ -181,7 +207,7 @@ def create_material_index(
     output = {
         "unique_materials": sorted(list(all_materials)),
         "material_index": material_index,
-        "materials_to_models": materials_to_models
+        # "materials_to_models": materials_to_models
     }
     
     # Write to JSON if output path provided
