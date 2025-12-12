@@ -14,28 +14,31 @@ interface HoverDisplayProps {
 }
 
 const formatFeetInches = (totalInches) => {
-  // const feet = Math.floor(totalInches / 12);
-  // const inches = Math.round(totalInches % 12);
-
-  // if (feet === 0) {
-  //   return `${inches}"`;
-  // } else if (inches === 0) {
-  //   return `${feet}'`;
-  // } else {
-  //   return `${feet}' ${inches}"`;
-  // }
-
-  return (totalInches / 12).toFixed(1) + "\'";
+  return (totalInches / 12).toFixed(1) + "'";
 };
 
 export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
   const [displayLayer, setDisplayLayer] = useState(layer);
   const [isVisible, setIsVisible] = useState(false);
   const { article } = useContext(TOCContext);
+  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const [tooltipSize, setTooltipSize] = useState({ width: 0, height: 0 });
+  const tooltipRef = useState<HTMLDivElement | null>(null)[0];
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMouse({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   useEffect(() => {
     if (layer && layer.layer_name) {
-      // Show immediately when layer is set
       setDisplayLayer(layer);
       setIsVisible(true);
     } else {
@@ -47,6 +50,41 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
     }
   }, [layer]);
 
+  // Calculate position to keep tooltip on screen
+  const getTooltipPosition = () => {
+    const offset = 15;
+    const padding = 10; 
+    
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    
+    const tooltipWidth = tooltipSize.width || 288;
+    const tooltipHeight = tooltipSize.height || 200; 
+    
+    let x = mouse.x + offset;
+    let y = mouse.y + offset;
+    
+    if (x + tooltipWidth + padding > viewportWidth) {
+      x = mouse.x - tooltipWidth - offset;
+    }
+    
+    if (y + tooltipHeight + padding > viewportHeight) {
+      y = mouse.y - tooltipHeight - offset;
+    }
+    
+    if (x < padding) {
+      x = padding;
+    }
+    
+    if (y < padding) {
+      y = padding;
+    }
+    
+    return { x, y };
+  };
+
+  const position = getTooltipPosition();
+
   if (!displayLayer || !displayLayer.layer_name) {
     return <></>;
   }
@@ -56,19 +94,24 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
 
   return (
     <div
+      ref={(el) => {
+        if (el && el.offsetHeight !== tooltipSize.height) {
+          setTooltipSize({ width: el.offsetWidth, height: el.offsetHeight });
+        }
+      }}
       className="pane"
       style={{
         position: "fixed",
-        bottom: "0.5rem",
-        left: "0.5rem",
+        left: `${position.x}px`,
+        top: `${position.y}px`,
+        pointerEvents: "none",
+        zIndex: 9999,
         minWidth: "15rem",
         maxWidth: "18rem",
-        zIndex: 10,
         opacity: isVisible ? 1 : 0,
         transition: "opacity 200ms",
         border: "1px solid",
         borderTop: "none",
-        pointerEvents: "none",
         lineHeight: 1.4,
       }}
     >
@@ -79,10 +122,6 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
           borderTop: "1px solid",
         }}
       >
-        {/* <div></div>
-        <div>
-          <img src="https://cdn.sanity.io/images/qjczz6gi/production/2c604bf3ad7e9dd6f12036f4822af0f05e5c5faa-600x600.webp" height={160} />
-        </div> */}
         <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>Part</h6>
         <h6 style={{ padding: "0.5rem", textWrap: "pretty" }}>
           {last
@@ -171,24 +210,6 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
       ) : (
         <></>
       )}
-      {/* {displayLayer.normalized_size ? (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "8.25rem 1fr",
-            borderTop: "1px solid",
-          }}
-        >
-          <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>Size</h6>
-          <h6 style={{ padding: "0.5rem" }}>
-            {formatFeetInches(displayLayer.normalized_size.width)} W ×{" "}
-            {formatFeetInches(displayLayer.normalized_size.length)} L ×{" "}
-            {formatFeetInches(displayLayer.normalized_size.height)} H
-          </h6>
-        </div>
-      ) : (
-        <></>
-      )} */}
     </div>
   );
 }
