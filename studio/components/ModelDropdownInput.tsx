@@ -16,15 +16,18 @@ const ModelDropdownInput = React.forwardRef<HTMLInputElement, StringInputProps>(
   const [query, setQuery] = useState('')
 
   useEffect(() => {
-    const mapped = data.exported_layers.map((file) => ({
-      title: file.filename,
-      value: file.filename,
-    }))
+    const mapped = data.exported_layers.map((file) => {
+      const name = file.filename.replace('.glb', '').split('__')
+      return {
+        title: name[name.length - 1],
+        value: file.filename,
+      }
+    })
     setOptions(mapped)
   }, [])
 
   const filteredOptions = options.filter((option) =>
-    option.title.toLowerCase().includes(query.toLowerCase()),
+    option.value.toLowerCase().includes(query.toLowerCase()),
   )
 
   const handleChange = useCallback(
@@ -44,7 +47,12 @@ const ModelDropdownInput = React.forwardRef<HTMLInputElement, StringInputProps>(
     (option: Option) => (
       <Card as="button" padding={3} border={true}>
         <Stack space={3}>
-          <Text size={1} align={'left'}>{option.title}</Text>
+          <Text size={1} align={'left'}>
+            <em>{option.value.replace(option.title, '').replace('__.glb', '')}</em>
+          </Text>
+          <Text size={1} align={'left'}>
+            {option.title}
+          </Text>
         </Stack>
       </Card>
     ),

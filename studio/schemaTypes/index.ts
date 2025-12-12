@@ -1,11 +1,12 @@
 // import {anatomy} from './anatomy'
+// import { anatomy } from './anatomy'
 import {article} from './article'
 // import {boat} from './boat'
-import {component} from './component'
+// import {component} from './component'
 // import {connection} from './connection'
 // import {customPart} from './customPart'
-// import {location} from './location'
-import { material } from './material'
+import {location} from './location'
+import { materials, material } from './materials'
 // import {model3d} from './model3d'
 import {person} from './person'
 // import {powerBudget} from './powerBudget'
@@ -15,20 +16,15 @@ import {person} from './person'
 import { section, sections } from './sections'
 
 export const schemaTypes = [
-  // boat,
   article,
+  // boat,
   // anatomy,
+  location,
   // customPart,
-  component,
-  // connection,
+  // component,
+  materials,
   material,
-  // model3d,
-  // schematic,
   person,
-  // timeline,
-  // location,
-  // powerBudget,
-  // annotation,
   section,
   sections,
 ]

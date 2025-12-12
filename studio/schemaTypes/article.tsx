@@ -50,6 +50,9 @@ export const article = defineType({
       name: 'relatedModels',
       type: 'array',
       title: 'Related 3D model layers',
+      options: {
+        layout: 'list',
+      },
       description:
         'By default, entire section will be shown (e.g. Propulsion) or use this list to override models shown',
       validation: (Rule) =>
@@ -208,7 +211,7 @@ export const article = defineType({
                   />
                 ),
                 title,
-                subtitle: 'Edit title in Media tab'
+                subtitle: 'Edit title in Media tab',
               }
             },
           },

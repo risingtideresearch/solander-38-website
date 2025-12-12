@@ -3,15 +3,19 @@ import {SchemaIcon} from '@sanity/icons'
 import {documentation} from './shared/documentation'
 
 export const connection = defineType({
-  name: 'connection',
+  name: 'connector',
   type: 'document',
   title: 'Connection',
   icon: SchemaIcon,
   fields: [
-    // defineField({
-    //   type: 'string',
-    //   name: 'title',
-    // }),
+    defineField({
+      type: 'string',
+      name: 'title',
+    }),
+    defineField({
+      type: 'string',
+      name: 'name',
+    }),
     defineField({
       type: 'reference',
       name: 'componentFrom',
