@@ -22,6 +22,9 @@
 
   figure {
     margin: 2rem auto;
+    &.full_image {
+      margin-right: -2rem;
+    }
   }
 
   figcaption {
