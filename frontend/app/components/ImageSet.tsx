@@ -11,6 +11,7 @@ interface ImageSetProps {
 }
 
 export default function ImageSet({ assets, title }: ImageSetProps) {
+  console.log(assets[0]);
   return (
     <div className={`${styles["image-set"]}`}>
       {title && <h4>{title}</h4>}
@@ -19,7 +20,15 @@ export default function ImageSet({ assets, title }: ImageSetProps) {
       >
         {assets.map((asset, index) =>
           (asset as SanityAsset)._type === "image" ? (
-            <div key={asset._key} className={styles.photo}>
+            <div
+              key={asset._key}
+              className={`${styles.photo} ${
+                asset.asset.metadata?.dimensions?.height / 
+                asset.asset.metadata?.dimensions?.width > 1.1
+                  ? " image-set--portrait"
+                  : ""
+              }`}
+            >
               <Image
                 key={(asset as any)._key}
                 src={asset}
@@ -27,11 +36,14 @@ export default function ImageSet({ assets, title }: ImageSetProps) {
               />
             </div>
           ) : (
-            <DrawingCard
+            <div
               key={(asset as any).id}
-              drawing={asset as Drawing}
-              hideMetadata={true}
-            />
+              className={
+                asset.height / asset.width > 1.1 ? " image-set--portrait" : ""
+              }
+            >
+              <DrawingCard drawing={asset as Drawing} hideMetadata={true} />
+            </div>
           ),
         )}
       </div>

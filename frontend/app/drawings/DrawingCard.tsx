@@ -13,8 +13,7 @@ export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
     <a
       href={`/drawings/file/${drawing.uuid}`}
       className={
-        styles["drawing-card"] +
-        (drawing.height > drawing.width ? " drawing-card--portrait" : "")
+        styles["drawing-card"] 
       }
     >
       {!hideMetadata && (
