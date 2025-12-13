@@ -135,7 +135,7 @@ export const weightData = {
     quantity: 15,
     weightPerUnit: 61,
   },
-  "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__WM CABINET__watermaker cabinet.glb":
+  "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__watermaker cabinet.glb":
     {
       quantity: 1,
       weightPerUnit: 60,
@@ -219,7 +219,7 @@ export const weightData = {
       quantity: 1,
       weightPerUnit: 18,
     },
-  "CONTROL__STEERING__STEERING COMPONENTS__autopilot DD1.glb": {
+  "CONTROL__ELECTRONIC CONTROL__autopilot DD1.glb": {
     quantity: 1,
     weightPerUnit: 26.5,
   },
@@ -273,19 +273,25 @@ export const weightData = {
   "BODY__INTERNALS__stringers.glb": {
     quantity: 4,
     weightPerUnit: 20,
-  }
-  // "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 2501.8,
-  // },
-  // "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 1796.9,
-  // },
-  // "BODY__CTR BEAM__ctr beam outside surfaces.glb": {
-  //   quantity: 1,
-  //   weightPerUnit: 984.3,
-  // },
+  },
+  "PROPULSION__SIMPLIFIED STRUT.glb": {
+    quantity: 2,
+    weightPerUnit: 34,
+  },
+  "PROPULSION__SIMPLIFIED PROPELLER.glb": {
+    quantity: 2,
+    weightPerUnit: 10,
+  },
+  "CONTROL__rudder assembly__rudder shaft & foil.glb": {
+    quantity: 2,
+    weightPerUnit: 11,
+  },
+};
+
+const calculateSystemWeight = (system: string) => {
+  return Object.entries(weightData)
+    .filter(([filename]) => filename.startsWith(`${system}__`))
+    .reduce((total, [, data]) => total + data.quantity * data.weightPerUnit, 0);
 };
 
 export const systemWeightData = {
@@ -293,6 +299,6 @@ export const systemWeightData = {
     weight: 6700,
   },
   SUPERSTRUCTURE: {
-    weight: 578 + 111 + 143 + 106 + 284 + 161.5 + 58.5 + 51 + 61 + 64,
+    weight: calculateSystemWeight("SUPERSTRUCTURE"),
   },
 };

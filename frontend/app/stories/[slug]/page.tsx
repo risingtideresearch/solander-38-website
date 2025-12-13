@@ -3,8 +3,8 @@ import path from "path";
 import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
 import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
-import { slugToRhinoSystem } from "@/app/utils";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
+import { filterLayersWhenPossible } from "@/app/utils";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -30,6 +30,12 @@ export default async function Page({ params }) {
   );
   const modelsManifestData = await fs.readFile(modelsManifestPath, "utf8");
   const models_manifest = JSON.parse(modelsManifestData);
+
+  // Object.keys(weightData).forEach(layer => {
+  //   if (!models_manifest.exported_layers.find(l => l.filename == layer)) {
+  //     console.log(layer)
+  //   }
+  // })
 
   const getArticleNavigation = (sections: any, currentSlug: string) => {
     const allArticles = sections?.sections.flatMap((section: any) =>
@@ -69,48 +75,23 @@ export default async function Page({ params }) {
   );
 
   if (!dataWithMatchedDrawings.relatedModels) {
-    dataWithMatchedDrawings.relatedModels = models_manifest.exported_layers
-      .filter((layer) => {
-        if (!layer.filename || layer.file_size > 8000000) {
-          return false;
-        }
-        const system = layer.filename.split("__")[0].toLowerCase();
-        if (dataWithMatchedDrawings.section == "overview") {
-          // improve frame rate by reducing unnecessary file loads
-          return ![
-            "BODY__INTERNALS",
-            "CONTROL__STEERING__STEERING COMPONENTS__tillers",
-            "SUPERSTRUCTURE__WIREWAYS__ww parts surfs",
-            "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM",
-            "POWER ARCHITECTURE__ELEC BOARD COMPONENTS",
-            "OUTFITTING_INTERIOR__SIMPLIFIED CTR DECK TRACKS",
-            "PROPULSION__MOTOR MOUNT",
-            "PROPULSION__20W Bell Marine Motor",
-            "OUTFITTING_INTERIOR__BATTERY CMPT",
-            "WATER_HEATING SYSTEMS__TANKS_",
-            "WATER_HEATING SYSTEMS__HEAT PUMP VENTS",
-            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS",
-            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS",
-            "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base",
-            "CONTROL__STEERING__STEERING SHELVES__port dummy shelf",
-            "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch",
-            "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb",
-            "BODY__CTR BEAM__fwd beam hatches",
-            "BODY__CTR BEAM__ctr beam inside surfaces",
-            "CONTROL__STEERING__STEERING COMPONENTS__JEFA",
-            "WATER_HEATING SYSTEMS__Headhunter",
-            "CONTROL__STEERING__STEERING COMPONENTS__Washer, delri",
-            "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER",
-            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__workbench",
-            "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__GALLEY",
-            "CONTROL__STEERING__steering tunnels",
-            "CONTROL__STEERING__STEERING COMPONENTS__autopilot",
-          ].find((n) => layer.filename.startsWith(n));
-        }
+    const models =
+      dataWithMatchedDrawings.section == "overview"
+        ? filterLayersWhenPossible(models_manifest.exported_layers)
+        : models_manifest.exported_layers.filter((layer) => {
+            if (!layer.filename || layer.file_size > 8000000) {
+              return false;
+            }
+            const system = layer.filename.split("__")[0].toLowerCase();
 
-        return system == dataWithMatchedDrawings.section?.replace(" & ", "_");
-      })
-      .map((layer) => layer.filename);
+            return (
+              system == dataWithMatchedDrawings.section?.replace(" & ", "_")
+            );
+          })
+          ;
+    dataWithMatchedDrawings.relatedModels = models.map(
+      (layer) => layer.filename,
+    );
   }
   const materialsIndexPath = path.join(
     process.cwd(),

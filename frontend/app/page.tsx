@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { URLS } from "./components/Navigation";
 import styles from "./home.module.scss";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
+import { filterLayersWhenPossible } from "./utils";
 
 export default async function Page() {
   const modelsManifestPath = path.join(
@@ -13,39 +14,10 @@ export default async function Page() {
   );
   const modelsManifestData = await fs.readFile(modelsManifestPath, "utf8");
   const models_manifest = JSON.parse(modelsManifestData);
-  const layers = models_manifest.exported_layers
-    .filter(
-      (layer) =>
-        ![
-          "BODY__INTERNALS",
-          "CONTROL__STEERING__STEERING COMPONENTS__tillers",
-          "SUPERSTRUCTURE__WIREWAYS__ww parts surfs",
-          "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM",
-          "POWER ARCHITECTURE__ELEC BOARD COMPONENTS",
-          "OUTFITTING_INTERIOR__SIMPLIFIED CTR DECK TRACKS",
-          "PROPULSION__MOTOR MOUNT",
-          "PROPULSION__20W Bell Marine Motor",
-          "OUTFITTING_INTERIOR__BATTERY CMPT",
-          "WATER_HEATING SYSTEMS__TANKS_",
-          "WATER_HEATING SYSTEMS__HEAT PUMP VENTS",
-          "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS",
-          "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS",
-          "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base",
-          "CONTROL__STEERING__STEERING SHELVES__port dummy shelf",
-          "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch",
-          "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb",
-          "BODY__CTR BEAM__fwd beam hatches",
-          "BODY__CTR BEAM__ctr beam inside surfaces",
-          "CONTROL__STEERING__STEERING COMPONENTS__JEFA",
-          "WATER_HEATING SYSTEMS__Headhunter",
-          "CONTROL__STEERING__STEERING COMPONENTS__Washer, delri",
-          "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER",
-          "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__workbench",
-          "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__GALLEY",
-          "CONTROL__STEERING__steering tunnels",
-          "CONTROL__STEERING__STEERING COMPONENTS__autopilot"
-        ].find((n) => layer.filename.startsWith(n)),
-    ).map((layer) => layer.filename)
+  const layers = filterLayersWhenPossible(models_manifest.exported_layers).map(
+    (layer) => layer.filename,
+  );
+  filterLayersWhenPossible(models_manifest.exported_layers).sort((a,b) => a.file_size - b.file_size).forEach(f => console.log(f.filename, f.file_size))
   return (
     <div className={styles.home}>
       <div className={styles.header}>

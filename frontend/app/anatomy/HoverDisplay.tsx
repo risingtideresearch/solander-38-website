@@ -23,7 +23,6 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
   const { article } = useContext(TOCContext);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const [tooltipSize, setTooltipSize] = useState({ width: 0, height: 0 });
-  const tooltipRef = useState<HTMLDivElement | null>(null)[0];
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -44,7 +43,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
     } else {
       const timeout = setTimeout(() => {
         setIsVisible(false);
-      }, 200);
+      }, 50);
 
       return () => clearTimeout(timeout);
     }
@@ -53,33 +52,36 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
   // Calculate position to keep tooltip on screen
   const getTooltipPosition = () => {
     const offset = 15;
-    const padding = 10; 
-    
+    const padding = 10;
+    if (typeof window === "undefined") {
+      return { x: 0, y: 0 };
+    }
+
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    
+
     const tooltipWidth = tooltipSize.width || 288;
-    const tooltipHeight = tooltipSize.height || 200; 
-    
+    const tooltipHeight = tooltipSize.height || 200;
+
     let x = mouse.x + offset;
     let y = mouse.y + offset;
-    
+
     if (x + tooltipWidth + padding > viewportWidth) {
       x = mouse.x - tooltipWidth - offset;
     }
-    
+
     if (y + tooltipHeight + padding > viewportHeight) {
       y = mouse.y - tooltipHeight - offset;
     }
-    
+
     if (x < padding) {
       x = padding;
     }
-    
+
     if (y < padding) {
       y = padding;
     }
-    
+
     return { x, y };
   };
 
@@ -91,6 +93,11 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
 
   const parts = displayLayer.layer_name.split("::");
   const last = parts[parts.length - 1];
+
+  const roundToSignificantDigit = (num: number) => {
+    const magnitude = Math.min(Math.pow(10, Math.floor(Math.log10(num))), 100);
+    return Math.round(num / magnitude) * magnitude;
+  };
 
   return (
     <div
@@ -107,7 +114,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
         pointerEvents: "none",
         zIndex: 9999,
         minWidth: "15rem",
-        maxWidth: "18rem",
+        maxWidth: "19rem",
         opacity: isVisible ? 1 : 0,
         transition: "opacity 200ms",
         border: "1px solid",
@@ -165,7 +172,9 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
             {`${displayLayer.system} weight (lb)`}
           </h6>
           <h6 style={{ padding: "0.5rem" }}>
-            {systemWeightData[displayLayer?.system].weight}
+            {roundToSignificantDigit(
+              systemWeightData[displayLayer?.system].weight,
+            )}
           </h6>
         </div>
       ) : weightData[displayLayer?.filename] ? (
@@ -194,15 +203,20 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
             }}
           >
             <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-              {"Weight (LB)"}
+              {"Approx Wt (LB)"}
             </h6>
             <h6 style={{ padding: "0.5rem" }}>
-              {Math.round(
+              {roundToSignificantDigit(
                 weightData[displayLayer?.filename].quantity *
                   weightData[displayLayer?.filename].weightPerUnit,
               )}
               {weightData[displayLayer?.filename].quantity > 1
-                ? ` (${weightData[displayLayer?.filename].weightPerUnit} / unit)`
+                ? ` (${
+                    parseFloat((roundToSignificantDigit(
+                      weightData[displayLayer?.filename].quantity *
+                        weightData[displayLayer?.filename].weightPerUnit,
+                    ) / weightData[displayLayer?.filename].quantity).toFixed(1))
+                  } / unit)`
                 : ""}
             </h6>
           </div>
