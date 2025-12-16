@@ -123,6 +123,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
           transition: "opacity 200ms",
           border: "1px solid",
           borderTop: "none",
+          background: "#ffffffc3",
         }}
       >
         <div
@@ -256,7 +257,8 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
             transition: "opacity 200ms",
             borderLeft: "1px solid",
           }}
-        ></div>
+        >
+        </div>
       </div>
     </>
   );

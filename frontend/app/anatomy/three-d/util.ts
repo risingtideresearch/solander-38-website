@@ -136,11 +136,6 @@ export const weightData = {
     quantity: 15,
     weightPerUnit: 61,
   },
-  "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__watermaker cabinet.glb":
-    {
-      quantity: 1,
-      weightPerUnit: 60,
-    },
   "OUTFITTING_INTERIOR__Isotherm Drawer 65 - FROST FREE Refrigerator.glb": {
     quantity: 1,
     weightPerUnit: 70,

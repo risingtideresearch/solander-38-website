@@ -1963,7 +1963,7 @@
     {
       "layer_name": "CONTROL::MECHANICAL STEERING::STEERING SHELVES::P&S rudder shelf",
       "filename": "CONTROL__MECHANICAL STEERING__STEERING SHELVES__P&S rudder shelf.glb",
-      "file_size": 16376,
+      "file_size": 16396,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -4283,7 +4283,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CABINETS::watermaker cabinet",
       "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__watermaker cabinet.glb",
-      "file_size": 43980,
+      "file_size": 405328,
       "object_count": 3,
       "bounding_box": {
         "min": {
@@ -5306,9 +5306,9 @@
   ],
   "export_info": {
     "total_layers_found": 346,
-    "timestamp_start": "2025-12-12 10:49:32",
+    "timestamp_start": "2025-12-15 16:03:53",
     "format": "GLB",
-    "timestamp_end": "2025-12-12 10:56:31",
+    "timestamp_end": "2025-12-15 16:12:11",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
@@ -5316,7 +5316,7 @@
     "successful_exports": 132,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 44629908,
+    "total_file_size": 44991276,
     "units": {
       "id": 8,
       "name": "inch"

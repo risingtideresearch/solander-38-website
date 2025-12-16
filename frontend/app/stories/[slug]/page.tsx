@@ -4,7 +4,7 @@ import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
 import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
-import { filterLayersWhenPossible } from "@/app/utils";
+import { getMinimalModelSet } from "@/app/utils";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -77,7 +77,7 @@ export default async function Page({ params }) {
   if (!dataWithMatchedDrawings.relatedModels) {
     const models =
       dataWithMatchedDrawings.section == "overview"
-        ? filterLayersWhenPossible(models_manifest.exported_layers)
+        ? getMinimalModelSet(models_manifest.exported_layers)
         : models_manifest.exported_layers.filter((layer) => {
             if (!layer.filename || layer.file_size > 8000000) {
               return false;

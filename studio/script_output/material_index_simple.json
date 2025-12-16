@@ -8,6 +8,7 @@
     "Brass",
     "Bronze",
     "Carbon Fiber",
+    "Carbon Fiber Plywood Sandwich",
     "Composite Sandwich",
     "Composite Sandwich (HULL)",
     "Composite Sandwich (INTERNALS)",
@@ -221,7 +222,7 @@
       "Wood"
     ],
     "CONTROL__MECHANICAL STEERING__STEERING SHELVES__P&S rudder shelf.glb": [
-      "Composite Sandwich"
+      "Carbon Fiber Plywood Sandwich"
     ],
     "BODY__INTERNALS__stringers.glb": [
       "Composite Sandwich (INTERNALS)"
@@ -240,6 +241,9 @@
     ],
     "CONTROL__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb": [
       "Fiberglass"
+    ],
+    "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__watermaker cabinet.glb": [
+      "Wood"
     ],
     "OUTFITTING_INTERIOR__cleats.glb": [
       "Stainless Steel"

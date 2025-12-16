@@ -170,7 +170,7 @@ export default function Anatomy({ content }: IAnatomy) {
 
   return (
     <div>
-      <input
+      {/* <input
         type="text"
         placeholder="search"
         value={search}
@@ -186,7 +186,7 @@ export default function Anatomy({ content }: IAnatomy) {
           const val = e.target.value;
           setSearch(val);
         }}
-      />
+      /> */}
 
       <Canvas3D
         clippingPlanes={getClippingPlanes()}
