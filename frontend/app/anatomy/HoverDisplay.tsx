@@ -16,7 +16,11 @@ interface HoverDisplayProps {
   settings: ControlSettings;
 }
 
-export default function HoverDisplay({ layer, materials, settings }: HoverDisplayProps) {
+export default function HoverDisplay({
+  layer,
+  materials,
+  settings,
+}: HoverDisplayProps) {
   const [displayLayer, setDisplayLayer] = useState(layer);
   const [isVisible, setIsVisible] = useState(false);
   const { article } = useContext(TOCContext);
@@ -98,7 +102,7 @@ export default function HoverDisplay({ layer, materials, settings }: HoverDispla
 
   const roundToSignificantDigit = (num: number) => {
     if (settings.units == Units.Meters) {
-      num /= 2.205
+      num /= 2.205;
     }
     const magnitude = Math.min(Math.pow(10, Math.floor(Math.log10(num))), 100);
     return Math.round(num / magnitude) * magnitude;
@@ -144,7 +148,11 @@ export default function HoverDisplay({ layer, materials, settings }: HoverDispla
               .replace("mesh", "")
               .replace("simplified", "")
               .replace("approx.", "")
-              .replace("_", '"')}
+              .replace("outside", "")
+              .replace("_", '"')
+              .replace("ctr", "center")
+              .replace("bhds", "bulkheads")
+              .replace("  ", " ")}
           </h6>
         </div>
         {/* <div
@@ -189,7 +197,7 @@ export default function HoverDisplay({ layer, materials, settings }: HoverDispla
             }}
           >
             <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-              {`${displayLayer.system} weight (${settings.units == Units.Feet ? 'lb' : 'kg'})`}
+              {`${displayLayer.system} weight (${settings.units == Units.Feet ? "lb" : "kg"})`}
             </h6>
             <h6 style={{ padding: "0.5rem" }}>
               {roundToSignificantDigit(
@@ -223,7 +231,7 @@ export default function HoverDisplay({ layer, materials, settings }: HoverDispla
               }}
             >
               <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-                {`Approx Wt (${settings.units == Units.Feet ? 'lb' : 'kg'})`}
+                {`Approx Wt (${settings.units == Units.Feet ? "lb" : "kg"})`}
               </h6>
               <h6 style={{ padding: "0.5rem" }}>
                 {roundToSignificantDigit(
@@ -259,8 +267,7 @@ export default function HoverDisplay({ layer, materials, settings }: HoverDispla
             transition: "opacity 200ms",
             borderLeft: "1px solid",
           }}
-        >
-        </div>
+        ></div>
       </div>
     </>
   );
