@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { AxisSlider } from "@/app/components/AxisSlider";
 import { MdOutlineFlip } from "react-icons/md";
 
@@ -15,7 +14,7 @@ export function ClippingPlaneControls({
   loaded,
 }: ClippingPlaneControlsProps) {
   return (
-    <div style={{ position: "fixed", top: "5.5rem", right: "0.5rem" }}>
+    <div style={{ position: "fixed", top: "8rem", right: "0.5rem" }}>
       {/* <label>
           <select
             value={settings.units}

@@ -3,7 +3,7 @@
   z-index: 10;
   right: 2.5rem;
   margin-right: -1px;
-  top: 9rem;
+  top: 12rem;
   width: max-content;
   max-width: 24rem;
   padding: 0.5rem;
@@ -12,24 +12,11 @@
   border: 1px solid;
   pointer-events: none;
 
-  &__header {
-    border: 1px solid;
-    display: inline-flex;
-    flex-direction: row;
-    h6 {
-      padding: 0.5rem;
-      &:not(:last-child) {
-        border-right: 1px solid;
-        white-space: nowrap;
-      }
-    }
-  }
-
   &__button {
     position: fixed;
     backdrop-filter: none;
     background: none;
-    top: 9rem;
+    top: 12rem;
     right: 0.5rem;
 
     svg {
@@ -40,6 +27,19 @@
       background: none;
       svg {
         fill: #000;
+      }
+    }
+  }
+
+  &__header {
+    border: 1px solid;
+    display: inline-flex;
+    flex-direction: row;
+    h6 {
+      padding: 0.5rem;
+      &:not(:last-child) {
+        border-right: 1px solid;
+        white-space: nowrap;
       }
     }
   }

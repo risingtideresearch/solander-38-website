@@ -51,8 +51,9 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
 
   // Calculate position to keep tooltip on screen
   const getTooltipPosition = () => {
-    const offset = 15;
+    const offset = 0;
     const padding = 10;
+    let flip = "";
     if (typeof window === "undefined") {
       return { x: 0, y: 0 };
     }
@@ -63,15 +64,17 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
     const tooltipWidth = tooltipSize.width || 288;
     const tooltipHeight = tooltipSize.height || 200;
 
-    let x = mouse.x + offset;
-    let y = mouse.y + offset;
+    let x = Math.round(mouse.x + offset);
+    let y = 48; //mouse.y - offset - tooltipHeight;
 
     if (x + tooltipWidth + padding > viewportWidth) {
       x = mouse.x - tooltipWidth - offset;
+      flip = "x";
     }
 
     if (y + tooltipHeight + padding > viewportHeight) {
       y = mouse.y - tooltipHeight - offset;
+      flip = "y";
     }
 
     if (x < padding) {
@@ -82,7 +85,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
       y = padding;
     }
 
-    return { x, y };
+    return { x, y, flip };
   };
 
   const position = getTooltipPosition();
@@ -100,48 +103,28 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
   };
 
   return (
-    <div
-      ref={(el) => {
-        if (el && el.offsetHeight !== tooltipSize.height) {
-          setTooltipSize({ width: el.offsetWidth, height: el.offsetHeight });
-        }
-      }}
-      className="pane"
-      style={{
-        position: "fixed",
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        pointerEvents: "none",
-        zIndex: 9999,
-        minWidth: "15rem",
-        maxWidth: "19rem",
-        opacity: isVisible ? 1 : 0,
-        transition: "opacity 200ms",
-        border: "1px solid",
-        borderTop: "none",
-        lineHeight: 1.4,
-      }}
-    >
+    <>
       <div
+        ref={(el) => {
+          if (el && el.offsetHeight !== tooltipSize.height) {
+            setTooltipSize({ width: el.offsetWidth, height: el.offsetHeight });
+          }
+        }}
+        className="pane"
         style={{
-          display: "grid",
-          gridTemplateColumns: "8.25rem 1fr",
-          borderTop: "1px solid",
+          position: "fixed",
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+          pointerEvents: "none",
+          zIndex: 9999,
+          minWidth: "15rem",
+          maxWidth: "19rem",
+          opacity: isVisible ? 1 : 0,
+          transition: "opacity 200ms",
+          border: "1px solid",
+          borderTop: "none",
         }}
       >
-        <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>Part</h6>
-        <h6 style={{ padding: "0.5rem", textWrap: "pretty" }}>
-          {last
-            .toLowerCase()
-            .replace("surfs", "")
-            .replace("surfaces", "")
-            .replace("mesh", "")
-            .replace("simplified", "")
-            .replace("approx.", "")
-            .replace("_", '"')}
-        </h6>
-      </div>
-      {materials[displayLayer?.filename] ? (
         <div
           style={{
             display: "grid",
@@ -149,19 +132,19 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
             borderTop: "1px solid",
           }}
         >
-          <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-            Material
-          </h6>
-          <h6 style={{ padding: "0.5rem" }}>
-            {materials[displayLayer?.filename]?.join(", ")}
+          <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>Part</h6>
+          <h6 style={{ padding: "0.5rem", textWrap: "pretty" }}>
+            {last
+              .toLowerCase()
+              .replace("surfs", "")
+              .replace("surfaces", "")
+              .replace("mesh", "")
+              .replace("simplified", "")
+              .replace("approx.", "")
+              .replace("_", '"')}
           </h6>
         </div>
-      ) : (
-        <></>
-      )}
-
-      {systemWeightData[displayLayer?.system] && !article ? (
-        <div
+        {/* <div
           style={{
             display: "grid",
             gridTemplateColumns: "8.25rem 1fr",
@@ -169,32 +152,13 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
           }}
         >
           <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-            {`${displayLayer.system} weight (lb)`}
+            File size
           </h6>
           <h6 style={{ padding: "0.5rem" }}>
-            {roundToSignificantDigit(
-              systemWeightData[displayLayer?.system].weight,
-            )}
+            {Math.round(displayLayer?.file_size / 10000) / 100} MB
           </h6>
-        </div>
-      ) : weightData[displayLayer?.filename] ? (
-        <>
-          {weightData[displayLayer?.filename].quantity > 1 && (
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "8.25rem 1fr",
-                borderTop: "1px solid",
-              }}
-            >
-              <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-                {"Quantity"}
-              </h6>
-              <h6 style={{ padding: "0.5rem" }}>
-                {weightData[displayLayer?.filename].quantity}
-              </h6>
-            </div>
-          )}
+        </div> */}
+        {materials[displayLayer?.filename] ? (
           <div
             style={{
               display: "grid",
@@ -203,27 +167,97 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
             }}
           >
             <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-              {"Approx Wt (LB)"}
+              Material
+            </h6>
+            <h6 style={{ padding: "0.5rem" }}>
+              {materials[displayLayer?.filename]?.join(", ")}
+            </h6>
+          </div>
+        ) : (
+          <></>
+        )}
+
+        {systemWeightData[displayLayer?.system] && !article ? (
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "8.25rem 1fr",
+              borderTop: "1px solid",
+            }}
+          >
+            <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
+              {`${displayLayer.system} weight (lb)`}
             </h6>
             <h6 style={{ padding: "0.5rem" }}>
               {roundToSignificantDigit(
-                weightData[displayLayer?.filename].quantity *
-                  weightData[displayLayer?.filename].weightPerUnit,
+                systemWeightData[displayLayer?.system].weight,
               )}
-              {weightData[displayLayer?.filename].quantity > 1
-                ? ` (${
-                    parseFloat((roundToSignificantDigit(
-                      weightData[displayLayer?.filename].quantity *
-                        weightData[displayLayer?.filename].weightPerUnit,
-                    ) / weightData[displayLayer?.filename].quantity).toFixed(1))
-                  } / unit)`
-                : ""}
             </h6>
           </div>
-        </>
-      ) : (
-        <></>
-      )}
-    </div>
+        ) : weightData[displayLayer?.filename] ? (
+          <>
+            {weightData[displayLayer?.filename].quantity > 1 && (
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "8.25rem 1fr",
+                  borderTop: "1px solid",
+                }}
+              >
+                <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
+                  {"Quantity"}
+                </h6>
+                <h6 style={{ padding: "0.5rem" }}>
+                  {weightData[displayLayer?.filename].quantity}
+                </h6>
+              </div>
+            )}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "8.25rem 1fr",
+                borderTop: "1px solid",
+              }}
+            >
+              <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
+                {"Approx Wt (LB)"}
+              </h6>
+              <h6 style={{ padding: "0.5rem" }}>
+                {roundToSignificantDigit(
+                  weightData[displayLayer?.filename].quantity *
+                    weightData[displayLayer?.filename].weightPerUnit,
+                )}
+                {weightData[displayLayer?.filename].quantity > 1
+                  ? ` (${parseFloat(
+                      (
+                        roundToSignificantDigit(
+                          weightData[displayLayer?.filename].quantity *
+                            weightData[displayLayer?.filename].weightPerUnit,
+                        ) / weightData[displayLayer?.filename].quantity
+                      ).toFixed(1),
+                    )} / unit)`
+                  : ""}
+              </h6>
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
+
+        <div
+          style={{
+            position: "absolute",
+            left: position.flip == "x" ? "auto" : -1,
+            right: position.flip == "x" ? -1 : "auto",
+            top: 0,
+            width: 1,
+            height: Math.abs(mouse.y - position.y),
+            opacity: isVisible ? 1 : 0,
+            transition: "opacity 200ms",
+            borderLeft: "1px solid",
+          }}
+        ></div>
+      </div>
+    </>
   );
 }

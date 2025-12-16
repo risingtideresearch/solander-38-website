@@ -11,7 +11,6 @@ interface ImageSetProps {
 }
 
 export default function ImageSet({ assets, title }: ImageSetProps) {
-  console.log(assets[0]);
   return (
     <div className={`${styles["image-set"]}`}>
       {title && <h4>{title}</h4>}

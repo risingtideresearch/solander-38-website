@@ -17,6 +17,7 @@ import { ClippingPlaneControls } from "./ClippingPlaneControls";
 import { Article } from "@/sanity/sanity.types";
 import { Canvas3D } from "./three-d/Canvas3D";
 import { slugToRhinoSystem } from "../utils";
+import { LiaRulerHorizontalSolid } from "react-icons/lia";
 
 type AnatomyContent = {
   material_index: MaterialIndex;
@@ -112,7 +113,7 @@ export default function Anatomy({ content }: IAnatomy) {
     );
 
     return Array.from(new Set(arr));
-  }, [active, systems, search, activeAnnotation, toc.article, toc.material]);
+  }, [active, systems, search, activeAnnotation, clippingValues, toc.article, toc.material]);
 
   useEffect(() => {
     if (toc.article) {
@@ -169,7 +170,7 @@ export default function Anatomy({ content }: IAnatomy) {
 
   return (
     <div>
-      {/* <input
+      <input
         type="text"
         placeholder="search"
         value={search}
@@ -185,7 +186,7 @@ export default function Anatomy({ content }: IAnatomy) {
           const val = e.target.value;
           setSearch(val);
         }}
-      /> */}
+      />
 
       <Canvas3D
         clippingPlanes={getClippingPlanes()}
@@ -242,6 +243,20 @@ export default function Anatomy({ content }: IAnatomy) {
             />
           </svg>
         )}
+      </button>
+
+      <button
+        onClick={() =>
+          setSettings((prev) => ({ ...prev, units: prev.units == Units.Feet ? Units.Meters : Units.Feet }))
+        }
+        style={{
+          position: "absolute",
+          right: "0.5rem",
+          top: "5.5rem",
+          border: "1px solid",
+        }}
+      >
+        <LiaRulerHorizontalSolid size={18} />
       </button>
 
       <Info

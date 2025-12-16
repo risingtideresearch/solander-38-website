@@ -6,7 +6,7 @@ export enum Units {
 }
 
 export const contextualLayers = [
-  // "BODY__CTR BEAM__ctr beam inside surfaces.glb",
+  "BODY__CTR BEAM__ctr beam inside surfaces.glb",
   "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb",
   "BODY__CTR BEAM__ctr beam outside surfaces.glb",
   "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb",
@@ -43,6 +43,7 @@ export const processModels = (models_manifest: ModelManifest): Array<Model> => {
     .map((d) => ({
       filename: d.filename,
       layer_name: d.layer_name,
+      file_size: d.file_size,
       bounding_box: d.bounding_box,
       normalized_size: d.normalized_size,
       system: d.filename.split("__")[0],

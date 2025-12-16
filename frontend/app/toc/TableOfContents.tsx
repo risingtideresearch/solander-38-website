@@ -3,6 +3,7 @@
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import styles from "./toc.module.scss";
 import { createContext, useState } from "react";
+import { BiCollapseAlt } from "react-icons/bi";
 
 export const TOCContext = createContext({
   mode: "system",
@@ -40,6 +41,9 @@ export default function TableOfContents({
       value={{ mode, section, article, material, resetSection }}
     >
       <div className={styles.toc__container}>
+        {/* <button style={{ position: 'absolute', zIndex: 1, right: 1, top: 1, backdropFilter: 'none'}}>
+          <BiCollapseAlt size={16} />
+        </button> */}
         <div
           className={`toc ${styles.toc} ${outline ? `${styles.outline} pane` : ''}`}
           style={{ display: hide ? "none" : "" }}

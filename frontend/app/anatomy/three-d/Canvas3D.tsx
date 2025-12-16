@@ -219,6 +219,7 @@ export function Canvas3D({
           opacity: centered ? 1 : 0,
           transition: "opacity 500ms",
           height: height,
+          cursor: 'crosshair'
         }}
       >
         <Canvas
