@@ -14,7 +14,7 @@ export function ClippingPlaneControls({
   loaded,
 }: ClippingPlaneControlsProps) {
   return (
-    <div style={{ position: "fixed", top: "8rem", right: "0.5rem" }}>
+    <div>
       {/* <label>
           <select
             value={settings.units}
@@ -32,14 +32,19 @@ export function ClippingPlaneControls({
         </label> */}
 
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 2rem",
-          columnGap: "0.5rem",
-          alignItems: "center",
-        }}
+      // style={{
+      // }}
       >
-        <span style={{ opacity: loaded ? 1 : 0, transition: "400ms opacity" }}>
+        <span
+          style={{
+            opacity: loaded ? 1 : 0,
+            transition: "400ms opacity",
+            position: "absolute",
+            right: "100%",
+            marginRight: "0.5rem",
+            marginTop: "0.375rem",
+          }}
+        >
           <AxisSlider
             min={0}
             max={1}
@@ -47,6 +52,43 @@ export function ClippingPlaneControls({
             axis={clippingValues.axis}
             handleChange={setClippingValues}
           />
+
+          <h6
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              opacity: loaded ? 1 : 0,
+              transition: "400ms opacity",
+              marginTop: "0.5rem",
+            }}
+          >
+            {clippingValues.axis == "x" ? (
+              <>
+                <span>Stern</span>
+                <span
+                  style={{ borderTop: "1px solid", flex: "1 1 auto" }}
+                ></span>
+                <span>Bow</span>
+              </>
+            ) : clippingValues.axis == "y" ? (
+              <>
+                <span>Keel</span>
+                <span
+                  style={{ borderTop: "1px solid", flex: "1 1 auto" }}
+                ></span>
+                <span>Deck</span>
+              </>
+            ) : (
+              <>
+                <span>Port</span>
+                <span
+                  style={{ borderTop: "1px solid", flex: "1 1 auto" }}
+                ></span>
+                <span>Starboard</span>
+              </>
+            )}
+          </h6>
         </span>
         <button
           style={{ border: "1px solid" }}
@@ -68,36 +110,6 @@ export function ClippingPlaneControls({
             size={18}
           />
         </button>
-
-        <h6
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            opacity: loaded ? 1 : 0,
-            transition: "400ms opacity",
-          }}
-        >
-          {clippingValues.axis == "x" ? (
-            <>
-              <span>Stern</span>
-              <span style={{ borderTop: "1px solid", flex: "1 1 auto" }}></span>
-              <span>Bow</span>
-            </>
-          ) : clippingValues.axis == "y" ? (
-            <>
-              <span>Keel</span>
-              <span style={{ borderTop: "1px solid", flex: "1 1 auto" }}></span>
-              <span>Deck</span>
-            </>
-          ) : (
-            <>
-              <span>Port</span>
-              <span style={{ borderTop: "1px solid", flex: "1 1 auto" }}></span>
-              <span>Starboard</span>
-            </>
-          )}
-        </h6>
       </div>
     </div>
   );

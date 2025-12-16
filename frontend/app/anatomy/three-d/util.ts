@@ -38,7 +38,7 @@ export type MaterialIndex = {
 };
 
 export const processModels = (models_manifest: ModelManifest): Array<Model> => {
-  return models_manifest.exported_layers
+  const models = models_manifest.exported_layers
     .filter((d) => d.file_size > 0 && d.file_size < 100000000)
     .map((d) => ({
       filename: d.filename,
@@ -48,6 +48,8 @@ export const processModels = (models_manifest: ModelManifest): Array<Model> => {
       normalized_size: d.normalized_size,
       system: d.filename.split("__")[0],
     }));
+
+  return models;
 };
 
 export type SystemsMap = { [key: string]: { children: string[]; i: number } };

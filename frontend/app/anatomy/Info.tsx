@@ -1,13 +1,15 @@
 "use client";
 
 import { BiInfoCircle, BiX } from "react-icons/bi";
-import styles from "./info.module.scss";
+import styles from "./anatomy-controls.module.scss";
+import { useState } from "react";
 
-export default function Info({ visible, setVisible, lastUpdated }) {
+export default function Info({ lastUpdated }) {
+  const [visible, setVisible] = useState(false);
   return (
-    <>
+    <div className={styles.info}>
       {visible && (
-        <div className={`pane ${styles.info}`}>
+        <div className={`pane  ${styles.info__content}`}>
           <h6
             style={{
               margin: 0,
@@ -20,19 +22,7 @@ export default function Info({ visible, setVisible, lastUpdated }) {
             Last updated
           </h6>
 
-          {/* <button
-            onClick={() => setVisible(false)}
-            style={{
-              position: "absolute",
-              right: "0",
-              top: "0",
-              backdropFilter: "none",
-            }}
-          >
-            <BiX size={18} />
-          </button> */}
-
-          <div style={{ marginTop: '0.5rem'}}>
+          <div style={{ marginTop: "0.5rem" }}>
             <h6>{lastUpdated}</h6>
           </div>
         </div>
@@ -44,6 +34,6 @@ export default function Info({ visible, setVisible, lastUpdated }) {
       >
         <BiInfoCircle size={18} />
       </button>
-    </>
+    </div>
   );
 }

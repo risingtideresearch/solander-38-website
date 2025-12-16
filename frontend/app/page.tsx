@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import { URLS } from "./components/Navigation";
 import styles from "./home.module.scss";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
-import { getMinimalModelSet } from "./utils";
+import { getReducedModelSet } from "./utils";
 
 export default async function Page() {
   const modelsManifestPath = path.join(
@@ -14,10 +14,9 @@ export default async function Page() {
   );
   const modelsManifestData = await fs.readFile(modelsManifestPath, "utf8");
   const models_manifest = JSON.parse(modelsManifestData);
-  const layers = getMinimalModelSet(models_manifest.exported_layers).map(
+  const layers = getReducedModelSet(models_manifest.exported_layers, true).map(
     (layer) => layer.filename,
   );
-  getMinimalModelSet(models_manifest.exported_layers).sort((a,b) => a.file_size - b.file_size).forEach(f => console.log(f.filename, f.file_size))
   return (
     <div className={styles.home}>
       <div className={styles.header}>

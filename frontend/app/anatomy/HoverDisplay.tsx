@@ -4,20 +4,19 @@ import {
   MaterialIndex,
   Model,
   systemWeightData,
+  Units,
   weightData,
 } from "./three-d/util";
 import { TOCContext } from "../toc/TableOfContents";
+import { ControlSettings } from "./Anatomy";
 
 interface HoverDisplayProps {
   layer: Model | null;
   materials: MaterialIndex;
+  settings: ControlSettings;
 }
 
-const formatFeetInches = (totalInches) => {
-  return (totalInches / 12).toFixed(1) + "'";
-};
-
-export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
+export default function HoverDisplay({ layer, materials, settings }: HoverDisplayProps) {
   const [displayLayer, setDisplayLayer] = useState(layer);
   const [isVisible, setIsVisible] = useState(false);
   const { article } = useContext(TOCContext);
@@ -65,7 +64,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
     const tooltipHeight = tooltipSize.height || 200;
 
     let x = Math.round(mouse.x + offset);
-    let y = 48; //mouse.y - offset - tooltipHeight;
+    let y = 80; //mouse.y - offset - tooltipHeight;
 
     if (x + tooltipWidth + padding > viewportWidth) {
       x = mouse.x - tooltipWidth - offset;
@@ -98,6 +97,9 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
   const last = parts[parts.length - 1];
 
   const roundToSignificantDigit = (num: number) => {
+    if (settings.units == Units.Meters) {
+      num /= 2.205
+    }
     const magnitude = Math.min(Math.pow(10, Math.floor(Math.log10(num))), 100);
     return Math.round(num / magnitude) * magnitude;
   };
@@ -123,7 +125,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
           transition: "opacity 200ms",
           border: "1px solid",
           borderTop: "none",
-          background: "#ffffffc3",
+          background: "rgba(255,255,255,0.7)",
         }}
       >
         <div
@@ -187,7 +189,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
             }}
           >
             <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-              {`${displayLayer.system} weight (lb)`}
+              {`${displayLayer.system} weight (${settings.units == Units.Feet ? 'lb' : 'kg'})`}
             </h6>
             <h6 style={{ padding: "0.5rem" }}>
               {roundToSignificantDigit(
@@ -221,7 +223,7 @@ export default function HoverDisplay({ layer, materials }: HoverDisplayProps) {
               }}
             >
               <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-                {"Approx Wt (LB)"}
+                {`Approx Wt (${settings.units == Units.Feet ? 'lb' : 'kg'})`}
               </h6>
               <h6 style={{ padding: "0.5rem" }}>
                 {roundToSignificantDigit(

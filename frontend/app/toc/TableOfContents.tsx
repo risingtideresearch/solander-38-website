@@ -45,7 +45,7 @@ export default function TableOfContents({
           <BiCollapseAlt size={16} />
         </button> */}
         <div
-          className={`toc ${styles.toc} ${outline ? `${styles.outline} pane` : ''}`}
+          className={`toc ${styles.toc} ${outline ? `${styles.outline} pane` : ""}`}
           style={{ display: hide ? "none" : "" }}
         >
           {/* <h2 className="uppercase-mono">Table of Contents</h2> */}
@@ -147,7 +147,7 @@ export default function TableOfContents({
             style={{
               marginTop: "0.75rem",
               border: "1px solid",
-              width: "16.5rem",
+              width: "14rem",
             }}
           >
             <h6 style={{ padding: "0.5rem" }}>Stories</h6>
@@ -156,20 +156,18 @@ export default function TableOfContents({
                 <div
                   key={a._id}
                   style={{
-                    padding: "0 0.5rem",
+                    padding: "0.125rem 0.5rem",
                     margin: "0.5rem 0",
                     lineHeight: "1.2em",
+                    fontSize: "0.875rem",
                   }}
                 >
-                  <a
-                    style={{
-                      display: "flex",
-                      gap: "0.5rem",
-                    }}
-                    href={`/stories/${a.slug}`}
-                  >
-                    {a.title}
-                    <LiaLongArrowAltRightSolid size={18} />
+                  <a href={`/stories/${a.slug}`} style={{display: 'grid', gridTemplateColumns: '1rem 1fr', gap: '0.5rem'}}>
+                    <LiaLongArrowAltRightSolid
+                      size={18}
+                      style={{ margin: "0 0 -0.25rem 0" }}
+                    />
+                    <span>{a.title}</span>
                   </a>
                   {/* <p style={{ margin: 0, fontSize: "0.75rem" }}>{a.subtitle}</p> */}
                 </div>

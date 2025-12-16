@@ -20,13 +20,11 @@ import HoverDisplay from "../HoverDisplay";
 import { ControlSettings } from "../Anatomy";
 import { GizmoViewcube } from "./GizmoViewcube";
 
-export interface ClippingPlanes {
-  [key: string]: Plane;
-}
+export type ClippingValues = { value: [number, number]; axis: "x" | "y" | "z" };
 
 type Canvas3DProps = {
   clippingPlanes?: Array<Plane>;
-  clippingValues?: { value: [number, number]; axis: "x" | "y" | "z" };
+  clippingValues?: ClippingValues;
   filteredLayers: Array<string>;
   settings?: ControlSettings;
   boundingBox?: Box3 | null;
@@ -34,6 +32,7 @@ type Canvas3DProps = {
   materials?: MaterialIndex;
   memoModels?: Array<Model>;
   handleLoaded?: () => void;
+  loaded: boolean;
   // use for article models
   interaction?: "all" | "limited" | "none";
 };
@@ -56,6 +55,7 @@ export function Canvas3D({
   materials = {},
   memoModels = [],
   handleLoaded,
+  loaded,
 }: Canvas3DProps) {
   const groupRef = useRef<Group>(null);
   const cameraRef = useRef<Camera>(null);
@@ -219,12 +219,12 @@ export function Canvas3D({
           opacity: centered ? 1 : 0,
           transition: "opacity 500ms",
           height: height,
-          cursor: 'crosshair'
+          cursor: "crosshair",
         }}
       >
         <Canvas
           ref={canvasRef}
-          gl={{ preserveDrawingBuffer: true }}
+          gl={{ preserveDrawingBuffer: true, antialias: true }}
           camera={{ position: CAMERA_INITIAL_POSITION, fov: CAMERA_FOV }}
           onCreated={handleCanvasCreated}
           onPointerEnter={() => setAutoRotate(false)}
@@ -255,7 +255,7 @@ export function Canvas3D({
           {directionalLights}
 
           <Suspense fallback={null}>
-            {boundingBox && clippingValues && (
+            {boundingBox && clippingValues && settings.scalingLines && (
               <>
                 <ScalingLines3D
                   boundingBox={boundingBox}
@@ -316,12 +316,11 @@ export function Canvas3D({
             ref={controlsRef}
             enableDamping={false}
             autoRotate={autoRotate && !hovered && interaction != "all"}
-            autoRotateSpeed={interaction == 'none' ? 0.4 : 0.2}
+            autoRotateSpeed={interaction == "none" ? 0.4 : 0.2}
             maxDistance={50}
             minDistance={1}
             enableZoom={interaction == "all"}
             enablePan={interaction == "all"}
-            // enableRotate={interaction != "none"}
             makeDefault
           />
           {interaction == "all" && (
@@ -338,8 +337,14 @@ export function Canvas3D({
             </GizmoHelper>
           )}
         </Canvas>
-
-        <HoverDisplay layer={hovered} materials={materials} />
+        {loaded && (
+          <HoverDisplay
+            layer={hovered}
+            materials={materials}
+            settings={settings}
+          />
+        )}
+        
       </div>
     </div>
   );
