@@ -31,7 +31,7 @@ export default function RelatedArticle({
         })}
       </div> */}
         <h6 style={{ padding: "0.5rem" }}>Stories</h6>
-        <div style={{ borderTop: "1px solid"}}>
+        <div style={{ borderTop: "1px solid" }}>
           {drawingsArticleDictionary[uuid].map((article) => {
             return (
               <div
@@ -52,11 +52,13 @@ export default function RelatedArticle({
                       display: "flex",
                       alignItems: "center",
                       gap: "0.5rem",
+                      lineHeight: "1.2em",
+                      fontSize: "0.875rem",
                     }}
                     href={`/stories/${article.slug}`}
                   >
-                    {article.title}
                     <LiaLongArrowAltRightSolid size={18} />
+                    {article.title}
                   </a>
                 </p>
                 {/* <p style={{ margin: 0, fontSize: "0.75rem" }}>

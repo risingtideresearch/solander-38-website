@@ -9,6 +9,7 @@ import DrawingDropdownInput, {
 export const article = defineType({
   name: 'article',
   type: 'document',
+  title: 'Story',
   icon: RiArticleLine,
   fields: [
     defineField({
