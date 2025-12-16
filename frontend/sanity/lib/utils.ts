@@ -3,6 +3,7 @@ import { dataset, projectId, studioUrl } from "./api";
 import {
   annotationsQuery,
   articlesQuery,
+  materialsQuery,
   peopleQuery,
   searchQuery,
   sectionsQuery,
@@ -32,6 +33,16 @@ export async function fetchAnnotations(models_manifest) {
  */
 export async function fetchArticles(slug?: string) {
   const { data } = await sanityFetch({ query: articlesQuery(slug) });
+
+  return { data };
+}
+
+/**
+ *
+ * @returns
+ */
+export async function fetchMaterials() {
+  const { data } = await sanityFetch({ query: materialsQuery() });
 
   return { data };
 }

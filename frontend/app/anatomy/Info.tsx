@@ -1,7 +1,7 @@
 "use client";
 
 import { BiInfoCircle, BiX } from "react-icons/bi";
-import styles from "./anatomy-controls.module.scss";
+import styles from "./info.module.scss";
 import { useState } from "react";
 
 export default function Info({ lastUpdated }) {

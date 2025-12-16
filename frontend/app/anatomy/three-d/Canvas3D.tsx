@@ -279,7 +279,7 @@ export function Canvas3D({
                   clippingPlanes={clippingPlanes}
                   settings={{
                     transparent:
-                      settings.transparent && contextualLayers.includes(url),
+                      settings.transparent && (contextualLayers.includes(url) || url == "BODY__CTR BEAM__ctr beam inside surfaces.glb"),
                   }}
                 />
               ))}

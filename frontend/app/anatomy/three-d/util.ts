@@ -6,7 +6,7 @@ export enum Units {
 }
 
 export const contextualLayers = [
-  "BODY__CTR BEAM__ctr beam inside surfaces.glb",
+  // "BODY__CTR BEAM__ctr beam inside surfaces.glb",
   "BODY__HULLS & DECKS__MESH H&D (for website)__HULL.glb",
   "BODY__CTR BEAM__ctr beam outside surfaces.glb",
   "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb",

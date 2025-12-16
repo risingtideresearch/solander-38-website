@@ -124,13 +124,6 @@ export const connectionsQuery = `
 }
 `;
 
-export const materialsQuery = `
-*[_type=="material"] {
-    name,
-    aka[]
-}
-`;
-
 /**
  *
  */
@@ -323,6 +316,16 @@ export const sectionsQuery = (slug?: string) => {
         "section": ^.slug.current
       }
     }
+  }`;
+};
+
+/**
+ *
+ */
+export const materialsQuery = () => {
+  return `
+  *[_type=="materials"][0]{
+    ...,
   }`;
 };
 

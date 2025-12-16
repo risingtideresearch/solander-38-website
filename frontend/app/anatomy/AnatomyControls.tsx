@@ -17,7 +17,6 @@ interface IAnatomyControls {
   loaded: boolean;
   settings: ControlSettings;
   setSettings: (val: ControlSettings) => void;
-  lastUpdated: Date;
 }
 
 export default function AnatomyControls({
@@ -26,7 +25,6 @@ export default function AnatomyControls({
   loaded,
   settings,
   setSettings,
-  lastUpdated,
 }: IAnatomyControls) {
   return (
     <div className={styles.controls}>
@@ -107,8 +105,6 @@ export default function AnatomyControls({
           loaded={loaded}
         />
       </span>
-
-      <Info lastUpdated={lastUpdated} />
     </div>
   );
 }

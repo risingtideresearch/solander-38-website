@@ -16,6 +16,7 @@ import { Article } from "@/sanity/sanity.types";
 import { Canvas3D } from "./three-d/Canvas3D";
 import { getReducedModelSet, slugToRhinoSystem } from "../utils";
 import AnatomyControls from "./AnatomyControls";
+import Info from "./Info";
 
 type AnatomyContent = {
   material_index: MaterialIndex;
@@ -92,12 +93,16 @@ export default function Anatomy({ content }: IAnatomy) {
     let allModels = memoModels;
     let layerNames: string[] = allModels.map((m) => m.filename) || [];
 
-
     if (search) {
       layerNames = layerNames.filter((layer) => {
         return layer.toLowerCase().includes(search.toLowerCase());
       });
-    } else if (!active && clippingValues.value[0] == 0 && clippingValues.value[1] == 1) {
+    } else if (
+      !active &&
+      clippingValues.value[0] == 0 &&
+      clippingValues.value[1] == 1 &&
+      !settings.transparent
+    ) {
       // filter overview model when no clipping planes
       allModels = getReducedModelSet(memoModels, false);
       layerNames = allModels.map((m) => m.filename) || [];
@@ -219,8 +224,9 @@ export default function Anatomy({ content }: IAnatomy) {
         clippingValues={clippingValues}
         setClippingValues={setClippingValues}
         loaded={loaded}
-        lastUpdated={content.models_manifest.export_info.timestamp_end}
       />
+
+      <Info lastUpdated={content.models_manifest.export_info.timestamp_end} />
     </div>
   );
 }

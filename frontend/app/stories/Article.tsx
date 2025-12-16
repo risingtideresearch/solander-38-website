@@ -159,13 +159,9 @@ export default async function Article({ data, materials = [] }) {
             <em>{data.subtitle}</em>
           </p>
           <PortableText value={data.content} components={components} />
-        </div>
-      </div>
-      <div className={`section--two-col ${styles.body}`}>
-        <div>
+
           <MaterialTable materials={materials} />
         </div>
-        <div></div>
       </div>
     </main>
   );
