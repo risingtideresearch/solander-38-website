@@ -32,7 +32,7 @@ type Canvas3DProps = {
   materials?: MaterialIndex;
   memoModels?: Array<Model>;
   handleLoaded?: () => void;
-  loaded: boolean;
+  loaded?: boolean;
   // use for article models
   interaction?: "all" | "limited" | "none";
 };
