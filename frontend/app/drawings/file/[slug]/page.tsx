@@ -42,8 +42,8 @@ export default async function Page({
   return (
     <DrawingPage
       asset={drawings.files[index]}
-      next={drawings.files[index + 1] || drawings.files[drawings.files.length - 1]}
-      prev={drawings.files[index - 1] || drawings.files[0]}
+      next={drawings.files[index + 1] || drawings.files[0]}
+      prev={drawings.files[index - 1] || drawings.files[drawings.files.length - 1]}
       drawingsArticleDictionary={drawingsArticleDictionary}
     />
   );
