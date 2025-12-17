@@ -1886,10 +1886,10 @@
     "@emnapi/runtime" "^1.4.3"
     "@tybys/wasm-util" "^0.10.0"
 
-"@netlify/plugin-nextjs@^5.14.4":
-  version "5.14.4"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.14.4.tgz#2b8b386824a02e5e414bda4fb25ca7f0d8f83201"
-  integrity sha512-HnMHG0tksVoS2E6ImcX9o/EcVH1dckb8ZL1FyghKRsEPYCo+20hQ6zncd5EEOW7K22UN+n1EprCROWUmsbhYMg==
+"@netlify/plugin-nextjs@^5.15.2":
+  version "5.15.2"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.15.2.tgz#649e85c688872fd4e1e6e796bcd317bc0646400d"
+  integrity sha512-OJ+CbkAlS1ezKvP8okP5i4DGApXBPwUQ+LyapBqwOqx+A4Yl/LT8wiT16WduK0Pq10tkRxiicuQU38jUE6nxRQ==
 
 "@next/bundle-analyzer@^16.0.6":
   version "16.0.6"
