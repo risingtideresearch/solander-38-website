@@ -44,7 +44,7 @@ export default function RelatedStories({ stories }: RelatedArticlesProps) {
                     href={`/stories/${story.slug}`}
                   >
                     {story.title}
-                    <LiaLongArrowAltRightSolid size={18} />
+                    <LiaLongArrowAltRightSolid size={18} style={{flexShrink: 0}} />
                   </a>
                 </p>
               </div>

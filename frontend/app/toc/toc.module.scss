@@ -1,7 +1,5 @@
 .toc {
   padding: 0 0.5rem;
-  width: max-content;
-  width: 14rem;
   counter-reset: sublist-counter;
 
   &__container {
@@ -9,6 +7,7 @@
     z-index: 1;
     top: 5rem;
     margin-left: 0.5rem;
+    width: 14rem;
   }
   p {
     margin: 0;
