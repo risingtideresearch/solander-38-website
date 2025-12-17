@@ -31,12 +31,6 @@ export default async function Page({ params }) {
   const modelsManifestData = await fs.readFile(modelsManifestPath, "utf8");
   const models_manifest = JSON.parse(modelsManifestData);
 
-  // Object.keys(weightData).forEach(layer => {
-  //   if (!models_manifest.exported_layers.find(l => l.filename == layer)) {
-  //     console.log(layer)
-  //   }
-  // })
-
   const getArticleNavigation = (sections: any, currentSlug: string) => {
     const allArticles = sections?.sections.flatMap((section: any) =>
       (section.articles || []).map((article: any) => ({
@@ -160,7 +154,6 @@ export default async function Page({ params }) {
       </div>
       <Article
         data={dataWithMatchedDrawings}
-        navigation={navigation}
         materials={Array.from(relatedMaterials)}
       />
     </>
