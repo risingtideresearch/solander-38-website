@@ -61,7 +61,7 @@ export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>
             <DrawingMetadata drawing={asset} />
-            <div style={{ padding: "0 0.5rem" }}>
+            <div style={{ padding: "0 0.5rem 0 0" }}>
               <RelatedStories stories={drawingsArticleDictionary[asset.uuid]} />
             </div>
           </div>

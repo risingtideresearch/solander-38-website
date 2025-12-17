@@ -13,7 +13,7 @@ export default function RelatedStories({ stories }: RelatedArticlesProps) {
         style={{
           border: "1px solid",
           position: "static",
-          margin: "1rem 0",
+          margin: "1rem 0 1rem 0.5rem",
         }}
       >
         <h6 style={{ padding: "0.5rem" }}>Stories</h6>

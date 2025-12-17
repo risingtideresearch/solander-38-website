@@ -2,6 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import Drawings from "./Drawings";
 import { fetchSections } from "@/sanity/lib/utils";
+import Navigation, { URLS } from "../components/Navigation";
 
 export default async function Page() {
   const drawingsPath = path.join(
@@ -16,10 +17,13 @@ export default async function Page() {
   const sections = await fetchSections();
 
   return (
-    <Drawings
-      drawings={drawings}
-      sections={sections?.data.sections || []}
-      section={'overview'}
-    />
+    <>
+      <Navigation type={"top-bar"} active={URLS.DRAWINGS} />
+      <Drawings
+        drawings={drawings}
+        sections={sections?.data.sections || []}
+        section={"overview"}
+      />
+    </>
   );
 }

@@ -21,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${DepartureMono.variable}`}>
-        <Navigation type={'top-bar'} active={URLS.DRAWINGS} />
         <Search />
         {children}
         <Footer />

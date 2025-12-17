@@ -20,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${DepartureMono.variable}`}>
-        <Navigation active={URLS.ANATOMY} />
         <Search type='float' />
         {children}
       </body>

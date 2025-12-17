@@ -14,14 +14,14 @@ export default async function Page({
 
   const modelsManifestPath = path.join(
     process.cwd(),
-    "public/models/export_manifest.json"
+    "public/models/export_manifest.json",
   );
   const modelsManifestData = await fs.readFile(modelsManifestPath, "utf8");
   const models_manifest = JSON.parse(modelsManifestData);
 
   const materialsIndexPath = path.join(
     process.cwd(),
-    "public/script-output/material_index_simple.json"
+    "public/script-output/material_index_simple.json",
   );
   const materialsIndexData = await fs.readFile(materialsIndexPath, "utf8");
   const materials_index = JSON.parse(materialsIndexData) || {};
@@ -30,31 +30,35 @@ export default async function Page({
 
   const articles = await fetchArticles();
 
-  let defaultSection = sections.data.sections.find(section => section.slug == slug);
-  const defaultArticle = articles.data.find(article => article.slug == slug)
+  let defaultSection = sections.data.sections.find(
+    (section) => section.slug == slug,
+  );
+  const defaultArticle = articles.data.find((article) => article.slug == slug);
   if (defaultArticle) {
     defaultSection = defaultArticle.section;
   }
 
   return (
-    <div className={styles.page}>
-      <TableOfContents
-        sections={sections?.data.sections || []}
-        modes={["system"]}
-        defaultSection={defaultSection?.slug || null}
-        defaultArticle={defaultArticle || null}
-        materials={materials_index.unique_materials}
-        showArticleLink={true}
-        outline={true}
-      >
-        <Anatomy
-          content={{
-            models_manifest: models_manifest,
-            material_index: materials_index.material_index,
-            articles: articles.data
-          }}
-        />
-      </TableOfContents>
-    </div>
+    <>
+      <div className={styles.page}>
+        <TableOfContents
+          sections={sections?.data.sections || []}
+          modes={["system"]}
+          defaultSection={defaultSection?.slug || null}
+          defaultArticle={defaultArticle || null}
+          materials={materials_index.unique_materials}
+          showArticleLink={true}
+          outline={true}
+        >
+          <Anatomy
+            content={{
+              models_manifest: models_manifest,
+              material_index: materials_index.material_index,
+              articles: articles.data,
+            }}
+          />
+        </TableOfContents>
+      </div>
+    </>
   );
 }

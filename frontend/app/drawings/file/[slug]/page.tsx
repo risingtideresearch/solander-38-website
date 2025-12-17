@@ -1,8 +1,9 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { fetchArticles } from "@/sanity/lib/utils";
-import { getDrawingArticleDictionary } from "../../util";
+import { getDrawingArticleDictionary, getSlugFromDrawingGroup } from "../../util";
 import { DrawingPage } from "../../DrawingPage";
+import Navigation, { URLS } from "@/app/components/Navigation";
 
 export async function generateStaticParams() {
   const drawingsPath = path.join(
@@ -40,11 +41,14 @@ export default async function Page({
   const index = drawings.files?.findIndex((d) => d.uuid == slug)
 
   return (
+    <>
+    <Navigation type={"top-bar"} active={URLS.DRAWINGS} section={getSlugFromDrawingGroup(drawings.files[index]?.group).toLowerCase()} />
     <DrawingPage
       asset={drawings.files[index]}
       next={drawings.files[index + 1] || drawings.files[0]}
       prev={drawings.files[index - 1] || drawings.files[drawings.files.length - 1]}
       drawingsArticleDictionary={drawingsArticleDictionary}
     />
+    </>
   );
 }

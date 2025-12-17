@@ -19,10 +19,12 @@ const nav = [
   {
     url: URLS.ANATOMY,
     label: "Anatomy",
+    nav2d: true
   },
   {
     url: URLS.DRAWINGS,
     label: "Drawings",
+    nav2d: true
   },
   {
     url: URLS.PEOPLE,
@@ -33,9 +35,10 @@ const nav = [
 interface NavigationProps {
   type?: 'top-bar',
   active?: URLS,
+  section?: string | null
 }
 
-export default async function Navigation({ type, active }: NavigationProps) {
+export default function Navigation({ type, active, section }: NavigationProps) {
   return (
     <nav className={`${styles.nav} pane ${type ? styles[type] : ''}`}>
       <svg
@@ -62,7 +65,7 @@ export default async function Navigation({ type, active }: NavigationProps) {
       {nav.map((link) => (
         <a
           key={link.label}
-          href={link.url}
+          href={link.url + (section && link.nav2d ? `/${section}` : '')}
           style={{ fontWeight: active == link.url ? 600 : 400 }}
         >
           {link.label}

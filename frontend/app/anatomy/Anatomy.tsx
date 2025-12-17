@@ -17,6 +17,7 @@ import { Canvas3D } from "./three-d/Canvas3D";
 import { getReducedModelSet, slugToRhinoSystem } from "../utils";
 import AnatomyControls from "./AnatomyControls";
 import Info from "./Info";
+import Navigation, { URLS } from "../components/Navigation";
 
 type AnatomyContent = {
   material_index: MaterialIndex;
@@ -205,6 +206,8 @@ export default function Anatomy({ content }: IAnatomy) {
           setSearch(val);
         }}
       /> */}
+
+      <Navigation active={URLS.ANATOMY} section={toc.section?.slug || null} />
 
       <Canvas3D
         clippingPlanes={getClippingPlanes()}
