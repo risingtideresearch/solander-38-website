@@ -64,7 +64,7 @@ export default function HoverDisplay({
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
-    const tooltipWidth = tooltipSize.width || 288;
+    const tooltipWidth = 288;
     const tooltipHeight = tooltipSize.height || 200;
 
     let x = Math.round(mouse.x + offset);
@@ -123,8 +123,7 @@ export default function HoverDisplay({
           top: `${position.y}px`,
           pointerEvents: "none",
           zIndex: 9999,
-          minWidth: "15rem",
-          maxWidth: "19rem",
+          width: 288,
           opacity: isVisible ? 1 : 0,
           transition: "opacity 200ms",
           border: "1px solid",

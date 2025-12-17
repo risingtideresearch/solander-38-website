@@ -1,8 +1,8 @@
 import { promises as fs } from "fs";
 import path from "path";
-import Drawings from "../../Drawings";
-import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
+import { fetchArticles } from "@/sanity/lib/utils";
 import { getDrawingArticleDictionary } from "../../util";
+import { DrawingPage } from "../../DrawingPage";
 
 export async function generateStaticParams() {
   const drawingsPath = path.join(
@@ -25,7 +25,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  
+
   const drawingsPath = path.join(
     process.cwd(),
     "public/drawings/output_images/conversion_manifest.json",
@@ -35,17 +35,16 @@ export default async function Page({
 
   const drawings = JSON.parse(drawingsData);
 
-  const sections = await fetchSections();
-
   const articles = await fetchArticles();
   const drawingsArticleDictionary = getDrawingArticleDictionary(articles.data);
+  const index = drawings.files?.findIndex((d) => d.uuid == slug)
 
   return (
-    <Drawings
-      drawings={drawings}
-      defaultUUID={slug}
+    <DrawingPage
+      asset={drawings.files[index]}
+      next={drawings.files[index + 1] || drawings.files[drawings.files.length - 1]}
+      prev={drawings.files[index - 1] || drawings.files[0]}
       drawingsArticleDictionary={drawingsArticleDictionary}
-      sections={sections?.data.sections || []}
     />
   );
 }

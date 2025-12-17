@@ -1,9 +1,8 @@
 "use client";
 
-import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import styles from "./toc.module.scss";
 import { createContext, useState } from "react";
-import { BiCollapseAlt } from "react-icons/bi";
+import RelatedStories from "../drawings/RelatedStories";
 
 export const TOCContext = createContext({
   mode: "system",
@@ -139,43 +138,10 @@ export default function TableOfContents({
             <></>
           )}
         </div>
-        {showArticleLink &&
-        mode == "system" &&
-        (article ? [article] : section.articles || []).length > 0 ? (
-          <div
-            className="pane"
-            style={{
-              marginTop: "0.75rem",
-              border: "1px solid",
-              width: "14rem",
-            }}
-          >
-            <h6 style={{ padding: "0.5rem" }}>Stories</h6>
-            <div style={{ borderTop: "1px solid" }}>
-              {(article ? [article] : section.articles || []).map((a) => (
-                <div
-                  key={a._id}
-                  style={{
-                    padding: "0.125rem 0.5rem",
-                    margin: "0.5rem 0",
-                    lineHeight: "1.2em",
-                    fontSize: "0.875rem",
-                  }}
-                >
-                  <a href={`/stories/${a.slug}`} style={{display: 'grid', gridTemplateColumns: '1rem 1fr', gap: '0.5rem'}}>
-                    <LiaLongArrowAltRightSolid
-                      size={18}
-                      style={{ margin: "0 0 -0.25rem 0" }}
-                    />
-                    <span>{a.title}</span>
-                  </a>
-                  {/* <p style={{ margin: 0, fontSize: "0.75rem" }}>{a.subtitle}</p> */}
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <></>
+        {showArticleLink && mode == "system" && (
+          <RelatedStories
+            stories={article ? [article] : section.articles || []}
+          />
         )}
       </div>
       {children}

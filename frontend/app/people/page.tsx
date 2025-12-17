@@ -1,5 +1,5 @@
 import { fetchPeople, fetchSections } from "@/sanity/lib/utils";
-import styles from './people.module.scss';
+import styles from "./people.module.scss";
 
 export default async function Page() {
   const people = await fetchPeople();
@@ -28,9 +28,9 @@ export default async function Page() {
       <main>
         <section className="section--two-col">
           <div>
-            <h6 style={{ textAlign: "right", margin: "0.625rem 0" }}>People</h6>
+            {/* <h6 style={{ textAlign: "right", margin: "0.625rem 0" }}>People</h6> */}
           </div>
-          <div style={{ padding: '0.5rem'}}>
+          <div style={{ padding: "0.5rem" }}>
             {people.data
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((person) => {
@@ -43,74 +43,62 @@ export default async function Page() {
                   >
                     <p style={{ margin: 0 }}>{person.name}</p>
                     {person.articlesAsAuthor.length > 0 ? (
-                      <div
-                        style={{
-                          display: "grid",
-                          gridTemplateColumns: "8rem 1fr",
-                          alignItems: "center",
-                        }}
-                      >
-                        <h6>Authored</h6>
+                      <div>
                         <p style={{ margin: 0 }}>
-                          {person.articlesAsAuthor.map((article, i, all) => (
-                            <span style={{ margin: 0 }} key={article._id}>
-                              <a href={`/stories/${article.slug}`}>
-                                <span
-                                  style={{
-                                    fontSize: "0.75rem",
-                                    textTransform: "uppercase",
-                                  }}
-                                >
-                                  {getArticleId(article.slug)}
-                                </span>{" "}
-                                {article.title}
-                              </a>
-                              {i < all.length - 1 ? (
-                                <span>,&nbsp;</span>
-                              ) : (
-                                <></>
-                              )}
-                            </span>
-                          ))}
+                          {person.articlesAsAuthor
+                            .sort((a, b) =>
+                              getArticleId(a.slug).localeCompare(
+                                getArticleId(b.slug),
+                              ),
+                            )
+                            .map((article, i, all) => (
+                              <div style={{ margin: 0 }} key={article._id}>
+                                <a href={`/stories/${article.slug}`}>
+                                  <span
+                                    style={{
+                                      fontSize: "0.75rem",
+                                      textTransform: "uppercase",
+                                    }}
+                                  >
+                                    {getArticleId(article.slug)}
+                                  </span>{" "}
+                                  {article.title}
+                                </a>
+                              </div>
+                            ))}
                         </p>
                       </div>
                     ) : (
-                      <></>
+                      <div></div>
                     )}
                     {person.articlesMentioned.length > 0 ? (
-                      <div
-                        style={{
-                          display: "grid",
-                          gridTemplateColumns: "8rem 1fr",
-                          alignItems: "center",
-                        }}
-                      >
-                        <h6>Part of</h6>
+                      <div>
                         <p style={{ margin: 0 }}>
-                          {person.articlesMentioned.map((article, i, all) => (
-                            <span style={{ margin: 0 }} key={article._id}>
-                              <a href={`/stories/${article.slug}`}>
-                                <span
-                                  style={{
-                                    fontSize: "0.75rem",
-                                    textTransform: "uppercase",
-                                  }}
-                                >
-                                  {getArticleId(article.slug)}
-                                </span>{" "}
-                                {article.title}
-                              </a>
-                              {i < all.length - 1 ? (
-                                <span>,&nbsp;</span>
-                              ) : (
-                                <></>
-                              )}
-                            </span>
-                          ))}
+                          {person.articlesMentioned
+                            .sort((a, b) =>
+                              getArticleId(a.slug).localeCompare(
+                                getArticleId(b.slug),
+                              ),
+                            )
+                            .map((article, i, all) => (
+                              <div style={{ margin: 0 }} key={article._id}>
+                                <a href={`/stories/${article.slug}`}>
+                                  <span
+                                    style={{
+                                      fontSize: "0.75rem",
+                                      textTransform: "uppercase",
+                                    }}
+                                  >
+                                    {getArticleId(article.slug)}
+                                  </span>{" "}
+                                  {article.title}
+                                </a>
+                              </div>
+                            ))}
                         </p>
                       </div>
                     ) : (
-                      <></>
+                      <div></div>
                     )}
                   </div>
                 );

@@ -1,9 +1,28 @@
 import { promises as fs } from "fs";
 import path from "path";
-import Drawings from "./Drawings";
+import Drawings from "../Drawings";
 import { fetchSections } from "@/sanity/lib/utils";
 
-export default async function Page() {
+export async function generateStaticParams() {
+  return [
+    {slug: 'overview'},
+    {slug: 'body'},
+    {slug: 'power-architecture'},
+    {slug: 'superstructure'},
+    {slug: 'control'},
+    {slug: 'propulsion'},
+    {slug: 'water-heating-systems'},
+    {slug: 'outfitting-interior'},
+  ]
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  
   const drawingsPath = path.join(
     process.cwd(),
     "public/drawings/output_images/conversion_manifest.json",
@@ -19,7 +38,7 @@ export default async function Page() {
     <Drawings
       drawings={drawings}
       sections={sections?.data.sections || []}
-      section={'overview'}
+      section={slug || 'overview'}
     />
   );
 }

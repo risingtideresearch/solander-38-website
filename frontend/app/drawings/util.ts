@@ -14,7 +14,10 @@ export type DrawingsArticleDictionary = {
     };
   }>;
 };
-export function getDrawingArticleDictionary(articles: Array<Article>): DrawingsArticleDictionary {
+
+export function getDrawingArticleDictionary(
+  articles: Array<Article>,
+): DrawingsArticleDictionary {
   const dictionary = {};
 
   articles.forEach((article) => {
@@ -38,4 +41,8 @@ export function getDrawingArticleDictionary(articles: Array<Article>): DrawingsA
   });
 
   return dictionary;
+}
+
+export function getSlugFromDrawingGroup(group: string): string {
+  return group.replace(" & ", "-").replaceAll(" ", "-");
 }

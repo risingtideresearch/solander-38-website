@@ -1,22 +1,6 @@
-import { useEffect } from "react";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 
-export default function DrawingNav({ next, prev, handleNext, handlePrev }) {
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft" && prev) {
-        handlePrev();
-      } else if (e.key === "ArrowRight" && next) {
-        handleNext();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [prev, next]);
+export default function DrawingNav({ next, prev }) {
   return (
     <div style={{ borderBottom: "1px solid", marginTop: "2rem" }}>
       <div
@@ -33,31 +17,21 @@ export default function DrawingNav({ next, prev, handleNext, handlePrev }) {
         {prev && (
           <div>
             <a
-              onClick={(e) => {
-                e.stopPropagation();
-                handlePrev();
-              }}
+              href={`/drawings/file/${prev.uuid}`}
               style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
             >
               <LiaArrowLeftSolid size={18} />
-              <h6>
-                prev
-              </h6>
+              <h6>prev</h6>
             </a>
           </div>
         )}
         {next && (
           <div>
             <a
-              onClick={(e) => {
-                e.stopPropagation();
-                handleNext();
-              }}
+              href={`/drawings/file/${next.uuid}`}
               style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
             >
-              <h6>
-                next
-              </h6>
+              <h6>next</h6>
               <LiaArrowRightSolid size={18} />
             </a>
           </div>

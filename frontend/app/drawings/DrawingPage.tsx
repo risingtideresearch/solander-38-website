@@ -9,7 +9,7 @@ import imageSetStyles from "./../components/image-set.module.scss";
 import { Image } from "../components/Image";
 import { formatDate } from "../utils";
 import DrawingMetadata from "./DrawingMetadata";
-import RelatedArticles from "./RelatedArticles";
+import RelatedStories from "./RelatedStories";
 import DrawingNav from "./DrawingNav";
 
 function parseDateFromDescription(str: string | null | undefined): Date | null {
@@ -53,14 +53,7 @@ function getSanityImageId(asset): string {
   return "IM-" + asset._key.slice(0, 5).toUpperCase();
 }
 
-export function DrawingPage({
-  asset,
-  next,
-  prev,
-  handleNext,
-  handlePrev,
-  drawingsArticleDictionary,
-}) {
+export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
   if (!asset) {
     return <></>;
   }
@@ -69,20 +62,14 @@ export function DrawingPage({
 
   return (
     <>
-      <DrawingNav
-        prev={prev}
-        next={next}
-        handlePrev={handlePrev}
-        handleNext={handleNext}
-      />
+      <DrawingNav prev={prev} next={next} />
       <div className={`section--two-col ${styles["drawing-page"]}`}>
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>
             <DrawingMetadata drawing={asset} />
-            <RelatedArticles
-              uuid={asset.uuid}
-              drawingsArticleDictionary={drawingsArticleDictionary}
-            />
+            <div style={{ padding: "0 0.5rem" }}>
+              <RelatedStories stories={drawingsArticleDictionary[asset.uuid]} />
+            </div>
           </div>
         </div>
         <div>

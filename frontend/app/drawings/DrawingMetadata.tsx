@@ -1,6 +1,7 @@
 import styles from "./../stories/article.module.scss";
 import { formatDate } from "../utils";
 import { LiaDownloadSolid } from "react-icons/lia";
+import { getSlugFromDrawingGroup } from "./util";
 
 export default function DrawingMetadata({ drawing }) {
   return (
@@ -14,7 +15,7 @@ export default function DrawingMetadata({ drawing }) {
         {drawing.date_info ? formatDate(drawing.date_info.date) : "<no date>"}
       </h6>
       <h6>System</h6>
-      <h6>{drawing.group}</h6>
+      <h6><a href={`/drawings/${getSlugFromDrawingGroup(drawing.group).toLowerCase()}`}>{drawing.group}</a></h6>
       <h6>Download</h6>
       <h6>
         <a

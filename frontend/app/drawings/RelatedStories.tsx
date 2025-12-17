@@ -1,43 +1,29 @@
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
-import { DrawingsArticleDictionary } from "./util";
-import styles from "./../stories/page.module.scss";
+import { Article } from "@/sanity/sanity.types";
 
 interface RelatedArticlesProps {
-  uuid: string;
-  drawingsArticleDictionary: DrawingsArticleDictionary;
+  stories: Array<Article>;
 }
 
-export default function RelatedArticle({
-  uuid,
-  drawingsArticleDictionary,
-}: RelatedArticlesProps) {
-  if (drawingsArticleDictionary[uuid]) {
+export default function RelatedStories({ stories }: RelatedArticlesProps) {
+  if (stories && stories.length > 0) {
     return (
       <div
-        // className={styles.page__metadata}
+        className="pane"
         style={{
           border: "1px solid",
           position: "static",
-          margin: "1rem 0.5rem",
+          margin: "1rem 0",
         }}
       >
-        {/* {drawingsArticleDictionary[uuid].map((article) => {
-          return (
-            <div key={article._id}>
-              <h6>Article</h6>
-              <a href={`/stories/${article.slug}`}><h6>{article.title}</h6></a> 
-            </div>
-          );
-        })}
-      </div> */}
         <h6 style={{ padding: "0.5rem" }}>Stories</h6>
         <div style={{ borderTop: "1px solid" }}>
-          {drawingsArticleDictionary[uuid].map((article) => {
+          {stories.map((story: Article) => {
             return (
               <div
-                key={article._id}
+                key={story._id}
                 style={{
-                  padding: "0.5rem",
+                  margin: "0.5rem",
                 }}
               >
                 <p
@@ -55,15 +41,12 @@ export default function RelatedArticle({
                       lineHeight: "1.2em",
                       fontSize: "0.875rem",
                     }}
-                    href={`/stories/${article.slug}`}
+                    href={`/stories/${story.slug}`}
                   >
+                    {story.title}
                     <LiaLongArrowAltRightSolid size={18} />
-                    {article.title}
                   </a>
                 </p>
-                {/* <p style={{ margin: 0, fontSize: "0.75rem" }}>
-                  {article.subtitle}
-                </p> */}
               </div>
             );
           })}

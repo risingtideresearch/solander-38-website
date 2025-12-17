@@ -6,7 +6,7 @@ export default async function MaterialTable({ materials }) {
 
   return (
     <div>
-      <h2 style={{}}>Significant materials</h2>
+      <h2 style={{}}>Materials</h2>
       <div className={`${styles.materials}`}>
         {materials
           .sort((a, b) => a.localeCompare(b))

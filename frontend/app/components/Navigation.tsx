@@ -31,7 +31,7 @@ const nav = [
 ];
 
 interface NavigationProps {
-  type?: string,
+  type?: 'top-bar',
   active?: URLS,
 }
 

@@ -1,42 +1,44 @@
-"use client";
-
-import { useState } from "react";
 import { Drawing } from "./types";
 import DrawingsGallery from "./DrawingsGallery";
-import { DrawingsArticleDictionary } from "./util";
 import { Section } from "@/sanity/sanity.types";
-import TableOfContents from "../toc/TableOfContents";
+import styles from "./../toc/toc.module.scss";
 
 interface DrawingsProps {
   drawings: {
     files: Array<Drawing>;
   };
   defaultUUID?: string;
-  drawingsArticleDictionary: DrawingsArticleDictionary;
+  section?: string;
   sections: Array<Section>;
 }
 
-export default function Drawings({
+export default async function Drawings({
   drawings,
-  defaultUUID,
-  drawingsArticleDictionary,
   sections,
+  section,
 }: DrawingsProps) {
-  const [search, setSearch] = useState("");
-  const [focusUUID, setFocusUUID] = useState<string | null>(
-    defaultUUID || null,
-  );
-  
   return (
-    <TableOfContents sections={sections} hide={!!focusUUID} showArticles={false}>
-      <DrawingsGallery
-        drawings={drawings}
-        search={search}
-        drawingsArticleDictionary={drawingsArticleDictionary}
-        defaultUUID={defaultUUID}
-        focusUUID={focusUUID}
-        setFocusUUID={setFocusUUID}
-      />
-    </TableOfContents>
+    <div className="section--two-col">
+      <div>
+        <div className={styles.toc__container}>
+          <div className={`${styles.toc}`}>
+            <ol>
+              {sections.map((s) => {
+                return (
+                  <li style={{ cursor: "pointer" }} key={s.name}>
+                    <a href={`/drawings/${s.slug}`}>
+                      <h6 style={{ fontWeight: s.slug == section ? 600 : 400 }}>
+                        {s.name}
+                      </h6>
+                    </a>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </div>
+      </div>
+      <DrawingsGallery drawings={drawings} section={section} />
+    </div>
   );
 }
