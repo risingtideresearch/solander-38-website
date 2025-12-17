@@ -127,7 +127,7 @@ export default function Anatomy({ content }: IAnatomy) {
     );
 
     return Array.from(new Set(layerNames));
-  }, [active, systems, search, clippingValues, toc.article, toc.material]);
+  }, [active, systems, search, clippingValues, settings.transparent, toc.article, toc.material]);
 
   useEffect(() => {
     if (toc.article) {
