@@ -1,11 +1,12 @@
 "use client";
 
 import { Drawing } from "./types";
-import styles from "./styles.module.scss";
+import styles from "./drawings.module.scss";
 import { formatDate } from "../utils";
 
 interface IDrawingCard {
   drawing: Drawing;
+  hideMetadata?: boolean;
 }
 
 export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {

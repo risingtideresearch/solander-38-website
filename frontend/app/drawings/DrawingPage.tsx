@@ -1,10 +1,4 @@
-import {
-  LiaArrowLeftSolid,
-  LiaArrowRightSolid,
-  LiaDownloadSolid,
-  LiaLinkSolid,
-} from "react-icons/lia";
-import styles from "./styles.module.scss";
+import styles from "./drawings.module.scss";
 import imageSetStyles from "./../components/image-set.module.scss";
 import { Image } from "../components/Image";
 import { formatDate } from "../utils";
