@@ -7,7 +7,7 @@ export function searchDrawings(drawings, query: string): Array<unknown> {
     .filter(
       (file: Drawing) =>
         file.clean_filename.toLowerCase().includes(lowerQuery) ||
-        file.extracted_text?.toLowerCase().includes(lowerQuery) ||
+        // file.extracted_text?.toLowerCase().includes(lowerQuery) ||
         file.id.includes(lowerQuery),
     )
     .map((file: Drawing) => {

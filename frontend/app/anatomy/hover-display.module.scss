@@ -1,0 +1,53 @@
+.tooltip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 304px;
+  opacity: 0;
+  transition: opacity 200ms;
+  border: 1px solid;
+  border-top: none;
+
+  &--visible {
+    opacity: 1;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 8.25rem 1fr;
+  border-top: 1px solid;
+}
+
+.cell {
+  padding: 0.5rem;
+
+  &--label {
+    border-right: 1px solid;
+  }
+
+  &--value {
+    text-wrap: pretty;
+  }
+}
+
+.connector {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  opacity: 0;
+  transition: opacity 200ms;
+  border-left: 1px solid;
+
+  &--visible {
+    opacity: 1;
+  }
+
+  &--left {
+    left: -1px;
+  }
+
+  &--right {
+    right: -1px;
+  }
+}

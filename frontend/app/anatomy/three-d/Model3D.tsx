@@ -2,13 +2,12 @@
 import React, { useEffect, useRef, useMemo, useCallback } from "react";
 import { useGLTF } from "@react-three/drei";
 import { DoubleSide, Mesh, Plane, Color, Group } from "three";
-import { ControlSettings } from "../Anatomy";
 
 type Model3DProps = {
   url: string;
   onLoad?: () => void;
   clippingPlanes?: Plane[];
-  settings: ControlSettings;
+  transparent: boolean;
 };
 
 const ORIGINAL_POSITION = [0, 0, 0] as const;
@@ -19,7 +18,7 @@ export function Model3D({
   url,
   onLoad,
   clippingPlanes = [],
-  settings,
+  transparent,
 }: Model3DProps) {
   const { scene } = useGLTF("/models/" + url);
 
@@ -31,7 +30,7 @@ export function Model3D({
   const configureMaterial = useCallback(
     (mat) => {
       mat.side = DoubleSide;
-      if (!settings.transparent) {
+      if (!transparent) {
         mat.clippingPlanes = clippingPlanes;
       }
 
@@ -49,7 +48,7 @@ export function Model3D({
         }
       }
     },
-    [clippingPlanes, settings],
+    [clippingPlanes, transparent],
   );
 
   const configureMesh = useCallback(
@@ -102,14 +101,14 @@ export function Model3D({
             mat.userData.originalColor = mat.color.clone();
           }
 
-          mat.transparent = settings.transparent || false;
-          mat.depthWrite = !settings.transparent;
-          mat.opacity = settings.transparent
+          mat.transparent = transparent || false;
+          mat.depthWrite = !transparent;
+          mat.opacity = transparent
             ? TRANSPARENT_OPACITY
             : OPAQUE_OPACITY;
-          mat.clippingPlanes = settings.transparent ? [] : clippingPlanes;
+          mat.clippingPlanes = transparent ? [] : clippingPlanes;
 
-          if (settings.transparent) {
+          if (transparent) {
             mat.color.set(0xf0f8ff);
           } else {
             mat.color.copy(mat.userData.originalColor);
@@ -117,7 +116,7 @@ export function Model3D({
         });
       }
     });
-  }, [scene, settings.transparent, clippingPlanes]);
+  }, [scene, transparent, clippingPlanes]);
 
   return (
     <primitive

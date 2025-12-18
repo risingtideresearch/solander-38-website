@@ -6,6 +6,7 @@ import { URLS } from "./components/Navigation";
 import styles from "./home.module.scss";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { getReducedModelSet } from "./utils";
+import Logo from "./components/Logo";
 
 export default async function Page() {
   const modelsManifestPath = path.join(
@@ -23,8 +24,9 @@ export default async function Page() {
         <div className={styles.hero}>
           <div className={styles.title}>
             <h1>Solander 38</h1>
-            <h6>
-              <svg
+            <Logo />
+            {/* <h6> */}
+            {/* <svg
                 width="59"
                 height="78"
                 viewBox="0 0 59 78"
@@ -44,8 +46,8 @@ export default async function Page() {
                   fill="#000"
                 />
               </svg>
-              Rising Tide Research Foundation
-            </h6>
+              Rising Tide Research Foundation */}
+            {/* </h6> */}
           </div>
           {/* <img
             src="/images/solander-38-4.png"
@@ -56,7 +58,7 @@ export default async function Page() {
           /> */}
           <div>
             <Canvas3D
-              height={"20rem"}
+              height={"24rem"}
               filteredLayers={layers}
               settings={{
                 transparent: false,
@@ -81,6 +83,10 @@ export default async function Page() {
             Drawings <LiaLongArrowAltRightSolid size={18} />{" "}
           </a>
           <h6>Library of fabrication plans</h6>
+          <a href={URLS.PHOTOS}>
+            Photos <LiaLongArrowAltRightSolid size={18} />{" "}
+          </a>
+          <h6>Library of photos</h6>
           <a href={URLS.PEOPLE}>
             People <LiaLongArrowAltRightSolid size={18} />{" "}
           </a>

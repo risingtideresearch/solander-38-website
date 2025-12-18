@@ -43,11 +43,9 @@ export default async function Page({
       <div className={styles.page}>
         <TableOfContents
           sections={sections?.data.sections || []}
-          modes={["system"]}
           defaultSection={defaultSection?.slug || null}
           defaultArticle={defaultArticle || null}
           materials={materials_index.unique_materials}
-          showArticleLink={true}
           outline={true}
         >
           <Anatomy

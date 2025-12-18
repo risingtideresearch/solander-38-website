@@ -2,11 +2,14 @@
   position: fixed;
   display: flex;
   gap: 2rem;
+  height: 2rem;
   padding: 0.5rem;
   z-index: 10;
   border: 1px solid var(--foreground);
-  top: 0.5rem;
-  left: 0.5rem;
+  border-top: none;
+  border-left: none;
+  top: 0;
+  left: 0;
 
   a {
     color: var(--foreground);
@@ -37,6 +40,4 @@
   padding: 0.5rem 5rem 0.5625rem 0.5rem;
   border: none;
   border-bottom: 1px solid;
-  backdrop-filter: none;
-  background: #ffffff;
 }

@@ -4,8 +4,6 @@ import { Model } from "./anatomy/three-d/util";
  * Format dates consistently
  */
 export function formatDate(date: string | Date) {
-  // return new Date(date).toLocaleDateString();
-
   date = new Date(date);
 
   const day = date.getDate();
@@ -18,7 +16,12 @@ export function formatDate(date: string | Date) {
   return `${year}–${paddedMonth}–${paddedDay}`;
 }
 
-export const slugToRhinoSystem = (slug: string) => {
+/**
+ * Helper function for Rhino to Sanity associations
+ * @param slug 
+ * @returns 
+ */
+export const slugToRhinoSystem = (slug: string): string => {
   switch (slug) {
     case "water-heating-systems":
       return "water_heating systems".toUpperCase();

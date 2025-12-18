@@ -277,10 +277,13 @@ export function Canvas3D({
                   url={url}
                   onLoad={() => handleModelLoad(url)}
                   clippingPlanes={clippingPlanes}
-                  settings={{
-                    transparent:
-                      settings.transparent && (contextualLayers.includes(url) || url == "BODY__CTR BEAM__ctr beam inside surfaces.glb"),
-                  }}
+                  transparent={
+                    (settings.transparent &&
+                      (contextualLayers.includes(url) ||
+                        url ==
+                          "BODY__CTR BEAM__ctr beam inside surfaces.glb")) ||
+                    false
+                  }
                 />
               ))}
             </group>
@@ -344,7 +347,6 @@ export function Canvas3D({
             settings={settings}
           />
         )}
-        
       </div>
     </div>
   );

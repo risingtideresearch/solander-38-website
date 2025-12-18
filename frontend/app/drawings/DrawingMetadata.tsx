@@ -2,8 +2,9 @@ import styles from "./../stories/article.module.scss";
 import { formatDate } from "../utils";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { getSlugFromDrawingGroup } from "./util";
+import { Drawing } from "./types";
 
-export default function DrawingMetadata({ drawing }) {
+export default function DrawingMetadata({ drawing }: {drawing: Drawing}) {
   return (
     <div className={`${styles.metadata}`}>
       <h6>Name</h6>
@@ -35,6 +36,8 @@ export default function DrawingMetadata({ drawing }) {
           <LiaDownloadSolid size={16} />
         </a>
       </h6>
+      {/* <h6>Text</h6>
+      <p style={{ textTransform: 'lowercase', fontSize: '0.75rem'}}>{drawing.extracted_text}</p> */}
     </div>
   );
 }

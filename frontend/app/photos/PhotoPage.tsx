@@ -17,7 +17,7 @@ export function PhotoPage({ asset, next, prev }) {
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>
             <PhotoMetadata asset={asset} />
-            <div style={{ padding: "0 0.5rem 0 0" }}>
+            <div>
               <RelatedStories stories={asset.usedInArticles} />
             </div>
           </div>

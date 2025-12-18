@@ -9,6 +9,7 @@ import {
 } from "./three-d/util";
 import { TOCContext } from "../toc/TableOfContents";
 import { ControlSettings } from "./Anatomy";
+import styles from "./hover-display.module.scss";
 
 interface HoverDisplayProps {
   layer: Model | null;
@@ -52,7 +53,7 @@ export default function HoverDisplay({
     }
   }, [layer]);
 
-  // Calculate position to keep tooltip on screen
+  const tooltipWidth = 304;
   const getTooltipPosition = () => {
     const offset = 0;
     const padding = 10;
@@ -64,11 +65,10 @@ export default function HoverDisplay({
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
-    const tooltipWidth = 288;
     const tooltipHeight = tooltipSize.height || 200;
 
     let x = Math.round(mouse.x + offset);
-    let y = 80; //mouse.y - offset - tooltipHeight;
+    let y = 80;
 
     if (x + tooltipWidth + padding > viewportWidth) {
       x = mouse.x - tooltipWidth - offset;
@@ -116,30 +116,16 @@ export default function HoverDisplay({
             setTooltipSize({ width: el.offsetWidth, height: el.offsetHeight });
           }
         }}
-        className="pane"
+        className={`pane ${styles.tooltip} ${isVisible ? styles['tooltip--visible'] : ''}`}
         style={{
-          position: "fixed",
           left: `${position.x}px`,
           top: `${position.y}px`,
-          pointerEvents: "none",
-          zIndex: 9999,
-          width: 288,
-          opacity: isVisible ? 1 : 0,
-          transition: "opacity 200ms",
-          border: "1px solid",
-          borderTop: "none",
-          background: "rgba(255,255,255,0.7)",
+          width: tooltipWidth,
         }}
       >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "8.25rem 1fr",
-            borderTop: "1px solid",
-          }}
-        >
-          <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>Part</h6>
-          <h6 style={{ padding: "0.5rem", textWrap: "pretty" }}>
+        <div className={styles.row}>
+          <h6 className={`${styles.cell} ${styles['cell--label']}`}>Part</h6>
+          <h6 className={`${styles.cell} ${styles['cell--value']}`}>
             {last
               .toLowerCase()
               .replace(
@@ -152,32 +138,13 @@ export default function HoverDisplay({
               .replace(/\s{2,}/g, " ")}
           </h6>
         </div>
-        {/* <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "8.25rem 1fr",
-            borderTop: "1px solid",
-          }}
-        >
-          <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
-            File size
-          </h6>
-          <h6 style={{ padding: "0.5rem" }}>
-            {Math.round(displayLayer?.file_size / 10000) / 100} MB
-          </h6>
-        </div> */}
+
         {materials[displayLayer?.filename] ? (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "8.25rem 1fr",
-              borderTop: "1px solid",
-            }}
-          >
-            <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
+          <div className={styles.row}>
+            <h6 className={`${styles.cell} ${styles['cell--label']}`}>
               Material
             </h6>
-            <h6 style={{ padding: "0.5rem" }}>
+            <h6 className={styles.cell}>
               {materials[displayLayer?.filename]?.join(", ")}
             </h6>
           </div>
@@ -186,17 +153,11 @@ export default function HoverDisplay({
         )}
 
         {systemWeightData[displayLayer?.system] && !article ? (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "8.25rem 1fr",
-              borderTop: "1px solid",
-            }}
-          >
-            <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
+          <div className={styles.row}>
+            <h6 className={`${styles.cell} ${styles['cell--label']}`}>
               {`${displayLayer.system} weight (${settings.units == Units.Feet ? "lb" : "kg"})`}
             </h6>
-            <h6 style={{ padding: "0.5rem" }}>
+            <h6 className={styles.cell}>
               {roundToSignificantDigit(
                 systemWeightData[displayLayer?.system].weight,
               )}
@@ -205,32 +166,20 @@ export default function HoverDisplay({
         ) : weightData[displayLayer?.filename] ? (
           <>
             {weightData[displayLayer?.filename].quantity > 1 && (
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "8.25rem 1fr",
-                  borderTop: "1px solid",
-                }}
-              >
-                <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
+              <div className={styles.row}>
+                <h6 className={`${styles.cell} ${styles['cell--label']}`}>
                   {"Quantity"}
                 </h6>
-                <h6 style={{ padding: "0.5rem" }}>
+                <h6 className={styles.cell}>
                   {weightData[displayLayer?.filename].quantity}
                 </h6>
               </div>
             )}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "8.25rem 1fr",
-                borderTop: "1px solid",
-              }}
-            >
-              <h6 style={{ padding: "0.5rem", borderRight: "1px solid" }}>
+            <div className={styles.row}>
+              <h6 className={`${styles.cell} ${styles['cell--label']}`}>
                 {`Approx Wt (${settings.units == Units.Feet ? "lb" : "kg"})`}
               </h6>
-              <h6 style={{ padding: "0.5rem" }}>
+              <h6 className={styles.cell}>
                 {roundToSignificantDigit(
                   weightData[displayLayer?.filename].quantity *
                     weightData[displayLayer?.filename].weightPerUnit,
@@ -253,16 +202,9 @@ export default function HoverDisplay({
         )}
 
         <div
+          className={`${styles.connector} ${isVisible ? styles['connector--visible'] : ''} ${position.flip == "x" ? styles['connector--right'] : styles['connector--left']}`}
           style={{
-            position: "absolute",
-            left: position.flip == "x" ? "auto" : -1,
-            right: position.flip == "x" ? -1 : "auto",
-            top: 0,
-            width: 1,
             height: Math.abs(mouse.y - position.y),
-            opacity: isVisible ? 1 : 0,
-            transition: "opacity 200ms",
-            borderLeft: "1px solid",
           }}
         ></div>
       </div>

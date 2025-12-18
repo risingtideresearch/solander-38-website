@@ -84,7 +84,7 @@ export default function SearchClient({ drawings, type }) {
 
         const data = await response.json();
         const otherResults = searchDrawings(drawings, value);
-        console.log(data);
+
         setResults((data.results || []).concat(otherResults));
       } catch (error) {
         console.error("Search error:", error);
@@ -167,7 +167,6 @@ export default function SearchClient({ drawings, type }) {
               value={value}
               onChange={(e) => setValue(e.target.value)}
               placeholder="Search"
-              aria-expanded={results.length > 0}
               aria-controls="search-results"
               aria-activedescendant={
                 selectedIndex >= 0
@@ -191,6 +190,18 @@ export default function SearchClient({ drawings, type }) {
               >
                 <p style={{ textAlign: "center" }}>
                   No results found for &quot;{value}&quot;
+                </p>
+              </div>
+            )}
+
+            {!loading && !value && (
+              <div
+                className={styles.search__no_results}
+                role="status"
+                aria-live="polite"
+              >
+                <p style={{ textAlign: "center" }}>
+                  Type to search
                 </p>
               </div>
             )}

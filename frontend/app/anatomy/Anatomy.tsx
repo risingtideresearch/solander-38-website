@@ -71,17 +71,12 @@ export default function Anatomy({ content }: IAnatomy) {
   }, [settings.scalingLines]);
 
   const active =
-    toc.mode == "system"
-      ? toc.section.slug != "overview"
-        ? {
-            type: "system",
-            key: slugToRhinoSystem(toc.section.slug),
-          }
-        : null
-      : {
-          type: toc.mode,
-          key: toc.section.slug,
-        };
+    toc.section?.slug != "overview"
+      ? {
+          type: "system",
+          key: slugToRhinoSystem(toc.section.slug),
+        }
+      : null;
 
   useEffect(() => {
     setSettings((prev) => ({
@@ -108,11 +103,7 @@ export default function Anatomy({ content }: IAnatomy) {
       allModels = getReducedModelSet(memoModels, false);
       layerNames = allModels.map((m) => m.filename) || [];
     } else if (active) {
-      if (active.type == "material") {
-        layerNames = layerNames.filter((m) =>
-          (content.material_index[m] || []).includes(toc.material),
-        );
-      } else if (toc.article) {
+      if (toc.article) {
         layerNames =
           toc.article?.relatedModels ||
           systems[active.key]?.children ||
@@ -128,7 +119,14 @@ export default function Anatomy({ content }: IAnatomy) {
     );
 
     return Array.from(new Set(layerNames));
-  }, [active, systems, search, clippingValues, settings.transparent, toc.article, toc.material]);
+  }, [
+    active,
+    systems,
+    search,
+    clippingValues,
+    settings.transparent,
+    toc.article,
+  ]);
 
   useEffect(() => {
     if (toc.article) {
@@ -207,7 +205,11 @@ export default function Anatomy({ content }: IAnatomy) {
         }}
       /> */}
 
-      <Navigation active={URLS.ANATOMY} section={toc.section?.slug || null} story={toc.article?.slug || null} />
+      <Navigation
+        active={URLS.ANATOMY}
+        section={toc.section?.slug || null}
+        story={toc.article?.slug || null}
+      />
 
       <Canvas3D
         clippingPlanes={getClippingPlanes()}

@@ -9,9 +9,9 @@
     border-bottom: 1px solid;
 
     &.float {
-      right: 0.5rem;
-      top: 0.5rem;
       border: 1px solid;
+      border-top: none;
+      border-right: none;
     }
 
     &:not(.float) {
@@ -31,12 +31,12 @@
     }
 
     &.float {
-      top: 0.5rem;
-      right: 2.4375rem;
+      top: 0;
+      right: 1.9375rem;
 
-      input {
-        border-top: 1px solid;
-      }
+      // input {
+      //   border-top: 1px solid;
+      // }
     }
 
     input {
@@ -47,6 +47,9 @@
       height: 2rem;
       line-height: 2rem;
       padding: 0.5rem;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      font-family: "Helvetica", sans-serif;
 
       &:active,
       &:focus {
@@ -67,7 +70,8 @@
     border-top: none;
     max-height: calc(100vh - 3rem);
     overflow: auto;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
   }
 
   &__result_selected,

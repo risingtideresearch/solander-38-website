@@ -7,6 +7,7 @@ import { Image } from "../components/Image";
 import { formatDate } from "../utils";
 import { contextualLayers } from "../anatomy/three-d/util";
 import MaterialTable from "./MaterialTable";
+import { getPhotoURL } from "../photos/util";
 
 const components = {
   types: {
@@ -16,14 +17,11 @@ const components = {
         {value.caption && <figcaption>{value.caption}</figcaption>}
       </figure>
     ),
-    inlineImage: ({ value }) =>
-      value.fullBleed ? (
-        <figure
-          className={styles.full_image}
-          style={{
-            aspectRatio: value.image.asset?.metadata?.dimensions?.aspectRatio,
-          }}
-        >
+    inlineImage: ({ value }) => (
+      <figure
+        className={value.fullBleed ? styles.full_image : styles.inline_image}
+      >
+        <a href={getPhotoURL(value.image.asset)}>
           <Image
             src={value.image}
             alt={value.altText || "todo: add alt text"}
@@ -31,18 +29,9 @@ const components = {
           {value.image?.asset?.title && (
             <figcaption>{value.image.asset.title}</figcaption>
           )}
-        </figure>
-      ) : (
-        <figure className={styles.inline_image}>
-          <Image
-            src={value.image}
-            alt={value.altText || "todo: add alt text"}
-          />
-          {value.image?.asset?.title && (
-            <figcaption>{value.image.asset.title}</figcaption>
-          )}
-        </figure>
-      ),
+        </a>
+      </figure>
+    ),
     models3D: ({ value }) => (
       <>
         <h2 style={{ maxWidth: "60rem" }}>Superstructure jig</h2>
@@ -68,7 +57,7 @@ const components = {
                 "DECK JIG__TRANSV FRAMES.glb",
                 "DECK JIG__DECK SKINS.glb",
               ]}
-              interaction={'limited'}
+              interaction={"limited"}
             />
           </div>
         </AnatomyPane>
@@ -129,7 +118,7 @@ export default async function Article({ data, materials = [] }) {
                     data.slug?.current != "hull-and-deck" &&
                     data.section?.slug?.current != "overview",
                 }}
-                interaction={'limited'}
+                interaction={"limited"}
               />
             </div>
           </AnatomyPane>

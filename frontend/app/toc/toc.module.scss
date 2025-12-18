@@ -1,12 +1,19 @@
 .toc {
-  padding: 0 0.5rem;
+  padding: 0 0.25rem;
   counter-reset: sublist-counter;
 
   &__container {
     position: fixed;
     z-index: 1;
     top: 5rem;
-    width: 14rem;
+    width: 13.75rem;
+    left: 0.75rem;
+
+    @media screen and (max-width: 800px) {
+      height: 2rem;
+      overflow: hidden;
+      border-bottom: 1px solid;
+    }
   }
   p {
     margin: 0;
@@ -14,12 +21,12 @@
   }
 
   ol {
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 1.25rem;
     margin: 0.5rem 0;
 
     ol {
       overflow: hidden;
-      margin-left: 1ch;
+      margin-left: 0.125rem;
       margin-top: 0.25rem;
       margin-bottom: -0.25rem;
       > li {
@@ -55,7 +62,6 @@
 
 .outline {
   border: 1px solid;
-  margin-left: 0.5rem;
 }
 
 .minimal {

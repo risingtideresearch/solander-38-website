@@ -152,11 +152,22 @@
   h6,
   p {
     margin: 0;
+    line-height: 1rem;
   }
 
   p {
     font-size: 0.8125rem;
   }
+
+  // a {
+  //   text-decoration: underline;
+  //   text-decoration-thickness: 1px;
+  //   text-underline-offset: 2px;
+
+  //   &:hover {
+  //     text-decoration: none;
+  //   }
+  // }
 
   > * {
     padding: 0.5rem 0.5rem;

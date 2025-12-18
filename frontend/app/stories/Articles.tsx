@@ -22,7 +22,7 @@ export default async function Articles({ subtitles }) {
                     <div className={styles["article-header"]}>
                       <h6>{article.articleId}</h6>
                       <p className={styles["article-title"]}>
-                        <a href={`/stories/${article.slug}`}>{article.title}</a>
+                        <a href={`/stories/${article.slug}`} style={{ fontSize: '0.875rem'}}>{article.title}</a>
                         <LiaLongArrowAltRightSolid size={18} />
                       </p>
                     </div>

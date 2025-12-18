@@ -9,15 +9,15 @@ export default function RelatedStories({ stories }: RelatedArticlesProps) {
   if (stories && stories.length > 0) {
     return (
       <div
-        className="pane"
         style={{
-          border: "1px solid",
-          position: "static",
-          margin: "1rem 0 1rem 0.5rem",
+          display: "flex",
+          // alignItems: "center",
+          justifyContent: "space-between",
+          gap: "0.5rem",
         }}
       >
         <h6 style={{ padding: "0.5rem" }}>Stories</h6>
-        <div style={{ borderTop: "1px solid" }}>
+        <div>
           {stories.map((story: Article) => {
             return (
               <div
@@ -37,14 +37,19 @@ export default function RelatedStories({ stories }: RelatedArticlesProps) {
                     style={{
                       display: "flex",
                       alignItems: "center",
+                      justifyContent: "flex-end",
+                      textAlign: "right",
                       gap: "0.5rem",
-                      lineHeight: "1.2em",
-                      fontSize: "0.875rem",
+                      lineHeight: "1rem",
+                      fontSize: "0.8125rem",
                     }}
                     href={`/stories/${story.slug}`}
                   >
                     {story.title}
-                    <LiaLongArrowAltRightSolid size={18} style={{flexShrink: 0}} />
+                    <LiaLongArrowAltRightSolid
+                      size={18}
+                      style={{ flexShrink: 0 }}
+                    />
                   </a>
                 </p>
               </div>

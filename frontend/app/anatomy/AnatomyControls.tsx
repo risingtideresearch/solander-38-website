@@ -33,7 +33,7 @@ export default function AnatomyControls({
           setSettings({ ...settings, transparent: !settings.transparent })
         }
       >
-        {settings.transparent ? (
+        {!settings.transparent ? (
           <svg
             width="18"
             height="18"
