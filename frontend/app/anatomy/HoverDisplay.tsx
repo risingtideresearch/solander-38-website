@@ -142,16 +142,14 @@ export default function HoverDisplay({
           <h6 style={{ padding: "0.5rem", textWrap: "pretty" }}>
             {last
               .toLowerCase()
-              .replace("surfs", "")
-              .replace("surfaces", "")
-              .replace("mesh", "")
-              .replace("simplified", "")
-              .replace("approx.", "")
-              .replace("outside", "")
-              .replace("_", '"')
-              .replace("ctr", "center")
-              .replace("bhds", "bulkheads")
-              .replace("  ", " ")}
+              .replace(
+                /\b(surfs|surfaces|mesh|simplified|approx\.|outside)\b/g,
+                "",
+              )
+              .replace(/_/g, " ")
+              .replace(/\bctr\b/g, "center")
+              .replace(/\bbhds\b/g, "bulkheads")
+              .replace(/\s{2,}/g, " ")}
           </h6>
         </div>
         {/* <div
