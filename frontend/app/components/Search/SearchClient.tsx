@@ -4,6 +4,7 @@ import { BiSearch } from "react-icons/bi";
 import styles from "./search.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { searchDrawings } from "./util";
+import { getPhotoURL } from "@/app/photos/util";
 
 const colors = {
   article: "var(--accent)",
@@ -83,6 +84,7 @@ export default function SearchClient({ drawings, type }) {
 
         const data = await response.json();
         const otherResults = searchDrawings(drawings, value);
+        console.log(data);
         setResults((data.results || []).concat(otherResults));
       } catch (error) {
         console.error("Search error:", error);
@@ -109,9 +111,11 @@ export default function SearchClient({ drawings, type }) {
         return `/stories/${doc.slug.current}`;
       case "drawing":
         return `/drawings/file/${doc.uuid}`;
+      case "sanity.imageAsset":
+        return getPhotoURL(doc);
+      default:
+        return doc.slug ? doc.slug.current : doc._id;
     }
-
-    return doc.slug ? doc.slug.current : doc._id;
   };
 
   // Group results by type
@@ -200,7 +204,21 @@ export default function SearchClient({ drawings, type }) {
                 aria-label="Search results"
               >
                 {Object.keys(groupedResults)
-                  .sort()
+                  .sort((a, b) => {
+                    const order = ["article", "sanity.imageAsset"];
+                    const aIndex = order.indexOf(a);
+                    const bIndex = order.indexOf(b);
+
+                    if (aIndex !== -1 && bIndex !== -1) {
+                      return aIndex - bIndex;
+                    }
+
+                    if (aIndex !== -1) return -1;
+
+                    if (bIndex !== -1) return 1;
+
+                    return 0;
+                  })
                   .map((resultType) => (
                     <div key={resultType}>
                       <h6
@@ -208,7 +226,10 @@ export default function SearchClient({ drawings, type }) {
                           fontWeight: 600,
                         }}
                       >
-                        {resultType}s
+                        {resultType == "sanity.imageAsset"
+                          ? "Photo"
+                          : resultType}
+                        s
                       </h6>
                       {groupedResults[resultType].map(
                         (result: any, indexInGroup: number) => {

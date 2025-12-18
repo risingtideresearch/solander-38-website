@@ -1,6 +1,6 @@
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 
-export default function DrawingNav({ next, prev }) {
+export default function SubNav({ next, prev, urlPrefix }) {
   return (
     <div style={{ borderBottom: "1px solid", marginTop: "2rem" }}>
       <div
@@ -17,7 +17,7 @@ export default function DrawingNav({ next, prev }) {
         {prev && (
           <div>
             <a
-              href={`/drawings/file/${prev.uuid}`}
+              href={`${urlPrefix}/${prev.uuid}`}
               style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
             >
               <LiaArrowLeftSolid size={18} />
@@ -28,7 +28,7 @@ export default function DrawingNav({ next, prev }) {
         {next && (
           <div>
             <a
-              href={`/drawings/file/${next.uuid}`}
+              href={`${urlPrefix}/${next.uuid}`}
               style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
             >
               <h6>next</h6>

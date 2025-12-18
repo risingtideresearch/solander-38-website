@@ -1,0 +1,24 @@
+import { ReactNode } from "react";
+import styles from "./gallery.module.scss";
+
+interface GalleryProps {
+  children: ReactNode[];
+  emptyMessage: string;
+}
+
+export default function Gallery({
+  children = [],
+  emptyMessage = '',
+}:GalleryProps) {
+  return (
+    <div className={styles["gallery-container"]}>
+      <div style={{ minHeight: "100vh" }}>
+        {children.length > 0 ? (
+          <div className={styles.gallery}>{children}</div>
+        ) : (
+          <div>{emptyMessage}</div>
+        )}
+      </div>
+    </div>
+  );
+}

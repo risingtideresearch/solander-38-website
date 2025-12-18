@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
-import "./globals.scss";
+import "./../globals.scss";
+import Search from "./../components/Search/Search";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Rising Tide Research Foundation",
@@ -15,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Search />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

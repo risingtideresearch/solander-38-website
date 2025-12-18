@@ -1,5 +1,3 @@
-
-
 .drawing-card {
   --border-color: #d0d0d0;
   border: 1px solid var(--border-color);
@@ -33,7 +31,7 @@
       }
     }
     &:nth-child(2) {
-      margin-right: 2rem;
+      margin-right: 1.875rem;
       @media screen and (max-width: 800px) {
         margin-right: 0;
       }
@@ -72,7 +70,7 @@
   gap: 0.5rem;
 }
 
-.focused-header {
+.page-header {
   --border-color: #000;
   align-self: flex-end;
   width: max-content;
@@ -110,7 +108,7 @@
   }
 }
 
-.focused-header,
+.page-header,
 .drawing-card {
   p,
   h6 {

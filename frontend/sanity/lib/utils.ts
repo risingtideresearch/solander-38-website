@@ -1,11 +1,12 @@
 import { createDataAttribute, CreateDataAttributeProps } from "next-sanity";
 import { dataset, projectId, studioUrl } from "./api";
 import {
+  allPhotosQuery,
   annotationsQuery,
   articlesQuery,
+  assetWithNavigationQuery,
   materialsQuery,
   peopleQuery,
-  searchQuery,
   sectionsQuery,
 } from "./queries";
 import { sanityFetch } from "./live";
@@ -59,6 +60,26 @@ export async function fetchSections(slug?: string) {
       article.articleId = `${i + 1}–${String.fromCharCode(65 + j)}`
     })
   });
+
+  return { data };
+}
+
+/**
+ *
+ * @returns
+ */
+export async function fetchPhotos(section: string) {
+  const { data } = await sanityFetch({ query: allPhotosQuery(section) });
+
+  return { data };
+}
+
+/**
+ *
+ * @returns
+ */
+export async function fetchAssetWithNavigation(idPrefix: string) {
+  const { data } = await sanityFetch({ query: assetWithNavigationQuery(idPrefix) });
 
   return { data };
 }

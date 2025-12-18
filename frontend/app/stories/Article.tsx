@@ -6,9 +6,7 @@ import ImageSet from "../components/ImageSet";
 import { Image } from "../components/Image";
 import { formatDate } from "../utils";
 import { contextualLayers } from "../anatomy/three-d/util";
-import { useMemo } from "react";
 import MaterialTable from "./MaterialTable";
-import { dataAttr } from "@/sanity/lib/utils";
 
 const components = {
   types: {
@@ -103,7 +101,7 @@ export default async function Article({ data, materials = [] }) {
       <div className={`bg--grid ${styles.header}`}>
         <div>
           <div>
-            <h6>{data.section}</h6>
+            <h6>{data.section?.name}</h6>
             <h1>{data.title}</h1>
           </div>
           <AnatomyPane
@@ -128,8 +126,8 @@ export default async function Article({ data, materials = [] }) {
                 filteredLayers={articleModels || []}
                 settings={{
                   transparent:
-                    data.slug.current != "hull-and-deck" &&
-                    data.section != "overview",
+                    data.slug?.current != "hull-and-deck" &&
+                    data.section?.slug?.current != "overview",
                 }}
                 interaction={'limited'}
               />

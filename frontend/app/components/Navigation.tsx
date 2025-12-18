@@ -5,6 +5,7 @@ export enum URLS {
   STORIES = "/stories",
   ANATOMY = "/anatomy",
   DRAWINGS = "/drawings",
+  PHOTOS = "/photos",
   PEOPLE = "/people",
 }
 const nav = [
@@ -15,16 +16,23 @@ const nav = [
   {
     url: URLS.STORIES,
     label: "Stories",
+    nav2dStory: true,
   },
   {
     url: URLS.ANATOMY,
     label: "Anatomy",
-    nav2d: true
+    nav2d: true,
+    nav2dStory: true,
   },
   {
     url: URLS.DRAWINGS,
     label: "Drawings",
-    nav2d: true
+    nav2d: true,
+  },
+  {
+    url: URLS.PHOTOS,
+    label: "Photos",
+    nav2d: true,
   },
   {
     url: URLS.PEOPLE,
@@ -33,14 +41,32 @@ const nav = [
 ];
 
 interface NavigationProps {
-  type?: 'top-bar',
-  active?: URLS,
-  section?: string | null
+  type?: "top-bar";
+  active?: URLS;
+  section?: string | null;
+  story?: string | null;
 }
 
-export default function Navigation({ type, active, section }: NavigationProps) {
+export default function Navigation({
+  type,
+  active,
+  section,
+  story,
+}: NavigationProps) {
+
+  const getURL = (link) => {
+    const url = link.url;
+
+    if (link.nav2dStory && story) {
+      return url + `/${story}`;
+    }
+    if (link.nav2d && section) {
+      return url + `/${section}`;
+    }
+    return url;
+  };
   return (
-    <nav className={`${styles.nav} pane ${type ? styles[type] : ''}`}>
+    <nav className={`${styles.nav} pane ${type ? styles[type] : ""}`}>
       <svg
         width="59"
         height="78"
@@ -65,7 +91,7 @@ export default function Navigation({ type, active, section }: NavigationProps) {
       {nav.map((link) => (
         <a
           key={link.label}
-          href={link.url + (section && link.nav2d ? `/${section}` : '')}
+          href={getURL(link)}
           style={{ fontWeight: active == link.url ? 600 : 400 }}
         >
           {link.label}

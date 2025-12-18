@@ -5,6 +5,7 @@ import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import { getReducedModelSet } from "@/app/utils";
+import Navigation, { URLS } from "@/app/components/Navigation";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -69,8 +70,10 @@ export default async function Page({ params }) {
   );
 
   if (!dataWithMatchedDrawings.relatedModels) {
+    const articleSystem = (dataWithMatchedDrawings.section?.slug?.current || "").replace(" & ", "_");
+
     const models =
-      dataWithMatchedDrawings.section == "overview"
+      articleSystem == "overview"
         ? getReducedModelSet(models_manifest.exported_layers, true)
         : models_manifest.exported_layers.filter((layer) => {
             if (!layer.filename || layer.file_size > 8000000) {
@@ -78,11 +81,8 @@ export default async function Page({ params }) {
             }
             const system = layer.filename.split("__")[0].toLowerCase();
 
-            return (
-              system == dataWithMatchedDrawings.section?.replace(" & ", "_")
-            );
-          })
-          ;
+            return system == articleSystem;
+          });
     dataWithMatchedDrawings.relatedModels = models.map(
       (layer) => layer.filename,
     );
@@ -116,6 +116,12 @@ export default async function Page({ params }) {
 
   return (
     <>
+      <Navigation
+        type={"top-bar"}
+        active={URLS.STORIES}
+        story={slug}
+        section={dataWithMatchedDrawings.section.slug?.current}
+      />
       <div
         style={{
           marginTop: "2rem",

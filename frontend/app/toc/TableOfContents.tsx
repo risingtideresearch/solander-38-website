@@ -47,34 +47,6 @@ export default function TableOfContents({
           className={`toc ${styles.toc} ${outline ? `${styles.outline} pane` : ""}`}
           style={{ display: hide ? "none" : "" }}
         >
-          {/* <h2 className="uppercase-mono">Table of Contents</h2> */}
-          {/* <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: modes.length == 1 ? "1fr" : "1fr 1fr",
-              borderBottom: "1px solid",
-              margin: "0 -0.5rem",
-            }}
-          >
-            {modes.map((type, i) => (
-              <h6
-                onClick={() => {
-                  setMode(type);
-                  setSection(sections[0]);
-                }}
-                key={type}
-                style={{
-                  cursor: "pointer",
-                  fontWeight: 400,
-                  margin: 0,
-                  padding: "0.5rem",
-                  borderRight: i < modes.length - 1 ? "1px solid" : "",
-                }}
-              >
-                {type == "system" ? "system" : type}
-              </h6>
-            ))}
-          </div> */}
           {mode == "system" ? (
             <ol>
               {sections.map((s) => {

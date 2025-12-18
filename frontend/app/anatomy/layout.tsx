@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { DepartureMono } from "./../_fonts";
 
 import "./../globals.scss";
-import Navigation, { URLS } from "./../components/Navigation";
 import Search from "./../components/Search/Search";
-// import Search from "./components/Search/Search";
 
 export const metadata: Metadata = {
   title: "Rising Tide Research Foundation",
@@ -19,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${DepartureMono.variable}`}>
+      <body>
         <Search type='float' />
         {children}
       </body>

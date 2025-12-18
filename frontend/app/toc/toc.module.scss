@@ -57,3 +57,10 @@
   border: 1px solid;
   margin-left: 0.5rem;
 }
+
+.minimal {
+  @media screen and (max-width: 800px) {
+    position: relative;
+    top: 0;
+  }
+}

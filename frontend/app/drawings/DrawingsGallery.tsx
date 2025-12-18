@@ -1,8 +1,8 @@
 import { Drawing, DrawingGroup } from "./types";
 import { SYSTEM_ORDER } from "../consts";
 import { DrawingCard } from "./DrawingCard";
-import styles from "./drawings-gallery.module.scss";
 import { getSlugFromDrawingGroup } from "./util";
+import Gallery from "../components/Gallery";
 
 function filterDrawings(drawings, section) {
   return drawings.filter((d) => {
@@ -62,7 +62,7 @@ interface DrawingsGalleryProps {
   section?: string | null;
 }
 
-export default async function DrawingsGallery({
+export default function DrawingsGallery({
   drawings,
   section,
 }: DrawingsGalleryProps) {
@@ -82,14 +82,8 @@ export default async function DrawingsGallery({
   });
 
   return (
-    <main className={styles["gallery-container"]}>
-      <div style={{ minHeight: "100vh" }}>
-        {visibleDrawings.length > 0 ? (
-          <div className={styles.gallery}>{visibleDrawings}</div>
-        ) : (
-          <div>No drawings</div>
-        )}
-      </div>
-    </main>
+    <Gallery emptyMessage="No drawings">
+      {visibleDrawings}
+    </Gallery>
   );
 }

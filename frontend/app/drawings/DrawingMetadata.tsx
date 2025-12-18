@@ -7,7 +7,7 @@ export default function DrawingMetadata({ drawing }) {
   return (
     <div className={`${styles.metadata}`}>
       <h6>Name</h6>
-      <h6>{drawing.clean_filename}</h6>
+      <p style={{ fontSize: '0.75rem', lineHeight: 1.2}}>{drawing.clean_filename}</p>
       <h6>ID</h6>
       <h6>{drawing.id}</h6>
       <h6>Date</h6>

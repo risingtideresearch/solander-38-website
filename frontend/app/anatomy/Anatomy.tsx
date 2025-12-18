@@ -207,7 +207,7 @@ export default function Anatomy({ content }: IAnatomy) {
         }}
       /> */}
 
-      <Navigation active={URLS.ANATOMY} section={toc.section?.slug || null} />
+      <Navigation active={URLS.ANATOMY} section={toc.section?.slug || null} story={toc.article?.slug || null} />
 
       <Canvas3D
         clippingPlanes={getClippingPlanes()}

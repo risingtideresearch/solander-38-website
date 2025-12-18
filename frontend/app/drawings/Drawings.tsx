@@ -1,7 +1,8 @@
 import { Drawing } from "./types";
 import DrawingsGallery from "./DrawingsGallery";
 import { Section } from "@/sanity/sanity.types";
-import styles from "./../toc/toc.module.scss";
+import MinimalTOC from "../toc/MinimalTOC";
+import { URLS } from "../components/Navigation";
 
 interface DrawingsProps {
   drawings: {
@@ -18,27 +19,17 @@ export default async function Drawings({
   section,
 }: DrawingsProps) {
   return (
-    <div className="section--two-col">
-      <div>
-        <div className={styles.toc__container}>
-          <div className={`${styles.toc}`}>
-            <ol>
-              {sections.map((s) => {
-                return (
-                  <li style={{ cursor: "pointer" }} key={s.name}>
-                    <a href={`/drawings/${s.slug}`}>
-                      <h6 style={{ fontWeight: s.slug == section ? 600 : 400 }}>
-                        {s.name}
-                      </h6>
-                    </a>
-                  </li>
-                );
-              })}
-            </ol>
-          </div>
+    <main>
+      <div className="section--two-col">
+        <div>
+          <MinimalTOC
+            sections={sections}
+            section={section}
+            url={URLS.DRAWINGS}
+          />
         </div>
+        <DrawingsGallery drawings={drawings} section={section} />
       </div>
-      <DrawingsGallery drawings={drawings} section={section} />
-    </div>
+    </main>
   );
 }

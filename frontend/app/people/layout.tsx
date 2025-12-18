@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { DepartureMono } from "./../_fonts";
 
 import "./../globals.scss";
 import Navigation, { URLS } from "./../components/Navigation";
@@ -20,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${DepartureMono.variable}`}>
+      <body>
         <Navigation active={URLS.PEOPLE} type={'top-bar'} />
         <Search />
         {children}

@@ -193,7 +193,7 @@ export const articlesQuery = (slug?: string) => {
     return `*[_type=="article" && slug.current == "${slug}"]{
       ...,
       isLive,
-      "section": *[_type=="sections"][0].sections[references(^._id)][0].name,
+      "section": *[_type=="sections"][0].sections[references(^._id)][0],
       authors[]->{
         name
       },
@@ -398,18 +398,89 @@ export const componentPartQuery = (slug: string) => `
 `;
 
 export const searchQuery = () => `
-*[_type in ["article"] && (
-  title match $query + "*" ||
-  name match $query + "*" ||
-  content[].children[].text match $query + "*" ||
-  content[].children[]->name match $query + "*" ||
-  authors[]->.name match $query + "*"
-)][0...30]{
+*[
+  (_type == "article" || (_type == "sanity.imageAsset" && count(*[_type == "article" && references(^._id)]) > 0)) 
+  && (
+    title match $query + "*" ||
+    name match $query + "*" ||
+    description match $query + "*" ||
+    content[].children[].text match $query + "*" ||
+    content[].children[]->name match $query + "*" ||
+    authors[]->.name match $query + "*"
+  )
+][0...30]{
   _id,
   _type,
-  title,
-  slug,
-  authors[]->{
-    name
+  _type == "article" => {
+    title,
+    slug,
+    authors[]->{
+      name
+    }
+  },
+  _type == "sanity.imageAsset" => {
+    title,
+    originalFilename,
+    _id,
   }
 }`;
+
+/**
+ *
+ */
+export const allPhotosQuery = (section?: string) => {
+  const articleFilter = section
+    ? `*[_type == "article" && references(^._id) && _id in *[_type == "sections"][0].sections[slug.current == "${section}"].articles[]._ref]`
+    : `*[_type == "article" && references(^._id)]`;
+
+  return `*[_type == "sanity.imageAsset" && count(${articleFilter}) > 0] {
+  _id,
+  url,
+  originalFilename,
+  metadata,
+  title,
+  "usedInArticles": ${articleFilter} {
+    _id,
+    title,
+    "slug": slug.current,
+    "section": *[_type == "sections"][0].sections[references(^._id)][0] {
+      name,
+      "slug": slug.current
+    }
+  }
+}`;
+};
+
+/**
+ *
+ */
+export const assetWithNavigationQuery = (idPrefix?: string) => {
+  const articleFilter = `*[_type == "article" && references(^._id)]`;
+
+  return `{
+  "allImages": *[_type == "sanity.imageAsset" && count(*[_type == "article" && references(^._id)]) > 0] | order(_createdAt asc) {
+    _id,
+    url,
+    originalFilename,
+    "metadata": {
+      "dimensions": {
+        ...metadata.dimensions,
+      },
+      "date": metadata.exif.DateTimeOriginal
+    },
+    description,
+    altText,
+    title,
+    "usedInArticles": ${articleFilter} {
+      _id,
+      title,
+      "slug": slug.current,
+      "section": *[_type == "sections"][0].sections[references(^._id)][0] {
+        name,
+        "slug": slug.current
+      }
+    }
+  },
+  "currentId": "${idPrefix}"
+}`;
+};
