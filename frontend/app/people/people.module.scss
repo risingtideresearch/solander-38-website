@@ -4,4 +4,20 @@
 //     text-decoration-thickness: 1px;
 //     text-underline-offset: 2px;
 //   }
+
+    p {
+        font-size: 0.875rem;
+        margin: 0;
+    }
+}
+
+.person {
+    margin-top: -1px;
+    max-width: 40rem;
+    border: 1px solid;
+    padding: 1rem 2rem;
+    
+    > div {
+        margin: 1rem 0;
+    }
 }

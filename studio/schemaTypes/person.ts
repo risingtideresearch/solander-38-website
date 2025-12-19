@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import { UserIcon } from '@sanity/icons';
+import { link } from './shared/link';
 
 export const person = defineType({
   name: 'person',
@@ -14,5 +15,6 @@ export const person = defineType({
       name: 'role',
       type: 'string',
     }),
+    link,
   ],
 })
