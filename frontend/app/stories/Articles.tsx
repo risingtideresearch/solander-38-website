@@ -7,7 +7,7 @@ export default async function Articles({ subtitles }) {
 
   return (
     <>
-      <h1 style={{margin:  '6rem auto -2rem auto', maxWidth: '120rem', padding: '0 1rem'}}>Table of contents</h1>
+      <h1 style={{margin:  '8rem auto 0 auto', maxWidth: '120rem', padding: '0 2rem'}}>Table of contents</h1>
       <main className={styles.articles}>
         {(data.sections || []).map((section, i) => (
           <section className="section--two-col" key={section._key}>
