@@ -10,12 +10,13 @@ import {
 import { TOCContext } from "../toc/TableOfContents";
 import { ControlSettings } from "./Anatomy";
 import styles from "./hover-display.module.scss";
+import { Component } from "@/sanity/sanity.types";
 
 interface HoverDisplayProps {
   layer: Model | null;
   materials: MaterialIndex;
   settings: ControlSettings;
-  componentParts: Array<unknown>;
+  componentParts: Array<Component>;
 }
 
 export default function HoverDisplay({
@@ -97,7 +98,7 @@ export default function HoverDisplay({
 
   const componentPart = useMemo(() => {
     return componentParts.find(
-      (layer) => layer.relatedModel == displayLayer?.filename,
+      (part: Component) => part.relatedModel == displayLayer?.filename,
     );
   }, [componentParts, displayLayer]);
 

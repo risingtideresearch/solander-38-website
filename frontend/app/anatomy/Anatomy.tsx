@@ -12,7 +12,7 @@ import {
   contextualLayers,
   Units,
 } from "./three-d/util";
-import { Article } from "@/sanity/sanity.types";
+import { Article, Component } from "@/sanity/sanity.types";
 import { Canvas3D } from "./three-d/Canvas3D";
 import { getReducedModelSet, slugToRhinoSystem } from "../utils";
 import AnatomyControls from "./AnatomyControls";
@@ -23,7 +23,7 @@ type AnatomyContent = {
   material_index: MaterialIndex;
   models_manifest: ModelManifest;
   articles: Array<Article>;
-  componentParts: Array<unknown>;
+  componentParts: Array<Component>;
 };
 
 interface IAnatomy {
