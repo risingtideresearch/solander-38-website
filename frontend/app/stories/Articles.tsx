@@ -22,12 +22,21 @@ export default async function Articles({ subtitles }) {
                     <div className={styles["article-header"]}>
                       <h6>{article.articleId}</h6>
                       <p className={styles["article-title"]}>
-                        <a href={`/stories/${article.slug}`} style={{ fontSize: '0.875rem'}}>{article.title}</a>
+                        <a
+                          href={`/stories/${article.slug}`}
+                          style={{ fontSize: "0.875rem" }}
+                        >
+                          {article.title}
+                        </a>
                         <LiaLongArrowAltRightSolid size={18} />
                       </p>
                     </div>
                     <div className={styles["article-subtitle"]}>
-                      {subtitles ? <p>{article.subtitle}</p> : null}
+                      {!article.isLive ? (
+                        <em>In progress</em>
+                      ) : subtitles ? (
+                        <p>{article.subtitle}</p>
+                      ) : null}
                     </div>
                   </li>
                 ))}

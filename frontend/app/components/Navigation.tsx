@@ -57,7 +57,7 @@ export default function Navigation({
   const getURL = (link) => {
     const url = link.url;
 
-    if (link.nav2dStory && story) {
+    if (link.nav2dStory && story && active != url) {
       return url + `/${story}`;
     }
     if (link.nav2d && section) {

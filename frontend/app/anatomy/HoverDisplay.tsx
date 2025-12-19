@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useMemo } from "react";
 import {
   INCHES_TO_METERS,
   MaterialIndex,
@@ -15,12 +15,14 @@ interface HoverDisplayProps {
   layer: Model | null;
   materials: MaterialIndex;
   settings: ControlSettings;
+  componentParts: Array<unknown>;
 }
 
 export default function HoverDisplay({
   layer,
   materials,
   settings,
+  componentParts,
 }: HoverDisplayProps) {
   const [displayLayer, setDisplayLayer] = useState(layer);
   const [isVisible, setIsVisible] = useState(false);
@@ -93,6 +95,12 @@ export default function HoverDisplay({
 
   const position = getTooltipPosition();
 
+  const componentPart = useMemo(() => {
+    return componentParts.find(
+      (layer) => layer.relatedModel == displayLayer?.filename,
+    );
+  }, [componentParts, displayLayer]);
+
   if (!displayLayer || !displayLayer.layer_name) {
     return <></>;
   }
@@ -116,32 +124,55 @@ export default function HoverDisplay({
             setTooltipSize({ width: el.offsetWidth, height: el.offsetHeight });
           }
         }}
-        className={`pane ${styles.tooltip} ${isVisible ? styles['tooltip--visible'] : ''}`}
+        className={`pane ${styles.tooltip} ${isVisible ? styles["tooltip--visible"] : ""}`}
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
           width: tooltipWidth,
         }}
       >
-        <div className={styles.row}>
-          <h6 className={`${styles.cell} ${styles['cell--label']}`}>Part</h6>
-          <h6 className={`${styles.cell} ${styles['cell--value']}`}>
-            {last
-              .toLowerCase()
-              .replace(
-                /\b(surfs|surfaces|mesh|simplified|approx\.|outside)\b/g,
-                "",
-              )
-              .replace(/_/g, " ")
-              .replace(/\bctr\b/g, "center")
-              .replace(/\bbhds\b/g, "bulkheads")
-              .replace(/\s{2,}/g, " ")}
-          </h6>
-        </div>
+        {componentPart ? (
+          <>
+            <div className={styles.row}>
+              <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
+                Part
+              </h6>
+              <h6 className={styles.cell}>{componentPart.title}</h6>
+            </div>
+            {componentPart.componentPart ? (
+              <>
+                <div className={styles.row}>
+                  <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
+                    Model
+                  </h6>
+                  <h6 className={styles.cell}>{componentPart.componentPart}</h6>
+                </div>
+              </>
+            ) : (
+              <></>
+            )}
+          </>
+        ) : (
+          <div className={styles.row}>
+            <h6 className={`${styles.cell} ${styles["cell--label"]}`}>Part</h6>
+            <h6 className={`${styles.cell} ${styles["cell--value"]}`}>
+              {last
+                .toLowerCase()
+                .replace(
+                  /\b(surfs|surfaces|mesh|simplified|approx\.|outside)\b/g,
+                  "",
+                )
+                .replace(/_/g, " ")
+                .replace(/\bctr\b/g, "center")
+                .replace(/\bbhds\b/g, "bulkheads")
+                .replace(/\s{2,}/g, " ")}
+            </h6>
+          </div>
+        )}
 
         {materials[displayLayer?.filename] ? (
           <div className={styles.row}>
-            <h6 className={`${styles.cell} ${styles['cell--label']}`}>
+            <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
               Material
             </h6>
             <h6 className={styles.cell}>
@@ -154,7 +185,7 @@ export default function HoverDisplay({
 
         {systemWeightData[displayLayer?.system] && !article ? (
           <div className={styles.row}>
-            <h6 className={`${styles.cell} ${styles['cell--label']}`}>
+            <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
               {`${displayLayer.system} weight (${settings.units == Units.Feet ? "lb" : "kg"})`}
             </h6>
             <h6 className={styles.cell}>
@@ -167,7 +198,7 @@ export default function HoverDisplay({
           <>
             {weightData[displayLayer?.filename].quantity > 1 && (
               <div className={styles.row}>
-                <h6 className={`${styles.cell} ${styles['cell--label']}`}>
+                <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
                   {"Quantity"}
                 </h6>
                 <h6 className={styles.cell}>
@@ -176,7 +207,7 @@ export default function HoverDisplay({
               </div>
             )}
             <div className={styles.row}>
-              <h6 className={`${styles.cell} ${styles['cell--label']}`}>
+              <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
                 {`Approx Wt (${settings.units == Units.Feet ? "lb" : "kg"})`}
               </h6>
               <h6 className={styles.cell}>
@@ -202,7 +233,7 @@ export default function HoverDisplay({
         )}
 
         <div
-          className={`${styles.connector} ${isVisible ? styles['connector--visible'] : ''} ${position.flip == "x" ? styles['connector--right'] : styles['connector--left']}`}
+          className={`${styles.connector} ${isVisible ? styles["connector--visible"] : ""} ${position.flip == "x" ? styles["connector--right"] : styles["connector--left"]}`}
           style={{
             height: Math.abs(mouse.y - position.y),
           }}

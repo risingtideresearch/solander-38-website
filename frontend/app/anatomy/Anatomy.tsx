@@ -23,6 +23,7 @@ type AnatomyContent = {
   material_index: MaterialIndex;
   models_manifest: ModelManifest;
   articles: Array<Article>;
+  componentParts: Array<unknown>;
 };
 
 interface IAnatomy {
@@ -218,6 +219,7 @@ export default function Anatomy({ content }: IAnatomy) {
         settings={settings}
         boundingBox={boundingBox}
         materials={content.material_index}
+        componentParts={content.componentParts}
         memoModels={memoModels}
         handleLoaded={() => setLoaded(true)}
         loaded={loaded}

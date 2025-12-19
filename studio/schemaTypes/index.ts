@@ -2,7 +2,7 @@
 // import { anatomy } from './anatomy'
 import {article} from './article'
 // import {boat} from './boat'
-// import {component} from './component'
+import {component} from './component'
 // import {connection} from './connection'
 // import {customPart} from './customPart'
 import {location} from './location'
@@ -21,7 +21,7 @@ export const schemaTypes = [
   // anatomy,
   location,
   // customPart,
-  // component,
+  component,
   materials,
   material,
   person,

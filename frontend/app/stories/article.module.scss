@@ -50,8 +50,6 @@
 }
 
 .header {
-  border-top: 1px solid;
-
   > div {
     padding: 0.125rem 2rem 2.375rem 2rem;
     display: grid;
@@ -184,7 +182,6 @@
   @media screen and (max-width: 800px) {
     position: relative;
     top: 0;
-    margin: 1rem 0;
     width: 100%;
   }
 }

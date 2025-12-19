@@ -6,6 +6,7 @@ import { matchArticleDrawings } from "@/app/stories/util";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import { getReducedModelSet } from "@/app/utils";
 import Navigation, { URLS } from "@/app/components/Navigation";
+import subNavStyles from "@/app/components/subnav.module.scss";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -70,7 +71,9 @@ export default async function Page({ params }) {
   );
 
   if (!dataWithMatchedDrawings.relatedModels) {
-    const articleSystem = (dataWithMatchedDrawings.section?.slug?.current || "").replace(" & ", "_");
+    const articleSystem = (
+      dataWithMatchedDrawings.section?.slug?.current || ""
+    ).replace(" & ", "_");
 
     const models =
       articleSystem == "overview"
@@ -122,41 +125,25 @@ export default async function Page({ params }) {
         story={slug}
         section={dataWithMatchedDrawings.section.slug?.current}
       />
-      <div
-        style={{
-          marginTop: "2rem",
-          display: "flex",
-          gap: "0.25rem",
-          borderLeft: "1px solid",
-          marginLeft: "auto",
-          padding: "0.5rem 2rem 0.5rem 0.5rem",
-          maxWidth: "32rem",
-          width: "100%",
-          justifyContent: "space-between",
-        }}
-      >
-        {navigation.prev && (
-          <div>
-            <a
-              href={`/stories/${navigation.prev.slug}`}
-              style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
-            >
-              <LiaArrowLeftSolid size={18} />
-              <h6>{navigation.prev.title}</h6>
-            </a>
-          </div>
-        )}
-        {navigation.next && (
-          <div>
-            <a
-              href={`/stories/${navigation.next.slug}`}
-              style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
-            >
-              <h6>{navigation.next.title}</h6>
-              <LiaArrowRightSolid size={18} />
-            </a>
-          </div>
-        )}
+      <div className={subNavStyles["sub-nav"]}>
+        <div className={subNavStyles["sub-nav__container"]}>
+          {navigation.prev && (
+            <div>
+              <a href={`/stories/${navigation.prev.slug}`}>
+                <LiaArrowLeftSolid size={18} />
+                <h6>{navigation.prev.title}</h6>
+              </a>
+            </div>
+          )}
+          {navigation.next && (
+            <div>
+              <a href={`/stories/${navigation.next.slug}`}>
+                <h6>{navigation.next.title}</h6>
+                <LiaArrowRightSolid size={18} />
+              </a>
+            </div>
+          )}
+        </div>
       </div>
       <Article
         data={dataWithMatchedDrawings}

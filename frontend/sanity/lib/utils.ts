@@ -5,6 +5,7 @@ import {
   annotationsQuery,
   articlesQuery,
   assetWithNavigationQuery,
+  componentPartQuery,
   materialsQuery,
   peopleQuery,
   sectionsQuery,
@@ -102,6 +103,17 @@ export async function fetchTableOfContents() {
 
   return data;
 }
+
+/**
+ *
+ * @returns
+ */
+export async function fetchComponents() {
+  const { data } = await sanityFetch({ query: componentPartQuery() });
+
+  return { data };
+}
+
 
 type DataAttributeConfig = CreateDataAttributeProps &
   Required<Pick<CreateDataAttributeProps, "id" | "type" | "path">>;

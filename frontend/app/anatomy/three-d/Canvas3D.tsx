@@ -55,6 +55,7 @@ export function Canvas3D({
   materials = {},
   memoModels = [],
   handleLoaded,
+  componentParts,
   loaded,
 }: Canvas3DProps) {
   const groupRef = useRef<Group>(null);
@@ -345,6 +346,7 @@ export function Canvas3D({
             layer={hovered}
             materials={materials}
             settings={settings}
+            componentParts={componentParts}
           />
         )}
       </div>

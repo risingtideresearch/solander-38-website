@@ -326,76 +326,83 @@ export const materialsQuery = () => {
   return `
   *[_type=="materials"][0]{
     ...,
+    
   }`;
 };
 
 /**
  *
  */
-export const componentPartQuery = (slug: string) => `
-{
-  "component": *[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0] {
-    ...,
-    "slug": slug.current,
-    "image": image.asset-> {
-        metadata,
-        url,
-    },
-    materials[]-> {
-      ...
-    }
-  },
-  "connections": *[
-    _type =="connection" &&
-    references(*[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0]._id)
-  ] {
-    _type,
-    description,
-    componentFrom->{
-        "slug": slug.current,
-        title,
-        _type,
-        _id,
-    },
-    componentTo->{
-        "slug": slug.current,
-        title,
-        _type,
-        _id,
-    }
-  },
-  "anatomy": *[
-    _type =="anatomy" &&
-    references(*[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0]._id)
-  ] {
-    _type,
+export const componentPartQuery = () => `
+ *[_type=="component" && defined(relatedModel)]{
+    componentPart,
     title,
-    "slug": slug.current,
-  },
-  "powerBudget": *[
-    _type =="powerBudget" &&
-    references(*[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0]._id)
-  ] {
-    ...
-  },
-  "timelines": *[
-    _type =="timeline" &&
-    references(*[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0]._id)
-  ] {
-    ...,
-    timeline[] {
-      ...,
-      media[] {
-        asset->{
-          url,
-          metadata
-        }
-      }
-    }
-  }
-}
+    relatedModel,
+  }`;
+// export const componentPartQuery = (slug: string) => `
+// {
+//   "component": *[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0] {
+//     ...,
+//     "slug": slug.current,
+//     "image": image.asset-> {
+//         metadata,
+//         url,
+//     },
+//     materials[]-> {
+//       ...
+//     }
+//   },
+//   "connections": *[
+//     _type =="connection" &&
+//     references(*[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0]._id)
+//   ] {
+//     _type,
+//     description,
+//     componentFrom->{
+//         "slug": slug.current,
+//         title,
+//         _type,
+//         _id,
+//     },
+//     componentTo->{
+//         "slug": slug.current,
+//         title,
+//         _type,
+//         _id,
+//     }
+//   },
+//   "anatomy": *[
+//     _type =="anatomy" &&
+//     references(*[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0]._id)
+//   ] {
+//     _type,
+//     title,
+//     "slug": slug.current,
+//   },
+//   "powerBudget": *[
+//     _type =="powerBudget" &&
+//     references(*[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0]._id)
+//   ] {
+//     ...
+//   },
+//   "timelines": *[
+//     _type =="timeline" &&
+//     references(*[(_type in ["customPart", "component"]) && slug.current == "${slug}"][0]._id)
+//   ] {
+//     ...,
+//     timeline[] {
+//       ...,
+//       media[] {
+//         asset->{
+//           url,
+//           metadata
+//         }
+//       }
+//     }
+//   }
+// }
 
-`;
+// `;
 
 export const searchQuery = () => `
 *[

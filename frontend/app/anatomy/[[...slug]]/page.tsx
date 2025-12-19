@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import TableOfContents from "@/app/toc/TableOfContents";
-import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
+import { fetchArticles, fetchComponents, fetchSections } from "@/sanity/lib/utils";
 import Anatomy from "../Anatomy";
 import styles from "./page.module.scss";
 
@@ -30,6 +30,10 @@ export default async function Page({
 
   const articles = await fetchArticles();
 
+  const componentParts = await fetchComponents();
+
+  console.log(componentParts)
+
   let defaultSection = sections.data.sections.find(
     (section) => section.slug == slug,
   );
@@ -45,7 +49,6 @@ export default async function Page({
           sections={sections?.data.sections || []}
           defaultSection={defaultSection?.slug || null}
           defaultArticle={defaultArticle || null}
-          materials={materials_index.unique_materials}
           outline={true}
         >
           <Anatomy
@@ -53,6 +56,7 @@ export default async function Page({
               models_manifest: models_manifest,
               material_index: materials_index.material_index,
               articles: articles.data,
+              componentParts: componentParts.data,
             }}
           />
         </TableOfContents>
