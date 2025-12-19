@@ -9,13 +9,19 @@
     font-size: 0.875rem;
     margin: 0;
   }
+
+  section {
+    border-top: 1px solid;
+
+    >div:nth-child(2) {
+      border-left: 1px solid;
+    }
+  }
 }
 
 .person {
-  margin-top: -1px;
-  border: 1px solid;
-  max-width: 50rem;
   padding: 2.5rem 2rem;
+  border-bottom: 1px solid;
 
   > div {
     margin: 1.5rem 0 0 0;

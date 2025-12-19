@@ -1,6 +1,7 @@
 .sub-nav {
   border-bottom: 1px solid;
-  margin-top: 2rem;
+  margin-top: 1.9375rem;
+  border-top: 1px solid;
   &__container {
     display: flex;
     gap: 2.5rem;
@@ -12,11 +13,11 @@
     justify-content: space-between;
 
     @media screen and (max-width: 800px) {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-        margin-left: 0;
-        border-left: none;
-        width: 100%;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      margin-left: 0;
+      border-left: none;
+      width: 100%;
     }
 
     a {

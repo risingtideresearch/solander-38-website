@@ -24,7 +24,7 @@ export default async function Page() {
         sections={sections?.data.sections || []}
         modes={["system", "material"]}
         materials={materials_index.unique_materials}
-      > */}
+      > */}<h1 style={{margin:  '6rem auto -2rem auto', maxWidth: '120rem', padding: '0 1rem'}}>People</h1>
       <main>
         <section className="section--two-col">
           <div>

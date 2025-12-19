@@ -4,7 +4,7 @@ import Logo from "./Logo";
 export default async function Footer({ children = <></> }) {
   return (
     <footer className={styles.footer}>
-      <div>
+      <div className={`section--two-col ${styles.inner}`}>
         <div>
           <h6>
             Solander 38
