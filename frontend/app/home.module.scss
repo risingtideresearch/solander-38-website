@@ -1,7 +1,9 @@
 .home {
   h1 {
     font-size: 4rem;
-    font-weight: 100;
+    @media screen and (max-width: 800px) {
+      font-size: 15vw;
+    }
   }
 }
 .header {
@@ -11,7 +13,8 @@
   justify-content: center;
   position: relative;
   @media screen and (max-width: 800px) {
-    height: 20rem;
+    height: 36rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -21,7 +24,6 @@
   margin: 0 0 -3.75rem -2.4125rem;
   display: grid;
   grid-template-columns: 1fr 26rem;
-  height: 18rem;
   align-items: center;
   justify-content: flex-end;
   justify-content: flex-start;
@@ -39,7 +41,13 @@
   }
 
   @media screen and (max-width: 800px) {
+    height: auto;
     grid-template-columns: 1fr;
+    margin: 0 auto;
+    position: relative;
+    > div:nth-child(2) {
+      margin-top: -6rem;
+    }
   }
 }
 
@@ -47,7 +55,7 @@
   margin-bottom: 3rem;
   width: max-content;
   @media screen and (max-width: 800px) {
-    margin: 0 auto;
+    margin: -10rem auto 0 auto;
   }
 }
 
