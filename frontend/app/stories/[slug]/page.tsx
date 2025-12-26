@@ -20,7 +20,7 @@ export default async function Page({ params }) {
   const { data } = await fetchArticles(slug);
   const sections = await fetchSections();
 
-  if (!data.slug) {
+  if (!data[0]) {
     notFound();
   }
 

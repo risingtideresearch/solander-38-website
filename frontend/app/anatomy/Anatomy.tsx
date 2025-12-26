@@ -150,14 +150,11 @@ export default function Anatomy({ content }: IAnatomy) {
 
   // ensure contextual layers are rendered
   const layersToRender = useMemo(() => {
-    if (settings.transparent) {
-      return [
-        ...filteredLayers.filter((layer) => !contextualLayers.includes(layer)),
-        ...contextualLayers,
-      ];
-    }
-    return filteredLayers;
-  }, [settings.transparent, filteredLayers]);
+    return [
+      ...filteredLayers.filter((layer) => !contextualLayers.includes(layer)),
+      ...contextualLayers,
+    ];
+  }, [filteredLayers]);
 
   const getClippingPlanes = useCallback(() => {
     if (!boundingBox) return [];
