@@ -92,9 +92,10 @@ export default function Navigation({
         <a
           key={link.label}
           href={getURL(link)}
-          style={{ fontWeight: active == link.url ? 600 : 400 }}
+          style={{ fontWeight: active == link.url ? 600 : '' }}
         >
-          {link.label}
+          <span style={{fontWeight: 600, visibility: "hidden"}}>{link.label}</span>
+          <span style={{ position: 'absolute', left: 0}}>{link.label}</span> 
         </a>
       ))}
     </nav>

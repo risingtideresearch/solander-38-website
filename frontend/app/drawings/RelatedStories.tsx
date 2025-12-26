@@ -2,30 +2,18 @@ import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { Article } from "@/sanity/sanity.types";
 
 interface RelatedArticlesProps {
-  stories: Array<Article>;
+  stories?: Array<Article>;
 }
 
 export default function RelatedStories({ stories }: RelatedArticlesProps) {
   if (stories && stories.length > 0) {
     return (
-      <div
-        style={{
-          display: "flex",
-          // alignItems: "center",
-          justifyContent: "space-between",
-          gap: "0.5rem",
-        }}
-      >
-        <h6 style={{ padding: "0.5rem" }}>Stories</h6>
-        <div>
+      <>
+        <h6>Stories</h6>
+        <div style={{flexDirection: 'column', gap: '0.375rem', alignItems: 'flex-end'}}>
           {stories.map((story: Article) => {
             return (
-              <div
-                key={story._id}
-                style={{
-                  margin: "0.5rem",
-                }}
-              >
+              <div key={story._id}>
                 <p
                   style={{
                     margin: 0,
@@ -56,7 +44,7 @@ export default function RelatedStories({ stories }: RelatedArticlesProps) {
             );
           })}
         </div>
-      </div>
+      </>
     );
   }
   return <div></div>;

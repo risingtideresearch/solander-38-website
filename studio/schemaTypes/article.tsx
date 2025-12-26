@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {RiArticleLine} from 'react-icons/ri'
+import {InlineIcon} from '@sanity/icons'
 import ModelDropdownInput from '../components/ModelDropdownInput'
 import DrawingDropdownInput, {
   getDrawingId,
@@ -48,53 +49,6 @@ export const article = defineType({
       ],
     }),
     defineField({
-      name: 'relatedModels',
-      type: 'array',
-      title: 'Related 3D model layers',
-      options: {
-        layout: 'list',
-      },
-      description:
-        'By default, entire section will be shown (e.g. Propulsion) or use this list to override models shown',
-      validation: (Rule) =>
-        Rule.custom((models: string[] | undefined) => {
-          if (!models || models.length === 0) return true
-
-          // Check for empty values
-          const hasEmptyValues = models.some((model) => !model || model.trim() === '')
-          if (hasEmptyValues) {
-            return 'Empty values are not allowed'
-          }
-
-          // Check for duplicates
-          const seen = new Map<string, number>()
-          const duplicates: string[] = []
-
-          models.forEach((model) => {
-            const count = seen.get(model) || 0
-            seen.set(model, count + 1)
-            if (count === 1) {
-              duplicates.push(model)
-            }
-          })
-
-          if (duplicates.length > 0) {
-            return `Duplicate models found: ${duplicates.join(', ')}`
-          }
-
-          return true
-        }),
-      of: [
-        defineField({
-          name: 'model',
-          type: 'string',
-          components: {
-            input: ModelDropdownInput,
-          },
-        }),
-      ],
-    }),
-    defineField({
       name: 'content',
       type: 'array',
       of: [
@@ -102,11 +56,38 @@ export const article = defineType({
           type: 'block',
           name: 'child',
           styles: [{title: 'Heading 2', value: 'h2'}],
+          lists: [
+            {title: 'Bullet', value: 'bullet'},
+            {title: 'Numbered', value: 'number'},
+          ],
+          marks: {
+            decorators: [
+              {title: 'Strong', value: 'strong'},
+              {title: 'Emphasis', value: 'em'},
+              {title: 'Underline', value: 'underline'},
+            ],
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: 'Link',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'URL',
+                  },
+                ],
+              },
+            ],
+          },
           of: [{name: 'personRef', type: 'reference', to: [{type: 'person'}]}],
         }),
+
         defineField({
           name: 'imageSet',
           type: 'object',
+          icon: InlineIcon,
           fields: [
             {
               type: 'string',
@@ -165,7 +146,7 @@ export const article = defineType({
               caption: 'caption',
               imageSet: 'imageSet',
             },
-            prepare({caption, title, imageSet}) {
+            prepare({title, imageSet}) {
               const imageCount = imageSet?.length || 0
               const pluralSuffix = imageCount === 1 ? '' : 's'
 
@@ -216,18 +197,53 @@ export const article = defineType({
               }
             },
           },
-          // components: {
-          //   preview: (props: any) => {
-          //     const {media, title} = props
+        }),
+      ],
+    }),
+    defineField({
+      name: 'relatedModels',
+      type: 'array',
+      title: 'Related 3D model layers',
+      options: {
+        layout: 'list',
+      },
+      description:
+        'By default, entire section will be shown (e.g. Propulsion) or use this list to override models shown',
+      validation: (Rule) =>
+        Rule.custom((models: string[] | undefined) => {
+          if (!models || models.length === 0) return true
 
-          //     return (
-          //       <div>
-          //         <div style={{maxWidth: '10rem'}}>{media}</div>
-          //         <p style={{fontSize: '0.75em'}}>{title}</p>
-          //       </div>
-          //     )
-          //   },
-          // },
+          // Check for empty values
+          const hasEmptyValues = models.some((model) => !model || model.trim() === '')
+          if (hasEmptyValues) {
+            return 'Empty values are not allowed'
+          }
+
+          // Check for duplicates
+          const seen = new Map<string, number>()
+          const duplicates: string[] = []
+
+          models.forEach((model) => {
+            const count = seen.get(model) || 0
+            seen.set(model, count + 1)
+            if (count === 1) {
+              duplicates.push(model)
+            }
+          })
+
+          if (duplicates.length > 0) {
+            return `Duplicate models found: ${duplicates.join(', ')}`
+          }
+
+          return true
+        }),
+      of: [
+        defineField({
+          name: 'model',
+          type: 'string',
+          components: {
+            input: ModelDropdownInput,
+          },
         }),
       ],
     }),

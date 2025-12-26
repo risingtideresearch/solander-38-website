@@ -20,13 +20,15 @@
       width: 100%;
     }
 
+    >div:last-child {
+      text-align: right;
+    }
+
     a {
       display: flex;
       align-items: center;
       gap: 0.25rem;
-      &:last-child {
-        text-align: right;
-      }
+      text-decoration: none;
     }
   }
 }

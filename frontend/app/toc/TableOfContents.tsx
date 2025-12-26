@@ -25,9 +25,7 @@ export default function TableOfContents({
   const [article, setArticle] = useState(defaultArticle);
   return (
     <TOCContext.Provider value={{ section, article }}>
-      <div
-        className={styles.toc__container}
-      >
+      <div className={styles.toc__container}>
         {/* <button
           style={{
             position: "absolute",
@@ -49,15 +47,13 @@ export default function TableOfContents({
               return (
                 <li key={s.slug}>
                   <h6
-                    className="link"
                     onClick={() => {
                       setSection(s);
                       setArticle(null);
                     }}
                     role="button"
                     style={{
-                      fontWeight:
-                        !article && s.slug == section.slug ? 600 : 400,
+                      fontWeight: !article && s.slug == section.slug ? 600 : "",
                     }}
                   >
                     {s.name}
@@ -65,11 +61,12 @@ export default function TableOfContents({
                   {showArticles && (
                     <ol style={{ height: s.slug == section.slug ? "auto" : 0 }}>
                       {s.articles?.map((a) => (
-                        <li onClick={() => setArticle(a)} key={a._id}>
+                        <li key={a._id}>
                           <span
-                            className="link"
+                            onClick={() => setArticle(a)}
+                            role="button"
                             style={{
-                              fontWeight: a.slug == article?.slug ? 600 : 400,
+                              fontWeight: a.slug == article?.slug ? 600 : "",
                             }}
                           >
                             {a.title}

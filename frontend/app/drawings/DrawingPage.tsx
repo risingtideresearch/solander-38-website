@@ -1,6 +1,5 @@
 import styles from "./drawings.module.scss";
 import DrawingMetadata from "./DrawingMetadata";
-import RelatedStories from "./RelatedStories";
 import SubNav from "../components/SubNav";
 import { URLS } from "../components/Navigation";
 
@@ -15,10 +14,10 @@ export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
       <div className={`section--two-col ${styles["drawing-page"]}`}>
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>
-            <DrawingMetadata drawing={asset} />
-            <div>
-              <RelatedStories stories={drawingsArticleDictionary[asset.uuid]} />
-            </div>
+            <DrawingMetadata
+              drawing={asset}
+              stories={drawingsArticleDictionary[asset.uuid]}
+            />
           </div>
         </div>
         <div>

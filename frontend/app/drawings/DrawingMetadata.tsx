@@ -3,8 +3,10 @@ import { formatDate } from "../utils";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { getSlugFromDrawingGroup } from "./util";
 import { Drawing } from "./types";
+import RelatedStories from "./RelatedStories";
+import { Article } from "@/sanity/sanity.types";
 
-export default function DrawingMetadata({ drawing }: {drawing: Drawing}) {
+export default function DrawingMetadata({ drawing, stories }: {drawing: Drawing, stories?: Array<Article>}) {
   return (
     <div className={`${styles.metadata}`}>
       <h6>Name</h6>
@@ -36,8 +38,7 @@ export default function DrawingMetadata({ drawing }: {drawing: Drawing}) {
           <LiaDownloadSolid size={16} />
         </a>
       </h6>
-      {/* <h6>Text</h6>
-      <p style={{ textTransform: 'lowercase', fontSize: '0.75rem'}}>{drawing.extracted_text}</p> */}
+      <RelatedStories stories={stories} />
     </div>
   );
 }

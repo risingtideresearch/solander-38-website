@@ -7,17 +7,21 @@
   margin-bottom: 2rem;
   width: 100%;
 
-  @media screen and (max-width: 800px) {
-    grid-template-columns: 1fr;
-  }
+  // @media screen and (max-width: 800px) {
+  //   grid-template-columns: 1fr;
+  // }
 
   &__page {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 0;
 
-    @media screen and (max-width: 800px) {
-      grid-template-columns: 1fr;
-    }
+    // @media screen and (max-width: 800px) {
+    //   grid-template-columns: 1fr;
+    // }
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 

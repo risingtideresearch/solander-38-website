@@ -1,14 +1,13 @@
 import { formatDate } from "../utils";
 import styles from "./../stories/article.module.scss";
+import RelatedStories from "../drawings/RelatedStories";
 
-export default function PhotoMetadata({ asset }) {
+export default function PhotoMetadata({ asset, stories }) {
   const system = asset.usedInArticles[0]?.section || {};
   return (
     <div className={`${styles.metadata}`}>
       <h6>Name</h6>
-      <p>
-        {asset.title || asset.originalFilename}
-      </p>
+      <p>{asset.title || asset.originalFilename}</p>
 
       {asset.metadata.date ? (
         <>
@@ -25,13 +24,12 @@ export default function PhotoMetadata({ asset }) {
       {asset.description ? (
         <>
           <h6>Desc</h6>
-          <p>
-            {asset.description}
-          </p>
+          <p>{asset.description}</p>
         </>
       ) : (
         <></>
       )}
+      <RelatedStories stories={stories} />
     </div>
   );
 }

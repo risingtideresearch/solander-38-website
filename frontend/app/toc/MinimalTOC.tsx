@@ -9,7 +9,7 @@ export default function MinimalTOC({ sections, section, url }) {
             return (
               <li style={{ cursor: "pointer" }} key={s.name}>
                 <a href={`${url}/${s.slug}`}>
-                  <h6 style={{ fontWeight: s.slug == section ? 600 : 400 }}>
+                  <h6 style={{ fontWeight: s.slug == section ? 600 : '' }}>
                     {s.name}
                   </h6>
                 </a>

@@ -3,7 +3,6 @@ import { Image } from "../components/Image";
 import PhotoMetadata from "./PhotoMetadata";
 import SubNav from "../components/SubNav";
 import { URLS } from "../components/Navigation";
-import RelatedStories from "../drawings/RelatedStories";
 
 export function PhotoPage({ asset, next, prev }) {
   if (!asset) {
@@ -16,10 +15,7 @@ export function PhotoPage({ asset, next, prev }) {
       <div className={`section--two-col ${styles["drawing-page"]}`}>
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>
-            <PhotoMetadata asset={asset} />
-            <div>
-              <RelatedStories stories={asset.usedInArticles} />
-            </div>
+            <PhotoMetadata asset={asset} stories={asset.usedInArticles} />
           </div>
         </div>
         <div>

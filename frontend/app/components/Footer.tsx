@@ -28,7 +28,7 @@ export default async function Footer({ children = <></> }) {
             <br />
             <span style={{ textTransform: "none" }}>
               is an effort to document and share designs, processes, and
-              research from building <em>Catalyst</em>, the first Solander 38.
+              research from <em>Catalyst</em>, the first Solander 38.
             </span>
           </h6>
           <h6>
