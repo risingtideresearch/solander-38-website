@@ -71,26 +71,46 @@ export default async function Page() {
 
       <Footer>
         <div className={styles.toc}>
-          <a href={URLS.STORIES}>
-            Stories <LiaLongArrowAltRightSolid size={18} />{" "}
-          </a>
-          <h6>Details from the build, organized by anatomical system</h6>
-          <a href={URLS.ANATOMY}>
-            Anatomy <LiaLongArrowAltRightSolid size={18} />{" "}
-          </a>
-          <h6>Model of parts and systems</h6>
-          <a href={URLS.DRAWINGS}>
-            Drawings <LiaLongArrowAltRightSolid size={18} />{" "}
-          </a>
-          <h6>Library of fabrication plans</h6>
-          <a href={URLS.PHOTOS}>
-            Photos <LiaLongArrowAltRightSolid size={18} />{" "}
-          </a>
-          <h6>Library of photos</h6>
-          <a href={URLS.PEOPLE}>
-            People <LiaLongArrowAltRightSolid size={18} />{" "}
-          </a>
-          <h6>Builders, engineers, and researchers involved</h6>
+          <section>
+            <p>
+              <a href={URLS.STORIES}>
+                Stories <LiaLongArrowAltRightSolid size={18} />{" "}
+              </a>
+            </p>
+            <p>Details from the build, organized by anatomical system.</p>
+          </section>
+          <section>
+            <p>
+              <a href={URLS.ANATOMY}>
+                Anatomy <LiaLongArrowAltRightSolid size={18} />{" "}
+              </a>
+            </p>
+            <p>Model of parts and systems.</p>
+          </section>
+          <section>
+            <p>
+              <a href={URLS.DRAWINGS}>
+                Drawings <LiaLongArrowAltRightSolid size={18} />{" "}
+              </a>
+            </p>
+            <p>Library of fabrication plans.</p>
+          </section>
+          <section>
+            <p>
+              <a href={URLS.PHOTOS}>
+                Photos <LiaLongArrowAltRightSolid size={18} />{" "}
+              </a>
+            </p>
+            <p>Library of photos.</p>
+          </section>
+          <section>
+            <p>
+              <a href={URLS.PEOPLE}>
+                People <LiaLongArrowAltRightSolid size={18} />{" "}
+              </a>
+            </p>
+            <p>Builders, engineers, and researchers involved.</p>
+          </section>
         </div>
       </Footer>
     </div>

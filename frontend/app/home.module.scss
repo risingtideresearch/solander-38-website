@@ -69,9 +69,16 @@
 }
 
 .toc {
-  margin-top: 0.5rem;
-  > h6 {
-    margin: 0.5rem 0 2rem 0;
-    text-transform: none;
+  section {
+    padding: 1rem 0;
+
+    > p:first-child {
+      font-weight: 600;
+    }
+  }
+  
+  p {
+    font-size: 0.875rem;
+    margin: 0;
   }
 }
