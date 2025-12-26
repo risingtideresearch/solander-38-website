@@ -1363,8 +1363,8 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::PLATING",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb",
-      "file_size": 1417416,
-      "object_count": 30,
+      "file_size": 1370036,
+      "object_count": 29,
       "bounding_box": {
         "min": {
           "x": -462.7386779785156,
@@ -1374,27 +1374,27 @@
         "max": {
           "x": -171.4393675062145,
           "y": 129.92897033691406,
-          "z": 164.075
+          "z": 130.07843032884375
         },
         "center": {
           "x": -317.08902274236505,
           "y": 0.14653778076171875,
-          "z": 125.34706923641087
+          "z": 108.34878440083276
         },
         "dimensions": {
           "width": 291.29931047230116,
           "depth": 259.5648651123047,
-          "height": 77.45586152717823
+          "height": 43.45929185602199
         }
       },
       "normalized_size": {
         "length": 291.29931047230116,
         "width": 259.5648651123047,
-        "height": 77.45586152717823,
+        "height": 43.45929185602199,
         "world_aligned": {
           "x": 291.29931047230116,
           "y": 259.5648651123047,
-          "z": 77.45586152717823
+          "z": 43.45929185602199
         }
       },
       "export_method": "standard",
@@ -1963,7 +1963,7 @@
     {
       "layer_name": "CONTROL::MECHANICAL STEERING::STEERING SHELVES::P&S rudder shelf",
       "filename": "CONTROL__MECHANICAL STEERING__STEERING SHELVES__P&S rudder shelf.glb",
-      "file_size": 16396,
+      "file_size": 16376,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -2881,46 +2881,6 @@
       "notes": ""
     },
     {
-      "layer_name": "BODY::HULLS & DECKS::PORTLIGHTS::portlight cut-out edge",
-      "filename": "BODY__HULLS & DECKS__PORTLIGHTS__portlight cut-out edge.glb",
-      "file_size": 45008,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -281.579649126543,
-          "y": -121.24127697539856,
-          "z": 76.72201549574432
-        },
-        "max": {
-          "x": -239.36064710098788,
-          "y": 121.24127697539856,
-          "z": 91.55329528231628
-        },
-        "center": {
-          "x": -260.47014811376545,
-          "y": 0.0,
-          "z": 84.1376553890303
-        },
-        "dimensions": {
-          "width": 42.21900202555514,
-          "depth": 242.48255395079713,
-          "height": 14.831279786571969
-        }
-      },
-      "normalized_size": {
-        "length": 242.48255395079713,
-        "width": 42.21900202555514,
-        "height": 14.831279786571969,
-        "world_aligned": {
-          "x": 42.21900202555514,
-          "y": 242.48255395079713,
-          "z": 14.831279786571969
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
       "layer_name": "BODY::CTR BEAM::scuppers",
       "filename": "BODY__CTR BEAM__scuppers.glb",
       "file_size": 13664,
@@ -3441,9 +3401,9 @@
       "notes": ""
     },
     {
-      "layer_name": "WATER/HEATING SYSTEMS::TANKS::hot water tank (model?)",
-      "filename": "WATER_HEATING SYSTEMS__TANKS__hot water tank (model_).glb",
-      "file_size": 16224,
+      "layer_name": "WATER/HEATING SYSTEMS::TANKS::hot water tank",
+      "filename": "WATER_HEATING SYSTEMS__TANKS__hot water tank.glb",
+      "file_size": 16216,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -4643,7 +4603,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::portland pudgy::PORTLAND PUDGY SIMPLIFIED",
       "filename": "OUTFITTING_INTERIOR__portland pudgy__PORTLAND PUDGY SIMPLIFIED.glb",
-      "file_size": 10956,
+      "file_size": 10712,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -4721,50 +4681,130 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::EXT. INSTR. MOUNTS::EIM V4 (4\" sq tube)",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__EIM V4 (4_ sq tube).glb",
-      "file_size": 211272,
-      "object_count": 3,
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::AFT STBD MAST PEDESTALS & STRUCT",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__AFT STBD MAST PEDESTALS & STRUCT.glb",
+      "file_size": 296220,
+      "object_count": 6,
       "bounding_box": {
         "min": {
-          "x": -397.5761857744315,
-          "y": -94.23538970947266,
-          "z": 157.0124969482422
+          "x": -397.57625917222964,
+          "y": -94.48538970947266,
+          "z": 157.1999969482422
         },
         "max": {
-          "x": -381.9114990234375,
-          "y": -41.73538589477539,
+          "x": -380.1264953613281,
+          "y": -41.48538589477539,
           "z": 186.37059020996094
         },
         "center": {
-          "x": -389.7438423989345,
+          "x": -388.85137726677885,
           "y": -67.98538780212402,
-          "z": 171.69154357910156
+          "z": 171.78529357910156
         },
         "dimensions": {
-          "width": 15.664686750994008,
-          "depth": 52.500003814697266,
-          "height": 29.35809326171875
+          "width": 17.449763810901516,
+          "depth": 53.000003814697266,
+          "height": 29.17059326171875
         }
       },
       "normalized_size": {
-        "length": 52.500003814697266,
-        "width": 29.35809326171875,
-        "height": 15.664686750994008,
+        "length": 53.000003814697266,
+        "width": 29.17059326171875,
+        "height": 17.449763810901516,
         "world_aligned": {
-          "x": 15.664686750994008,
-          "y": 52.500003814697266,
-          "z": 29.35809326171875
+          "x": 17.449763810901516,
+          "y": 53.000003814697266,
+          "z": 29.17059326171875
         }
       },
       "export_method": "standard",
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::EXT. INSTR. MOUNTS::EIM V4 (4\" sq tube)::EIMV4 antenna",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__EIM V4 (4_ sq tube)__EIMV4 antenna.glb",
-      "file_size": 129036,
-      "object_count": 8,
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::Signal Mate LED Anchor Light",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__Signal Mate LED Anchor Light.glb",
+      "file_size": 16284,
+      "object_count": 1,
+      "bounding_box": {
+        "min": {
+          "x": -397.82617813219537,
+          "y": -68.73538802713121,
+          "z": 186.37058795771418
+        },
+        "max": {
+          "x": -396.32617813219537,
+          "y": -67.23538802713121,
+          "z": 189.62058795771418
+        },
+        "center": {
+          "x": -397.07617813219537,
+          "y": -67.98538802713121,
+          "z": 187.99558795771418
+        },
+        "dimensions": {
+          "width": 1.5,
+          "depth": 1.5,
+          "height": 3.25
+        }
+      },
+      "normalized_size": {
+        "length": 3.25,
+        "width": 1.5,
+        "height": 1.5,
+        "world_aligned": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 3.25
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::Simrad HALO20+ Radar",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__Simrad HALO20+ Radar.glb",
+      "file_size": 273072,
+      "object_count": 1,
+      "bounding_box": {
+        "min": {
+          "x": -391.79579983938225,
+          "y": -78.024521517545,
+          "z": 164.0749969482422
+        },
+        "max": {
+          "x": -371.71705968190196,
+          "y": -57.94578136006465,
+          "z": 172.875
+        },
+        "center": {
+          "x": -381.7564297606421,
+          "y": -67.98515143880482,
+          "z": 168.4749984741211
+        },
+        "dimensions": {
+          "width": 20.078740157480297,
+          "depth": 20.078740157480347,
+          "height": 8.800003051757812
+        }
+      },
+      "normalized_size": {
+        "length": 20.078740157480347,
+        "width": 20.078740157480297,
+        "height": 8.800003051757812,
+        "world_aligned": {
+          "x": 20.078740157480297,
+          "y": 20.078740157480347,
+          "z": 8.800003051757812
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::Shakespeare 5215-AIS Squatty Body 36\" VHF-AIS Antenna Whip",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__Shakespeare 5215-AIS Squatty Body 36_ VHF-AIS Antenna Whip.glb",
+      "file_size": 169332,
+      "object_count": 10,
       "bounding_box": {
         "min": {
           "x": -385.02741613797025,
@@ -4801,8 +4841,8 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::EXT. INSTR. MOUNTS::FWD MAST & MOUNTS",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__FWD MAST & MOUNTS.glb",
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::FWD MAST PEDESTALS & STRUCT",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__FWD MAST PEDESTALS & STRUCT.glb",
       "file_size": 338384,
       "object_count": 19,
       "bounding_box": {
@@ -4841,129 +4881,49 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::Simrad HALO20+ Radar",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Simrad HALO20+ Radar.glb",
-      "file_size": 273276,
-      "object_count": 1,
-      "bounding_box": {
-        "min": {
-          "x": -393.87479983938226,
-          "y": -77.899521517545,
-          "z": 164.0749969482422
-        },
-        "max": {
-          "x": -373.79605968190197,
-          "y": -57.82078136006465,
-          "z": 172.875
-        },
-        "center": {
-          "x": -383.8354297606421,
-          "y": -67.86015143880482,
-          "z": 168.4749984741211
-        },
-        "dimensions": {
-          "width": 20.078740157480297,
-          "depth": 20.078740157480347,
-          "height": 8.800003051757812
-        }
-      },
-      "normalized_size": {
-        "length": 20.078740157480347,
-        "width": 20.078740157480297,
-        "height": 8.800003051757812,
-        "world_aligned": {
-          "x": 20.078740157480297,
-          "y": 20.078740157480347,
-          "z": 8.800003051757812
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::Signal Mate LED Anchor Light",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Signal Mate LED Anchor Light.glb",
-      "file_size": 16244,
-      "object_count": 1,
-      "bounding_box": {
-        "min": {
-          "x": -397.82617813219537,
-          "y": -68.73538802713121,
-          "z": 186.37058795771418
-        },
-        "max": {
-          "x": -396.32617813219537,
-          "y": -67.23538802713121,
-          "z": 189.62058795771418
-        },
-        "center": {
-          "x": -397.07617813219537,
-          "y": -67.98538802713121,
-          "z": 187.99558795771418
-        },
-        "dimensions": {
-          "width": 1.5,
-          "depth": 1.5,
-          "height": 3.25
-        }
-      },
-      "normalized_size": {
-        "length": 3.25,
-        "width": 1.5,
-        "height": 1.5,
-        "world_aligned": {
-          "x": 1.5,
-          "y": 1.5,
-          "z": 3.25
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::Furuno SCX-20 satellite compass",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Furuno SCX-20 satellite compass.glb",
-      "file_size": 251716,
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::Searchlight D-SS PRO Driving Pod",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__Searchlight D-SS PRO Driving Pod.glb",
+      "file_size": 61676,
       "object_count": 2,
       "bounding_box": {
         "min": {
-          "x": -185.83490230421677,
-          "y": 48.78018722175201,
-          "z": 134.16302711687422
+          "x": -172.76436274560436,
+          "y": -1.9592648846148664,
+          "z": 121.82500000000007
         },
         "max": {
-          "x": -175.9521484375,
-          "y": 56.2904929063163,
-          "z": 138.1896209716797
+          "x": -169.2643585205078,
+          "y": 1.9539355671524503,
+          "z": 125.32500457763672
         },
         "center": {
-          "x": -180.89352537085838,
-          "y": 52.53534006403416,
-          "z": 136.17632404427695
+          "x": -171.01436063305607,
+          "y": -0.002664658731208025,
+          "z": 123.5750022888184
         },
         "dimensions": {
-          "width": 9.882753866716769,
-          "depth": 7.510305684564294,
-          "height": 4.026593854805469
+          "width": 3.5000042250965464,
+          "depth": 3.9132004517673167,
+          "height": 3.500004577636645
         }
       },
       "normalized_size": {
-        "length": 9.882753866716769,
-        "width": 7.510305684564294,
-        "height": 4.026593854805469,
+        "length": 3.9132004517673167,
+        "width": 3.500004577636645,
+        "height": 3.5000042250965464,
         "world_aligned": {
-          "x": 9.882753866716769,
-          "y": 7.510305684564294,
-          "z": 4.026593854805469
+          "x": 3.5000042250965464,
+          "y": 3.9132004517673167,
+          "z": 3.500004577636645
         }
       },
       "export_method": "standard",
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FLIR MD-625",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FLIR MD-625.glb",
-      "file_size": 256780,
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::FLIR MD-625",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__FLIR MD-625.glb",
+      "file_size": 256816,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5001,40 +4961,40 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::Searchlight D-SS PRO Driving Pod",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Searchlight D-SS PRO Driving Pod.glb",
-      "file_size": 61644,
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::Furuno SCX-20 satellite compass",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__Furuno SCX-20 satellite compass.glb",
+      "file_size": 251752,
       "object_count": 2,
       "bounding_box": {
         "min": {
-          "x": -172.76436274560436,
-          "y": -1.9592648846148664,
-          "z": 121.82500000000007
+          "x": -185.83490230421677,
+          "y": 48.78018722175201,
+          "z": 134.16302711687422
         },
         "max": {
-          "x": -169.2643585205078,
-          "y": 1.9539355671524503,
-          "z": 125.32500457763672
+          "x": -175.9521484375,
+          "y": 56.2904929063163,
+          "z": 138.1896209716797
         },
         "center": {
-          "x": -171.01436063305607,
-          "y": -0.002664658731208025,
-          "z": 123.5750022888184
+          "x": -180.89352537085838,
+          "y": 52.53534006403416,
+          "z": 136.17632404427695
         },
         "dimensions": {
-          "width": 3.5000042250965464,
-          "depth": 3.9132004517673167,
-          "height": 3.500004577636645
+          "width": 9.882753866716769,
+          "depth": 7.510305684564294,
+          "height": 4.026593854805469
         }
       },
       "normalized_size": {
-        "length": 3.9132004517673167,
-        "width": 3.500004577636645,
-        "height": 3.5000042250965464,
+        "length": 9.882753866716769,
+        "width": 7.510305684564294,
+        "height": 4.026593854805469,
         "world_aligned": {
-          "x": 3.5000042250965464,
-          "y": 3.9132004517673167,
-          "z": 3.500004577636645
+          "x": 9.882753866716769,
+          "y": 7.510305684564294,
+          "z": 4.026593854805469
         }
       },
       "export_method": "standard",
@@ -5306,17 +5266,17 @@
   ],
   "export_info": {
     "total_layers_found": 346,
-    "timestamp_start": "2025-12-15 16:03:53",
+    "timestamp_start": "2025-12-26 11:30:44",
     "format": "GLB",
-    "timestamp_end": "2025-12-15 16:12:11",
+    "timestamp_end": "2025-12-26 11:38:03",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
     },
-    "successful_exports": 132,
+    "successful_exports": 131,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 44991276,
+    "total_file_size": 45023800,
     "units": {
       "id": 8,
       "name": "inch"

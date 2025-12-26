@@ -8,7 +8,6 @@
     "Brass",
     "Bronze",
     "Carbon Fiber",
-    "Carbon Fiber Plywood Sandwich",
     "Composite Sandwich",
     "Composite Sandwich (HULL)",
     "Composite Sandwich (INTERNALS)",
@@ -50,14 +49,8 @@
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch other hardware.glb": [
       "Aluminum"
     ],
-    "OUTFITTING_INTERIOR__portland pudgy__PORTLAND PUDGY SIMPLIFIED.glb": [
-      "Plastic"
-    ],
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__HDPE guide & coaming.glb": [
       "Starboard (HDPE)"
-    ],
-    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__EIM V4 (4_ sq tube).glb": [
-      "Alum 6061"
     ],
     "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__cabinet surfaces.glb": [
       "Wood"
@@ -107,17 +100,11 @@
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal pipe.glb": [
       "Alum 6061"
     ],
-    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__Simrad HALO20+ Radar.glb": [
-      "Plastic"
-    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__G10 backing plates.glb": [
       "Fiberglass"
     ],
     "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CABINETS__heat pump structure__heat pump cabinet.glb": [
       "Wood"
-    ],
-    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__EXT. INSTR. MOUNTS__FWD MAST & MOUNTS.glb": [
-      "Aluminum"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia flange brackets.glb": [
       "Alum 5052"
@@ -145,6 +132,9 @@
     ],
     "PROPULSION__SIMPLIFIED PROPELLER.glb": [
       "Bronze"
+    ],
+    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__Shakespeare 5215-AIS Squatty Body 36_ VHF-AIS Antenna Whip.glb": [
+      "Plastic"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb": [
       "Stainless Steel"
@@ -206,9 +196,6 @@
     "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb": [
       "Fiberglass"
     ],
-    "BODY__HULLS & DECKS__PORTLIGHTS__portlight cut-out edge.glb": [
-      "Fiberglass"
-    ],
     "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__cross beam.glb": [
       "Aluminum"
     ],
@@ -222,7 +209,7 @@
       "Wood"
     ],
     "CONTROL__MECHANICAL STEERING__STEERING SHELVES__P&S rudder shelf.glb": [
-      "Carbon Fiber Plywood Sandwich"
+      "Composite Sandwich"
     ],
     "BODY__INTERNALS__stringers.glb": [
       "Composite Sandwich (INTERNALS)"
@@ -232,6 +219,9 @@
     ],
     "PROPULSION__SIMPLIFIED STRUT.glb": [
       "Bronze"
+    ],
+    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__AFT STBD MAST PEDESTALS & STRUCT.glb": [
+      "Aluminum"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": [
       "Alum 5052"
@@ -250,6 +240,9 @@
     ],
     "DECK JIG__TRANSV FRAMES.glb": [
       "Particle Board"
+    ],
+    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__FWD MAST PEDESTALS & STRUCT.glb": [
+      "Aluminum"
     ],
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__1_2_ acrylic.glb": [
       "Acrylic"
