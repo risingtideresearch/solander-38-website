@@ -146,13 +146,14 @@ export const article = defineType({
               caption: 'caption',
               imageSet: 'imageSet',
             },
-            prepare({title, imageSet}) {
+            prepare({title, caption, imageSet}) {
               const imageCount = imageSet?.length || 0
               const pluralSuffix = imageCount === 1 ? '' : 's'
 
               return {
                 title: title || 'Image Set',
                 subtitle: `${imageCount} image${pluralSuffix}`,
+                description: caption || '',
               }
             },
           },

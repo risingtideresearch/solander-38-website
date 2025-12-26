@@ -7,6 +7,7 @@ import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import { getReducedModelSet } from "@/app/utils";
 import Navigation, { URLS } from "@/app/components/Navigation";
 import subNavStyles from "@/app/components/subnav.module.scss";
+import { notFound } from "next/navigation";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -18,6 +19,10 @@ export default async function Page({ params }) {
   const { slug } = await params;
   const { data } = await fetchArticles(slug);
   const sections = await fetchSections();
+
+  if (!data.slug) {
+    notFound();
+  }
 
   const drawingsPath = path.join(
     process.cwd(),
@@ -123,7 +128,7 @@ export default async function Page({ params }) {
         type={"top-bar"}
         active={URLS.STORIES}
         story={slug}
-        section={dataWithMatchedDrawings.section.slug?.current}
+        section={dataWithMatchedDrawings?.section ? dataWithMatchedDrawings.section.slug?.current : null}
       />
       <div className={subNavStyles["sub-nav"]}>
         <div className={subNavStyles["sub-nav__container"]}>

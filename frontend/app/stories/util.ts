@@ -27,7 +27,7 @@ interface MatchedDrawing extends Drawing {
   _key: string;
 }
 
-interface MatchedImageSet extends Omit<ImageSet, 'imageSet'> {
+interface MatchedImageSet extends Omit<ImageSet, "imageSet"> {
   imageSet: MatchedDrawing[];
 }
 
@@ -36,18 +36,18 @@ interface MatchedImageSet extends Omit<ImageSet, 'imageSet'> {
  */
 export function matchDrawings(
   drawings: Drawing[],
-  imageSet: ImageSet
+  imageSet: ImageSet,
 ): MatchedImageSet {
   // Create a lookup map for O(1) access
   const drawingMap = new Map<string, Drawing>();
-  drawings.forEach(drawing => {
+  drawings.forEach((drawing) => {
     drawingMap.set(drawing.uuid, drawing);
   });
 
   // Match each drawing in the imageSet
   const matchedImageSet = imageSet.imageSet
-    .map(item => {
-      if (item._type == 'image') {
+    .map((item) => {
+      if (item._type == "image") {
         return item;
       }
       const drawing = drawingMap.get(item.drawing);
@@ -71,12 +71,12 @@ export function matchDrawings(
 /**
  * Processes all imageSets in article content
  */
-export function matchArticleDrawings(
-  drawings: Drawing[],
-  data
-) {
-  data.content = (data.content || []).map(block => {
-    if (block._type === 'imageSet') {
+export function matchArticleDrawings(drawings: Drawing[], data) {
+  if (!data) {
+    return {};
+  }
+  data.content = (data.content || []).map((block) => {
+    if (block._type === "imageSet") {
       return matchDrawings(drawings, block);
     }
     return block;
@@ -90,9 +90,9 @@ export function matchArticleDrawings(
  */
 export function getDrawingByUuid(
   drawings: Drawing[],
-  uuid: string
+  uuid: string,
 ): Drawing | undefined {
-  return drawings.find(drawing => drawing.uuid === uuid);
+  return drawings.find((drawing) => drawing.uuid === uuid);
 }
 
 /**
@@ -100,9 +100,9 @@ export function getDrawingByUuid(
  */
 export function matchMultipleArticles(
   drawings: Drawing[],
-  articles: any[]
+  articles: any[],
 ): any[] {
-  return articles.map(article => ({
+  return articles.map((article) => ({
     ...article,
     content: matchArticleDrawings(drawings, article.content || []),
   }));
