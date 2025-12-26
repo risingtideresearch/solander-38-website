@@ -4,6 +4,7 @@ import {set, unset} from 'sanity'
 import type {StringInputProps} from 'sanity'
 
 import data from '../script_output/model_export_manifest.json'
+import jigData from '../script_output/model_jig_export_manifest.json'
 
 interface Option {
   title: string
@@ -22,6 +23,14 @@ const ModelDropdownInput = React.forwardRef<HTMLInputElement, StringInputProps>(
         title: name[name.length - 1],
         value: file.filename,
       }
+    })
+
+    jigData.exported_layers.forEach((file) => {
+      const name = file.filename.replace('.glb', '').split('__')
+      mapped.push({
+        title: name[name.length - 1],
+        value: file.filename,
+      })
     })
     setOptions(mapped)
   }, [])

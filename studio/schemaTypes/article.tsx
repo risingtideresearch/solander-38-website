@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {RiArticleLine} from 'react-icons/ri'
-import {InlineIcon} from '@sanity/icons'
+import {CubeIcon, InlineIcon} from '@sanity/icons'
 import ModelDropdownInput from '../components/ModelDropdownInput'
 import DrawingDropdownInput, {
   getDrawingId,
@@ -198,6 +198,59 @@ export const article = defineType({
               }
             },
           },
+        }),
+
+        defineField({
+          name: 'inlineModel',
+          type: 'object',
+          icon: CubeIcon,
+          fields: [
+            {
+              name: 'title',
+              type: 'string',
+            },
+            {
+              name: 'models',
+              type: 'array',
+              validation: (Rule) =>
+                Rule.custom((models: string[] | undefined) => {
+                  if (!models || models.length === 0) return true
+
+                  // Check for empty values
+                  const hasEmptyValues = models.some((model) => !model || model.trim() === '')
+                  if (hasEmptyValues) {
+                    return 'Empty values are not allowed'
+                  }
+
+                  // Check for duplicates
+                  const seen = new Map<string, number>()
+                  const duplicates: string[] = []
+
+                  models.forEach((model) => {
+                    const count = seen.get(model) || 0
+                    seen.set(model, count + 1)
+                    if (count === 1) {
+                      duplicates.push(model)
+                    }
+                  })
+
+                  if (duplicates.length > 0) {
+                    return `Duplicate models found: ${duplicates.join(', ')}`
+                  }
+
+                  return true
+                }),
+              of: [
+                defineField({
+                  name: 'model',
+                  type: 'string',
+                  components: {
+                    input: ModelDropdownInput,
+                  },
+                }),
+              ],
+            },
+          ],
         }),
       ],
     }),

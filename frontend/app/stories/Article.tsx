@@ -32,9 +32,9 @@ const components = {
         </a>
       </figure>
     ),
-    models3D: ({ value }) => (
+    inlineModel: ({ value }) => (
       <>
-        <h2 style={{ maxWidth: "60rem" }}>Superstructure jig</h2>
+        <h2 style={{ maxWidth: "60rem" }}>{value.title}</h2>
         <AnatomyPane
           defaultSize={{
             height: "30rem",
@@ -53,10 +53,7 @@ const components = {
           >
             <Canvas3D
               height={"100%"}
-              filteredLayers={[
-                "DECK JIG__TRANSV FRAMES.glb",
-                "DECK JIG__DECK SKINS.glb",
-              ]}
+              filteredLayers={value.models || []}
               interaction={"limited"}
             />
           </div>
@@ -71,15 +68,6 @@ const components = {
 
 export default async function Article({ data, materials = [] }) {
   const updated = new Date(data._updatedAt);
-
-  // hardcode jig 3d model
-  const jigIndex = data.content.findIndex(
-    (section) => section._key == "25f8a5680f6c",
-  );
-  if (jigIndex > -1) {
-    data.content.splice(jigIndex + 1, 0, { _type: "models3D" });
-  }
-
   const articleModels = [
     ...data.relatedModels.filter((layer) => !contextualLayers.includes(layer)),
     ...contextualLayers,

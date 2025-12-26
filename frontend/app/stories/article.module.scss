@@ -87,7 +87,7 @@
 
   > div {
     &:nth-child(2) {
-      padding-right: 2rem;
+      padding-right: 1.875rem;
       @media screen and (max-width: 800px) {
         padding-right: 0;
       }
