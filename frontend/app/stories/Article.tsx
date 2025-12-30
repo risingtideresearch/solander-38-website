@@ -80,7 +80,6 @@ const components = {
 };
 
 export default async function Article({ data, materials = [] }) {
-  const updated = new Date(data._updatedAt);
   const articleModels = [
     ...data.relatedModels.filter((layer) => !contextualLayers.includes(layer)),
     ...contextualLayers,
@@ -139,7 +138,7 @@ export default async function Article({ data, materials = [] }) {
               </>
             )}
             <h6>Updated</h6>
-            <h6>{formatDate(updated)}</h6>
+            <h6>{formatDate(data._updatedAt)}</h6>
           </div>
         </div>
         <div>

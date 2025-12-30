@@ -3,23 +3,28 @@ import { Model } from "./anatomy/three-d/util";
 /**
  * Format dates consistently
  */
-export function formatDate(date: string | Date) {
-  date = new Date(date);
+export function formatDate(date: Date | string) {
+  let d;
 
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
+  if (typeof date === "string") {
+    d = new Date(date.endsWith("Z") ? date : date + "Z");
+  } else if (date instanceof Date) {
+    d = date;
+  } else {
+    return "";
+  }
 
-  const paddedDay = String(day).padStart(2, "0");
-  const paddedMonth = String(month).padStart(2, "0");
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
 
-  return `${year}–${paddedMonth}–${paddedDay}`;
+  return `${year}–${month}–${day}`;
 }
 
 /**
  * Helper function for Rhino to Sanity associations
- * @param slug 
- * @returns 
+ * @param slug
+ * @returns
  */
 export const slugToRhinoSystem = (slug: string): string => {
   switch (slug) {
