@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 export const metadata: Metadata = {
   title: "Rising Tide Research Foundation",
   description: "",
-  icons: "/rising-tide.svg",
+  icons: "https://solander38.netlify.app/rising-tide.svg",
 };
 
 export default function RootLayout({
