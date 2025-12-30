@@ -64,6 +64,19 @@ const components = {
       return <span>{value?.name}</span>;
     },
   },
+  marks: {
+    internalLink: ({ value, children }) => {
+      if (value.reference?.slug?.current) {
+        return (
+          <a href={`/stories/${value.reference.slug.current}`}>{children}</a>
+        );
+      }
+      return children;
+    },
+    link: ({ value, children }) => {
+      return <a href={value.href} target="_blank">{children}</a>
+    }
+  },
 };
 
 export default async function Article({ data, materials = [] }) {

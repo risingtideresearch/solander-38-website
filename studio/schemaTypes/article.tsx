@@ -79,6 +79,22 @@ export const article = defineType({
                   },
                 ],
               },
+              {
+                name: 'internalLink',
+                type: 'object',
+                title: 'Link to another story',
+                icon: RiArticleLine,
+                fields: [
+                  {
+                    name: 'reference',
+                    type: 'reference',
+                    title: 'Reference',
+                    to: [
+                      {type: 'article'},
+                    ],
+                  },
+                ],
+              },
             ],
           },
           of: [{name: 'personRef', type: 'reference', to: [{type: 'person'}]}],

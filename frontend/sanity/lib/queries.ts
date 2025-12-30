@@ -205,6 +205,18 @@ export const articlesQuery = (slug?: string) => {
             ...
           }
         },
+        markDefs[]{
+          ...,
+          _type == 'internalLink' => {
+            ...,
+            reference->{
+              _type,
+              _id,
+              title,
+              slug
+            }
+          }
+        },
         _type == 'inlineImage' => {
           ...,
           image {
@@ -230,14 +242,6 @@ export const articlesQuery = (slug?: string) => {
                   exif {
                     DateTimeOriginal,
                     DateTimeDigitized,
-                    // DateTime,
-                    // Make,          // Camera manufacturer
-                    // Model,         // Camera model
-                    // LensModel,
-                    // FNumber,       // Aperture
-                    // ExposureTime,
-                    // ISO,
-                    // FocalLength
                   }
                 }
               }
