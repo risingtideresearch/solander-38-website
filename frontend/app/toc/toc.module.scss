@@ -19,6 +19,7 @@
   [role="button"] {
     text-decoration: none;
     cursor: pointer;
+    display: block;
     &:hover{
       font-weight: 600;
     }
