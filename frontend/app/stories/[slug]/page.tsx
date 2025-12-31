@@ -8,6 +8,7 @@ import { getReducedModelSet } from "@/app/utils";
 import Navigation, { URLS } from "@/app/components/Navigation";
 import subNavStyles from "@/app/components/subnav.module.scss";
 import { notFound } from "next/navigation";
+import { Model } from "@/app/anatomy/three-d/util";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -115,7 +116,13 @@ export default async function Page({ params }) {
 
   dataWithMatchedDrawings.relatedModels = Array.from(
     new Set(dataWithMatchedDrawings.relatedModels),
-  );
+  ).filter((model) => {
+    const exists = models_manifest.exported_layers.find((layer: Model) => layer.filename == model);
+    if (!exists) {
+      console.warn(`${model} specified in CMS, not found in manifest`)
+    }
+    return exists;
+  });
 
   dataWithMatchedDrawings.articleId = sections.data.sections
     .map((section) => section.articles)
@@ -128,7 +135,11 @@ export default async function Page({ params }) {
         type={"top-bar"}
         active={URLS.STORIES}
         story={slug}
-        section={dataWithMatchedDrawings?.section ? dataWithMatchedDrawings.section.slug?.current : null}
+        section={
+          dataWithMatchedDrawings?.section
+            ? dataWithMatchedDrawings.section.slug?.current
+            : null
+        }
       />
       <div className={subNavStyles["sub-nav"]}>
         <div className={subNavStyles["sub-nav__container"]}>
