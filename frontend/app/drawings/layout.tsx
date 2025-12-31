@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./../globals.scss";
 import Search from "./../components/Search/Search";
 import Footer from "../components/Footer";
+import { AcuminSansLight, AcuminSansRegular, AcuminSansSemibold } from "../_fonts";
 // import Search from "./components/Search/Search";
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${AcuminSansLight.variable} ${AcuminSansRegular.variable} ${AcuminSansSemibold.variable}`}>
         <Search />
         {children}
         <Footer />

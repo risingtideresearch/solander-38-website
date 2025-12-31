@@ -41,6 +41,7 @@
         list-style: upper-alpha;
         margin: 0;
         padding: 0.25rem 0 0.25rem 0.25rem;
+        font-family: var(--font-sans);
         &::before {
           // text-align: left;
           // counter-increment: sublist-counter;

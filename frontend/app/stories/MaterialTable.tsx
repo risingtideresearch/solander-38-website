@@ -14,7 +14,7 @@ export default async function MaterialTable({ materials }) {
             return (
               <div key={material}>
                 <h6>{material}</h6>
-                <p>
+                <p className="font-sans">
                   {data.materials.find((m) => m.name == material)?.description}
                 </p>
               </div>

@@ -7,7 +7,7 @@ export default function PhotoMetadata({ asset, stories }) {
   return (
     <div className={`${styles.metadata}`}>
       <h6>Name</h6>
-      <p>{asset.title || asset.originalFilename}</p>
+      <p className="font-sans">{asset.title || asset.originalFilename}</p>
 
       {asset.metadata.date ? (
         <>
@@ -24,7 +24,7 @@ export default function PhotoMetadata({ asset, stories }) {
       {asset.description ? (
         <>
           <h6>Desc</h6>
-          <p>{asset.description}</p>
+          <p className="font-sans">{asset.description}</p>
         </>
       ) : (
         <></>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./../globals.scss";
 import Search from "./../components/Search/Search";
+import { AcuminSansLight, AcuminSansRegular, AcuminSansSemibold } from "../_fonts";
 
 export const metadata: Metadata = {
   title: "Rising Tide Research Foundation",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${AcuminSansLight.variable} ${AcuminSansRegular.variable} ${AcuminSansSemibold.variable}`}>
         <Search type='float' />
         {children}
       </body>

@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 
 import "./../globals.scss";
-import Navigation, { URLS } from "../components/Navigation";
 import Search from "../components/Search/Search";
 import Footer from "../components/Footer";
+import {
+  AcuminSansLight,
+  AcuminSansRegular,
+  AcuminSansSemibold,
+  InterSans,
+} from "../_fonts";
 
 export const metadata: Metadata = {
   title: "Rising Tide Research Foundation",
@@ -18,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body
+        className={`${AcuminSansLight.variable} ${AcuminSansRegular.variable} ${AcuminSansSemibold.variable}`}
+      >
         <Search />
         {children}
         <Footer />

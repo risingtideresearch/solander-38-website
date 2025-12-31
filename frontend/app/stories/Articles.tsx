@@ -26,6 +26,7 @@ export default async function Articles({ subtitles }) {
                         <a
                           href={`/stories/${article.slug}`}
                           style={{ fontSize: "0.875rem" }}
+                          className="font-acumin-semibold"
                         >
                           {article.title}
                         </a>

@@ -15,6 +15,7 @@ export default function RelatedStories({ stories }: RelatedArticlesProps) {
             return (
               <div key={story._id}>
                 <p
+                  className="font-sans"
                   style={{
                     margin: 0,
                     lineHeight: "1.2em",

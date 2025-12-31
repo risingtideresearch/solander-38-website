@@ -10,7 +10,7 @@ export default function DrawingMetadata({ drawing, stories }: {drawing: Drawing,
   return (
     <div className={`${styles.metadata}`}>
       <h6>Name</h6>
-      <p style={{ fontSize: '0.75rem', lineHeight: 1.2}}>{drawing.clean_filename}</p>
+      <p className="font-sans" style={{ fontSize: '0.75rem', lineHeight: 1.2}}>{drawing.clean_filename}</p>
       <h6>ID</h6>
       <h6>{drawing.id}</h6>
       <h6>Date</h6>
@@ -24,6 +24,7 @@ export default function DrawingMetadata({ drawing, stories }: {drawing: Drawing,
         <a
           style={{ display: "grid", gridTemplateColumns: 'auto auto', gap: "0.125rem" }}
           download
+          className="font-sans"
           href={
             "/drawings/" +
             encodeURIComponent(

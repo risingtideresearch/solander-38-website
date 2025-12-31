@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.scss";
+import { AcuminSansLight, AcuminSansRegular, AcuminSansSemibold } from "./_fonts";
 
 export const metadata: Metadata = {
   title: "Rising Tide Research Foundation",
@@ -15,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${AcuminSansLight.variable} ${AcuminSansRegular.variable} ${AcuminSansSemibold.variable}`}>{children}</body>
     </html>
   );
 }

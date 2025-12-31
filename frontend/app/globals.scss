@@ -3,6 +3,8 @@
   --foreground: #171717;
   --accent: rgb(229, 255, 0);
   --green: #098b23;
+
+  --font-sans: Arial, sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -17,6 +19,21 @@
 //   text-transform: uppercase;
 //   font-weight: 400;
 // }
+
+.font-acumin-light {
+  font-family: var(--font-acumin-sans-light);
+}
+
+.font-acumin-regular {
+  font-family: var(--font-acumin-sans-regular);
+}
+.font-acumin-semibold {
+  font-family: var(--font-acumin-sans-semibold);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
 
 .pane {
   backdrop-filter: blur(8px);
@@ -33,9 +50,11 @@ body {
 body {
   color: var(--foreground);
   /* background: var(--background); */
-  font-family: Helvetica, sans-serif;
+  // font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @extend .font-sans;
   // background-image: radial-gradient(#eeeeee 1px, transparent 0);
   // background-size: 20px 20px;
   // background-position: 9px 9px;
@@ -72,14 +91,16 @@ body {
 
 h1 {
   margin: 0.5rem 0;
-  font-size: 2.75rem;
+  font-size: 3.25rem;
   font-weight: 400;
+  font-family: var(--font-acumin-sans-regular), Arial, sans-serif;
 }
 
 h2 {
   margin: 0.5rem 0;
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 600;
+  font-family: var(--font-acumin-sans-semibold), Arial, sans-serif;
 }
 
 h3 {
@@ -94,6 +115,7 @@ h6 {
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
+  @extend .font-sans;
 }
 
 p,
@@ -102,6 +124,7 @@ li {
   line-height: 1.6em;
   text-wrap: pretty;
   font-size: 0.9375rem;
+  @extend .font-acumin-light;
 }
 
 figure {
@@ -185,6 +208,7 @@ a,
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3125em;
   color: var(--foreground);
+  font-family: inherit;
 
   &:hover {
     text-decoration: underline #000;
@@ -243,6 +267,7 @@ figcaption {
   font-size: 0.8125rem;
   text-align: right;
   padding: 0.5rem;
+  @extend .font-sans;
 }
 
 .big-nav {
