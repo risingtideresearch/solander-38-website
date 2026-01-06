@@ -20,6 +20,7 @@ export const article = defineType({
     defineField({
       name: 'isLive',
       type: 'boolean',
+      description: 'Toggle on to publish story content to the site. While this is off, only subtitle and associated models/materials will be visible for this story.'
     }),
     defineField({
       name: 'subtitle',

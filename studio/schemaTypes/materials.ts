@@ -7,6 +7,7 @@ export const materials = defineType({
   fields: [
     defineField({
       name: 'materials',
+      description: 'Descriptions to appear in Materials table at the end of each Story. If a description is left blank, it will be omitted from the table. Materials associated with model layers will always appear in Anatomy.',
       type: 'array',
       options: {
         layout: 'list',

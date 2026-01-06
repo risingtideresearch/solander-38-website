@@ -80,7 +80,9 @@ export async function fetchPhotos(section: string) {
  * @returns
  */
 export async function fetchAssetWithNavigation(idPrefix: string) {
-  const { data } = await sanityFetch({ query: assetWithNavigationQuery(idPrefix) });
+  const { data } = await sanityFetch({
+    query: assetWithNavigationQuery(idPrefix),
+  });
 
   return { data };
 }
@@ -113,7 +115,6 @@ export async function fetchComponents() {
 
   return { data };
 }
-
 
 type DataAttributeConfig = CreateDataAttributeProps &
   Required<Pick<CreateDataAttributeProps, "id" | "type" | "path">>;

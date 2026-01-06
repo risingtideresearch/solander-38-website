@@ -6,11 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import { searchDrawings } from "./util";
 import { getPhotoURL } from "@/app/photos/util";
 
-const colors = {
-  article: "var(--accent)",
-  drawing: "#6ee6ff",
-};
-
 export default function SearchClient({ drawings, type }) {
   const [active, setActive] = useState(false);
   const [value, setValue] = useState("");
@@ -200,9 +195,7 @@ export default function SearchClient({ drawings, type }) {
                 role="status"
                 aria-live="polite"
               >
-                <p style={{ textAlign: "center" }}>
-                  Type to search
-                </p>
+                <p style={{ textAlign: "center" }}>Type to search</p>
               </div>
             )}
 
@@ -264,14 +257,26 @@ export default function SearchClient({ drawings, type }) {
                                 href={getURL(result)}
                                 style={{
                                   margin: "0.5rem 0",
-                                  display: "flex",
+                                  display: "grid",
+                                  gridTemplateColumns: "3rem 1fr",
                                   gap: "1rem",
                                   alignItems: "center",
                                 }}
                                 tabIndex={-1}
                                 onFocus={() => setSelectedIndex(flatIndex)}
                               >
-                                <h6>{result.id}</h6>
+                                {result.id ? (
+                                  <h6>{result.id}</h6>
+                                ) : (
+                                  <img
+                                    src={result.thumbnailUrl}
+                                    alt={
+                                      result.title || result.originalFilename
+                                    }
+                                    width={64}
+                                    height={64}
+                                  />
+                                )}
                                 <p style={{ margin: 0 }}>
                                   {result.title || result.clean_filename}
                                 </p>

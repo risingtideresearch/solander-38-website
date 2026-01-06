@@ -327,6 +327,24 @@ export const sectionsQuery = (slug?: string) => {
 };
 
 /**
+ * Minimal query used to assign story ID
+ */
+export const sectionArticleOrderQuery = () => {
+  return `
+  *[_type=="sections"][0]{
+    ...,
+    sections[]{
+      ...,
+      "slug": slug.current,
+      articles[]->{
+        _id,
+        "slug": slug.current,
+      }
+    }
+  }`;
+};
+
+/**
  *
  */
 export const materialsQuery = () => {
@@ -436,6 +454,8 @@ export const searchQuery = () => `
     title,
     originalFilename,
     _id,
+    url,
+    "thumbnailUrl": url + "?w=64&h=64&fit=crop"
   }
 }`;
 
