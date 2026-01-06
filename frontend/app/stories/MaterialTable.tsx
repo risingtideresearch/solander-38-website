@@ -4,23 +4,28 @@ import styles from "./materialTable.module.scss";
 export default async function MaterialTable({ materials }) {
   const { data } = await fetchMaterials();
 
-  return (
-    <div>
-      <h2 style={{}}>Materials</h2>
-      <div className={`${styles.materials}`}>
-        {materials
-          .sort((a, b) => a.localeCompare(b))
-          .map((material, i, x) => {
-            return (
-              <div key={material}>
-                <h6>{material}</h6>
-                <p>
-                  {data.materials.find((m) => m.name == material)?.description}
-                </p>
-              </div>
-            );
-          })}
-      </div>
-    </div>
+  const descriptions = data.materials.filter(
+    (m) => m.description && m.name && materials.indexOf(m.name) > -1,
   );
+
+  if (descriptions.length > 0) {
+    return (
+      <div>
+        <h2 style={{}}>Materials</h2>
+        <div className={`${styles.materials}`}>
+          {descriptions
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((material) => {
+              return (
+                <div key={material.name}>
+                  <h6>{material.name}</h6>
+                  <p className="font-sans">{material.description}</p>
+                </div>
+              );
+            })}
+        </div>
+      </div>
+    );
+  }
+  return <></>;
 }
