@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import Drawings from "../Drawings";
 import { fetchSections } from "@/sanity/lib/utils";
-import Navigation, { URLS } from "@/app/components/Navigation";
+import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
 
 export async function generateStaticParams() {
   return [

@@ -1,4 +1,4 @@
-import Navigation, { URLS } from "../components/Navigation";
+import Navigation, { URLS } from "../components/Navigation/Navigation";
 import Articles from "./Articles";
 
 export default async function Page() {

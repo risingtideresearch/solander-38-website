@@ -5,8 +5,8 @@ import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import { getReducedModelSet } from "@/app/utils";
-import Navigation, { URLS } from "@/app/components/Navigation";
-import subNavStyles from "@/app/components/subnav.module.scss";
+import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
+import subNavStyles from "@/app/components/Navigation/subnav.module.scss";
 import { notFound } from "next/navigation";
 import { Model } from "@/app/anatomy/three-d/util";
 

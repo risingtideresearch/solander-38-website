@@ -1,5 +1,5 @@
 import Footer from "./components/Footer";
-import Navigation, { URLS } from "./components/Navigation";
+import Navigation, { URLS } from "./components/Navigation/Navigation";
 import styles from "./home.module.scss";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import Search from "./components/Search/Search";

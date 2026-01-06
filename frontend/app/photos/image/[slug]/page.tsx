@@ -1,6 +1,6 @@
 import { fetchAssetWithNavigation } from "@/sanity/lib/utils";
 import { PhotoPage } from "../../PhotoPage";
-import Navigation, { URLS } from "@/app/components/Navigation";
+import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
 
 export default async function Page({
   params,

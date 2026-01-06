@@ -17,7 +17,7 @@ import { Canvas3D } from "./three-d/Canvas3D";
 import { getReducedModelSet, slugToRhinoSystem } from "../utils";
 import AnatomyControls from "./AnatomyControls";
 import Info from "./Info";
-import Navigation, { URLS } from "../components/Navigation";
+import Navigation, { URLS } from "../components/Navigation/Navigation";
 
 type AnatomyContent = {
   material_index: MaterialIndex;

@@ -1,5 +1,5 @@
 import { fetchPhotos, fetchSections } from "@/sanity/lib/utils";
-import Navigation, { URLS } from "../../components/Navigation";
+import Navigation, { URLS } from "../../components/Navigation/Navigation";
 import PhotoGallery from "./../PhotoGallery";
 import MinimalTOC from "../../toc/MinimalTOC";
 import styles from './../photos.module.scss';

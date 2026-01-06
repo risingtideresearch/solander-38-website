@@ -4,7 +4,7 @@ import { Image } from "../components/Image";
 import { Drawing } from "../drawings/types";
 import styles from "./image-set.module.scss";
 import { SanityAsset } from "@sanity/image-url/lib/types/types";
-import { URLS } from "./Navigation";
+import { URLS } from "./Navigation/Navigation";
 import { getPhotoURL } from "../photos/util";
 
 interface ImageSetProps {

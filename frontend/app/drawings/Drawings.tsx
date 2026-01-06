@@ -2,7 +2,7 @@ import { Drawing } from "./types";
 import DrawingsGallery from "./DrawingsGallery";
 import { Section } from "@/sanity/sanity.types";
 import MinimalTOC from "../toc/MinimalTOC";
-import { URLS } from "../components/Navigation";
+import { URLS } from "../components/Navigation/Navigation";
 
 interface DrawingsProps {
   drawings: {

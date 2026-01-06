@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import Drawings from "./Drawings";
 import { fetchSections } from "@/sanity/lib/utils";
-import Navigation, { URLS } from "../components/Navigation";
+import Navigation, { URLS } from "../components/Navigation/Navigation";
 
 export default async function Page() {
   const drawingsPath = path.join(

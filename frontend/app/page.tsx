@@ -2,7 +2,7 @@ import path from "path";
 import { promises as fs } from "fs";
 import { Canvas3D } from "./anatomy/three-d/Canvas3D";
 import Footer from "./components/Footer";
-import { URLS } from "./components/Navigation";
+import { URLS } from "./components/Navigation/Navigation";
 import styles from "./home.module.scss";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { getReducedModelSet } from "./utils";

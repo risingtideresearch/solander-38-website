@@ -3,7 +3,7 @@ import path from "path";
 import { fetchArticles } from "@/sanity/lib/utils";
 import { getDrawingArticleDictionary, getSlugFromDrawingGroup } from "../../util";
 import { DrawingPage } from "../../DrawingPage";
-import Navigation, { URLS } from "@/app/components/Navigation";
+import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
 
 export async function generateStaticParams() {
   const drawingsPath = path.join(

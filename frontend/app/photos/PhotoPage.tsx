@@ -1,8 +1,8 @@
 import styles from "./../drawings/drawings.module.scss";
 import { Image } from "../components/Image";
 import PhotoMetadata from "./PhotoMetadata";
-import SubNav from "../components/SubNav";
-import { URLS } from "../components/Navigation";
+import SubNav from "../components/Navigation/SubNav";
+import { URLS } from "../components/Navigation/Navigation";
 
 export function PhotoPage({ asset, next, prev }) {
   if (!asset) {

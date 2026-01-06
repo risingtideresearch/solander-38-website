@@ -1,7 +1,7 @@
 import styles from "./drawings.module.scss";
 import DrawingMetadata from "./DrawingMetadata";
-import SubNav from "../components/SubNav";
-import { URLS } from "../components/Navigation";
+import SubNav from "../components/Navigation/SubNav";
+import { URLS } from "../components/Navigation/Navigation";
 
 export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
   if (!asset) {
