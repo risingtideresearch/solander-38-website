@@ -294,6 +294,7 @@ export const sectionsQuery = (slug?: string) => {
         "slug": slug.current,
         articles[]->{
           _id,
+          _updatedAt,
           title,
           subtitle,
           isLive,
@@ -312,11 +313,13 @@ export const sectionsQuery = (slug?: string) => {
       "slug": slug.current,
       articles[]->{
         _id,
+        _updatedAt,
         title,
         subtitle,
         isLive,
         "slug": slug.current,
         relatedModels[],
+        "wordCount": length(pt::text(content)),
         "section": ^.slug.current
       }
     }

@@ -883,7 +883,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::WINDOWS::window panes",
       "filename": "SUPERSTRUCTURE__WINDOWS__window panes.glb",
-      "file_size": 67528,
+      "file_size": 67516,
       "object_count": 3,
       "bounding_box": {
         "min": {
@@ -2843,7 +2843,7 @@
     {
       "layer_name": "BODY::HULLS & DECKS::PORTLIGHTS::portlight surfs",
       "filename": "BODY__HULLS & DECKS__PORTLIGHTS__portlight surfs.glb",
-      "file_size": 62568,
+      "file_size": 62556,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -3643,7 +3643,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::COMPANIONWAY HATCH::1/2\" acrylic",
       "filename": "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__1_2_ acrylic.glb",
-      "file_size": 81896,
+      "file_size": 81876,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -4683,8 +4683,8 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::AFT STBD MAST PEDESTALS & STRUCT",
       "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__AFT STBD MAST PEDESTALS & STRUCT.glb",
-      "file_size": 296220,
-      "object_count": 6,
+      "file_size": 348188,
+      "object_count": 8,
       "bounding_box": {
         "min": {
           "x": -397.57625917222964,
@@ -4803,7 +4803,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::Shakespeare 5215-AIS Squatty Body 36\" VHF-AIS Antenna Whip",
       "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__Shakespeare 5215-AIS Squatty Body 36_ VHF-AIS Antenna Whip.glb",
-      "file_size": 169332,
+      "file_size": 169092,
       "object_count": 10,
       "bounding_box": {
         "min": {
@@ -5043,7 +5043,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::SIMPLIFIED ANCHOR WINCH",
       "filename": "OUTFITTING_INTERIOR__SIMPLIFIED ANCHOR WINCH.glb",
-      "file_size": 48004,
+      "file_size": 48024,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5163,7 +5163,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::FWD TRAMPOLINE AREA::trampoline",
       "filename": "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__trampoline.glb",
-      "file_size": 7396,
+      "file_size": 7160,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5266,9 +5266,9 @@
   ],
   "export_info": {
     "total_layers_found": 346,
-    "timestamp_start": "2025-12-26 11:30:44",
+    "timestamp_start": "2026-01-05 15:10:49",
     "format": "GLB",
-    "timestamp_end": "2025-12-26 11:38:03",
+    "timestamp_end": "2026-01-05 15:17:33",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
@@ -5276,7 +5276,7 @@
     "successful_exports": 131,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 45023800,
+    "total_file_size": 45075268,
     "units": {
       "id": 8,
       "name": "inch"

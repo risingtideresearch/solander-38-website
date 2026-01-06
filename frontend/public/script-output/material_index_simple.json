@@ -5,7 +5,6 @@
     "Alum 6061",
     "Alum AlMgSi1",
     "Aluminum",
-    "Brass",
     "Bronze",
     "Carbon Fiber",
     "Composite Sandwich",
@@ -13,15 +12,15 @@
     "Composite Sandwich (INTERNALS)",
     "Delrin",
     "Fiberglass",
+    "Glass",
+    "Naval Brass",
     "Particle Board",
     "Plastic",
     "Plywood",
     "Solar Panels",
     "Stainless Steel",
     "Starboard (HDPE)",
-    "Trampoline",
     "Turcite",
-    "Windows & Portlights",
     "Wood"
   ],
   "material_index": {
@@ -41,7 +40,7 @@
       "Composite Sandwich"
     ],
     "PROPULSION__SHAFTLINE COMPONENTS__Cutless Bearing brass _Bale_ size.glb": [
-      "Brass"
+      "Naval Brass"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": [
       "Alum 6061"
@@ -133,9 +132,6 @@
     "PROPULSION__SIMPLIFIED PROPELLER.glb": [
       "Bronze"
     ],
-    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__Shakespeare 5215-AIS Squatty Body 36_ VHF-AIS Antenna Whip.glb": [
-      "Plastic"
-    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb": [
       "Stainless Steel"
     ],
@@ -191,7 +187,7 @@
       "Plastic"
     ],
     "SUPERSTRUCTURE__WINDOWS__window panes.glb": [
-      "Windows & Portlights"
+      "Glass"
     ],
     "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder g10 backing pl.glb": [
       "Fiberglass"
@@ -265,9 +261,6 @@
     "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb": [
       "Alum 5052"
     ],
-    "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__trampoline.glb": [
-      "Trampoline"
-    ],
     "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__king plank.glb": [
       "Composite Sandwich"
     ],
@@ -278,7 +271,7 @@
       "Alum 6061"
     ],
     "BODY__HULLS & DECKS__PORTLIGHTS__portlight surfs.glb": [
-      "Windows & Portlights"
+      "Acrylic"
     ]
   }
 }

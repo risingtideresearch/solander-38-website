@@ -74,8 +74,12 @@ const components = {
       return children;
     },
     link: ({ value, children }) => {
-      return <a href={value.href} target="_blank">{children}</a>
-    }
+      return (
+        <a href={value.href} target="_blank">
+          {children}
+        </a>
+      );
+    },
   },
 };
 
@@ -86,10 +90,10 @@ export default async function Article({ data, materials = [] }) {
   ];
 
   return (
-    <main className={`article ${styles.page}`}>
+    <main className={`article ${styles.page} ${data.isLive ? '' : styles.inProgress}`}>
       <div className={`bg--grid ${styles.header}`}>
         <div>
-          <div>
+          <div style={{ marginTop: "0.625rem" }}>
             <h6>{data.section?.name}</h6>
             <h1>{data.title}</h1>
           </div>
@@ -127,25 +131,34 @@ export default async function Article({ data, materials = [] }) {
       <div className={`section--two-col ${styles.body}`}>
         <div>
           <div className={`${styles.metadata}`}>
-            <h6>Title</h6>
-            <h6>{data.title}</h6>
-            {data.authors && (
-              <>
-                <h6>Author</h6>
-                <h6 style={{ margin: "0 auto" }}>
-                  {<>{data.authors.map((author) => author.name).join(",")}</>}
-                </h6>
-              </>
+            {!data.isLive ? (
+              <div className={styles["metadata__in-progress"]}>
+                <h6>Story in progress</h6>
+              </div>
+            ) : (
+              <></>
             )}
-            <h6>Updated</h6>
-            <h6>{formatDate(data._updatedAt)}</h6>
+            <div className={styles.metadata__table}>
+              <h6>Title</h6>
+              <h6>{data.title}</h6>
+              {data.authors && (
+                <>
+                  <h6>Author</h6>
+                  <h6>
+                    {<>{data.authors.map((author) => author.name).join(",")}</>}
+                  </h6>
+                </>
+              )}
+              <h6>Updated</h6>
+              <h6>{formatDate(data._updatedAt)}</h6>
+            </div>
           </div>
         </div>
         <div>
           <p>
             <em>{data.subtitle}</em>
           </p>
-          <PortableText value={data.content} components={components} />
+          {data.isLive ? <PortableText value={data.content} components={components} /> : <></>}
 
           <MaterialTable materials={materials} />
         </div>
