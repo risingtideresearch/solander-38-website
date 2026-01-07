@@ -327,6 +327,26 @@ export const sectionsQuery = (slug?: string) => {
 };
 
 /**
+ * 
+ * @returns 
+ */
+export const homepageQuery = () => {
+  return `
+  *[_type=="homepage"][0]{
+    ...,
+    image {
+      ...,
+      asset -> {
+        ...,
+        metadata {
+          ...,
+        }
+      }
+    },
+  }`;
+}
+
+/**
  * Minimal query used to assign story ID
  */
 export const sectionArticleOrderQuery = () => {

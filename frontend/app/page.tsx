@@ -1,15 +1,18 @@
 import path from "path";
 import { promises as fs } from "fs";
-import { Canvas3D } from "./anatomy/three-d/Canvas3D";
 import Footer from "./components/Footer";
 import { URLS } from "./components/Navigation/Navigation";
 import styles from "./home.module.scss";
 import articleStyles from "./stories/articles.module.scss";
-import { LiaLongArrowAltRightSolid } from "react-icons/lia";
-import { getReducedModelSet } from "./utils";
 import Logo from "./components/Logo";
-import { fetchArticles, fetchPeople, fetchPhotos } from "@/sanity/lib/utils";
+import {
+  fetchArticles,
+  fetchHomepage,
+  fetchPeople,
+  fetchPhotos,
+} from "@/sanity/lib/utils";
 import Search from "./components/Search/Search";
+import { Image } from "./components/Image";
 
 export default async function Page() {
   const modelsManifestPath = path.join(
@@ -18,9 +21,6 @@ export default async function Page() {
   );
   const modelsManifestData = await fs.readFile(modelsManifestPath, "utf8");
   const models_manifest = JSON.parse(modelsManifestData);
-  const layers = getReducedModelSet(models_manifest.exported_layers, true).map(
-    (layer) => layer.filename,
-  );
 
   const drawingsPath = path.join(
     process.cwd(),
@@ -32,46 +32,28 @@ export default async function Page() {
   const articles = await fetchArticles();
   const photos = await fetchPhotos();
   const people = await fetchPeople();
+  const homepage = await fetchHomepage();
 
   return (
     <div className={styles.home}>
-      {/* <div className={styles.header}>
-        <div className={styles.hero}>
-          <div className={styles.title}>
-            <h1>Solander 38</h1>
-            <Logo />
-          </div>
-          <div>
-            <Canvas3D
-              height={"24rem"}
-              filteredLayers={layers}
-              settings={{
-                transparent: false,
-              }}
-              interaction={"none"}
-            />
-          </div>
-        </div>
-      </div> */}
-
       <Search />
 
       <div>
         <div className="section--two-col">
-          <div style={{ borderRight: "1px solid", padding: '2rem 0.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-            <h1>
-              Solander 38
-            </h1>
-            <Logo />
+          <div className={styles.leftColumn}>
+            <div className={styles.title}>
+              <h1>Solander 38</h1>
+              <Logo />
+            </div>
           </div>
           <div>
-            <img src="https://cdn.sanity.io/images/qjczz6gi/production/e21b1aedbbe89872b8039061dd51771bb848d5eb-4032x3024.jpg" />
+            <Image src={homepage.data.image} />
           </div>
         </div>
-        <div style={{ borderTop: "1px solid" }}>
+        <div className={styles.bordered}>
           <div className="section--two-col">
-            <div style={{ borderRight: "1px solid" }}></div>
-            <div className={styles.toc} style={{ padding: "2rem" }}>
+            <div className={styles.leftColumn}></div>
+            <div className={`${styles.toc} ${styles.tocPadding}`}>
               <section>
                 <a
                   href={URLS.STORIES}

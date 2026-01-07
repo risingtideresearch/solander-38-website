@@ -42,12 +42,14 @@
       border-right: 1px solid;
       @media screen and (max-width: 800px) {
         border-right: none;
-        padding-bottom: 5rem;
+        padding-bottom: 10rem;
       }
     }
 
-    @media screen and (max-width: 800px) {
-      padding-bottom: 0;
+     &:nth-child(2) {
+      @media screen and (max-width: 800px) {
+        padding: 0;
+      }
     }
   }
 }

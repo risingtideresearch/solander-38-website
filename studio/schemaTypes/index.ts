@@ -3,6 +3,7 @@
 import {article} from './article'
 // import {boat} from './boat'
 import {component} from './component'
+import { homepage } from './homepage'
 // import {connection} from './connection'
 // import {customPart} from './customPart'
 import {location} from './location'
@@ -27,4 +28,5 @@ export const schemaTypes = [
   person,
   section,
   sections,
+  homepage,
 ]

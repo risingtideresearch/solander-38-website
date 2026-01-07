@@ -6,6 +6,7 @@ import {
   articlesQuery,
   assetWithNavigationQuery,
   componentPartQuery,
+  homepageQuery,
   materialsQuery,
   peopleQuery,
   sectionsQuery,
@@ -93,6 +94,16 @@ export async function fetchAssetWithNavigation(idPrefix: string) {
  */
 export async function fetchPeople() {
   const { data } = await sanityFetch({ query: peopleQuery });
+
+  return { data };
+}
+
+/**
+ *
+ * @returns
+ */
+export async function fetchHomepage() {
+  const { data } = await sanityFetch({ query: homepageQuery() });
 
   return { data };
 }

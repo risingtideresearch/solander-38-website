@@ -16,7 +16,7 @@ export default function Gallery({
         {children.length > 0 ? (
           <div className={styles.gallery}>{children}</div>
         ) : (
-          <div>{emptyMessage}</div>
+          <div className={styles.empty}><h6>{emptyMessage}</h6></div>
         )}
       </div>
     </div>

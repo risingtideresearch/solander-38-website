@@ -1,10 +1,10 @@
-import { RiStackLine } from 'react-icons/ri'
+import {RiBook2Line, RiHome2Line, RiStackLine} from 'react-icons/ri'
 import type {ListItemBuilder, StructureResolver} from 'sanity/structure'
 
 export const structure: StructureResolver = (S) => {
   const notBoat = ['person', 'location', 'timeline']
   const textDocs = ['article', 'annotation']
-  const singletons = ['sections', 'materials']
+  const singletons = ['sections', 'materials', 'homepage']
 
   return S.list()
     .title('Content')
@@ -14,8 +14,14 @@ export const structure: StructureResolver = (S) => {
       ),
       // Singleton section
       S.listItem()
+        .title('Homepage')
+        .id('homepage')
+        .icon(RiHome2Line)
+        .child(S.document().schemaType('homepage').documentId('homepage')),
+      S.listItem()
         .title('Sections')
         .id('sections')
+        .icon(RiBook2Line)
         .child(S.document().schemaType('sections').documentId('sections')),
       S.listItem()
         .title('Materials')
