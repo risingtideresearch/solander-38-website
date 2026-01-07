@@ -37,7 +37,24 @@ export default function TableOfContents({
           className={styles.toc__collapse_button}
           onClick={() => setCollapsed((prev) => !prev)}
         >
-          {collapsed ? <BiExpandAlt size={16} /> : <BiCollapseAlt size={16} />}
+          {collapsed ? (
+            <>
+              <h6>
+                {section.name}
+                {article ? (
+                  <span style={{ textTransform: "none" }}>
+                    {" "}
+                    / {article?.title}
+                  </span>
+                ) : (
+                  ""
+                )}
+              </h6>
+              <BiExpandAlt size={16} />
+            </>
+          ) : (
+            <BiCollapseAlt size={16} />
+          )}
         </button>
         {!collapsed ? (
           <div
@@ -86,14 +103,7 @@ export default function TableOfContents({
             </ol>
           </div>
         ) : (
-          <h6>
-            {section.name}
-            {article ? (
-              <span style={{ textTransform: "none" }}> / {article?.title}</span>
-            ) : (
-              ""
-            )}
-          </h6>
+          <></>
         )}
       </div>
       {children}

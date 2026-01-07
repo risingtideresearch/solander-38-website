@@ -1,7 +1,7 @@
 import styles from "./footer.module.scss";
 import Logo from "./Logo";
 
-export default async function Footer({ children = <></> }) {
+export default async function Footer({ children = <></>, hideLogo = false }) {
   return (
     <footer className={styles.footer}>
       <div className={`section--two-col ${styles.inner}`}>
@@ -24,7 +24,7 @@ export default async function Footer({ children = <></> }) {
           </p>
           <h6>Get in touch</h6>
           <p> info@risingtideresearch.org</p>
-          <Logo />
+          {!hideLogo ? <Logo /> : <></>}
         </div>
         <div>{children}</div>
       </div>

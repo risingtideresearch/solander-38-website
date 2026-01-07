@@ -6,8 +6,6 @@
     z-index: 1;
     top: 5rem;
     max-width: 13.75rem;
-    min-width: 2rem;
-    min-height: 2rem;
     left: 0.75rem;
     position: fixed;
     margin-bottom: 1.5rem;
@@ -84,14 +82,22 @@
 }
 
 .collapsed {
-  padding-right: 2.5rem;
-  padding-left: 0.5rem;
-  display: flex;
-  align-items: center;
+  max-width: calc(100vw - 3rem);
+  .toc__collapse_button {
+    max-width: 20rem;
+    position: relative;
+    display: grid;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    grid-template-columns: 1fr 1rem;
+    top: 0;
+    left: 0;
+  }
 
   h6 {
     line-height: 1.2em;
-    margin: 0.5rem 0;
   }
 }
 
