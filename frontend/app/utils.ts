@@ -6,8 +6,13 @@ import { Model } from "./anatomy/three-d/util";
 export function formatDate(date: Date | string) {
   let d;
 
+
   if (typeof date === "string") {
-    d = new Date(date.endsWith("Z") ? date : date + "Z");
+    if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      d = new Date(date + "T00:00:00Z");
+    } else {
+      d = new Date(date.endsWith("Z") ? date : date + "Z");
+    }
   } else if (date instanceof Date) {
     d = date;
   } else {

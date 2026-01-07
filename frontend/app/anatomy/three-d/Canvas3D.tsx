@@ -19,6 +19,7 @@ import { contextualLayers, MaterialIndex, Model } from "./util";
 import HoverDisplay from "../HoverDisplay";
 import { ControlSettings } from "../Anatomy";
 import { GizmoViewcube } from "./GizmoViewcube";
+import { Component } from "@/sanity/sanity.types";
 
 export type ClippingValues = { value: [number, number]; axis: "x" | "y" | "z" };
 
@@ -33,6 +34,7 @@ type Canvas3DProps = {
   memoModels?: Array<Model>;
   handleLoaded?: () => void;
   loaded?: boolean;
+  componentParts?: Array<Component>;
   // use for article models
   interaction?: "all" | "limited" | "none";
 };

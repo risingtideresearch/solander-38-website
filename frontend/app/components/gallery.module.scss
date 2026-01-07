@@ -9,6 +9,8 @@
 
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr 1fr;
+    padding: 0.5rem;
+    gap: 0.5rem;
   }
 
   &__page {

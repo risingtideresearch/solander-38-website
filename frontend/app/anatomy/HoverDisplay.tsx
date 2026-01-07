@@ -236,7 +236,9 @@ export default function HoverDisplay({
         <div
           className={`${styles.connector} ${isVisible ? styles["connector--visible"] : ""} ${position.flip == "x" ? styles["connector--right"] : styles["connector--left"]}`}
           style={{
-            height: Math.abs(mouse.y - position.y),
+            height: Math.abs(mouse.y - position.y) - tooltipSize.height,
+            top: tooltipSize.height,
+            left:  Math.abs(position.x - mouse.x) - (position.flip == 'x' ? 2 : 1)
           }}
         ></div>
       </div>
