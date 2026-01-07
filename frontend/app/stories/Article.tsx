@@ -6,9 +6,10 @@ import ImageSet from "../components/ImageSet";
 import { Image } from "../components/Image";
 import { formatDate } from "../utils";
 import { contextualLayers } from "../anatomy/three-d/util";
-import MaterialTable from "./MaterialTable";
+import MaterialsTable from "../components/MaterialsTable";
 import { getPhotoURL } from "../photos/util";
 import { URLS } from "../components/Navigation/Navigation";
+import RangeChart from "../components/RangeChart";
 
 const components = {
   types: {
@@ -174,13 +175,14 @@ export default async function Article({ data, materials = [] }) {
           <p>
             <em>{data.subtitle}</em>
           </p>
+          {data.slug.current == 'range' ? <RangeChart /> : <></>}
           {data.isLive ? (
             <PortableText value={data.content} components={components} />
           ) : (
             <></>
           )}
 
-          <MaterialTable materials={materials} />
+          <MaterialsTable materials={materials} />
         </div>
       </div>
     </main>

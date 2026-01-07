@@ -1,7 +1,7 @@
 import { fetchMaterials } from "@/sanity/lib/utils";
-import styles from "./materialTable.module.scss";
+import styles from "./materials.module.scss";
 
-export default async function MaterialTable({ materials }) {
+export default async function MaterialsTable({ materials }) {
   const { data } = await fetchMaterials();
 
   const descriptions = data.materials.filter(

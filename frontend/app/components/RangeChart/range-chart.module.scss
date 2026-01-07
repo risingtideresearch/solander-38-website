@@ -1,0 +1,93 @@
+@import "./../MaterialsTable/materials.module.scss";
+
+.chartContainer {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.chartWrapper {
+  max-width: 36rem;
+  margin: 0 auto;
+
+  @media screen and (max-width: 800px) {
+    margin: 0 0.5rem;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+
+    text {
+      font-size: 0.8125rem;
+      @media screen and (max-width: 800px) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+.point {
+  cursor: pointer;
+  circle {
+    fill: #fff;
+    stroke: #000;
+  }
+
+  &:hover {
+    circle {
+      fill: var(--accent);
+    }
+  }
+}
+
+.tooltip {
+  position: fixed;
+  transform: translate(0, -100%);
+  background: white;
+  pointer-events: none;
+  z-index: 1000;
+  width: 260px;
+  border: 1px solid #000;
+
+  > div {
+    border-color: #dadada;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h6 {
+    border-color: #dadada;
+  }
+}
+
+.tooltipHeader {
+  border-color: #dadada;
+  grid-template-columns: 1fr;
+
+  h6 {
+    margin: 0;
+  }
+}
+
+.tooltipLabel {
+  font-weight: 600;
+}
+
+.tooltipSublabel {
+  text-transform: none;
+}
+
+.tooltipRow {
+  border-color: #dadada;
+  grid-template-columns: 1fr 1fr;
+
+  h6 {
+    border-color: #dadada;
+    margin: 0;
+  }
+}
+
+.tooltipUnit {
+  text-transform: none;
+}
