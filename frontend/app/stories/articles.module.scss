@@ -74,9 +74,13 @@
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-
+  
+  p {
+    font-weight: 600;
+  }
   h6 {
     white-space: nowrap;
+    margin: 0;
   }
   &:hover {
     text-decoration: none;

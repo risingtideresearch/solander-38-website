@@ -4,9 +4,12 @@ import { Canvas3D } from "./anatomy/three-d/Canvas3D";
 import Footer from "./components/Footer";
 import { URLS } from "./components/Navigation/Navigation";
 import styles from "./home.module.scss";
+import articleStyles from "./stories/articles.module.scss";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { getReducedModelSet } from "./utils";
 import Logo from "./components/Logo";
+import { fetchArticles, fetchPeople, fetchPhotos } from "@/sanity/lib/utils";
+import Search from "./components/Search/Search";
 
 export default async function Page() {
   const modelsManifestPath = path.join(
@@ -18,44 +21,26 @@ export default async function Page() {
   const layers = getReducedModelSet(models_manifest.exported_layers, true).map(
     (layer) => layer.filename,
   );
+
+  const drawingsPath = path.join(
+    process.cwd(),
+    "public/drawings/output_images/conversion_manifest.json",
+  );
+  const drawingsData = await fs.readFile(drawingsPath, "utf8");
+  const drawings = JSON.parse(drawingsData);
+
+  const articles = await fetchArticles();
+  const photos = await fetchPhotos();
+  const people = await fetchPeople();
+
   return (
     <div className={styles.home}>
-      <div className={styles.header}>
+      {/* <div className={styles.header}>
         <div className={styles.hero}>
           <div className={styles.title}>
             <h1>Solander 38</h1>
             <Logo />
-            {/* <h6> */}
-            {/* <svg
-                width="59"
-                height="78"
-                viewBox="0 0 59 78"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M16.9 77.6C20 68.8 24.8 54.9 26.7 49.5H0L7.7 40.7C18.5 37.7 23.4 39.9 28.3 42C32.8 44 37.2 45.9 44.5 45.3L16.9 77.6Z"
-                  fill="#000"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M42.4 0C39.3 8.8 34.5 22.7 32.6 28.1H58.9L51.7 36.8C40.8 39.9 36 37.8 31.1 35.7C26.7 33.8 22.2 31.8 15 32.4L42.4 0Z"
-                  fill="#000"
-                />
-              </svg>
-              Rising Tide Research Foundation */}
-            {/* </h6> */}
           </div>
-          {/* <img
-            src="/images/solander-38-4.png"
-            alt="3D model of Solander 38"
-            height={1125}
-            width={2038}
-            className={styles.solander}
-          /> */}
           <div>
             <Canvas3D
               height={"24rem"}
@@ -67,52 +52,87 @@ export default async function Page() {
             />
           </div>
         </div>
+      </div> */}
+
+      <Search />
+
+      <div>
+        <div className="section--two-col">
+          <div style={{ borderRight: "1px solid", padding: '2rem 0.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+            <h1>
+              Solander 38
+            </h1>
+            <Logo />
+          </div>
+          <div>
+            <img src="https://cdn.sanity.io/images/qjczz6gi/production/e21b1aedbbe89872b8039061dd51771bb848d5eb-4032x3024.jpg" />
+          </div>
+        </div>
+        <div style={{ borderTop: "1px solid" }}>
+          <div className="section--two-col">
+            <div style={{ borderRight: "1px solid" }}></div>
+            <div className={styles.toc} style={{ padding: "2rem" }}>
+              <section>
+                <a
+                  href={URLS.STORIES}
+                  className={articleStyles["article-title"]}
+                >
+                  <p>Stories</p>
+                  <div></div>
+                  <h6>{articles.data.length} stories</h6>
+                </a>
+                <p>Details from the build, organized by anatomical system.</p>
+              </section>
+              <section>
+                <a
+                  href={URLS.ANATOMY}
+                  className={articleStyles["article-title"]}
+                >
+                  <p>Anatomy</p>
+                  <div></div>
+                  <h6>{models_manifest.exported_layers.length} parts</h6>
+                </a>
+                <p>Model of parts and systems.</p>
+              </section>
+              <section>
+                <a
+                  href={URLS.DRAWINGS}
+                  className={articleStyles["article-title"]}
+                >
+                  <p>Drawings</p>
+                  <div></div>
+                  <h6>{drawings.files.length} drawings</h6>
+                </a>
+                <p>Library of fabrication plans.</p>
+              </section>
+              <section>
+                <a
+                  href={URLS.PHOTOS}
+                  className={articleStyles["article-title"]}
+                >
+                  <p>Photos</p>
+                  <div></div>
+                  <h6>{photos.data.length} photos</h6>
+                </a>
+                <p>Library of photos.</p>
+              </section>
+              <section>
+                <a
+                  href={URLS.PEOPLE}
+                  className={articleStyles["article-title"]}
+                >
+                  <p>People</p>
+                  <div></div>
+                  <h6>{people.data.length} people</h6>
+                </a>
+                <p>Builders, engineers, and researchers involved.</p>
+              </section>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <Footer>
-        <div className={styles.toc}>
-          <section>
-            <p>
-              <a href={URLS.STORIES}>
-                Stories <LiaLongArrowAltRightSolid size={18} />{" "}
-              </a>
-            </p>
-            <p>Details from the build, organized by anatomical system.</p>
-          </section>
-          <section>
-            <p>
-              <a href={URLS.ANATOMY}>
-                Anatomy <LiaLongArrowAltRightSolid size={18} />{" "}
-              </a>
-            </p>
-            <p>Model of parts and systems.</p>
-          </section>
-          <section>
-            <p>
-              <a href={URLS.DRAWINGS}>
-                Drawings <LiaLongArrowAltRightSolid size={18} />{" "}
-              </a>
-            </p>
-            <p>Library of fabrication plans.</p>
-          </section>
-          <section>
-            <p>
-              <a href={URLS.PHOTOS}>
-                Photos <LiaLongArrowAltRightSolid size={18} />{" "}
-              </a>
-            </p>
-            <p>Library of photos.</p>
-          </section>
-          <section>
-            <p>
-              <a href={URLS.PEOPLE}>
-                People <LiaLongArrowAltRightSolid size={18} />{" "}
-              </a>
-            </p>
-            <p>Builders, engineers, and researchers involved.</p>
-          </section>
-        </div>
-      </Footer>
+      <Footer></Footer>
     </div>
   );
 }

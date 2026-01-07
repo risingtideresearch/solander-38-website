@@ -14,7 +14,7 @@ export default function MobileNavigation({ children, active }) {
     >
       <button onClick={() => setOpen((prev) => !prev)} style={{ display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
         <MdOutlineMenu size={18} />
-        <span>{active}</span>
+        <h6>{active != 'Solander 38' ? 'Solander 38 / ' : ''}{active}</h6>
       </button>
       {open ? (
         <div className={`pane ${styles["mobile-nav__menu"]}`}>

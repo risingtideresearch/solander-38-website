@@ -1,6 +1,6 @@
 export default function Logo() {
   return (
-    <svg viewBox="-1 -1 727 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="-1 -1 728 79" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M76.6 76.6H0V0H76.6V76.6ZM2.1 74.5H74.5V2.10001H2.1V74.5Z"
         fill="#030303"

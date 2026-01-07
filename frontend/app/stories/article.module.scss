@@ -116,6 +116,9 @@
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+    @media screen and (max-width: 800px) {
+      max-height: 40rem;
+    }
   }
 }
 
@@ -157,13 +160,6 @@
     }
   }
 
-  &__in-progress {
-    background: var(--accent);
-    margin: -0.5rem -0.5rem 0 -0.5rem;
-    padding-left: 0.5rem;
-    width: 100vw;
-  }
-
   // a {
   //   text-decoration: underline;
   //   text-decoration-thickness: 1px;
@@ -182,7 +178,17 @@
   }
 }
 
-.inProgress {
+.in-progress-banner {
+  background: var(--accent);
+  margin: -1rem -0.5rem 0 -0.5rem;
+  padding-left: 0.5rem;
+  width: 100vw;
+  @media screen and (max-width: 800px) {
+    margin-top: -1.5rem;
+  }
+}
+
+.article--in-progress {
   .body {
     > div:nth-child(2) {
       padding-top: 2rem;

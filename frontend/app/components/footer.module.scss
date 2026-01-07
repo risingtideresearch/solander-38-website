@@ -1,23 +1,10 @@
 .footer {
   border-top: 1px solid;
 
-  .email {
-    display: grid;
-    grid-template-columns: 0.625rem 1fr;
-    align-items: center;
-    gap: 0.5rem;
-    text-transform: none;
-    svg {
-      width: 0.75rem;
-      height: auto;
-    }
-  }
-
   a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
   }
 
   h6 {
@@ -29,6 +16,10 @@
     font-size: 0.75rem;
     text-wrap: pretty;
     line-height: 1.4em;
+  }
+
+  svg {
+    margin-top: 2rem;
   }
 }
 

@@ -69,7 +69,7 @@ export async function fetchSections(slug?: string) {
  *
  * @returns
  */
-export async function fetchPhotos(section: string) {
+export async function fetchPhotos(section?: string) {
   const { data } = await sanityFetch({ query: allPhotosQuery(section) });
 
   return { data };

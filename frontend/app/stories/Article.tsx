@@ -90,7 +90,7 @@ export default async function Article({ data, materials = [] }) {
   ];
 
   return (
-    <main className={`article ${styles.page} ${data.isLive ? '' : styles.inProgress}`}>
+    <main className={`article ${styles.page} ${data.isLive ? '' : styles['article--in-progress']}`}>
       <div className={`bg--grid ${styles.header}`}>
         <div>
           <div style={{ marginTop: "0.625rem" }}>
@@ -106,9 +106,7 @@ export default async function Article({ data, materials = [] }) {
             }}
           >
             <div
-              // className="bg--grid"
               style={{
-                // border: "1px solid #eee",
                 borderLeft: "none",
                 height: "100%",
                 width: "100%",
@@ -132,7 +130,7 @@ export default async function Article({ data, materials = [] }) {
         <div>
           <div className={`${styles.metadata}`}>
             {!data.isLive ? (
-              <div className={styles["metadata__in-progress"]}>
+              <div className={styles["in-progress-banner"]}>
                 <h6>Story in progress</h6>
               </div>
             ) : (

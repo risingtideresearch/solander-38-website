@@ -23,8 +23,7 @@ export default async function Footer({ children = <></> }) {
             from <em>Catalyst</em>, the first Solander 38.
           </p>
           <h6>Get in touch</h6>
-          <p className={styles.email}> info@risingtideresearch.org</p>
-          <br />
+          <p> info@risingtideresearch.org</p>
           <Logo />
         </div>
         <div>{children}</div>

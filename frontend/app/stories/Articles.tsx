@@ -1,4 +1,3 @@
-import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import styles from "./articles.module.scss";
 import { fetchSections } from "@/sanity/lib/utils";
 import { formatDate } from "../utils";
