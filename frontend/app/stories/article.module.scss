@@ -206,3 +206,30 @@
     }
   }
 }
+
+.person {
+  // position: relative;
+  white-space: nowrap;
+  &__label {
+    display: none;
+    position: absolute;
+    text-indent: 0;
+    white-space: wrap;
+  }
+
+  &:hover {
+    .person__label {
+      display: block;
+      z-index: 1;
+      left: 12rem;
+      // top: 1.5rem;
+      margin-top: -0.5rem;
+      background-color: #fff;
+      // border: 1px solid;
+      padding: 0.5rem;
+      font-size: 0.75rem;
+      line-height: 1em;
+      width: 12rem;
+    }
+  }
+}

@@ -10,4 +10,8 @@
     width: 2rem;
     border: 1px solid;
   }
+  @media screen and (max-width: 800px) {
+    top: 2.5rem;
+    right: 0;
+  }
 }

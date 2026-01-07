@@ -5,23 +5,32 @@
   &__container {
     z-index: 1;
     top: 5rem;
-    width: 13.75rem;
+    max-width: 13.75rem;
+    min-width: 2rem;
+    min-height: 2rem;
     left: 0.75rem;
     position: fixed;
     margin-bottom: 1.5rem;
 
-    // @media screen and (max-width: 800px) {
-    //   height: 2rem;
-    //   overflow: hidden;
-    //   border-bottom: 1px solid;
-    // }
+    @media screen and (max-width: 800px) {
+      top: 2.5rem;
+      left: 0;
+    }
+  }
+
+  &__collapse_button {
+    position: absolute;
+    z-index: 1;
+    right: 1;
+    top: 1;
+    backdrop-filter: none;
   }
   a,
   [role="button"] {
     text-decoration: none;
     cursor: pointer;
     display: block;
-    &:hover{
+    &:hover {
       font-weight: 600;
     }
   }
@@ -74,6 +83,18 @@
   border: 1px solid;
 }
 
+.collapsed {
+  padding-right: 2.5rem;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+
+  h6 {
+    line-height: 1.2em;
+    margin: 0.5rem 0;
+  }
+}
+
 .minimal {
   position: sticky;
   margin-top: -2rem;
@@ -82,5 +103,13 @@
     position: relative;
     top: 0;
     margin-top: 0;
+    left: 0;
+    padding: 0;
+  }
+
+  ol {
+    @media screen and (max-width: 800px) {
+      padding-left: 0.9375rem;
+    }
   }
 }

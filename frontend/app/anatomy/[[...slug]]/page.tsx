@@ -49,7 +49,6 @@ export default async function Page({
           sections={sections?.data.sections || []}
           defaultSection={defaultSection?.slug || null}
           defaultArticle={defaultArticle || null}
-          outline={true}
         >
           <Anatomy
             content={{

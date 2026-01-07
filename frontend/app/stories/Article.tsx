@@ -8,6 +8,7 @@ import { formatDate } from "../utils";
 import { contextualLayers } from "../anatomy/three-d/util";
 import MaterialTable from "./MaterialTable";
 import { getPhotoURL } from "../photos/util";
+import { URLS } from "../components/Navigation/Navigation";
 
 const components = {
   types: {
@@ -61,7 +62,16 @@ const components = {
       </>
     ),
     person: ({ value }) => {
-      return <span>{value?.name}</span>;
+      return (
+        <a className={styles.person} href={`${URLS.PEOPLE}`}>
+          {value?.name}
+          {value.role ? (
+            <span className={styles.person__label}>{value?.role}</span>
+          ) : (
+            <></>
+          )}
+        </a>
+      );
     },
   },
   marks: {
@@ -90,7 +100,9 @@ export default async function Article({ data, materials = [] }) {
   ];
 
   return (
-    <main className={`article ${styles.page} ${data.isLive ? '' : styles['article--in-progress']}`}>
+    <main
+      className={`article ${styles.page} ${data.isLive ? "" : styles["article--in-progress"]}`}
+    >
       <div className={`bg--grid ${styles.header}`}>
         <div>
           <div style={{ marginTop: "0.625rem" }}>
@@ -143,7 +155,13 @@ export default async function Article({ data, materials = [] }) {
                 <>
                   <h6>Author</h6>
                   <h6>
-                    {<>{data.authors.map((author) => author.name).join(",")}</>}
+                    <a href={`${URLS.PEOPLE}`}>
+                      {
+                        <>
+                          {data.authors.map((author) => author.name).join(",")}
+                        </>
+                      }
+                    </a>
                   </h6>
                 </>
               )}
@@ -156,7 +174,11 @@ export default async function Article({ data, materials = [] }) {
           <p>
             <em>{data.subtitle}</em>
           </p>
-          {data.isLive ? <PortableText value={data.content} components={components} /> : <></>}
+          {data.isLive ? (
+            <PortableText value={data.content} components={components} />
+          ) : (
+            <></>
+          )}
 
           <MaterialTable materials={materials} />
         </div>
