@@ -50,71 +50,52 @@ export default async function Page() {
             <Image src={homepage.data.image} />
           </div>
         </div>
-        <div className={styles.bordered}>
-          <div className="section--two-col">
-            <div className={styles.leftColumn}></div>
-            <div className={`${styles.toc} ${styles.tocPadding}`}>
-              <section>
-                <a
-                  href={URLS.STORIES}
-                  className={articleStyles["article-title"]}
-                >
-                  <p>Stories</p>
-                  <div></div>
-                  <h6>{articles.data.length} stories</h6>
-                </a>
-                <p>Details from the build, organized by anatomical system.</p>
-              </section>
-              <section>
-                <a
-                  href={URLS.ANATOMY}
-                  className={articleStyles["article-title"]}
-                >
-                  <p>Anatomy</p>
-                  <div></div>
-                  <h6>{models_manifest.exported_layers.length} parts</h6>
-                </a>
-                <p>Model of parts and systems.</p>
-              </section>
-              <section>
-                <a
-                  href={URLS.DRAWINGS}
-                  className={articleStyles["article-title"]}
-                >
-                  <p>Drawings</p>
-                  <div></div>
-                  <h6>{drawings.files.length} drawings</h6>
-                </a>
-                <p>Library of fabrication plans.</p>
-              </section>
-              <section>
-                <a
-                  href={URLS.PHOTOS}
-                  className={articleStyles["article-title"]}
-                >
-                  <p>Photos</p>
-                  <div></div>
-                  <h6>{photos.data.length} photos</h6>
-                </a>
-                <p>Library of photos.</p>
-              </section>
-              <section>
-                <a
-                  href={URLS.PEOPLE}
-                  className={articleStyles["article-title"]}
-                >
-                  <p>People</p>
-                  <div></div>
-                  <h6>{people.data.length} people</h6>
-                </a>
-                <p>Builders, engineers, and researchers involved.</p>
-              </section>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <Footer></Footer>
+      <Footer hideLogo={true}>
+        <div className={`${styles.toc} ${styles.tocPadding}`}>
+          <section>
+            <a href={URLS.STORIES} className={articleStyles["article-title"]}>
+              <p>Stories</p>
+              <div></div>
+              <h6>{articles.data.length} stories</h6>
+            </a>
+            <p>Details from the build, organized by anatomical system.</p>
+          </section>
+          <section>
+            <a href={URLS.ANATOMY} className={articleStyles["article-title"]}>
+              <p>Anatomy</p>
+              <div></div>
+              <h6>{models_manifest.exported_layers.length} parts</h6>
+            </a>
+            <p>Model of parts and systems.</p>
+          </section>
+          <section>
+            <a href={URLS.DRAWINGS} className={articleStyles["article-title"]}>
+              <p>Drawings</p>
+              <div></div>
+              <h6>{drawings.files.length} drawings</h6>
+            </a>
+            <p>Library of fabrication plans.</p>
+          </section>
+          <section>
+            <a href={URLS.PHOTOS} className={articleStyles["article-title"]}>
+              <p>Photos</p>
+              <div></div>
+              <h6>{photos.data.length} photos</h6>
+            </a>
+            <p>Library of photos.</p>
+          </section>
+          <section>
+            <a href={URLS.PEOPLE} className={articleStyles["article-title"]}>
+              <p>People</p>
+              <div></div>
+              <h6>{people.data.length} people</h6>
+            </a>
+            <p>Builders, engineers, and researchers involved.</p>
+          </section>
+        </div>
+      </Footer>
     </div>
   );
 }
