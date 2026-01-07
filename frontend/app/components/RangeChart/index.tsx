@@ -156,20 +156,18 @@ export default function RangeChart() {
           ></rect> */}
 
           {xTicks.map((tick) => (
-            <g key={`x-${tick}`}>
+            <g key={`x-${tick}`} className={styles.tick}>
               <line
                 x1={xScale(tick)}
                 y1={margin.top}
                 x2={xScale(tick)}
                 y2={dim[1] - margin.bottom}
-                stroke="#e0e0e0"
                 strokeWidth="1"
               />
               <text
                 x={xScale(tick)}
                 y={dim[1] - margin.bottom + 24}
                 textAnchor={tick === 5 ? "start" : "middle"}
-                fontSize="14"
                 fill="#000"
                 style={{ textTransform: "uppercase" }}
               >
@@ -185,8 +183,7 @@ export default function RangeChart() {
                 x={xScale(tick.speed)}
                 y={margin.top - 10}
                 textAnchor="middle"
-                fontSize="14"
-                fill="#adadad"
+                fill="#aeaeae"
               >
                 {tick.kw}
                 {tick.speed === 10 ? " kW" : ""}
@@ -198,7 +195,6 @@ export default function RangeChart() {
             x={margin.left + chartWidth / 2}
             y={dim[1] - margin.bottom + 40}
             textAnchor="middle"
-            fontSize="14"
             fontWeight="400"
             style={{ textTransform: "uppercase" }}
             fill="#000"
@@ -207,13 +203,12 @@ export default function RangeChart() {
           </text>
 
           {yTicks.map((tick) => (
-            <g key={`y-${tick}`}>
+            <g key={`y-${tick}`} className={styles.tick}>
               <line
                 x1={margin.left}
                 y1={yScale(tick)}
                 x2={dim[0] - margin.right}
                 y2={yScale(tick)}
-                stroke="#e0e0e0"
                 strokeWidth="1"
               />
               <text
@@ -221,7 +216,6 @@ export default function RangeChart() {
                 y={yScale(tick)}
                 textAnchor="end"
                 dominantBaseline="middle"
-                fontSize="14"
                 fontWeight="400"
                 style={{ textTransform: "uppercase" }}
               >
@@ -254,7 +248,6 @@ export default function RangeChart() {
             x={-(dim[1] - margin.bottom - margin.top) / 2}
             y={20}
             textAnchor="middle"
-            fontSize="14"
             fontWeight="400"
             style={{ textTransform: "uppercase" }}
             transform={`rotate(-90)`}
@@ -322,7 +315,6 @@ export default function RangeChart() {
                 x={35}
                 y={0}
                 dominantBaseline="middle"
-                fontSize="14"
                 fill="#000"
               >
                 {allData["solar-summer"].label} ({allData["solar-summer"].kWh}{" "}
@@ -344,7 +336,6 @@ export default function RangeChart() {
                 x={35}
                 y={0}
                 dominantBaseline="middle"
-                fontSize="14"
                 fill="#000"
               >
                 <tspan>{allData.battery.label}</tspan> ({allData["battery"].kWh}{" "}
@@ -366,7 +357,6 @@ export default function RangeChart() {
                 x={35}
                 y={0}
                 dominantBaseline="middle"
-                fontSize="14"
                 fill="#000"
               >
                 {allData["solar-winter"].label} ({allData["solar-winter"].kWh}{" "}

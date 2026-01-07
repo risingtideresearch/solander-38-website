@@ -1,5 +1,5 @@
 .drawing-card {
-  --border-color: #d0d0d0;
+  --border-color: var(--border);
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
@@ -15,6 +15,39 @@
   p {
     max-width: 100%;
     margin: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  p,
+  h6 {
+    margin: 0;
+  }
+
+  h6 {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: row;
+    span {
+      padding: 0.5rem;
+      &:not(:last-child) {
+        border-right: 1px solid var(--border-color);
+        white-space: nowrap;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      span:last-child {
+        display: none;
+      }
+
+      span:nth-child(2) {
+        border-right: none;
+      }
+    }
   }
 }
 
@@ -62,88 +95,5 @@
     position: absolute;
     bottom: 0;
     left: 0.5rem;
-  }
-}
-
-.nav-button {
-  display: inline-flex;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.page-header {
-  --border-color: #000;
-  align-self: flex-end;
-  width: max-content;
-  h6,
-  &__title {
-    border: 1px solid;
-  }
-  &__title {
-    margin: -1px 0 0 0;
-    grid-column: span 2;
-    display: flex;
-    flex-direction: row;
-    align-content: flex-end;
-    justify-content: space-between;
-    p,
-    a {
-      padding: 0.5rem;
-      margin: 0;
-      &:not(:first-child) {
-        border-left: 1px solid;
-      }
-    }
-    p {
-      &:first-child {
-        max-width: 100%;
-        flex: 1 1 auto;
-      }
-    }
-
-    a {
-      display: inline-flex;
-      align-items: center;
-      padding: 0 1rem;
-    }
-  }
-}
-
-.page-header,
-.drawing-card {
-  p,
-  h6 {
-    margin: 0;
-  }
-
-  h6 {
-    width: 100%;
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: row;
-    span {
-      padding: 0.5rem;
-      &:not(:last-child) {
-        border-right: 1px solid var(--border-color);
-        white-space: nowrap;
-      }
-    }
-
-    @media screen and (max-width: 800px) {
-      span:last-child {
-        display: none;
-      }
-
-      span:nth-child(2) {
-        border-right: none;
-      }
-    }
-  }
-
-  p {
-    width: 100%;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.75rem;
-    padding: 0.5rem;
   }
 }

@@ -32,12 +32,19 @@
 
 .gallery-container {
   padding-right: 1.875rem;
+  min-height: calc(100vh - 5rem);
+
   @media screen and (max-width: 800px) {
     padding: 0;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    min-height: 20rem;
   }
 }
 
 .empty {
   padding: 0 0.75rem;
+  @media screen and (max-width: 800px) {
+    text-align: center;
+    padding-top: 2rem;
+  }
 }

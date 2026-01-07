@@ -53,7 +53,7 @@ export default async function Page() {
       </div>
 
       <Footer hideLogo={true}>
-        <div className={`${styles.toc} ${styles.tocPadding}`}>
+        <div className={`${styles.toc}`}>
           <section>
             <a href={URLS.STORIES} className={articleStyles["article-title"]}>
               <p>Stories</p>

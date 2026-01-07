@@ -1,6 +1,6 @@
 .materials {
   max-width: 46rem;
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--border);
   margin: 1rem auto;
   @media screen and (max-width: 800px) {
     margin: 1rem 0.5rem;
@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 15rem 1fr;
     &:not(:last-child) {
-      border-bottom: 1px solid #eeeeee;
+      border-bottom: 1px solid var(--border);
     }
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr 2fr;
@@ -23,7 +23,7 @@
     align-items: center;
     padding: 0.5rem;
     &:nth-child(odd) {
-      border-right: 1px solid #eeeeee;
+      border-right: 1px solid var(--border);
     }
   }
   p {

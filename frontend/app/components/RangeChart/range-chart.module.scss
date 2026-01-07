@@ -42,6 +42,12 @@
   }
 }
 
+.tick {
+    line {
+        stroke: var(--border);
+    }
+}
+
 .tooltip {
   position: fixed;
   transform: translate(0, -100%);
@@ -52,17 +58,11 @@
   border: 1px solid #000;
 
   > div {
-    border-color: #dadada;
     grid-template-columns: 1fr 1fr;
-  }
-
-  h6 {
-    border-color: #dadada;
   }
 }
 
 .tooltipHeader {
-  border-color: #dadada;
   grid-template-columns: 1fr;
 
   h6 {
@@ -79,11 +79,9 @@
 }
 
 .tooltipRow {
-  border-color: #dadada;
   grid-template-columns: 1fr 1fr;
 
   h6 {
-    border-color: #dadada;
     margin: 0;
   }
 }
