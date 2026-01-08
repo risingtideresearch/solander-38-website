@@ -231,9 +231,10 @@ export default function SearchClient({ drawings, type }) {
                         }}
                       >
                         {resultType == "sanity.imageAsset"
-                          ? "Photo"
-                          : resultType}
-                        s
+                          ? "Photos"
+                          : resultType == "person"
+                            ? "People"
+                            : resultType + "s"}
                       </h6>
                       {groupedResults[resultType].map(
                         (result: any, indexInGroup: number) => {
@@ -255,19 +256,12 @@ export default function SearchClient({ drawings, type }) {
                             >
                               <a
                                 href={getURL(result)}
-                                style={{
-                                  margin: "0.5rem 0",
-                                  display: "grid",
-                                  gridTemplateColumns: "3rem 1fr",
-                                  gap: "1rem",
-                                  alignItems: "center",
-                                }}
                                 tabIndex={-1}
                                 onFocus={() => setSelectedIndex(flatIndex)}
                               >
                                 {result.id ? (
                                   <h6>{result.id}</h6>
-                                ) : (
+                                ) : result.thumbnailUrl ? (
                                   <img
                                     src={result.thumbnailUrl}
                                     alt={
@@ -276,6 +270,8 @@ export default function SearchClient({ drawings, type }) {
                                     width={64}
                                     height={64}
                                   />
+                                ) : (
+                                  <span></span>
                                 )}
                                 <p style={{ margin: 0 }}>
                                   {result.title || result.clean_filename}

@@ -4,12 +4,14 @@ export function searchDrawings(drawings, query: string): Array<unknown> {
   const lowerQuery = query.toLowerCase();
 
   return drawings
-    .filter(
-      (file: Drawing) =>
-        file.clean_filename.toLowerCase().includes(lowerQuery) ||
-        // file.extracted_text?.toLowerCase().includes(lowerQuery) ||
-        file.id.includes(lowerQuery),
-    )
+    .filter((file: Drawing) => {
+      const regex = new RegExp(`\\b${lowerQuery}`, "i");
+      return (
+        regex.test(file.clean_filename) ||
+        // regex.test(file.extracted_text || '') ||
+        file.id.toLowerCase().includes(lowerQuery)
+      );
+    })
     .map((file: Drawing) => {
       // const filenameMatch = file.clean_filename
       //   .toLowerCase()

@@ -451,7 +451,7 @@ export const componentPartQuery = () => `
 
 export const searchQuery = () => `
 *[
-  (_type == "article" || (_type == "sanity.imageAsset" && count(*[_type == "article" && references(^._id)]) > 0)) 
+  (_type == "article" || _type == "person" || (_type == "sanity.imageAsset" && count(*[_type == "article" && references(^._id)]) > 0)) 
   && (
     title match $query + "*" ||
     name match $query + "*" ||
@@ -476,6 +476,10 @@ export const searchQuery = () => `
     _id,
     url,
     "thumbnailUrl": url + "?w=64&h=64&fit=crop"
+  },
+  _type == "person" => {
+    "title": name,
+    _id,
   }
 }`;
 
