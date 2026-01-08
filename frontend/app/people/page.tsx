@@ -1,9 +1,12 @@
 import { fetchPeople, fetchSections } from "@/sanity/lib/utils";
 import styles from "./people.module.scss";
+import { readDrawingsManifest } from "../manifest-util";
+import { URLS } from "../components/Navigation/Navigation";
 
 export default async function Page() {
   const people = await fetchPeople();
   const sections = await fetchSections();
+  const drawings = await readDrawingsManifest();
 
   const getArticleId = (slug) => {
     let id = "";
@@ -18,6 +21,11 @@ export default async function Page() {
     return id;
   };
 
+  const getDrawingCount = (slug) => {
+    console.log(slug, drawings.files);
+    return drawings.files.filter((file) => file.author?.slug == slug).length;
+  };
+
   return (
     <div className={styles.people}>
       {/* <TableOfContents
@@ -25,8 +33,16 @@ export default async function Page() {
         modes={["system", "material"]}
         materials={materials_index.unique_materials}
       > */}
-      
-      <h1 style={{margin:  '8rem auto 0 auto', maxWidth: '120rem', padding: '0 2rem'}}>People</h1>
+
+      <h1
+        style={{
+          margin: "8rem auto 0 auto",
+          maxWidth: "120rem",
+          padding: "0 2rem",
+        }}
+      >
+        People
+      </h1>
       <main>
         <section className="section--two-col">
           <div>
@@ -37,7 +53,11 @@ export default async function Page() {
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((person) => {
                 return (
-                  <div key={person._id} className={styles.person}>
+                  <div
+                    key={person._id}
+                    id={person.slug?.current}
+                    className={styles.person}
+                  >
                     <p
                       style={{
                         fontWeight: 600,
@@ -48,22 +68,33 @@ export default async function Page() {
                     {person.role ? (
                       <div>
                         <h6>Role</h6>
-                        <p>{person.role}</p>
+                        <div>
+                          <p>{person.role}</p>
+                        </div>
                       </div>
                     ) : (
                       <></>
                     )}
-                    {person.link ? (
+                    {person.affiliations ? (
                       <div>
-                        <h6>Website</h6>
-                        <p>
-                          <a href={person.link.url} target="_blank">
-                            {person.link.label ||
-                              person.link.url
-                                .replace("https://", "")
-                                .replace(".com/", ".com")}
-                          </a>
-                        </p>
+                        <h6>Also</h6>
+                        <div>
+                          {person.affiliations.map((item) => {
+                            if (item.url) {
+                              return (
+                                <p key={item.url}>
+                                  <a href={item.url} target="_blank">
+                                    {item.label ||
+                                      item.url
+                                        .replace("https://", "")
+                                        .replace(".com/", ".com")}
+                                  </a>
+                                </p>
+                              );
+                            }
+                            return <p key={item.label}>{item.label}</p>;
+                          })}
+                        </div>
                       </div>
                     ) : (
                       <></>
@@ -79,7 +110,7 @@ export default async function Page() {
                               ),
                             )
                             .map((article, i, all) => (
-                              <p style={{ margin: 0 }} key={article._id}>
+                              <p key={article._id}>
                                 <a
                                   style={{
                                     display: "grid",
@@ -135,6 +166,20 @@ export default async function Page() {
                                 </a>
                               </p>
                             ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+                    {getDrawingCount(person.slug?.current) > 0 ? (
+                      <div>
+                        <h6>Drafted</h6>
+                        <div>
+                          <h6>
+                            <a href={URLS.DRAWINGS}>
+                              {getDrawingCount(person.slug?.current)} drawings
+                            </a>
+                          </h6>
                         </div>
                       </div>
                     ) : (

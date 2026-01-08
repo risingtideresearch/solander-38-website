@@ -64,13 +64,26 @@ const components = {
     ),
     person: ({ value }) => {
       return (
-        <a className={styles.person} href={`${URLS.PEOPLE}`}>
+        <a
+          className={styles.person}
+          href={`${URLS.PEOPLE}/#${value.slug?.current}`}
+        >
           {value?.name}
-          {value.role ? (
-            <span className={styles.person__label}>{value?.role}</span>
+          {/* {value.role || value.link ? (
+            <span className={styles.person__label}>
+              {value.link ? (
+                <span>
+                  {value?.link.label}
+                  <br /> <br />
+                </span>
+              ) : (
+                <></>
+              )}
+              <span>{value?.role}</span>
+            </span>
           ) : (
             <></>
-          )}
+          )} */}
         </a>
       );
     },
@@ -156,13 +169,14 @@ export default async function Article({ data, materials = [] }) {
                 <>
                   <h6>Author</h6>
                   <h6>
-                    <a href={`${URLS.PEOPLE}`}>
-                      {
-                        <>
-                          {data.authors.map((author) => author.name).join(",")}
-                        </>
-                      }
-                    </a>
+                    {data.authors.map((author) => (
+                      <a
+                        key={author._id}
+                        href={`${URLS.PEOPLE}/#${author.slug?.current}`}
+                      >
+                        {author.name}
+                      </a>
+                    ))}
                   </h6>
                 </>
               )}
@@ -175,7 +189,7 @@ export default async function Article({ data, materials = [] }) {
           <p>
             <em>{data.subtitle}</em>
           </p>
-          {data.slug.current == 'range' ? <RangeChart /> : <></>}
+          {data.slug.current == "range" ? <RangeChart /> : <></>}
           {data.isLive ? (
             <PortableText value={data.content} components={components} />
           ) : (

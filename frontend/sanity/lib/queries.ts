@@ -195,7 +195,8 @@ export const articlesQuery = (slug?: string) => {
       isLive,
       "section": *[_type=="sections"][0].sections[references(^._id)][0],
       authors[]->{
-        name
+        name,
+        slug
       },
       content[]{
         ...,

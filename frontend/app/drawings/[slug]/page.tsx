@@ -1,8 +1,7 @@
-import { promises as fs } from "fs";
-import path from "path";
 import Drawings from "../Drawings";
 import { fetchSections } from "@/sanity/lib/utils";
 import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
+import { readDrawingsManifest } from "@/app/manifest-util";
 
 export async function generateStaticParams() {
   return [
@@ -23,16 +22,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
-  const drawingsPath = path.join(
-    process.cwd(),
-    "public/drawings/output_images/conversion_manifest.json",
-  );
-
-  const drawingsData = await fs.readFile(drawingsPath, "utf8");
-
-  const drawings = JSON.parse(drawingsData);
-
+  const drawings = await readDrawingsManifest();
   const sections = await fetchSections();
 
   return (

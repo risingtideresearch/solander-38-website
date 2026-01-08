@@ -1,13 +1,11 @@
 .people {
-  //   a {
-  //     text-decoration: underline;
-  //     text-decoration-thickness: 1px;
-  //     text-underline-offset: 2px;
-  //   }
 
   p {
     font-size: 0.875rem;
     margin: 0;
+    &:not(:first-child) {
+      margin-top: 0.25rem;
+    }
   }
 
   section {

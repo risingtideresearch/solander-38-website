@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
 import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
@@ -9,6 +7,7 @@ import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
 import subNavStyles from "@/app/components/Navigation/subnav.module.scss";
 import { notFound } from "next/navigation";
 import { Model } from "@/app/anatomy/three-d/util";
+import { readDrawingsManifest, readMaterialsManifest, readModelManifest } from "@/app/manifest-util";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -24,20 +23,9 @@ export default async function Page({ params }) {
   if (!data[0]) {
     notFound();
   }
+  const drawings = await readDrawingsManifest();
 
-  const drawingsPath = path.join(
-    process.cwd(),
-    "public/drawings/output_images/conversion_manifest.json",
-  );
-  const drawingsData = await fs.readFile(drawingsPath, "utf8");
-  const drawings = JSON.parse(drawingsData);
-
-  const modelsManifestPath = path.join(
-    process.cwd(),
-    "public/models/export_manifest.json",
-  );
-  const modelsManifestData = await fs.readFile(modelsManifestPath, "utf8");
-  const models_manifest = JSON.parse(modelsManifestData);
+  const models_manifest = await readModelManifest();
 
   const getArticleNavigation = (sections: any, currentSlug: string) => {
     const allArticles = sections?.sections.flatMap((section: any) =>
@@ -96,12 +84,7 @@ export default async function Page({ params }) {
       (layer) => layer.filename,
     );
   }
-  const materialsIndexPath = path.join(
-    process.cwd(),
-    "public/script-output/material_index_simple.json",
-  );
-  const materialsIndexData = await fs.readFile(materialsIndexPath, "utf8");
-  const materials_index = JSON.parse(materialsIndexData) || {};
+  const materials_index = await readMaterialsManifest();
 
   const getMaterials = (acc, layer) => {
     materials_index.material_index[layer]?.forEach((material) => {

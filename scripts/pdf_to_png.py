@@ -250,21 +250,11 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
             output_filename = os.path.join(output_folder, f"{pdf_base_name}{page_suffix}.png")
             image.save(output_filename, "PNG")
             
-            ### DISABLE FOR NOW
-            # # Create thumbnail with high quality settings from the higher-res source
-            # thumbnail = thumbnail_source_images[i].copy()
-            # thumbnail.thumbnail(thumbnail_size, Image.Resampling.LANCZOS)
-            # thumbnail_filename = os.path.join(thumbnails_folder, f"{pdf_base_name} page {i+1}_thumb.png")
-            # # Save with optimization disabled and high quality
-            # thumbnail.save(thumbnail_filename, "PNG", optimize=False, compress_level=1)
-            
             # Get image dimensions
             width, height = image.size
-            # thumb_width, thumb_height = thumbnail.size
             
             # Get file sizes
             file_size = os.path.getsize(output_filename)
-            # thumb_file_size = os.path.getsize(thumbnail_filename)
             
             # Sanitize group name
             group = sanitize_path(output_filename.split('/')[6])
@@ -281,6 +271,8 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
             # Sanitize all paths in file info
             rel_path = sanitize_path(os.path.relpath(output_filename).replace('../frontend/public', ''))
             source_pdf_full_path = sanitize_path(os.path.relpath(pdf_path))
+            
+            author = {"slug": "henry-nolan", "name": "Henry Nolan"}
             
             # Create file info dictionary
             file_info = {
@@ -299,21 +291,11 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
                 "height": height,
                 "file_size_bytes": file_size,
                 "date_info": date_info,
-                "extracted_text": full_text,
-                # "thumbnail": {
-                #     "filename": os.path.basename(thumbnail_filename),
-                #     "rel_path": os.path.relpath(thumbnail_filename).replace('../frontend/public', ''),
-                #     "width": thumb_width,
-                #     "height": thumb_height,
-                #     "file_size_bytes": thumb_file_size
-                # }
+                "author": author,
+                "extracted_text": "" #full_text,
             }
             
             file_info_list.append(file_info)
-            
-            # date_str = f" - {date_info['formatted']}" if date_info else ""
-            # print(f"Saved: {output_filename} ({width}x{height}) - Page {i + 1} of {total_pages}{date_str}")
-            # print(f"  Thumbnail: {thumbnail_filename} ({thumb_width}x{thumb_height})")
 
         return file_info_list
 
@@ -438,18 +420,12 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
                 "successful_conversions": successful_conversions,
                 "failed_conversions": failed_conversions,
                 "total_images_created": len(all_files_info),
-                # "thumbnail_size": thumbnail_size,
-                # "thumbnail_dpi": thumbnail_dpi
             },
-            ### DISABLE FOR NOW
-            # "pdf_page_counts": pdf_page_counts,
-            ### 
             "files": all_files_info,
             "summary_statistics": {
                 "total_images": len(all_files_info),
                 "unique_dimensions": list(set((info["width"], info["height"]) for info in all_files_info)),
                 "total_file_size_bytes": sum(info["file_size_bytes"] for info in all_files_info),
-                # "total_thumbnail_size_bytes": sum(info["thumbnail"]["file_size_bytes"] for info in all_files_info),
                 "average_width": sum(info["width"] for info in all_files_info) / len(all_files_info) if all_files_info else 0,
                 "average_height": sum(info["height"] for info in all_files_info) / len(all_files_info) if all_files_info else 0,
                 "average_pages_per_pdf": sum(pdf_page_counts.values()) / len(pdf_page_counts) if pdf_page_counts else 0,

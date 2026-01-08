@@ -26,6 +26,16 @@ export default function DrawingMetadata({
         <h6>
           {drawing.date_info ? formatDate(drawing.date_info.date) : "<no date>"}
         </h6>
+        {drawing.author ? (
+          <>
+            <h6>Author</h6>
+            <h6>
+              <a href={`/people#${drawing.author.slug}`}>{drawing.author?.name}</a>
+            </h6>
+          </>
+        ) : (
+          <></>
+        )}
         <h6>System</h6>
         <h6>
           <a

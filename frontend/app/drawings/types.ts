@@ -14,6 +14,10 @@ export type Drawing = {
     month: number;
     year: number;
   };
+  author: {
+    slug: string;
+    name: string;
+  } | null;
 };
 
 export type DrawingGroup = {

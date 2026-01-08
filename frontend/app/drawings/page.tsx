@@ -1,18 +1,10 @@
-import { promises as fs } from "fs";
-import path from "path";
 import Drawings from "./Drawings";
 import { fetchSections } from "@/sanity/lib/utils";
 import Navigation, { URLS } from "../components/Navigation/Navigation";
+import { readDrawingsManifest } from "../manifest-util";
 
 export default async function Page() {
-  const drawingsPath = path.join(
-    process.cwd(),
-    "public/drawings/output_images/conversion_manifest.json",
-  );
-
-  const drawingsData = await fs.readFile(drawingsPath, "utf8");
-
-  const drawings = JSON.parse(drawingsData);
+  const drawings = await readDrawingsManifest();
 
   const sections = await fetchSections();
 

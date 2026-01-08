@@ -1,19 +1,11 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { fetchArticles } from "@/sanity/lib/utils";
 import { getDrawingArticleDictionary, getSlugFromDrawingGroup } from "../../util";
 import { DrawingPage } from "../../DrawingPage";
 import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
+import { readDrawingsManifest } from "@/app/manifest-util";
 
 export async function generateStaticParams() {
-  const drawingsPath = path.join(
-    process.cwd(),
-    "public/drawings/output_images/conversion_manifest.json",
-  );
-
-  const drawingsData = await fs.readFile(drawingsPath, "utf8");
-
-  const drawings = JSON.parse(drawingsData);
+  const drawings = await readDrawingsManifest();
 
   return drawings.files.map((d) => ({
     slug: d.uuid,
@@ -26,15 +18,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
-  const drawingsPath = path.join(
-    process.cwd(),
-    "public/drawings/output_images/conversion_manifest.json",
-  );
-
-  const drawingsData = await fs.readFile(drawingsPath, "utf8");
-
-  const drawings = JSON.parse(drawingsData);
+  const drawings = await readDrawingsManifest();
 
   const articles = await fetchArticles();
   const drawingsArticleDictionary = getDrawingArticleDictionary(articles.data);
