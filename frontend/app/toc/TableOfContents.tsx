@@ -17,11 +17,17 @@ export default function TableOfContents({
   hide = false,
   showArticles = true,
 }) {
-  const [collapsed, setCollapsed] = useState(window.innerWidth < 800);
+  const [collapsed, setCollapsed] = useState(false);
   const [section, setSection] = useState(
     sections.find((section) => section.slug == defaultSection) || sections[0],
   );
   const [article, setArticle] = useState(defaultArticle);
+
+  useEffect(() => {
+    if (window.innerWidth < 800 && !collapsed) {
+      setCollapsed(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (window.innerWidth < 800 && !collapsed) {

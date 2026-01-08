@@ -19,8 +19,6 @@ export default async function Page({
 
   const componentParts = await fetchComponents();
 
-  console.log(componentParts)
-
   let defaultSection = sections.data.sections.find(
     (section) => section.slug == slug,
   );
