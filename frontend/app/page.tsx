@@ -47,7 +47,7 @@ export default async function Page() {
             </div>
           </div>
           <div>
-            <Image src={homepage.data.image} />
+            <Image src={homepage.data.image} loading='eager' />
           </div>
         </div>
       </div>

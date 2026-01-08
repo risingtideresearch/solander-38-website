@@ -30,8 +30,7 @@ export default function RangeChart() {
   const allData = {
     battery: {
       key: "no-solar",
-      label: "Full battery",
-      sublabel: "without additional solar",
+      label: "Battery",
       dashArray: "7 3",
       color: "#000",
       values: [
@@ -46,8 +45,7 @@ export default function RangeChart() {
     },
     "solar-winter": {
       key: "solar-pnw-winter",
-      label: "Low solar",
-      sublabel: "e.g. PNW winter",
+      label: "Winter",
       dashArray: "3 3",
       color: "#000",
       values: [
@@ -62,8 +60,7 @@ export default function RangeChart() {
     },
     "solar-summer": {
       key: "solar-pnw-summer",
-      label: "High solar ",
-      sublabel: "e.g. PNW summer",
+      label: "Summer",
       dashArray: "",
       color: "#000",
       values: [
