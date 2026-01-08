@@ -36,6 +36,25 @@
       font-weight: 600;
     }
   }
+
+  a {
+    span {
+      text-align: left;
+      &:nth-last-child(2) {
+        visibility: hidden;
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
+      }
+      &:last-child {
+        position: absolute;
+        right: 0;
+        @media screen and (max-width: 800px) {
+          position: static;
+        }
+      }
+    }
+  }
 }
 
 .logo {
@@ -88,7 +107,7 @@
     button {
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0.125rem;
       height: 2rem;
       width: 2rem;
     }
