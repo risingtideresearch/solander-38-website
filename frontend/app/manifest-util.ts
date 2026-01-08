@@ -1,20 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
 
-export async function readJsonFile<T = any>(
-  jsonPath: string,
-): Promise<T> {
+export async function readJsonFile<T = any>(jsonPath: string): Promise<T> {
   try {
-    const isProduction = process.env.NODE_ENV === "production";
-    const basePath = isProduction 
-      ? path.join(process.cwd(), ".next/server/app") 
-      : process.cwd();
-    
-    const adjustedPath = isProduction 
-      ? jsonPath.replace(/^public\//, "")
-      : jsonPath;
-    
-    const filePath = path.join(basePath, adjustedPath);
+    const filePath = path.join(process.cwd(), jsonPath);
     const fileData = await fs.readFile(filePath, "utf8");
     return JSON.parse(fileData);
   } catch (error) {
