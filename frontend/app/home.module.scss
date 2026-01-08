@@ -64,9 +64,17 @@
 
 .toc {
   max-width: 40rem;
-  section {
-    padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.75rem 1rem;
 
+  @media screen and (max-width: 800px) {
+    border-bottom: 1px solid;
+    padding: 2rem;
+  }
+
+  section {
     > p:first-child {
       font-weight: 600;
     }
@@ -75,10 +83,6 @@
   p {
     font-size: 0.875rem;
     margin: 0.3125rem 0;
-  }
-
-  @media screen and (max-width: 800px) {
-    border-bottom: 1px solid;
   }
 }
 

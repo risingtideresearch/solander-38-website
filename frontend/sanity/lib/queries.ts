@@ -175,12 +175,14 @@ export const peopleQuery = `
     "articlesAsAuthor": *[_type=="article" && isLive == true && ^._id in authors[]->_id]{
       _id,
       title,
-      "slug": slug.current
+      "slug": slug.current,
+      "section": *[_type=="sections"][0].sections[references(^._id)][0],
     },
     "articlesMentioned": *[_type=="article" && isLive == true && references(^._id) && !defined(authors[_ref == ^.^._id][0])]{
       _id,
       title,
-      "slug": slug.current
+      "slug": slug.current,
+      "section": *[_type=="sections"][0].sections[references(^._id)][0],
     }
 }   
 `;

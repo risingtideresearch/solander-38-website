@@ -1,39 +1,19 @@
-import { fetchPeople, fetchSections } from "@/sanity/lib/utils";
+import { fetchPeople } from "@/sanity/lib/utils";
 import styles from "./people.module.scss";
 import { readDrawingsManifest } from "../manifest-util";
 import { URLS } from "../components/Navigation/Navigation";
+import { Article } from "@/sanity/sanity.types";
 
 export default async function Page() {
   const people = await fetchPeople();
-  const sections = await fetchSections();
   const drawings = await readDrawingsManifest();
 
-  const getArticleId = (slug) => {
-    let id = "";
-    sections.data.sections.forEach((section) => {
-      section.articles.forEach((article) => {
-        if (article.slug == slug) {
-          id = article.articleId;
-        }
-      });
-    });
-
-    return id;
-  };
-
   const getDrawingCount = (slug) => {
-    console.log(slug, drawings.files);
     return drawings.files.filter((file) => file.author?.slug == slug).length;
   };
 
   return (
     <div className={styles.people}>
-      {/* <TableOfContents
-        sections={sections?.data.sections || []}
-        modes={["system", "material"]}
-        materials={materials_index.unique_materials}
-      > */}
-
       <h1
         style={{
           margin: "8rem auto 0 auto",
@@ -104,17 +84,11 @@ export default async function Page() {
                         <h6>Author</h6>
                         <div>
                           {person.articlesAsAuthor
-                            .sort((a, b) =>
-                              getArticleId(a.slug).localeCompare(
-                                getArticleId(b.slug),
-                              ),
-                            )
-                            .map((article, i, all) => (
+                            .map((article) => (
                               <p key={article._id}>
                                 <a
                                   style={{
-                                    display: "grid",
-                                    gridTemplateColumns: "2rem 1fr",
+                                    display: "inline",
                                   }}
                                   href={`/stories/${article.slug}`}
                                 >
@@ -122,10 +96,11 @@ export default async function Page() {
                                     style={{
                                       fontSize: "0.75rem",
                                       textTransform: "uppercase",
+                                      marginTop: "0.0625rem",
                                     }}
                                   >
-                                    {getArticleId(article.slug)}
-                                  </span>{" "}
+                                    {article.section?.name}&nbsp;/&nbsp;
+                                  </span>
                                   {article.title}
                                 </a>
                               </p>
@@ -140,17 +115,11 @@ export default async function Page() {
                         <h6>Part of</h6>
                         <div>
                           {person.articlesMentioned
-                            .sort((a, b) =>
-                              getArticleId(a.slug).localeCompare(
-                                getArticleId(b.slug),
-                              ),
-                            )
-                            .map((article, i, all) => (
+                            .map((article) => (
                               <p style={{ margin: 0 }} key={article._id}>
                                 <a
                                   style={{
-                                    display: "grid",
-                                    gridTemplateColumns: "2rem 1fr",
+                                    display: "inline",
                                   }}
                                   href={`/stories/${article.slug}`}
                                 >
@@ -158,10 +127,11 @@ export default async function Page() {
                                     style={{
                                       fontSize: "0.75rem",
                                       textTransform: "uppercase",
+                                      marginTop: "0.0625rem",
                                     }}
                                   >
-                                    {getArticleId(article.slug)}
-                                  </span>{" "}
+                                    {article.section?.name}&nbsp;/&nbsp;
+                                  </span>
                                   {article.title}
                                 </a>
                               </p>

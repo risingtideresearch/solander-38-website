@@ -10,7 +10,7 @@ export default function RelatedStories({ stories }: RelatedArticlesProps) {
     return (
       <>
         <h6>Stories</h6>
-        <div style={{flexDirection: 'column', gap: '0.375rem', alignItems: 'flex-end'}}>
+        <div style={{flexDirection: 'column', alignItems: 'flex-end'}}>
           {stories.map((story: Article) => {
             return (
               <div key={story._id}>
