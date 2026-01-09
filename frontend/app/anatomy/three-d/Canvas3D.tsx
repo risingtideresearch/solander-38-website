@@ -81,7 +81,7 @@ export function Canvas3D({
 
   useEffect(() => {
     if (window?.innerWidth < 800) {
-      setGizmoPosition([60, 150]):
+      setGizmoPosition([60, 150]);
     } 
   }, [])
 
