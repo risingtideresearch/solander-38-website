@@ -67,7 +67,7 @@ export function Canvas3D({
   const [modelsLoaded, setModelsLoaded] = useState<Set<string>>(new Set());
   const [hovered, setHovered] = useState<Model | null>(null);
   const [autoRotate, setAutoRotate] = useState(true);
-  const gizmoPosition = useRef(window?.innerWidth < 800 ? [60, 150] : [110, 90])
+  const [gizmoPosition, setGizemoPosition] = useState<[number, number]>([110, 90])
 
   const tempBox = useRef(new Box3());
   const tempCenter = useRef(new Vector3());
@@ -78,6 +78,12 @@ export function Canvas3D({
     interaction == "none"
       ? new Vector3(0.1, 0.1, 0.5)
       : new Vector3(0.5, 0.25, 0.625);
+
+  useEffect(() => {
+    if (window?.innerWidth < 800) {
+      setGizemoPosition([60, 150]):
+    } 
+  }, [])
 
   const handleModelLoad = useCallback((url: string) => {
     setModelsLoaded((prev) => {
@@ -331,7 +337,7 @@ export function Canvas3D({
             makeDefault
           />
           {interaction == "all" && (
-            <GizmoHelper alignment="bottom-right" margin={gizmoPosition.current}>
+            <GizmoHelper alignment="bottom-right" margin={gizmoPosition}>
               <group scale={[1.2, 1.2, 1.2]}>
                 <GizmoViewcube
                   faces={["Bow", "Stern", "Deck", "Keel", "Starboard", "Port"]}
