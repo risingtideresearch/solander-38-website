@@ -15,20 +15,20 @@
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr 2fr;
     }
-  }
-  h6 {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    &:nth-child(odd) {
-      border-right: 1px solid var(--border);
+    h6 {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      &:nth-child(odd) {
+        border-right: 1px solid var(--border);
+      }
     }
-  }
-  p {
-    margin: 0;
-    padding: 0.5rem;
-    font-size: 0.75rem;
+    p {
+      margin: 0;
+      padding: 0.5rem;
+      font-size: 0.75rem;
+    }
   }
 }

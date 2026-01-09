@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./range-chart.module.scss";
+import table from './../MaterialsTable/materials.module.scss';
 
 export default function RangeChart() {
   const [tooltip, setTooltip] = useState<{
@@ -365,7 +366,7 @@ export default function RangeChart() {
 
         {tooltip && (
           <div
-            className={`${styles.materials} ${styles.tooltip}`}
+            className={`${table.materials} ${styles.tooltip}`}
             style={{
               left: tooltip.x + 10,
               top: tooltip.y + 10,
