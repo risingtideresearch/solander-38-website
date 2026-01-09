@@ -1,4 +1,4 @@
-import { fetchArticles, fetchSections } from "@/sanity/lib/utils";
+import { fetchArticles, fetchArticlesStatic, fetchSections } from "@/sanity/lib/utils";
 import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
@@ -13,11 +13,13 @@ import {
   getModelManifest,
 } from "@/app/manifest-util";
 
-// export async function generateStaticParams() {
-//   const articles = await fetchArticles();
+export async function generateStaticParams() {
+  const articles = await fetchArticlesStatic();
 
-//   return articles.data.map((article) => article.slug);
-// }
+  return articles.data.map((article) => ({
+    slug: article.slug,
+  }));
+}
 
 export default async function Page({ params }) {
   const { slug } = await params;

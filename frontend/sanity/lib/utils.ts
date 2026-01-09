@@ -11,7 +11,7 @@ import {
   peopleQuery,
   sectionsQuery,
 } from "./queries";
-import { sanityFetch } from "./live";
+import { sanityFetch, sanityFetchStatic } from "./live";
 
 export async function fetchAnnotations(models_manifest) {
   let { data } = await sanityFetch({ query: annotationsQuery });
@@ -40,6 +40,11 @@ export async function fetchArticles(slug?: string) {
   return { data };
 }
 
+export async function fetchArticlesStatic(slug?: string) {
+  const data = await sanityFetchStatic({ query: articlesQuery(slug) });
+  return { data };
+}
+
 /**
  *
  * @returns
@@ -62,6 +67,12 @@ export async function fetchSections(slug?: string) {
       article.articleId = `${i + 1}–${String.fromCharCode(65 + j)}`
     })
   });
+
+  return { data };
+}
+
+export async function fetchSectionsStatic(slug?: string) {
+  const { data } = await sanityFetchStatic({ query: sectionsQuery(slug) });
 
   return { data };
 }
