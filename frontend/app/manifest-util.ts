@@ -1,14 +1,19 @@
-import { promises as fs } from "fs";
-import path from "path";
+// import { promises as fs } from "fs";
+// import path from "path";
 
 export async function readJsonFile<T = any>(jsonPath: string): Promise<T> {
-  try {
-    const filePath = path.join(process.cwd(), jsonPath);
-    const fileData = await fs.readFile(filePath, "utf8");
-    return JSON.parse(fileData);
-  } catch (error) {
-    throw new Error(`Failed to read JSON file at ${jsonPath}: ${error}`);
+  return {
+    files: [],
+    "unique_materials": [],
+    exported_layers: []
   }
+  // try {
+  //   const filePath = path.join(process.cwd(), jsonPath);
+  //   const fileData = await fs.readFile(filePath, "utf8");
+  //   return JSON.parse(fileData);
+  // } catch (error) {
+  //   throw new Error(`Failed to read JSON file at ${jsonPath}: ${error}`);
+  // }
 }
 
 export async function readDrawingsManifest() {
