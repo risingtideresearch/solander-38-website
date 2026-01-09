@@ -72,7 +72,7 @@ export async function fetchSections(slug?: string) {
 }
 
 export async function fetchSectionsStatic(slug?: string) {
-  const { data } = await sanityFetchStatic({ query: sectionsQuery(slug) });
+  const data = await sanityFetchStatic({ query: sectionsQuery(slug) });
 
   return { data };
 }
@@ -83,6 +83,16 @@ export async function fetchSectionsStatic(slug?: string) {
  */
 export async function fetchPhotos(section?: string) {
   const { data } = await sanityFetch({ query: allPhotosQuery(section) });
+
+  return { data };
+}
+
+/**
+ *
+ * @returns
+ */
+export async function fetchPhotosStatic(section?: string) {
+  const data = await sanityFetchStatic({ query: allPhotosQuery(section) });
 
   return { data };
 }

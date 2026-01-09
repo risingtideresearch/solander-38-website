@@ -1,8 +1,17 @@
-import { fetchPhotos, fetchSections } from "@/sanity/lib/utils";
+import { fetchPhotos, fetchSections, fetchSectionsStatic } from "@/sanity/lib/utils";
 import Navigation, { URLS } from "../../components/Navigation/Navigation";
 import PhotoGallery from "./../PhotoGallery";
 import MinimalTOC from "../../toc/MinimalTOC";
 import styles from './../photos.module.scss';
+
+export async function generateStaticParams() {
+  const sections = await fetchSectionsStatic();
+  return sections.data.sections.map(section => (
+    {
+      slug: section.slug
+    }
+  ));
+}
 
 export default async function Page({
   params,

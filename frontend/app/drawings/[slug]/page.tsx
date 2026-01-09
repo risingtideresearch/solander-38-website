@@ -1,19 +1,15 @@
 import Drawings from "../Drawings";
-import { fetchSections } from "@/sanity/lib/utils";
+import { fetchSections, fetchSectionsStatic } from "@/sanity/lib/utils";
 import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
 import { getDrawingsManifest } from "@/app/manifest-util";
 
 export async function generateStaticParams() {
-  return [
-    { slug: "overview" },
-    { slug: "body" },
-    { slug: "power-architecture" },
-    { slug: "superstructure" },
-    { slug: "control" },
-    { slug: "propulsion" },
-    { slug: "water-heating-systems" },
-    { slug: "outfitting-interior" },
-  ];
+  const sections = await fetchSectionsStatic();
+  return sections.data.sections.map(section => (
+    {
+      slug: section.slug
+    }
+  ));
 }
 
 export default async function Page({
