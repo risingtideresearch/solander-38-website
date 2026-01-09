@@ -4,3 +4,7 @@
 
 [[plugins]]
     package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  # Enable Next.js build cache
+  NETLIFY_NEXT_PLUGIN_SKIP = "false"
