@@ -1,7 +1,10 @@
 [build]
-  base = "frontend"
   command = "npm run build"
-  publish = "." 
+  publish = "fontent/.next"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+    package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  # Enable Next.js build cache
+  NETLIFY_NEXT_PLUGIN_SKIP = "false"
