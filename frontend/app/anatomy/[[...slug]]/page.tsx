@@ -3,10 +3,33 @@ import {
   fetchArticles,
   fetchComponents,
   fetchSections,
+  fetchSectionsStatic,
 } from "@/sanity/lib/utils";
 import Anatomy from "../Anatomy";
 import styles from "./page.module.scss";
 import { getMaterialsManifest, getModelManifest } from "@/app/manifest-util";
+
+export async function generateStaticParams() {
+  const sections = await fetchSectionsStatic();
+  const slugs = [
+    {
+      slug: [],
+    },
+  ];
+  sections.data.sections.forEach((section) => {
+    slugs.push({
+      slug: [section.slug],
+    });
+
+    section.articles.forEach((article) => {
+      slugs.push({
+        slug: [section.slug, article.slug],
+      });
+    });
+  });
+
+  return slugs;
+}
 
 export default async function Page({
   params,
