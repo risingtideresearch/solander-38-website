@@ -67,7 +67,7 @@ export function Canvas3D({
   const [modelsLoaded, setModelsLoaded] = useState<Set<string>>(new Set());
   const [hovered, setHovered] = useState<Model | null>(null);
   const [autoRotate, setAutoRotate] = useState(true);
-  const [gizmoPosition, setGizemoPosition] = useState<[number, number]>([110, 90])
+  const [gizmoPosition, setGizmoPosition] = useState<[number, number]>([110, 90])
 
   const tempBox = useRef(new Box3());
   const tempCenter = useRef(new Vector3());
@@ -81,7 +81,7 @@ export function Canvas3D({
 
   useEffect(() => {
     if (window?.innerWidth < 800) {
-      setGizemoPosition([60, 150]):
+      setGizmoPosition([60, 150]):
     } 
   }, [])
 
