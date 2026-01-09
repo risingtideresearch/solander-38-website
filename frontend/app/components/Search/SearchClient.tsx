@@ -5,6 +5,7 @@ import styles from "./search.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { searchDrawings } from "./util";
 import { getPhotoURL } from "@/app/photos/util";
+import { MdPerson } from "react-icons/md";
 
 export default function SearchClient({ drawings, type }) {
   const [active, setActive] = useState(false);
@@ -266,7 +267,7 @@ export default function SearchClient({ drawings, type }) {
                                 href={getURL(result)}
                                 tabIndex={-1}
                                 onFocus={() => setSelectedIndex(flatIndex)}
-                                style={ resultType == 'article' || resultType == 'person' ? { gridTemplateColumns: '1fr'} : {}}
+                                style={ resultType == 'article' ? { gridTemplateColumns: '1fr'} : {}}
                               >
                                 {result.id ? (
                                   <h6>{result.id}</h6>
@@ -279,7 +280,9 @@ export default function SearchClient({ drawings, type }) {
                                     width={64}
                                     height={64}
                                   />
-                                ) : (
+                                ) : resultType == 'person' ?
+                                <span><MdPerson size={16} style={{display: 'block', margin: '0 auto'}} /> </span>
+                                : (
                                   <></>
                                 )}
                                 <p style={{ margin: 0 }}>
