@@ -7,7 +7,11 @@ import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
 import subNavStyles from "@/app/components/Navigation/subnav.module.scss";
 import { notFound } from "next/navigation";
 import { Model } from "@/app/anatomy/three-d/util";
-import { readDrawingsManifest, readMaterialsManifest, readModelManifest } from "@/app/manifest-util";
+import {
+  getDrawingsManifest,
+  getMaterialsManifest,
+  getModelManifest,
+} from "@/app/manifest-util";
 
 // export async function generateStaticParams() {
 //   const articles = await fetchArticles();
@@ -23,9 +27,9 @@ export default async function Page({ params }) {
   if (!data[0]) {
     notFound();
   }
-  const drawings = await readDrawingsManifest();
+  const drawings = getDrawingsManifest();
 
-  const models_manifest = await readModelManifest();
+  const models_manifest = getModelManifest();
 
   const getArticleNavigation = (sections: any, currentSlug: string) => {
     const allArticles = sections?.sections.flatMap((section: any) =>
@@ -84,7 +88,7 @@ export default async function Page({ params }) {
       (layer) => layer.filename,
     );
   }
-  const materials_index = await readMaterialsManifest();
+  const materials_index = getMaterialsManifest();
 
   const getMaterials = (acc, layer) => {
     materials_index.material_index[layer]?.forEach((material) => {
@@ -100,9 +104,11 @@ export default async function Page({ params }) {
   dataWithMatchedDrawings.relatedModels = Array.from(
     new Set(dataWithMatchedDrawings.relatedModels),
   ).filter((model) => {
-    const exists = models_manifest.exported_layers.find((layer: Model) => layer.filename == model);
+    const exists = models_manifest.exported_layers.find(
+      (layer: Model) => layer.filename == model,
+    );
     if (!exists) {
-      console.warn(`${model} specified in CMS, not found in manifest`)
+      console.warn(`${model} specified in CMS, not found in manifest`);
     }
     return exists;
   });

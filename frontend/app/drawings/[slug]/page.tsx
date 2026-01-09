@@ -1,7 +1,7 @@
 import Drawings from "../Drawings";
 import { fetchSections } from "@/sanity/lib/utils";
 import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
-import { readDrawingsManifest } from "@/app/manifest-util";
+import { getDrawingsManifest } from "@/app/manifest-util";
 
 export async function generateStaticParams() {
   return [
@@ -22,7 +22,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const drawings = await readDrawingsManifest();
+  const drawings = getDrawingsManifest();
   const sections = await fetchSections();
 
   return (

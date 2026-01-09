@@ -1,8 +1,12 @@
 import TableOfContents from "@/app/toc/TableOfContents";
-import { fetchArticles, fetchComponents, fetchSections } from "@/sanity/lib/utils";
+import {
+  fetchArticles,
+  fetchComponents,
+  fetchSections,
+} from "@/sanity/lib/utils";
 import Anatomy from "../Anatomy";
 import styles from "./page.module.scss";
-import { readMaterialsManifest, readModelManifest } from "@/app/manifest-util";
+import { getMaterialsManifest, getModelManifest } from "@/app/manifest-util";
 
 export default async function Page({
   params,
@@ -10,8 +14,8 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const models_manifest = await readModelManifest();
-  const materials_index = await readMaterialsManifest();
+  const models_manifest = getModelManifest();
+  const materials_index = getMaterialsManifest();
 
   const sections = await fetchSections();
 

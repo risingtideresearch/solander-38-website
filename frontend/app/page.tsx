@@ -10,12 +10,12 @@ import {
 } from "@/sanity/lib/utils";
 import Search from "./components/Search/Search";
 import { Image } from "./components/Image";
-import { readDrawingsManifest, readModelManifest } from "./manifest-util";
+import { getDrawingsManifest, getModelManifest } from "./manifest-util";
 import Logo from "./components/Logo";
 
 export default async function Page() {
-  const models = await readModelManifest();
-  const drawings = await readDrawingsManifest();
+  const models = getModelManifest();
+  const drawings = getDrawingsManifest();
 
   const articles = await fetchArticles();
   const photos = await fetchPhotos();

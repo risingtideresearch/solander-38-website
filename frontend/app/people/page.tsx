@@ -1,12 +1,11 @@
 import { fetchPeople } from "@/sanity/lib/utils";
 import styles from "./people.module.scss";
-import { readDrawingsManifest } from "../manifest-util";
+import { getDrawingsManifest } from "../manifest-util";
 import { URLS } from "../components/Navigation/Navigation";
-import { Article } from "@/sanity/sanity.types";
 
 export default async function Page() {
   const people = await fetchPeople();
-  const drawings = await readDrawingsManifest();
+  const drawings = getDrawingsManifest();
 
   const getDrawingCount = (slug) => {
     return drawings.files.filter((file) => file.author?.slug == slug).length;
@@ -83,28 +82,27 @@ export default async function Page() {
                       <div>
                         <h6>Author</h6>
                         <div>
-                          {person.articlesAsAuthor
-                            .map((article) => (
-                              <p key={article._id}>
-                                <a
+                          {person.articlesAsAuthor.map((article) => (
+                            <p key={article._id}>
+                              <a
+                                style={{
+                                  display: "inline",
+                                }}
+                                href={`/stories/${article.slug}`}
+                              >
+                                <span
                                   style={{
-                                    display: "inline",
+                                    fontSize: "0.75rem",
+                                    textTransform: "uppercase",
+                                    marginTop: "0.0625rem",
                                   }}
-                                  href={`/stories/${article.slug}`}
                                 >
-                                  <span
-                                    style={{
-                                      fontSize: "0.75rem",
-                                      textTransform: "uppercase",
-                                      marginTop: "0.0625rem",
-                                    }}
-                                  >
-                                    {article.section?.name}&nbsp;/&nbsp;
-                                  </span>
-                                  {article.title}
-                                </a>
-                              </p>
-                            ))}
+                                  {article.section?.name}&nbsp;/&nbsp;
+                                </span>
+                                {article.title}
+                              </a>
+                            </p>
+                          ))}
                         </div>
                       </div>
                     ) : (
@@ -114,28 +112,27 @@ export default async function Page() {
                       <div>
                         <h6>Part of</h6>
                         <div>
-                          {person.articlesMentioned
-                            .map((article) => (
-                              <p style={{ margin: 0 }} key={article._id}>
-                                <a
+                          {person.articlesMentioned.map((article) => (
+                            <p style={{ margin: 0 }} key={article._id}>
+                              <a
+                                style={{
+                                  display: "inline",
+                                }}
+                                href={`/stories/${article.slug}`}
+                              >
+                                <span
                                   style={{
-                                    display: "inline",
+                                    fontSize: "0.75rem",
+                                    textTransform: "uppercase",
+                                    marginTop: "0.0625rem",
                                   }}
-                                  href={`/stories/${article.slug}`}
                                 >
-                                  <span
-                                    style={{
-                                      fontSize: "0.75rem",
-                                      textTransform: "uppercase",
-                                      marginTop: "0.0625rem",
-                                    }}
-                                  >
-                                    {article.section?.name}&nbsp;/&nbsp;
-                                  </span>
-                                  {article.title}
-                                </a>
-                              </p>
-                            ))}
+                                  {article.section?.name}&nbsp;/&nbsp;
+                                </span>
+                                {article.title}
+                              </a>
+                            </p>
+                          ))}
                         </div>
                       </div>
                     ) : (

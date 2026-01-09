@@ -1,10 +1,10 @@
 import Drawings from "./Drawings";
 import { fetchSections } from "@/sanity/lib/utils";
 import Navigation, { URLS } from "../components/Navigation/Navigation";
-import { readDrawingsManifest } from "../manifest-util";
+import { getDrawingsManifest } from "../manifest-util";
 
 export default async function Page() {
-  const drawings = await readDrawingsManifest();
+  const drawings = getDrawingsManifest();
 
   const sections = await fetchSections();
 
