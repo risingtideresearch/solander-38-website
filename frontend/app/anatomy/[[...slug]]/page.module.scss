@@ -17,4 +17,8 @@
     );
   background-size: 20px 20px;
   min-height: 100svh;
+
+  canvas {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 }

@@ -234,10 +234,18 @@ export default function SearchClient({ drawings, type }) {
                           ? "Photos"
                           : resultType == "person"
                             ? "People"
-                            : resultType + "s"}
+                            : resultType == "article"
+                              ? "Stories"
+                              : resultType + "s"}
                       </h6>
-                      {groupedResults[resultType].map(
-                        (result: any, indexInGroup: number) => {
+                      {groupedResults[resultType]
+                        .sort((a, b) => {
+                          if (a.section && b.section) {
+                            return a.section.name.localeCompare(b.section.name);
+                          }
+                          return 0;
+                        })
+                        .map((result: any, indexInGroup: number) => {
                           const flatIndex = getFlatIndex(
                             resultType,
                             indexInGroup,
@@ -258,6 +266,7 @@ export default function SearchClient({ drawings, type }) {
                                 href={getURL(result)}
                                 tabIndex={-1}
                                 onFocus={() => setSelectedIndex(flatIndex)}
+                                style={ resultType == 'article' || resultType == 'person' ? { gridTemplateColumns: '1fr'} : {}}
                               >
                                 {result.id ? (
                                   <h6>{result.id}</h6>
@@ -271,16 +280,28 @@ export default function SearchClient({ drawings, type }) {
                                     height={64}
                                   />
                                 ) : (
-                                  <span></span>
+                                  <></>
                                 )}
                                 <p style={{ margin: 0 }}>
+                                  {result.section ? (
+                                    <span
+                                      style={{
+                                        textTransform: "uppercase",
+                                        fontSize: "0.75rem",
+                                        marginRight: "0.25rem",
+                                      }}
+                                    >
+                                      {result.section?.name} /
+                                    </span>
+                                  ) : (
+                                    <></>
+                                  )}
                                   {result.title || result.clean_filename}
                                 </p>
                               </a>
                             </div>
                           );
-                        },
-                      )}
+                        })}
                     </div>
                   ))}
                 {loading && (

@@ -67,6 +67,7 @@ export function Canvas3D({
   const [modelsLoaded, setModelsLoaded] = useState<Set<string>>(new Set());
   const [hovered, setHovered] = useState<Model | null>(null);
   const [autoRotate, setAutoRotate] = useState(true);
+  const gizmoPosition = useRef(window?.innerWidth < 800 ? [60, 150] : [110, 90])
 
   const tempBox = useRef(new Box3());
   const tempCenter = useRef(new Vector3());
@@ -330,13 +331,13 @@ export function Canvas3D({
             makeDefault
           />
           {interaction == "all" && (
-            <GizmoHelper alignment="bottom-right" margin={[110, 90]}>
+            <GizmoHelper alignment="bottom-right" margin={gizmoPosition.current}>
               <group scale={[1.2, 1.2, 1.2]}>
                 <GizmoViewcube
                   faces={["Bow", "Stern", "Deck", "Keel", "Starboard", "Port"]}
                   color="rgb(255, 255, 255)"
                   hoverColor="#ffc020"
-                  textColor="#000000"
+                  textColor="#030303"
                   font="18px Helvetica"
                 />
               </group>

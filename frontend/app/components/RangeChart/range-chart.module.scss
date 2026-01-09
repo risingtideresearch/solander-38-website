@@ -30,7 +30,7 @@
   cursor: pointer;
   circle {
     fill: #fff;
-    stroke: #000;
+    stroke: #030303;
   }
 
   &:hover {
@@ -53,7 +53,7 @@
   pointer-events: none;
   z-index: 1000;
   width: 260px;
-  border: 1px solid #000;
+  border: 1px solid #030303;
 
   > div {
     grid-template-columns: 1fr 1fr;

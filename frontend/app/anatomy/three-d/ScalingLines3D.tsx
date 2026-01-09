@@ -29,9 +29,9 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
     boundingBox.getSize(size);
 
     const colors = {
-      x: "#000000",
-      y: "#000000",
-      z: "#000000",
+      x: "#030303",
+      y: "#030303",
+      z: "#030303",
     };
 
     const createTextTexture = (text: string, color: string) => {
@@ -96,7 +96,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           new THREE.Vector3(clipMinPos, min.y - offset, max.z + offset),
           new THREE.Vector3(clipMaxPos, min.y - offset, max.z + offset),
         ],
-        color: "#000000",
+        color: "#030303",
         key: "clip-x-main",
       });
 
@@ -107,7 +107,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           min.y - offset,
           max.z + offset,
         ),
-        color: "#000000",
+        color: "#030303",
         isCircle: true,
         rotation: [0, Math.PI / 2, 0],
         cylinderRotation: [0, 0, Math.PI / 2],
@@ -120,7 +120,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           min.y - offset,
           max.z + offset,
         ),
-        color: "#000000",
+        color: "#030303",
         isCircle: true,
         rotation: [0, Math.PI / 2, 0],
         cylinderRotation: [0, 0, Math.PI / 2],
@@ -133,10 +133,10 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           min.y - offset - 0.2,
           max.z + offset,
         ),
-        color: "#000000",
+        color: "#030303",
         texture: createTextTexture(
           `${(multiplier * clippedLength).toFixed(1)}${u}`,
-          "#000000",
+          "#030303",
         ),
         key: "clip-x-label",
       });
@@ -148,7 +148,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           new THREE.Vector3(max.x - offset, clipMinPos, min.z + offset),
           new THREE.Vector3(max.x - offset, clipMaxPos, min.z + offset),
         ],
-        color: "#000000",
+        color: "#030303",
         key: "clip-y-main",
       });
 
@@ -158,7 +158,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           clipMinPos + 0.00,
           min.z + offset,
         ),
-        color: "#000000",
+        color: "#030303",
         isCircle: true,
         rotation: [Math.PI / 2, 0, 0],
         cylinderRotation: [0, Math.PI / 2, 0],
@@ -171,7 +171,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           clipMaxPos - 0.00,
           min.z + offset,
         ),
-        color: "#000000",
+        color: "#030303",
         isCircle: true,
         rotation: [Math.PI / 2, 0, 0],
         cylinderRotation: [0, Math.PI / 2, 0],
@@ -184,10 +184,10 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           (clipMinPos + clipMaxPos) / 2,
           min.z - 0.32 + offset,
         ),
-        color: "#000000",
+        color: "#030303",
         texture: createTextTexture(
           `${(multiplier * clippedLength).toFixed(1)}${u}`,
-          "#000000",
+          "#030303",
         ),
         key: "clip-y-label",
       });
@@ -199,7 +199,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           new THREE.Vector3(max.x - offset, min.y - offset, clipMinPos),
           new THREE.Vector3(max.x - offset, min.y - offset, clipMaxPos),
         ],
-        color: "#000000",
+        color: "#030303",
         key: "clip-z-main",
       });
 
@@ -209,7 +209,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           min.y - offset,
           clipMinPos + 0.00
         ),
-        color: "#000000",
+        color: "#030303",
         isCircle: true,
         rotation: [0, 0, Math.PI / 2],
         cylinderRotation: [Math.PI / 2, 0, 0],
@@ -222,7 +222,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           min.y - offset,
           clipMaxPos - 0.00,
         ),
-        color: "#000000",
+        color: "#030303",
         isCircle: true,
         rotation: [0, 0, Math.PI / 2],
         cylinderRotation: [Math.PI / 2, 0, 0],
@@ -235,10 +235,10 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
           min.y - offset - 0.2,
           (clipMinPos + clipMaxPos) / 2,
         ),
-        color: "#000000",
+        color: "#030303",
         texture: createTextTexture(
           `${(multiplier * clippedLength).toFixed(1)}${u}`,
-          "#000000",
+          "#030303",
         ),
         key: "clip-z-label",
       });
@@ -413,7 +413,7 @@ const ScalingLines3D: React.FC<ScalingLines3DProps> = ({
                 rotation={label.rotation}
               >
                 <torusGeometry args={[0.08, 0.003]} />
-                <meshBasicMaterial color="#000000" />
+                <meshBasicMaterial color="#030303" />
               </mesh>
               <mesh
                 userData={{ ignore: true }}

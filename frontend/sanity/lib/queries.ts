@@ -471,6 +471,10 @@ export const searchQuery = () => `
     slug,
     authors[]->{
       name
+    },
+    "section": *[_type == "sections"][0].sections[references(^._id)][0] {
+      name,
+      "slug": slug.current
     }
   },
   _type == "sanity.imageAsset" => {

@@ -4,15 +4,15 @@
 
   &__container {
     z-index: 1;
-    top: 5rem;
+    top: 3.1875rem;
     max-width: 13.75rem;
-    left: 0.75rem;
+    left: 1.25rem;
     position: fixed;
     margin-bottom: 1.5rem;
 
     @media screen and (max-width: 800px) {
-      top: 2.5rem;
-      left: 0;
+      top: 2.6875rem;
+      left: 0.625rem;
     }
   }
 

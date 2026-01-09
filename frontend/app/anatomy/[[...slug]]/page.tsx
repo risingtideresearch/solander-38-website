@@ -56,7 +56,7 @@ export default async function Page({
 
   return (
     <>
-      <div className={styles.page}>
+      <div className={styles.page} style={{backgroundPositionY: '2rem'}}>
         <TableOfContents
           sections={sections?.data.sections || []}
           defaultSection={defaultSection?.slug || null}
