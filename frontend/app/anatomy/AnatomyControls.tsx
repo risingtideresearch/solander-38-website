@@ -2,7 +2,6 @@
 
 import { LiaRulerHorizontalSolid } from "react-icons/lia";
 import { ClippingPlaneControls } from "./ClippingPlaneControls";
-import Info from "./Info";
 import { Units } from "./three-d/util";
 import { ClippingValues } from "./three-d/Canvas3D";
 import { ControlSettings } from "./Anatomy";
@@ -86,8 +85,8 @@ export default function AnatomyControls({
           <span
             style={{
               position: "absolute",
-              top: '50%',
-              left: '50%',
+              top: "50%",
+              left: "50%",
               transform: "translate(-50%, -50%) rotate(45deg)",
               borderTop: "1px solid var(--black)",
               width: "85%",
@@ -96,7 +95,7 @@ export default function AnatomyControls({
         )}
       </button>
 
-      <span style={settings.scalingLines ? {} : { visibility: "hidden" }}>
+      {settings.scalingLines ? (
         <ClippingPlaneControls
           clippingValues={clippingValues}
           setClippingValues={(axis, value) =>
@@ -104,7 +103,9 @@ export default function AnatomyControls({
           }
           loaded={loaded}
         />
-      </span>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

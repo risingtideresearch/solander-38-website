@@ -30,7 +30,7 @@ export default function TableOfContents({
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth < 800 && !collapsed) {
+    if (window.innerWidth < 800 && !collapsed && article) {
       setCollapsed(true);
     }
   }, [article, section]);

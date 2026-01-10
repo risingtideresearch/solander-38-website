@@ -13,5 +13,18 @@
   @media screen and (max-width: 800px) {
     top: 2.6825rem;
     right: 0.625rem;
+    flex-direction: row;
+  }
+}
+
+.clipping-control-container {
+  transition: 400ms opacity;
+  position: absolute;
+  right: 100%;
+  margin: 0.375rem 1rem 0 0;
+  @media screen and (max-width: 800px) {
+    top: 2.75rem;
+    margin-right: 0;
+    right: 0;
   }
 }

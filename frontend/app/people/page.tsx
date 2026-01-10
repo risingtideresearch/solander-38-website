@@ -15,7 +15,7 @@ export default async function Page() {
     <div className={styles.people}>
       <h1
         style={{
-          margin: "8rem auto 0 auto",
+          margin: "6rem auto 0 auto",
           maxWidth: "120rem",
           padding: "0 2rem",
         }}

@@ -1,5 +1,5 @@
 .main {
-    min-height: calc(100vh - 6rem);
+    min-height: 100vh;
     @media screen and (max-width: 800px) {
         min-height: auto;
     }
