@@ -8,7 +8,7 @@
   text-decoration: none;
 
   &:hover {
-    --border-color: #030303;
+    --border-color: var(--black);
     text-decoration: none;
   }
 
@@ -57,9 +57,9 @@
 
   > div {
     &:first-child {
-      border-right: 1px solid;
+      border-right: 1px solid var(--black);
       @media screen and (max-width: 800px) {
-        border-top: 1px solid;
+        border-top: 1px solid var(--black);
         border-right: none;
       }
     }

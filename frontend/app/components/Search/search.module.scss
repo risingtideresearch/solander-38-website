@@ -4,12 +4,12 @@
     z-index: 1000;
     top: 0rem;
     right: 0rem;
-    border-left: 1px solid;
+    border-left: 1px solid var(--black);
     height: 2rem;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--black);
 
     &.float {
-      border: 1px solid;
+      border: 1px solid var(--black);
       border-top: none;
       border-right: none;
     }
@@ -35,13 +35,13 @@
       right: 1.9375rem;
 
       // input {
-      //   border-top: 1px solid;
+      //   border-top: 1px solid var(--black);
       // }
     }
 
     input {
       width: 100%;
-      border: 1px solid;
+      border: 1px solid var(--black);
       border-right: none;
       border-top: none;
       height: 2rem;
@@ -54,7 +54,7 @@
       &:active,
       &:focus {
         outline: none;
-        border-color: #030303;
+        border-color: var(--black);
       }
     }
   }
@@ -66,7 +66,7 @@
   &__results,
   &__no_results {
     padding: 0.5rem;
-    border: 1px solid;
+    border: 1px solid var(--black);
     border-top: none;
     max-height: calc(100vh - 3rem);
     overflow: auto;

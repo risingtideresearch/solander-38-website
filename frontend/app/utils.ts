@@ -47,7 +47,7 @@ export const slugToRhinoSystem = (slug: string): string => {
  *  These are fine detail or internal parts (and often large files) that can be hidden for big picture views
  *  Used on landing page and Overview stories (when clipping planes are not present)
  *
- *  @param minimal - true for most reduced set
+ *  @param minimal - true for most reduced set; used on homepage
  */
 export const getReducedModelSet = (
   layers: Array<Model>,
@@ -59,11 +59,14 @@ export const getReducedModelSet = (
     "OUTFITTING_INTERIOR__Isotherm",
     "OUTFITTING_INTERIOR__SIMPLIFIED CTR DECK TRACKS",
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__railing flanges",
-    "SUPERSTRUCTURE__instr panel & wireway__instrument panel 1_2_ StarBoard",
+    "SUPERSTRUCTURE__instr panel & wireway__instrument panel",
     "SUPERSTRUCTURE__WINDOWS__rough window hardware & trim",
     "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs",
     "CONTROL__ELECTRONIC CONTROL",
     "BODY__CTR BEAM__ctr beam inside surfaces",
+    "WATER_HEATING SYSTEMS__KEEL COOLERS__keel cooler surfaces",
+    "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__HDPE guide & coaming",
+    // "PROPULSION__SIMPLIFIED PROPELLER",
   ];
 
   const hiddenModels = [

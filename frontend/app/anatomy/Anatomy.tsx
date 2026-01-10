@@ -190,7 +190,7 @@ export default function Anatomy({ content }: IAnatomy) {
         placeholder="search"
         value={search}
         style={{
-          border: "1px solid",
+          border: "1px solid var(--black)",
           position: "fixed",
           top: "3.25rem",
           left: "0.5rem",

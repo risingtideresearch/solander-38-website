@@ -344,7 +344,7 @@ export function Canvas3D({
                   color="rgb(255, 255, 255)"
                   hoverColor="#ffc020"
                   textColor="#030303"
-                  font="18px Helvetica"
+                  font="18px Arial"
                 />
               </group>
             </GizmoHelper>

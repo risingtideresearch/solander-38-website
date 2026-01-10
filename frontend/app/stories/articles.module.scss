@@ -37,7 +37,7 @@
 
   section {
     > div:nth-child(2) {
-      border-left: 1px solid;
+      border-left: 1px solid var(--black);
       margin-bottom: -1px;
       margin-left: -1px;
       padding: 2rem;
@@ -47,7 +47,7 @@
       }
     }
     &:first-child {
-      border-top: 1px solid;
+      border-top: 1px solid var(--black);
     }
     @media screen and (max-width: 800px) {
       padding: 0.75rem;
@@ -86,7 +86,7 @@
     text-decoration: none;
 
     div {
-      border-color: #030303;
+      border-color: var(--black);
     }
   }
 

@@ -93,7 +93,7 @@ export default function AnnotationsList({
                 >
                   <button
                     style={{
-                      border: "1px solid",
+                      border: "1px solid var(--black)",
                       borderRadius: "100%",
                       aspectRatio: "1/1",
                       padding: 0,
@@ -129,7 +129,7 @@ export default function AnnotationsList({
                           <BiLink size={18} />
                         </a>
                       </div>
-                      <div style={{ border: "1px solid" }}>
+                      <div style={{ border: "1px solid var(--black)" }}>
                         <p
                           style={{
                             margin: 0,
@@ -144,7 +144,7 @@ export default function AnnotationsList({
                         style={{
                           maxWidth: "100%",
                           height: "auto",
-                          border: "1px solid",
+                          border: "1px solid var(--black)",
                           marginTop: "-1px",
                         }}
                         loading={"lazy"}
@@ -166,7 +166,7 @@ export default function AnnotationsList({
           position: "fixed",
           right: "0.5rem",
           top: "5.5rem",
-          border: "1px solid",
+          border: "1px solid var(--black)",
         }}
       >
         <BsSticky size={18} />
@@ -178,7 +178,7 @@ export default function AnnotationsList({
               left: "75%",
               transform: "translate(-50%, -50%)",
               background: activeAnnotation ? "var(--accent)" : "white",
-              border: "1px solid",
+              border: "1px solid var(--black)",
               borderRadius: "100%",
               aspectRatio: "1 / 1",
               width: "0.75rem",

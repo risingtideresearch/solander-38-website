@@ -1,11 +1,11 @@
 .sub-nav {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--black);
   margin-top: 1.9375rem;
-  border-top: 1px solid;
+  border-top: 1px solid var(--black);
   &__container {
     display: flex;
     gap: 2.5rem;
-    border-left: 1px solid;
+    border-left: 1px solid var(--black);
     margin-left: auto;
     padding: 0.5rem 2rem 0.5rem 0.5rem;
     width: max-content;

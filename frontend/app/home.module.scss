@@ -2,13 +2,13 @@
   img {
     @media screen and (max-width: 800px) {
       display: block;
-      border-top: 1px solid #030303;
+      border-top: 1px solid var(--black);
     }
   }
 }
 
 .leftColumn {
-  border-right: 1px solid;
+  border-right: 1px solid var(--black);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -38,7 +38,7 @@
 }
 
 .bordered {
-  border-top: 1px solid;
+  border-top: 1px solid var(--black);
 }
 
 .header {
@@ -70,7 +70,7 @@
   padding: 0.75rem 1rem;
 
   @media screen and (max-width: 800px) {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--black);
     padding: 2rem;
   }
 

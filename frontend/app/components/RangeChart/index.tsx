@@ -33,7 +33,7 @@ export default function RangeChart() {
       key: "no-solar",
       label: "Battery",
       dashArray: "7 3",
-      color: "#030303",
+      color: "var(--black)",
       values: [
         { speed: 5, range: 250, kw: 2 },
         { speed: 6, range: 133, kw: 4.5 },
@@ -48,7 +48,7 @@ export default function RangeChart() {
       key: "solar-pnw-winter",
       label: "Winter",
       dashArray: "3 3",
-      color: "#030303",
+      color: "var(--black)",
       values: [
         { speed: 5, range: 88, kw: 2 },
         { speed: 6, range: 47, kw: 4.5 },
@@ -63,7 +63,7 @@ export default function RangeChart() {
       key: "solar-pnw-summer",
       label: "Summer",
       dashArray: "",
-      color: "#030303",
+      color: "var(--black)",
       values: [
         { speed: 5, range: 588, kw: 2 },
         { speed: 6, range: 313, kw: 4.5 },
@@ -166,7 +166,7 @@ export default function RangeChart() {
                 x={xScale(tick)}
                 y={dim[1] - margin.bottom + 24}
                 textAnchor={tick === 5 ? "start" : "middle"}
-                fill="#030303"
+                fill="var(--black)"
                 style={{ textTransform: "uppercase" }}
               >
                 {tick}
@@ -195,7 +195,7 @@ export default function RangeChart() {
             textAnchor="middle"
             fontWeight="400"
             style={{ textTransform: "uppercase" }}
-            fill="#030303"
+            fill="var(--black)"
           >
             Speed
           </text>
@@ -229,7 +229,7 @@ export default function RangeChart() {
             y1={margin.top}
             x2={margin.left}
             y2={dim[1] - margin.bottom}
-            stroke="#030303"
+            stroke="var(--black)"
             strokeWidth="1"
           />
 
@@ -238,7 +238,7 @@ export default function RangeChart() {
             y1={dim[1] - margin.bottom}
             x2={dim[0] - margin.right}
             y2={dim[1] - margin.bottom}
-            stroke="#030303"
+            stroke="var(--black)"
             strokeWidth="1"
           />
 
@@ -255,21 +255,21 @@ export default function RangeChart() {
 
           <path
             d={dataToPath(allData.battery.values)}
-            stroke="#030303"
+            stroke="var(--black)"
             fill="none"
             strokeDasharray={allData.battery.dashArray}
             strokeWidth="1"
           />
           <path
             d={dataToPath(allData["solar-winter"].values)}
-            stroke="#030303"
+            stroke="var(--black)"
             fill="none"
             strokeDasharray={allData["solar-winter"].dashArray}
             strokeWidth="1"
           />
           <path
             d={dataToPath(allData["solar-summer"].values)}
-            stroke="#030303"
+            stroke="var(--black)"
             fill="none"
             strokeDasharray={allData["solar-summer"].dashArray}
             strokeWidth="1"
@@ -305,7 +305,7 @@ export default function RangeChart() {
                 y1={0}
                 x2={30}
                 y2={0}
-                stroke="#030303"
+                stroke="var(--black)"
                 strokeDasharray={allData["solar-summer"].dashArray}
                 strokeWidth="1"
               />
@@ -313,7 +313,7 @@ export default function RangeChart() {
                 x={35}
                 y={0}
                 dominantBaseline="middle"
-                fill="#030303"
+                fill="var(--black)"
               >
                 {allData["solar-summer"].label} ({allData["solar-summer"].kWh}{" "}
                 kWh)
@@ -326,7 +326,7 @@ export default function RangeChart() {
                 y1={0}
                 x2={30}
                 y2={0}
-                stroke="#030303"
+                stroke="var(--black)"
                 strokeDasharray={allData.battery.dashArray}
                 strokeWidth="1"
               />
@@ -334,7 +334,7 @@ export default function RangeChart() {
                 x={35}
                 y={0}
                 dominantBaseline="middle"
-                fill="#030303"
+                fill="var(--black)"
               >
                 <tspan>{allData.battery.label}</tspan> ({allData["battery"].kWh}{" "}
                 kWh)
@@ -347,7 +347,7 @@ export default function RangeChart() {
                 y1={0}
                 x2={30}
                 y2={0}
-                stroke="#030303"
+                stroke="var(--black)"
                 strokeDasharray={allData["solar-winter"].dashArray}
                 strokeWidth="1"
               />
@@ -355,7 +355,7 @@ export default function RangeChart() {
                 x={35}
                 y={0}
                 dominantBaseline="middle"
-                fill="#030303"
+                fill="var(--black)"
               >
                 {allData["solar-winter"].label} ({allData["solar-winter"].kWh}{" "}
                 kWh)

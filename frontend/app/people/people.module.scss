@@ -9,17 +9,17 @@
   }
 
   section {
-    border-top: 1px solid;
+    border-top: 1px solid var(--black);
 
     >div:nth-child(2) {
-      border-left: 1px solid;
+      border-left: 1px solid var(--black);
     }
   }
 }
 
 .person {
   padding: 2.5rem 2rem;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--black);
 
   > div {
     margin: 1.5rem 0 0 0;

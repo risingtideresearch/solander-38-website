@@ -89,7 +89,7 @@ export default function AnatomyControls({
               top: '50%',
               left: '50%',
               transform: "translate(-50%, -50%) rotate(45deg)",
-              borderTop: "1px solid",
+              borderTop: "1px solid var(--black)",
               width: "85%",
             }}
           ></span>

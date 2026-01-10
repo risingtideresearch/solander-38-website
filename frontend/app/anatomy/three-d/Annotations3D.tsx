@@ -11,7 +11,7 @@ const Annotations3D: React.FC<unknown> = ({
   const linesAndLabels = useMemo(() => {
 
     const colors = {
-      y: "#030303",
+      y: "var(--black)",
     };
 
     const createTextTexture = (text: string, color: string) => {

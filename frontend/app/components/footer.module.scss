@@ -1,5 +1,5 @@
 .footer {
-  border-top: 1px solid;
+  border-top: 1px solid var(--black);
 
   a {
     display: flex;
@@ -39,7 +39,7 @@
     padding: 3rem;
     padding-bottom: 10rem;
     &:first-child {
-      border-right: 1px solid;
+      border-right: 1px solid var(--black);
       @media screen and (max-width: 800px) {
         border-right: none;
         padding-bottom: 10rem;

@@ -67,7 +67,7 @@ export function ClippingPlaneControls({
               <>
                 <span>Stern</span>
                 <span
-                  style={{ borderTop: "1px solid", flex: "1 1 auto" }}
+                  style={{ borderTop: "1px solid var(--black)", flex: "1 1 auto" }}
                 ></span>
                 <span>Bow</span>
               </>
@@ -75,7 +75,7 @@ export function ClippingPlaneControls({
               <>
                 <span>Keel</span>
                 <span
-                  style={{ borderTop: "1px solid", flex: "1 1 auto" }}
+                  style={{ borderTop: "1px solid var(--black)", flex: "1 1 auto" }}
                 ></span>
                 <span>Deck</span>
               </>
@@ -83,7 +83,7 @@ export function ClippingPlaneControls({
               <>
                 <span>Port</span>
                 <span
-                  style={{ borderTop: "1px solid", flex: "1 1 auto" }}
+                  style={{ borderTop: "1px solid var(--black)", flex: "1 1 auto" }}
                 ></span>
                 <span>Starboard</span>
               </>
@@ -91,7 +91,7 @@ export function ClippingPlaneControls({
           </h6>
         </span>
         <button
-          style={{ border: "1px solid" }}
+          style={{ border: "1px solid var(--black)" }}
           onClick={() =>
             setClippingValues(
               clippingValues.axis == "x"
