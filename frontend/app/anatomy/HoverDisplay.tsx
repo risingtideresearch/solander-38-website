@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext, useMemo } from "react";
 import {
-  INCHES_TO_METERS,
   MaterialIndex,
   Model,
   systemWeightData,
@@ -71,7 +70,7 @@ export default function HoverDisplay({
     const tooltipHeight = tooltipSize.height || 200;
 
     let x = Math.round(mouse.x + offset);
-    let y = 80;
+    let y = window?.innerWidth < 800 ? 130 : 80;
 
     if (x + tooltipWidth + padding > viewportWidth) {
       x = mouse.x - tooltipWidth - offset;

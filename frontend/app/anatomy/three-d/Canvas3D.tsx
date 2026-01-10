@@ -67,7 +67,7 @@ export function Canvas3D({
   const [modelsLoaded, setModelsLoaded] = useState<Set<string>>(new Set());
   const [hovered, setHovered] = useState<Model | null>(null);
   const [autoRotate, setAutoRotate] = useState(true);
-  const [gizmoPosition, setGizmoPosition] = useState<[number, number]>([110, 90])
+  const [isMobile, setIsMobile] = useState(false);
 
   const tempBox = useRef(new Box3());
   const tempCenter = useRef(new Vector3());
@@ -81,9 +81,9 @@ export function Canvas3D({
 
   useEffect(() => {
     if (window?.innerWidth < 800) {
-      setGizmoPosition([60, 150]);
-    } 
-  }, [])
+      setIsMobile(true);
+    }
+  }, []);
 
   const handleModelLoad = useCallback((url: string) => {
     setModelsLoaded((prev) => {
@@ -337,8 +337,11 @@ export function Canvas3D({
             makeDefault
           />
           {interaction == "all" && (
-            <GizmoHelper alignment="bottom-right" margin={gizmoPosition}>
-              <group scale={[1.2, 1.2, 1.2]}>
+            <GizmoHelper
+              alignment="bottom-right"
+              margin={isMobile ? [60, 150] : [110, 90]}
+            >
+              <group scale={isMobile ? [1, 1, 1] : [1.2, 1.2, 1.2]}>
                 <GizmoViewcube
                   faces={["Bow", "Stern", "Deck", "Keel", "Starboard", "Port"]}
                   color="rgb(255, 255, 255)"

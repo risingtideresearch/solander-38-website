@@ -13,6 +13,7 @@
     @media screen and (max-width: 800px) {
       top: 2.6875rem;
       left: 0.625rem;
+      max-width: calc(100vw - 11.25rem);
     }
   }
 
@@ -106,7 +107,7 @@
   position: sticky;
   margin-top: -2rem;
   top: 4rem;
-  border-left: 1px solid rgba(0,0,0,0);
+  border-left: 1px solid rgba(0, 0, 0, 0);
   @media screen and (max-width: 800px) {
     position: relative;
     top: 0;
