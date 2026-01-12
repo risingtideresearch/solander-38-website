@@ -27,14 +27,6 @@
     padding-right: 0.5rem;
   }
 
-  p {
-    svg {
-      display: inline-flex;
-      margin-right: 0.75rem;
-      margin-bottom: -0.125rem;
-    }
-  }
-
   section {
     > div:nth-child(2) {
       border-left: 1px solid var(--black);
@@ -42,7 +34,7 @@
       margin-left: -1px;
       padding: 2rem;
       @media screen and (max-width: 800px) {
-        padding: 1rem;
+        padding: 0 0.5rem;
         border: none;
       }
     }
@@ -57,13 +49,13 @@
 
 .section-title {
   display: grid;
-  grid-template-columns: 3.5rem 1fr;
+  grid-template-columns: 4rem 1fr;
   gap: 0.5rem;
 }
 
 .article-header {
   display: grid;
-  grid-template-columns: 2rem 1fr;
+  grid-template-columns: 2.5rem 1fr;
   gap: 0.5rem;
   align-items: center;
   margin: 0.25rem 0;
@@ -107,7 +99,7 @@
 }
 
 .article-subtitle {
-  margin-left: 2.5rem;
+  margin-left: 3rem;
 
   p {
     margin: 0;

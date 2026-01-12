@@ -1,5 +1,4 @@
 .people {
-
   p {
     font-size: 0.875rem;
     margin: 0;
@@ -11,20 +10,30 @@
   section {
     border-top: 1px solid var(--black);
 
-    >div:nth-child(2) {
+    > div:first-child {
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+
+    > div:nth-child(2) {
       border-left: 1px solid var(--black);
     }
   }
 }
 
 .person {
-  padding: 2.5rem 2rem;
+  padding: 2rem;
   border-bottom: 1px solid var(--black);
+
+  @media screen and (max-width: 800px) {
+    padding: 1.5rem 1rem;
+  }
 
   > div {
     margin: 1.5rem 0 0 0;
     display: grid;
-    grid-template-columns: 5rem 1fr;
+    grid-template-columns: 4.5rem 1fr;
     align-items: flex-start;
 
     h6 {
