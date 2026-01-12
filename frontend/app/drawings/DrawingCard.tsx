@@ -13,9 +13,7 @@ export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
   return (
     <a
       href={`/drawings/file/${drawing.uuid}`}
-      className={
-        styles["drawing-card"] 
-      }
+      className={styles["drawing-card"]}
     >
       {!hideMetadata && (
         <h6>
@@ -29,13 +27,22 @@ export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
           <span>{drawing.group}</span>
         </h6>
       )}
-      <p style={{margin: 0}}>{drawing.clean_filename}</p>
-      <img
-        src={drawing.rel_path}
-        height={drawing.height}
-        width={drawing.width}
-        style={{ maxWidth: "100%", height: "auto" }}
-      />
+      <p style={{ margin: 0 }}>{drawing.clean_filename}</p>
+      <div
+        style={{
+          aspectRatio: !hideMetadata ? 1.15 : "auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img
+          src={drawing.rel_path}
+          height={drawing.height}
+          width={drawing.width}
+          style={{ maxWidth: "100%", maxHeight: "100%", width: "auto" }}
+        />
+      </div>
     </a>
   );
 }
