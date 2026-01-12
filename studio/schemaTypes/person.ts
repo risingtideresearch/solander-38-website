@@ -14,6 +14,11 @@ export const person = defineType({
     defineField({
       name: 'role',
       type: 'string',
+      description: 'For Solander 38 build',
+    }),
+    defineField({
+      name: 'image',
+      type: 'image',
     }),
     defineField({
       name: 'slug',
@@ -29,6 +34,7 @@ export const person = defineType({
       name: 'affiliations',
       type: 'array',
       title: 'Affiliations and links',
+      description: 'Groups, associations, companies, websites',
       options: {
         layout: 'list',
         modal: {
@@ -57,9 +63,9 @@ export const person = defineType({
           preview: {
             select: {
               label: 'label',
-              url: 'url'
+              url: 'url',
             },
-            prepare({ label, url}) {
+            prepare({label, url}) {
               return {
                 title: label || url,
                 media: url ? LinkIcon : ListIcon,

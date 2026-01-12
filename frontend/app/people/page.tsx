@@ -37,42 +37,38 @@ export default async function Page() {
                     id={person.slug?.current}
                     className={styles.person}
                   >
-                    <p
-                      style={{
-                        fontWeight: 600,
-                      }}
-                    >
-                      {person.name}
-                    </p>
+                    <div style={{marginTop: 0}}>
+                      <div></div>
+                      <div>
+                        <p
+                          style={{
+                            fontWeight: 600,
+                          }}
+                        >
+                          {person.name}
+                        </p>
+                        {(person.affiliations || []).map((item) => {
+                          if (item.url) {
+                            return (
+                              <p key={item.url}>
+                                <a href={item.url} target="_blank">
+                                  {item.label ||
+                                    item.url
+                                      .replace("https://", "")
+                                      .replace(".com/", ".com")}
+                                </a>
+                              </p>
+                            );
+                          }
+                          return <p key={item.label}>{item.label}</p>;
+                        })}
+                      </div>
+                    </div>
                     {person.role ? (
                       <div>
                         <h6>Role</h6>
                         <div>
                           <p>{person.role}</p>
-                        </div>
-                      </div>
-                    ) : (
-                      <></>
-                    )}
-                    {person.affiliations ? (
-                      <div>
-                        <h6>Also</h6>
-                        <div>
-                          {person.affiliations.map((item) => {
-                            if (item.url) {
-                              return (
-                                <p key={item.url}>
-                                  <a href={item.url} target="_blank">
-                                    {item.label ||
-                                      item.url
-                                        .replace("https://", "")
-                                        .replace(".com/", ".com")}
-                                  </a>
-                                </p>
-                              );
-                            }
-                            return <p key={item.label}>{item.label}</p>;
-                          })}
                         </div>
                       </div>
                     ) : (
@@ -110,7 +106,7 @@ export default async function Page() {
                     )}
                     {person.articlesMentioned.length > 0 ? (
                       <div>
-                        <h6>Part of</h6>
+                        <h6>Stories</h6>
                         <div>
                           {person.articlesMentioned.map((article) => (
                             <p style={{ margin: 0 }} key={article._id}>
