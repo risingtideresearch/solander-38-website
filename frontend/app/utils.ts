@@ -54,7 +54,6 @@ export const getReducedModelSet = (
   minimal: boolean,
 ): Array<Model> => {
   const minimalOnlyModels = [
-    "OUTFITTING_INTERIOR__cleats",
     "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER",
     "OUTFITTING_INTERIOR__Isotherm",
     "OUTFITTING_INTERIOR__SIMPLIFIED CTR DECK TRACKS",
@@ -66,7 +65,6 @@ export const getReducedModelSet = (
     "BODY__CTR BEAM__ctr beam inside surfaces",
     "WATER_HEATING SYSTEMS__KEEL COOLERS__keel cooler surfaces",
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__HDPE guide & coaming",
-    // "PROPULSION__SIMPLIFIED PROPELLER",
   ];
 
   const hiddenModels = [

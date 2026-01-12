@@ -643,7 +643,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::instr panel & wireway::instrument panel  1\" X 1\" X 1/8\" alum angle (8982K4)",
       "filename": "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1_ X 1_8_ alum angle (8982K4).glb",
-      "file_size": 182632,
+      "file_size": 182636,
       "object_count": 10,
       "bounding_box": {
         "min": {
@@ -683,7 +683,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::instr panel & wireway::instrument panel  1\" X 1 1/2\" X 1/8\" alum angle (8982K87)",
       "filename": "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1 1_2_ X 1_8_ alum angle (8982K87).glb",
-      "file_size": 36708,
+      "file_size": 36712,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1203,7 +1203,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FRAMING::1.5\" SQ TUBE",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb",
-      "file_size": 250892,
+      "file_size": 250896,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -1243,7 +1243,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FRAMING::1\" X 2\" TUBE",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb",
-      "file_size": 264136,
+      "file_size": 264140,
       "object_count": 26,
       "bounding_box": {
         "min": {
@@ -1283,7 +1283,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FRAMING::4\" SQ TUBE",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb",
-      "file_size": 92196,
+      "file_size": 92200,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -1323,7 +1323,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FRAMING::nonstandard framing",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb",
-      "file_size": 42412,
+      "file_size": 42416,
       "object_count": 3,
       "bounding_box": {
         "min": {
@@ -1443,7 +1443,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::RAILINGS & POSTS::SCH40 1\" nominal pipe",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb",
-      "file_size": 2491792,
+      "file_size": 2491796,
       "object_count": 24,
       "bounding_box": {
         "min": {
@@ -1483,7 +1483,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::RAILINGS & POSTS::SCH40 2\" nominal pipe",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal pipe.glb",
-      "file_size": 68752,
+      "file_size": 68756,
       "object_count": 3,
       "bounding_box": {
         "min": {
@@ -2403,38 +2403,38 @@
     {
       "layer_name": "PROPULSION::SIMPLIFIED PROPELLER",
       "filename": "PROPULSION__SIMPLIFIED PROPELLER.glb",
-      "file_size": 2274896,
+      "file_size": 131880,
       "object_count": 8,
       "bounding_box": {
         "min": {
-          "x": -407.8210772234526,
-          "y": -95.85398820516946,
-          "z": -2.8170416629394612
+          "x": -407.81830513477325,
+          "y": -95.84997248649597,
+          "z": -2.8119152784347534
         },
         "max": {
           "x": -403.6710258718349,
-          "y": 95.85398820516946,
-          "z": 11.673791397595595
+          "y": 95.84993124008179,
+          "z": 11.673330307006836
         },
         "center": {
-          "x": -405.7460515476438,
-          "y": 0.0,
-          "z": 4.428374867328067
+          "x": -405.7446655033041,
+          "y": -2.0623207092285156e-05,
+          "z": 4.430707514286041
         },
         "dimensions": {
-          "width": 4.150051351617719,
-          "depth": 191.70797641033892,
-          "height": 14.490833060535056
+          "width": 4.147279262938355,
+          "depth": 191.69990372657776,
+          "height": 14.48524558544159
         }
       },
       "normalized_size": {
-        "length": 191.70797641033892,
-        "width": 14.490833060535056,
-        "height": 4.150051351617719,
+        "length": 191.69990372657776,
+        "width": 14.48524558544159,
+        "height": 4.147279262938355,
         "world_aligned": {
-          "x": 4.150051351617719,
-          "y": 191.70797641033892,
-          "z": 14.490833060535056
+          "x": 4.147279262938355,
+          "y": 191.69990372657776,
+          "z": 14.48524558544159
         }
       },
       "export_method": "standard",
@@ -3523,7 +3523,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::DECK ACCESS STAIRLADDER::stairladder 1/4\" 6061 tread plate",
       "filename": "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb",
-      "file_size": 170860,
+      "file_size": 170864,
       "object_count": 3,
       "bounding_box": {
         "min": {
@@ -3843,7 +3843,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::COMPANIONWAY HATCH::6061 sq tube",
       "filename": "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__6061 sq tube.glb",
-      "file_size": 46396,
+      "file_size": 46400,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -4643,78 +4643,38 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::cleats",
       "filename": "OUTFITTING_INTERIOR__cleats.glb",
-      "file_size": 986328,
+      "file_size": 330664,
       "object_count": 6,
       "bounding_box": {
         "min": {
-          "x": -377.7453918457031,
-          "y": -118.67530002026761,
-          "z": 66.49075386991782
+          "x": -377.7449903488159,
+          "y": -118.66528463363647,
+          "z": 66.49151003360748
         },
         "max": {
           "x": -40.903215633711675,
-          "y": 118.67530002026761,
+          "y": 118.66528463363647,
           "z": 83.9646178214846
         },
         "center": {
-          "x": -209.3243037397074,
+          "x": -209.3241029912638,
           "y": 0.0,
-          "z": 75.22768584570122
+          "z": 75.22806392754603
         },
         "dimensions": {
-          "width": 336.84217621199144,
-          "depth": 237.35060004053523,
-          "height": 17.47386395156677
+          "width": 336.84177471510424,
+          "depth": 237.33056926727295,
+          "height": 17.47310778787711
         }
       },
       "normalized_size": {
-        "length": 336.84217621199144,
-        "width": 237.35060004053523,
-        "height": 17.47386395156677,
+        "length": 336.84177471510424,
+        "width": 237.33056926727295,
+        "height": 17.47310778787711,
         "world_aligned": {
-          "x": 336.84217621199144,
-          "y": 237.35060004053523,
-          "z": 17.47386395156677
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::AFT STBD MAST PEDESTALS & STRUCT",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__AFT STBD MAST PEDESTALS & STRUCT.glb",
-      "file_size": 348188,
-      "object_count": 8,
-      "bounding_box": {
-        "min": {
-          "x": -397.57625917222964,
-          "y": -94.48538970947266,
-          "z": 157.1999969482422
-        },
-        "max": {
-          "x": -380.1264953613281,
-          "y": -41.48538589477539,
-          "z": 186.37059020996094
-        },
-        "center": {
-          "x": -388.85137726677885,
-          "y": -67.98538780212402,
-          "z": 171.78529357910156
-        },
-        "dimensions": {
-          "width": 17.449763810901516,
-          "depth": 53.000003814697266,
-          "height": 29.17059326171875
-        }
-      },
-      "normalized_size": {
-        "length": 53.000003814697266,
-        "width": 29.17059326171875,
-        "height": 17.449763810901516,
-        "world_aligned": {
-          "x": 17.449763810901516,
-          "y": 53.000003814697266,
-          "z": 29.17059326171875
+          "x": 336.84177471510424,
+          "y": 237.33056926727295,
+          "z": 17.47310778787711
         }
       },
       "export_method": "standard",
@@ -5265,18 +5225,18 @@
     }
   ],
   "export_info": {
-    "total_layers_found": 346,
-    "timestamp_start": "2026-01-05 15:10:49",
+    "total_layers_found": 347,
+    "timestamp_start": "2026-01-12 14:28:34",
     "format": "GLB",
-    "timestamp_end": "2026-01-05 15:17:33",
+    "timestamp_end": "2026-01-12 14:38:06",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
     },
-    "successful_exports": 131,
+    "successful_exports": 130,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 45075268,
+    "total_file_size": 41928440,
     "units": {
       "id": 8,
       "name": "inch"

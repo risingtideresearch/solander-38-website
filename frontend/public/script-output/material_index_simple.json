@@ -2,9 +2,9 @@
   "unique_materials": [
     "Acrylic",
     "Alum 5052",
-    "Alum 6061",
     "Alum AlMgSi1",
     "Aluminum",
+    "Aluminum 6061",
     "Bronze",
     "Carbon Fiber",
     "Composite Sandwich",
@@ -43,7 +43,7 @@
       "Naval Brass"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__companionway hatch other hardware.glb": [
       "Aluminum"
@@ -55,10 +55,10 @@
       "Wood"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 1_ nominal pipe.glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1_ X 1_8_ alum angle (8982K4).glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "OUTFITTING_INTERIOR__SIMPLIFIED CTR DECK TRACKS.glb": [
       "Aluminum"
@@ -67,13 +67,13 @@
       "Wood"
     ],
     "OUTFITTING_INTERIOR__COMPANIONWAY HATCH__6061 sq tube.glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS.glb": [
       "Wood"
     ],
     "SUPERSTRUCTURE__instr panel & wireway__instrument panel  1_ X 1 1_2_ X 1_8_ alum angle (8982K87).glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "SUPERSTRUCTURE__WIREWAYS__ww parts surfs__int-ext penetrations.glb": [
       "Aluminum"
@@ -97,7 +97,7 @@
       "Composite Sandwich (INTERNALS)"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__SCH40 2_ nominal pipe.glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__G10 backing plates.glb": [
       "Fiberglass"
@@ -121,7 +121,7 @@
       "Wood"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__4_ SQ TUBE.glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "DECK JIG__DECK SKINS.glb": [
       "Plywood"
@@ -130,6 +130,7 @@
       "Aluminum"
     ],
     "PROPULSION__SIMPLIFIED PROPELLER.glb": [
+      "Bronze",
       "Bronze"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK 1_4_ FHMS.glb": [
@@ -178,7 +179,7 @@
       "Alum AlMgSi1"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "CONTROL__rudder assembly__Rudder tube__Molded tube ends for turc bushings.glb": [
       "Fiberglass"
@@ -216,9 +217,6 @@
     "PROPULSION__SIMPLIFIED STRUT.glb": [
       "Bronze"
     ],
-    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__AFT STBD MAST PEDESTALS & STRUCT.glb": [
-      "Aluminum"
-    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": [
       "Alum 5052"
     ],
@@ -232,6 +230,7 @@
       "Wood"
     ],
     "OUTFITTING_INTERIOR__cleats.glb": [
+      "Stainless Steel",
       "Stainless Steel"
     ],
     "DECK JIG__TRANSV FRAMES.glb": [
@@ -265,10 +264,10 @@
       "Composite Sandwich"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1_ X 2_ TUBE.glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 6061 tread plate.glb": [
-      "Alum 6061"
+      "Aluminum 6061"
     ],
     "BODY__HULLS & DECKS__PORTLIGHTS__portlight surfs.glb": [
       "Acrylic"
