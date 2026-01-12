@@ -1,51 +1,20 @@
 {
   "conversion_info": {
-    "timestamp": "2026-01-08T11:54:10.145799",
+    "timestamp": "2026-01-12T14:32:33.081298",
     "input_directory": "../frontend/public/drawings",
     "output_directory": "../frontend/public/drawings/output_images",
     "dpi": 200,
     "preserve_structure": true,
-    "total_pdfs_processed": 189,
-    "successful_conversions": 189,
+    "total_pdfs_processed": 195,
+    "successful_conversions": 195,
     "failed_conversions": 0,
-    "total_images_created": 194
+    "total_images_created": 200
   },
   "files": [
     {
-      "filename": "Solander 38 propulsion & shaftline components overview 9-25-24.png",
-      "clean_filename": "propulsion & shaftline components overview",
-      "id": "DR-0.0",
-      "uuid": "93534b4d4fa1",
-      "rel_path": "/drawings/output_images/PROPULSION/Solander 38 propulsion & shaftline components overview 9-25-24.png",
-      "group": "PROPULSION",
-      "source_pdf": "Solander 38 propulsion & shaftline components overview 9-25-24.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/PROPULSION/Solander 38 propulsion & shaftline components overview 9-25-24.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 520156,
-      "date_info": {
-        "raw_date_string": "9-25-24",
-        "date": "2024-09-25",
-        "date_iso": "2024-09-25T00:00:00",
-        "year": 2024,
-        "month": 9,
-        "day": 25,
-        "formatted": "September 25, 2024",
-        "source": "filename"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": ""
-    },
-    {
       "filename": "Solander 38 motor mount details 9-25-24.png",
       "clean_filename": "motor mount details",
-      "id": "DR-1.0",
+      "id": "DR-0.0",
       "uuid": "8120e29be7f5",
       "rel_path": "/drawings/output_images/PROPULSION/Solander 38 motor mount details 9-25-24.png",
       "group": "PROPULSION",
@@ -76,7 +45,7 @@
     {
       "filename": "Shaftline alignment dims HJN 4-6-25.png",
       "clean_filename": "Shaftline alignment dims",
-      "id": "DR-2.0",
+      "id": "DR-1.0",
       "uuid": "9775f5600226",
       "rel_path": "/drawings/output_images/PROPULSION/SHAFTLINE FOR BUILDERS APR 2025/Shaftline alignment dims HJN 4-6-25.png",
       "group": "PROPULSION",
@@ -107,7 +76,7 @@
     {
       "filename": "Shaftline components overview HJN 4-6-25.png",
       "clean_filename": "Shaftline components overview",
-      "id": "DR-3.0",
+      "id": "DR-2.0",
       "uuid": "faeb18321e0b",
       "rel_path": "/drawings/output_images/PROPULSION/SHAFTLINE FOR BUILDERS APR 2025/Shaftline components overview HJN 4-6-25.png",
       "group": "PROPULSION",
@@ -138,7 +107,7 @@
     {
       "filename": "Keel cooler locations 5-15-25.png",
       "clean_filename": "Keel cooler locations",
-      "id": "DR-4.0",
+      "id": "DR-3.0",
       "uuid": "17ce89422629",
       "rel_path": "/drawings/output_images/WATER & HEATING SYSTEMS/KEEL COOLER/Keel cooler locations 5-15-25.png",
       "group": "WATER & HEATING SYSTEMS",
@@ -169,7 +138,7 @@
     {
       "filename": "Baseplate & HD foam core locations planview 1-6-25.png",
       "clean_filename": "Baseplate & HD foam core locations planview",
-      "id": "DR-5.0",
+      "id": "DR-4.0",
       "uuid": "5b15863d23f5",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/Baseplate & HD foam core locations planview 1-6-25.png",
       "group": "SUPERSTRUCTURE",
@@ -200,7 +169,7 @@
     {
       "filename": "Canopy panel CNC parts overview 2-20-25.png",
       "clean_filename": "Canopy panel CNC parts overview",
-      "id": "DR-6.0",
+      "id": "DR-5.0",
       "uuid": "7aeb3769bc4b",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/Canopy panel CNC parts overview 2-20-25.png",
       "group": "SUPERSTRUCTURE",
@@ -231,7 +200,7 @@
     {
       "filename": "plate sheet nesting 2-28-25.png",
       "clean_filename": "plate sheet nesting",
-      "id": "DR-7.0",
+      "id": "DR-6.0",
       "uuid": "98061ca8f27c",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/Sheet nesting/plate sheet nesting 2-28-25.png",
       "group": "SUPERSTRUCTURE",
@@ -260,71 +229,9 @@
       "extracted_text": ""
     },
     {
-      "filename": "Stbd stairladder sheet 2 planview loc.png",
-      "clean_filename": "Stbd stairladder sheet 2 planview loc",
-      "id": "DR-8.0",
-      "uuid": "4107d05a0621",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/STBD STAIRLADDER/Stbd stairladder sheet 2 planview loc.png",
-      "group": "SUPERSTRUCTURE",
-      "source_pdf": "Stbd stairladder sheet 2 planview loc.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/STBD STAIRLADDER/Stbd stairladder sheet 2 planview loc.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 263258,
-      "date_info": {
-        "raw_date_string": "8/25/25",
-        "date": "2025-08-25",
-        "date_iso": "2025-08-25T00:00:00",
-        "year": 2025,
-        "month": 8,
-        "day": 25,
-        "formatted": "August 25, 2025",
-        "source": "full_text"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": ""
-    },
-    {
-      "filename": "Stbd stairladder sheet 1 overview.png",
-      "clean_filename": "Stbd stairladder sheet 1 overview",
-      "id": "DR-9.0",
-      "uuid": "1dfb5f1f4a21",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/STBD STAIRLADDER/Stbd stairladder sheet 1 overview.png",
-      "group": "SUPERSTRUCTURE",
-      "source_pdf": "Stbd stairladder sheet 1 overview.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/STBD STAIRLADDER/Stbd stairladder sheet 1 overview.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 514447,
-      "date_info": {
-        "raw_date_string": "8/25/25",
-        "date": "2025-08-25",
-        "date_iso": "2025-08-25T00:00:00",
-        "year": 2025,
-        "month": 8,
-        "day": 25,
-        "formatted": "August 25, 2025",
-        "source": "full_text"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": ""
-    },
-    {
       "filename": "Instrument panel frames & flanges overview HJN 9-19-25.png",
       "clean_filename": "Instrument panel frames & flanges overview",
-      "id": "DR-10.0",
+      "id": "DR-7.0",
       "uuid": "6655c1d55aed",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames & flanges overview HJN 9-19-25.png",
       "group": "SUPERSTRUCTURE",
@@ -355,7 +262,7 @@
     {
       "filename": "Superstructure Addendum Rev A sheet 6 of 6.png",
       "clean_filename": "Superstructure Addendum Rev A sheet 6 of 6",
-      "id": "DR-11.0",
+      "id": "DR-8.0",
       "uuid": "f84873b039ef",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV A/Superstructure Addendum Rev A sheet 6 of 6.png",
       "group": "SUPERSTRUCTURE",
@@ -386,7 +293,7 @@
     {
       "filename": "Superstructure Addendum Rev A sheet 1 of 6.png",
       "clean_filename": "Superstructure Addendum Rev A sheet 1 of 6",
-      "id": "DR-12.0",
+      "id": "DR-9.0",
       "uuid": "0b390893c4ac",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV A/Superstructure Addendum Rev A sheet 1 of 6.png",
       "group": "SUPERSTRUCTURE",
@@ -417,7 +324,7 @@
     {
       "filename": "Superstructure Addendum Rev A sheet 5 of 6.png",
       "clean_filename": "Superstructure Addendum Rev A sheet 5 of 6",
-      "id": "DR-13.0",
+      "id": "DR-10.0",
       "uuid": "0c5f425e13fd",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV A/Superstructure Addendum Rev A sheet 5 of 6.png",
       "group": "SUPERSTRUCTURE",
@@ -448,7 +355,7 @@
     {
       "filename": "Superstructure Addendum Rev A sheet 4 of 6.png",
       "clean_filename": "Superstructure Addendum Rev A sheet 4 of 6",
-      "id": "DR-14.0",
+      "id": "DR-11.0",
       "uuid": "02fe22ec6892",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV A/Superstructure Addendum Rev A sheet 4 of 6.png",
       "group": "SUPERSTRUCTURE",
@@ -479,7 +386,7 @@
     {
       "filename": "Superstructure Addendum Rev A sheet 2 of 6.png",
       "clean_filename": "Superstructure Addendum Rev A sheet 2 of 6",
-      "id": "DR-15.0",
+      "id": "DR-12.0",
       "uuid": "107bfbaf3466",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV A/Superstructure Addendum Rev A sheet 2 of 6.png",
       "group": "SUPERSTRUCTURE",
@@ -510,7 +417,7 @@
     {
       "filename": "Superstructure Addendum Rev A sheet 3 of 6.png",
       "clean_filename": "Superstructure Addendum Rev A sheet 3 of 6",
-      "id": "DR-16.0",
+      "id": "DR-13.0",
       "uuid": "8244ff4973db",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV A/Superstructure Addendum Rev A sheet 3 of 6.png",
       "group": "SUPERSTRUCTURE",
@@ -541,7 +448,7 @@
     {
       "filename": "ARCH FLANGES DIMS & LOCATIONS ON JIG 2-17-25.png",
       "clean_filename": "ARCH FLANGES DIMS & LOCATIONS ON JIG",
-      "id": "DR-17.0",
+      "id": "DR-14.0",
       "uuid": "760f44040d02",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/BASEPLATE/ARCH FLANGES DIMS & LOCATIONS ON JIG 2-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -572,7 +479,7 @@
     {
       "filename": "BASEPLATE DIMS & CURVATURE 2-17-25.png",
       "clean_filename": "BASEPLATE DIMS & CURVATURE",
-      "id": "DR-18.0",
+      "id": "DR-15.0",
       "uuid": "ba7c01bc3f2a",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/BASEPLATE/BASEPLATE DIMS & CURVATURE 2-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -603,7 +510,7 @@
     {
       "filename": "BASEPLATE LOCATION ON JIG 2-17-25.png",
       "clean_filename": "BASEPLATE LOCATION ON JIG",
-      "id": "DR-19.0",
+      "id": "DR-16.0",
       "uuid": "0a3f0ebeb0a5",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/BASEPLATE/BASEPLATE LOCATION ON JIG 2-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -634,7 +541,7 @@
     {
       "filename": "BASEPLATE OVERVIEW 2-17-25.png",
       "clean_filename": "BASEPLATE OVERVIEW",
-      "id": "DR-20.0",
+      "id": "DR-17.0",
       "uuid": "bc82d439d960",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/BASEPLATE/BASEPLATE OVERVIEW 2-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -665,7 +572,7 @@
     {
       "filename": "BASEPLATE BOLT PTRN & CTRL PTS 2-17-24.png",
       "clean_filename": "BASEPLATE BOLT PTRN & CTRL PTS",
-      "id": "DR-21.0",
+      "id": "DR-18.0",
       "uuid": "df8e96aea15f",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/BASEPLATE/BASEPLATE BOLT PTRN & CTRL PTS 2-17-24.png",
       "group": "SUPERSTRUCTURE",
@@ -696,7 +603,7 @@
     {
       "filename": "G10 backing pl sheet3 gussets 8-14-25.png",
       "clean_filename": "G10 backing pl sheet3 gussets",
-      "id": "DR-22.0",
+      "id": "DR-19.0",
       "uuid": "c30f2bdf3294",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/BASEPLATE/BACKING PLATES/G10 backing pl sheet3 gussets 8-14-25.png",
       "group": "SUPERSTRUCTURE",
@@ -727,7 +634,7 @@
     {
       "filename": "G10 backing pl sheet1 planview 8-14-25.png",
       "clean_filename": "G10 backing pl sheet1 planview",
-      "id": "DR-23.0",
+      "id": "DR-20.0",
       "uuid": "a920718f83d8",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/BASEPLATE/BACKING PLATES/G10 backing pl sheet1 planview 8-14-25.png",
       "group": "SUPERSTRUCTURE",
@@ -758,7 +665,7 @@
     {
       "filename": "G10 backing pl sheet2 sizing 8-14-25.png",
       "clean_filename": "G10 backing pl sheet2 sizing",
-      "id": "DR-24.0",
+      "id": "DR-21.0",
       "uuid": "ca6b210bf341",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/BASEPLATE/BACKING PLATES/G10 backing pl sheet2 sizing 8-14-25.png",
       "group": "SUPERSTRUCTURE",
@@ -789,7 +696,7 @@
     {
       "filename": "Oval cut-out template 4-29-25.png",
       "clean_filename": "Oval cut-out template",
-      "id": "DR-25.0",
+      "id": "DR-22.0",
       "uuid": "fa4e37b343b9",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/Templates etc/Oval cut-out template 4-29-25.png",
       "group": "SUPERSTRUCTURE",
@@ -820,7 +727,7 @@
     {
       "filename": "Revised sect 3 with inch and a half sq tubes 4-11-25.png",
       "clean_filename": "Revised sect 3 with inch and a half sq tubes",
-      "id": "DR-26.0",
+      "id": "DR-23.0",
       "uuid": "eedc5941485f",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/quick addendums 4-11-25/Revised sect 3 with inch and a half sq tubes 4-11-25.png",
       "group": "SUPERSTRUCTURE",
@@ -851,7 +758,7 @@
     {
       "filename": "Solar panel loc sht 2 of 2 long_l sect HJN 6-5-25.png",
       "clean_filename": "Solar panel loc sht 2 of 2 long_l sect",
-      "id": "DR-27.0",
+      "id": "DR-24.0",
       "uuid": "748df62e71cb",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/Solar panels/Solar panel loc sht 2 of 2 long_l sect HJN 6-5-25.png",
       "group": "SUPERSTRUCTURE",
@@ -882,7 +789,7 @@
     {
       "filename": "Solar panel loc sht 1 of 2 planview HJN 6-5-25.png",
       "clean_filename": "Solar panel loc sht 1 of 2 planview",
-      "id": "DR-28.0",
+      "id": "DR-25.0",
       "uuid": "d1c853ef117b",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/Solar panels/Solar panel loc sht 1 of 2 planview HJN 6-5-25.png",
       "group": "SUPERSTRUCTURE",
@@ -913,7 +820,7 @@
     {
       "filename": "P5 foothold dimensions 4-29-25.png",
       "clean_filename": "P5 foothold dimensions",
-      "id": "DR-29.0",
+      "id": "DR-26.0",
       "uuid": "e1db69ffaff1",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/DETAIL DRAWINGS/P5 foothold dimensions 4-29-25.png",
       "group": "SUPERSTRUCTURE",
@@ -944,7 +851,7 @@
     {
       "filename": "Upright framing compound bevel dets 4-10-25.png",
       "clean_filename": "Upright framing compound bevel dets",
-      "id": "DR-30.0",
+      "id": "DR-27.0",
       "uuid": "e3a27737b242",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/DETAIL DRAWINGS/Upright framing compound bevel dets 4-10-25.png",
       "group": "SUPERSTRUCTURE",
@@ -975,7 +882,7 @@
     {
       "filename": "port upright bevels 4-11-25.png",
       "clean_filename": "port upright bevels",
-      "id": "DR-31.0",
+      "id": "DR-28.0",
       "uuid": "3e4c3207e0f7",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/DETAIL DRAWINGS/port upright bevels 4-11-25.png",
       "group": "SUPERSTRUCTURE",
@@ -1006,7 +913,7 @@
     {
       "filename": "Shelf lip planview location & details 5-16-25.png",
       "clean_filename": "Shelf lip planview location & details",
-      "id": "DR-32.0",
+      "id": "DR-29.0",
       "uuid": "5b8dfde56ee1",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/DETAIL DRAWINGS/SHELF LIP DETAILS 5-16-25/Shelf lip planview location & details 5-16-25.png",
       "group": "SUPERSTRUCTURE",
@@ -1037,7 +944,7 @@
     {
       "filename": "Solander 38 superstructure sheet 4 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 4 of 12 PRELIM",
-      "id": "DR-33.0",
+      "id": "DR-30.0",
       "uuid": "6464f13c2027",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 4 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1068,7 +975,7 @@
     {
       "filename": "Solander 38 superstructure sheet 11 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 11 of 12 PRELIM",
-      "id": "DR-34.0",
+      "id": "DR-31.0",
       "uuid": "a45e30e6cc4c",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 11 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1099,7 +1006,7 @@
     {
       "filename": "Solander 38 superstructure sheet 5 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 5 of 12 PRELIM",
-      "id": "DR-35.0",
+      "id": "DR-32.0",
       "uuid": "f79166a3456b",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 5 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1130,7 +1037,7 @@
     {
       "filename": "Solander 38 superstructure sheet 10 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 10 of 12 PRELIM",
-      "id": "DR-36.0",
+      "id": "DR-33.0",
       "uuid": "47fb20fa707e",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 10 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1161,7 +1068,7 @@
     {
       "filename": "Solander 38 superstructure sheet 2 of 12 REVISED 2-6-25.png",
       "clean_filename": "superstructure sheet 2 of 12 REVISED",
-      "id": "DR-37.0",
+      "id": "DR-34.0",
       "uuid": "83e6566dc805",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 2 of 12 REVISED 2-6-25.png",
       "group": "SUPERSTRUCTURE",
@@ -1192,7 +1099,7 @@
     {
       "filename": "Solander 38 superstructure sheet 1 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 1 of 12 PRELIM",
-      "id": "DR-38.0",
+      "id": "DR-35.0",
       "uuid": "db4c8f31f304",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 1 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1223,7 +1130,7 @@
     {
       "filename": "Solander 38 superstructure sheet 6 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 6 of 12 PRELIM",
-      "id": "DR-39.0",
+      "id": "DR-36.0",
       "uuid": "b4711a1c190e",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 6 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1254,7 +1161,7 @@
     {
       "filename": "Solander 38 superstructure sheet 9 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 9 of 12 PRELIM",
-      "id": "DR-40.0",
+      "id": "DR-37.0",
       "uuid": "557d7385460a",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 9 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1285,7 +1192,7 @@
     {
       "filename": "Solander 38 superstructure sheet 7 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 7 of 12 PRELIM",
-      "id": "DR-41.0",
+      "id": "DR-38.0",
       "uuid": "1b53ffcce76f",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 7 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1316,7 +1223,7 @@
     {
       "filename": "Solander 38 superstructure sheet 3 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 3 of 12 PRELIM",
-      "id": "DR-42.0",
+      "id": "DR-39.0",
       "uuid": "026bc79512ef",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 3 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1347,7 +1254,7 @@
     {
       "filename": "Solander 38 superstructure sheet 8 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 8 of 12 PRELIM",
-      "id": "DR-43.0",
+      "id": "DR-40.0",
       "uuid": "b0599e3273a5",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 8 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1378,7 +1285,7 @@
     {
       "filename": "Solander 38 superstructure sheet 12 of 12 PRELIM.png",
       "clean_filename": "superstructure sheet 12 of 12 PRELIM",
-      "id": "DR-44.0",
+      "id": "DR-41.0",
       "uuid": "f1b421024348",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INIT. PLANSET RELEASE/Solander 38 superstructure sheet 12 of 12 PRELIM.png",
       "group": "SUPERSTRUCTURE",
@@ -1409,7 +1316,7 @@
     {
       "filename": "Add rev F sht 1 - wireway pens & skylight ledge REVISED 5-15-25.png",
       "clean_filename": "Add rev F sht 1 - wireway pens & skylight ledge REVISED",
-      "id": "DR-45.0",
+      "id": "DR-42.0",
       "uuid": "551b4e01111f",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV F - wireway pens/Add rev F sht 1 - wireway pens & skylight ledge REVISED 5-15-25.png",
       "group": "SUPERSTRUCTURE",
@@ -1440,7 +1347,7 @@
     {
       "filename": "jig frames 14-20 revised HJN 1-14-25.png",
       "clean_filename": "jig frames 14-20 revised",
-      "id": "DR-46.0",
+      "id": "DR-43.0",
       "uuid": "740d2ddd1c89",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig frames revised 1-14-25/jig frames 14-20 revised HJN 1-14-25.png",
       "group": "SUPERSTRUCTURE",
@@ -1471,7 +1378,7 @@
     {
       "filename": "jig frames 8-13 revised 1-14-25 HJN.png",
       "clean_filename": "jig frames 8-13 revised",
-      "id": "DR-47.0",
+      "id": "DR-44.0",
       "uuid": "49a05862f0ff",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig frames revised 1-14-25/jig frames 8-13 revised 1-14-25 HJN.png",
       "group": "SUPERSTRUCTURE",
@@ -1502,7 +1409,7 @@
     {
       "filename": "jig frames 1-7 revised 1-14-25 HJN.png",
       "clean_filename": "jig frames 1-7 revised",
-      "id": "DR-48.0",
+      "id": "DR-45.0",
       "uuid": "d5eeaaeef5df",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig frames revised 1-14-25/jig frames 1-7 revised 1-14-25 HJN.png",
       "group": "SUPERSTRUCTURE",
@@ -1533,7 +1440,7 @@
     {
       "filename": "jig frames 8-13 Aug-22-24.png",
       "clean_filename": "jig frames 8-13 Aug-22-24",
-      "id": "DR-49.0",
+      "id": "DR-46.0",
       "uuid": "60d8f8ecceaf",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/jig frames 8-13 Aug-22-24.png",
       "group": "SUPERSTRUCTURE",
@@ -1564,7 +1471,7 @@
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 1.png",
       "clean_filename": "Jig Drawing Booklet  page 1",
-      "id": "DR-50.0",
+      "id": "DR-47.0",
       "uuid": "758c3a3b24b4",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/Jig Drawing Booklet 8-26-24 page 1.png",
       "group": "SUPERSTRUCTURE",
@@ -1595,7 +1502,7 @@
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 2.png",
       "clean_filename": "Jig Drawing Booklet  page 2",
-      "id": "DR-50.1",
+      "id": "DR-47.1",
       "uuid": "5fcf4ca4be82",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/Jig Drawing Booklet 8-26-24 page 2.png",
       "group": "SUPERSTRUCTURE",
@@ -1626,7 +1533,7 @@
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 3.png",
       "clean_filename": "Jig Drawing Booklet  page 3",
-      "id": "DR-50.2",
+      "id": "DR-47.2",
       "uuid": "60f118152ab5",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/Jig Drawing Booklet 8-26-24 page 3.png",
       "group": "SUPERSTRUCTURE",
@@ -1657,7 +1564,7 @@
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 4.png",
       "clean_filename": "Jig Drawing Booklet  page 4",
-      "id": "DR-50.3",
+      "id": "DR-47.3",
       "uuid": "60d8f8ecceaf-1",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/Jig Drawing Booklet 8-26-24 page 4.png",
       "group": "SUPERSTRUCTURE",
@@ -1688,7 +1595,7 @@
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 5.png",
       "clean_filename": "Jig Drawing Booklet  page 5",
-      "id": "DR-50.4",
+      "id": "DR-47.4",
       "uuid": "5d04ae67edba",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/Jig Drawing Booklet 8-26-24 page 5.png",
       "group": "SUPERSTRUCTURE",
@@ -1719,7 +1626,7 @@
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 6.png",
       "clean_filename": "Jig Drawing Booklet  page 6",
-      "id": "DR-50.5",
+      "id": "DR-47.5",
       "uuid": "3dcacc780e76",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/Jig Drawing Booklet 8-26-24 page 6.png",
       "group": "SUPERSTRUCTURE",
@@ -1750,7 +1657,7 @@
     {
       "filename": "jig frames 1-7 Aug-22-24.png",
       "clean_filename": "jig frames 1-7 Aug-22-24",
-      "id": "DR-51.0",
+      "id": "DR-48.0",
       "uuid": "60f118152ab5-1",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/jig frames 1-7 Aug-22-24.png",
       "group": "SUPERSTRUCTURE",
@@ -1781,7 +1688,7 @@
     {
       "filename": "jig & hull profile & persp 8-22-24.png",
       "clean_filename": "jig & hull profile & persp",
-      "id": "DR-52.0",
+      "id": "DR-49.0",
       "uuid": "758c3a3b24b4-1",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/jig & hull profile & persp 8-22-24.png",
       "group": "SUPERSTRUCTURE",
@@ -1812,7 +1719,7 @@
     {
       "filename": "jig frames, hd foam, base plates & flanges planview 8-23-24.png",
       "clean_filename": "jig frames, hd foam, base plates & flanges planview",
-      "id": "DR-53.0",
+      "id": "DR-50.0",
       "uuid": "3dcacc780e76-1",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/jig frames, hd foam, base plates & flanges planview 8-23-24.png",
       "group": "SUPERSTRUCTURE",
@@ -1843,7 +1750,7 @@
     {
       "filename": "jig frames 14-20 Aug-22-24.png",
       "clean_filename": "jig frames 14-20 Aug-22-24",
-      "id": "DR-54.0",
+      "id": "DR-51.0",
       "uuid": "5d04ae67edba-1",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/jig frames 14-20 Aug-22-24.png",
       "group": "SUPERSTRUCTURE",
@@ -1874,7 +1781,7 @@
     {
       "filename": "jig planview 8-23-24.png",
       "clean_filename": "jig planview",
-      "id": "DR-55.0",
+      "id": "DR-52.0",
       "uuid": "5fcf4ca4be82-1",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/JIG/Jig package 8-22-24/jig planview 8-23-24.png",
       "group": "SUPERSTRUCTURE",
@@ -1905,7 +1812,7 @@
     {
       "filename": "Superstucture Addendum Rev B sheet 3 of 4.png",
       "clean_filename": "Superstucture Addendum Rev B sheet 3 of 4",
-      "id": "DR-56.0",
+      "id": "DR-53.0",
       "uuid": "d0282bb2e3b6",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV B/Superstucture Addendum Rev B sheet 3 of 4.png",
       "group": "SUPERSTRUCTURE",
@@ -1936,7 +1843,7 @@
     {
       "filename": "Superstucture Addendum Rev B sheet 2 of 4.png",
       "clean_filename": "Superstucture Addendum Rev B sheet 2 of 4",
-      "id": "DR-57.0",
+      "id": "DR-54.0",
       "uuid": "d05ee30e4739",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV B/Superstucture Addendum Rev B sheet 2 of 4.png",
       "group": "SUPERSTRUCTURE",
@@ -1967,7 +1874,7 @@
     {
       "filename": "Superstucture Addendum Rev B sheet 4 of 4.png",
       "clean_filename": "Superstucture Addendum Rev B sheet 4 of 4",
-      "id": "DR-58.0",
+      "id": "DR-55.0",
       "uuid": "0f5e9730dbff",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV B/Superstucture Addendum Rev B sheet 4 of 4.png",
       "group": "SUPERSTRUCTURE",
@@ -1998,7 +1905,7 @@
     {
       "filename": "Superstucture Addendum Rev B sheet 1 of 4.png",
       "clean_filename": "Superstucture Addendum Rev B sheet 1 of 4",
-      "id": "DR-59.0",
+      "id": "DR-56.0",
       "uuid": "cfdaf7190d4e",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV B/Superstucture Addendum Rev B sheet 1 of 4.png",
       "group": "SUPERSTRUCTURE",
@@ -2029,7 +1936,7 @@
     {
       "filename": "Addendum Rev E sheet 1 of 9 ctr & windscreen frmg overview.png",
       "clean_filename": "Addendum Rev E sheet 1 of 9 ctr & windscreen frmg overview",
-      "id": "DR-60.0",
+      "id": "DR-57.0",
       "uuid": "9f8fc1ade52c",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 1 of 9 ctr & windscreen frmg overview.png",
       "group": "SUPERSTRUCTURE",
@@ -2060,7 +1967,7 @@
     {
       "filename": "Addendum Rev E sheet 3 of 9 IBP.png",
       "clean_filename": "Addendum Rev E sheet 3 of 9 IBP",
-      "id": "DR-61.0",
+      "id": "DR-58.0",
       "uuid": "5df602ad6cac",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 3 of 9 IBP.png",
       "group": "SUPERSTRUCTURE",
@@ -2091,7 +1998,7 @@
     {
       "filename": "Addendum Rev E sheet 7 of 9 ctr frm parts.png",
       "clean_filename": "Addendum Rev E sheet 7 of 9 ctr frm parts",
-      "id": "DR-62.0",
+      "id": "DR-59.0",
       "uuid": "ce2fe4c23a6d",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 7 of 9 ctr frm parts.png",
       "group": "SUPERSTRUCTURE",
@@ -2113,7 +2020,7 @@
     {
       "filename": "Addendum Rev E sheet 8 of 9 view lkg aft.png",
       "clean_filename": "Addendum Rev E sheet 8 of 9 view lkg aft",
-      "id": "DR-63.0",
+      "id": "DR-60.0",
       "uuid": "d56cf374ef6f",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 8 of 9 view lkg aft.png",
       "group": "SUPERSTRUCTURE",
@@ -2144,7 +2051,7 @@
     {
       "filename": "Addendum Rev E sheet 2 of 9 wireway pens.png",
       "clean_filename": "Addendum Rev E sheet 2 of 9 wireway pens",
-      "id": "DR-64.0",
+      "id": "DR-61.0",
       "uuid": "3d8323c067df",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 2 of 9 wireway pens.png",
       "group": "SUPERSTRUCTURE",
@@ -2175,7 +2082,7 @@
     {
       "filename": "Addendum Rev E sheet 4 of 9 planview.png",
       "clean_filename": "Addendum Rev E sheet 4 of 9 planview",
-      "id": "DR-65.0",
+      "id": "DR-62.0",
       "uuid": "8661d1763caa",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 4 of 9 planview.png",
       "group": "SUPERSTRUCTURE",
@@ -2206,7 +2113,7 @@
     {
       "filename": "Add Rev E fwd windscreen baseplate.png",
       "clean_filename": "Add Rev E fwd windscreen baseplate",
-      "id": "DR-66.0",
+      "id": "DR-63.0",
       "uuid": "0471f89c5086",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Add Rev E fwd windscreen baseplate.png",
       "group": "SUPERSTRUCTURE",
@@ -2237,7 +2144,7 @@
     {
       "filename": "Addendum Rev E sheet 5 of 9 lvl canopy frmg.png",
       "clean_filename": "Addendum Rev E sheet 5 of 9 lvl canopy frmg",
-      "id": "DR-67.0",
+      "id": "DR-64.0",
       "uuid": "676d5d837a89",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 5 of 9 lvl canopy frmg.png",
       "group": "SUPERSTRUCTURE",
@@ -2268,7 +2175,7 @@
     {
       "filename": "Addendum Rev E sheet 6 of 9 view lkg fwd.png",
       "clean_filename": "Addendum Rev E sheet 6 of 9 view lkg fwd",
-      "id": "DR-68.0",
+      "id": "DR-65.0",
       "uuid": "e4184a50e2b7",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 6 of 9 view lkg fwd.png",
       "group": "SUPERSTRUCTURE",
@@ -2299,7 +2206,7 @@
     {
       "filename": "Addendum Rev E sheet 9 of 9 windscreen frm parts.png",
       "clean_filename": "Addendum Rev E sheet 9 of 9 windscreen frm parts",
-      "id": "DR-69.0",
+      "id": "DR-66.0",
       "uuid": "6f535f544934",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV E/Addendum Rev E sheet 9 of 9 windscreen frm parts.png",
       "group": "SUPERSTRUCTURE",
@@ -2330,7 +2237,7 @@
     {
       "filename": "Superstructure Addendum Rev D sheet 1 of 6 - upright locations on baseplate.png",
       "clean_filename": "Superstructure Addendum Rev D sheet 1 of 6 - upright locations on baseplate",
-      "id": "DR-70.0",
+      "id": "DR-67.0",
       "uuid": "7604806348bb",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 1 of 6 - upright locations on baseplate.png",
       "group": "SUPERSTRUCTURE",
@@ -2361,7 +2268,7 @@
     {
       "filename": "Superstructure Addendum Rev D sheet 6 of 6 - sections.png",
       "clean_filename": "Superstructure Addendum Rev D sheet 6 of 6 - sections",
-      "id": "DR-71.0",
+      "id": "DR-68.0",
       "uuid": "c864d0b6077e",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 6 of 6 - sections.png",
       "group": "SUPERSTRUCTURE",
@@ -2392,7 +2299,7 @@
     {
       "filename": "Superstructure Addendum Rev D sheet 4 of 6 - port, stbd, fwd frmg planview.png",
       "clean_filename": "Superstructure Addendum Rev D sheet 4 of 6 - port, stbd, fwd frmg planview",
-      "id": "DR-72.0",
+      "id": "DR-69.0",
       "uuid": "a979808ca7a2",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 4 of 6 - port, stbd, fwd frmg planview.png",
       "group": "SUPERSTRUCTURE",
@@ -2423,7 +2330,7 @@
     {
       "filename": "Superstructure Addendum Rev D sheet 1B of 6 - upright locs true views to curvature.png",
       "clean_filename": "Superstructure Addendum Rev D sheet 1B of 6 - upright locs true views to curvature",
-      "id": "DR-73.0",
+      "id": "DR-70.0",
       "uuid": "51e31e76f187",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 1B of 6 - upright locs true views to curvature.png",
       "group": "SUPERSTRUCTURE",
@@ -2454,7 +2361,7 @@
     {
       "filename": "Superstructure Addendum Rev D sheet 2 of 6 - stbd frmg profile.png",
       "clean_filename": "Superstructure Addendum Rev D sheet 2 of 6 - stbd frmg profile",
-      "id": "DR-74.0",
+      "id": "DR-71.0",
       "uuid": "bea685c783bf",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 2 of 6 - stbd frmg profile.png",
       "group": "SUPERSTRUCTURE",
@@ -2485,7 +2392,7 @@
     {
       "filename": "Superstructure Addendum Rev D sheet 3 of 6 - port frmg profile.png",
       "clean_filename": "Superstructure Addendum Rev D sheet 3 of 6 - port frmg profile",
-      "id": "DR-75.0",
+      "id": "DR-72.0",
       "uuid": "2e8d8cf0fec2",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 3 of 6 - port frmg profile.png",
       "group": "SUPERSTRUCTURE",
@@ -2516,7 +2423,7 @@
     {
       "filename": "Superstructure Addendum Rev D sheet 5 of 6 - port, stbd, fwd frmg view lkg aft.png",
       "clean_filename": "Superstructure Addendum Rev D sheet 5 of 6 - port, stbd, fwd frmg view lkg aft",
-      "id": "DR-76.0",
+      "id": "DR-73.0",
       "uuid": "a74bce610d57",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 5 of 6 - port, stbd, fwd frmg view lkg aft.png",
       "group": "SUPERSTRUCTURE",
@@ -2547,7 +2454,7 @@
     {
       "filename": "Superstucture Addendum Rev C sheet 4 of 4.png",
       "clean_filename": "Superstucture Addendum Rev C sheet 4 of 4",
-      "id": "DR-77.0",
+      "id": "DR-74.0",
       "uuid": "f9788d2d4461",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV C/Superstucture Addendum Rev C sheet 4 of 4.png",
       "group": "SUPERSTRUCTURE",
@@ -2578,7 +2485,7 @@
     {
       "filename": "Superstucture Addendum Rev C sheet 2 of 4.png",
       "clean_filename": "Superstucture Addendum Rev C sheet 2 of 4",
-      "id": "DR-78.0",
+      "id": "DR-75.0",
       "uuid": "ce1e3db0b2f8",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV C/Superstucture Addendum Rev C sheet 2 of 4.png",
       "group": "SUPERSTRUCTURE",
@@ -2609,7 +2516,7 @@
     {
       "filename": "Superstucture Addendum Rev C sheet 3 of 4.png",
       "clean_filename": "Superstucture Addendum Rev C sheet 3 of 4",
-      "id": "DR-79.0",
+      "id": "DR-76.0",
       "uuid": "cb99997e7b9b",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV C/Superstucture Addendum Rev C sheet 3 of 4.png",
       "group": "SUPERSTRUCTURE",
@@ -2640,7 +2547,7 @@
     {
       "filename": "Superstucture Addendum Rev C sheet 1 of 4.png",
       "clean_filename": "Superstucture Addendum Rev C sheet 1 of 4",
-      "id": "DR-80.0",
+      "id": "DR-77.0",
       "uuid": "59ef35998459",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV C/Superstucture Addendum Rev C sheet 1 of 4.png",
       "group": "SUPERSTRUCTURE",
@@ -2671,7 +2578,7 @@
     {
       "filename": "Rail & stanchion planset sheet 5 of 6 REV A aft ctr beam & lobstertail HJN 7-17-25.png",
       "clean_filename": "Rail & stanchion planset sheet 5 of 6 REV A aft ctr beam & lobstertail",
-      "id": "DR-81.0",
+      "id": "DR-78.0",
       "uuid": "d93f0cb3bd9e",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/RAIL & STANCHION PLANSET/Rail & stanchion planset sheet 5 of 6 REV A aft ctr beam & lobstertail HJN 7-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2702,7 +2609,7 @@
     {
       "filename": "Rail & stanchion planset sheet 2 of 6 deck landing locs HJN 7-17-25.png",
       "clean_filename": "Rail & stanchion planset sheet 2 of 6 deck landing locs",
-      "id": "DR-82.0",
+      "id": "DR-79.0",
       "uuid": "9cbe7537741c",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/RAIL & STANCHION PLANSET/Rail & stanchion planset sheet 2 of 6 deck landing locs HJN 7-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2733,7 +2640,7 @@
     {
       "filename": "Rail & stanchion planset sheet 3 of 6 fwd deck HJN 7-17-25.png",
       "clean_filename": "Rail & stanchion planset sheet 3 of 6 fwd deck",
-      "id": "DR-83.0",
+      "id": "DR-80.0",
       "uuid": "be578a392c8c",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/RAIL & STANCHION PLANSET/Rail & stanchion planset sheet 3 of 6 fwd deck HJN 7-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2764,7 +2671,7 @@
     {
       "filename": "Rail & stanchion planset sheet 1 of 6 overview HJN 7-17-25.png",
       "clean_filename": "Rail & stanchion planset sheet 1 of 6 overview",
-      "id": "DR-84.0",
+      "id": "DR-81.0",
       "uuid": "53ecee3945fd",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/RAIL & STANCHION PLANSET/Rail & stanchion planset sheet 1 of 6 overview HJN 7-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2795,7 +2702,7 @@
     {
       "filename": "Rail & stanchion planset sheet 6 of 6 fwd deck stanchion flanges HJN 7-17-25.png",
       "clean_filename": "Rail & stanchion planset sheet 6 of 6 fwd deck stanchion flanges",
-      "id": "DR-85.0",
+      "id": "DR-82.0",
       "uuid": "76ddd1cab11e",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/RAIL & STANCHION PLANSET/Rail & stanchion planset sheet 6 of 6 fwd deck stanchion flanges HJN 7-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2826,7 +2733,7 @@
     {
       "filename": "Rail & stanchion planset sheet 4 of 6 midships & aft deck HJN 7-17-25.png",
       "clean_filename": "Rail & stanchion planset sheet 4 of 6 midships & aft deck",
-      "id": "DR-86.0",
+      "id": "DR-83.0",
       "uuid": "197dbeb81a2c",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/RAIL & STANCHION PLANSET/Rail & stanchion planset sheet 4 of 6 midships & aft deck HJN 7-17-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2857,7 +2764,7 @@
     {
       "filename": "Solander 38 ADD. REV G SHEET 2 OF 2 canopy plt labels 5-22-25.png",
       "clean_filename": "ADD. REV G SHEET 2 OF 2 canopy plt labels",
-      "id": "DR-87.0",
+      "id": "DR-84.0",
       "uuid": "d24938e490b2",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV G - canopy plating locs/Solander 38 ADD. REV G SHEET 2 OF 2 canopy plt labels 5-22-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2888,7 +2795,7 @@
     {
       "filename": "Solander 38 ADD. REV G SHEET 1 OF 2 canopy plt locs 5-22-25.png",
       "clean_filename": "ADD. REV G SHEET 1 OF 2 canopy plt locs",
-      "id": "DR-88.0",
+      "id": "DR-85.0",
       "uuid": "e9b6bc8e585e",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV G - canopy plating locs/Solander 38 ADD. REV G SHEET 1 OF 2 canopy plt locs 5-22-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2919,7 +2826,7 @@
     {
       "filename": "Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.png",
       "clean_filename": "fascia flanges sheet 1 of 3 brow and P&S locs",
-      "id": "DR-89.0",
+      "id": "DR-86.0",
       "uuid": "097b77a474fe",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2950,7 +2857,7 @@
     {
       "filename": "Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.png",
       "clean_filename": "fascia flanges sheet 3 of 3 lobstertail & transv locs",
-      "id": "DR-90.0",
+      "id": "DR-87.0",
       "uuid": "984c8881ed55",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.png",
       "group": "SUPERSTRUCTURE",
@@ -2981,7 +2888,7 @@
     {
       "filename": "Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.png",
       "clean_filename": "fascia flanges sheet 2 of 3 brow clocking",
-      "id": "DR-91.0",
+      "id": "DR-88.0",
       "uuid": "0fcad72080fb",
       "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.png",
       "group": "SUPERSTRUCTURE",
@@ -3012,7 +2919,7 @@
     {
       "filename": "Solander 38 aft beam access hatch cut-out locations 2-19-25.png",
       "clean_filename": "aft beam access hatch cut-out locations",
-      "id": "DR-92.0",
+      "id": "DR-89.0",
       "uuid": "5376237bd805",
       "rel_path": "/drawings/output_images/BODY/BEAM DETAILS FOR LAMINATORS/Solander 38 aft beam access hatch cut-out locations 2-19-25.png",
       "group": "BODY",
@@ -3043,7 +2950,7 @@
     {
       "filename": "Solander 38 deck track location planview 11-27-24.png",
       "clean_filename": "deck track location planview",
-      "id": "DR-93.0",
+      "id": "DR-90.0",
       "uuid": "9201a18966cf",
       "rel_path": "/drawings/output_images/BODY/BEAM DETAILS FOR LAMINATORS/Solander 38 deck track location planview 11-27-24.png",
       "group": "BODY",
@@ -3074,7 +2981,7 @@
     {
       "filename": "Solander 38 HD foam location in fwd beam 9-6-24.png",
       "clean_filename": "HD foam location in fwd beam",
-      "id": "DR-94.0",
+      "id": "DR-91.0",
       "uuid": "1e4babf2549d",
       "rel_path": "/drawings/output_images/BODY/BEAM DETAILS FOR LAMINATORS/Solander 38 HD foam location in fwd beam 9-6-24.png",
       "group": "BODY",
@@ -3105,7 +3012,7 @@
     {
       "filename": "Solander 38 aft cleat location HJN 6-3-25.png",
       "clean_filename": "aft cleat location",
-      "id": "DR-95.0",
+      "id": "DR-92.0",
       "uuid": "20651f0adf94",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/Solander 38 aft cleat location HJN 6-3-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3136,7 +3043,7 @@
     {
       "filename": "Custom portlight dims HJN 7-31-25.png",
       "clean_filename": "Custom portlight dims",
-      "id": "DR-96.0",
+      "id": "DR-93.0",
       "uuid": "68194dd2be99",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight dims HJN 7-31-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3167,7 +3074,7 @@
     {
       "filename": "Custom portlight full scale template 24x36 AFT.png",
       "clean_filename": "Custom portlight full scale template 24x36 AFT",
-      "id": "DR-97.0",
+      "id": "DR-94.0",
       "uuid": "1153becbbe8c",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight full scale template 24x36 AFT.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3198,7 +3105,7 @@
     {
       "filename": "Custom portlight full scale template 24x36 FWD.png",
       "clean_filename": "Custom portlight full scale template 24x36 FWD",
-      "id": "DR-98.0",
+      "id": "DR-95.0",
       "uuid": "09200e8560ea",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight full scale template 24x36 FWD.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3229,7 +3136,7 @@
     {
       "filename": "Custom portlight location HJN 7-31-25.png",
       "clean_filename": "Custom portlight location",
-      "id": "DR-99.0",
+      "id": "DR-96.0",
       "uuid": "e1f089cbe396",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight location HJN 7-31-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3258,9 +3165,155 @@
       "extracted_text": ""
     },
     {
+      "filename": "PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW HJN 12-19-25.png",
+      "clean_filename": "PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW",
+      "id": "DR-97.0",
+      "uuid": "2f80a2f89787",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/AFT STBD MAST/PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW HJN 12-19-25.png",
+      "group": "OUTFITTING & INTERIOR",
+      "source_pdf": "PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW HJN 12-19-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/AFT STBD MAST/PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW HJN 12-19-25.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 465194,
+      "date_info": {
+        "raw_date_string": "12-19-25",
+        "date": "2025-12-19",
+        "date_iso": "2025-12-19T00:00:00",
+        "year": 2025,
+        "month": 12,
+        "day": 19,
+        "formatted": "December 19, 2025",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
+      "filename": "PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS HJN 12-19-25.png",
+      "clean_filename": "PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS",
+      "id": "DR-98.0",
+      "uuid": "33a66b33a286",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/AFT STBD MAST/PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS HJN 12-19-25.png",
+      "group": "OUTFITTING & INTERIOR",
+      "source_pdf": "PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS HJN 12-19-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/AFT STBD MAST/PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS HJN 12-19-25.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 512122,
+      "date_info": {
+        "raw_date_string": "12-19-25",
+        "date": "2025-12-19",
+        "date_iso": "2025-12-19T00:00:00",
+        "year": 2025,
+        "month": 12,
+        "day": 19,
+        "formatted": "December 19, 2025",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
+      "filename": "Stbd stairladder sheet 2 planview loc.png",
+      "clean_filename": "Stbd stairladder sheet 2 planview loc",
+      "id": "DR-99.0",
+      "uuid": "4107d05a0621",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/STBD STAIRLADDER/Stbd stairladder sheet 2 planview loc.png",
+      "group": "OUTFITTING & INTERIOR",
+      "source_pdf": "Stbd stairladder sheet 2 planview loc.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/STBD STAIRLADDER/Stbd stairladder sheet 2 planview loc.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 263258,
+      "date_info": {
+        "raw_date_string": "8/25/25",
+        "date": "2025-08-25",
+        "date_iso": "2025-08-25T00:00:00",
+        "year": 2025,
+        "month": 8,
+        "day": 25,
+        "formatted": "August 25, 2025",
+        "source": "full_text"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
+      "filename": "Stbd stairladder sheet 1 overview.png",
+      "clean_filename": "Stbd stairladder sheet 1 overview",
+      "id": "DR-100.0",
+      "uuid": "1dfb5f1f4a21",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/STBD STAIRLADDER/Stbd stairladder sheet 1 overview.png",
+      "group": "OUTFITTING & INTERIOR",
+      "source_pdf": "Stbd stairladder sheet 1 overview.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/STBD STAIRLADDER/Stbd stairladder sheet 1 overview.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 514447,
+      "date_info": {
+        "raw_date_string": "8/25/25",
+        "date": "2025-08-25",
+        "date_iso": "2025-08-25T00:00:00",
+        "year": 2025,
+        "month": 8,
+        "day": 25,
+        "formatted": "August 25, 2025",
+        "source": "full_text"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
+      "filename": "Companionway hatch overview (PDF).png",
+      "clean_filename": "Companionway hatch overview (PDF)",
+      "id": "DR-101.0",
+      "uuid": "c7758342bce0",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/COMPANIONWAY HATCH/Companionway hatch overview (PDF).png",
+      "group": "OUTFITTING & INTERIOR",
+      "source_pdf": "Companionway hatch overview (PDF).pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/COMPANIONWAY HATCH/Companionway hatch overview (PDF).pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 2248366,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
       "filename": "BHD D section - upper port cupboard.png",
       "clean_filename": "BHD D section - upper port cupboard",
-      "id": "DR-100.0",
+      "id": "DR-102.0",
       "uuid": "ae7f6b521c85",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - upper port cupboard.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3282,7 +3335,7 @@
     {
       "filename": "BHD D section - full.png",
       "clean_filename": "BHD D section - full",
-      "id": "DR-101.0",
+      "id": "DR-103.0",
       "uuid": "047c36533943",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - full.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3304,7 +3357,7 @@
     {
       "filename": "Port hull work bench planview P.M. revisions 1-9-25.png",
       "clean_filename": "Port hull work bench planview P.M. revisions",
-      "id": "DR-102.0",
+      "id": "DR-104.0",
       "uuid": "2b1ccfff2289",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview P.M. revisions 1-9-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3335,7 +3388,7 @@
     {
       "filename": "Port hull work bench planview MORE DIMS 1-9-25.png",
       "clean_filename": "Port hull work bench planview MORE DIMS",
-      "id": "DR-103.0",
+      "id": "DR-105.0",
       "uuid": "19e94a561ed2",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview MORE DIMS 1-9-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3366,7 +3419,7 @@
     {
       "filename": "BHD D section - upper stbd spice rack.png",
       "clean_filename": "BHD D section - upper stbd spice rack",
-      "id": "DR-104.0",
+      "id": "DR-106.0",
       "uuid": "311a91a08356",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - upper stbd spice rack.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3388,7 +3441,7 @@
     {
       "filename": "BHD D section - port (inbd) counter.png",
       "clean_filename": "BHD D section - port (inbd) counter",
-      "id": "DR-105.0",
+      "id": "DR-107.0",
       "uuid": "da0eedadfe83",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - port (inbd) counter.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3410,7 +3463,7 @@
     {
       "filename": "Port hull work bench planview 1-9-25.png",
       "clean_filename": "Port hull work bench planview",
-      "id": "DR-106.0",
+      "id": "DR-108.0",
       "uuid": "29b42c7e1cd8",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview 1-9-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3441,7 +3494,7 @@
     {
       "filename": "BHD D section - stbd (outbd) counter.png",
       "clean_filename": "BHD D section - stbd (outbd) counter",
-      "id": "DR-107.0",
+      "id": "DR-109.0",
       "uuid": "8ea7363cc587",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - stbd (outbd) counter.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3463,7 +3516,7 @@
     {
       "filename": "Solander 38 Cabinets 3, 4, & 5 11-6-24.png",
       "clean_filename": "Cabinets 3, 4, & 5",
-      "id": "DR-108.0",
+      "id": "DR-110.0",
       "uuid": "d3f246d5de51",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinets 3, 4, & 5 11-6-24.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3494,7 +3547,7 @@
     {
       "filename": "Cabinet 3 & 4.png",
       "clean_filename": "Cabinet 3 & 4",
-      "id": "DR-109.0",
+      "id": "DR-111.0",
       "uuid": "67ec2ecd9f5d",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 3 & 4.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3525,7 +3578,7 @@
     {
       "filename": "Cabinet 5.png",
       "clean_filename": "Cabinet 5",
-      "id": "DR-110.0",
+      "id": "DR-112.0",
       "uuid": "965259d30aba",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 5.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3556,7 +3609,7 @@
     {
       "filename": "Cabinet 1.png",
       "clean_filename": "Cabinet 1",
-      "id": "DR-111.0",
+      "id": "DR-113.0",
       "uuid": "a66ca263c3d4",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 1.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3587,7 +3640,7 @@
     {
       "filename": "Solander 38 Cabinets 1 & 2 11-6-24.png",
       "clean_filename": "Cabinets 1 & 2",
-      "id": "DR-112.0",
+      "id": "DR-114.0",
       "uuid": "c73b18f6337b",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinets 1 & 2 11-6-24.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3618,7 +3671,7 @@
     {
       "filename": "Cabinet 2.png",
       "clean_filename": "Cabinet 2",
-      "id": "DR-113.0",
+      "id": "DR-115.0",
       "uuid": "e87e3534405a",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 2.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3649,7 +3702,7 @@
     {
       "filename": "Solander 38 Cabinet Location Map 11-6-24.png",
       "clean_filename": "Cabinet Location Map",
-      "id": "DR-114.0",
+      "id": "DR-116.0",
       "uuid": "16739ab54ed1",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinet Location Map 11-6-24.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3680,7 +3733,7 @@
     {
       "filename": "Elect. cabinet aft face 3in=1ft scale 4-29-25.png",
       "clean_filename": "Elect. cabinet aft face 3in=1ft scale",
-      "id": "DR-115.0",
+      "id": "DR-117.0",
       "uuid": "e715a1fed21e",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Elect. cabs 4-29-25/Elect. cabinet aft face 3in=1ft scale 4-29-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3711,7 +3764,7 @@
     {
       "filename": "Elect. cabinets aft faces 4-29-25.png",
       "clean_filename": "Elect. cabinets aft faces",
-      "id": "DR-116.0",
+      "id": "DR-118.0",
       "uuid": "0e4367bb6b7c",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Elect. cabs 4-29-25/Elect. cabinets aft faces 4-29-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3742,7 +3795,7 @@
     {
       "filename": "Bridge deck area planview 5-2-25.png",
       "clean_filename": "Bridge deck area planview",
-      "id": "DR-117.0",
+      "id": "DR-119.0",
       "uuid": "81e082609229",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Bridge deck area for table 5-2-25/Bridge deck area planview 5-2-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3773,7 +3826,7 @@
     {
       "filename": "Bridge deck area planview NO ANNO 5-2-25.png",
       "clean_filename": "Bridge deck area planview NO ANNO",
-      "id": "DR-118.0",
+      "id": "DR-120.0",
       "uuid": "22cf8b09f500",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Bridge deck area for table 5-2-25/Bridge deck area planview NO ANNO 5-2-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3804,7 +3857,7 @@
     {
       "filename": "Solander 38 profile & planview for cabinet design 9-27-24.png",
       "clean_filename": "profile & planview for cabinet design",
-      "id": "DR-119.0",
+      "id": "DR-121.0",
       "uuid": "9cddebd35167",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/for cabinet design/Solander 38 profile & planview for cabinet design 9-27-24.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3835,7 +3888,7 @@
     {
       "filename": "Solander 38 sections for cabinet design 9-27-24.png",
       "clean_filename": "sections for cabinet design",
-      "id": "DR-120.0",
+      "id": "DR-122.0",
       "uuid": "5dcd10f24330",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/for cabinet design/Solander 38 sections for cabinet design 9-27-24.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3866,7 +3919,7 @@
     {
       "filename": "Midships area cabinet locs HJN 7-30-25.png",
       "clean_filename": "Midships area cabinet locs",
-      "id": "DR-121.0",
+      "id": "DR-123.0",
       "uuid": "91c611046fef",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Summer 2025/Midships area cabinet locs HJN 7-30-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3897,7 +3950,7 @@
     {
       "filename": "watermaker cabinet fwd face upper 4-17-25.png",
       "clean_filename": "watermaker cabinet fwd face upper",
-      "id": "DR-122.0",
+      "id": "DR-124.0",
       "uuid": "0c8296fe2444",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/watermaker cabinet fwd face upper 4-17-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3928,7 +3981,7 @@
     {
       "filename": "port heat pump cabinet aft face 4-17-25.png",
       "clean_filename": "port heat pump cabinet aft face",
-      "id": "DR-123.0",
+      "id": "DR-125.0",
       "uuid": "d0a445cd2088",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/port heat pump cabinet aft face 4-17-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3959,7 +4012,7 @@
     {
       "filename": "watermaker cabinet fwd face lower 4-17-25.png",
       "clean_filename": "watermaker cabinet fwd face lower",
-      "id": "DR-124.0",
+      "id": "DR-126.0",
       "uuid": "5a4d8d207085",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/watermaker cabinet fwd face lower 4-17-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -3990,7 +4043,7 @@
     {
       "filename": "port heat pump cabinet fwd face revised 4-17-25.png",
       "clean_filename": "port heat pump cabinet fwd face revised",
-      "id": "DR-125.0",
+      "id": "DR-127.0",
       "uuid": "22dec8aac1b3",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/port heat pump cabinet fwd face revised 4-17-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4021,7 +4074,7 @@
     {
       "filename": "Cabinet locations planview REV A watermaker 2-26-25.png",
       "clean_filename": "Cabinet locations planview REV A watermaker",
-      "id": "DR-126.0",
+      "id": "DR-128.0",
       "uuid": "1396c425304c",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/Cabinet locations planview REV A watermaker 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4052,7 +4105,7 @@
     {
       "filename": "WM cabinet partition sect upper 2-26-25.png",
       "clean_filename": "WM cabinet partition sect upper",
-      "id": "DR-127.0",
+      "id": "DR-129.0",
       "uuid": "7eaaf0114af9",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet partition sect upper 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4083,7 +4136,7 @@
     {
       "filename": "WM cabinet partition sect lower 2-26-25.png",
       "clean_filename": "WM cabinet partition sect lower",
-      "id": "DR-128.0",
+      "id": "DR-130.0",
       "uuid": "976dd492e5f4",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet partition sect lower 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4114,7 +4167,7 @@
     {
       "filename": "Cabinet locations port hull profile REV A watermaker 2-26-25.png",
       "clean_filename": "Cabinet locations port hull profile REV A watermaker",
-      "id": "DR-129.0",
+      "id": "DR-131.0",
       "uuid": "b3be09c65b7f",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/Cabinet locations port hull profile REV A watermaker 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4145,7 +4198,7 @@
     {
       "filename": "WM cabinet parts dims 2-26-25.png",
       "clean_filename": "WM cabinet parts dims",
-      "id": "DR-130.0",
+      "id": "DR-132.0",
       "uuid": "d99e77f2e361",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet parts dims 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4176,7 +4229,7 @@
     {
       "filename": "WM cabinet ortho views 2-26-25.png",
       "clean_filename": "WM cabinet ortho views",
-      "id": "DR-131.0",
+      "id": "DR-133.0",
       "uuid": "a7e70b0b6e4b",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet ortho views 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4207,7 +4260,7 @@
     {
       "filename": "WM cabinet persp views 2-26-25.png",
       "clean_filename": "WM cabinet persp views",
-      "id": "DR-132.0",
+      "id": "DR-134.0",
       "uuid": "c43eb58860bc",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet persp views 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4238,7 +4291,7 @@
     {
       "filename": "Upper WM cab sect 36in aft of fwd bhd 5-16-25.png",
       "clean_filename": "Upper WM cab sect 36in aft of fwd bhd",
-      "id": "DR-133.0",
+      "id": "DR-135.0",
       "uuid": "e29729624346",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Upper WM cab sect 36in aft of fwd bhd 5-16-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4269,7 +4322,7 @@
     {
       "filename": "Lower WM cab sect 36in aft of fwd bhd 5-16-25.png",
       "clean_filename": "Lower WM cab sect 36in aft of fwd bhd",
-      "id": "DR-134.0",
+      "id": "DR-136.0",
       "uuid": "e5f2ca251d54",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Lower WM cab sect 36in aft of fwd bhd 5-16-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4300,7 +4353,7 @@
     {
       "filename": "Port hull sect 36in aft of fwd bhd 5-16-25.png",
       "clean_filename": "Port hull sect 36in aft of fwd bhd",
-      "id": "DR-135.0",
+      "id": "DR-137.0",
       "uuid": "af1887bb4298",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Port hull sect 36in aft of fwd bhd 5-16-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4331,7 +4384,7 @@
     {
       "filename": "Cabinet partition 5 with scale.png",
       "clean_filename": "Cabinet partition 5 with scale",
-      "id": "DR-136.0",
+      "id": "DR-138.0",
       "uuid": "14500fdd9abc",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 5 with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4353,7 +4406,7 @@
     {
       "filename": "Cabinet partition 3 with scale.png",
       "clean_filename": "Cabinet partition 3 with scale",
-      "id": "DR-137.0",
+      "id": "DR-139.0",
       "uuid": "2c5caa27ab54",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 3 with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4375,7 +4428,7 @@
     {
       "filename": "Cabinet partition 4 with scale.png",
       "clean_filename": "Cabinet partition 4 with scale",
-      "id": "DR-138.0",
+      "id": "DR-140.0",
       "uuid": "cf21f5fcbab5",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 4 with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4397,7 +4450,7 @@
     {
       "filename": "Cabinet partition 6 with scale.png",
       "clean_filename": "Cabinet partition 6 with scale",
-      "id": "DR-139.0",
+      "id": "DR-141.0",
       "uuid": "8a0f052e6e59",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 6 with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4419,7 +4472,7 @@
     {
       "filename": "Cabinet partition 9 with scale.png",
       "clean_filename": "Cabinet partition 9 with scale",
-      "id": "DR-140.0",
+      "id": "DR-142.0",
       "uuid": "98316292c3f1",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 9 with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4441,7 +4494,7 @@
     {
       "filename": "Cabinet partition 1 with scale.png",
       "clean_filename": "Cabinet partition 1 with scale",
-      "id": "DR-141.0",
+      "id": "DR-143.0",
       "uuid": "50d404d26e9d",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 1 with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4463,7 +4516,7 @@
     {
       "filename": "Cabinet partition 8 with scale.png",
       "clean_filename": "Cabinet partition 8 with scale",
-      "id": "DR-142.0",
+      "id": "DR-144.0",
       "uuid": "10cc5f87ba60",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 8 with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4485,7 +4538,7 @@
     {
       "filename": "Cabinet partition 7 with scale.png",
       "clean_filename": "Cabinet partition 7 with scale",
-      "id": "DR-143.0",
+      "id": "DR-145.0",
       "uuid": "ddba2aa3f5e6",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 7 with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4507,7 +4560,7 @@
     {
       "filename": "Cabinet partition 10 11X17IN with scale.png",
       "clean_filename": "Cabinet partition 10 11X17IN with scale",
-      "id": "DR-144.0",
+      "id": "DR-146.0",
       "uuid": "502ad45891c5",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 10 11X17IN with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4529,7 +4582,7 @@
     {
       "filename": "Cabinet partition 2 11X17IN with scale.png",
       "clean_filename": "Cabinet partition 2 11X17IN with scale",
-      "id": "DR-145.0",
+      "id": "DR-147.0",
       "uuid": "565b2c80bacd",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 2 11X17IN with scale.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4551,7 +4604,7 @@
     {
       "filename": "Revised cabinet locations PLANVIEW 12-30-24.png",
       "clean_filename": "Revised cabinet locations PLANVIEW",
-      "id": "DR-146.0",
+      "id": "DR-148.0",
       "uuid": "95981c1148d2",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations PLANVIEW 12-30-24.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4582,7 +4635,7 @@
     {
       "filename": "Revised cabinet locations PORT HULL PROFILES 12-30-24.png",
       "clean_filename": "Revised cabinet locations PORT HULL PROFILES",
-      "id": "DR-147.0",
+      "id": "DR-149.0",
       "uuid": "38361bb99da9",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations PORT HULL PROFILES 12-30-24.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4613,7 +4666,7 @@
     {
       "filename": "Revised cabinet locations STBD HULL PROFILES 12-30-24.png",
       "clean_filename": "Revised cabinet locations STBD HULL PROFILES",
-      "id": "DR-148.0",
+      "id": "DR-150.0",
       "uuid": "11757ce598c5",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations STBD HULL PROFILES 12-30-24.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4644,7 +4697,7 @@
     {
       "filename": "Full sections at partitions 5, 6, 8, 9.png",
       "clean_filename": "Full sections at partitions 5, 6, 8, 9",
-      "id": "DR-149.0",
+      "id": "DR-151.0",
       "uuid": "7128e69f1cfa",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Full sections at partitions 5, 6, 8, 9.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4675,7 +4728,7 @@
     {
       "filename": "Cabinet partition 4 with cl msmt.png",
       "clean_filename": "Cabinet partition 4 with cl msmt",
-      "id": "DR-150.0",
+      "id": "DR-152.0",
       "uuid": "740097a40e4b",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 4 with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4697,7 +4750,7 @@
     {
       "filename": "Cabinet & partition locations port hull profiles 1-2-25.png",
       "clean_filename": "Cabinet & partition locations port hull profiles",
-      "id": "DR-151.0",
+      "id": "DR-153.0",
       "uuid": "f11f431dfe7f",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations port hull profiles 1-2-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4728,7 +4781,7 @@
     {
       "filename": "Cabinet partition 2 11X17IN with cl msmt.png",
       "clean_filename": "Cabinet partition 2 11X17IN with cl msmt",
-      "id": "DR-152.0",
+      "id": "DR-154.0",
       "uuid": "39ac5fe49fe0",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 2 11X17IN with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4750,7 +4803,7 @@
     {
       "filename": "Cabinet partition 5 with cl msmt.png",
       "clean_filename": "Cabinet partition 5 with cl msmt",
-      "id": "DR-153.0",
+      "id": "DR-155.0",
       "uuid": "2a92b938fb9b",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 5 with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4772,7 +4825,7 @@
     {
       "filename": "Cabinet partition 10 11X17IN with cl msmt.png",
       "clean_filename": "Cabinet partition 10 11X17IN with cl msmt",
-      "id": "DR-154.0",
+      "id": "DR-156.0",
       "uuid": "5d50665164eb",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 10 11X17IN with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4794,7 +4847,7 @@
     {
       "filename": "Cabinet partition 1 with cl msmt.png",
       "clean_filename": "Cabinet partition 1 with cl msmt",
-      "id": "DR-155.0",
+      "id": "DR-157.0",
       "uuid": "e867dbe632f5",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 1 with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4816,7 +4869,7 @@
     {
       "filename": "Cabinet & partition locations stbd hull profiles 1-2-25.png",
       "clean_filename": "Cabinet & partition locations stbd hull profiles",
-      "id": "DR-156.0",
+      "id": "DR-158.0",
       "uuid": "42d41b0dcf9c",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations stbd hull profiles 1-2-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4847,7 +4900,7 @@
     {
       "filename": "Cabinet partition 6 with cl msmt.png",
       "clean_filename": "Cabinet partition 6 with cl msmt",
-      "id": "DR-157.0",
+      "id": "DR-159.0",
       "uuid": "a32ac85fbf59",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 6 with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4869,7 +4922,7 @@
     {
       "filename": "Cabinet partition 9 with cl msmt.png",
       "clean_filename": "Cabinet partition 9 with cl msmt",
-      "id": "DR-158.0",
+      "id": "DR-160.0",
       "uuid": "7295b41bbce3",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 9 with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4891,7 +4944,7 @@
     {
       "filename": "Cabinet partition 7 with cl msmt.png",
       "clean_filename": "Cabinet partition 7 with cl msmt",
-      "id": "DR-159.0",
+      "id": "DR-161.0",
       "uuid": "da60f7fa0254",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 7 with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4913,7 +4966,7 @@
     {
       "filename": "Cabinet & partition locations planview 1-2-25.png",
       "clean_filename": "Cabinet & partition locations planview",
-      "id": "DR-160.0",
+      "id": "DR-162.0",
       "uuid": "669583c7bc0d",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations planview 1-2-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4944,7 +4997,7 @@
     {
       "filename": "Cabinet partition 8 with cl msmt.png",
       "clean_filename": "Cabinet partition 8 with cl msmt",
-      "id": "DR-161.0",
+      "id": "DR-163.0",
       "uuid": "570d3f1d194c",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 8 with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4966,7 +5019,7 @@
     {
       "filename": "Cabinet partition 3 with cl msmt.png",
       "clean_filename": "Cabinet partition 3 with cl msmt",
-      "id": "DR-162.0",
+      "id": "DR-164.0",
       "uuid": "c948f9e2bb11",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 3 with cl msmt.png",
       "group": "OUTFITTING & INTERIOR",
@@ -4986,9 +5039,40 @@
       "extracted_text": ""
     },
     {
+      "filename": "Center deck & kiwi grip area HJN 11-6-25.png",
+      "clean_filename": "Center deck & kiwi grip area",
+      "id": "DR-165.0",
+      "uuid": "ee86317eb361",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CTR DECK Q4 2025/Center deck & kiwi grip area HJN 11-6-25.png",
+      "group": "OUTFITTING & INTERIOR",
+      "source_pdf": "Center deck & kiwi grip area HJN 11-6-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CTR DECK Q4 2025/Center deck & kiwi grip area HJN 11-6-25.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 414745,
+      "date_info": {
+        "raw_date_string": "11-6-25",
+        "date": "2025-11-06",
+        "date_iso": "2025-11-06T00:00:00",
+        "year": 2025,
+        "month": 11,
+        "day": 6,
+        "formatted": "November 06, 2025",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
       "filename": "Batt cmpt cut-outs IBP 5-6-25.png",
       "clean_filename": "Batt cmpt cut-outs IBP",
-      "id": "DR-163.0",
+      "id": "DR-166.0",
       "uuid": "8c1c6588e312",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Jim, Al, etc. 5-6-25/Batt cmpt cut-outs IBP 5-6-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5019,7 +5103,7 @@
     {
       "filename": "Batt cmpt cut-outs PLANVIEW 5-6-25.png",
       "clean_filename": "Batt cmpt cut-outs PLANVIEW",
-      "id": "DR-164.0",
+      "id": "DR-167.0",
       "uuid": "852f810928da",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Jim, Al, etc. 5-6-25/Batt cmpt cut-outs PLANVIEW 5-6-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5050,7 +5134,7 @@
     {
       "filename": "Batt hatch & ctr beam 4-3-25.png",
       "clean_filename": "Batt hatch & ctr beam",
-      "id": "DR-165.0",
+      "id": "DR-168.0",
       "uuid": "4ab1829a90fb",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Batt hatch & ctr beam 4-3-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5081,7 +5165,7 @@
     {
       "filename": "Batt hatch in stbd hull 4-3-25.png",
       "clean_filename": "Batt hatch in stbd hull",
-      "id": "DR-166.0",
+      "id": "DR-169.0",
       "uuid": "6f17d471aab1",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Batt hatch in stbd hull 4-3-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5112,7 +5196,7 @@
     {
       "filename": "Steering cmpt cut-out 4-5-25.png",
       "clean_filename": "Steering cmpt cut-out",
-      "id": "DR-167.0",
+      "id": "DR-170.0",
       "uuid": "b336cb5796fd",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Steering cmpt cut-out 4-5-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5143,7 +5227,7 @@
     {
       "filename": "Batt access panels inbd face HJN 6-19-25.png",
       "clean_filename": "Batt access panels inbd face",
-      "id": "DR-168.0",
+      "id": "DR-171.0",
       "uuid": "24b0b3bfa06d",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt access panels summer 2025/Batt access panels inbd face HJN 6-19-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5174,7 +5258,7 @@
     {
       "filename": "Batt access panels planview & transv sections HJN 6-19-25.png",
       "clean_filename": "Batt access panels planview & transv sections",
-      "id": "DR-169.0",
+      "id": "DR-172.0",
       "uuid": "77b3b7143113",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt access panels summer 2025/Batt access panels planview & transv sections HJN 6-19-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5205,7 +5289,7 @@
     {
       "filename": "PRELIM Batt cmpt transv conduit sheet 2 of 3 planview HJN 7-7-25.png",
       "clean_filename": "PRELIM Batt cmpt transv conduit sheet 2 of 3 planview",
-      "id": "DR-170.0",
+      "id": "DR-173.0",
       "uuid": "d5442a375424",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 2 of 3 planview HJN 7-7-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5236,7 +5320,7 @@
     {
       "filename": "PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects  HJN 7-7-25.png",
       "clean_filename": "PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects",
-      "id": "DR-171.0",
+      "id": "DR-174.0",
       "uuid": "eafd7e51d6a6",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects  HJN 7-7-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5267,7 +5351,7 @@
     {
       "filename": "PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview  HJN 7-7-25.png",
       "clean_filename": "PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview",
-      "id": "DR-172.0",
+      "id": "DR-175.0",
       "uuid": "d44237a49f99",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview  HJN 7-7-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5298,7 +5382,7 @@
     {
       "filename": "Batt access & nearby struct LONG_L SECT 5-12-25.png",
       "clean_filename": "Batt access & nearby struct LONG_L SECT",
-      "id": "DR-173.0",
+      "id": "DR-176.0",
       "uuid": "2f9564c57b23",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct LONG_L SECT 5-12-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5329,7 +5413,7 @@
     {
       "filename": "Batt access & nearby struct PLANVIEW 5-12-25.png",
       "clean_filename": "Batt access & nearby struct PLANVIEW",
-      "id": "DR-174.0",
+      "id": "DR-177.0",
       "uuid": "087c12126618",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct PLANVIEW 5-12-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5360,7 +5444,7 @@
     {
       "filename": "Batt access & nearby struct TRANSV SECT 5-12-25.png",
       "clean_filename": "Batt access & nearby struct TRANSV SECT",
-      "id": "DR-175.0",
+      "id": "DR-178.0",
       "uuid": "3a4291e469e9",
       "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct TRANSV SECT 5-12-25.png",
       "group": "OUTFITTING & INTERIOR",
@@ -5389,9 +5473,84 @@
       "extracted_text": ""
     },
     {
+      "filename": "Decal locations 10-9-25.png",
+      "clean_filename": "Decal locations",
+      "id": "DR-179.0",
+      "uuid": "d70aadddfdb6",
+      "rel_path": "/drawings/output_images/OVERVIEW/Decal locations 10-9-25.png",
+      "group": "OVERVIEW",
+      "source_pdf": "Decal locations 10-9-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Decal locations 10-9-25.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 332830,
+      "date_info": {
+        "raw_date_string": "10-9-25",
+        "date": "2025-10-09",
+        "date_iso": "2025-10-09T00:00:00",
+        "year": 2025,
+        "month": 10,
+        "day": 9,
+        "formatted": "October 09, 2025",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
+      "filename": "Stbd bow decal detail.png",
+      "clean_filename": "Stbd bow decal detail",
+      "id": "DR-180.0",
+      "uuid": "a4aaa633f131",
+      "rel_path": "/drawings/output_images/OVERVIEW/Stbd bow decal detail.png",
+      "group": "OVERVIEW",
+      "source_pdf": "Stbd bow decal detail.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Stbd bow decal detail.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 121678,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
+      "filename": "Port bow decal detail.png",
+      "clean_filename": "Port bow decal detail",
+      "id": "DR-181.0",
+      "uuid": "6c22cba6f202",
+      "rel_path": "/drawings/output_images/OVERVIEW/Port bow decal detail.png",
+      "group": "OVERVIEW",
+      "source_pdf": "Port bow decal detail.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Port bow decal detail.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 124568,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": ""
+    },
+    {
       "filename": "Solander 38 lift points IBP & PLAN HJN 6-3-25.png",
       "clean_filename": "lift points IBP & PLAN",
-      "id": "DR-176.0",
+      "id": "DR-182.0",
       "uuid": "61e175d45189",
       "rel_path": "/drawings/output_images/OVERVIEW/Lift points etc/Solander 38 lift points IBP & PLAN HJN 6-3-25.png",
       "group": "OVERVIEW",
@@ -5422,7 +5581,7 @@
     {
       "filename": "Solander 38 lift points OBP HJN 6-3-25.png",
       "clean_filename": "lift points OBP",
-      "id": "DR-177.0",
+      "id": "DR-183.0",
       "uuid": "5d6ad1fc5b6d",
       "rel_path": "/drawings/output_images/OVERVIEW/Lift points etc/Solander 38 lift points OBP HJN 6-3-25.png",
       "group": "OVERVIEW",
@@ -5453,7 +5612,7 @@
     {
       "filename": "Solander 38 superstructure 4 views 8-13-24.png",
       "clean_filename": "superstructure 4 views",
-      "id": "DR-178.0",
+      "id": "DR-184.0",
       "uuid": "c19a2d195a1c",
       "rel_path": "/drawings/output_images/OVERVIEW/Prelim overviews 8-14-24/Solander 38 superstructure 4 views 8-13-24.png",
       "group": "OVERVIEW",
@@ -5484,7 +5643,7 @@
     {
       "filename": "Solander 38 perspective with windows & panels 8-14-24.png",
       "clean_filename": "perspective with windows & panels",
-      "id": "DR-179.0",
+      "id": "DR-185.0",
       "uuid": "12c60eb5bcf5",
       "rel_path": "/drawings/output_images/OVERVIEW/Prelim overviews 8-14-24/Solander 38 perspective with windows & panels 8-14-24.png",
       "group": "OVERVIEW",
@@ -5515,7 +5674,7 @@
     {
       "filename": "Solander 38 superstructure perspective overview 8-13-24.png",
       "clean_filename": "superstructure perspective overview",
-      "id": "DR-180.0",
+      "id": "DR-186.0",
       "uuid": "0bbf5c9f7c66",
       "rel_path": "/drawings/output_images/OVERVIEW/Prelim overviews 8-14-24/Solander 38 superstructure perspective overview 8-13-24.png",
       "group": "OVERVIEW",
@@ -5546,7 +5705,7 @@
     {
       "filename": "Solander 38 overview elevation views 4-10-25.png",
       "clean_filename": "overview elevation views",
-      "id": "DR-181.0",
+      "id": "DR-187.0",
       "uuid": "76d6215c4ec0",
       "rel_path": "/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview elevation views 4-10-25.png",
       "group": "OVERVIEW",
@@ -5577,7 +5736,7 @@
     {
       "filename": "Solander 38 overview perspective 4-10-25.png",
       "clean_filename": "overview perspective",
-      "id": "DR-182.0",
+      "id": "DR-188.0",
       "uuid": "5e37f388270d",
       "rel_path": "/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview perspective 4-10-25.png",
       "group": "OVERVIEW",
@@ -5608,7 +5767,7 @@
     {
       "filename": "Solander 38 overview profile 4-10-25.png",
       "clean_filename": "overview profile",
-      "id": "DR-183.0",
+      "id": "DR-189.0",
       "uuid": "6edaea769f92",
       "rel_path": "/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview profile 4-10-25.png",
       "group": "OVERVIEW",
@@ -5639,7 +5798,7 @@
     {
       "filename": "Solander 38 overview planview 4-10-25.png",
       "clean_filename": "overview planview",
-      "id": "DR-184.0",
+      "id": "DR-190.0",
       "uuid": "c948c95ff380",
       "rel_path": "/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview planview 4-10-25.png",
       "group": "OVERVIEW",
@@ -5670,7 +5829,7 @@
     {
       "filename": "Solander 38 working CG HJN 7-22-25.png",
       "clean_filename": "working CG",
-      "id": "DR-185.0",
+      "id": "DR-191.0",
       "uuid": "1229c69df139",
       "rel_path": "/drawings/output_images/OVERVIEW/WTS & HYDROS/Solander 38 working CG HJN 7-22-25.png",
       "group": "OVERVIEW",
@@ -5701,7 +5860,7 @@
     {
       "filename": "PRELIM steering sheet2 transv sect HJN 8-20-25.png",
       "clean_filename": "PRELIM steering sheet2 transv sect",
-      "id": "DR-186.0",
+      "id": "DR-192.0",
       "uuid": "795ca9883ff3",
       "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet2 transv sect HJN 8-20-25.png",
       "group": "CONTROL",
@@ -5732,7 +5891,7 @@
     {
       "filename": "PRELIM steering sheet1 planview HJN 8-20-25.png",
       "clean_filename": "PRELIM steering sheet1 planview",
-      "id": "DR-187.0",
+      "id": "DR-193.0",
       "uuid": "1bd9b7975d76",
       "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet1 planview HJN 8-20-25.png",
       "group": "CONTROL",
@@ -5763,7 +5922,7 @@
     {
       "filename": "PRELIM steering sheet3 long_l sects HJN 8-20-25.png",
       "clean_filename": "PRELIM steering sheet3 long_l sects",
-      "id": "DR-188.0",
+      "id": "DR-194.0",
       "uuid": "fa1f18ea4054",
       "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet3 long_l sects HJN 8-20-25.png",
       "group": "CONTROL",
@@ -5793,7 +5952,7 @@
     }
   ],
   "summary_statistics": {
-    "total_images": 194,
+    "total_images": 200,
     "unique_dimensions": [
       [
         2200,
@@ -5820,11 +5979,11 @@
         2200
       ]
     ],
-    "total_file_size_bytes": 73645969,
-    "average_width": 2969.0721649484535,
-    "average_height": 2358.2474226804125,
-    "average_pages_per_pdf": 1.0264550264550265,
-    "files_with_dates": 168,
-    "files_without_dates": 26
+    "total_file_size_bytes": 77345316,
+    "average_width": 2982.0,
+    "average_height": 2353.5,
+    "average_pages_per_pdf": 1.0256410256410255,
+    "files_with_dates": 171,
+    "files_without_dates": 29
   }
 }
