@@ -26,6 +26,11 @@ export default async function Page({
   const articles = await fetchArticles();
   const drawingsArticleDictionary = getDrawingArticleDictionary(articles.data);
   const index = drawings.files?.findIndex((d) => d.uuid == slug);
+  
+  const currentDrawing = drawings.files[index];
+  
+  const nextDrawing = drawings.files[index + 1] || drawings.files[0];
+  const prevDrawing = drawings.files[index - 1] || drawings.files[drawings.files.length - 1];
 
   return (
     <>
@@ -33,15 +38,13 @@ export default async function Page({
         type={"top-bar"}
         active={URLS.DRAWINGS}
         section={getSlugFromDrawingGroup(
-          drawings.files[index]?.group,
+          currentDrawing?.group,
         ).toLowerCase()}
       />
       <DrawingPage
-        asset={drawings.files[index]}
-        next={drawings.files[index + 1] || drawings.files[0]}
-        prev={
-          drawings.files[index - 1] || drawings.files[drawings.files.length - 1]
-        }
+        asset={currentDrawing}
+        next={nextDrawing}
+        prev={prevDrawing}
         drawingsArticleDictionary={drawingsArticleDictionary}
       />
     </>

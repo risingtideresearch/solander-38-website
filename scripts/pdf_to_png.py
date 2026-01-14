@@ -9,6 +9,18 @@ from datetime import datetime
 from pathlib import Path
 from pypdf import PdfReader
 
+# System order for organizing drawings
+SYSTEM_ORDER = [
+    "overview",
+    "power architecture",
+    "superstructure",
+    "control",
+    "propulsion",
+    "body",
+    "water & heating systems",
+    "outfitting & interior",
+]
+
 
 def sanitize_path(path):
     """
@@ -155,8 +167,32 @@ def parse_date(filename, full_text):
     
     return None
 
-def get_id(filename, group, len, i):
-    return f"DR-{len}.{i}"
+def normalize_group_name(group):
+    """Normalize group name to match SYSTEM_ORDER"""
+    normalized = group.lower().strip()
+    # Handle common variations
+    if normalized in SYSTEM_ORDER:
+        return normalized
+    # Try to find partial match
+    for system in SYSTEM_ORDER:
+        if system in normalized or normalized in system:
+            return system
+    return "unknown"
+
+def get_system_index(group):
+    """Get the index of a system in SYSTEM_ORDER for sorting"""
+    normalized = normalize_group_name(group)
+    try:
+        return SYSTEM_ORDER.index(normalized)
+    except ValueError:
+        return len(SYSTEM_ORDER)  # Put unknowns at the end
+
+def get_id(system_code, counter):
+    """
+    Generate hierarchical ID: SYSTEM_CODE-NUMBER
+    Examples: OV-1, OV-2, PA-1, PA-2, etc.
+    """
+    return f"{system_code}–{counter}"
 
 def generate_image_uuid_from_content(img_path, uuids):
     """
@@ -184,7 +220,7 @@ def generate_image_uuid_from_content(img_path, uuids):
     
     return content_hash
 
-def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, thumbnail_size=(300, 300), thumbnail_dpi=300, global_uuids=None):
+def convert_pdf_to_png(pdf_path, output_folder="output_images", dpi=200, thumbnail_size=(300, 300), thumbnail_dpi=300, global_uuids=None):
     """
     Converts a PDF file into a series of PNG images, one for each page.
     Also creates thumbnail versions of each image.
@@ -192,7 +228,6 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
 
     Args:
         pdf_path (str): The path to the input PDF file.
-        count (int): Counter for generating IDs
         output_folder (str): The directory to save the output PNG images.
         dpi (int): The resolution (dots per inch) for the output images.
                    Higher DPI results in better quality but larger file sizes.
@@ -202,7 +237,7 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
         global_uuids (set): Set of UUIDs used across all PDFs for duplicate detection.
     
     Returns:
-        list: List of dictionaries with file information, or None if conversion failed.
+        list: List of dictionaries with file information (without IDs), or None if conversion failed.
     """
     # Initialize global_uuids if not provided
     if global_uuids is None:
@@ -259,14 +294,10 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
             # Sanitize group name
             group = sanitize_path(output_filename.split('/')[6])
             if (len(group) < 2):
-                group = "xx"
-                
-            # human readable and stable ids
-            id = get_id(pdf_base_name, group, count, i)
+                group = "unknown"
+            
             uuid = generate_image_uuid_from_content(str(os.path.relpath(output_filename)), global_uuids)
             global_uuids.add(uuid)  # Add to the global set
-            
-            print(id, uuid)
             
             # Sanitize all paths in file info
             rel_path = sanitize_path(os.path.relpath(output_filename).replace('../frontend/public', ''))
@@ -274,14 +305,18 @@ def convert_pdf_to_png(pdf_path, count, output_folder="output_images", dpi=200, 
             
             author = {"slug": "henry-nolan", "name": "Henry Nolan"}
             
-            # Create file info dictionary
+            # Normalize group for sorting
+            normalized_group = normalize_group_name(group)
+            
+            # Create file info dictionary WITHOUT id (will be assigned later)
             file_info = {
                 "filename": os.path.basename(output_filename),
                 "clean_filename": clean_filename(os.path.basename(output_filename)),
-                "id": id,
                 "uuid": uuid,
                 "rel_path": rel_path,
                 "group": group,
+                "normalized_group": normalized_group,  # For sorting
+                "system_index": get_system_index(group),  # For sorting
                 "source_pdf": sanitize_path(os.path.basename(pdf_path)),
                 "source_pdf_full_path": source_pdf_full_path,
                 "page_number": i + 1,
@@ -328,6 +363,79 @@ def find_all_pdfs_recursive(root_directory):
             if file.lower().endswith('.pdf'):
                 pdf_files.append(os.path.join(root, file))
     return pdf_files
+
+def sort_files_by_system_and_date(all_files_info):
+    """
+    Sort files by system (using SYSTEM_ORDER), then by date within each system.
+    Assigns hierarchical IDs like OV-1, OV-2, PA-1, PA-2, etc.
+    
+    Args:
+        all_files_info (list): List of file info dictionaries
+        
+    Returns:
+        list: Sorted list of file info dictionaries with IDs assigned
+    """
+    # Sort by:
+    # 1. System order (system_index)
+    # 2. Date (descending - newest first, None dates go last)
+    # 3. Filename (for stable sorting of undated items)
+    
+    def sort_key(file_info):
+        system_idx = file_info["system_index"]
+        
+        # For date sorting: use a very old date for None dates to push them to end
+        if file_info["date_info"]:
+            date_sort = file_info["date_info"]["date_iso"]
+        else:
+            date_sort = "0000-00-00"  # Sorts before any real date
+        
+        filename = file_info["filename"]
+        
+        return (system_idx, date_sort, filename)
+    
+    # Sort with newest dates first within each system (reverse=True for date)
+    sorted_files = sorted(all_files_info, key=lambda x: (
+        x["system_index"],
+        x["date_info"]["date_iso"] if x["date_info"] else "0000-00-00",
+        x["filename"]
+    ), reverse=False)
+    
+    # Now reverse only the date ordering within each system
+    # Group by system, reverse dates, then flatten
+    from itertools import groupby
+    
+    final_sorted = []
+    for system_idx, group in groupby(sorted_files, key=lambda x: x["system_index"]):
+        system_files = list(group)
+        
+        # Separate dated and undated files
+        dated = [f for f in system_files if f["date_info"]]
+        undated = [f for f in system_files if not f["date_info"]]
+        
+        # Sort dated files newest first
+        dated.sort(key=lambda x: x["date_info"]["date_iso"], reverse=True)
+        
+        # Combine: dated first (newest to oldest), then undated
+        final_sorted.extend(dated + undated)
+    
+    system_counters = {}
+    
+    print("\n=== Assigned IDs by System ===")
+    for file_info in final_sorted:
+        normalized_group = file_info["normalized_group"]
+        
+        system_code = "DR" 
+        
+        if system_code not in system_counters:
+            system_counters[system_code] = 0
+        system_counters[system_code] += 1
+        
+        file_info["id"] = get_id(system_code, system_counters[system_code])
+        
+        date_str = file_info['date_info']['formatted'] if file_info['date_info'] else 'No date'
+        print(f"{file_info['id']:8} | {normalized_group:25} | {date_str:20} | {file_info['uuid']}")
+    
+    return final_sorted
 
 def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbnail_size=(300, 300), thumbnail_dpi=300):
     
@@ -396,7 +504,7 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
             # All images go to the same output folder
             current_output_folder = output_folder
         
-        file_info_list = convert_pdf_to_png(pdf_file, successful_conversions, current_output_folder, dpi, thumbnail_size, thumbnail_dpi, global_uuids)
+        file_info_list = convert_pdf_to_png(pdf_file, current_output_folder, dpi, thumbnail_size, thumbnail_dpi, global_uuids)
         
         if file_info_list:
             successful_conversions += 1
@@ -406,6 +514,9 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
             pdf_page_counts[pdf_name] = len(file_info_list)
         else:
             failed_conversions += 1
+    
+    # Sort files by system and date, then assign IDs
+    all_files_info = sort_files_by_system_and_date(all_files_info)
     
     # Generate manifest file
     if all_files_info:
@@ -430,7 +541,11 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
                 "average_height": sum(info["height"] for info in all_files_info) / len(all_files_info) if all_files_info else 0,
                 "average_pages_per_pdf": sum(pdf_page_counts.values()) / len(pdf_page_counts) if pdf_page_counts else 0,
                 "files_with_dates": sum(1 for info in all_files_info if info["date_info"] is not None),
-                "files_without_dates": sum(1 for info in all_files_info if info["date_info"] is None)
+                "files_without_dates": sum(1 for info in all_files_info if info["date_info"] is None),
+                "files_by_system": {
+                    system: sum(1 for info in all_files_info if info["normalized_group"] == system)
+                    for system in SYSTEM_ORDER
+                }
             }
         }
         
@@ -443,7 +558,7 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
         studio_manifest_path = os.path.join("./../studio/script_output/", "drawing_conversion_manifest.json")
         with open(studio_manifest_path, 'w', encoding='utf-8') as f:
             json.dump(manifest_data, f, indent=2, ensure_ascii=False)
-        print("File copied to sanity studio", studio_manifest_path)
+        print("\nFile copied to sanity studio", studio_manifest_path)
         
         # Create UUID to rel_path mapping
         uuid_mapping = {}
@@ -454,6 +569,7 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
                 "clean_filename": info["clean_filename"],
                 "id": info["id"],
                 "group": info["group"],
+                "normalized_group": info["normalized_group"],
                 "source_pdf_full_path": info["source_pdf_full_path"],
                 "width": info["width"],
                 "height": info["height"],

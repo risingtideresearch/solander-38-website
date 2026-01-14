@@ -16,13 +16,14 @@ function filterDrawings(drawings, section) {
 }
 
 function sortDrawingsByGroup(drawings: Array<Drawing>) {
-  return [...drawings]
-    .sort((a, b) => a.rel_path.localeCompare(b.rel_path))
-    .sort((a, b) => {
-      const aGroup = a.group.toLowerCase();
-      const bGroup = b.group.toLowerCase();
-      return SYSTEM_ORDER.indexOf(aGroup) - SYSTEM_ORDER.indexOf(bGroup);
-    });
+  return drawings
+  // return [...drawings]
+  //   .sort((a, b) => a.rel_path.localeCompare(b.rel_path))
+  //   .sort((a, b) => {
+  //     const aGroup = a.group.toLowerCase();
+  //     const bGroup = b.group.toLowerCase();
+  //     return SYSTEM_ORDER.indexOf(aGroup) - SYSTEM_ORDER.indexOf(bGroup);
+  //   });
 }
 
 function getGroupKey(drawing: Drawing, mode): string {

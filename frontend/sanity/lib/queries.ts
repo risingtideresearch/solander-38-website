@@ -172,6 +172,16 @@ export const annotationsQuery = `
 export const peopleQuery = `
 *[_type=="person"]{
     ...,
+    image {
+      ...,
+      asset -> {
+        ...,
+        
+        metadata {
+          ...,
+        }
+      }
+    },
     "articlesAsAuthor": *[_type=="article" && isLive == true && ^._id in authors[]->_id]{
       _id,
       title,
@@ -330,8 +340,8 @@ export const sectionsQuery = (slug?: string) => {
 };
 
 /**
- * 
- * @returns 
+ *
+ * @returns
  */
 export const homepageQuery = () => {
   return `
@@ -347,7 +357,7 @@ export const homepageQuery = () => {
       }
     },
   }`;
-}
+};
 
 /**
  * Minimal query used to assign story ID

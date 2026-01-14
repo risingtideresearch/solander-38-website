@@ -2,6 +2,7 @@ import { fetchPeople } from "@/sanity/lib/utils";
 import styles from "./people.module.scss";
 import { getDrawingsManifest } from "../manifest-util";
 import { URLS } from "../components/Navigation/Navigation";
+import { Image } from "../components/Image";
 
 export default async function Page() {
   const people = await fetchPeople();
@@ -24,9 +25,7 @@ export default async function Page() {
       </h1>
       <main>
         <section className="section--two-col">
-          <div>
-            {/* <h6 style={{ textAlign: "right", margin: "0.625rem 0" }}>People</h6> */}
-          </div>
+          <div></div>
           <div style={{ margin: "0 0 -1px -1px" }}>
             {people.data
               .sort((a, b) => a.name.localeCompare(b.name))
@@ -37,8 +36,10 @@ export default async function Page() {
                     id={person.slug?.current}
                     className={styles.person}
                   >
-                    <div style={{marginTop: 0}}>
-                      <div></div>
+                    <div style={{ marginTop: 0, alignItems: 'flex-end' }}>
+                      <div style={{paddingRight: '0.5rem'}}>
+                        {person.image ? <Image src={person.image} square={true} width={72}/> : <></>}
+                      </div>
                       <div>
                         <p
                           style={{

@@ -29,7 +29,7 @@ export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
                 height={asset.height}
                 width={asset.width}
                 loading="eager"
-                alt={asset}
+                alt={`${asset.clean_filename}`}
               />
             </div>
           </div>
