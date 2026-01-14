@@ -74,6 +74,20 @@
     backdrop-filter: blur(8px);
   }
 
+  &__results {
+    > div {
+      > h6 {
+        margin: 1.25rem 0 0 0;
+        text-align: center;
+      }
+      &:first-child {
+        h6 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
   &__result {
     a {
       margin: 0.5rem 0;

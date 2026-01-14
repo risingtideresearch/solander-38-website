@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { searchDrawings } from "./util";
 import { getPhotoURL } from "@/app/photos/util";
 import { MdPerson } from "react-icons/md";
+import { URLS } from "../Navigation/Navigation";
 
 export default function SearchClient({ drawings, type }) {
   const [active, setActive] = useState(false);
@@ -104,9 +105,11 @@ export default function SearchClient({ drawings, type }) {
   const getURL = (doc) => {
     switch (doc._type) {
       case "article":
-        return `/stories/${doc.slug.current}`;
+        return `${URLS.STORIES}/${doc.slug.current}`;
       case "drawing":
-        return `/drawings/file/${doc.uuid}`;
+        return `${URLS.DRAWINGS}/file/${doc.uuid}`;
+      case "person":
+        return `${URLS.PEOPLE}#${doc.slug}`
       case "sanity.imageAsset":
         return getPhotoURL(doc);
       default:

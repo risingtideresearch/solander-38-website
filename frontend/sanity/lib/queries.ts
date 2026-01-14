@@ -492,11 +492,13 @@ export const searchQuery = () => `
     originalFilename,
     _id,
     url,
-    "thumbnailUrl": url + "?w=64&h=64&fit=crop"
+    "thumbnailUrl": url + "?w=128&h=128&fit=crop"
   },
   _type == "person" => {
     "title": name,
     _id,
+    "slug": slug.current,
+    "thumbnailUrl": image.asset->url + "?w=128&h=128&fit=crop"
   }
 }`;
 
