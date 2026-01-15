@@ -21,7 +21,7 @@ const components = {
     ),
     inlineImage: ({ value }) => (
       <figure
-        className={value.fullBleed ? styles.full_image : styles.inline_image}
+        className={styles.inline_image}
       >
         <a href={getPhotoURL(value.image.asset)}>
           <Image

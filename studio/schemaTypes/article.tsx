@@ -180,10 +180,6 @@ export const article = defineType({
           name: 'inlineImage',
           fields: [
             defineField({
-              type: 'boolean',
-              name: 'fullBleed',
-            }),
-            defineField({
               name: 'image',
               type: 'image',
               options: {

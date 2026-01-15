@@ -3,6 +3,7 @@ import styles from "./people.module.scss";
 import { getDrawingsManifest } from "../manifest-util";
 import { URLS } from "../components/Navigation/Navigation";
 import { Image } from "../components/Image";
+import { LiaArrowUpSolid } from "react-icons/lia";
 
 export default async function Page() {
   const people = await fetchPeople();
@@ -36,45 +37,101 @@ export default async function Page() {
                     id={person.slug?.current}
                     className={styles.person}
                   >
-                    <div style={{ marginTop: 0, alignItems: 'flex-end' }}>
-                      <div style={{paddingRight: '0.5rem'}}>
-                        {person.image ? <Image src={person.image} square={true} width={72}/> : <></>}
-                      </div>
+                    <div style={{ marginTop: 0, alignItems: "flex-end" }}>
                       <div>
-                        <p
-                          style={{
-                            fontWeight: 600,
-                          }}
-                        >
-                          {person.name}
+                        {person.image ? (
+                          <Image src={person.image} square={true} width={72} />
+                        ) : (
+                          // <div
+                          //   style={{
+                          //     width: "5.5rem",
+                          //     aspectRatio: 1,
+                          //     border: "1px solid var(--border)",
+                          //     display: "flex",
+                          //     alignItems: "center",
+                          //     justifyContent: "center",
+                          //   }}
+                          // >
+                          //   <MdOutlinePerson color="var(--border)" size={24} />
+                          // </div>
+                          <></>
+                        )}
+                      </div>
+
+                      <div>
+                        <p>
+                          <span
+                            style={{
+                              fontWeight: 600,
+                            }}
+                          >
+                            {person.name}
+                          </span>
+                          &nbsp;&mdash;&nbsp;{person.role}
                         </p>
-                        {(person.affiliations || []).map((item) => {
-                          if (item.url) {
-                            return (
-                              <p key={item.url}>
-                                <a href={item.url} target="_blank">
-                                  {item.label ||
-                                    item.url
-                                      .replace("https://", "")
-                                      .replace(".com/", ".com")}
-                                </a>
-                              </p>
-                            );
-                          }
-                          return <p key={item.label}>{item.label}</p>;
-                        })}
+
+                        {person.affiliations ? (
+                          <div style={{ marginTop: "1rem" }}>
+                            {(person.affiliations || []).map((item) => {
+                              if (item.url) {
+                                return (
+                                  <p key={item.url}>
+                                    <a
+                                      href={item.url}
+                                      style={{
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        gap: "0.25rem",
+                                      }}
+                                      target="_blank"
+                                    >
+                                      {item.label ||
+                                        item.url
+                                          .replace("https://", "")
+                                          .replace(".com/", ".com")}
+
+                                      <LiaArrowUpSolid
+                                        style={{ transform: "rotate(45deg)" }}
+                                        size={16}
+                                      />
+                                    </a>
+                                  </p>
+                                );
+                              }
+                              return <p key={item.label}>{item.label}</p>;
+                            })}
+                          </div>
+                        ) : (
+                          <></>
+                        )}
                       </div>
                     </div>
-                    {person.role ? (
+                    {/* {person.affiliations ? (
                       <div>
-                        <h6>Role</h6>
+                        <h6>Affiliations</h6>
                         <div>
-                          <p>{person.role}</p>
+                          {(person.affiliations || []).map((item) => {
+                            if (item.url) {
+                              return (
+                                <p key={item.url}>
+                                  <a href={item.url} target="_blank">
+                                    {item.label ||
+                                      item.url
+                                        .replace("https://", "")
+                                        .replace(".com/", ".com")}
+
+                                      <LiaExternalLinkAltSolid size={16} />
+                                  </a>
+                                </p>
+                              );
+                            }
+                            return <p key={item.label}>{item.label}</p>;
+                          })}
                         </div>
                       </div>
                     ) : (
                       <></>
-                    )}
+                    )} */}
                     {person.articlesAsAuthor.length > 0 ? (
                       <div>
                         <h6>Author</h6>
