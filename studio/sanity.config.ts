@@ -8,7 +8,7 @@ import {structure} from './structure'
 
 export default defineConfig({
   name: 'default',
-  title: 'Rising Tide Research Foundation',
+  title: 'Solander 38',
 
   projectId: process.env.SANITY_STUDIO_PROJECT_ID || '',
   dataset: 'production',

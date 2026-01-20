@@ -19,6 +19,10 @@ export const person = defineType({
     defineField({
       name: 'image',
       type: 'image',
+      options: {
+        hotspot: true,
+        metadata: ['blurhash', 'lqip', 'palette', 'exif', 'location'],
+      },
     }),
     defineField({
       name: 'slug',

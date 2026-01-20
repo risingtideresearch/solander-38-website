@@ -5,7 +5,7 @@ export default defineCliConfig({
     projectId: process.env.SANITY_STUDIO_PROJECT_ID,
     dataset: 'production'
   },
-  studioHost: 'rising-tide',
+  studioHost: 'rtrf-solander',
   mediaLibrary: {
     // set the path relative to the location of sanity.cli.ts.
     aspectsPath: 'aspects',
