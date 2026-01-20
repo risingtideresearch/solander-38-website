@@ -15,6 +15,7 @@ import {person} from './person'
 // import {timeline} from './timeline'
 // import {annotation} from './annotation'
 import { section, sections } from './sections'
+import { system, systems } from './systems'
 
 export const schemaTypes = [
   article,
@@ -26,7 +27,7 @@ export const schemaTypes = [
   materials,
   material,
   person,
-  section,
-  sections,
+  system,
+  systems,
   homepage,
 ]

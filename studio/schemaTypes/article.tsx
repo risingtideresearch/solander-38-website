@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {RiArticleLine} from 'react-icons/ri'
-import {CubeIcon, InlineIcon} from '@sanity/icons'
+import {ChartUpwardIcon, CubeIcon, InlineIcon} from '@sanity/icons'
 import ModelDropdownInput from '../components/ModelDropdownInput'
 import DrawingDropdownInput, {
   getDrawingId,
@@ -20,7 +20,8 @@ export const article = defineType({
     defineField({
       name: 'isLive',
       type: 'boolean',
-      description: 'Toggle on to publish story content to the site. While this is off, only subtitle and associated models/materials will be visible for this story.'
+      description:
+        'Toggle on to publish story content to the site. While this is off, only subtitle and associated models/materials will be visible for this story.',
     }),
     defineField({
       name: 'subtitle',
@@ -56,7 +57,7 @@ export const article = defineType({
         defineField({
           type: 'block',
           name: 'child',
-          styles: [{title: 'Heading 2', value: 'h2'}],
+          styles: [{title: 'Heading', value: 'h2'}],
           lists: [
             {title: 'Bullet', value: 'bullet'},
             {title: 'Numbered', value: 'number'},
@@ -90,9 +91,7 @@ export const article = defineType({
                     name: 'reference',
                     type: 'reference',
                     title: 'Reference',
-                    to: [
-                      {type: 'article'},
-                    ],
+                    to: [{type: 'article'}],
                   },
                 ],
               },
@@ -263,6 +262,25 @@ export const article = defineType({
                 }),
               ],
             },
+          ],
+        }),
+        defineField({
+          name: 'chart',
+          type: 'object',
+          icon: ChartUpwardIcon,
+          fields: [
+            {
+              name: 'title',
+              type: 'string',
+            },
+            defineField({
+              name: 'type',
+              type: 'string',
+              options: {
+                layout: 'dropdown',
+                list: ['range chart'],
+              },
+            }),
           ],
         }),
       ],

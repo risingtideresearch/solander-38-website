@@ -34,7 +34,7 @@ export default async function Page({
       ? data.allImages[currentIndex + 1]
       : data.allImages[0];
 
-  const section = current.usedInArticles[0]?.section || {};
+  const section = current.usedInArticles[0]?.system || {};
 
   return (
     <>

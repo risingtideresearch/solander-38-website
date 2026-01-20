@@ -4,7 +4,7 @@ import "./../globals.scss";
 import Search from "./../components/Search/Search";
 
 export const metadata: Metadata = {
-  title: "Rising Tide Research Foundation",
+  title: "Solander 38 Anatomy",
   description: "",
   icons: "https://solander38.netlify.app/rising-tide.svg",
 };

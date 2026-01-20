@@ -31,7 +31,7 @@ export function getDrawingArticleDictionary(
             dictionary[item.drawing].push({
               slug: article.slug,
               title: article.title,
-              section: article.section,
+              system: article.system,
               _id: article._id,
             });
           }

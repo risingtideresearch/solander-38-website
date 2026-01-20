@@ -2,22 +2,22 @@ import {defineField, defineType} from 'sanity'
 import {RiBook2Line} from 'react-icons/ri'
 import { SYSTEM_ORDER } from '../consts'
 
-export const sections = defineType({
-  name: 'sections',
+export const systems = defineType({
+  name: 'systems',
   type: 'document',
   icon: RiBook2Line,
   fields: [
     defineField({
-      name: 'sections',
+      name: 'systems',
       type: 'array',
       of: [
         {
-          type: 'section',
+          type: 'system',
         }
       ],
       // Initialize with one entry per system
       initialValue: SYSTEM_ORDER.map((system) => ({
-        _type: 'section',
+        _type: 'system',
         name: system,
         slug: {
           _type: 'slug',
@@ -32,14 +32,14 @@ export const sections = defineType({
     },
     prepare({}) {
       return {
-        title: 'Sections'
+        title: 'systems'
       }
     }
   }
 })
 
-export const section = defineType({
-  name: 'section',
+export const system = defineType({
+  name: 'system',
   type: 'object',
   icon: RiBook2Line,
   fields: [
@@ -74,10 +74,6 @@ export const section = defineType({
           ],
         },
       ],
-    }),
-    defineField({
-      name: 'description',
-      type: 'text',
     }),
   ],
   preview: {

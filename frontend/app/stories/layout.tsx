@@ -6,7 +6,7 @@ import Search from "../components/Search/Search";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Rising Tide Research Foundation",
+  title: "Solander 38 Stories",
   description: "",
   icons: "https://solander38.netlify.app/rising-tide.svg",
 };

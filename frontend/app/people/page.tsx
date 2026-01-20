@@ -67,11 +67,12 @@ export default async function Page() {
                           >
                             {person.name}
                           </span>
-                          &nbsp;&mdash;&nbsp;{person.role}
+                          {/* &nbsp;&mdash;&nbsp;{person.role} */}
                         </p>
+                        <p>{person.role}</p>
 
                         {person.affiliations ? (
-                          <div style={{ marginTop: "1rem" }}>
+                          <div>
                             {(person.affiliations || []).map((item) => {
                               if (item.url) {
                                 return (
@@ -108,7 +109,7 @@ export default async function Page() {
                     </div>
                     {/* {person.affiliations ? (
                       <div>
-                        <h6>Affiliations</h6>
+                        <h6>Links</h6>
                         <div>
                           {(person.affiliations || []).map((item) => {
                             if (item.url) {
@@ -120,7 +121,10 @@ export default async function Page() {
                                         .replace("https://", "")
                                         .replace(".com/", ".com")}
 
-                                      <LiaExternalLinkAltSolid size={16} />
+                                    <LiaArrowUpSolid
+                                      style={{ transform: "rotate(45deg)" }}
+                                      size={16}
+                                    />
                                   </a>
                                 </p>
                               );
@@ -151,7 +155,7 @@ export default async function Page() {
                                     marginTop: "0.0625rem",
                                   }}
                                 >
-                                  {article.section?.name}&nbsp;/&nbsp;
+                                  {article.system?.name}&nbsp;/&nbsp;
                                 </span>
                                 {article.title}
                               </a>
@@ -181,7 +185,7 @@ export default async function Page() {
                                     marginTop: "0.0625rem",
                                   }}
                                 >
-                                  {article.section?.name}&nbsp;/&nbsp;
+                                  {article.system?.name}&nbsp;/&nbsp;
                                 </span>
                                 {article.title}
                               </a>

@@ -9,7 +9,7 @@ import {
   homepageQuery,
   materialsQuery,
   peopleQuery,
-  sectionsQuery,
+  systemsQuery,
 } from "./queries";
 import { sanityFetch, sanityFetchStatic } from "./live";
 
@@ -59,10 +59,10 @@ export async function fetchMaterials() {
  *
  * @returns
  */
-export async function fetchSections(slug?: string) {
-  const { data } = await sanityFetch({ query: sectionsQuery(slug) });
+export async function fetchSystems(slug?: string) {
+  const { data } = await sanityFetch({ query: systemsQuery(slug) });
 
-  data.sections.forEach((section, i) => {
+  data.systems?.forEach((section, i) => {
     section.articles.forEach((article, j) => {
       article.articleId = `${i + 1}–${String.fromCharCode(65 + j)}`
     })
@@ -71,8 +71,8 @@ export async function fetchSections(slug?: string) {
   return { data };
 }
 
-export async function fetchSectionsStatic(slug?: string) {
-  const data = await sanityFetchStatic({ query: sectionsQuery(slug) });
+export async function fetchSystemsStatic(slug?: string) {
+  const data = await sanityFetchStatic({ query: systemsQuery(slug) });
 
   return { data };
 }
@@ -133,7 +133,7 @@ export async function fetchHomepage() {
  *
  */
 export async function fetchTableOfContents() {
-  const { data } = await sanityFetch({ query: sectionsQuery() });
+  const { data } = await sanityFetch({ query: systemsQuery() });
 
   return data;
 }

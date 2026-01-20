@@ -20,9 +20,7 @@ const components = {
       </figure>
     ),
     inlineImage: ({ value }) => (
-      <figure
-        className={styles.inline_image}
-      >
+      <figure className={styles.inline_image}>
         <a href={getPhotoURL(value.image.asset)}>
           <Image
             src={value.image}
@@ -62,6 +60,8 @@ const components = {
         </AnatomyPane>
       </>
     ),
+    chart: ({ value }) =>
+      value.type == "range chart" ? <RangeChart title={value.title} /> : <></>,
     person: ({ value }) => {
       return (
         <a
@@ -120,7 +120,7 @@ export default async function Article({ data, materials = [] }) {
       <div className={`bg--grid ${styles.header}`}>
         <div>
           <div style={{ marginTop: "0.625rem" }}>
-            <h6>{data.section?.name}</h6>
+            <h6>{data.system?.name}</h6>
             <h1>{data.title}</h1>
           </div>
           <AnatomyPane
@@ -144,7 +144,7 @@ export default async function Article({ data, materials = [] }) {
                 settings={{
                   transparent:
                     data.slug?.current != "hull-and-deck" &&
-                    data.section?.slug?.current != "overview",
+                    data.system?.slug?.current != "overview",
                 }}
                 interaction={"limited"}
               />
@@ -189,7 +189,6 @@ export default async function Article({ data, materials = [] }) {
           <p>
             <em>{data.subtitle}</em>
           </p>
-          {data.slug.current == "range" ? <RangeChart /> : <></>}
           {data.isLive ? (
             <PortableText value={data.content} components={components} />
           ) : (

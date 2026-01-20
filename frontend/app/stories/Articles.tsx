@@ -1,9 +1,9 @@
 import styles from "./articles.module.scss";
-import { fetchSections } from "@/sanity/lib/utils";
+import { fetchSystems } from "@/sanity/lib/utils";
 import { formatDate } from "../utils";
 
 export default async function Articles({ subtitles }) {
-  const { data } = await fetchSections();
+  const { data } = await fetchSystems();
 
   return (
     <>
@@ -17,7 +17,7 @@ export default async function Articles({ subtitles }) {
         Table of contents
       </h1>
       <main className={styles.articles}>
-        {(data.sections || []).map((section, i) => (
+        {(data.systems || []).map((section, i) => (
           <section className="section--two-col" key={section._key}>
             <div></div>
             <div>

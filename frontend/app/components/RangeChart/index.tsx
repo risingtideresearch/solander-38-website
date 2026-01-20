@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./range-chart.module.scss";
 import table from './../MaterialsTable/materials.module.scss';
 
-export default function RangeChart() {
+export default function RangeChart({ title = "Range / Speed / Power"}) {
   const [tooltip, setTooltip] = useState<{
     x: number;
     y: number;
@@ -125,7 +125,7 @@ export default function RangeChart() {
   return (
     <div className={styles.chartContainer}>
       <div className={styles.chartWrapper}>
-        <h2>Range / Speed / Power</h2>
+        <h2>{title}</h2>
         <svg viewBox={`0 0 ${dim[0]} ${dim[1]}`}>
           {/* <defs>
             <pattern

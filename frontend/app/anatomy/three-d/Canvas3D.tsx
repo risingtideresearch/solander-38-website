@@ -224,6 +224,9 @@ export function Canvas3D({
 
   return (
     <div style={{ height: height }}>
+      {/* <button style={{ position: "fixed", zIndex: 10000, top: '50%' }} onClick={downloadImage}>
+        download{" "}
+      </button> */}
       <div
         style={{
           opacity: centered ? 1 : 0,

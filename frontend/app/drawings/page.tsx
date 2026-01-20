@@ -1,19 +1,19 @@
 import Drawings from "./Drawings";
-import { fetchSections } from "@/sanity/lib/utils";
+import { fetchSystems } from "@/sanity/lib/utils";
 import Navigation, { URLS } from "../components/Navigation/Navigation";
 import { getDrawingsManifest } from "../manifest-util";
 
 export default async function Page() {
   const drawings = getDrawingsManifest();
 
-  const sections = await fetchSections();
+  const sections = await fetchSystems();
 
   return (
     <>
       <Navigation type={"top-bar"} active={URLS.DRAWINGS} />
       <Drawings
         drawings={drawings}
-        sections={sections?.data.sections || []}
+        sections={sections?.data.systems || []}
         section={"overview"}
       />
     </>

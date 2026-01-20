@@ -2,28 +2,28 @@ import TableOfContents from "@/app/toc/TableOfContents";
 import {
   fetchArticles,
   fetchComponents,
-  fetchSections,
-  fetchSectionsStatic,
+  fetchSystems,
+  fetchSystemsStatic,
 } from "@/sanity/lib/utils";
 import Anatomy from "../Anatomy";
 import styles from "./page.module.scss";
 import { getMaterialsManifest, getModelManifest } from "@/app/manifest-util";
 
 export async function generateStaticParams() {
-  const sections = await fetchSectionsStatic();
+  const systems = await fetchSystemsStatic();
   const slugs = [
     {
       slug: [],
     },
   ];
-  sections.data.sections.forEach((section) => {
+  systems.data.systems.forEach((system) => {
     slugs.push({
-      slug: [section.slug],
+      slug: [system.slug],
     });
 
-    section.articles.forEach((article) => {
+    system.articles.forEach((article) => {
       slugs.push({
-        slug: [section.slug, article.slug],
+        slug: [system.slug, article.slug],
       });
     });
   });
@@ -40,14 +40,14 @@ export default async function Page({
   const models_manifest = getModelManifest();
   const materials_index = getMaterialsManifest();
 
-  const sections = await fetchSections();
+  const systems = await fetchSystems();
 
   const articles = await fetchArticles();
 
   const componentParts = await fetchComponents();
 
-  let defaultSection = sections.data.sections.find(
-    (section) => section.slug == slug,
+  let defaultSection = systems.data.systems.find(
+    (system) => system.slug == slug,
   );
   const defaultArticle = articles.data.find((article) => article.slug == slug);
   if (defaultArticle) {
@@ -58,7 +58,7 @@ export default async function Page({
     <>
       <div className={styles.page} style={{backgroundPositionY: '2rem'}}>
         <TableOfContents
-          sections={sections?.data.sections || []}
+          sections={systems?.data.systems || []}
           defaultSection={defaultSection?.slug || null}
           defaultArticle={defaultArticle || null}
         >

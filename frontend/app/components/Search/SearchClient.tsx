@@ -244,8 +244,8 @@ export default function SearchClient({ drawings, type }) {
                       </h6>
                       {groupedResults[resultType]
                         .sort((a, b) => {
-                          if (a.section && b.section) {
-                            return a.section.name.localeCompare(b.section.name);
+                          if (a.system && b.system) {
+                            return a.system.name.localeCompare(b.system.name);
                           }
                           return 0;
                         })
@@ -289,7 +289,7 @@ export default function SearchClient({ drawings, type }) {
                                   <></>
                                 )}
                                 <p style={{ margin: 0 }}>
-                                  {result.section ? (
+                                  {result.system ? (
                                     <span
                                       style={{
                                         textTransform: "uppercase",
@@ -297,7 +297,7 @@ export default function SearchClient({ drawings, type }) {
                                         marginRight: "0.25rem",
                                       }}
                                     >
-                                      {result.section?.name} /
+                                      {result.system?.name} /
                                     </span>
                                   ) : (
                                     <></>

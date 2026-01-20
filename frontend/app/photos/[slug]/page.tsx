@@ -1,12 +1,12 @@
-import { fetchPhotos, fetchSections, fetchSectionsStatic } from "@/sanity/lib/utils";
+import { fetchPhotos, fetchSystems, fetchSystemsStatic } from "@/sanity/lib/utils";
 import Navigation, { URLS } from "../../components/Navigation/Navigation";
 import PhotoGallery from "./../PhotoGallery";
 import MinimalTOC from "../../toc/MinimalTOC";
 import styles from './../photos.module.scss';
 
 export async function generateStaticParams() {
-  const sections = await fetchSectionsStatic();
-  return sections.data.sections.map(section => (
+  const sections = await fetchSystemsStatic();
+  return sections.data.systems.map(section => (
     {
       slug: section.slug
     }
@@ -21,7 +21,7 @@ export default async function Page({
   const { slug } = await params;
   const photos = await fetchPhotos(slug);
   
-  const sections = await fetchSections();
+  const sections = await fetchSystems();
 
   return (
     <>
@@ -29,7 +29,7 @@ export default async function Page({
        <main className={styles.main}>
         <div className="section--two-col">
           <div>
-            <MinimalTOC sections={sections.data.sections} url={URLS.PHOTOS} section={slug} />
+            <MinimalTOC sections={sections.data.systems} url={URLS.PHOTOS} section={slug} />
           </div>
           <div>
             <PhotoGallery photos={photos.data} />

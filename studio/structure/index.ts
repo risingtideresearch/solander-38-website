@@ -4,7 +4,7 @@ import type {ListItemBuilder, StructureResolver} from 'sanity/structure'
 export const structure: StructureResolver = (S) => {
   const notBoat = ['person', 'location', 'timeline']
   const textDocs = ['article', 'annotation']
-  const singletons = ['sections', 'materials', 'homepage']
+  const singletons = ['systems', 'materials', 'homepage']
 
   return S.list()
     .title('Content')
@@ -19,10 +19,10 @@ export const structure: StructureResolver = (S) => {
         .icon(RiHome2Line)
         .child(S.document().schemaType('homepage').documentId('homepage')),
       S.listItem()
-        .title('Sections')
-        .id('sections')
+        .title('Systems')
+        .id('systems')
         .icon(RiBook2Line)
-        .child(S.document().schemaType('sections').documentId('sections')),
+        .child(S.document().schemaType('systems').documentId('systems')),
       S.listItem()
         .title('Materials')
         .id('materials')

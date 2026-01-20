@@ -1,11 +1,20 @@
 import styles from "./footer.module.scss";
 import Logo from "./Logo";
+import { URLS } from "./Navigation/Navigation";
 
 export default async function Footer({ children = <></>, hideLogo = false }) {
   return (
     <footer className={styles.footer}>
       <div className={`section--two-col ${styles.inner}`}>
         <div>
+          <a href={URLS.ANATOMY}>
+            <img
+              src="/images/solander-38.png"
+              width={1454 / 2}
+              height={951 / 2}
+              alt={"3D rendering of Solander 38"}
+            />
+          </a>
           <h6>Solander 38</h6>
           <p>
             is a self-sufficient, solar-electric, coastal&nbsp;cruising power

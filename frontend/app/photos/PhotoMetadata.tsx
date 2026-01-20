@@ -3,7 +3,7 @@ import styles from "./../stories/article.module.scss";
 import RelatedStories from "../drawings/RelatedStories";
 
 export default function PhotoMetadata({ asset, stories }) {
-  const system = asset.usedInArticles[0]?.section || {};
+  const system = asset.usedInArticles[0]?.system || {};
   return (
     <div className={`${styles.metadata}`}>
       <div className={styles.metadata__table}>

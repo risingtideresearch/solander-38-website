@@ -1,4 +1,4 @@
-import { fetchArticles, fetchArticlesStatic, fetchSections } from "@/sanity/lib/utils";
+import { fetchArticles, fetchArticlesStatic, fetchSystems } from "@/sanity/lib/utils";
 import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 export default async function Page({ params }) {
   const { slug } = await params;
   const { data } = await fetchArticles(slug);
-  const sections = await fetchSections();
+  const systems = await fetchSystems();
 
   if (!data[0]) {
     notFound();
@@ -33,12 +33,12 @@ export default async function Page({ params }) {
 
   const models_manifest = getModelManifest();
 
-  const getArticleNavigation = (sections: any, currentSlug: string) => {
-    const allArticles = sections?.sections.flatMap((section: any) =>
-      (section.articles || []).map((article: any) => ({
+  const getArticleNavigation = (systems: any, currentSlug: string) => {
+    const allArticles = systems?.systems.flatMap((system: any) =>
+      (system.articles || []).map((article: any) => ({
         ...article,
-        sectionName: section.name,
-        sectionSlug: section.slug,
+        systemName: system.name,
+        systemSlug: system.slug,
       })),
     );
 
@@ -63,7 +63,7 @@ export default async function Page({ params }) {
     };
   };
 
-  const navigation = getArticleNavigation(sections.data, slug);
+  const navigation = getArticleNavigation(systems.data, slug);
 
   const dataWithMatchedDrawings = matchArticleDrawings(
     drawings.files,
@@ -72,7 +72,7 @@ export default async function Page({ params }) {
 
   if (!dataWithMatchedDrawings.relatedModels) {
     const articleSystem = (
-      dataWithMatchedDrawings.section?.slug?.current || ""
+      dataWithMatchedDrawings.system?.slug?.current || ""
     ).replace(" & ", "_");
 
     const models =
@@ -115,8 +115,8 @@ export default async function Page({ params }) {
     return exists;
   });
 
-  dataWithMatchedDrawings.articleId = sections.data.sections
-    .map((section) => section.articles)
+  dataWithMatchedDrawings.articleId = systems.data.systems
+    .map((system) => system.articles)
     .flat()
     .find((article) => article._id == dataWithMatchedDrawings._id)?.articleId;
 
@@ -127,8 +127,8 @@ export default async function Page({ params }) {
         active={URLS.STORIES}
         story={slug}
         section={
-          dataWithMatchedDrawings?.section
-            ? dataWithMatchedDrawings.section.slug?.current
+          dataWithMatchedDrawings?.system
+            ? dataWithMatchedDrawings.system.slug?.current
             : null
         }
       />
