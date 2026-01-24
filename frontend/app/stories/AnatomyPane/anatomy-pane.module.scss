@@ -1,7 +1,9 @@
 .anatomy-pane {
   position: relative;
   @media screen and (max-width: 800px) {
-    width: calc(100vw - 1rem);
+    width: calc(100vw - 1.5rem);
+    margin-top: -0.5rem;
+    margin-left: 0.75rem;
   }
   &__header {
     border: 1px solid var(--black);
@@ -11,10 +13,13 @@
   h6 {
     margin: 0;
     position: absolute;
-    bottom: -1rem;
+    bottom: -1.1875rem;
     width: 100%;
     text-align: center;
     left: 0;
     z-index: 1;
+    @media screen and (max-width: 800px) {
+      bottom: -1.375rem;
+    }
   }
 }

@@ -7,9 +7,18 @@
     }
   }
 
-  section {
-    border-top: 1px solid var(--black);
+  h1 {
+    padding: 0 2rem 3.75rem 2rem;
+    margin: 6rem auto 0 auto;
+    max-width: 120rem;
+  }
 
+  main {
+    padding-top: 0;
+    border-top: 1px solid var(--black);
+  }
+
+  section {
     > div:first-child {
       @media screen and (max-width: 800px) {
         display: none;
@@ -23,22 +32,36 @@
 }
 
 .person {
-  padding: 2rem;
-  border-bottom: 1px solid var(--black);
+  padding: 2.5rem 2rem 3rem 2rem;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   @media screen and (max-width: 800px) {
-    padding: 1.5rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   > div {
     margin: 1.5rem 0 0 0;
     display: grid;
-    grid-template-columns: 5.5rem 1fr;
+    grid-template-columns: 6.5rem 1fr;
     gap: 1rem;
     align-items: flex-start;
+    padding-left: 7.5rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
 
     h6 {
       margin-top: 0.25rem;
+    }
+
+    @media screen and (max-width: 800px) { 
+      grid-template-columns: 4.5rem 1fr;
+    padding-left: 5.5rem;
     }
   }
 }

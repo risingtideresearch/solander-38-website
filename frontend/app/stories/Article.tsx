@@ -36,7 +36,7 @@ const components = {
       <>
         <h2 style={{ maxWidth: "60rem" }}>{value.title}</h2>
         <AnatomyPane
-          defaultSize={{
+          defaultStyles={{
             height: "30rem",
             maxWidth: "60rem",
             margin: "1rem auto",
@@ -119,15 +119,62 @@ export default async function Article({ data, materials = [] }) {
     >
       <div className={`bg--grid ${styles.header}`}>
         <div>
-          <div style={{ marginTop: "0.625rem" }}>
+          <div>
             <h6>{data.system?.name}</h6>
             <h1>{data.title}</h1>
+
+            {data.subtitle ? (
+              <div className={styles.header_subtitle}>
+                <p>{data.subtitle}</p>
+              </div>
+            ) : (
+              <></>
+            )}
+            {data.authors ? (
+              <div className={styles.header_author}>
+                <h6>
+                  {data.authors.map((author) => (
+                    <a
+                      key={author._id}
+                      href={`${URLS.PEOPLE}/#${author.slug?.current}`}
+                      style={{
+                        display: "inline-flex",
+                        gap: "0.5rem",
+                        alignItems: "flex-start",
+                      }}
+                    >
+                      {author.image ? (
+                        <Image
+                          square
+                          style={{
+                            width: "61px",
+                            // borderRadius: "100%",
+                            // overflow: "hidden",
+                          }}
+                          height={61}
+                          width={61}
+                          src={author.image}
+                          alt={`Photo of ${author.name}`}
+                        />
+                      ) : (
+                        <></>
+                      )}
+                      <span style={{ marginTop: "0.1875rem" }}>
+                        {author.name}
+                      </span>
+                    </a>
+                  ))}
+                </h6>
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
           <AnatomyPane
             title={`Anatomy / ${data.title}`}
             url={`/anatomy/${data.slug.current}`}
-            defaultSize={{
-              width: "100%",
+            defaultStyles={{
+              // width: "100%",
               aspectRatio: 1,
             }}
           >
@@ -173,6 +220,12 @@ export default async function Article({ data, materials = [] }) {
                       <a
                         key={author._id}
                         href={`${URLS.PEOPLE}/#${author.slug?.current}`}
+                        style={{
+                          display: "inline-flex",
+                          gap: "0.5rem",
+                          height: "1rem",
+                          alignItems: "center",
+                        }}
                       >
                         {author.name}
                       </a>
@@ -186,16 +239,17 @@ export default async function Article({ data, materials = [] }) {
           </div>
         </div>
         <div>
-          <p>
-            <em>{data.subtitle}</em>
-          </p>
           {data.isLive ? (
             <PortableText value={data.content} components={components} />
           ) : (
             <></>
           )}
 
-          <MaterialsTable materials={materials} />
+          {!data.hideMaterials ? (
+            <MaterialsTable materials={materials} />
+          ) : (
+            <div style={{ margin: "2rem 0" }}></div>
+          )}
         </div>
       </div>
     </main>

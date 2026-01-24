@@ -6,17 +6,12 @@ export default async function Articles({ subtitles }) {
   const { data } = await fetchSystems();
 
   return (
-    <>
+    <div className={styles.articles}>
       <h1
-        style={{
-          margin: "6rem auto 0 auto",
-          maxWidth: "120rem",
-          padding: "0 2rem",
-        }}
       >
         Table of contents
       </h1>
-      <main className={styles.articles}>
+      <main >
         {(data.systems || []).map((section, i) => (
           <section className="section--two-col" key={section._key}>
             <div></div>
@@ -57,6 +52,6 @@ export default async function Articles({ subtitles }) {
           </section>
         ))}
       </main>
-    </>
+    </div>
   );
 }

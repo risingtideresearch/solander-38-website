@@ -205,10 +205,21 @@ export const articlesQuery = (slug?: string) => {
     return `*[_type=="article" && slug.current == "${slug}"]{
       ...,
       isLive,
+      hideMaterials,
       "system": *[_type=="systems"][0].systems[references(^._id)][0],
       authors[]->{
         name,
-        slug
+        slug,
+        image {
+          ...,
+          asset -> {
+            ...,
+            
+            metadata {
+              ...,
+            }
+          }
+        }
       },
       content[]{
         ...,
@@ -276,6 +287,7 @@ export const articlesQuery = (slug?: string) => {
     title,
     relatedModels[],
     isLive,
+    hideMaterials,
     "slug": slug.current,
     "system": *[_type=="systems"][0].systems[references(^._id)][0] {
       name,

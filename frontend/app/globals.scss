@@ -50,7 +50,7 @@ body {
   background-position: left top;
 
   @media screen and (max-width: 800px) {
-    background-position: left bottom;
+    border-bottom: 1px solid #eee;
   }
 }
 
@@ -169,7 +169,7 @@ div.range-slider {
 a,
 .link {
   cursor: pointer;
-  text-decoration: underline #e4e4e4;
+  text-decoration: underline #c9c9c9;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3125em;
   color: var(--black);
@@ -200,7 +200,7 @@ section {
 .section--two-col {
   display: grid;
   grid-template-columns: 21rem 1fr;
-  max-width: 120rem;
+  max-width: 90rem;
   margin: 0 auto;
   > div:nth-child(odd) {
     padding: 0.5rem;

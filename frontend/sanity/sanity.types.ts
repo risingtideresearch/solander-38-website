@@ -13,116 +13,21 @@
  */
 
 // Source: schema.json
-export type Sections = {
+export type SanityImageAssetReference = {
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+}
+
+export type Homepage = {
   _id: string
-  _type: 'sections'
+  _type: 'homepage'
   _createdAt: string
   _updatedAt: string
   _rev: string
-  sections?: Array<
-    {
-      _key: string
-    } & Section
-  >
-}
-
-export type Section = {
-  _type: 'section'
-  name?:
-    | 'overview'
-    | 'power architecture'
-    | 'superstructure'
-    | 'control'
-    | 'propulsion'
-    | 'body'
-    | 'water & heating systems'
-    | 'outfitting & interior'
-  slug?: Slug
-  articles?: Array<{
-    _ref: string
-    _type: 'reference'
-    _weak?: boolean
-    _key: string
-    [internalGroqTypeReferenceTo]?: 'article'
-  }>
-}
-
-export type Slug = {
-  _type: 'slug'
-  current?: string
-  source?: string
-}
-
-export type Person = {
-  _id: string
-  _type: 'person'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  name?: string
-  role?: string
-}
-
-export type Material = {
-  _type: 'material'
-  name?:
-    | 'Acrylic'
-    | 'Alum 5052'
-    | 'Alum 6061'
-    | 'Alum AlMgSi1'
-    | 'Aluminum'
-    | 'Brass'
-    | 'Bronze'
-    | 'Carbon Fiber'
-    | 'Carbon Fiber Plywood Sandwich'
-    | 'Composite Sandwich'
-    | 'Composite Sandwich (HULL)'
-    | 'Composite Sandwich (INTERNALS)'
-    | 'Delrin'
-    | 'Fiberglass'
-    | 'Particle Board'
-    | 'Plastic'
-    | 'Plywood'
-    | 'Solar Panels'
-    | 'Stainless Steel'
-    | 'Starboard (HDPE)'
-    | 'Trampoline'
-    | 'Turcite'
-    | 'Windows & Portlights'
-    | 'Wood'
-  description?: string
-}
-
-export type Materials = {
-  _id: string
-  _type: 'materials'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  materials?: Array<
-    {
-      _key: string
-    } & Material
-  >
-}
-
-export type Component = {
-  _id: string
-  _type: 'component'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  title?: string
-  componentPart?: string
-  relatedModel?: string
-  slug?: Slug
   image?: {
-    asset?: {
-      _ref: string
-      _type: 'reference'
-      _weak?: boolean
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-    }
+    asset?: SanityImageAssetReference
     media?: unknown
     hotspot?: SanityImageHotspot
     crop?: SanityImageCrop
@@ -146,6 +51,134 @@ export type SanityImageHotspot = {
   width?: number
 }
 
+export type Systems = {
+  _id: string
+  _type: 'systems'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  systems?: Array<
+    {
+      _key: string
+    } & System
+  >
+}
+
+export type ArticleReference = {
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'article'
+}
+
+export type System = {
+  _type: 'system'
+  name?:
+    | 'overview'
+    | 'power architecture'
+    | 'superstructure'
+    | 'control'
+    | 'propulsion'
+    | 'body'
+    | 'water & heating systems'
+    | 'outfitting & interior'
+  slug?: Slug
+  articles?: Array<
+    {
+      _key: string
+    } & ArticleReference
+  >
+}
+
+export type Slug = {
+  _type: 'slug'
+  current?: string
+  source?: string
+}
+
+export type Person = {
+  _id: string
+  _type: 'person'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  name?: string
+  role?: string
+  image?: {
+    asset?: SanityImageAssetReference
+    media?: unknown
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+  slug?: Slug
+  affiliations?: Array<{
+    label?: string
+    url?: string
+    _type: 'link'
+    _key: string
+  }>
+}
+
+export type Material = {
+  _type: 'material'
+  name?:
+    | 'Acrylic'
+    | 'Aluminum'
+    | 'Aluminum 5052'
+    | 'Aluminum 6061'
+    | 'Aluminum AlMgSi1'
+    | 'Bronze'
+    | 'Carbon Fiber'
+    | 'Composite Sandwich'
+    | 'Composite Sandwich (HULL)'
+    | 'Composite Sandwich (INTERNALS)'
+    | 'Delrin'
+    | 'Fiberglass'
+    | 'Glass'
+    | 'Naval Brass'
+    | 'Particle Board'
+    | 'Plastic'
+    | 'Plywood'
+    | 'Solar Panels'
+    | 'Stainless Steel'
+    | 'Starboard (HDPE)'
+    | 'Turcite'
+    | 'Wood'
+  description?: string
+}
+
+export type Materials = {
+  _id: string
+  _type: 'materials'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  materials?: Array<
+    {
+      _key: string
+    } & Material
+  >
+}
+
+export type Component = {
+  _id: string
+  _type: 'component'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  relatedModel?: string
+  title?: string
+  componentPart?: string
+  image?: {
+    asset?: SanityImageAssetReference
+    media?: unknown
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+}
+
 export type Location = {
   _id: string
   _type: 'location'
@@ -159,6 +192,13 @@ export type Location = {
   }
 }
 
+export type PersonReference = {
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'person'
+}
+
 export type Article = {
   _id: string
   _type: 'article'
@@ -167,16 +207,14 @@ export type Article = {
   _rev: string
   title?: string
   isLive?: boolean
+  hideMaterials?: boolean
   subtitle?: string
   slug?: Slug
-  authors?: Array<{
-    _ref: string
-    _type: 'reference'
-    _weak?: boolean
-    _key: string
-    [internalGroqTypeReferenceTo]?: 'person'
-  }>
-  relatedModels?: Array<string>
+  authors?: Array<
+    {
+      _key: string
+    } & PersonReference
+  >
   content?: Array<
     | {
         children?: Array<
@@ -186,21 +224,24 @@ export type Article = {
               _type: 'span'
               _key: string
             }
-          | {
-              _ref: string
-              _type: 'reference'
-              _weak?: boolean
+          | ({
               _key: string
-              [internalGroqTypeReferenceTo]?: 'person'
-            }
+            } & PersonReference)
         >
         style?: 'normal' | 'h2'
         listItem?: 'bullet' | 'number'
-        markDefs?: Array<{
-          href?: string
-          _type: 'link'
-          _key: string
-        }>
+        markDefs?: Array<
+          | {
+              href?: string
+              _type: 'link'
+              _key: string
+            }
+          | {
+              reference?: ArticleReference
+              _type: 'internalLink'
+              _key: string
+            }
+        >
         level?: number
         _type: 'child'
         _key: string
@@ -215,12 +256,7 @@ export type Article = {
               _key: string
             }
           | {
-              asset?: {
-                _ref: string
-                _type: 'reference'
-                _weak?: boolean
-                [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-              }
+              asset?: SanityImageAssetReference
               media?: unknown
               hotspot?: SanityImageHotspot
               crop?: SanityImageCrop
@@ -232,14 +268,8 @@ export type Article = {
         _key: string
       }
     | {
-        fullBleed?: boolean
         image?: {
-          asset?: {
-            _ref: string
-            _type: 'reference'
-            _weak?: boolean
-            [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-          }
+          asset?: SanityImageAssetReference
           media?: unknown
           hotspot?: SanityImageHotspot
           crop?: SanityImageCrop
@@ -248,7 +278,20 @@ export type Article = {
         _type: 'inlineImage'
         _key: string
       }
+    | {
+        title?: string
+        models?: Array<string>
+        _type: 'inlineModel'
+        _key: string
+      }
+    | {
+        title?: string
+        type?: 'range chart'
+        _type: 'chart'
+        _key: string
+      }
   >
+  relatedModels?: Array<string>
 }
 
 export type MediaTag = {
@@ -293,6 +336,7 @@ export type SanityImageMetadata = {
   palette?: SanityImagePalette
   lqip?: string
   blurHash?: string
+  thumbHash?: string
   hasAlpha?: boolean
   isOpaque?: boolean
 }
@@ -357,16 +401,20 @@ export type Geopoint = {
 }
 
 export type AllSanitySchemaTypes =
-  | Sections
-  | Section
+  | SanityImageAssetReference
+  | Homepage
+  | SanityImageCrop
+  | SanityImageHotspot
+  | Systems
+  | ArticleReference
+  | System
   | Slug
   | Person
   | Material
   | Materials
   | Component
-  | SanityImageCrop
-  | SanityImageHotspot
   | Location
+  | PersonReference
   | Article
   | MediaTag
   | SanityImagePaletteSwatch
