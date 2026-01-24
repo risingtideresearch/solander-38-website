@@ -14,7 +14,6 @@ export const person = defineType({
     defineField({
       name: 'role',
       type: 'string',
-      description: 'For Solander 38 build',
     }),
     defineField({
       name: 'image',

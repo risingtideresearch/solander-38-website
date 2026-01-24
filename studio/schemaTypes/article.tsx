@@ -24,6 +24,10 @@ export const article = defineType({
         'Toggle on to publish story content to the site. While this is off, only subtitle and associated models/materials will be visible for this story.',
     }),
     defineField({
+      name: 'hideMaterials',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'subtitle',
       type: 'text',
     }),

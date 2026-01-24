@@ -32,7 +32,7 @@ export const systems = defineType({
     },
     prepare({}) {
       return {
-        title: 'systems'
+        title: 'Systems'
       }
     }
   }

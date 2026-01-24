@@ -1003,7 +1003,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::TOE-KICKS::TOE-KICK SURFS",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK SURFS.glb",
-      "file_size": 2290280,
+      "file_size": 2290284,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -1043,7 +1043,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::TOE-KICKS::TOE-KICK FLANGES",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__TOE-KICKS__TOE-KICK FLANGES.glb",
-      "file_size": 1051648,
+      "file_size": 1051652,
       "object_count": 9,
       "bounding_box": {
         "min": {
@@ -1083,7 +1083,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::flat bar base::5\" X 3/8\" baseplate surfs",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__flat bar base__5_ X 3_8_ baseplate surfs.glb",
-      "file_size": 861104,
+      "file_size": 861108,
       "object_count": 14,
       "bounding_box": {
         "min": {
@@ -1363,7 +1363,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::PLATING",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb",
-      "file_size": 1370036,
+      "file_size": 1370040,
       "object_count": 29,
       "bounding_box": {
         "min": {
@@ -1403,7 +1403,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::RAILINGS & POSTS::railing flanges",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__RAILINGS & POSTS__railing flanges.glb",
-      "file_size": 738216,
+      "file_size": 738220,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -1523,7 +1523,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::fascia plates",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb",
-      "file_size": 141732,
+      "file_size": 141736,
       "object_count": 9,
       "bounding_box": {
         "min": {
@@ -1563,7 +1563,7 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::fascia flange brackets",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia flange brackets.glb",
-      "file_size": 692448,
+      "file_size": 692452,
       "object_count": 46,
       "bounding_box": {
         "min": {
@@ -2083,7 +2083,7 @@
     {
       "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::tillers & draglinks",
       "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__tillers & draglinks.glb",
-      "file_size": 2286544,
+      "file_size": 2286548,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -2603,7 +2603,7 @@
     {
       "layer_name": "PROPULSION::MOTOR MOUNT::motor mount surfaces",
       "filename": "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb",
-      "file_size": 307364,
+      "file_size": 307368,
       "object_count": 12,
       "bounding_box": {
         "min": {
@@ -3563,7 +3563,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::DECK ACCESS STAIRLADDER::stairladder 1/4\" 5052 alum",
       "filename": "OUTFITTING_INTERIOR__DECK ACCESS STAIRLADDER__stairladder 1_4_ 5052 alum.glb",
-      "file_size": 125476,
+      "file_size": 125480,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5226,9 +5226,9 @@
   ],
   "export_info": {
     "total_layers_found": 347,
-    "timestamp_start": "2026-01-12 14:28:34",
+    "timestamp_start": "2026-01-22 14:40:56",
     "format": "GLB",
-    "timestamp_end": "2026-01-12 14:38:06",
+    "timestamp_end": "2026-01-22 14:48:13",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
@@ -5236,7 +5236,7 @@
     "successful_exports": 130,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 41928440,
+    "total_file_size": 41928480,
     "units": {
       "id": 8,
       "name": "inch"
