@@ -220,6 +220,7 @@ export default function Anatomy({ content }: IAnatomy) {
         memoModels={memoModels}
         handleLoaded={() => setLoaded(true)}
         loaded={loaded}
+        story={toc.article?.slug || toc.system?.slug ||''}
       />
 
       <AnatomyControls

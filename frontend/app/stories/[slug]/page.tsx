@@ -12,6 +12,7 @@ import {
   getMaterialsManifest,
   getModelManifest,
 } from "@/app/manifest-util";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   const articles = await fetchArticlesStatic();
@@ -19,6 +20,38 @@ export async function generateStaticParams() {
   return articles.data.map((article) => ({
     slug: article.slug,
   }));
+}
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const { slug } = await params;
+  const { data } = await fetchArticles(slug);
+  
+  if (!data || data.length === 0) {
+    return {
+      title: "Article Not Found | Solander 38",
+      description: "",
+    };
+  }
+
+  const article = data[0];
+  
+  return {
+    title: `${article.title} | Solander 38`,
+    description: article.subtitle || "",
+    icons: "https://solander38.netlify.app/rising-tide.svg",
+    authors: article.authors?.map(author => ({name: author.name})),
+    publisher: 'Rising Tide Research Foundation',
+    openGraph: {
+      images: [
+        {
+          url: `https://solander38.netlify.app/preview/${article.slug}.png`,
+          width: 1600,
+          height: 840,
+          alt: `Model of ${article.title}`
+        },
+      ],
+    },
+  };
 }
 
 export default async function Page({ params }) {

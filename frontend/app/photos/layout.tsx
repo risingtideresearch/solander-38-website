@@ -5,7 +5,7 @@ import Search from "./../components/Search/Search";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Solander 38 Photos",
+  title: "Photos | Solander 38",
   description: "",
   icons: "https://solander38.netlify.app/rising-tide.svg",
 };

@@ -53,12 +53,6 @@ export default async function Page() {
               src={homepage.data.image}
               alt={homepage.data.image.altText || homepage.data.image.title}
               loading="eager"
-              // style={{
-              //   width: "100%",
-              //   height: "100%",
-              //   objectFit: "cover",
-              //   objectPosition: "center",
-              // }}
             ></Image>
 
             <div>

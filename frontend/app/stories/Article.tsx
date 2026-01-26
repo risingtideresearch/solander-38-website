@@ -34,11 +34,11 @@ const components = {
     ),
     inlineModel: ({ value }) => (
       <>
-        <h2 style={{ maxWidth: "60rem" }}>{value.title}</h2>
+        <h2>{value.title}</h2>
         <AnatomyPane
           defaultStyles={{
             height: "30rem",
-            maxWidth: "60rem",
+            maxWidth: "45rem",
             margin: "1rem auto",
           }}
         >
