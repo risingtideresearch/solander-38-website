@@ -36,7 +36,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   const article = data[0];
   
   return {
-    title: `${article.title} | Solander 38`,
+    title: `${article.title} ${article.title != 'Solander 38' ? '| Solander 38' : ''}`,
     description: article.subtitle || "",
     icons: "https://solander38.netlify.app/rising-tide.svg",
     authors: article.authors?.map(author => ({name: author.name})),
