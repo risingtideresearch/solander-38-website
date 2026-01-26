@@ -336,8 +336,8 @@ export default function RangeChart({ title = "Range / Speed / Power"}) {
                 dominantBaseline="middle"
                 fill="var(--black)"
               >
-                {allData.battery.label} {allData["battery"].kWh}{" "}
-                kWh
+                {allData.battery.label} ({allData["battery"].kWh}{" "}
+                kWh)
               </text>
             </g>
 
