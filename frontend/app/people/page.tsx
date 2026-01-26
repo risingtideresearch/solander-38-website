@@ -39,17 +39,18 @@ export default async function Page() {
                         {person.image ? (
                           <Image src={person.image} square={true} width={120} />
                         ) : (
-                          <div
-                            style={{
-                              aspectRatio: 1,
-                              border: "1px solid var(--border)",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
-                          >
-                            <MdOutlinePerson color="var(--border)" size={24} />
-                          </div>
+                          // <div
+                          //   style={{
+                          //     aspectRatio: 1,
+                          //     border: "1px solid var(--border)",
+                          //     display: "flex",
+                          //     alignItems: "center",
+                          //     justifyContent: "center",
+                          //   }}
+                          // >
+                          //   <MdOutlinePerson color="var(--border)" size={24} />
+                          // </div>
+                          <></>
                         )}
                       </div>
 
@@ -62,9 +63,8 @@ export default async function Page() {
                           >
                             {person.name}
                           </span>
-                          {/* &nbsp;&mdash;&nbsp;{person.role} */}
                         </p>
-                        <p>{person.role}</p>
+                        <h6>{person.role}</h6>
                       </div>
                     </div>
                     {/* {person.affiliations ? (
@@ -131,22 +131,26 @@ export default async function Page() {
                         <h6>Stories</h6>
                         <div>
                           {stories.map((article, i) => (
-                            <p style={i > 0 ? { marginTop: '0.5rem'} : {}} key={article._id}>
+                            <p
+                              style={i > 0 ? { marginTop: "0.5rem" } : {}}
+                              key={article._id}
+                            >
                               <a
                                 style={{
                                   display: "inline",
                                 }}
                                 href={`/stories/${article.slug}`}
                               >
-                                <span
+                                {/* <span
                                   style={{
                                     fontSize: "0.75rem",
                                     textTransform: "uppercase",
                                     // marginTop: "0.0625rem",
                                   }}
                                 >
-                                  {article.system?.name}&nbsp;/&nbsp;
+                                  {article.system?.name}
                                 </span>
+                                <br /> */}
                                 {article.title}
                               </a>
                             </p>

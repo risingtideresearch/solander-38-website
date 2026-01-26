@@ -126,7 +126,7 @@ export default async function Page({ params }) {
         type={"top-bar"}
         active={URLS.STORIES}
         story={slug}
-        section={
+        system={
           dataWithMatchedDrawings?.system
             ? dataWithMatchedDrawings.system.slug?.current
             : null

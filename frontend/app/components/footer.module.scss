@@ -11,17 +11,10 @@
     margin: 1rem 0 0 0;
   }
 
-  p {
-    margin: 0;
-    font-size: 0.75rem;
-    text-wrap: pretty;
-    line-height: 1.4em;
-  }
-
   svg {
     margin-top: 2rem;
   }
-  
+
   img {
     max-width: 16rem;
     margin: 0 auto;
@@ -38,6 +31,21 @@
     gap: 0;
   }
 
+  > div:first-child {
+    p {
+      margin: 0;
+      font-size: 0.75rem;
+      text-wrap: pretty;
+      line-height: 1.4em;
+    }
+  }
+
+  > div:nth-child(2) {
+    p {
+      margin: 0.25rem 0;
+    }
+  }
+
   > div,
   > div:nth-child(odd),
   > div:nth-child(even) {
@@ -51,7 +59,7 @@
       }
     }
 
-     &:nth-child(2) {
+    &:nth-child(2) {
       @media screen and (max-width: 800px) {
         padding: 0;
       }

@@ -40,8 +40,8 @@ export type ControlSettings = {
 
 const isDefaultTransparentBody = (toc) => {
   return !(
-    (toc.section.slug === "body" && !toc.article) ||
-    toc.section.slug === "overview" ||
+    (toc.system.slug === "body" && !toc.article) ||
+    toc.system.slug === "overview" ||
     toc.article?.slug === "hull-and-deck"
   );
 };
@@ -72,10 +72,10 @@ export default function Anatomy({ content }: IAnatomy) {
   }, [settings.scalingLines]);
 
   const active =
-    toc.section?.slug != "overview"
+    toc.system?.slug != "overview"
       ? {
           type: "system",
-          key: slugToRhinoSystem(toc.section.slug),
+          key: slugToRhinoSystem(toc.system.slug),
         }
       : null;
 
@@ -84,7 +84,7 @@ export default function Anatomy({ content }: IAnatomy) {
       ...prev,
       transparent: isDefaultTransparentBody(toc),
     }));
-  }, [toc.article, toc.section]);
+  }, [toc.article, toc.system]);
 
   const filteredLayers = useMemo(() => {
     let allModels = memoModels;
@@ -132,10 +132,10 @@ export default function Anatomy({ content }: IAnatomy) {
   useEffect(() => {
     if (toc.article) {
       window.history.pushState(null, "", `/anatomy/${toc.article?.slug}`);
-    } else if (toc.section.slug) {
-      window.history.pushState(null, "", `/anatomy/${toc.section.slug}`);
+    } else if (toc.system.slug) {
+      window.history.pushState(null, "", `/anatomy/${toc.system.slug}`);
     }
-  }, [toc.article, toc.section.slug]);
+  }, [toc.article, toc.system.slug]);
 
   const visibleModelsBBoxes = memoModels
     .filter(
@@ -205,7 +205,7 @@ export default function Anatomy({ content }: IAnatomy) {
 
       <Navigation
         active={URLS.ANATOMY}
-        section={toc.section?.slug || null}
+        system={toc.system?.slug || null}
         story={toc.article?.slug || null}
       />
 

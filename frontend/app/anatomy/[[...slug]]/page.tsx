@@ -46,20 +46,20 @@ export default async function Page({
 
   const componentParts = await fetchComponents();
 
-  let defaultSection = systems.data.systems.find(
+  let defaultSystem = systems.data.systems.find(
     (system) => system.slug == slug,
   );
   const defaultArticle = articles.data.find((article) => article.slug == slug);
   if (defaultArticle) {
-    defaultSection = defaultArticle.section;
+    defaultSystem = defaultArticle.system;
   }
 
   return (
     <>
       <div className={styles.page} style={{backgroundPositionY: '2rem'}}>
         <TableOfContents
-          sections={systems?.data.systems || []}
-          defaultSection={defaultSection?.slug || null}
+          systems={systems?.data.systems || []}
+          defaultSystem={defaultSystem?.slug || null}
           defaultArticle={defaultArticle || null}
         >
           <Anatomy

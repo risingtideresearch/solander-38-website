@@ -1,6 +1,6 @@
 import { Drawing } from "./types";
 import DrawingsGallery from "./DrawingsGallery";
-import { Section } from "@/sanity/sanity.types";
+import { System } from "@/sanity/sanity.types";
 import MinimalTOC from "../toc/MinimalTOC";
 import { URLS } from "../components/Navigation/Navigation";
 
@@ -9,26 +9,26 @@ interface DrawingsProps {
     files: Array<Drawing>;
   };
   defaultUUID?: string;
-  section?: string;
-  sections: Array<Section>;
+  system?: string;
+  systems: Array<System>;
 }
 
 export default async function Drawings({
   drawings,
-  sections,
-  section,
+  systems,
+  system,
 }: DrawingsProps) {
   return (
     <main>
       <div className="section--two-col">
         <div>
           <MinimalTOC
-            sections={sections}
-            section={section}
+            systems={systems}
+            system={system}
             url={URLS.DRAWINGS}
           />
         </div>
-        <DrawingsGallery drawings={drawings} section={section} />
+        <DrawingsGallery drawings={drawings} system={system} />
       </div>
     </main>
   );

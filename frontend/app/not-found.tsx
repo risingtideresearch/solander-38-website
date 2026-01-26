@@ -1,20 +1,20 @@
 import Footer from "./components/Footer";
 import Navigation, { URLS } from "./components/Navigation/Navigation";
-import styles from "./home.module.scss";
+import "./home.scss";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import Search from "./components/Search/Search";
 
 export default async function Page() {
   return (
-    <div className={`${styles.home} ${styles['not-found']}`}>
-      <Navigation type={"top-bar"} section="overview" />
+    <div className={`home not-found`}>
+      <Navigation type={"top-bar"} system="overview" />
       <Search />
 
       <main>
         <h6>Not found</h6>
       </main>
       <Footer>
-        <div className={styles.toc}>
+        <div className={'home__toc'}>
           <section>
             <p>
               <a href={URLS.STORIES}>

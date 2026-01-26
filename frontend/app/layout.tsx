@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.scss";
+import "./home.scss";
 
 export const metadata: Metadata = {
   title: "Rising Tide Research Foundation",

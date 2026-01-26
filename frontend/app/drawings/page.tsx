@@ -6,15 +6,15 @@ import { getDrawingsManifest } from "../manifest-util";
 export default async function Page() {
   const drawings = getDrawingsManifest();
 
-  const sections = await fetchSystems();
+  const systems = await fetchSystems();
 
   return (
     <>
       <Navigation type={"top-bar"} active={URLS.DRAWINGS} />
       <Drawings
         drawings={drawings}
-        sections={sections?.data.systems || []}
-        section={"overview"}
+        systems={systems?.data.systems || []}
+        system={"overview"}
       />
     </>
   );

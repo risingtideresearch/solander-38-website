@@ -37,7 +37,7 @@ export default async function Page({
       <Navigation
         type={"top-bar"}
         active={URLS.DRAWINGS}
-        section={getSlugFromDrawingGroup(
+        system={getSlugFromDrawingGroup(
           currentDrawing?.group,
         ).toLowerCase()}
       />

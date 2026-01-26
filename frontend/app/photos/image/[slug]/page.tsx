@@ -34,14 +34,14 @@ export default async function Page({
       ? data.allImages[currentIndex + 1]
       : data.allImages[0];
 
-  const section = current.usedInArticles[0]?.system || {};
+  const system = current.usedInArticles[0]?.system || {};
 
   return (
     <>
       <Navigation
         type={"top-bar"}
         active={URLS.PHOTOS}
-        section={section.slug}
+        system={system.slug}
       />
       <PhotoPage
         asset={current}

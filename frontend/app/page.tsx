@@ -1,6 +1,5 @@
 import Footer from "./components/Footer";
 import { URLS } from "./components/Navigation/Navigation";
-import styles from "./home.module.scss";
 import articleStyles from "./stories/articles.module.scss";
 import {
   fetchArticles,
@@ -21,15 +20,16 @@ export default async function Page() {
   const photos = await fetchPhotos();
   const people = await fetchPeople();
   const homepage = await fetchHomepage();
+  console.log(homepage.data.image);
 
   return (
-    <div className={styles.home}>
+    <div className={"home"}>
       <Search />
 
       <div>
         <div className="section--two-col">
-          <div className={styles.leftColumn}>
-            <div className={styles.title}>
+          <div className={"home__left-column"}>
+            <div className={"home__title"}>
               <h1>
                 <svg
                   viewBox="0 0 326 37"
@@ -49,55 +49,122 @@ export default async function Page() {
             </div>
           </div>
           <div>
-            <Image src={homepage.data.image} loading="eager" />
+            <Image
+              src={homepage.data.image}
+              alt={homepage.data.image.altText || homepage.data.image.title}
+              loading="eager"
+              // style={{
+              //   width: "100%",
+              //   height: "100%",
+              //   objectFit: "cover",
+              //   objectPosition: "center",
+              // }}
+            ></Image>
+
+            <div>
+              {/* <div className="home__toc">
+                <section>
+                  <a
+                    href={URLS.STORIES}
+                    className={articleStyles["article-title"]}
+                  >
+                    <h6 className={articleStyles["section-title"]}>
+                      <span>I</span>
+                      <span>Stories</span>
+                    </h6>
+                  </a>
+                </section>
+                <section>
+                  <h6 className={articleStyles["section-title"]}>
+                    <span>II</span>
+                    <span>Anatomy</span>
+                  </h6>
+                </section>
+                <section>
+                  <h6 className={articleStyles["section-title"]}>
+                    <span>III</span>
+                    <span>Drawings</span>
+                  </h6>
+                </section>
+                <section>
+                  <h6 className={articleStyles["section-title"]}>
+                    <span>IV</span>
+                    <span>Photos</span>
+                  </h6>
+                </section>
+                <section>
+                  <h6 className={articleStyles["section-title"]}>
+                    <span>V</span>
+                    <span>People</span>
+                  </h6>
+                </section>
+              </div> */}
+              <div className={`home__toc`}>
+                <section>
+                  <a
+                    href={URLS.STORIES + '/solander-38'}
+                    className={articleStyles["article-title"]}
+                  >
+                    <p>Stories</p>
+                    <div></div>
+                    <h6>{articles.data.length} stories</h6>
+                  </a>
+                  <p>Organized by anatomical system.</p>
+                </section>
+                <section>
+                  <a
+                    href={URLS.ANATOMY}
+                    className={articleStyles["article-title"]}
+                  >
+                    <p>Anatomy</p>
+                    <div></div>
+                    <h6>{models.exported_layers.length} parts</h6>
+                  </a>
+                  <p>Model of parts and systems.</p>
+                </section>
+                <section>
+                  <a
+                    href={URLS.DRAWINGS}
+                    className={articleStyles["article-title"]}
+                  >
+                    <p>Drawings</p>
+                    <div></div>
+                    <h6>{drawings.files.length} drawings</h6>
+                  </a>
+                  <p>Library of fabrication plans.</p>
+                </section>
+                <section>
+                  <a
+                    href={URLS.PHOTOS}
+                    className={articleStyles["article-title"]}
+                  >
+                    <p>Photos</p>
+                    <div></div>
+                    <h6>{photos.data.length} photos</h6>
+                  </a>
+                  <p>Library of photos.</p>
+                </section>
+                <section>
+                  <a
+                    href={URLS.PEOPLE}
+                    className={articleStyles["article-title"]}
+                  >
+                    <p>People</p>
+                    <div></div>
+                    <h6>{people.data.length} people</h6>
+                  </a>
+                  <p>Builders, engineers, experts, and researchers involved.</p>
+                </section>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      {/* <div className="section--two-col">
+        <div className={"home__left-column"}></div>
+      </div> */}
 
-      <Footer hideLogo={true}>
-        <div className={`${styles.toc}`}>
-          <section>
-            <a href={URLS.STORIES} className={articleStyles["article-title"]}>
-              <p>Stories</p>
-              <div></div>
-              <h6>{articles.data.length} stories</h6>
-            </a>
-            <p>Details from the build, organized by anatomical system.</p>
-          </section>
-          <section>
-            <a href={URLS.ANATOMY} className={articleStyles["article-title"]}>
-              <p>Anatomy</p>
-              <div></div>
-              <h6>{models.exported_layers.length} parts</h6>
-            </a>
-            <p>Model of parts and systems.</p>
-          </section>
-          <section>
-            <a href={URLS.DRAWINGS} className={articleStyles["article-title"]}>
-              <p>Drawings</p>
-              <div></div>
-              <h6>{drawings.files.length} drawings</h6>
-            </a>
-            <p>Library of fabrication plans.</p>
-          </section>
-          <section>
-            <a href={URLS.PHOTOS} className={articleStyles["article-title"]}>
-              <p>Photos</p>
-              <div></div>
-              <h6>{photos.data.length} photos</h6>
-            </a>
-            <p>Library of photos.</p>
-          </section>
-          <section>
-            <a href={URLS.PEOPLE} className={articleStyles["article-title"]}>
-              <p>People</p>
-              <div></div>
-              <h6>{people.data.length} people</h6>
-            </a>
-            <p>Builders, engineers, experts, and researchers involved.</p>
-          </section>
-        </div>
-      </Footer>
+      <Footer hideLogo={true}></Footer>
     </div>
   );
 }

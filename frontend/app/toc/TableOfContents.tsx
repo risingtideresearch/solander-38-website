@@ -5,21 +5,21 @@ import styles from "./toc.module.scss";
 import { createContext, useEffect, useState } from "react";
 
 export const TOCContext = createContext({
-  section: { slug: "overview", relatedArticles: [] },
+  system: { slug: "overview", relatedArticles: [] },
   article: null,
 });
 
 export default function TableOfContents({
   children,
-  sections,
-  defaultSection = "",
+  systems,
+  defaultSystem = "",
   defaultArticle = null,
   hide = false,
   showArticles = true,
 }) {
   const [collapsed, setCollapsed] = useState(false);
-  const [section, setSection] = useState(
-    sections.find((section) => section.slug == defaultSection) || sections[0],
+  const [system, setSystem] = useState(
+    systems.find((system) => system.slug == defaultSystem) || systems[0],
   );
   const [article, setArticle] = useState(defaultArticle);
 
@@ -33,9 +33,9 @@ export default function TableOfContents({
     if (window.innerWidth < 800 && !collapsed && article) {
       setCollapsed(true);
     }
-  }, [article, section]);
+  }, [article, system]);
   return (
-    <TOCContext.Provider value={{ section, article }}>
+    <TOCContext.Provider value={{ system, article }}>
       <div
         className={`${styles.toc__container} pane ${styles.outline} ${collapsed ? styles.collapsed : ""}`}
       >
@@ -46,7 +46,7 @@ export default function TableOfContents({
           {collapsed ? (
             <>
               <h6>
-                {section.name}
+                {system.name}
                 {article ? (
                   <span style={{ textTransform: "none" }}>
                     {" "}
@@ -68,25 +68,25 @@ export default function TableOfContents({
             style={{ display: hide ? "none" : "" }}
           >
             <ol>
-              {sections.map((s) => {
+              {systems.map((s) => {
                 return (
                   <li key={s.slug}>
                     <h6
                       onClick={() => {
-                        setSection(s);
+                        setSystem(s);
                         setArticle(null);
                       }}
                       role="button"
                       style={{
                         fontWeight:
-                          !article && s.slug == section.slug ? 600 : "",
+                          !article && s.slug == system.slug ? 600 : "",
                       }}
                     >
                       {s.name}
                     </h6>
                     {showArticles && (
                       <ol
-                        style={{ height: s.slug == section.slug ? "auto" : 0 }}
+                        style={{ height: s.slug == system.slug ? "auto" : 0 }}
                       >
                         {s.articles?.map((a) => (
                           <li key={a._id}>

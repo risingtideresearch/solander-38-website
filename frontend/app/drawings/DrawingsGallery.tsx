@@ -60,15 +60,15 @@ interface DrawingsGalleryProps {
   drawings: {
     files: Array<Drawing>;
   };
-  section?: string | null;
+  system?: string | null;
 }
 
 export default function DrawingsGallery({
   drawings,
-  section,
+  system,
 }: DrawingsGalleryProps) {
   const filteredAndSorted = sortDrawingsByGroup(
-    filterDrawings(drawings.files, section),
+    filterDrawings(drawings.files, system),
   );
   const groupedDrawings: Array<DrawingGroup> = groupDrawings(
     filteredAndSorted,

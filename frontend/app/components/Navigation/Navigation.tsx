@@ -44,14 +44,14 @@ export const nav = [
 interface NavigationProps {
   type?: "top-bar";
   active?: URLS;
-  section?: string | null;
+  system?: string | null;
   story?: string | null;
 }
 
 export default function Navigation({
   type,
   active,
-  section,
+  system,
   story,
 }: NavigationProps) {
   const getURL = (link) => {
@@ -60,8 +60,8 @@ export default function Navigation({
     if (link.nav2dStory && story && active != url) {
       return url + `/${story}`;
     }
-    if (link.nav2d && section) {
-      return url + `/${section}`;
+    if (link.nav2d && system) {
+      return url + `/${system}`;
     }
     return url;
   };

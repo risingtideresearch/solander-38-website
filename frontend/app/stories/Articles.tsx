@@ -12,16 +12,16 @@ export default async function Articles({ subtitles }) {
         Table of contents
       </h1>
       <main >
-        {(data.systems || []).map((section, i) => (
-          <section className="section--two-col" key={section._key}>
+        {(data.systems || []).map((system, i) => (
+          <section className="section--two-col" key={system._key}>
             <div></div>
             <div>
               <h6 className={styles["section-title"]}>
                 <span>{i + 1}</span>
-                <span>{section.name}</span>
+                <span>{system.name}</span>
               </h6>
               <ol>
-                {(section.articles || []).map((article) => (
+                {(system.articles || []).map((article) => (
                   <li key={article._id}>
                     <div className={styles["article-header"]}>
                       <h6>{article.articleId}</h6>

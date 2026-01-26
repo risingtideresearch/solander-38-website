@@ -19,15 +19,15 @@ export default async function Page({
 }) {
   const { slug } = await params;
   const drawings = getDrawingsManifest();
-  const sections = await fetchSystems();
+  const systems = await fetchSystems();
 
   return (
     <>
-      <Navigation type={"top-bar"} active={URLS.DRAWINGS} section={slug} />
+      <Navigation type={"top-bar"} active={URLS.DRAWINGS} system={slug} />
       <Drawings
         drawings={drawings}
-        sections={sections?.data.systems || []}
-        section={slug || "overview"}
+        systems={systems?.data.systems || []}
+        system={slug || "overview"}
       />
     </>
   );

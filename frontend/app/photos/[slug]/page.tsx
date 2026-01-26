@@ -5,10 +5,10 @@ import MinimalTOC from "../../toc/MinimalTOC";
 import styles from './../photos.module.scss';
 
 export async function generateStaticParams() {
-  const sections = await fetchSystemsStatic();
-  return sections.data.systems.map(section => (
+  const systems = await fetchSystemsStatic();
+  return systems.data.systems.map(system => (
     {
-      slug: section.slug
+      slug: system.slug
     }
   ));
 }
@@ -21,15 +21,15 @@ export default async function Page({
   const { slug } = await params;
   const photos = await fetchPhotos(slug);
   
-  const sections = await fetchSystems();
+  const systems = await fetchSystems();
 
   return (
     <>
-      <Navigation type={"top-bar"} active={URLS.PHOTOS} section={slug} />
+      <Navigation type={"top-bar"} active={URLS.PHOTOS} system={slug} />
        <main className={styles.main}>
         <div className="section--two-col">
           <div>
-            <MinimalTOC sections={sections.data.systems} url={URLS.PHOTOS} section={slug} />
+            <MinimalTOC systems={systems.data.systems} url={URLS.PHOTOS} system={slug} />
           </div>
           <div>
             <PhotoGallery photos={photos.data} />
