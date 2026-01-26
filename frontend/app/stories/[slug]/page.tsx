@@ -44,7 +44,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     openGraph: {
       images: [
         {
-          url: `https://solander38.netlify.app/preview/${article.slug}.png`,
+          url: `https://solander38.netlify.app/preview/${article.slug?.current}.png`,
           width: 1600,
           height: 840,
           alt: `Model of ${article.title}`
