@@ -20,7 +20,6 @@ export default async function Page() {
   const photos = await fetchPhotos();
   const people = await fetchPeople();
   const homepage = await fetchHomepage();
-  console.log(homepage.data.image);
 
   return (
     <div className={"home"}>
@@ -56,43 +55,6 @@ export default async function Page() {
             ></Image>
 
             <div>
-              {/* <div className="home__toc">
-                <section>
-                  <a
-                    href={URLS.STORIES}
-                    className={articleStyles["article-title"]}
-                  >
-                    <h6 className={articleStyles["section-title"]}>
-                      <span>I</span>
-                      <span>Stories</span>
-                    </h6>
-                  </a>
-                </section>
-                <section>
-                  <h6 className={articleStyles["section-title"]}>
-                    <span>II</span>
-                    <span>Anatomy</span>
-                  </h6>
-                </section>
-                <section>
-                  <h6 className={articleStyles["section-title"]}>
-                    <span>III</span>
-                    <span>Drawings</span>
-                  </h6>
-                </section>
-                <section>
-                  <h6 className={articleStyles["section-title"]}>
-                    <span>IV</span>
-                    <span>Photos</span>
-                  </h6>
-                </section>
-                <section>
-                  <h6 className={articleStyles["section-title"]}>
-                    <span>V</span>
-                    <span>People</span>
-                  </h6>
-                </section>
-              </div> */}
               <div className={`home__toc`}>
                 <section>
                   <a
@@ -103,7 +65,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{articles.data.length} stories</h6>
                   </a>
-                  <p>First-hand accounts of design thinking, tradeoffs, and development.</p>
+                  <p>{homepage.data.sectionDescriptions.stories}</p>
                 </section>
                 <section>
                   <a
@@ -114,7 +76,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{models.exported_layers.length} parts</h6>
                   </a>
-                  <p>3-D model of parts and systems.</p>
+                  <p>{homepage.data.sectionDescriptions.anatomy}</p>
                 </section>
                 <section>
                   <a
@@ -125,7 +87,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{drawings.files.length} drawings</h6>
                   </a>
-                  <p>Working plans for fabrication and construction.</p>
+                  <p>{homepage.data.sectionDescriptions.drawings}</p>
                 </section>
                 <section>
                   <a
@@ -136,7 +98,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{photos.data.length} photos</h6>
                   </a>
-                  <p>Gallery of the vessel, components, and development process.</p>
+                  <p>{homepage.data.sectionDescriptions.photos}</p>
                 </section>
                 <section>
                   <a
@@ -147,16 +109,13 @@ export default async function Page() {
                     <div></div>
                     <h6>{people.data.length} people</h6>
                   </a>
-                  <p>Contributors to design, engineering, research, and construction.</p>
+                  <p>{homepage.data.sectionDescriptions.people}</p>
                 </section>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="section--two-col">
-        <div className={"home__left-column"}></div>
-      </div> */}
 
       <Footer hideLogo={true}></Footer>
     </div>

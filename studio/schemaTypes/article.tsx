@@ -30,6 +30,7 @@ export const article = defineType({
     defineField({
       name: 'subtitle',
       type: 'text',
+      rows: 3
     }),
     defineField({
       name: 'slug',

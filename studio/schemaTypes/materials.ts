@@ -51,6 +51,7 @@ export const material = defineType({
     defineField({
       name: 'description',
       type: 'text',
+      rows: 4
     }),
   ],
   preview: {
