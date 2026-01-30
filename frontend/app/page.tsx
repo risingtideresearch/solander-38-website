@@ -103,7 +103,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{articles.data.length} stories</h6>
                   </a>
-                  <p>Organized by anatomical system.</p>
+                  <p>First-hand accounts of design thinking, tradeoffs, and development.</p>
                 </section>
                 <section>
                   <a
@@ -114,7 +114,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{models.exported_layers.length} parts</h6>
                   </a>
-                  <p>Model of parts and systems.</p>
+                  <p>3-D model of parts and systems.</p>
                 </section>
                 <section>
                   <a
@@ -125,7 +125,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{drawings.files.length} drawings</h6>
                   </a>
-                  <p>Library of fabrication plans.</p>
+                  <p>Working plans for fabrication and construction.</p>
                 </section>
                 <section>
                   <a
@@ -136,7 +136,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{photos.data.length} photos</h6>
                   </a>
-                  <p>Library of photos.</p>
+                  <p>Gallery of the vessel, components, and development process.</p>
                 </section>
                 <section>
                   <a
@@ -147,7 +147,7 @@ export default async function Page() {
                     <div></div>
                     <h6>{people.data.length} people</h6>
                   </a>
-                  <p>Builders, engineers, experts, and researchers involved.</p>
+                  <p>Contributors to design, engineering, research, and construction.</p>
                 </section>
               </div>
             </div>
