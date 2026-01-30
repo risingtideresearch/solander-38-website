@@ -52,6 +52,7 @@ export default async function Page() {
               src={homepage.data.image}
               alt={homepage.data.image.altText || homepage.data.image.title}
               loading="eager"
+              preload
             ></Image>
 
             <div>

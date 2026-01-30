@@ -1,6 +1,8 @@
+import Image from "next/image";
 import styles from "./footer.module.scss";
 import Logo from "./Logo";
 import { URLS } from "./Navigation/Navigation";
+import LogoStacked from "./LogoStacked";
 
 export default async function Footer({ children = <></>, hideLogo = false }) {
   return (
@@ -8,8 +10,7 @@ export default async function Footer({ children = <></>, hideLogo = false }) {
       <div className={`section--two-col ${styles.inner}`}>
         <div>
           <a href={URLS.ANATOMY}>
-            <img
-              src="/images/solander-38.png"
+            <Image src="/images/solander-38.png"
               width={1454 / 2}
               height={951 / 2}
               alt={"3D rendering of Solander 38"}
@@ -33,7 +34,7 @@ export default async function Footer({ children = <></>, hideLogo = false }) {
           </p>
           <h6>Get in touch</h6>
           <p> info@risingtideresearch.org</p>
-          {!hideLogo ? <Logo /> : <></>}
+          {!hideLogo ? <a href="https://risingtideresearch.org/" target="_blank"><LogoStacked /></a> : <></>}
         </div>
         <div>{children}</div>
       </div>
