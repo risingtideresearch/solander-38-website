@@ -3,7 +3,7 @@
   border: 1px solid var(--border);
   margin: 1rem auto;
   @media screen and (max-width: 800px) {
-    margin: 1rem 0.5rem;
+    margin: 1rem;
   }
   > div {
     width: 100%;
@@ -29,6 +29,10 @@
       margin: 0;
       padding: 0.5rem;
       font-size: 0.75rem;
+      line-height: 1.4;
+      @media screen and (max-width: 800px) {
+        font-size: 0.875rem;
+      }
     }
   }
 }

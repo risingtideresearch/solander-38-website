@@ -12,6 +12,12 @@
 
   svg {
     margin-top: 2rem;
+
+    @media screen and (max-width: 800px) {
+      max-width: 16rem;
+      display: block;
+      margin: 3rem auto;
+    }
   }
 
   img {
@@ -54,7 +60,7 @@
       border-right: 1px solid var(--black);
       @media screen and (max-width: 800px) {
         border-right: none;
-        padding: 3rem 0.75rem 5rem;
+        padding: 3rem 1rem 5rem;
       }
     }
 

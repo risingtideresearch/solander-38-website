@@ -1,5 +1,6 @@
 .page {
   padding: 0;
+  overflow-x: hidden;
 
   h1 {
     font-size: 3.5rem;
@@ -28,6 +29,13 @@
 
   figcaption {
     text-align: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    p {
+      font-size: 1rem;
+      line-height: 170%;
+    }
   }
 }
 
@@ -101,8 +109,7 @@
 }
 
 .body {
-
-    max-width: 90rem;
+  max-width: 90rem;
   p,
   ul,
   ol,
