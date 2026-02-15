@@ -42,7 +42,7 @@ const isDefaultTransparentBody = (toc) => {
   return !(
     (toc.system.slug === "body" && !toc.article) ||
     toc.system.slug === "overview" ||
-    toc.article?.slug === "hull-and-deck"
+    toc.article?.slug === "picking-a-hull"
   );
 };
 

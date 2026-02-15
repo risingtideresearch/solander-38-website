@@ -190,7 +190,7 @@ export default async function Article({ data, materials = [] }) {
                 filteredLayers={articleModels || []}
                 settings={{
                   transparent:
-                    data.slug?.current != "hull-and-deck" &&
+                    data.slug?.current != "picking-a-hull" &&
                     data.system?.slug?.current != "overview",
                 }}
                 interaction={"limited"}

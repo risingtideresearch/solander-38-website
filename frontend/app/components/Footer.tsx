@@ -34,7 +34,7 @@ export default async function Footer({ children = <></>, hideLogo = false }) {
           </p>
           <h6>Get in touch</h6>
           <p> info@risingtideresearch.org</p>
-          {!hideLogo ? <a href="https://risingtideresearch.org/" target="_blank"><LogoStacked /></a> : <></>}
+          {!hideLogo ? <a href="https://risingtideresearch.org/" target="_blank"><Logo /></a> : <></>}
         </div>
         <div>{children}</div>
       </div>
