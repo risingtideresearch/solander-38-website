@@ -1,6 +1,8 @@
 .page {
   padding: 0;
-  overflow-x: hidden;
+  @media screen and (max-width: 800px) {
+    overflow-x: hidden;
+  }
 
   h1 {
     font-size: 3.5rem;

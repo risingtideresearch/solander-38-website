@@ -59,7 +59,7 @@ export default async function Page() {
               <div className={`home__toc`}>
                 <section>
                   <a
-                    href={URLS.STORIES + '/solander-38'}
+                    href={URLS.STORIES}
                     className={articleStyles["article-title"]}
                   >
                     <p>Stories</p>
