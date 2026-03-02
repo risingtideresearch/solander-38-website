@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Drawing } from "./types";
 import styles from "./drawings.module.scss";
 import { formatDate } from "../utils";
@@ -36,11 +37,12 @@ export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
           justifyContent: "center",
         }}
       >
-        <img
+        <Image
           src={drawing.rel_path}
+          alt={drawing.clean_filename}
           height={drawing.height}
           width={drawing.width}
-          style={{ maxWidth: "100%", maxHeight: "100%", width: "auto" }}
+          style={{ maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto" }}
         />
       </div>
     </a>

@@ -42,6 +42,8 @@ export default function TableOfContents({
         <button
           className={styles.toc__collapse_button}
           onClick={() => setCollapsed((prev) => !prev)}
+          aria-expanded={!collapsed}
+          aria-label={collapsed ? "Expand table of contents" : "Collapse table of contents"}
         >
           {collapsed ? (
             <>
@@ -76,7 +78,15 @@ export default function TableOfContents({
                         setSystem(s);
                         setArticle(null);
                       }}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          setSystem(s);
+                          setArticle(null);
+                        }
+                      }}
                       role="button"
+                      tabIndex={0}
                       style={{
                         fontWeight:
                           !article && s.slug == system.slug ? 600 : "",
@@ -92,7 +102,14 @@ export default function TableOfContents({
                           <li key={a._id}>
                             <span
                               onClick={() => setArticle(a)}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                  e.preventDefault();
+                                  setArticle(a);
+                                }
+                              }}
                               role="button"
+                              tabIndex={0}
                               style={{
                                 fontWeight: a.slug == article?.slug ? 600 : "",
                               }}

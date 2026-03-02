@@ -69,7 +69,7 @@ export default function Navigation({
   const links = (
     <>
       {nav.map((link, i) => (
-        <a key={link.label} href={getURL(link)} style={i == 0 ? {display: 'grid', gap: '0.625rem', gridTemplateColumns: '0.5rem 1fr'} : {}}>
+        <a key={link.label} href={getURL(link)} aria-current={active === link.url ? "page" : undefined} style={i == 0 ? {display: 'grid', gap: '0.625rem', gridTemplateColumns: '0.5rem 1fr'} : {}}>
           {i == 0 ? (
             <svg
               className={styles.logo}
@@ -95,7 +95,7 @@ export default function Navigation({
           ) : (
             <></>
           )}
-          <span style={{ fontWeight: 600 }}>
+          <span aria-hidden="true" style={{ fontWeight: 600 }}>
             {link.label}
           </span>
           <span

@@ -37,7 +37,7 @@ export default async function Page() {
                     <div style={{ marginTop: 0, alignItems: "flex-end" }}>
                       <div>
                         {person.image ? (
-                          <Image src={person.image} square={true} width={120} />
+                          <Image src={person.image} alt={person.name} square={true} width={120} />
                         ) : (
                           <div
                             style={{
