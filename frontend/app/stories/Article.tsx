@@ -89,7 +89,7 @@ const components = {
     },
   },
   marks: {
-    internalLink: ({ value, children }) => {
+    internalLink: ({ value, children }: { value?: any; children?: any }) => {
       if (value.reference?.slug?.current) {
         return (
           <a href={`/stories/${value.reference.slug.current}`}>{children}</a>

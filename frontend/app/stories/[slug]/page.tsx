@@ -109,7 +109,7 @@ export default async function Page({ params }) {
 
     const models =
       articleSystem == "overview"
-        ? getReducedModelSet(models_manifest.exported_layers, true)
+        ? getReducedModelSet(models_manifest.exported_layers as unknown as Model[], true)
         : models_manifest.exported_layers.filter((layer) => {
             if (!layer.filename || layer.file_size > 8000000) {
               return false;
@@ -139,7 +139,7 @@ export default async function Page({ params }) {
     new Set(dataWithMatchedDrawings.relatedModels),
   ).filter((model) => {
     const exists = models_manifest.exported_layers.find(
-      (layer: Model) => layer.filename == model,
+      (layer) => layer.filename == model,
     );
     if (!exists) {
       console.warn(`${model} specified in CMS, not found in manifest`);

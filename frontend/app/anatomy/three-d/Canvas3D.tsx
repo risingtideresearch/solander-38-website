@@ -1,5 +1,5 @@
 "use client";
-import React, {
+import {
   Suspense,
   useEffect,
   useRef,
@@ -10,7 +10,7 @@ import React, {
 import { Environment, GizmoHelper, OrbitControls } from "@react-three/drei";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import { Canvas } from "@react-three/fiber";
-import { Vector3, Box3, Group, Camera, Plane } from "three";
+import { Vector3, Box3, Group, PerspectiveCamera, Plane } from "three";
 import * as THREE from "three";
 import { Model3D } from "./Model3D";
 import ScalingLines3D from "./ScalingLines3D";
@@ -61,7 +61,7 @@ export function Canvas3D({
   loaded,
 }: Canvas3DProps) {
   const groupRef = useRef<Group>(null);
-  const cameraRef = useRef<Camera>(null);
+  const cameraRef = useRef<PerspectiveCamera>(null);
   const controlsRef = useRef<OrbitControlsImpl>(null);
   const [centered, setCentered] = useState(false);
   const [modelsLoaded, setModelsLoaded] = useState<Set<string>>(new Set());
@@ -361,7 +361,7 @@ export function Canvas3D({
             layer={hovered}
             materials={materials}
             settings={settings}
-            componentParts={componentParts}
+            componentParts={componentParts ?? []}
           />
         )}
       </div>

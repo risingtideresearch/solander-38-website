@@ -4,7 +4,16 @@ import { BiCollapseAlt, BiExpandAlt } from "react-icons/bi";
 import styles from "./toc.module.scss";
 import { createContext, useEffect, useState } from "react";
 
-export const TOCContext = createContext({
+interface TOCArticle {
+  _id: string;
+  slug: string;
+  title: string;
+}
+
+export const TOCContext = createContext<{
+  system: any;
+  article: TOCArticle | null;
+}>({
   system: { slug: "overview", relatedArticles: [] },
   article: null,
 });
@@ -21,7 +30,7 @@ export default function TableOfContents({
   const [system, setSystem] = useState(
     systems.find((system) => system.slug == defaultSystem) || systems[0],
   );
-  const [article, setArticle] = useState(defaultArticle);
+  const [article, setArticle] = useState<TOCArticle | null>(defaultArticle);
 
   useEffect(() => {
     if (window.innerWidth < 800 && !collapsed) {
@@ -33,7 +42,7 @@ export default function TableOfContents({
     if (window.innerWidth < 800 && !collapsed && article) {
       setCollapsed(true);
     }
-  }, [article, system]);
+  }, [article, system, collapsed]);
   return (
     <TOCContext.Provider value={{ system, article }}>
       <div
@@ -98,7 +107,7 @@ export default function TableOfContents({
                       <ol
                         style={{ height: s.slug == system.slug ? "auto" : 0 }}
                       >
-                        {s.articles?.map((a) => (
+                        {s.articles?.map((a: TOCArticle) => (
                           <li key={a._id}>
                             <span
                               onClick={() => setArticle(a)}
