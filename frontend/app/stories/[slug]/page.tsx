@@ -1,10 +1,9 @@
 import { fetchArticles, fetchArticlesStatic, fetchSystems } from "@/sanity/lib/utils";
 import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
-import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import { getReducedModelSet } from "@/app/utils";
 import Navigation, { URLS } from "@/app/components/Navigation/Navigation";
-import subNavStyles from "@/app/components/Navigation/subnav.module.scss";
+import SubNav from "@/app/components/Navigation/SubNav";
 import { notFound } from "next/navigation";
 import { Model } from "@/app/anatomy/three-d/util";
 import {
@@ -165,26 +164,12 @@ export default async function Page({ params }) {
             : null
         }
       />
-      <div className={subNavStyles["sub-nav"]}>
-        <div className={subNavStyles["sub-nav__container"]}>
-          {navigation.prev && (
-            <div>
-              <a href={`/stories/${navigation.prev.slug}`}>
-                <LiaArrowLeftSolid size={18} />
-                <h6>{navigation.prev.title}</h6>
-              </a>
-            </div>
-          )}
-          {navigation.next && (
-            <div>
-              <a href={`/stories/${navigation.next.slug}`}>
-                <h6>{navigation.next.title}</h6>
-                <LiaArrowRightSolid size={18} />
-              </a>
-            </div>
-          )}
-        </div>
-      </div>
+      <SubNav
+        prev={navigation.prev}
+        next={navigation.next}
+        urlPrefix="/stories"
+        idKey="slug"
+      />
       <Article
         data={dataWithMatchedDrawings}
         materials={Array.from(relatedMaterials)}
