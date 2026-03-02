@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./../globals.scss";
 import Search from "./../components/Search/Search";
+import { AcuminPro } from "../_fonts";
 
 export const metadata: Metadata = {
   title: "Anatomy | Solander 38",
@@ -16,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Search type='float' />
+      <body className={AcuminPro.variable}>
+        <Search type="float" />
         {children}
       </body>
     </html>

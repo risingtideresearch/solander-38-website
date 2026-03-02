@@ -21,7 +21,7 @@ body {
 body {
   color: var(--black);
   /* background: var(--background); */
-  font-family: Helvetica, sans-serif;
+  font-family: var(--font-acumin), Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // background-image: radial-gradient(#eeeeee 1px, transparent 0);

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { AcuminPro } from "../_fonts";
 
 import "./../globals.scss";
-import Navigation, { URLS } from "../components/Navigation/Navigation";
 import Search from "../components/Search/Search";
 import Footer from "../components/Footer";
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={AcuminPro.variable}>
         <Search />
         {children}
         <Footer />

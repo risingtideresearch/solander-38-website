@@ -8,6 +8,7 @@ import {
 import Anatomy from "../Anatomy";
 import styles from "./page.module.scss";
 import { getMaterialsManifest, getModelManifest } from "@/app/manifest-util";
+import { ModelManifest } from "../three-d/util";
 
 export async function generateStaticParams() {
   const systems = await fetchSystemsStatic();
@@ -37,7 +38,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const models_manifest = getModelManifest();
+  const models_manifest: ModelManifest = getModelManifest();
   const materials_index = getMaterialsManifest();
 
   const systems = await fetchSystems();

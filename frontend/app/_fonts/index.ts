@@ -1,13 +1,10 @@
+import localFont from "next/font/local";
 
-// import localFont from "next/font/local";
-// import { Geist } from "next/font/google";
-
-// export const DepartureMono = localFont({
-//   src: "./DepartureMono-1.500.woff2",
-//   variable: "--font-departure-mono",
-// });
-
-// export const GeistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+export const AcuminPro = localFont({
+  src: [
+    { path: "./acuminpro-light-webfont.woff2", weight: "300" },
+    { path: "./acuminpro-regular-webfont.woff2", weight: "400" },
+    { path: "./acuminpro-semibold-webfont.woff2", weight: "600" },
+  ],
+  variable: "--font-acumin",
+});

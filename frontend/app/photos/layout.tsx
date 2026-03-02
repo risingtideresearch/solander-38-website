@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./../globals.scss";
 import Search from "./../components/Search/Search";
 import Footer from "../components/Footer";
+import { AcuminPro } from "../_fonts";
 
 export const metadata: Metadata = {
   title: "Photos | Solander 38",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={AcuminPro.variable}>
         <Search />
         {children}
         <Footer />

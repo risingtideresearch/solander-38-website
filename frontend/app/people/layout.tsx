@@ -4,6 +4,7 @@ import "./../globals.scss";
 import Navigation, { URLS } from "../components/Navigation/Navigation";
 import Search from "./../components/Search/Search";
 import Footer from "../components/Footer";
+import { AcuminPro } from "../_fonts";
 // import Search from "./components/Search/Search";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={AcuminPro.variable}>
         <Navigation active={URLS.PEOPLE} type={'top-bar'} />
         <Search />
         {children}

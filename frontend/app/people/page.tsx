@@ -3,7 +3,7 @@ import styles from "./people.module.scss";
 import { getDrawingsManifest } from "../manifest-util";
 import { URLS } from "../components/Navigation/Navigation";
 import { Image } from "../components/Image";
-import { LiaArrowUpSolid } from "react-icons/lia";
+import { LiaArrowUpSolid, LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { MdOutlinePerson } from "react-icons/md";
 
 export default async function Page() {
@@ -39,18 +39,17 @@ export default async function Page() {
                         {person.image ? (
                           <Image src={person.image} square={true} width={120} />
                         ) : (
-                          // <div
-                          //   style={{
-                          //     aspectRatio: 1,
-                          //     border: "1px solid var(--border)",
-                          //     display: "flex",
-                          //     alignItems: "center",
-                          //     justifyContent: "center",
-                          //   }}
-                          // >
-                          //   <MdOutlinePerson color="var(--border)" size={24} />
-                          // </div>
-                          <></>
+                          <div
+                            style={{
+                              aspectRatio: 1,
+                              border: "1px solid var(--border)",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            {/* <MdOutlinePerson color="var(--border)" size={24} /> */}
+                          </div>
                         )}
                       </div>
 
@@ -67,65 +66,6 @@ export default async function Page() {
                         <h6>{person.role}</h6>
                       </div>
                     </div>
-                    {/* {person.affiliations ? (
-                      <div>
-                        <h6>Links</h6>
-                        <div>
-                          {(person.affiliations || []).map((item) => {
-                            if (item.url) {
-                              return (
-                                <p key={item.url}>
-                                  <a href={item.url} target="_blank">
-                                    {item.label ||
-                                      item.url
-                                        .replace("https://", "")
-                                        .replace(".com/", ".com")}
-
-                                    <LiaArrowUpSolid
-                                      style={{ transform: "rotate(45deg)" }}
-                                      size={16}
-                                    />
-                                  </a>
-                                </p>
-                              );
-                            }
-                            return <p key={item.label}>{item.label}</p>;
-                          })}
-                        </div>
-                      </div>
-                    ) : (
-                      <></>
-                    )} */}
-                    {/* {person.articlesAsAuthor.length > 0 ? (
-                      <div>
-                        <h6>Author</h6>
-                        <div>
-                          {person.articlesAsAuthor.map((article) => (
-                            <p key={article._id}>
-                              <a
-                                style={{
-                                  display: "inline",
-                                }}
-                                href={`/stories/${article.slug}`}
-                              >
-                                <span
-                                  style={{
-                                    fontSize: "0.75rem",
-                                    textTransform: "uppercase",
-                                    marginTop: "0.0625rem",
-                                  }}
-                                >
-                                  {article.system?.name}&nbsp;/&nbsp;
-                                </span>
-                                {article.title}
-                              </a>
-                            </p>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <></>
-                    )} */}
                     {stories.length > 0 ? (
                       <div>
                         <h6>Stories</h6>
@@ -137,21 +77,14 @@ export default async function Page() {
                             >
                               <a
                                 style={{
-                                  display: "inline",
+                                  display: "inline-flex",
+                                  alignItems: "center",
+                                  gap: "0.25rem",
                                 }}
                                 href={`/stories/${article.slug}`}
                               >
-                                {/* <span
-                                  style={{
-                                    fontSize: "0.75rem",
-                                    textTransform: "uppercase",
-                                    // marginTop: "0.0625rem",
-                                  }}
-                                >
-                                  {article.system?.name}
-                                </span>
-                                <br /> */}
                                 {article.title}
+                                <LiaLongArrowAltRightSolid size={16} />
                               </a>
                             </p>
                           ))}

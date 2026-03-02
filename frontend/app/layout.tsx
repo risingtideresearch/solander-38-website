@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AcuminPro } from "./_fonts";
 
 import "./globals.scss";
 import "./home.scss";
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={AcuminPro.variable}>
       <body>{children}</body>
     </html>
   );
