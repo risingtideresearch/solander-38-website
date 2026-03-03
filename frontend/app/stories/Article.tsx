@@ -97,7 +97,7 @@ const components = {
       }
       return children;
     },
-    link: ({ value, children }) => {
+    link: ({ value, children }: { value?: any; children?: any }) => {
       return (
         <a href={value.href} target="_blank">
           {children}

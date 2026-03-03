@@ -1681,79 +1681,39 @@
       "notes": ""
     },
     {
-      "layer_name": "CONTROL::rudder assembly::foil top wedge contoured",
-      "filename": "CONTROL__rudder assembly__foil top wedge contoured.glb",
-      "file_size": 77668,
-      "object_count": 2,
+      "layer_name": "CONTROL::rudder assembly::rudder shaft & foil",
+      "filename": "CONTROL__rudder assembly__rudder shaft & foil.glb",
+      "file_size": 771452,
+      "object_count": 4,
       "bounding_box": {
         "min": {
-          "x": -423.9473576710501,
+          "x": -423.9477651257864,
           "y": -91.17104962760357,
-          "z": 17.245879628262344
+          "z": -4.9085318328829874
         },
         "max": {
           "x": -410.6623478394636,
           "y": 91.17104962760357,
-          "z": 20.343141976949916
-        },
-        "center": {
-          "x": -417.3048527552569,
-          "y": 0.0,
-          "z": 18.79451080260613
-        },
-        "dimensions": {
-          "width": 13.285009831586478,
-          "depth": 182.34209925520713,
-          "height": 3.097262348687572
-        }
-      },
-      "normalized_size": {
-        "length": 182.34209925520713,
-        "width": 13.285009831586478,
-        "height": 3.097262348687572,
-        "world_aligned": {
-          "x": 13.285009831586478,
-          "y": 182.34209925520713,
-          "z": 3.097262348687572
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "CONTROL::rudder assembly::rudder shaft & foil",
-      "filename": "CONTROL__rudder assembly__rudder shaft & foil.glb",
-      "file_size": 694564,
-      "object_count": 2,
-      "bounding_box": {
-        "min": {
-          "x": -423.9477651257864,
-          "y": -91.16081009286066,
-          "z": -4.9085318328829874
-        },
-        "max": {
-          "x": -410.6781921386719,
-          "y": 91.16081009286066,
           "z": 55.72441101074219
         },
         "center": {
-          "x": -417.31297863222915,
+          "x": -417.305056482625,
           "y": 0.0,
           "z": 25.4079395889296
         },
         "dimensions": {
-          "width": 13.269572987114543,
-          "depth": 182.32162018572132,
+          "width": 13.285417286322797,
+          "depth": 182.34209925520713,
           "height": 60.63294284362517
         }
       },
       "normalized_size": {
-        "length": 182.32162018572132,
+        "length": 182.34209925520713,
         "width": 60.63294284362517,
-        "height": 13.269572987114543,
+        "height": 13.285417286322797,
         "world_aligned": {
-          "x": 13.269572987114543,
-          "y": 182.32162018572132,
+          "x": 13.285417286322797,
+          "y": 182.34209925520713,
           "z": 60.63294284362517
         }
       },
@@ -2083,7 +2043,7 @@
     {
       "layer_name": "CONTROL::MECHANICAL STEERING::STEERING COMPONENTS::tillers & draglinks",
       "filename": "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__tillers & draglinks.glb",
-      "file_size": 2286548,
+      "file_size": 2286544,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -2843,8 +2803,8 @@
     {
       "layer_name": "BODY::HULLS & DECKS::PORTLIGHTS::portlight surfs",
       "filename": "BODY__HULLS & DECKS__PORTLIGHTS__portlight surfs.glb",
-      "file_size": 62556,
-      "object_count": 4,
+      "file_size": 84284,
+      "object_count": 6,
       "bounding_box": {
         "min": {
           "x": -361.60398328632095,
@@ -2852,27 +2812,27 @@
           "z": 71.68083264042625
         },
         "max": {
-          "x": -239.3564157214571,
+          "x": -168.33984375,
           "y": 121.14262188534846,
           "z": 91.52316202174468
         },
         "center": {
-          "x": -300.480199503889,
+          "x": -264.9719135181605,
           "y": 0.0,
           "z": 81.60199733108547
         },
         "dimensions": {
-          "width": 122.24756756486386,
+          "width": 193.26413953632095,
           "depth": 242.28524377069692,
           "height": 19.842329381318436
         }
       },
       "normalized_size": {
         "length": 242.28524377069692,
-        "width": 122.24756756486386,
+        "width": 193.26413953632095,
         "height": 19.842329381318436,
         "world_aligned": {
-          "x": 122.24756756486386,
+          "x": 193.26413953632095,
           "y": 242.28524377069692,
           "z": 19.842329381318436
         }
@@ -4681,6 +4641,46 @@
       "notes": ""
     },
     {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::AFT STBD MAST PEDESTALS & STRUCT",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__AFT STBD MAST PEDESTALS & STRUCT.glb",
+      "file_size": 348188,
+      "object_count": 8,
+      "bounding_box": {
+        "min": {
+          "x": -397.57625917222964,
+          "y": -94.48538970947266,
+          "z": 157.1999969482422
+        },
+        "max": {
+          "x": -380.1264953613281,
+          "y": -41.48538589477539,
+          "z": 186.37059020996094
+        },
+        "center": {
+          "x": -388.85137726677885,
+          "y": -67.98538780212402,
+          "z": 171.78529357910156
+        },
+        "dimensions": {
+          "width": 17.449763810901516,
+          "depth": 53.000003814697266,
+          "height": 29.17059326171875
+        }
+      },
+      "normalized_size": {
+        "length": 53.000003814697266,
+        "width": 29.17059326171875,
+        "height": 17.449763810901516,
+        "world_aligned": {
+          "x": 17.449763810901516,
+          "y": 53.000003814697266,
+          "z": 29.17059326171875
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
       "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::Signal Mate LED Anchor Light",
       "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__Signal Mate LED Anchor Light.glb",
       "file_size": 16284,
@@ -5225,10 +5225,10 @@
     }
   ],
   "export_info": {
-    "total_layers_found": 347,
-    "timestamp_start": "2026-01-22 14:40:56",
+    "total_layers_found": 359,
+    "timestamp_start": "2026-03-03 11:54:53",
     "format": "GLB",
-    "timestamp_end": "2026-01-22 14:48:13",
+    "timestamp_end": "2026-03-03 12:01:54",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
@@ -5236,7 +5236,7 @@
     "successful_exports": 130,
     "failed_exports": 0,
     "skipped_exports": 4,
-    "total_file_size": 41928480,
+    "total_file_size": 42297612,
     "units": {
       "id": 8,
       "name": "inch"

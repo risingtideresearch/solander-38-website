@@ -98,17 +98,19 @@ def extract_material_names(file_path: str) -> List[str]:
         
         gltf = GLTF2.load(file_path)
         material_names = []
-        
+        seen = set()
+
         if gltf.materials:
             for material in gltf.materials:
                 # Handle named vs unnamed materials
                 material_name = getattr(material, 'name', None)
-                
+
                 if material_name:
                     cleaned_name = clean_material_name(material_name)
-                    if cleaned_name:  # Only add if cleaning didn't eliminate it
+                    if cleaned_name and cleaned_name not in seen:
+                        seen.add(cleaned_name)
                         material_names.append(cleaned_name)
-        
+
         return material_names
         
     except ImportError:

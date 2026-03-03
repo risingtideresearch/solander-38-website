@@ -4,7 +4,7 @@
     "Aluminum",
     "Aluminum 5052",
     "Aluminum 6061",
-    "Aluminum AlMgSi1",
+    "Aluminum 6082",
     "Bronze",
     "Carbon Fiber",
     "Composite Sandwich",
@@ -176,7 +176,7 @@
       "Solar Panels"
     ],
     "CONTROL__MECHANICAL STEERING__STEERING COMPONENTS__tillers & draglinks.glb": [
-      "Aluminum AlMgSi1"
+      "Aluminum 6082"
     ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__nonstandard framing.glb": [
       "Aluminum 6061"
@@ -217,11 +217,11 @@
     "PROPULSION__SIMPLIFIED STRUT.glb": [
       "Bronze"
     ],
+    "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__AFT STBD MAST PEDESTALS & STRUCT.glb": [
+      "Aluminum"
+    ],
     "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb": [
       "Aluminum 5052"
-    ],
-    "CONTROL__rudder assembly__foil top wedge contoured.glb": [
-      "Carbon Fiber"
     ],
     "CONTROL__rudder assembly__Rudder tube__G10 tube 3_ OD X 2.75_ ID.glb": [
       "Fiberglass"
@@ -230,7 +230,6 @@
       "Wood"
     ],
     "OUTFITTING_INTERIOR__cleats.glb": [
-      "Stainless Steel",
       "Stainless Steel"
     ],
     "DECK JIG__TRANSV FRAMES.glb": [
