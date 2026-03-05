@@ -67,8 +67,9 @@
 }
 
 .noPhoto {
-  aspect-ratio: 1;
-  border: 1px solid var(--border);
+  // aspect-ratio: 1;
+  // border: 1px solid var(--border);
+  display: none;
 }
 
 .info {
