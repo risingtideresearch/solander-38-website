@@ -10,7 +10,7 @@
 
   main {
     padding-top: 0;
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--border);
   }
   a {
     font-weight: 600;
@@ -36,7 +36,7 @@
 
   section {
     > div:nth-child(2) {
-      border-left: 1px solid var(--black);
+      border-left: 1px solid var(--border);
       margin-bottom: -1px;
       margin-left: -1px;
       padding: 2rem;

@@ -8,6 +8,7 @@ import {
   componentPartQuery,
   homepageQuery,
   materialsQuery,
+  peoplePageQuery,
   peopleQuery,
   systemsQuery,
 } from "./queries";
@@ -115,6 +116,16 @@ export async function fetchAssetWithNavigation(idPrefix: string) {
  */
 export async function fetchPeople() {
   const { data } = await sanityFetch({ query: peopleQuery });
+
+  return { data };
+}
+
+/**
+ *
+ * @returns
+ */
+export async function fetchPeoplePage() {
+  const { data } = await sanityFetch({ query: peoplePageQuery });
 
   return { data };
 }

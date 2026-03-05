@@ -355,6 +355,12 @@ export const systemsQuery = (slug?: string) => {
  *
  * @returns
  */
+export const peoplePageQuery = `
+*[_type=="homepage"][0]{
+  "description": sectionDescriptions.people
+}
+`;
+
 export const homepageQuery = () => {
   return `
   *[_type=="homepage"][0]{
