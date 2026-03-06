@@ -31,7 +31,7 @@ export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
       <p style={{ margin: 0 }}>{drawing.clean_filename}</p>
       <div
         style={{
-          aspectRatio: !hideMetadata ? 1.15 : "auto",
+          aspectRatio: !hideMetadata ? 1.15 : `${drawing.width} / ${drawing.height}`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

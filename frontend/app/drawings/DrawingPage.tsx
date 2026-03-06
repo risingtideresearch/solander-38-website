@@ -2,6 +2,7 @@ import styles from "./drawings.module.scss";
 import DrawingMetadata from "./DrawingMetadata";
 import SubNav from "../components/Navigation/SubNav";
 import { URLS } from "../components/Navigation/Navigation";
+import Image from "next/image";
 
 export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
   if (!asset) {
@@ -22,14 +23,17 @@ export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
         </div>
         <div>
           <div className={styles["drawing-page__body"]}>
-            <div className={styles["drawing-page__image-container"]}>
-              <img
-                className={styles["focused-image"]}
+            <div
+              className={styles["drawing-page__image-container"]}
+              style={asset.width && asset.height ? { aspectRatio: `${asset.width} / ${asset.height}` } : undefined}
+            >
+              <Image
                 src={asset.rel_path}
                 height={asset.height}
                 width={asset.width}
-                loading="eager"
+                priority
                 alt={`${asset.clean_filename}`}
+                style={{ maxWidth: "100%", height: "auto" }}
               />
             </div>
           </div>

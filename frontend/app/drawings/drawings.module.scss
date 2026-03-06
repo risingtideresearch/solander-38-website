@@ -84,9 +84,11 @@
 
   &__image-container {
     position: relative;
+    width: 100%;
 
     img {
-      max-width: 100%;
+      display: block;
+      width: 100%;
       height: auto;
     }
   }
