@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import { URLS } from "./components/Navigation/Navigation";
 import articleStyles from "./stories/articles.module.scss";
 import {
+  fetchArticleIdMap,
   fetchArticles,
   fetchHomepage,
   fetchPeople,
@@ -20,6 +21,11 @@ export default async function Page() {
   const photos = await fetchPhotos();
   const people = await fetchPeople();
   const homepage = await fetchHomepage();
+  const articleIdMap = await fetchArticleIdMap();
+
+  const latestArticle = articles.data
+    .filter((a) => a.isLive)
+    .sort((a, b) => b._updatedAt.localeCompare(a._updatedAt))[0];
 
   return (
     <div className={"home"}>
@@ -67,6 +73,27 @@ export default async function Page() {
                     <h6>{articles.data.length} stories</h6>
                   </a>
                   <p>{homepage.data.sectionDescriptions.stories}</p>
+                  {latestArticle && (
+                    <a
+                      href={`/stories/${latestArticle.slug}`}
+                      className={`${articleStyles["article-title"]} home__toc-latest`}
+                    >
+                      {/* <h6 className="latest-label">Latest</h6>
+                      <div></div> */}
+                      <h6 style={{marginLeft: 'auto'}}>
+                        Latest
+                      </h6>
+                      <div></div>
+                      <p className="latest-title">
+                        {articleIdMap[latestArticle._id] && (
+                          <span className="latest-id">
+                            {articleIdMap[latestArticle._id]}
+                          </span>
+                        )}
+                        {latestArticle.title}
+                      </p>
+                    </a>
+                  )}
                 </section>
                 <section>
                   <a

@@ -51,6 +51,37 @@
       margin: 0.3125rem 0;
     }
   }
+
+  &__toc-latest {
+    margin-top: 0.625rem !important;
+    margin-left: 3rem;
+
+    .latest-label {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .latest-title {
+      margin: 0;
+      white-space: nowrap;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+
+    .latest-id {
+      font-variant-numeric: tabular-nums;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    h6 {
+      color: var(--muted);
+      margin: 0 0 0 auto;
+    }
+  }
 }
 
 .section--two-col {
