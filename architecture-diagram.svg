@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 6" refX="9" refY="3" markerWidth="8" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 3 L 0 6 Z" fill="#9CA3AF"/>
+    </marker>
+    <marker id="arr-b" viewBox="0 0 10 6" refX="9" refY="3" markerWidth="8" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 3 L 0 6 Z" fill="#6B7280"/>
+    </marker>
+    <linearGradient id="stories-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EDE9FE"/>
+      <stop offset="100%" stop-color="#FFEDD5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="760" fill="white"/>
+
+  <!-- Title -->
+  <text x="640" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#111827" letter-spacing="-0.3">Solander 38 · Website Architecture</text>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- LANE 1: 3D / Static pipeline       -->
+  <!-- ═══════════════════════════════════ -->
+  <rect x="16" y="58" width="672" height="338" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <text x="32" y="78" font-size="9" font-weight="700" letter-spacing="2" fill="#93C5FD">STATIC CONTENT</text>
+
+  <!-- Rhino box -->
+  <rect x="32" y="90" width="170" height="80" rx="7" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="117" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#1D4ED8">Rhino 3D Model</text>
+  <text x="117" y="138" text-anchor="middle" font-size="11" fill="#3B82F6">Solander 38 3D working.3dm</text>
+  <text x="117" y="157" text-anchor="middle" font-size="10" fill="#93C5FD">source of truth</text>
+
+  <!-- Arrow: Rhino → 3D Export Script -->
+  <line x1="202" y1="118" x2="244" y2="118" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Arrow: Rhino → 2D Drawing PDFs (dashed — indirect relationship) -->
+  <line x1="117" y1="170" x2="117" y2="220" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+
+  <!-- Drawing PDFs box -->
+  <rect x="32" y="220" width="170" height="60" rx="7" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="117" y="246" text-anchor="middle" font-size="13" font-weight="700" fill="#15803D">2D Drawing PDFs</text>
+  <!-- <text x="117" y="264" text-anchor="middle" font-size="11" fill="#16A34A">local files</text> -->
+
+  <!-- Arrow: Drawing PDFs → Conversion Script -->
+  <line x1="202" y1="242" x2="244" y2="242" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Weight Study box -->
+  <rect x="32" y="324" width="170" height="52" rx="7" fill="#ffebeb" stroke="#d90642" stroke-width="1.5"/>
+  <text x="117" y="346" text-anchor="middle" font-size="13" font-weight="700" fill="#ad0434">Weight Study</text>
+  <text x="117" y="364" text-anchor="middle" font-size="10.5" fill="#d07891">Weight and CG</text>
+
+  <!-- Arrow: Weight Study → Next.js /anatomy -->
+  <polyline points="202,350 716,350 742,350" fill="none" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 3D Export Script -->
+  <rect x="246" y="95" width="156" height="50" rx="6" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="324" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#374151">3D Export Script</text>
+  <text x="324" y="136" text-anchor="middle" font-size="10" fill="#6B7280">Python</text>
+
+  <!-- PDF + Conversion Script -->
+  <rect x="246" y="215" width="156" height="70" rx="6" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="324" y="236" text-anchor="middle" font-size="11" font-weight="700" fill="#374151">PDF Export &amp;</text>
+  <text x="324" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="#374151">Conversion Script</text>
+  <text x="324" y="270" text-anchor="middle" font-size="10" fill="#6B7280">Python</text>
+
+  <!-- Arrow: 3D Script → /public/models/ -->
+  <line x1="402" y1="120" x2="444" y2="120" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Arrow: PDF Script → /public/drawings/ -->
+  <line x1="402" y1="240" x2="444" y2="240" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- /public/models/ -->
+  <rect x="446" y="90" width="224" height="105" rx="7" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="558" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">/public/models/</text>
+  <text x="558" y="133" text-anchor="middle" font-size="10.5" fill="#7C3AED">GLB 3D model files</text>
+  <text x="558" y="151" text-anchor="middle" font-size="10.5" fill="#7C3AED">export_manifest.json</text>
+  <text x="558" y="169" text-anchor="middle" font-size="10.5" fill="#7C3AED">material_index.json</text>
+  <text x="558" y="186" text-anchor="middle" font-size="9" fill="#A78BFA">loaded by Three.js at runtime</text>
+
+  <!-- /public/drawings/ -->
+  <rect x="446" y="212" width="224" height="112" rx="7" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="558" y="235" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">/public/drawings/</text>
+  <text x="558" y="254" text-anchor="middle" font-size="10.5" fill="#7C3AED">PDF files (download)</text>
+  <text x="558" y="271" text-anchor="middle" font-size="10.5" fill="#7C3AED">PNG files (web display)</text>
+  <text x="558" y="288" text-anchor="middle" font-size="10.5" fill="#7C3AED">conversion_manifest.json</text>
+  <text x="558" y="312" text-anchor="middle" font-size="9" fill="#A78BFA">PNGs generated from PDFs offline</text>
+
+  <!-- Arrows: static assets → Next.js -->
+  <line x1="670" y1="142" x2="742" y2="200" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="670" y1="268" x2="742" y2="320" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- LANE 2: Sanity CMS pipeline        -->
+  <!-- ═══════════════════════════════════ -->
+  <rect x="16" y="422" width="672" height="260" rx="10" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.5"/>
+  <text x="32" y="442" font-size="9" font-weight="700" letter-spacing="2" fill="#FDBA74">CMS CONTENT</text>
+
+  <!-- Sanity Studio -->
+  <rect x="32" y="454" width="170" height="68" rx="7" fill="#FFEDD5" stroke="#F97316" stroke-width="2"/>
+  <text x="117" y="480" text-anchor="middle" font-size="13" font-weight="700" fill="#C2410C">Sanity Studio</text>
+  <text x="117" y="499" text-anchor="middle" font-size="11" fill="#EA580C">Content editor UI</text>
+  <text x="117" y="515" text-anchor="middle" font-size="9.5" fill="#FCA87F">hosted by Sanity</text>
+
+  <!-- Arrow: Studio → CMS -->
+  <line x1="117" y1="522" x2="117" y2="548" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Sanity CMS -->
+  <rect x="32" y="550" width="170" height="62" rx="7" fill="#FED7AA" stroke="#F97316" stroke-width="2"/>
+  <text x="117" y="575" text-anchor="middle" font-size="13" font-weight="700" fill="#C2410C">Sanity CMS</text>
+  <text x="117" y="594" text-anchor="middle" font-size="11" fill="#EA580C">Hosted DB · sanity.io</text>
+
+  <!-- Arrow: manifests → Sanity Studio (deployed to populate Sanity content) -->
+  <polyline points="230,395 230,488 202,488" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="325" y="410" text-anchor="middle" font-size="9" fill="#9CA3AF">static manifests deployed to Sanity Studio</text>
+
+  <!-- Arrow: CMS → Content API box -->
+  <line x1="202" y1="582" x2="244" y2="582" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- CMS Content/API box -->
+  <rect x="246" y="462" width="202" height="200" rx="7" fill="#FFEDD5" stroke="#F97316" stroke-width="1.5"/>
+  <text x="347" y="488" text-anchor="middle" font-size="12" font-weight="700" fill="#C2410C">Content via API</text>
+  <text x="347" y="506" text-anchor="middle" font-size="9.5" fill="#9CA3AF">GROQ queries · fetched at build</text>
+  <rect x="260" y="514" width="174" height="24" rx="3" fill="rgba(249,115,22,0.12)"/>
+  <text x="347" y="531" text-anchor="middle" font-size="10.5" fill="#9A3412">Stories</text>
+  <rect x="260" y="542" width="174" height="24" rx="3" fill="rgba(249,115,22,0.12)"/>
+  <text x="347" y="559" text-anchor="middle" font-size="10.5" fill="#9A3412">Systems / Anatomy info</text>
+  <rect x="260" y="570" width="174" height="24" rx="3" fill="rgba(249,115,22,0.12)"/>
+  <text x="347" y="587" text-anchor="middle" font-size="10.5" fill="#9A3412">People</text>
+  <rect x="260" y="598" width="174" height="24" rx="3" fill="rgba(249,115,22,0.12)"/>
+  <text x="347" y="615" text-anchor="middle" font-size="10.5" fill="#9A3412">Photos (+ Sanity image CDN)</text>
+  <text x="347" y="648" text-anchor="middle" font-size="9" fill="#9CA3AF">Images served via Sanity CDN</text>
+
+  <!-- Arrow: CMS Content → Next.js -->
+  <polyline points="448,562 710,562 710,460 742,460" fill="none" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- NEXT.JS APP                        -->
+  <!-- ═══════════════════════════════════ -->
+  <rect x="742" y="140" width="272" height="454" rx="10" fill="#F9FAFB" stroke="#1F2937" stroke-width="2"/>
+  <text x="878" y="166" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Next.js Frontend</text>
+  <text x="878" y="185" text-anchor="middle" font-size="10.5" fill="#6B7280">App Router · React · TypeScript</text>
+
+  <!-- /stories -->
+  <rect x="758" y="198" width="240" height="80" rx="5" fill="#FFEDD5" stroke="#F97316" stroke-width="1"/>
+  <text x="878" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#C2410C">/stories</text>
+  <text x="878" y="234" text-anchor="middle" font-size="10" fill="#EA580C">Portable Text · images</text>
+  <rect x="762" y="244" width="108" height="22" rx="3" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="816" y="259" text-anchor="middle" font-size="9" fill="#5B21B6">3D Model Layers</text>
+  <rect x="876" y="244" width="114" height="22" rx="3" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="933" y="259" text-anchor="middle" font-size="9" fill="#5B21B6">Drawings</text>
+
+  <!-- /anatomy -->
+  <rect x="758" y="288" width="240" height="64" rx="5" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="878" y="310" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">/anatomy</text>
+  <text x="878" y="328" text-anchor="middle" font-size="10" fill="#7C3AED">React Three Fiber</text>
+  <text x="878" y="344" text-anchor="middle" font-size="9.5" fill="#A78BFA">GLB models</text>
+
+  <!-- /drawings -->
+  <rect x="758" y="362" width="240" height="52" rx="5" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="878" y="383" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">/drawings</text>
+  <text x="878" y="401" text-anchor="middle" font-size="10" fill="#7C3AED">Drawing gallery · Next.js Image</text>
+
+  <!-- /photos -->
+  <rect x="758" y="424" width="240" height="52" rx="5" fill="#FFEDD5" stroke="#F97316" stroke-width="1"/>
+  <text x="878" y="445" text-anchor="middle" font-size="12" font-weight="700" fill="#C2410C">/photos</text>
+  <text x="878" y="463" text-anchor="middle" font-size="10" fill="#EA580C">Photo gallery · Sanity image CDN</text>
+
+  <!-- /people -->
+  <rect x="758" y="486" width="240" height="52" rx="5" fill="#FFEDD5" stroke="#F97316" stroke-width="1"/>
+  <text x="878" y="507" text-anchor="middle" font-size="12" font-weight="700" fill="#C2410C">/people</text>
+  <text x="878" y="525" text-anchor="middle" font-size="10" fill="#EA580C">Team profiles and story index</text>
+
+  <!-- Search bar -->
+  <rect x="758" y="548" width="240" height="30" rx="5" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="878" y="568" text-anchor="middle" font-size="10" fill="#6B7280">Search: client-side + Sanity API</text>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- DEPLOY                             -->
+  <!-- ═══════════════════════════════════ -->
+
+  <!-- GitHub -->
+  <rect x="1060" y="160" width="196" height="82" rx="8" fill="#F9FAFB" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="1158" y="201" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">GitHub</text>
+
+  <!-- Arrow: GitHub → Netlify (git push triggers build) -->
+  <line x1="1158" y1="242" x2="1158" y2="359" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="1150" y="300" text-anchor="middle" font-size="9" fill="#9CA3AF" transform="rotate(-90, 1150, 300)">git push → triggers build</text>
+
+  <!-- Netlify -->
+  <rect x="1060" y="360" width="196" height="90" rx="8" fill="#ECFEFF" stroke="#06B6D4" stroke-width="2"/>
+  <text x="1158" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#0E7490">Netlify</text>
+  <text x="1158" y="408" text-anchor="middle" font-size="11" fill="#0891B2">Build (SSG) + CDN</text>
+  <text x="1158" y="430" text-anchor="middle" font-size="10" fill="#9CA3AF">solander38.netlify.app</text>
+
+  <!-- Arrow: Sanity publish webhook → Netlify -->
+  <polyline points="117,612 117,720 1158,720 1158,450" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="640" y="715" text-anchor="middle" font-size="9" fill="#9CA3AF">publish webhook → triggers build</text>
+
+  <!-- Arrow: Next.js → GitHub source (dashed — represents code) -->
+  <line x2="1060" y1="201" x1="1014" y2="201" stroke="#D1D5DB" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Footer note -->
+  <!-- <text x="640" y="700" text-anchor="middle" font-size="10" fill="#9CA3AF">
+    GLB models are exported from Rhino offline. Drawings are converted from local PDFs (originally from Google Drive). Both are committed to the repo and must be regenerated manually.
+  </text> -->
+</svg>

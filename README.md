@@ -1,5 +1,7 @@
-# Rising Tide website
+# Solander 38 website
 Codebase for both the website CMS and UI/front end. Using https://github.com/sanity-io/sanity-template-nextjs-clean as template.
+
+<img src="./architecture-diagram.svg" />
 
 ### CMS (Sanity Studio)
 [/studio/](/studio/)
