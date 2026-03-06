@@ -17,7 +17,7 @@ export default function DrawingMetadata({
     <div className={`${styles.metadata}`}>
       <div className={styles.metadata__table}>
         <h6>Name</h6>
-        <p style={{ fontSize: "0.75rem", lineHeight: 1.2 }}>
+        <p className={styles.metadata__filename}>
           {drawing.clean_filename}
         </p>
         <h6>ID</h6>
@@ -47,11 +47,7 @@ export default function DrawingMetadata({
         <h6>Download</h6>
         <h6>
           <a
-            style={{
-              display: "grid",
-              gridTemplateColumns: "auto auto",
-              gap: "0.125rem",
-            }}
+            className={styles.metadata__download}
             download
             href={
               "/drawings/" +

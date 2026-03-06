@@ -13,21 +13,6 @@
   }
 }
 
-.sidebar {
-  padding: 2rem 1.5rem 2rem 2rem;
-  font-size: 0.875rem;
-
-  p {
-    margin: 0;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
-}
-
 .list {
   width: 100%;
   margin-left: -1px;
@@ -36,7 +21,7 @@
 
 .row {
   display: grid;
-  grid-template-columns: 1.5rem 8rem 1fr 1fr;
+  grid-template-columns: 8rem 1fr 1fr;
   gap: 2rem;
   align-items: start;
   padding: 2rem;
@@ -56,7 +41,7 @@
 
 .index {
   padding-top: 0.2rem;
-  color: #aaa;
+  color: var(--muted);
 }
 
 .photo {
@@ -96,7 +81,7 @@
 
 .metaGroup {
   h6 {
-    color: #aaa;
+    color: var(--muted);
     margin-bottom: 0.3rem;
   }
 
@@ -119,4 +104,5 @@
   font-size: 0.75rem;
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
+  color: var(--muted);
 }

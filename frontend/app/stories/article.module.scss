@@ -23,6 +23,12 @@
     font-size: 0.75rem;
   }
 
+  p {
+    &:first-child {
+      margin-top: 0.6875rem;
+    }
+  }
+
   figure {
     margin: 2rem auto;
 
@@ -264,4 +270,15 @@
 .person {
   position: relative;
   white-space: nowrap;
+}
+
+.metadata__filename {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.metadata__download {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.125rem;
 }

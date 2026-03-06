@@ -1,6 +1,6 @@
 "use client";
 
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiX } from "react-icons/bi";
 import styles from "./search.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { searchDrawings } from "./util";
@@ -159,22 +159,34 @@ export default function SearchClient({ drawings, type }) {
             <label htmlFor="search" className="sr-only">
               Search articles and drawings
             </label>
-            <input
-              id="search"
-              ref={inputRef}
-              type="search"
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              placeholder="Search"
-              aria-controls="search-results"
-              aria-activedescendant={
-                selectedIndex >= 0
-                  ? `search-result-${selectedIndex}`
-                  : undefined
-              }
-              autoComplete="off"
-              aria-describedby="search-instructions"
-            />
+            <div className={styles.search__input_row}>
+              <input
+                id="search"
+                ref={inputRef}
+                type="search"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                placeholder="Search"
+                aria-controls="search-results"
+                aria-activedescendant={
+                  selectedIndex >= 0
+                    ? `search-result-${selectedIndex}`
+                    : undefined
+                }
+                autoComplete="off"
+                aria-describedby="search-instructions"
+              />
+              {value && (
+                <button
+                  className={styles.search__clear}
+                  onClick={() => { setValue(""); setResults([]); inputRef.current?.focus(); }}
+                  aria-label="Clear search"
+                  tabIndex={-1}
+                >
+                  <BiX size={20} />
+                </button>
+              )}
+            </div>
 
             <div id="search-instructions" className="sr-only">
               Use arrow keys to navigate results, Enter to select, Escape to
@@ -187,9 +199,7 @@ export default function SearchClient({ drawings, type }) {
                 role="status"
                 aria-live="polite"
               >
-                <p style={{ textAlign: "center" }}>
-                  No results found for &quot;{value}&quot;
-                </p>
+                <p>No results found for &quot;{value}&quot;</p>
               </div>
             )}
 
@@ -199,7 +209,7 @@ export default function SearchClient({ drawings, type }) {
                 role="status"
                 aria-live="polite"
               >
-                <p style={{ textAlign: "center" }}>Type to search</p>
+                <p>Type to search</p>
               </div>
             )}
 
@@ -229,11 +239,7 @@ export default function SearchClient({ drawings, type }) {
                   })
                   .map((resultType) => (
                     <div key={resultType}>
-                      <h6
-                        style={{
-                          fontWeight: 600,
-                        }}
-                      >
+                      <h6>
                         {resultType == "sanity.imageAsset"
                           ? "Photos"
                           : resultType == "person"
@@ -283,11 +289,11 @@ export default function SearchClient({ drawings, type }) {
                                     height={64}
                                   />
                                 ) : resultType == 'person' ?
-                                <span><MdPerson size={16} style={{display: 'block', margin: '0 auto'}} /> </span>
+                                <span><MdPerson size={16} className={styles.search__person_icon} /></span>
                                 : (
                                   <></>
                                 )}
-                                <span className="link" style={{ margin: 0, fontSize: '0.8125rem' }}>
+                                <span className={`link ${styles.search__result_title}`}>
                                   {result.title || result.clean_filename}
                                 </span>
                               </a>
@@ -302,7 +308,7 @@ export default function SearchClient({ drawings, type }) {
                     role="status"
                     aria-live="polite"
                   >
-                    <p style={{ textAlign: "center" }}>Searching...</p>
+                    <p>Searching...</p>
                   </div>
                 )}
               </div>

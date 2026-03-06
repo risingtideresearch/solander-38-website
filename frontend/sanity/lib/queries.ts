@@ -486,6 +486,7 @@ export const componentPartQuery = () => `
  */
 export const photoOrderQuery = `
 *[_type == "systems"][0]{
+  "homepageImageRef": *[_type == "homepage"][0].image.asset._ref,
   systems[]{
     articles[]->{
       _id,
@@ -497,7 +498,7 @@ export const photoOrderQuery = `
 
 export const searchQuery = () => `
 *[
-  (_type == "article" || _type == "person" || (_type == "sanity.imageAsset" && count(*[_type == "article" && references(^._id)]) > 0 && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))))
+  (_type == "article" || _type == "person" || (_type == "sanity.imageAsset" && (count(*[_type == "article" && isLive == true && references(^._id)]) > 0 || count(*[_type == "homepage" && references(^._id)]) > 0) && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))))
   && (
     title match $query + "*" ||
     name match $query + "*" ||
@@ -540,10 +541,15 @@ export const searchQuery = () => `
  */
 export const allPhotosQuery = (system?: string) => {
   const articleFilter = system
-    ? `*[_type == "article" && references(^._id) && _id in *[_type == "systems"][0].systems[slug.current == "${system}"].articles[]._ref]`
-    : `*[_type == "article" && references(^._id)]`;
+    ? `*[_type == "article" && isLive == true && references(^._id) && _id in *[_type == "systems"][0].systems[slug.current == "${system}"].articles[]._ref]`
+    : `*[_type == "article" && isLive == true && references(^._id)]`;
 
-  return `*[_type == "sanity.imageAsset" && count(${articleFilter}) > 0 && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))] {
+  const includeHomepage = !system || system === "overview";
+  const homepageCondition = includeHomepage
+    ? ` || count(*[_type == "homepage" && references(^._id)]) > 0`
+    : ``;
+
+  return `*[_type == "sanity.imageAsset" && (count(${articleFilter}) > 0${homepageCondition}) && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))] {
   _id,
   url,
   originalFilename,
@@ -568,7 +574,7 @@ export const assetWithNavigationQuery = (idPrefix?: string) => {
   const articleFilter = `*[_type == "article" && references(^._id)]`;
 
   return `{
-  "allImages": *[_type == "sanity.imageAsset" && count(*[_type == "article" && references(^._id)]) > 0] | order(_createdAt asc) {
+  "allImages": *[_type == "sanity.imageAsset" && (count(*[_type == "article" && references(^._id)]) > 0 || count(*[_type == "homepage" && references(^._id)]) > 0)] | order(_createdAt asc) {
     _id,
     url,
     originalFilename,

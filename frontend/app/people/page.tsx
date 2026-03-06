@@ -7,7 +7,6 @@ import { LiaArrowUpSolid, LiaLongArrowAltRightSolid } from "react-icons/lia";
 
 export default async function Page() {
   const people = await fetchPeople();
-  const page = await fetchPeoplePage();
   const drawings = getDrawingsManifest();
   const articleIdMap = await fetchArticleIdMap();
 
@@ -28,10 +27,8 @@ export default async function Page() {
           <div className={styles.sidebar}></div>
           <div className={styles.list}>
             {sorted.map((person, index) => {
-              const stories = [
-                ...person.articlesAsAuthor,
-                ...person.articlesMentioned,
-              ];
+              const authored = person.articlesAsAuthor;
+              const mentioned = person.articlesMentioned;
               const drawingCount = getDrawingCount(person.slug?.current);
 
               return (
@@ -40,9 +37,9 @@ export default async function Page() {
                   id={person.slug?.current}
                   className={styles.row}
                 >
-                  <div className={styles.index}>
+                  {/* <div className={styles.index}>
                     <h6>{String(index + 1).padStart(2, "0")}</h6>
-                  </div>
+                  </div> */}
 
                   <div className={styles.photo}>
                     {person.image ? (
@@ -65,10 +62,10 @@ export default async function Page() {
                   </div>
 
                   <div className={styles.meta}>
-                    {stories.length > 0 && (
+                    {authored.length > 0 && (
                       <div className={styles.metaGroup}>
-                        <h6>Stories</h6>
-                        {stories.sort((a, b) => articleIdMap[a._id].localeCompare(articleIdMap[b._id])).map((article) => (
+                        <h6>Stories Authored</h6>
+                        {authored.sort((a, b) => articleIdMap[a._id]?.localeCompare(articleIdMap[b._id])).map((article) => (
                           <p key={article._id}>
                             {articleIdMap[article._id] && (
                               <span className={styles.articleId}>
@@ -77,7 +74,23 @@ export default async function Page() {
                             )}
                             <a href={`/stories/${article.slug}`}>
                               {article.title}
-                              <LiaLongArrowAltRightSolid size={14} />
+                            </a>
+                          </p>
+                        ))}
+                      </div>
+                    )}
+                    {mentioned.length > 0 && (
+                      <div className={styles.metaGroup}>
+                        <h6>Stories</h6>
+                        {mentioned.sort((a, b) => articleIdMap[a._id]?.localeCompare(articleIdMap[b._id])).map((article) => (
+                          <p key={article._id}>
+                            {articleIdMap[article._id] && (
+                              <span className={styles.articleId}>
+                                {articleIdMap[article._id]}
+                              </span>
+                            )}
+                            <a href={`/stories/${article.slug}`}>
+                              {article.title}
                             </a>
                           </p>
                         ))}
@@ -85,7 +98,7 @@ export default async function Page() {
                     )}
                     {drawingCount > 0 && (
                       <div className={styles.metaGroup}>
-                        <h6>Drawings</h6>
+                        <h6>Drafted</h6>
                         <p>
                           <a href={URLS.DRAWINGS}>{drawingCount} drawings <LiaLongArrowAltRightSolid size={14} /></a>
                         </p>
