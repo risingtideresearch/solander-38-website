@@ -244,8 +244,8 @@ export default function SearchClient({ drawings, type }) {
                       </h6>
                       {groupedResults[resultType]
                         .sort((a, b) => {
-                          if (a.system && b.system) {
-                            return a.system.name.localeCompare(b.system.name);
+                          if (a.articleId && b.articleId) {
+                            return a.articleId.localeCompare(b.articleId);
                           }
                           return 0;
                         })
@@ -270,10 +270,9 @@ export default function SearchClient({ drawings, type }) {
                                 href={getURL(result)}
                                 tabIndex={-1}
                                 onFocus={() => setSelectedIndex(flatIndex)}
-                                style={ resultType == 'article' ? { gridTemplateColumns: '1fr'} : {}}
                               >
-                                {result.id ? (
-                                  <h6>{result.id}</h6>
+                                {result.id || result.articleId ? (
+                                  <h6>{result.id || result.articleId}</h6>
                                 ) : result.thumbnailUrl ? (
                                   <img
                                     src={result.thumbnailUrl}
@@ -288,22 +287,9 @@ export default function SearchClient({ drawings, type }) {
                                 : (
                                   <></>
                                 )}
-                                <p style={{ margin: 0 }}>
-                                  {result.system ? (
-                                    <span
-                                      style={{
-                                        textTransform: "uppercase",
-                                        fontSize: "0.75rem",
-                                        marginRight: "0.25rem",
-                                      }}
-                                    >
-                                      {result.system?.name} /
-                                    </span>
-                                  ) : (
-                                    <></>
-                                  )}
+                                <span className="link" style={{ margin: 0, fontSize: '0.8125rem' }}>
                                   {result.title || result.clean_filename}
-                                </p>
+                                </span>
                               </a>
                             </div>
                           );

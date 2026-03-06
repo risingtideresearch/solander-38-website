@@ -52,9 +52,14 @@ export default async function Page({
     fetchPhotoOrder(),
   ]);
 
-  // Build ordered image ID list from story order
+  // Build ordered image ID list: homepage image first, then story order
   const orderedIds: string[] = [];
   const seen = new Set<string>();
+  const homepageRef = orderData?.homepageImageRef;
+  if (homepageRef && !seen.has(homepageRef)) {
+    seen.add(homepageRef);
+    orderedIds.push(homepageRef);
+  }
   for (const system of orderData?.systems ?? []) {
     for (const article of system.articles ?? []) {
       for (const ref of article.imageRefs ?? []) {
@@ -67,27 +72,30 @@ export default async function Page({
   }
 
   const imageOrder = new Map(orderedIds.map((id: string, i: number) => [id, i]));
-  const sortedImages = [...data.allImages].sort((a, b) => {
+  const allSorted = [...data.allImages].sort((a, b) => {
     const ai = imageOrder.get(a._id) ?? Infinity;
     const bi = imageOrder.get(b._id) ?? Infinity;
     return ai - bi;
   });
 
-  const currentIndex = sortedImages.findIndex((img) =>
+  const current = allSorted.find((img) => img._id.startsWith(idPrefix));
+  const navigableImages = allSorted.filter((img) => !img.tags?.includes("no-gallery"));
+
+  const currentIndex = navigableImages.findIndex((img) =>
     img._id.startsWith(idPrefix),
   );
-  const current = sortedImages[currentIndex];
   const prev =
     currentIndex > 0
-      ? sortedImages[currentIndex - 1]
-      : sortedImages[sortedImages.length - 1];
+      ? navigableImages[currentIndex - 1]
+      : navigableImages[navigableImages.length - 1];
   const next =
-    currentIndex < sortedImages.length - 1
-      ? sortedImages[currentIndex + 1]
-      : sortedImages[0];
+    currentIndex < navigableImages.length - 1
+      ? navigableImages[currentIndex + 1]
+      : navigableImages[0];
 
   const isNoGallery = current.tags?.includes("no-gallery");
-  const system = (!isNoGallery && current.usedInArticles[0]?.system) || {};
+  const isHomepageImage = current.usedInArticles.length === 0 && !isNoGallery;
+  const system = (!isNoGallery && (current.usedInArticles[0]?.system || (isHomepageImage ? { name: "Overview", slug: "overview" } : null))) || {};
 
   return (
     <>

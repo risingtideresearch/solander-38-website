@@ -1,5 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import { searchQuery } from "@/sanity/lib/queries";
+import { fetchArticleIdMap } from "@/sanity/lib/utils";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
@@ -10,9 +11,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ results: [] });
     }
 
-    const results = await client.fetch(searchQuery(), { query: query });
+    const [results, articleIdMap] = await Promise.all([
+      client.fetch(searchQuery(), { query: query }),
+      fetchArticleIdMap(),
+    ]);
 
-    return NextResponse.json({ results });
+    const enriched = results.map((result: any) =>
+      result._type === "article"
+        ? { ...result, articleId: articleIdMap[result._id] }
+        : result
+    );
+
+    return NextResponse.json({ results: enriched });
   } catch (error) {
     console.error("Sanity search error:", error);
     return NextResponse.json(

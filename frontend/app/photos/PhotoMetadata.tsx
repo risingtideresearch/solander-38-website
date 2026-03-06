@@ -3,7 +3,9 @@ import styles from "./../stories/article.module.scss";
 import RelatedStories from "../drawings/RelatedStories";
 
 export default function PhotoMetadata({ asset, stories }) {
-  const system = asset.usedInArticles[0]?.system || {};
+  const isNoGallery = asset.tags?.includes("no-gallery");
+  const isHomepageImage = asset.usedInArticles.length === 0 && !isNoGallery;
+  const system = asset.usedInArticles[0]?.system || (isHomepageImage ? { name: "Overview", slug: "overview" } : {});
   return (
     <div className={`${styles.metadata}`}>
       <div className={styles.metadata__table}>
@@ -18,10 +20,14 @@ export default function PhotoMetadata({ asset, stories }) {
         ) : (
           <></>
         )}
-        <h6>System</h6>
-        <h6>
-          <a href={`/photos/${system.slug}`}>{system.name}</a>
-        </h6>
+        {!isNoGallery && system.name && (
+          <>
+            <h6>System</h6>
+            <h6>
+              <a href={`/photos/${system.slug}`}>{system.name}</a>
+            </h6>
+          </>
+        )}
         {asset.description ? (
           <>
             <h6>Desc</h6>
