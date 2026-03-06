@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "./footer.module.scss";
 import Logo from "./Logo";
 import { URLS } from "./Navigation/Navigation";
-import LogoStacked from "./LogoStacked";
 
 export default async function Footer({ children = <></>, hideLogo = false }) {
   return (
@@ -13,6 +12,7 @@ export default async function Footer({ children = <></>, hideLogo = false }) {
             <Image src="/images/solander-38.png"
               width={1454 / 2}
               height={951 / 2}
+              loading="eager"
               alt={"3D rendering of Solander 38"}
             />
           </a>

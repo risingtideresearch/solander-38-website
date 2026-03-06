@@ -16,8 +16,9 @@
 .photo {
   padding: 0;
   img {
-    height: auto;
     display: block;
+    width: 100%;
+    height: auto;
   }
 }
 .single {

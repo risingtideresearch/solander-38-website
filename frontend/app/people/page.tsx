@@ -1,4 +1,4 @@
-import { fetchPeople, fetchPeoplePage, fetchSystems } from "@/sanity/lib/utils";
+import { fetchArticleIdMap, fetchPeople, fetchPeoplePage } from "@/sanity/lib/utils";
 import styles from "./people.module.scss";
 import { getDrawingsManifest } from "../manifest-util";
 import { URLS } from "../components/Navigation/Navigation";
@@ -8,15 +8,8 @@ import { LiaArrowUpSolid, LiaLongArrowAltRightSolid } from "react-icons/lia";
 export default async function Page() {
   const people = await fetchPeople();
   const page = await fetchPeoplePage();
-  const { data: systemsData } = await fetchSystems();
   const drawings = getDrawingsManifest();
-
-  const articleIdMap: Record<string, string> = {};
-  systemsData.systems?.forEach((system) => {
-    system.articles?.forEach((article) => {
-      articleIdMap[article._id] = article.articleId;
-    });
-  });
+  const articleIdMap = await fetchArticleIdMap();
 
   const getDrawingCount = (slug) => {
     return drawings.files.filter((file) => file.author?.slug == slug).length;

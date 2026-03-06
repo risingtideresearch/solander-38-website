@@ -10,6 +10,7 @@ import {
   materialsQuery,
   peoplePageQuery,
   peopleQuery,
+  photoOrderQuery,
   systemsQuery,
 } from "./queries";
 import { sanityFetch, sanityFetchStatic } from "./live";
@@ -72,6 +73,17 @@ export async function fetchSystems(slug?: string) {
   return { data };
 }
 
+export async function fetchArticleIdMap(): Promise<Record<string, string>> {
+  const { data } = await fetchSystems();
+  const map: Record<string, string> = {};
+  data?.systems?.forEach((system: { articles?: { _id: string }[] }, sysIdx: number) => {
+    system.articles?.forEach((article: { _id: string }, artIdx: number) => {
+      map[article._id] = `${sysIdx + 1}\u2013${String.fromCharCode(65 + artIdx)}`;
+    });
+  });
+  return map;
+}
+
 export async function fetchSystemsStatic(slug?: string) {
   const data = await sanityFetchStatic({ query: systemsQuery(slug) });
 
@@ -95,6 +107,15 @@ export async function fetchPhotos(section?: string) {
 export async function fetchPhotosStatic(section?: string) {
   const data = await sanityFetchStatic({ query: allPhotosQuery(section) });
 
+  return { data };
+}
+
+/**
+ *
+ * @returns
+ */
+export async function fetchPhotoOrder() {
+  const { data } = await sanityFetch({ query: photoOrderQuery });
   return { data };
 }
 

@@ -284,6 +284,7 @@ export const articlesQuery = (slug?: string) => {
   }
   return `*[_type=="article"]{
     _id,
+    _updatedAt,
     title,
     relatedModels[],
     isLive,
@@ -480,9 +481,23 @@ export const componentPartQuery = () => `
 
 // `;
 
+/**
+ * Articles in system order with image refs extracted from content, for photo navigation ordering.
+ */
+export const photoOrderQuery = `
+*[_type == "systems"][0]{
+  systems[]{
+    articles[]->{
+      _id,
+      "imageRefs": content[_type == 'imageSet'].imageSet[_type == 'image'].asset._ref + content[_type == 'inlineImage'].image.asset._ref
+    }
+  }
+}
+`;
+
 export const searchQuery = () => `
 *[
-  (_type == "article" || _type == "person" || (_type == "sanity.imageAsset" && count(*[_type == "article" && references(^._id)]) > 0)) 
+  (_type == "article" || _type == "person" || (_type == "sanity.imageAsset" && count(*[_type == "article" && references(^._id)]) > 0 && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))))
   && (
     title match $query + "*" ||
     name match $query + "*" ||
@@ -528,7 +543,7 @@ export const allPhotosQuery = (system?: string) => {
     ? `*[_type == "article" && references(^._id) && _id in *[_type == "systems"][0].systems[slug.current == "${system}"].articles[]._ref]`
     : `*[_type == "article" && references(^._id)]`;
 
-  return `*[_type == "sanity.imageAsset" && count(${articleFilter}) > 0] {
+  return `*[_type == "sanity.imageAsset" && count(${articleFilter}) > 0 && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))] {
   _id,
   url,
   originalFilename,
@@ -566,6 +581,7 @@ export const assetWithNavigationQuery = (idPrefix?: string) => {
     description,
     altText,
     title,
+    "tags": opt.media.tags[]->name.current,
     "usedInArticles": ${articleFilter} {
       _id,
       title,

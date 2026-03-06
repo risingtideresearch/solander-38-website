@@ -48,7 +48,7 @@ export function Image(
     square?: boolean;
   },
 ) {
-  const { src, alt, width, height, square, ...rest } = props;
+  const { src, alt, width, height, square, style: styleProp, ...rest } = props;
   const imageUrl = urlForImage(src);
 
   const assetWidth =
@@ -154,6 +154,12 @@ export function Image(
       width={finalWidth}
       height={finalHeight}
       {...rest}
+      style={{
+        ...(finalWidth && finalHeight
+          ? { aspectRatio: `${finalWidth} / ${finalHeight}` }
+          : {}),
+        ...styleProp,
+      }}
       src={imageUrl.url()}
     />
   );

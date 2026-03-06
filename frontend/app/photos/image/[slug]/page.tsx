@@ -1,5 +1,6 @@
 import {
   fetchAssetWithNavigation,
+  fetchPhotoOrder,
   fetchPhotosStatic,
 } from "@/sanity/lib/utils";
 import { PhotoPage } from "../../PhotoPage";
@@ -18,10 +19,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   const idPrefix = "image-" + slug;
 
   const { data } = await fetchAssetWithNavigation(idPrefix);
-  const currentIndex = data.allImages.findIndex((img) =>
-    img._id.startsWith(idPrefix),
-  );
-  const current = data.allImages[currentIndex];
+  const current = data.allImages.find((img) => img._id.startsWith(idPrefix));
 
   return {
     title: `${current.title} | | Solander 38`,
@@ -49,21 +47,47 @@ export default async function Page({
 
   const idPrefix = "image-" + slug;
 
-  const { data } = await fetchAssetWithNavigation(idPrefix);
-  const currentIndex = data.allImages.findIndex((img) =>
+  const [{ data }, { data: orderData }] = await Promise.all([
+    fetchAssetWithNavigation(idPrefix),
+    fetchPhotoOrder(),
+  ]);
+
+  // Build ordered image ID list from story order
+  const orderedIds: string[] = [];
+  const seen = new Set<string>();
+  for (const system of orderData?.systems ?? []) {
+    for (const article of system.articles ?? []) {
+      for (const ref of article.imageRefs ?? []) {
+        if (ref && !seen.has(ref)) {
+          seen.add(ref);
+          orderedIds.push(ref);
+        }
+      }
+    }
+  }
+
+  const imageOrder = new Map(orderedIds.map((id: string, i: number) => [id, i]));
+  const sortedImages = [...data.allImages].sort((a, b) => {
+    const ai = imageOrder.get(a._id) ?? Infinity;
+    const bi = imageOrder.get(b._id) ?? Infinity;
+    return ai - bi;
+  });
+
+  const currentIndex = sortedImages.findIndex((img) =>
     img._id.startsWith(idPrefix),
   );
-  const current = data.allImages[currentIndex];
+  const current = sortedImages[currentIndex];
   const prev =
     currentIndex > 0
-      ? data.allImages[currentIndex - 1]
-      : data.allImages[data.allImages.length - 1];
+      ? sortedImages[currentIndex - 1]
+      : sortedImages[sortedImages.length - 1];
   const next =
-    currentIndex < data.allImages.length - 1
-      ? data.allImages[currentIndex + 1]
-      : data.allImages[0];
+    currentIndex < sortedImages.length - 1
+      ? sortedImages[currentIndex + 1]
+      : sortedImages[0];
 
-  const system = current.usedInArticles[0]?.system || {};
+  const isNoGallery = current.tags?.includes("no-gallery");
+  const system = (!isNoGallery && current.usedInArticles[0]?.system) || {};
 
   return (
     <>
