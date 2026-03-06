@@ -1,7 +1,4 @@
 .articles {
-  @media screen and (max-width: 800px) {
-    padding-bottom: 2rem;
-  }
   h1 {
     padding: 0 2rem 3.75rem 2rem;
     margin: 6rem auto 0 auto;
@@ -32,6 +29,11 @@
   li {
     margin: 0;
     padding-right: 0.5rem;
+    position: relative;
+
+    &:hover .article-preview {
+      opacity: 1;
+    }
   }
 
   section {
@@ -43,6 +45,11 @@
       @media screen and (max-width: 800px) {
         padding: 0;
         border: none;
+      }
+    }
+    &:last-child {
+      > div:nth-child(2) {
+        padding-bottom: 4rem;
       }
     }
     @media screen and (max-width: 800px) {
@@ -97,8 +104,32 @@
 
   div {
     flex: 1 1 auto;
-    border-bottom: 1px solid #e4e4e4;
+    border-bottom: 1px solid var(--border);
     min-width: 0.5rem;
+  }
+}
+
+.article-preview {
+  position: absolute;
+  right: calc(100% + 5rem);
+  top: 50%;
+  transform: translateY(-30%);
+  width: 18rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  // border: 1px solid var(--border);
+
+  img {
+    display: block;
+    width: 150%;
+    height: auto;
+    margin-left: -30%;
+    margin-top: -1rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 }
 
