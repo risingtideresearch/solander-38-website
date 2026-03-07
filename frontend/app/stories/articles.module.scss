@@ -8,6 +8,7 @@
   main {
     padding-top: 0;
     border-top: 1px solid var(--border);
+    margin-bottom: 1px;
   }
   a {
     font-weight: 600;
@@ -77,6 +78,7 @@
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+  position: relative;
 
   p {
     font-weight: 600;
@@ -88,8 +90,12 @@
   &:hover {
     text-decoration: none;
 
-    div {
+    > div:not(.article-preview) {
       border-color: var(--black);
+    }
+
+    .article-preview {
+      opacity: 1;
     }
   }
 
@@ -102,7 +108,7 @@
     margin: 0;
   }
 
-  div {
+  > div:not(.article-preview) {
     flex: 1 1 auto;
     border-bottom: 1px solid var(--border);
     min-width: 0.5rem;
@@ -118,6 +124,7 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.15s ease;
+  z-index: 10;
   // border: 1px solid var(--border);
 
   img {
