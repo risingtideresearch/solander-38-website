@@ -275,18 +275,14 @@ export function Canvas3D({
                   unit={settings.units}
                   clippingValues={clippingValues}
                 />
-
-                {/* <Annotations3D
-                  annotations={content.annotations}
-                  setActiveAnnotation={setActiveAnnotation}
-                /> */}
               </>
             )}
+          </Suspense>
 
-            <group ref={groupRef}>
-              {filteredLayers.map((url: string) => (
+          <group ref={groupRef}>
+            {filteredLayers.map((url: string) => (
+              <Suspense key={url} fallback={null}>
                 <Model3D
-                  key={url}
                   url={url}
                   onLoad={() => handleModelLoad(url)}
                   clippingPlanes={clippingPlanes}
@@ -298,9 +294,9 @@ export function Canvas3D({
                     false
                   }
                 />
-              ))}
-            </group>
-          </Suspense>
+              </Suspense>
+            ))}
+          </group>
           {/* <mesh
             position={[-6, -49, 0]}
             rotation={[Math.PI / 2, 0, 0]}

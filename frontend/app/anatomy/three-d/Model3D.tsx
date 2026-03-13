@@ -20,7 +20,7 @@ export function Model3D({
   clippingPlanes = [],
   transparent,
 }: Model3DProps) {
-  const { scene } = useGLTF("/models/" + url);
+  const { scene } = useGLTF("/models/" + url, undefined, true);
 
   const ref = useRef<Group>(null);
   const isInitialized = useRef(false);
