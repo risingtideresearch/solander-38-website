@@ -1,7 +1,7 @@
 # Solander 38 website
 Codebase for both the website CMS and UI/front end. Using https://github.com/sanity-io/sanity-template-nextjs-clean as template.
 
-<img src="./architecture-diagram.svg" />
+<!-- <img src="./architecture-diagram.svg" /> -->
 
 ### CMS (Sanity Studio)
 [/studio/](/studio/)
@@ -19,7 +19,6 @@ https://rising-tide.sanity.studio
 - Converts Rhino layers to GLB files in `frontend/public/models/`
 - Creates `export-manifest.json`
 - This must be run inside of Rhino (type `script` to bring up Script Editor)
-- Currently requires some manual intervention; when selection dialog appears click Cancel
 - ~8 minutes to complete
 
 #### 1b. `scripts/optimize-glb.sh`
