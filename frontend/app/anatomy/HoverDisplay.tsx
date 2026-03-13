@@ -31,14 +31,22 @@ export default function HoverDisplay({
   const [tooltipSize, setTooltipSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMouse({ x: e.clientX, y: e.clientY });
     };
 
+    const handlePointerDown = (e: PointerEvent) => {
+      if (e.pointerType === "touch") {
+        setMouse({ x: e.clientX, y: e.clientY });
+      }
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("pointerdown", handlePointerDown);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("pointerdown", handlePointerDown);
     };
   }, []);
 

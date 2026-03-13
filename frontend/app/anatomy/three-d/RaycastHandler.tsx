@@ -126,6 +126,35 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
   };
 
   const isInsideCanvas = useRef(false);
+  const lastTouchedUrl = useRef<string | null>(null);
+
+  const performTouchRaycast = (clientX: number, clientY: number) => {
+    const canvas = gl.domElement;
+    const rect = canvas.getBoundingClientRect();
+    const touchMouse = new THREE.Vector2(
+      ((clientX - rect.left) / rect.width) * 2 - 1,
+      -((clientY - rect.top) / rect.height) * 2 + 1,
+    );
+
+    raycaster.current.setFromCamera(touchMouse, camera);
+    const intersects = raycaster.current.intersectObjects(scene.children, true);
+    const visibleIntersects = filterClippedIntersections(intersects);
+
+    if (visibleIntersects.length > 0) {
+      const layerInfo = findParentLayer(visibleIntersects[0].object);
+      if (layerInfo.url && layerInfo.url === lastTouchedUrl.current) {
+        resetHoveredObject();
+        lastTouchedUrl.current = null;
+      } else {
+        setHoverColor(visibleIntersects[0].object);
+        setHovered(layerInfo);
+        lastTouchedUrl.current = layerInfo.url ?? null;
+      }
+    } else {
+      resetHoveredObject();
+      lastTouchedUrl.current = null;
+    }
+  };
 
   useEffect(() => {
     const canvas = gl.domElement;
@@ -156,12 +185,19 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
       resetHoveredObject();
     };
 
+    const onPointerDown = (event: PointerEvent) => {
+      if (event.pointerType !== "touch") return;
+      performTouchRaycast(event.clientX, event.clientY);
+    };
+
     canvas.addEventListener("pointermove", onMouseMove);
     canvas.addEventListener("pointerleave", onMouseLeave);
+    canvas.addEventListener("pointerdown", onPointerDown);
 
     return () => {
       canvas.removeEventListener("pointermove", onMouseMove);
       canvas.removeEventListener("pointerleave", onMouseLeave);
+      canvas.removeEventListener("pointerdown", onPointerDown);
       resetHoveredObject();
     };
   }, [gl]);
