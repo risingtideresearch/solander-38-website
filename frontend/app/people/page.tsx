@@ -37,9 +37,9 @@ export default async function Page() {
                   id={person.slug?.current}
                   className={styles.row}
                 >
-                  {/* <div className={styles.index}>
+                  <div className={styles.index}>
                     <h6>{String(index + 1).padStart(2, "0")}</h6>
-                  </div> */}
+                  </div>
 
                   <div className={styles.photo}>
                     {person.image ? (
