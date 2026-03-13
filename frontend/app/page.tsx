@@ -1,5 +1,5 @@
 import Footer from "./components/Footer";
-import { URLS } from "./components/Navigation/Navigation";
+import Navigation, { URLS } from "./components/Navigation/Navigation";
 import articleStyles from "./stories/articles.module.scss";
 import {
   fetchArticleIdMap,
@@ -30,6 +30,8 @@ export default async function Page() {
   return (
     <div className={"home"}>
       <Search />
+
+      <Navigation active={URLS.HOME} type="top-bar" />
 
       <div>
         <div className="section--two-col">
