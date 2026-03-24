@@ -22,12 +22,22 @@ const components = {
     inlineImage: ({ value }) => {
       const dims = value.image?.asset?.metadata?.dimensions;
       const crop = value.image?.crop;
-      const aspectWidth = dims ? dims.width * (1 - (crop?.left ?? 0) - (crop?.right ?? 0)) : undefined;
-      const aspectHeight = dims ? dims.height * (1 - (crop?.top ?? 0) - (crop?.bottom ?? 0)) : undefined;
+      const aspectWidth = dims
+        ? dims.width * (1 - (crop?.left ?? 0) - (crop?.right ?? 0))
+        : undefined;
+      const aspectHeight = dims
+        ? dims.height * (1 - (crop?.top ?? 0) - (crop?.bottom ?? 0))
+        : undefined;
       return (
         <figure className={styles.inline_image}>
           <a href={getPhotoURL(value.image.asset)}>
-            <div style={aspectWidth && aspectHeight ? { aspectRatio: `${aspectWidth} / ${aspectHeight}` } : undefined}>
+            <div
+              style={
+                aspectWidth && aspectHeight
+                  ? { aspectRatio: `${aspectWidth} / ${aspectHeight}` }
+                  : undefined
+              }
+            >
               <Image
                 src={value.image}
                 alt={value.altText || "todo: add alt text"}
@@ -128,7 +138,7 @@ export default async function Article({ data, materials = [] }) {
       <div className={`bg--grid ${styles.header}`}>
         <div>
           <div>
-            <h6>{data.system?.name}</h6>
+            <h6>{data.articleId} &nbsp;{data.system?.name}</h6>
             <h1>{data.title}</h1>
 
             {data.subtitle ? (
