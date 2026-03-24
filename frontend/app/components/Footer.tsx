@@ -3,19 +3,32 @@ import styles from "./footer.module.scss";
 import Logo from "./Logo";
 import { URLS } from "./Navigation/Navigation";
 
-export default async function Footer({ children = <></>, hideLogo = false }) {
+export default async function Footer({ hideLogo = false }) {
   return (
     <footer className={styles.footer}>
       <div className={`section--two-col ${styles.inner}`}>
         <div>
           <a href={URLS.ANATOMY}>
-            <Image src="/images/solander-38.png"
+            <Image
+              src="/images/solander-38.png"
               width={1454 / 2}
               height={951 / 2}
               loading="eager"
               alt={"3D rendering of Solander 38"}
             />
           </a>
+
+          {!hideLogo ? (
+            <a
+              className={styles.logo}
+              target="_blank"
+              href="https://risingtideresearch.org"
+            >
+              <Logo />
+            </a>
+          ) : (
+            <></>
+          )}
           <h6>Solander 38</h6>
           <p>
             is a self-sufficient, solar-electric, coastal&nbsp;cruising power
@@ -32,11 +45,10 @@ export default async function Footer({ children = <></>, hideLogo = false }) {
             is an effort to document and share designs, processes, and research
             from <em>Catalyst</em>, the first Solander 38.
           </p>
-          <h6>Get in touch</h6>
+          <h6>Connect with us</h6>
           <p> info@risingtideresearch.org</p>
-          {!hideLogo ? <a href="https://risingtideresearch.org/" target="_blank"><Logo /></a> : <></>}
+          <h6>Keep up-to-date with our latest work</h6>
         </div>
-        <div>{children}</div>
       </div>
     </footer>
   );

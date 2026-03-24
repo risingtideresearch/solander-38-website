@@ -72,3 +72,12 @@
     }
   }
 }
+
+.logo {
+  svg {
+    display: block;
+    &:hover {
+      background: var(--ocean-fog-blue);
+    }
+  }
+}
