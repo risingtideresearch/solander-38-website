@@ -1,4 +1,4 @@
-import { fetchArticleIdMap, fetchPeople, fetchPeoplePage } from "@/sanity/lib/utils";
+import { fetchArticleIdMap, fetchPeople } from "@/sanity/lib/utils";
 import styles from "./people.module.scss";
 import { getDrawingsManifest } from "../manifest-util";
 import { URLS } from "../components/Navigation/Navigation";
@@ -37,9 +37,6 @@ export default async function Page() {
                   id={person.slug?.current}
                   className={styles.row}
                 >
-                  <div className={styles.index}>
-                    <h6>{String(index + 1).padStart(2, "0")}</h6>
-                  </div>
 
                   <div className={styles.photo}>
                     {person.image ? (
@@ -59,54 +56,12 @@ export default async function Page() {
                     {person.role && (
                       <h6 className={styles.role}>{person.role}</h6>
                     )}
-                  </div>
 
-                  <div className={styles.meta}>
-                    {authored.length > 0 && (
-                      <div className={styles.metaGroup}>
-                        <h6>Stories Authored</h6>
-                        {authored.sort((a, b) => articleIdMap[a._id]?.localeCompare(articleIdMap[b._id])).map((article) => (
-                          <p key={article._id}>
-                            {articleIdMap[article._id] && (
-                              <span className={styles.articleId}>
-                                {articleIdMap[article._id]}
-                              </span>
-                            )}
-                            <a href={`/stories/${article.slug}`}>
-                              {article.title}
-                            </a>
-                          </p>
-                        ))}
-                      </div>
-                    )}
-                    {mentioned.length > 0 && (
-                      <div className={styles.metaGroup}>
-                        <h6>Stories</h6>
-                        {mentioned.sort((a, b) => articleIdMap[a._id]?.localeCompare(articleIdMap[b._id])).map((article) => (
-                          <p key={article._id}>
-                            {articleIdMap[article._id] && (
-                              <span className={styles.articleId}>
-                                {articleIdMap[article._id]}
-                              </span>
-                            )}
-                            <a href={`/stories/${article.slug}`}>
-                              {article.title}
-                            </a>
-                          </p>
-                        ))}
-                      </div>
-                    )}
-                    {drawingCount > 0 && (
-                      <div className={styles.metaGroup}>
-                        <h6>Drafted</h6>
-                        <p>
-                          <a href={URLS.DRAWINGS}>{drawingCount} drawings <LiaLongArrowAltRightSolid size={14} /></a>
-                        </p>
-                      </div>
-                    )}
                     {person.affiliations && person.affiliations.length > 0 && (
-                      <div className={styles.metaGroup}>
-                        <h6>Links</h6>
+                      <div
+                        className={styles.metaGroup}
+                        style={{ marginTop: "1.5rem" }}
+                      >
                         {person.affiliations.map((item) =>
                           item.url ? (
                             <p key={item.url}>
@@ -117,7 +72,7 @@ export default async function Page() {
                                     .replace(".com/", ".com")}
                                 <LiaArrowUpSolid
                                   style={{ transform: "rotate(45deg)" }}
-                                  size={14}
+                                  size={15}
                                 />
                               </a>
                             </p>
@@ -125,6 +80,66 @@ export default async function Page() {
                             <p key={item.label}>{item.label}</p>
                           ),
                         )}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className={styles.meta}>
+                    {authored.length > 0 && (
+                      <div className={styles.metaGroup}>
+                        <h6>Stories Authored</h6>
+                        {authored
+                          .sort((a, b) =>
+                            articleIdMap[a._id]?.localeCompare(
+                              articleIdMap[b._id],
+                            ),
+                          )
+                          .map((article) => (
+                            <p key={article._id}>
+                              <a href={`/stories/${article.slug}`}>
+                                {articleIdMap[article._id] && (
+                                  <span className={styles.articleId}>
+                                    {articleIdMap[article._id]}
+                                  </span>
+                                )}
+                                {article.title}
+                              </a>
+                            </p>
+                          ))}
+                      </div>
+                    )}
+                    {mentioned.length > 0 && (
+                      <div className={styles.metaGroup}>
+                        <h6>Stories</h6>
+                        {mentioned
+                          .sort((a, b) =>
+                            articleIdMap[a._id]?.localeCompare(
+                              articleIdMap[b._id],
+                            ),
+                          )
+                          .map((article) => (
+                            <p key={article._id}>
+                              <a href={`/stories/${article.slug}`}>
+                                {articleIdMap[article._id] && (
+                                  <span className={styles.articleId}>
+                                    {articleIdMap[article._id]}
+                                  </span>
+                                )}
+                                {article.title}
+                              </a>
+                            </p>
+                          ))}
+                      </div>
+                    )}
+                    {drawingCount > 0 && (
+                      <div className={styles.metaGroup}>
+                        <h6>Drafted</h6>
+                        <p>
+                          <a href={URLS.DRAWINGS}>
+                            {drawingCount} drawings{" "}
+                            <LiaLongArrowAltRightSolid size={14} />
+                          </a>
+                        </p>
                       </div>
                     )}
                   </div>

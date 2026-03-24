@@ -47,7 +47,7 @@ export default async function Footer({ hideLogo = false }) {
           </p>
           <h6>Connect with us</h6>
           <p> info@risingtideresearch.org</p>
-          <h6>Keep up-to-date with our latest work</h6>
+          {/* <h6>Keep up-to-date with our latest work</h6> */}
         </div>
       </div>
     </footer>
