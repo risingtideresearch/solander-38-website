@@ -330,9 +330,10 @@ export function Canvas3D({
             autoRotate={autoRotate && !hovered && interaction != "all"}
             autoRotateSpeed={interaction == "none" ? 0.4 : 0.2}
             maxDistance={50}
-            minDistance={1}
+            minDistance={0.8}
             enableZoom={interaction == "all"}
             enablePan={interaction == "all"}
+            zoomSpeed={0.7}
             makeDefault
           />
           {interaction == "all" && (
