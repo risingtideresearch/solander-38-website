@@ -138,8 +138,7 @@ export default async function Article({ data, materials = [] }) {
       <div className={`bg--grid ${styles.header}`}>
         <div>
           <div>
-            <h6>{data.articleId}</h6>
-            <h6>{data.system?.name}</h6>
+            <h6>{data.articleId} {data.system?.name}</h6>
             <h1>{data.title}</h1>
 
             {data.subtitle ? (
