@@ -9,7 +9,7 @@ export default function PhotoGallery({ photos }) {
         return (
           <div key={photo._id}>
             <a href={`/photos/image/${url[1]}`}>
-              <Image src={{ asset: photo }} square={true} />
+              <Image src={{ asset: photo }} square={true} alt={photo.title} />
               <p
                 style={{
                   fontSize: "0.75rem",

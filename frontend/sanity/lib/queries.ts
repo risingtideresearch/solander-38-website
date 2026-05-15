@@ -486,7 +486,6 @@ export const componentPartQuery = () => `
  */
 export const photoOrderQuery = `
 *[_type == "systems"][0]{
-  "homepageImageRef": *[_type == "homepage"][0].image.asset._ref,
   systems[]{
     articles[]->{
       _id,
@@ -549,7 +548,11 @@ export const allPhotosQuery = (system?: string) => {
     ? ` || count(*[_type == "homepage" && references(^._id)]) > 0`
     : ``;
 
-  return `*[_type == "sanity.imageAsset" && (count(${articleFilter}) > 0${homepageCondition}) && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))] {
+  const taggedNoStoryCondition = system
+    ? ` || ("${system}" in coalesce(opt.media.tags[]->name.current, []) && count(*[_type == "article" && isLive == true && references(^._id)]) == 0)`
+    : ` || (count(opt.media.tags) > 0 && count(*[_type == "article" && isLive == true && references(^._id)]) == 0 && count(*[_type == "homepage" && references(^._id)]) == 0)`;
+
+  return `*[_type == "sanity.imageAsset" && (count(${articleFilter}) > 0${homepageCondition}${taggedNoStoryCondition}) && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))] {
   _id,
   url,
   originalFilename,
@@ -574,7 +577,7 @@ export const assetWithNavigationQuery = (idPrefix?: string) => {
   const articleFilter = `*[_type == "article" && references(^._id)]`;
 
   return `{
-  "allImages": *[_type == "sanity.imageAsset" && (count(*[_type == "article" && references(^._id)]) > 0 || count(*[_type == "homepage" && references(^._id)]) > 0)] | order(_createdAt asc) {
+  "allImages": *[_type == "sanity.imageAsset" && (count(*[_type == "article" && references(^._id)]) > 0 || count(*[_type == "homepage" && references(^._id)]) > 0 || (count(opt.media.tags) > 0 && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))))] | order(_createdAt asc) {
     _id,
     url,
     originalFilename,

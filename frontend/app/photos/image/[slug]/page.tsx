@@ -55,11 +55,6 @@ export default async function Page({
   // Build ordered image ID list: homepage image first, then story order
   const orderedIds: string[] = [];
   const seen = new Set<string>();
-  const homepageRef = orderData?.homepageImageRef;
-  if (homepageRef && !seen.has(homepageRef)) {
-    seen.add(homepageRef);
-    orderedIds.push(homepageRef);
-  }
   for (const system of orderData?.systems ?? []) {
     for (const article of system.articles ?? []) {
       for (const ref of article.imageRefs ?? []) {
@@ -94,8 +89,8 @@ export default async function Page({
       : navigableImages[0];
 
   const isNoGallery = current.tags?.includes("no-gallery");
-  const isHomepageImage = current.usedInArticles.length === 0 && !isNoGallery;
-  const system = (!isNoGallery && (current.usedInArticles[0]?.system || (isHomepageImage ? { name: "Overview", slug: "overview" } : null))) || {};
+  const systemTag = current.tags?.find((t) => t !== "no-gallery") ?? null;
+  const system = (!isNoGallery && (current.usedInArticles[0]?.system || (systemTag ? { name: systemTag, slug: systemTag } : null))) || {};
 
   return (
     <>

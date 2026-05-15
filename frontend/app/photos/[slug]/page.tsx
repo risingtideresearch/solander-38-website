@@ -27,11 +27,6 @@ export default async function Page({
 
   const orderedIds: string[] = [];
   const seen = new Set<string>();
-  const homepageRef = orderData?.homepageImageRef;
-  if (homepageRef && !seen.has(homepageRef)) {
-    seen.add(homepageRef);
-    orderedIds.push(homepageRef);
-  }
   for (const system of orderData?.systems ?? []) {
     for (const article of system.articles ?? []) {
       for (const ref of article.imageRefs ?? []) {
