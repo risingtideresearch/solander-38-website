@@ -45,6 +45,7 @@ export default async function Page() {
                         alt={person.name}
                         square={true}
                         width={96}
+                        loading={index === 0 ? "eager" : "lazy"}
                       />
                     ) : (
                       <div className={styles.noPhoto} />
@@ -96,13 +97,13 @@ export default async function Page() {
                           )
                           .map((article) => (
                             <p key={article._id}>
-                              <a href={`/stories/${article.slug}`}>
+                              <a href={`/stories/${article.slug}`} className={styles.article}>
                                 {articleIdMap[article._id] && (
                                   <span className={styles.articleId}>
                                     {articleIdMap[article._id]}
                                   </span>
                                 )}
-                                {article.title}
+                                <span>{article.title}</span>
                               </a>
                             </p>
                           ))}
@@ -119,13 +120,13 @@ export default async function Page() {
                           )
                           .map((article) => (
                             <p key={article._id}>
-                              <a href={`/stories/${article.slug}`}>
+                              <a href={`/stories/${article.slug}`} className={styles.article}>
                                 {articleIdMap[article._id] && (
                                   <span className={styles.articleId}>
                                     {articleIdMap[article._id]}
                                   </span>
                                 )}
-                                {article.title}
+                                <span>{article.title}</span>
                               </a>
                             </p>
                           ))}

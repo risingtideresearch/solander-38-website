@@ -20,14 +20,13 @@ export default async function RelatedStories({
         {stories.map((story: Article) => (
           <div key={story._id}>
             <p>
-              {articleIdMap[story._id] && (
-                <span className={styles.related_stories__id}>
-                  {articleIdMap[story._id]}
-                </span>
-              )}
               <a href={`/stories/${story.slug}`}>
-                {story.title}
-                {/* <LiaLongArrowAltRightSolid size={18} /> */}
+                {articleIdMap[story._id] && (
+                  <span className={styles.related_stories__id}>
+                    {articleIdMap[story._id]}&nbsp;&nbsp;
+                  </span>
+                )}
+                <span>{story.title}</span>
               </a>
             </p>
           </div>
