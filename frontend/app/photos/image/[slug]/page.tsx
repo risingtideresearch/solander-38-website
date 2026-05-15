@@ -52,7 +52,7 @@ export default async function Page({
     fetchPhotoOrder(),
   ]);
 
-  // Build ordered image ID list: homepage image first, then story order
+  // Build ordered image ID list: for each system in order, story images first then tagged-only images
   const orderedIds: string[] = [];
   const seen = new Set<string>();
   for (const system of orderData?.systems ?? []) {
@@ -61,6 +61,18 @@ export default async function Page({
         if (ref && !seen.has(ref)) {
           seen.add(ref);
           orderedIds.push(ref);
+        }
+      }
+    }
+    if (system.slug) {
+      for (const img of data.allImages) {
+        if (!seen.has(img._id) && !img.tags?.includes("no-gallery")) {
+          const imgTag = img.tags?.find((t: string) => t !== "no-gallery");
+          const inSystem = img.usedInArticles?.some((a: any) => a.system?.slug === system.slug);
+          if (imgTag === system.slug || inSystem) {
+            seen.add(img._id);
+            orderedIds.push(img._id);
+          }
         }
       }
     }
@@ -74,6 +86,11 @@ export default async function Page({
   });
 
   const current = allSorted.find((img) => img._id.startsWith(idPrefix));
+
+  const isNoGallery = current.tags?.includes("no-gallery");
+  const systemTag = current.tags?.find((t) => t !== "no-gallery") ?? null;
+  const system = (!isNoGallery && (current.usedInArticles[0]?.system || (systemTag ? { name: systemTag, slug: systemTag } : null))) || {};
+
   const navigableImages = allSorted.filter((img) => !img.tags?.includes("no-gallery"));
 
   const currentIndex = navigableImages.findIndex((img) =>
@@ -87,10 +104,6 @@ export default async function Page({
     currentIndex < navigableImages.length - 1
       ? navigableImages[currentIndex + 1]
       : navigableImages[0];
-
-  const isNoGallery = current.tags?.includes("no-gallery");
-  const systemTag = current.tags?.find((t) => t !== "no-gallery") ?? null;
-  const system = (!isNoGallery && (current.usedInArticles[0]?.system || (systemTag ? { name: systemTag, slug: systemTag } : null))) || {};
 
   return (
     <>

@@ -100,7 +100,7 @@ export default function Navigation({
           </span>
           <span
             style={{
-              fontWeight: active == link.url ? 600 : "",
+              fontWeight: active == link.url ? 600 : undefined,
             }}
           >
             {link.label}

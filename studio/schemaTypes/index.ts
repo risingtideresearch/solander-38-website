@@ -1,6 +1,7 @@
 // import {anatomy} from './anatomy'
 // import { anatomy } from './anatomy'
 import {article} from './article'
+import {imageAsset} from './imageAsset'
 // import {boat} from './boat'
 import {component} from './component'
 import { homepage } from './homepage'
@@ -14,7 +15,7 @@ import {person} from './person'
 // import {schematic} from './schematic'
 // import {timeline} from './timeline'
 // import {annotation} from './annotation'
-import { section, sections } from './sections'
+// import { section, sections } from './sections'
 import { system, systems } from './systems'
 
 export const schemaTypes = [
@@ -30,4 +31,5 @@ export const schemaTypes = [
   system,
   systems,
   homepage,
+  imageAsset,
 ]

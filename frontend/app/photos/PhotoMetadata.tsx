@@ -4,8 +4,8 @@ import RelatedStories from "../drawings/RelatedStories";
 
 export default function PhotoMetadata({ asset, stories }) {
   const isNoGallery = asset.tags?.includes("no-gallery");
-  const isHomepageImage = asset.usedInArticles.length === 0 && !isNoGallery;
-  const system = asset.usedInArticles[0]?.system || (isHomepageImage ? { name: "Overview", slug: "overview" } : {});
+  const systemTag = asset.tags?.find((t) => t !== "no-gallery") ?? null;
+  const system = asset.usedInArticles[0]?.system || (systemTag ? { name: systemTag, slug: systemTag } : {});
   return (
     <div className={`${styles.metadata}`}>
       <div className={styles.metadata__table}>
