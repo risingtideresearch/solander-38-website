@@ -25,7 +25,11 @@ export default async function Page() {
 
   const latestArticle = articles.data
     .filter((a) => a.isLive)
-    .sort((a, b) => b._updatedAt.localeCompare(a._updatedAt))[0];
+    .sort((a, b) => {
+      const dateA = a.effectiveDate ?? a._updatedAt;
+      const dateB = b.effectiveDate ?? b._updatedAt;
+      return dateB.localeCompare(dateA);
+    })[0];
 
   return (
     <div className={"home"}>

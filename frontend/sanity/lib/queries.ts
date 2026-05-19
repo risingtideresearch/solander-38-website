@@ -285,6 +285,7 @@ export const articlesQuery = (slug?: string) => {
   return `*[_type=="article"]{
     _id,
     _updatedAt,
+    "effectiveDate": coalesce(publishDate, _publishedAt),
     title,
     relatedModels[],
     isLive,
@@ -303,7 +304,7 @@ export const articlesQuery = (slug?: string) => {
           }
         }
       },
-    }   
+    }
   }`;
 };
 
@@ -321,6 +322,7 @@ export const systemsQuery = (slug?: string) => {
         articles[]->{
           _id,
           _updatedAt,
+          "effectiveDate": coalesce(publishDate, _publishedAt),
           title,
           subtitle,
           isLive,
@@ -340,6 +342,7 @@ export const systemsQuery = (slug?: string) => {
       articles[]->{
         _id,
         _updatedAt,
+        "effectiveDate": coalesce(publishDate, _publishedAt),
         title,
         subtitle,
         isLive,

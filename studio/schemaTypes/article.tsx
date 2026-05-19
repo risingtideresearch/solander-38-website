@@ -18,6 +18,12 @@ export const article = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'publishDate',
+      type: 'date',
+      title: 'Publish date',
+      description: 'Overrides the automatic publish date (_publishedAt) for display purposes.',
+    }),
+    defineField({
       name: 'isLive',
       type: 'boolean',
       description:

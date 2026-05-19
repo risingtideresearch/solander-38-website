@@ -45,7 +45,7 @@ export default async function Articles({ subtitles }) {
                         <div></div>
                         <h6>
                           {article.isLive ? (
-                            formatDate(article._updatedAt)
+                            formatDate(article.effectiveDate ?? article._updatedAt)
                           ) : (
                             <em style={{ color: "var(--muted)" }}>
                               in progress
