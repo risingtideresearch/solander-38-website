@@ -345,7 +345,7 @@ export function Canvas3D({
                 <GizmoViewcube
                   faces={["Bow", "Stern", "Deck", "Keel", "Starboard", "Port"]}
                   color="rgb(255, 255, 255)"
-                  hoverColor="#ffc020"
+                  hoverColor="#b6cad3"
                   textColor="#030303"
                   font="18px Arial"
                 />

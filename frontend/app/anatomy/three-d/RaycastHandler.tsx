@@ -8,6 +8,11 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
   const mouse = useRef(new THREE.Vector2());
   const hoveredObject = useRef<THREE.Object3D | null>(null);
   const originalColor = useRef<THREE.Color | null>(null);
+  const originalMap = useRef<THREE.Texture | null>(null);
+  const originalEmissive = useRef<THREE.Color | null>(null);
+  const originalEmissiveIntensity = useRef<number>(0);
+  const originalMetalness = useRef<number>(0);
+  const originalRoughness = useRef<number>(0);
 
   const findParentLayer = (
     object: THREE.Object3D
@@ -42,30 +47,49 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
 
   const resetHoveredObject = () => {
     if (hoveredObject.current && originalColor.current) {
-      const material = (hoveredObject.current as THREE.Mesh)
-        .material as THREE.MeshBasicMaterial;
-      if (material && material.color) {
-        material.color.copy(originalColor.current);
+      const mat = (hoveredObject.current as THREE.Mesh)
+        .material as THREE.MeshStandardMaterial;
+      if (mat && mat.color) {
+        mat.color.copy(originalColor.current);
+        mat.map = originalMap.current;
+        if (originalEmissive.current) mat.emissive.copy(originalEmissive.current);
+        mat.emissiveIntensity = originalEmissiveIntensity.current;
+        mat.metalness = originalMetalness.current;
+        mat.roughness = originalRoughness.current;
+        mat.needsUpdate = true;
       }
       hoveredObject.current = null;
       originalColor.current = null;
+      originalMap.current = null;
+      originalEmissive.current = null;
       setHovered(null);
     }
   };
 
   const setHoverColor = (object: THREE.Object3D) => {
     const mesh = object as THREE.Mesh;
-    const material = mesh.material as THREE.MeshBasicMaterial;
+    const mat = mesh.material as THREE.MeshStandardMaterial;
 
-    if (material && material.color && !object.userData.ignore) {
+    if (mat && mat.color && !object.userData.ignore) {
       if (hoveredObject.current && hoveredObject.current !== object) {
         resetHoveredObject();
       }
 
       if (hoveredObject.current !== object) {
-        originalColor.current = material.color.clone();
+        originalColor.current = mat.color.clone();
+        originalMap.current = mat.map;
+        originalEmissive.current = mat.emissive.clone();
+        originalEmissiveIntensity.current = mat.emissiveIntensity;
+        originalMetalness.current = mat.metalness;
+        originalRoughness.current = mat.roughness;
         hoveredObject.current = object;
-        material.color.set("#ffae34");
+        mat.color.set(0x888888);
+        mat.map = null;
+        mat.emissive.set("#65a5b4");
+        mat.emissiveIntensity = 0.4;
+        mat.metalness = 0.9;
+        mat.roughness = 1.0;
+        mat.needsUpdate = true;
       }
     }
   };
