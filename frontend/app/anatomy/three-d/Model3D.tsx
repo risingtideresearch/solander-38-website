@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useRef, useMemo, useCallback } from "react";
+import { useEffect, useRef, useMemo, useCallback } from "react";
 import { useGLTF } from "@react-three/drei";
-import { DoubleSide, Mesh, Plane, Color, Group } from "three";
+import { DoubleSide, Mesh, MeshStandardMaterial, Plane, Color, Group } from "three";
 
 type Model3DProps = {
   url: string;
@@ -28,7 +28,7 @@ export function Model3D({
   const layerName = useMemo(() => url.replace(".glb", ""), [url]);
 
   const configureMaterial = useCallback(
-    (mat) => {
+    (mat: MeshStandardMaterial) => {
       mat.side = DoubleSide;
       if (!transparent) {
         mat.clippingPlanes = clippingPlanes;
@@ -57,7 +57,7 @@ export function Model3D({
         ? mesh.material
         : [mesh.material];
 
-      materials.forEach(configureMaterial);
+      materials.forEach((mat) => configureMaterial(mat as MeshStandardMaterial));
       mesh.castShadow = true;
       mesh.receiveShadow = true;
     },
@@ -97,21 +97,22 @@ export function Model3D({
           : [mesh.material];
 
         materials.forEach((mat) => {
-          if (!mat.userData.originalColor) {
-            mat.userData.originalColor = mat.color.clone();
+          const m = mat as MeshStandardMaterial;
+          if (!m.userData.originalColor) {
+            m.userData.originalColor = m.color.clone();
           }
 
-          mat.transparent = transparent || false;
-          mat.depthWrite = !transparent;
-          mat.opacity = transparent
+          m.transparent = transparent || false;
+          m.depthWrite = !transparent;
+          m.opacity = transparent
             ? TRANSPARENT_OPACITY
             : OPAQUE_OPACITY;
-          mat.clippingPlanes = transparent ? [] : clippingPlanes;
+          m.clippingPlanes = transparent ? [] : clippingPlanes;
 
           if (transparent) {
-            mat.color.set(0xf0f8ff);
+            m.color.set(0xf0f8ff);
           } else {
-            mat.color.copy(mat.userData.originalColor);
+            m.color.copy(m.userData.originalColor);
           }
         });
       }
