@@ -7,6 +7,7 @@ import {defaultDocumentNode} from './structure/defaultDocumentNode'
 import {structure} from './structure'
 import {MediaDetails} from './components/MediaDetails'
 import {netlifyDeploy} from './plugins/netlifyDeploy'
+import {PreviewAction} from './actions/previewAction'
 
 export default defineConfig({
   name: 'default',
@@ -42,6 +43,15 @@ export default defineConfig({
           return assetSource
         })
       },
+    },
+  },
+
+  document: {
+    actions: (prev, {schemaType}) => {
+      if (schemaType === 'article') {
+        return [...prev, PreviewAction]
+      }
+      return prev
     },
   },
 
