@@ -43,7 +43,7 @@ export async function fetchArticles(slug?: string) {
 }
 
 export async function fetchArticlesStatic(slug?: string) {
-  const data = await sanityFetchStatic({ query: articlesQuery(slug) });
+  const { data } = await sanityFetchStatic({ query: articlesQuery(slug) });
   return { data };
 }
 
@@ -85,7 +85,7 @@ export async function fetchArticleIdMap(): Promise<Record<string, string>> {
 }
 
 export async function fetchSystemsStatic(slug?: string) {
-  const data = await sanityFetchStatic({ query: systemsQuery(slug) });
+  const { data } = await sanityFetchStatic({ query: systemsQuery(slug) });
 
   return { data };
 }
@@ -105,7 +105,7 @@ export async function fetchPhotos(section?: string) {
  * @returns
  */
 export async function fetchPhotosStatic(section?: string) {
-  const data = await sanityFetchStatic({ query: allPhotosQuery(section) });
+  const { data } = await sanityFetchStatic({ query: allPhotosQuery(section) });
 
   return { data };
 }

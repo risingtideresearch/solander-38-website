@@ -131,6 +131,8 @@ export default async function Article({ data, materials = [] }) {
     ...contextualLayers,
   ];
 
+  const isPreviewSite = process.env.NEXT_PUBLIC_PREVIEW_SITE === "true";
+
   return (
     <main
       className={`article ${styles.page} ${data.isLive ? "" : styles["article--in-progress"]}`}
@@ -222,7 +224,7 @@ export default async function Article({ data, materials = [] }) {
           <div className={`${styles.metadata}`}>
             {!data.isLive ? (
               <div className={styles["in-progress-banner"]}>
-                <h6>Story in progress</h6>
+                <h6>Story in progress{isPreviewSite ? " — written content below will not be visible on production site" : ""}</h6>
               </div>
             ) : (
               <></>
@@ -257,7 +259,7 @@ export default async function Article({ data, materials = [] }) {
           </div>
         </div>
         <div>
-          {data.isLive ? (
+          {data.isLive || isPreviewSite ? (
             <PortableText value={data.content} components={components} />
           ) : (
             <></>

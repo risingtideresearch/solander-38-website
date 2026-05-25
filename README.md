@@ -12,6 +12,17 @@ https://rising-tide.sanity.studio
 ### Front end (Next.js/React)
 [/frontend/](/frontend/)
 
+### Deployments
+To avoid full site deploys on content changes, a preview site will display content via Sanity's Live API while the production site will be statically generated on manual deploy. 
+
+| | Preview | Production |
+|--|---------|------------|
+| Site | https://solander38-preview.netlify.app | https://solander38.netlify.app |
+| Build trigger | git push (auto) | Studio Deploy tool → build hook |
+| Content | Draft content | Published content |
+| Content freshness | Sanity Live API (SSE, instant/browser refresh) | SSG at build time |
+| Env var | `NEXT_PUBLIC_PREVIEW_SITE=true` | _(not set)_ |
+
 ### Python scripts
 [/scripts/](/scripts/)
 

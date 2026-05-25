@@ -6,6 +6,7 @@ import {media} from 'sanity-plugin-media'
 import {defaultDocumentNode} from './structure/defaultDocumentNode'
 import {structure} from './structure'
 import {MediaDetails} from './components/MediaDetails'
+import {netlifyDeploy} from './plugins/netlifyDeploy'
 
 export default defineConfig({
   name: 'default',
@@ -18,6 +19,7 @@ export default defineConfig({
     structureTool({structure, defaultDocumentNode}),
     visionTool(),
     media({components: {details: MediaDetails}}),
+    netlifyDeploy(),
   ],
 
   mediaLibrary: {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AcuminPro } from "./_fonts";
+import { SanityLive } from "@/sanity/lib/live";
 
 import "./globals.scss";
 import "./home.scss";
@@ -28,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={AcuminPro.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        {process.env.NEXT_PUBLIC_PREVIEW_SITE === "true" && <SanityLive />}
+      </body>
     </html>
   );
 }
