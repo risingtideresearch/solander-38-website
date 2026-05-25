@@ -8,6 +8,9 @@ const { sanityFetch: liveFetch, SanityLive } = defineLive({
   client,
   serverToken: token,
   browserToken: token,
+  // On the preview site: bypass the Next.js data cache so every page load
+  // fetches fresh draft content from Sanity instead of serving the SSG build.
+  ...(isPreviewSite ? { fetchOptions: { revalidate: 0 } } : {}),
 });
 
 async function staticFetch({
