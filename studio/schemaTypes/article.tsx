@@ -12,6 +12,29 @@ export const article = defineType({
   type: 'document',
   title: 'Story',
   icon: RiArticleLine,
+  preview: {
+    select: {
+      title: 'title',
+      isLive: 'isLive',
+      publishDate: 'publishDate',
+      publishedAt: '_publishedAt',
+      updatedAt: '_updatedAt',
+    },
+    prepare({title, isLive, publishDate, publishedAt, updatedAt}) {
+      const rawDate = publishDate || publishedAt || updatedAt
+      const dateStr = rawDate
+        ? new Date(publishDate ? publishDate + 'T00:00:00' : rawDate).toLocaleDateString(
+            'en-US',
+            {year: 'numeric', month: 'short', day: 'numeric'},
+          )
+        : null
+      const status = isLive ? '● Live' : '○ In progress'
+      return {
+        title: title || 'Untitled',
+        subtitle: dateStr && isLive ? `${status} · ${dateStr}` : status,
+      }
+    },
+  },
   fields: [
     defineField({
       name: 'title',
@@ -28,10 +51,6 @@ export const article = defineType({
       type: 'boolean',
       description:
         'Toggle on to publish story content to the site. While this is off, only subtitle and associated models/materials will be visible for this story.',
-    }),
-    defineField({
-      name: 'hideMaterials',
-      type: 'boolean',
     }),
     defineField({
       name: 'subtitle',
@@ -296,6 +315,7 @@ export const article = defineType({
         }),
       ],
     }),
+
     defineField({
       name: 'relatedModels',
       type: 'array',
@@ -342,6 +362,12 @@ export const article = defineType({
           },
         }),
       ],
+    }),
+    defineField({
+      name: 'hideMaterials',
+      title: "Hide Materials Table",
+      type: 'boolean',
+      description: 'Materials table derived from 3D model layers above will display at end of story. Toggle on to hide.',
     }),
   ],
 })
