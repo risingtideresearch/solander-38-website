@@ -41,6 +41,8 @@ def clean_material_name(material_name: str) -> Optional[str]:
         'tinted',
         '(internals)',
         '(hull)',
+        '(map land)',
+        '(map water)',
         'polished',
         '(1)', '(2)', '(3)', '(4)', '(5)',  # numbered variants
     ]

@@ -48,15 +48,22 @@ cd scripts && ./optimize-glb.sh
 ```
 - The front end (`Model3D.tsx`) uses `useGLTF(..., undefined, true)` to decompress meshopt files automatically via `meshoptimizer`
 
-#### 2. `scripts/pdf-to-png.py`
-2a. `pdf-to-png.py`
+#### 2. `scripts/main.py`
+Orchestrator — runs steps 2a and 2b, then copies all manifests to the Sanity studio directory.
+```bash
+cd scripts && python main.py
+# Options:
+# --skip-pdf    skip PDF conversion and only process materials
+```
+
+2a. `pdf_to_png.py`
 - Converts all drawing PDFs in `frontend/public/drawings/` to PNGs under `frontend/public/drawings/output_images`
 - Original PDF is preserved in the directory
-- Creates `export-manifest.json`
+- Creates `conversion_manifest.json`
 - ~90 seconds to complete
 
-2b. `create_material_index.py`
-– Extracts material info from glb layers
+2b. `extract_materials.py`
+- Extracts material info from GLB layers
 - Creates `material_index_simple.json`
 
-2c. Copies manifests to sanity directory for Drawing and Material dropdowns
+2c. Copies manifests to `studio/script_output/` for Drawing and Material dropdowns

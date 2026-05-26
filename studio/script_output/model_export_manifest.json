@@ -363,38 +363,38 @@
     {
       "layer_name": "POWER ARCHITECTURE::SMARTPLUG INLET SYSTEM::Miniature Bayonet T3 1/4 Bulb & holder",
       "filename": "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM__Miniature Bayonet T3 1_4 Bulb & holder.glb",
-      "file_size": 76456,
+      "file_size": 76448,
       "object_count": 1,
       "bounding_box": {
         "min": {
-          "x": -187.114501953125,
-          "y": 0.3673268258571625,
-          "z": 92.87986484964782
+          "x": -186.55638122558594,
+          "y": -2.7219536668232616,
+          "z": 95.12747726818385
         },
         "max": {
-          "x": -186.42700101593405,
-          "y": 2.591085341269179,
-          "z": 93.56736484964816
+          "x": -185.8688767622947,
+          "y": -0.4981951415538788,
+          "z": 95.81497955322266
         },
         "center": {
-          "x": -186.7707514845295,
-          "y": 1.4792060835631708,
-          "z": 93.22361484964799
+          "x": -186.2126289939403,
+          "y": -1.6100744041885702,
+          "z": 95.47122841070325
         },
         "dimensions": {
-          "width": 0.6875009371909471,
-          "depth": 2.2237585154120167,
-          "height": 0.6875000000003411
+          "width": 0.6875044632912477,
+          "depth": 2.223758525269383,
+          "height": 0.6875022850388035
         }
       },
       "normalized_size": {
-        "length": 2.2237585154120167,
-        "width": 0.6875009371909471,
-        "height": 0.6875000000003411,
+        "length": 2.223758525269383,
+        "width": 0.6875044632912477,
+        "height": 0.6875022850388035,
         "world_aligned": {
-          "x": 0.6875009371909471,
-          "y": 2.2237585154120167,
-          "z": 0.6875000000003411
+          "x": 0.6875044632912477,
+          "y": 2.223758525269383,
+          "z": 0.6875022850388035
         }
       },
       "export_method": "standard",
@@ -403,38 +403,38 @@
     {
       "layer_name": "POWER ARCHITECTURE::SMARTPLUG INLET SYSTEM::AC rotary switch",
       "filename": "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM__AC rotary switch.glb",
-      "file_size": 78744,
+      "file_size": 78736,
       "object_count": 6,
       "bounding_box": {
         "min": {
-          "x": -187.41343688964844,
-          "y": -1.014664658737728,
-          "z": 94.46651458740234
+          "x": -185.41421508789062,
+          "y": -3.085104394107709,
+          "z": 93.43634796142578
         },
         "max": {
-          "x": -184.61001586914062,
-          "y": 3.0831043941076985,
-          "z": 97.27451715822114
+          "x": -182.61079278285635,
+          "y": 1.012664658737717,
+          "z": 96.24434612332861
         },
         "center": {
-          "x": -186.01172637939453,
-          "y": 1.0342198676849854,
-          "z": 95.87051587281175
+          "x": -184.0125039353735,
+          "y": -1.0362198676849959,
+          "z": 94.8403470423772
         },
         "dimensions": {
-          "width": 2.8034210205078125,
+          "width": 2.8034223050342746,
           "depth": 4.097769052845426,
-          "height": 2.8080025708188003
+          "height": 2.8079981619028302
         }
       },
       "normalized_size": {
         "length": 4.097769052845426,
-        "width": 2.8080025708188003,
-        "height": 2.8034210205078125,
+        "width": 2.8079981619028302,
+        "height": 2.8034223050342746,
         "world_aligned": {
-          "x": 2.8034210205078125,
+          "x": 2.8034223050342746,
           "y": 4.097769052845426,
-          "z": 2.8080025708188003
+          "z": 2.8079981619028302
         }
       },
       "export_method": "standard",
@@ -443,37 +443,37 @@
     {
       "layer_name": "POWER ARCHITECTURE::SMARTPLUG INLET SYSTEM::30amp inlet",
       "filename": "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM__30amp inlet.glb",
-      "file_size": 80344,
+      "file_size": 129112,
       "object_count": 3,
       "bounding_box": {
         "min": {
-          "x": -186.2696990966797,
-          "y": -2.793532634974836,
-          "z": 102.02599139975653
+          "x": -184.7511015110286,
+          "y": -2.915532634975132,
+          "z": 101.13363904277257
         },
         "max": {
-          "x": -180.9998321533203,
-          "y": -0.07352283596992493,
-          "z": 106.40456298367259
+          "x": -179.48124657834157,
+          "y": -0.19552282989025116,
+          "z": 105.51221062668863
         },
         "center": {
-          "x": -183.634765625,
-          "y": -1.4335277354723805,
-          "z": 104.21527719171456
+          "x": -182.11617404468507,
+          "y": -1.5555277324326915,
+          "z": 103.3229248347306
         },
         "dimensions": {
-          "width": 5.269866943359375,
-          "depth": 2.7200097990049112,
+          "width": 5.269854932687025,
+          "depth": 2.7200098050848807,
           "height": 4.378571583916056
         }
       },
       "normalized_size": {
-        "length": 5.269866943359375,
+        "length": 5.269854932687025,
         "width": 4.378571583916056,
-        "height": 2.7200097990049112,
+        "height": 2.7200098050848807,
         "world_aligned": {
-          "x": 5.269866943359375,
-          "y": 2.7200097990049112,
+          "x": 5.269854932687025,
+          "y": 2.7200098050848807,
           "z": 4.378571583916056
         }
       },
@@ -483,38 +483,38 @@
     {
       "layer_name": "POWER ARCHITECTURE::SMARTPLUG INLET SYSTEM::50amp inlet",
       "filename": "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM__50amp inlet.glb",
-      "file_size": 81100,
+      "file_size": 129896,
       "object_count": 3,
       "bounding_box": {
         "min": {
-          "x": -187.51007080078125,
-          "y": -2.7935326349747993,
-          "z": 97.70031376803388
+          "x": -185.99147033691406,
+          "y": -2.9155326349750945,
+          "z": 96.80796141104992
         },
         "max": {
-          "x": -182.24020385742188,
-          "y": 0.3201844394207001,
-          "z": 102.07888535194986
+          "x": -180.72161467951736,
+          "y": 0.19818444550037384,
+          "z": 101.18653299496593
         },
         "center": {
-          "x": -184.87513732910156,
-          "y": -1.2366740977770496,
-          "z": 99.88959955999186
+          "x": -183.3565425082157,
+          "y": -1.3586740947373603,
+          "z": 98.99724720300793
         },
         "dimensions": {
-          "width": 5.269866943359375,
-          "depth": 3.1137170743954994,
-          "height": 4.378571583915985
+          "width": 5.269855657396704,
+          "depth": 3.1137170804754684,
+          "height": 4.378571583916013
         }
       },
       "normalized_size": {
-        "length": 5.269866943359375,
-        "width": 4.378571583915985,
-        "height": 3.1137170743954994,
+        "length": 5.269855657396704,
+        "width": 4.378571583916013,
+        "height": 3.1137170804754684,
         "world_aligned": {
-          "x": 5.269866943359375,
-          "y": 3.1137170743954994,
-          "z": 4.378571583915985
+          "x": 5.269855657396704,
+          "y": 3.1137170804754684,
+          "z": 4.378571583916013
         }
       },
       "export_method": "standard",
@@ -523,38 +523,38 @@
     {
       "layer_name": "POWER ARCHITECTURE::SMARTPLUG INLET SYSTEM::sensors",
       "filename": "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM__sensors.glb",
-      "file_size": 196028,
+      "file_size": 293656,
       "object_count": 6,
       "bounding_box": {
         "min": {
-          "x": -182.54859924316406,
-          "y": -0.2861292362213135,
-          "z": 115.00302429492451
+          "x": -180.89223889527975,
+          "y": -0.1581316888332367,
+          "z": 114.5913200949576
         },
         "max": {
-          "x": -176.03836059570312,
-          "y": 2.7882033175124827,
-          "z": 123.70727351056314
+          "x": -174.3820037841797,
+          "y": 2.91620086283033,
+          "z": 123.29556931059624
         },
         "center": {
-          "x": -179.2934799194336,
-          "y": 1.2510370406455846,
-          "z": 119.35514890274382
+          "x": -177.63712133972973,
+          "y": 1.3790345869985468,
+          "z": 118.94344470277692
         },
         "dimensions": {
-          "width": 6.5102386474609375,
-          "depth": 3.074332553733796,
-          "height": 8.704249215638626
+          "width": 6.510235111100059,
+          "depth": 3.074332551663567,
+          "height": 8.70424921563864
         }
       },
       "normalized_size": {
-        "length": 8.704249215638626,
-        "width": 6.5102386474609375,
-        "height": 3.074332553733796,
+        "length": 8.70424921563864,
+        "width": 6.510235111100059,
+        "height": 3.074332551663567,
         "world_aligned": {
-          "x": 6.5102386474609375,
-          "y": 3.074332553733796,
-          "z": 8.704249215638626
+          "x": 6.510235111100059,
+          "y": 3.074332551663567,
+          "z": 8.70424921563864
         }
       },
       "export_method": "standard",
@@ -563,37 +563,37 @@
     {
       "layer_name": "POWER ARCHITECTURE::SMARTPLUG INLET SYSTEM::breakers",
       "filename": "POWER ARCHITECTURE__SMARTPLUG INLET SYSTEM__breakers.glb",
-      "file_size": 156888,
+      "file_size": 254580,
       "object_count": 6,
       "bounding_box": {
         "min": {
-          "x": -185.02932942255816,
-          "y": -0.7585701942443848,
-          "z": 106.35166903147919
+          "x": -183.37297509763133,
+          "y": -0.6305726766586304,
+          "z": 105.93996483151227
         },
         "max": {
-          "x": -178.51910400390625,
-          "y": 2.7882033175124454,
-          "z": 115.05591824711786
+          "x": -176.8627471923828,
+          "y": 2.916200862830293,
+          "z": 114.64421404715094
         },
         "center": {
-          "x": -181.7742167132322,
-          "y": 1.0148165616340303,
-          "z": 110.70379363929852
+          "x": -180.11786114500705,
+          "y": 1.1428140930858313,
+          "z": 110.2920894393316
         },
         "dimensions": {
-          "width": 6.510225418651913,
-          "depth": 3.54677351175683,
+          "width": 6.510227905248513,
+          "depth": 3.5467735394889233,
           "height": 8.704249215638669
         }
       },
       "normalized_size": {
         "length": 8.704249215638669,
-        "width": 6.510225418651913,
-        "height": 3.54677351175683,
+        "width": 6.510227905248513,
+        "height": 3.5467735394889233,
         "world_aligned": {
-          "x": 6.510225418651913,
-          "y": 3.54677351175683,
+          "x": 6.510227905248513,
+          "y": 3.5467735394889233,
           "z": 8.704249215638669
         }
       },
@@ -921,9 +921,9 @@
       "notes": ""
     },
     {
-      "layer_name": "SUPERSTRUCTURE::WINDOWS::rough window hardware & trim::window trim surfs",
-      "filename": "SUPERSTRUCTURE__WINDOWS__rough window hardware & trim__window trim surfs.glb",
-      "file_size": 1300248,
+      "layer_name": "SUPERSTRUCTURE::WINDOWS::window trim",
+      "filename": "SUPERSTRUCTURE__WINDOWS__window trim.glb",
+      "file_size": 1300188,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -1203,11 +1203,11 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FRAMING::1.5\" SQ TUBE",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FRAMING__1.5_ SQ TUBE.glb",
-      "file_size": 250896,
-      "object_count": 16,
+      "file_size": 265800,
+      "object_count": 17,
       "bounding_box": {
         "min": {
-          "x": -353.7184143066406,
+          "x": -385.62910102583135,
           "y": -122.10764489108503,
           "z": 86.80857045207568
         },
@@ -1217,22 +1217,22 @@
           "z": 129.82500000226707
         },
         "center": {
-          "x": -268.5746050780866,
+          "x": -284.529948437682,
           "y": 0.01914939674797722,
           "z": 108.31678522717138
         },
         "dimensions": {
-          "width": 170.287618457108,
+          "width": 202.19830517629873,
           "depth": 244.25358857566602,
           "height": 43.01642955019139
         }
       },
       "normalized_size": {
         "length": 244.25358857566602,
-        "width": 170.287618457108,
+        "width": 202.19830517629873,
         "height": 43.01642955019139,
         "world_aligned": {
-          "x": 170.287618457108,
+          "x": 202.19830517629873,
           "y": 244.25358857566602,
           "z": 43.01642955019139
         }
@@ -1363,13 +1363,13 @@
     {
       "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::PLATING",
       "filename": "SUPERSTRUCTURE__ALUM. PARTS+__PLATING.glb",
-      "file_size": 1370040,
+      "file_size": 1370052,
       "object_count": 29,
       "bounding_box": {
         "min": {
           "x": -462.7386779785156,
           "y": -129.63589477539062,
-          "z": 86.61913847282176
+          "z": 86.61913847281598
         },
         "max": {
           "x": -171.4393675062145,
@@ -1379,22 +1379,22 @@
         "center": {
           "x": -317.08902274236505,
           "y": 0.14653778076171875,
-          "z": 108.34878440083276
+          "z": 108.34878440082986
         },
         "dimensions": {
           "width": 291.29931047230116,
           "depth": 259.5648651123047,
-          "height": 43.45929185602199
+          "height": 43.459291856027775
         }
       },
       "normalized_size": {
         "length": 291.29931047230116,
         "width": 259.5648651123047,
-        "height": 43.45929185602199,
+        "height": 43.459291856027775,
         "world_aligned": {
           "x": 291.29931047230116,
           "y": 259.5648651123047,
-          "z": 43.45929185602199
+          "z": 43.459291856027775
         }
       },
       "export_method": "standard",
@@ -1521,80 +1521,320 @@
       "notes": ""
     },
     {
-      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::fascia plates",
-      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia plates.glb",
-      "file_size": 141736,
-      "object_count": 9,
+      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::TABBED RMVBL::TAB fasteners",
+      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__TABBED RMVBL__TAB fasteners.glb",
+      "file_size": 277464,
+      "object_count": 14,
       "bounding_box": {
         "min": {
-          "x": -462.9886779785156,
-          "y": -131.64676292018112,
-          "z": 117.2522964477539
+          "x": -379.6962965341257,
+          "y": -118.9376648294897,
+          "z": 119.97033932241143
         },
         "max": {
-          "x": -169.41000727785,
-          "y": 131.8517791831259,
-          "z": 133.1013922003336
+          "x": -229.38075256347656,
+          "y": 117.3835078650572,
+          "z": 129.2989356353885
         },
         "center": {
-          "x": -316.1993426281828,
-          "y": 0.10250813147239057,
-          "z": 125.17684432404376
+          "x": -304.5385245488011,
+          "y": -0.777078482216254,
+          "z": 124.63463747889996
         },
         "dimensions": {
-          "width": 293.5786707006656,
-          "depth": 263.49854210330705,
-          "height": 15.8490957525797
+          "width": 150.31554397064912,
+          "depth": 236.3211726945469,
+          "height": 9.328596312977055
         }
       },
       "normalized_size": {
-        "length": 293.5786707006656,
-        "width": 263.49854210330705,
-        "height": 15.8490957525797,
+        "length": 236.3211726945469,
+        "width": 150.31554397064912,
+        "height": 9.328596312977055,
         "world_aligned": {
-          "x": 293.5786707006656,
-          "y": 263.49854210330705,
-          "z": 15.8490957525797
+          "x": 150.31554397064912,
+          "y": 236.3211726945469,
+          "z": 9.328596312977055
         }
       },
       "export_method": "standard",
       "notes": ""
     },
     {
-      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::fascia flange brackets",
-      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__fascia flange brackets.glb",
-      "file_size": 692452,
-      "object_count": 46,
+      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::TABBED RMVBL::TABS",
+      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__TABBED RMVBL__TABS.glb",
+      "file_size": 187800,
+      "object_count": 14,
       "bounding_box": {
         "min": {
-          "x": -462.7386779785156,
+          "x": -380.5033590002817,
+          "y": -119.82911682128906,
+          "z": 119.60190465070878
+        },
+        "max": {
+          "x": -229.3837432861328,
+          "y": 118.27495602425243,
+          "z": 129.82684978137658
+        },
+        "center": {
+          "x": -304.9435511432073,
+          "y": -0.777080398518315,
+          "z": 124.71437721604268
+        },
+        "dimensions": {
+          "width": 151.1196157141489,
+          "depth": 238.1040728455415,
+          "height": 10.224945130667805
+        }
+      },
+      "normalized_size": {
+        "length": 238.1040728455415,
+        "width": 151.1196157141489,
+        "height": 10.224945130667805,
+        "world_aligned": {
+          "x": 151.1196157141489,
+          "y": 238.1040728455415,
+          "z": 10.224945130667805
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::TABBED RMVBL::TABBED RMVBL fascia plates",
+      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__TABBED RMVBL__TABBED RMVBL fascia plates.glb",
+      "file_size": 58300,
+      "object_count": 3,
+      "bounding_box": {
+        "min": {
+          "x": -380.4915771484375,
+          "y": -131.44197817673106,
+          "z": 117.2522964477539
+        },
+        "max": {
+          "x": -229.3774871826172,
+          "y": 131.64697265625,
+          "z": 132.42007446289062
+        },
+        "center": {
+          "x": -304.93453216552734,
+          "y": 0.10249723975947234,
+          "z": 124.83618545532227
+        },
+        "dimensions": {
+          "width": 151.1140899658203,
+          "depth": 263.088950832981,
+          "height": 15.167778015136719
+        }
+      },
+      "normalized_size": {
+        "length": 263.088950832981,
+        "width": 151.1140899658203,
+        "height": 15.167778015136719,
+        "world_aligned": {
+          "x": 151.1140899658203,
+          "y": 263.088950832981,
+          "z": 15.167778015136719
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::FLANGED RMVBL::FLANGE fasteners",
+      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__FLANGED RMVBL__FLANGE fasteners.glb",
+      "file_size": 297888,
+      "object_count": 15,
+      "bounding_box": {
+        "min": {
+          "x": -351.1609015878582,
+          "y": -129.13412475585938,
+          "z": 119.38731384277344
+        },
+        "max": {
+          "x": -188.7521592445992,
+          "y": 129.4272003173828,
+          "z": 120.67921815434052
+        },
+        "center": {
+          "x": -269.9565304162287,
+          "y": 0.14653778076171875,
+          "z": 120.03326599855697
+        },
+        "dimensions": {
+          "width": 162.40874234325898,
+          "depth": 258.5613250732422,
+          "height": 1.2919043115670803
+        }
+      },
+      "normalized_size": {
+        "length": 258.5613250732422,
+        "width": 162.40874234325898,
+        "height": 1.2919043115670803,
+        "world_aligned": {
+          "x": 162.40874234325898,
+          "y": 258.5613250732422,
+          "z": 1.2919043115670803
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::FLANGED RMVBL::FLANGED RMVBL fascia plates",
+      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__FLANGED RMVBL__FLANGED RMVBL fascia plates.glb",
+      "file_size": 28732,
+      "object_count": 3,
+      "bounding_box": {
+        "min": {
+          "x": -353.9684143066406,
+          "y": -131.64676292018112,
+          "z": 117.2522964477539
+        },
+        "max": {
+          "x": -186.67556107509,
+          "y": 131.8517791831259,
+          "z": 123.18928527832031
+        },
+        "center": {
+          "x": -270.3219876908653,
+          "y": 0.10250813147239057,
+          "z": 120.22079086303711
+        },
+        "dimensions": {
+          "width": 167.29285323155062,
+          "depth": 263.49854210330705,
+          "height": 5.936988830566406
+        }
+      },
+      "normalized_size": {
+        "length": 263.49854210330705,
+        "width": 167.29285323155062,
+        "height": 5.936988830566406,
+        "world_aligned": {
+          "x": 167.29285323155062,
+          "y": 263.49854210330705,
+          "z": 5.936988830566406
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::FLANGED RMVBL::FLANGES",
+      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__FLANGED RMVBL__FLANGES.glb",
+      "file_size": 228896,
+      "object_count": 15,
+      "bounding_box": {
+        "min": {
+          "x": -351.9684143066406,
           "y": -130.46609497070312,
           "z": 118.50301361083984
         },
         "max": {
-          "x": -170.7196044921875,
+          "x": -187.44937133789062,
           "y": 130.75917053222656,
-          "z": 129.83949398404525
+          "z": 120.30713653564453
         },
         "center": {
-          "x": -316.72914123535156,
+          "x": -269.7088928222656,
           "y": 0.14653778076171875,
-          "z": 124.17125379744255
+          "z": 119.40507507324219
         },
         "dimensions": {
-          "width": 292.0190734863281,
+          "width": 164.51904296875,
           "depth": 261.2252655029297,
-          "height": 11.336480373205404
+          "height": 1.8041229248046875
         }
       },
       "normalized_size": {
-        "length": 292.0190734863281,
-        "width": 261.2252655029297,
-        "height": 11.336480373205404,
+        "length": 261.2252655029297,
+        "width": 164.51904296875,
+        "height": 1.8041229248046875,
         "world_aligned": {
-          "x": 292.0190734863281,
+          "x": 164.51904296875,
           "y": 261.2252655029297,
-          "z": 11.336480373205404
+          "z": 1.8041229248046875
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::WELDED::WELDED fascia plates",
+      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__WELDED__WELDED fascia plates.glb",
+      "file_size": 75420,
+      "object_count": 3,
+      "bounding_box": {
+        "min": {
+          "x": -462.9886779785156,
+          "y": -59.03064727783203,
+          "z": 118.60374450683594
+        },
+        "max": {
+          "x": -169.41000727785,
+          "y": 123.75212168796533,
+          "z": 133.1013922003336
+        },
+        "center": {
+          "x": -316.1993426281828,
+          "y": 32.36073720506665,
+          "z": 125.85256835358477
+        },
+        "dimensions": {
+          "width": 293.5786707006656,
+          "depth": 182.78276896579735,
+          "height": 14.497647693497669
+        }
+      },
+      "normalized_size": {
+        "length": 293.5786707006656,
+        "width": 182.78276896579735,
+        "height": 14.497647693497669,
+        "world_aligned": {
+          "x": 293.5786707006656,
+          "y": 182.78276896579735,
+          "z": 14.497647693497669
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "SUPERSTRUCTURE::ALUM. PARTS+::FASCIA::WELDED::gussets",
+      "filename": "SUPERSTRUCTURE__ALUM. PARTS+__FASCIA__WELDED__gussets.glb",
+      "file_size": 132060,
+      "object_count": 9,
+      "bounding_box": {
+        "min": {
+          "x": -181.72665405273438,
+          "y": -56.99555587768555,
+          "z": 123.11654376306024
+        },
+        "max": {
+          "x": -170.58399218477112,
+          "y": 88.75659545296593,
+          "z": 131.61936996349198
+        },
+        "center": {
+          "x": -176.15532311875273,
+          "y": 15.88051978764019,
+          "z": 127.3679568632761
+        },
+        "dimensions": {
+          "width": 11.142661867963255,
+          "depth": 145.7521513306515,
+          "height": 8.502826200431741
+        }
+      },
+      "normalized_size": {
+        "length": 145.7521513306515,
+        "width": 11.142661867963255,
+        "height": 8.502826200431741,
+        "world_aligned": {
+          "x": 11.142661867963255,
+          "y": 145.7521513306515,
+          "z": 8.502826200431741
         }
       },
       "export_method": "standard",
@@ -2561,9 +2801,9 @@
       "notes": ""
     },
     {
-      "layer_name": "PROPULSION::MOTOR MOUNT::motor mount surfaces",
-      "filename": "PROPULSION__MOTOR MOUNT__motor mount surfaces.glb",
-      "file_size": 307368,
+      "layer_name": "PROPULSION::MOTOR MOUNT",
+      "filename": "PROPULSION__MOTOR MOUNT.glb",
+      "file_size": 307320,
       "object_count": 12,
       "bounding_box": {
         "min": {
@@ -2923,7 +3163,7 @@
     {
       "layer_name": "BODY::CTR BEAM::ctr beam outside surfaces",
       "filename": "BODY__CTR BEAM__ctr beam outside surfaces.glb",
-      "file_size": 269428,
+      "file_size": 269412,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -2963,8 +3203,8 @@
     {
       "layer_name": "BODY::CTR BEAM::ctr beam inside surfaces",
       "filename": "BODY__CTR BEAM__ctr beam inside surfaces.glb",
-      "file_size": 359324,
-      "object_count": 4,
+      "file_size": 365696,
+      "object_count": 2,
       "bounding_box": {
         "min": {
           "x": -385.62952182391086,
@@ -3161,9 +3401,9 @@
       "notes": ""
     },
     {
-      "layer_name": "WATER/HEATING SYSTEMS::KEEL COOLERS::keel cooler surfaces",
-      "filename": "WATER_HEATING SYSTEMS__KEEL COOLERS__keel cooler surfaces.glb",
-      "file_size": 897388,
+      "layer_name": "WATER/HEATING SYSTEMS::KEEL COOLERS",
+      "filename": "WATER_HEATING SYSTEMS__KEEL COOLERS.glb",
+      "file_size": 897340,
       "object_count": 72,
       "bounding_box": {
         "min": {
@@ -3843,8 +4083,8 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::\"ugly corner\" options::small corner box",
       "filename": "OUTFITTING_INTERIOR___ugly corner_ options__small corner box.glb",
-      "file_size": 33672,
-      "object_count": 1,
+      "file_size": 66760,
+      "object_count": 2,
       "bounding_box": {
         "min": {
           "x": -383.41150007057274,
@@ -3853,27 +4093,27 @@
         },
         "max": {
           "x": -368.145750186211,
-          "y": -59.88522090465478,
+          "y": 82.25378582298507,
           "z": 66.49712345595806
         },
         "center": {
           "x": -375.77862512839187,
-          "y": -71.06950336381992,
+          "y": 0.0,
           "z": 58.84928812194925
         },
         "dimensions": {
           "width": 15.265749884361753,
-          "depth": 22.368564918330286,
+          "depth": 164.50757164597013,
           "height": 15.295670668017621
         }
       },
       "normalized_size": {
-        "length": 22.368564918330286,
+        "length": 164.50757164597013,
         "width": 15.295670668017621,
         "height": 15.265749884361753,
         "world_aligned": {
           "x": 15.265749884361753,
-          "y": 22.368564918330286,
+          "y": 164.50757164597013,
           "z": 15.295670668017621
         }
       },
@@ -4243,38 +4483,118 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CTR BEAM TABLE",
       "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CTR BEAM TABLE.glb",
-      "file_size": 453228,
-      "object_count": 7,
+      "file_size": 453396,
+      "object_count": 8,
       "bounding_box": {
         "min": {
-          "x": -347.40203857421875,
-          "y": -13.25143051147461,
-          "z": 81.32099651321525
+          "x": -350.40203857421875,
+          "y": -12.75143051147461,
+          "z": 54.7821044921875
         },
         "max": {
-          "x": -303.7770355368225,
-          "y": 59.87358310317259,
+          "x": -306.7770355368225,
+          "y": 60.37358310317259,
           "z": 82.32099914550781
         },
         "center": {
-          "x": -325.5895370555206,
-          "y": 23.31107629584899,
-          "z": 81.82099782936153
+          "x": -328.5895370555206,
+          "y": 23.81107629584899,
+          "z": 68.55155181884766
         },
         "dimensions": {
           "width": 43.625003037396255,
           "depth": 73.1250136146472,
-          "height": 1.0000026322925635
+          "height": 27.538894653320312
         }
       },
       "normalized_size": {
         "length": 73.1250136146472,
         "width": 43.625003037396255,
-        "height": 1.0000026322925635,
+        "height": 27.538894653320312,
         "world_aligned": {
           "x": 43.625003037396255,
           "y": 73.1250136146472,
-          "z": 1.0000026322925635
+          "z": 27.538894653320312
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CTR BEAM TABLE::inlay map::land",
+      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CTR BEAM TABLE__inlay map__land.glb",
+      "file_size": 2821044,
+      "object_count": 76,
+      "bounding_box": {
+        "min": {
+          "x": -349.2075910923779,
+          "y": -11.57086184204956,
+          "z": 82.32099651321523
+        },
+        "max": {
+          "x": -307.95758056640625,
+          "y": 58.08634948730469,
+          "z": 82.32099914550781
+        },
+        "center": {
+          "x": -328.5825858293921,
+          "y": 23.257743822627564,
+          "z": 82.32099782936152
+        },
+        "dimensions": {
+          "width": 41.250010525971675,
+          "depth": 69.65721132935425,
+          "height": 2.6322925776867123e-06
+        }
+      },
+      "normalized_size": {
+        "length": 69.65721132935425,
+        "width": 41.250010525971675,
+        "height": 2.6322925776867123e-06,
+        "world_aligned": {
+          "x": 41.250010525971675,
+          "y": 69.65721132935425,
+          "z": 2.6322925776867123e-06
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CTR BEAM TABLE::inlay map::water",
+      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CTR BEAM TABLE__inlay map__water.glb",
+      "file_size": 2630188,
+      "object_count": 1,
+      "bounding_box": {
+        "min": {
+          "x": -349.2075910923779,
+          "y": -11.57086181640625,
+          "z": 82.32099651321525
+        },
+        "max": {
+          "x": -307.95758056640625,
+          "y": 58.123581714283574,
+          "z": 82.32099914550781
+        },
+        "center": {
+          "x": -328.5825858293921,
+          "y": 23.276359948938662,
+          "z": 82.32099782936153
+        },
+        "dimensions": {
+          "width": 41.250010525971675,
+          "depth": 69.69444353068982,
+          "height": 2.6322925634758576e-06
+        }
+      },
+      "normalized_size": {
+        "length": 69.69444353068982,
+        "width": 41.250010525971675,
+        "height": 2.6322925634758576e-06,
+        "world_aligned": {
+          "x": 41.250010525971675,
+          "y": 69.69444353068982,
+          "z": 2.6322925634758576e-06
         }
       },
       "export_method": "standard",
@@ -4283,13 +4603,13 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::SHELF SURFS",
       "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__SHELF SURFS.glb",
-      "file_size": 647424,
-      "object_count": 19,
+      "file_size": 642728,
+      "object_count": 18,
       "bounding_box": {
         "min": {
           "x": -383.4115000536917,
           "y": -124.71641777915681,
-          "z": 19.0
+          "z": 23.749530792236328
         },
         "max": {
           "x": -84.4114990234375,
@@ -4299,22 +4619,22 @@
         "center": {
           "x": -233.9114995385646,
           "y": 0.0,
-          "z": 49.500000010825886
+          "z": 51.87476540694405
         },
         "dimensions": {
           "width": 299.0000010302542,
           "depth": 249.43283555831363,
-          "height": 61.00000002165177
+          "height": 56.250469229415444
         }
       },
       "normalized_size": {
         "length": 299.0000010302542,
         "width": 249.43283555831363,
-        "height": 61.00000002165177,
+        "height": 56.250469229415444,
         "world_aligned": {
           "x": 299.0000010302542,
           "y": 249.43283555831363,
-          "z": 61.00000002165177
+          "z": 56.250469229415444
         }
       },
       "export_method": "standard",
@@ -4407,33 +4727,33 @@
       "object_count": 1,
       "bounding_box": {
         "min": {
-          "x": -325.33981998953334,
-          "y": -10.86399831044268,
+          "x": -328.33981998953334,
+          "y": -10.765998310442697,
           "z": 55.53210506035671
         },
         "max": {
-          "x": -304.33981998953334,
-          "y": 7.246001689557319,
+          "x": -310.2298199895333,
+          "y": 10.234001689557303,
           "z": 76.53210506035671
         },
         "center": {
-          "x": -314.83981998953334,
-          "y": -1.8089983104426803,
+          "x": -319.28481998953333,
+          "y": -0.26599831044269706,
           "z": 66.03210506035671
         },
         "dimensions": {
-          "width": 21.0,
-          "depth": 18.11,
+          "width": 18.110000000000014,
+          "depth": 21.0,
           "height": 21.0
         }
       },
       "normalized_size": {
         "length": 21.0,
         "width": 21.0,
-        "height": 18.11,
+        "height": 18.110000000000014,
         "world_aligned": {
-          "x": 21.0,
-          "y": 18.11,
+          "x": 18.110000000000014,
+          "y": 21.0,
           "z": 21.0
         }
       },
@@ -4447,33 +4767,33 @@
       "object_count": 1,
       "bounding_box": {
         "min": {
-          "x": -346.839494323763,
-          "y": -10.849671380378707,
+          "x": -346.949494323763,
+          "y": -10.75167138037871,
           "z": 55.53210506035671
         },
         "max": {
-          "x": -325.839494323763,
-          "y": 7.260328619621292,
+          "x": -328.839494323763,
+          "y": 10.24832861962129,
           "z": 76.53210506035671
         },
         "center": {
-          "x": -336.339494323763,
-          "y": -1.7946713803787073,
+          "x": -337.894494323763,
+          "y": -0.25167138037870984,
           "z": 66.03210506035671
         },
         "dimensions": {
-          "width": 21.0,
-          "depth": 18.11,
+          "width": 18.110000000000014,
+          "depth": 21.0,
           "height": 21.0
         }
       },
       "normalized_size": {
         "length": 21.0,
         "width": 21.0,
-        "height": 18.11,
+        "height": 18.110000000000014,
         "world_aligned": {
-          "x": 21.0,
-          "y": 18.11,
+          "x": 18.110000000000014,
+          "y": 21.0,
           "z": 21.0
         }
       },
@@ -4481,40 +4801,40 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::SHOWER AFT STBD::shower part locs",
-      "filename": "OUTFITTING_INTERIOR__SHOWER AFT STBD__shower part locs.glb",
-      "file_size": 957092,
-      "object_count": 4,
+      "layer_name": "OUTFITTING/INTERIOR::SHOWER AFT STBD::SHOWERHEAD",
+      "filename": "OUTFITTING_INTERIOR__SHOWER AFT STBD__SHOWERHEAD.glb",
+      "file_size": 71948,
+      "object_count": 2,
       "bounding_box": {
         "min": {
-          "x": -385.45650005369095,
-          "y": -71.48538970947266,
-          "z": 61.01486659550582
+          "x": -390.66150040373236,
+          "y": -89.48538802715962,
+          "z": 156.82500000000002
         },
         "max": {
-          "x": -382.4114990234375,
-          "y": -66.44515687463722,
-          "z": 143.59617614746094
+          "x": -384.66150040373236,
+          "y": -67.56538763501163,
+          "z": 162.74500035160318
         },
         "center": {
-          "x": -383.9339995385642,
-          "y": -68.96527329205495,
-          "z": 102.30552137148338
+          "x": -387.66150040373236,
+          "y": -78.52538783108562,
+          "z": 159.7850001758016
         },
         "dimensions": {
-          "width": 3.045001030253445,
-          "depth": 5.040232834835436,
-          "height": 82.58130955195512
+          "width": 6.0,
+          "depth": 21.920000392147983,
+          "height": 5.920000351603164
         }
       },
       "normalized_size": {
-        "length": 82.58130955195512,
-        "width": 5.040232834835436,
-        "height": 3.045001030253445,
+        "length": 21.920000392147983,
+        "width": 6.0,
+        "height": 5.920000351603164,
         "world_aligned": {
-          "x": 3.045001030253445,
-          "y": 5.040232834835436,
-          "z": 82.58130955195512
+          "x": 6.0,
+          "y": 21.920000392147983,
+          "z": 5.920000351603164
         }
       },
       "export_method": "standard",
@@ -4523,8 +4843,8 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::INT. FURNISHING::dbl mattress",
       "filename": "OUTFITTING_INTERIOR__INT. FURNISHING__dbl mattress.glb",
-      "file_size": 23084,
-      "object_count": 1,
+      "file_size": 45632,
+      "object_count": 2,
       "bounding_box": {
         "min": {
           "x": -379.0364993459312,
@@ -4533,27 +4853,27 @@
         },
         "max": {
           "x": -304.0364990234375,
-          "y": -63.000000002183,
+          "y": 117.00000762939453,
           "z": 50.0
         },
         "center": {
           "x": -341.5364991846843,
-          "y": -90.00000381578877,
+          "y": 0.0,
           "z": 45.99999974994489
         },
         "dimensions": {
           "width": 75.00000032249369,
-          "depth": 54.00000762721153,
+          "depth": 234.00001525878906,
           "height": 8.000000500110211
         }
       },
       "normalized_size": {
-        "length": 75.00000032249369,
-        "width": 54.00000762721153,
+        "length": 234.00001525878906,
+        "width": 75.00000032249369,
         "height": 8.000000500110211,
         "world_aligned": {
           "x": 75.00000032249369,
-          "y": 54.00000762721153,
+          "y": 234.00001525878906,
           "z": 8.000000500110211
         }
       },
@@ -4643,38 +4963,38 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::AFT STBD MAST::AFT STBD MAST PEDESTALS & STRUCT",
       "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__AFT STBD MAST__AFT STBD MAST PEDESTALS & STRUCT.glb",
-      "file_size": 348188,
-      "object_count": 8,
+      "file_size": 347612,
+      "object_count": 7,
       "bounding_box": {
         "min": {
           "x": -397.57625917222964,
           "y": -94.48538970947266,
-          "z": 157.1999969482422
+          "z": 156.3249969482422
         },
         "max": {
           "x": -380.1264953613281,
-          "y": -41.48538589477539,
+          "y": -41.48538802715939,
           "z": 186.37059020996094
         },
         "center": {
           "x": -388.85137726677885,
-          "y": -67.98538780212402,
-          "z": 171.78529357910156
+          "y": -67.98538886831602,
+          "z": 171.34779357910156
         },
         "dimensions": {
           "width": 17.449763810901516,
-          "depth": 53.000003814697266,
-          "height": 29.17059326171875
+          "depth": 53.00000168231327,
+          "height": 30.04559326171875
         }
       },
       "normalized_size": {
-        "length": 53.000003814697266,
-        "width": 29.17059326171875,
+        "length": 53.00000168231327,
+        "width": 30.04559326171875,
         "height": 17.449763810901516,
         "world_aligned": {
           "x": 17.449763810901516,
-          "y": 53.000003814697266,
-          "z": 29.17059326171875
+          "y": 53.00000168231327,
+          "z": 30.04559326171875
         }
       },
       "export_method": "standard",
@@ -4801,119 +5121,399 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::FWD MAST PEDESTALS & STRUCT",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__FWD MAST PEDESTALS & STRUCT.glb",
-      "file_size": 338384,
-      "object_count": 19,
-      "bounding_box": {
-        "min": {
-          "x": -192.27183532714844,
-          "y": -6.1601646587313335,
-          "z": 88.09052719993694
-        },
-        "max": {
-          "x": -168.46435546875,
-          "y": 53.03534006406221,
-          "z": 134.1630401611328
-        },
-        "center": {
-          "x": -180.36809539794922,
-          "y": 23.43758770266544,
-          "z": 111.12678368053488
-        },
-        "dimensions": {
-          "width": 23.807479858398438,
-          "depth": 59.195504722793544,
-          "height": 46.07251296119587
-        }
-      },
-      "normalized_size": {
-        "length": 59.195504722793544,
-        "width": 46.07251296119587,
-        "height": 23.807479858398438,
-        "world_aligned": {
-          "x": 23.807479858398438,
-          "y": 59.195504722793544,
-          "z": 46.07251296119587
-        }
-      },
-      "export_method": "standard",
-      "notes": ""
-    },
-    {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::Searchlight D-SS PRO Driving Pod",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__Searchlight D-SS PRO Driving Pod.glb",
-      "file_size": 61676,
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::HDPE RMVBL PANELS",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__HDPE RMVBL PANELS.glb",
+      "file_size": 92640,
       "object_count": 2,
       "bounding_box": {
         "min": {
-          "x": -172.76436274560436,
-          "y": -1.9592648846148664,
-          "z": 121.82500000000007
+          "x": -189.12966029210418,
+          "y": -2.375,
+          "z": 89.8405532836914
         },
         "max": {
-          "x": -169.2643585205078,
-          "y": 1.9539355671524503,
-          "z": 125.32500457763672
+          "x": -174.83399251627264,
+          "y": 2.374962435787675,
+          "z": 122.1761245727539
         },
         "center": {
-          "x": -171.01436063305607,
-          "y": -0.002664658731208025,
-          "z": 123.5750022888184
+          "x": -181.9818264041884,
+          "y": -1.8782106162573697e-05,
+          "z": 106.00833892822266
         },
         "dimensions": {
-          "width": 3.5000042250965464,
-          "depth": 3.9132004517673167,
-          "height": 3.500004577636645
+          "width": 14.295667775831532,
+          "depth": 4.749962435787674,
+          "height": 32.3355712890625
         }
       },
       "normalized_size": {
-        "length": 3.9132004517673167,
-        "width": 3.500004577636645,
-        "height": 3.5000042250965464,
+        "length": 32.3355712890625,
+        "width": 14.295667775831532,
+        "height": 4.749962435787674,
         "world_aligned": {
-          "x": 3.5000042250965464,
-          "y": 3.9132004517673167,
-          "z": 3.500004577636645
+          "x": 14.295667775831532,
+          "y": 4.749962435787674,
+          "z": 32.3355712890625
         }
       },
       "export_method": "standard",
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::FLIR MD-625",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__FLIR MD-625.glb",
-      "file_size": 256816,
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::fwd mast fasteners::10-24 316L stn stl flathead screws",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__fwd mast fasteners__10-24 316L stn stl flathead screws.glb",
+      "file_size": 40532,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -174.72984313964844,
+          "y": -1.183709077438678,
+          "z": 125.58426547233691
+        },
+        "max": {
+          "x": -173.97962534842642,
+          "y": 1.192375454002942,
+          "z": 125.96927642822266
+        },
+        "center": {
+          "x": -174.35473424403745,
+          "y": 0.004333188282132028,
+          "z": 125.77677095027978
+        },
+        "dimensions": {
+          "width": 0.7502177912220134,
+          "depth": 2.37608453144162,
+          "height": 0.38501095588574685
+        }
+      },
+      "normalized_size": {
+        "length": 2.37608453144162,
+        "width": 0.7502177912220134,
+        "height": 0.38501095588574685,
+        "world_aligned": {
+          "x": 0.7502177912220134,
+          "y": 2.37608453144162,
+          "z": 0.38501095588574685
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::fwd mast fasteners::1/4\" hex bolts",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__fwd mast fasteners__1_4_ hex bolts.glb",
+      "file_size": 434964,
+      "object_count": 18,
+      "bounding_box": {
+        "min": {
+          "x": -190.51897191765892,
+          "y": -3.121936559677124,
+          "z": 86.34052719986806
+        },
+        "max": {
+          "x": -172.66107177734375,
+          "y": 3.121936559677124,
+          "z": 130.57500000035387
+        },
+        "center": {
+          "x": -181.59002184750133,
+          "y": 0.0,
+          "z": 108.45776360011097
+        },
+        "dimensions": {
+          "width": 17.857900140315166,
+          "depth": 6.243873119354248,
+          "height": 44.234472800485804
+        }
+      },
+      "normalized_size": {
+        "length": 44.234472800485804,
+        "width": 17.857900140315166,
+        "height": 6.243873119354248,
+        "world_aligned": {
+          "x": 17.857900140315166,
+          "y": 6.243873119354248,
+          "z": 44.234472800485804
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::fwd mast constr",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__fwd mast constr.glb",
+      "file_size": 1324,
+      "object_count": 4,
+      "bounding_box": {
+        "min": {
+          "x": -187.39397191704168,
+          "y": -2.7499197750880056,
+          "z": 87.34255449009511
+        },
+        "max": {
+          "x": -186.90997191704167,
+          "y": -2.749919774009288,
+          "z": 88.3717771999434
+        },
+        "center": {
+          "x": -187.1519719170417,
+          "y": -2.749919774548647,
+          "z": 87.85716584501925
+        },
+        "dimensions": {
+          "width": 0.48400000000000887,
+          "depth": 1.0787175597215537e-09,
+          "height": 1.029222709848284
+        }
+      },
+      "normalized_size": {
+        "length": 1.029222709848284,
+        "width": 0.48400000000000887,
+        "height": 1.0787175597215537e-09,
+        "world_aligned": {
+          "x": 0.48400000000000887,
+          "y": 1.0787175597215537e-09,
+          "z": 1.029222709848284
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::1/8\" ALUM. 5052",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__1_8_ ALUM. 5052.glb",
+      "file_size": 166152,
+      "object_count": 11,
+      "bounding_box": {
+        "min": {
+          "x": -190.69066079298554,
+          "y": -2.125,
+          "z": 88.34052099998333
+        },
+        "max": {
+          "x": -174.0108753397123,
+          "y": 2.125,
+          "z": 126.52676547233689
+        },
+        "center": {
+          "x": -182.3507680663489,
+          "y": 0.0,
+          "z": 107.43364323616011
+        },
+        "dimensions": {
+          "width": 16.67978545327324,
+          "depth": 4.25,
+          "height": 38.186244472353565
+        }
+      },
+      "normalized_size": {
+        "length": 38.186244472353565,
+        "width": 16.67978545327324,
+        "height": 4.25,
+        "world_aligned": {
+          "x": 16.67978545327324,
+          "y": 4.25,
+          "z": 38.186244472353565
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::1/4\" ALUM. 5052",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__1_4_ ALUM. 5052.glb",
+      "file_size": 140336,
+      "object_count": 6,
+      "bounding_box": {
+        "min": {
+          "x": -192.6610262903778,
+          "y": -3.50016478236594,
+          "z": 88.09052719994338
+        },
+        "max": {
+          "x": -168.12075858220422,
+          "y": 3.49983521763406,
+          "z": 129.82500000026718
+        },
+        "center": {
+          "x": -180.390892436291,
+          "y": -0.00016478236593986395,
+          "z": 108.95776360010528
+        },
+        "dimensions": {
+          "width": 24.540267708173587,
+          "depth": 7.0,
+          "height": 41.7344728003238
+        }
+      },
+      "normalized_size": {
+        "length": 41.7344728003238,
+        "width": 24.540267708173587,
+        "height": 7.0,
+        "world_aligned": {
+          "x": 24.540267708173587,
+          "y": 7.0,
+          "z": 41.7344728003238
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::1\" NOM SCH40 PIPE",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__1_ NOM SCH40 PIPE.glb",
+      "file_size": 177416,
       "object_count": 1,
       "bounding_box": {
         "min": {
-          "x": -176.40530737471119,
-          "y": -3.002664804458618,
-          "z": 109.82499694824219
+          "x": -181.86106963998492,
+          "y": -6.282500678966404,
+          "z": 105.84760170960851
         },
         "max": {
-          "x": -170.40528869628906,
-          "y": 2.997335217634065,
-          "z": 116.82500000000002
+          "x": -175.44677856260935,
+          "y": -2.124999999999897,
+          "z": 124.9459457397461
         },
         "center": {
-          "x": -173.40529803550012,
-          "y": -0.002664793412276545,
-          "z": 113.3249984741211
+          "x": -178.65392410129715,
+          "y": -4.20375033948315,
+          "z": 115.3967737246773
+        },
+        "dimensions": {
+          "width": 6.414291077375566,
+          "depth": 4.157500678966507,
+          "height": 19.098344030137582
+        }
+      },
+      "normalized_size": {
+        "length": 19.098344030137582,
+        "width": 6.414291077375566,
+        "height": 4.157500678966507,
+        "world_aligned": {
+          "x": 6.414291077375566,
+          "y": 4.157500678966507,
+          "z": 19.098344030137582
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::3\" OD X 1/8\" WALL 6061 TUBE",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__3_ OD X 1_8_ WALL 6061 TUBE.glb",
+      "file_size": 29924,
+      "object_count": 1,
+      "bounding_box": {
+        "min": {
+          "x": -192.1959730334185,
+          "y": -1.5000401735305786,
+          "z": 88.34052719994305
+        },
+        "max": {
+          "x": -178.865608323647,
+          "y": 1.4999598736257451,
+          "z": 123.94603032382375
+        },
+        "center": {
+          "x": -185.53079067853275,
+          "y": -4.0149952416745904e-05,
+          "z": 106.14327876188341
+        },
+        "dimensions": {
+          "width": 13.330364709771516,
+          "depth": 3.0000000471563237,
+          "height": 35.605503123880695
+        }
+      },
+      "normalized_size": {
+        "length": 35.605503123880695,
+        "width": 13.330364709771516,
+        "height": 3.0000000471563237,
+        "world_aligned": {
+          "x": 13.330364709771516,
+          "y": 3.0000000471563237,
+          "z": 35.605503123880695
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::INSTRUMENTS::MARINCO INTERNATIONAL SHORTY HORN FISHERIES SKU: 00368",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__INSTRUMENTS__MARINCO INTERNATIONAL SHORTY HORN FISHERIES SKU_ 00368.glb",
+      "file_size": 293320,
+      "object_count": 2,
+      "bounding_box": {
+        "min": {
+          "x": -178.94473266601562,
+          "y": -2.5003390670126606,
+          "z": 93.93552346515874
+        },
+        "max": {
+          "x": -174.69471740722656,
+          "y": 2.499666690826416,
+          "z": 100.4355239868164
+        },
+        "center": {
+          "x": -176.8197250366211,
+          "y": -0.0003361880931223027,
+          "z": 97.18552372598757
+        },
+        "dimensions": {
+          "width": 4.2500152587890625,
+          "depth": 5.000005757839077,
+          "height": 6.500000521657668
+        }
+      },
+      "normalized_size": {
+        "length": 6.500000521657668,
+        "width": 5.000005757839077,
+        "height": 4.2500152587890625,
+        "world_aligned": {
+          "x": 4.2500152587890625,
+          "y": 5.000005757839077,
+          "z": 6.500000521657668
+        }
+      },
+      "export_method": "standard",
+      "notes": ""
+    },
+    {
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::INSTRUMENTS::FLIR MD-625",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__INSTRUMENTS__FLIR MD-625.glb",
+      "file_size": 256884,
+      "object_count": 1,
+      "bounding_box": {
+        "min": {
+          "x": -174.65530737471119,
+          "y": -3.000164782365943,
+          "z": 105.82499694824219
+        },
+        "max": {
+          "x": -168.65528869628906,
+          "y": 2.999835252761841,
+          "z": 112.82500000000002
+        },
+        "center": {
+          "x": -171.65529803550012,
+          "y": -0.00016476480205107613,
+          "z": 109.3249984741211
         },
         "dimensions": {
           "width": 6.000018678422123,
-          "depth": 6.000000022092683,
+          "depth": 6.000000035127783,
           "height": 7.0000030517578296
         }
       },
       "normalized_size": {
         "length": 7.0000030517578296,
         "width": 6.000018678422123,
-        "height": 6.000000022092683,
+        "height": 6.000000035127783,
         "world_aligned": {
           "x": 6.000018678422123,
-          "y": 6.000000022092683,
+          "y": 6.000000035127783,
           "z": 7.0000030517578296
         }
       },
@@ -4921,40 +5521,40 @@
       "notes": ""
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::Furuno SCX-20 satellite compass",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__Furuno SCX-20 satellite compass.glb",
-      "file_size": 251752,
-      "object_count": 2,
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::INSTRUMENTS::Steaming light::SL surfs",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__INSTRUMENTS__Steaming light__SL surfs.glb",
+      "file_size": 160028,
+      "object_count": 1,
       "bounding_box": {
         "min": {
-          "x": -185.83490230421677,
-          "y": 48.78018722175201,
-          "z": 134.16302711687422
+          "x": -174.01087951660156,
+          "y": -1.713509376302571,
+          "z": 120.48919677734375
         },
         "max": {
-          "x": -175.9521484375,
-          "y": 56.2904929063163,
-          "z": 138.1896209716797
+          "x": -171.76087531500417,
+          "y": 1.7131755645314648,
+          "z": 124.02920532226562
         },
         "center": {
-          "x": -180.89352537085838,
-          "y": 52.53534006403416,
-          "z": 136.17632404427695
+          "x": -172.88587741580287,
+          "y": -0.0001669058855531258,
+          "z": 122.25920104980469
         },
         "dimensions": {
-          "width": 9.882753866716769,
-          "depth": 7.510305684564294,
-          "height": 4.026593854805469
+          "width": 2.250004201597392,
+          "depth": 3.426684940834036,
+          "height": 3.540008544921875
         }
       },
       "normalized_size": {
-        "length": 9.882753866716769,
-        "width": 7.510305684564294,
-        "height": 4.026593854805469,
+        "length": 3.540008544921875,
+        "width": 3.426684940834036,
+        "height": 2.250004201597392,
         "world_aligned": {
-          "x": 9.882753866716769,
-          "y": 7.510305684564294,
-          "z": 4.026593854805469
+          "x": 2.250004201597392,
+          "y": 3.426684940834036,
+          "z": 3.540008544921875
         }
       },
       "export_method": "standard",
@@ -5003,7 +5603,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::SIMPLIFIED ANCHOR WINCH",
       "filename": "OUTFITTING_INTERIOR__SIMPLIFIED ANCHOR WINCH.glb",
-      "file_size": 48024,
+      "file_size": 48272,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5123,7 +5723,7 @@
     {
       "layer_name": "OUTFITTING/INTERIOR::FWD TRAMPOLINE AREA::trampoline",
       "filename": "OUTFITTING_INTERIOR__FWD TRAMPOLINE AREA__trampoline.glb",
-      "file_size": 7160,
+      "file_size": 7396,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5214,29 +5814,24 @@
       "notes": "Skipped - contains CL or baseline"
     },
     {
-      "layer_name": "CONTROL::rudder assembly::stock CL",
-      "export_method": "skipped",
-      "notes": "Skipped - contains CL or baseline"
-    },
-    {
       "layer_name": "PROPULSION::SHAFTLINE COMPONENTS::shaft::CL",
       "export_method": "skipped",
       "notes": "Skipped - contains CL or baseline"
     }
   ],
   "export_info": {
-    "total_layers_found": 359,
-    "timestamp_start": "2026-03-03 11:54:53",
+    "total_layers_found": 331,
+    "timestamp_start": "2026-05-26 10:16:52",
     "format": "GLB",
-    "timestamp_end": "2026-03-03 12:01:54",
+    "timestamp_end": "2026-05-26 10:31:33",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
     },
-    "successful_exports": 130,
+    "successful_exports": 145,
     "failed_exports": 0,
-    "skipped_exports": 4,
-    "total_file_size": 42297612,
+    "skipped_exports": 3,
+    "total_file_size": 48565964,
     "units": {
       "id": 8,
       "name": "inch"
