@@ -9,7 +9,7 @@ export const client = createClient({
   dataset,
   apiVersion,
   useCdn: !isPreviewSite,
-  perspective: isPreviewSite ? "drafts" : "published",
+  perspective: "published",
   token,
   stega: {
     studioUrl,
