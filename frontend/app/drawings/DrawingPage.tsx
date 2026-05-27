@@ -1,4 +1,3 @@
-import styles from "./drawings.module.scss";
 import DrawingMetadata from "./DrawingMetadata";
 import SubNav from "../components/Navigation/SubNav";
 import { URLS } from "../components/Navigation/Navigation";
@@ -17,7 +16,7 @@ export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
     <>
       <SwipeNavigation prevUrl={prevUrl} nextUrl={nextUrl} />
       <SubNav prev={prev} next={next} urlPrefix={`${URLS.DRAWINGS}/file`} />
-      <div className={`section--two-col ${styles["drawing-page"]}`}>
+      <div className="section--two-col detail-page">
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>
             <DrawingMetadata
@@ -27,20 +26,17 @@ export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
           </div>
         </div>
         <div>
-          <div className={styles["drawing-page__body"]}>
-            <div
-              className={styles["drawing-page__image-container"]}
-              style={asset.width && asset.height ? { aspectRatio: `${asset.width} / ${asset.height}` } : undefined}
-            >
-              <Image
-                src={asset.rel_path}
-                height={asset.height}
-                width={asset.width}
-                priority
-                alt={`${asset.clean_filename}`}
-                style={{ maxWidth: "100%", height: "auto" }}
-              />
-            </div>
+          <div className="detail-page__image-container"
+            style={asset.width && asset.height ? { aspectRatio: `${asset.width} / ${asset.height}` } : undefined}
+          >
+            <Image
+              src={asset.rel_path}
+              height={asset.height}
+              width={asset.width}
+              priority
+              alt={`${asset.clean_filename}`}
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
           </div>
         </div>
       </div>

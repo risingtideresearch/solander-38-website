@@ -1,4 +1,3 @@
-import styles from "./../drawings/drawings.module.scss";
 import { Image } from "../components/Image";
 import PhotoMetadata from "./PhotoMetadata";
 import SubNav from "../components/Navigation/SubNav";
@@ -17,26 +16,24 @@ export function PhotoPage({ asset, next, prev }) {
     <>
       <SwipeNavigation prevUrl={prevUrl} nextUrl={nextUrl} />
       <SubNav prev={prev} next={next} urlPrefix={`${URLS.PHOTOS}/image`} />
-      <div className={`section--two-col ${styles["drawing-page"]}`}>
+      <div className="section--two-col detail-page">
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>
             <PhotoMetadata asset={asset} stories={asset.usedInArticles} />
           </div>
         </div>
         <div>
-          <div className={styles["drawing-page__body"]}>
-            <div className={styles["drawing-page__image-container"]}>
-              <Image
-                loading="eager"
-                src={{ asset: asset }}
-                alt={
-                  asset.altText ||
-                  asset.description ||
-                  asset.title ||
-                  asset.originalFilename
-                }
-              />
-            </div>
+          <div className="detail-page__image-container">
+            <Image
+              loading="eager"
+              src={{ asset: asset }}
+              alt={
+                asset.altText ||
+                asset.description ||
+                asset.title ||
+                asset.originalFilename
+              }
+            />
           </div>
         </div>
       </div>
