@@ -1,11 +1,13 @@
 import Gallery from "../components/Gallery";
 import { Image } from "../components/Image";
+import { formatMonthYear } from "../utils";
 
 export default function PhotoGallery({ photos }) {
   return (
     <Gallery emptyMessage="No photos">
       {photos.map((photo) => {
         const url = photo._id.split("-");
+        const monthYear = formatMonthYear(photo.photoDate);
         return (
           <div key={photo._id}>
             <a href={`/photos/image/${url[1]}`}>
@@ -17,6 +19,7 @@ export default function PhotoGallery({ photos }) {
                 }}
               >
                 {photo.title}
+                {monthYear && <span>, {monthYear}</span>}
               </p>
             </a>
           </div>

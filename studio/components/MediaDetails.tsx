@@ -1,5 +1,5 @@
-import {Box, Button, Flex, Stack, Text, TextInput} from '@sanity/ui'
-import {type ReactElement, useCallback, useEffect, useState} from 'react'
+import {Box, Stack, Text, TextInput} from '@sanity/ui'
+import {type ReactElement, useEffect, useRef, useState} from 'react'
 import {useClient} from 'sanity'
 
 type Props = {
@@ -23,13 +23,22 @@ function parseExifDate(raw: string | undefined): string | undefined {
   return undefined
 }
 
-export function MediaDetails({renderDefaultDetails, currentAsset, ...props}: Props) {
+function initDate(asset: any): string {
+  return asset?.date ?? ''
+}
+
+function initExifDate(asset: any): string | null | undefined {
+  const exif = asset?.metadata?.exif
+  if (exif === undefined) return undefined
+  return parseExifDate(exif?.DateTimeOriginal) ?? null
+}
+
+export function MediaDetails({renderDefaultDetails, currentAsset, formUpdating, setValue, ...props}: Props) {
   const client = useClient({apiVersion: '2024-01-01'})
-  const [savedDate, setSavedDate] = useState<string>('')
-  const [date, setDate] = useState<string>('')
+  const [savedDate, setSavedDate] = useState<string>(() => initDate(currentAsset))
+  const [date, setDate] = useState<string>(() => initDate(currentAsset))
   // undefined = not yet loaded, null = loaded but no EXIF, string = loaded with EXIF date
-  const [exifDate, setExifDate] = useState<string | null | undefined>(undefined)
-  const [saving, setSaving] = useState(false)
+  const [exifDate, setExifDate] = useState<string | null | undefined>(() => initExifDate(currentAsset))
 
   useEffect(() => {
     if (!currentAsset?._id) return
@@ -46,20 +55,25 @@ export function MediaDetails({renderDefaultDetails, currentAsset, ...props}: Pro
       })
   }, [currentAsset?._id])
 
-  const isDirty = date !== savedDate
+  // Save date alongside the main form — detect false → true transition on formUpdating.
+  // Using refs so the effect only re-runs when formUpdating changes, not on every date edit.
+  const dateRef = useRef(date)
+  const savedDateRef = useRef(savedDate)
+  dateRef.current = date
+  savedDateRef.current = savedDate
 
-  const handleSave = useCallback(async () => {
-    if (!currentAsset?._id) return
-    setSaving(true)
-    const patch = client.patch(currentAsset._id)
-    if (date) {
-      await patch.set({date}).commit()
-    } else {
-      await patch.unset(['date']).commit()
+  const prevFormUpdating = useRef(false)
+  useEffect(() => {
+    const wasUpdating = prevFormUpdating.current
+    prevFormUpdating.current = formUpdating
+    if (!wasUpdating && formUpdating && dateRef.current !== savedDateRef.current && currentAsset?._id) {
+      const d = dateRef.current
+      const patch = client.patch(currentAsset._id)
+      ;(d ? patch.set({date: d}) : patch.unset(['date']))
+        .commit()
+        .then(() => setSavedDate(d))
     }
-    setSavedDate(date)
-    setSaving(false)
-  }, [client, currentAsset._id, date])
+  }, [formUpdating, client, currentAsset?._id])
 
   const hint = date && exifDate
     ? 'Overrides EXIF date'
@@ -67,33 +81,26 @@ export function MediaDetails({renderDefaultDetails, currentAsset, ...props}: Pro
       ? `EXIF date: ${exifDate}`
       : exifDate === null
         ? 'No EXIF date defined'
-        : '' // still loading
+        : ''
 
   return (
     <Stack gap={3}>
-      {renderDefaultDetails({currentAsset, ...props})}
+      {renderDefaultDetails({currentAsset, formUpdating, ...props})}
       <Box>
         <Stack gap={2} paddingTop={3}>
           <Text size={1} weight='semibold'>Date</Text>
           <Text size={1} muted>{hint}</Text>
-          <Flex gap={2} align="center">
-            <Box flex={1}>
-              <TextInput
-                disabled={props.formUpdating || saving}
-                onChange={(e) => setDate(e.currentTarget.value)}
-                type="date"
-                value={date}
-                placeholder={exifDate ?? undefined}
-              />
-            </Box>
-            <Button
-              text="Save"
-              tone="primary"
-              onClick={handleSave}
-              disabled={!isDirty || saving || props.formUpdating}
-              loading={saving}
-            />
-          </Flex>
+          <TextInput
+            disabled={formUpdating}
+            onChange={(e) => {
+              const v = e.currentTarget.value
+              setDate(v)
+              setValue?.('date' as any, v, {shouldDirty: true})
+            }}
+            type="date"
+            value={date}
+            placeholder={exifDate ?? undefined}
+          />
         </Stack>
       </Box>
     </Stack>

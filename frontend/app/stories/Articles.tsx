@@ -24,13 +24,13 @@ export default async function Articles({ subtitles }) {
                   <li key={article._id}>
                     <div className={styles["article-preview"]}>
                       {article.slug == "range" ? (
-                        <RangeChart title={''} />
+                        <RangeChart title={""} />
                       ) : (
                         <Image
                           src={`/preview/${article.slug}.png`}
                           width={1600}
                           height={840}
-                          alt={`Model of ${article.title}`}
+                          alt={`Preview of ${article.title}`}
                         />
                       )}
                     </div>
