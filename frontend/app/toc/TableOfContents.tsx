@@ -2,7 +2,7 @@
 
 import { BiCollapseAlt, BiExpandAlt } from "react-icons/bi";
 import styles from "./toc.module.scss";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useLayoutEffect, useState } from "react";
 
 interface TOCArticle {
   _id: string;
@@ -27,26 +27,27 @@ export default function TableOfContents({
   showArticles = true,
 }) {
   const [collapsed, setCollapsed] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [system, setSystem] = useState(
     systems.find((system) => system.slug == defaultSystem) || systems[0],
   );
   const [article, setArticle] = useState<TOCArticle | null>(defaultArticle);
 
-  useEffect(() => {
-    if (window.innerWidth < 800 && !collapsed) {
-      setCollapsed(true);
-    }
+  useLayoutEffect(() => {
+    setCollapsed(window.innerWidth < 800);
+    setMounted(true);
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth < 800 && !collapsed && article) {
+    if (window.innerWidth < 800 && article) {
       setCollapsed(true);
     }
-  }, [article, system, collapsed]);
+  }, [article, system]);
   return (
     <TOCContext.Provider value={{ system, article }}>
       <div
         className={`${styles.toc__container} pane ${styles.outline} ${collapsed ? styles.collapsed : ""}`}
+        data-mounted={mounted}
       >
         <button
           className={styles.toc__collapse_button}

@@ -9,11 +9,16 @@
     left: 1.25rem;
     position: fixed;
     margin-bottom: 1.5rem;
+    transition: opacity 150ms ease;
 
     @media screen and (max-width: 800px) {
+      opacity: 0;
       top: 2.6875rem;
       left: 0.625rem;
       max-width: calc(100vw - 11.25rem);
+      &[data-mounted="true"] {
+        opacity: 1;
+      }
     }
   }
 

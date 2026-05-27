@@ -9,7 +9,7 @@ export default function MobileNavigation({ children, active }) {
 
   return (
     <nav
-      className={`${styles["nav"]} ${styles["mobile-nav"]}`}
+      className={`${styles["nav"]} ${styles["mobile-nav"]} ${open ? styles["mobile-nav--open"] : ""}`}
     >
       <button onClick={() => setOpen((prev) => !prev)} aria-expanded={open} aria-label="Toggle navigation menu">
         <MdOutlineMenu size={18} />

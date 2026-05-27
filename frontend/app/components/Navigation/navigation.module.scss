@@ -87,7 +87,7 @@
     display: block;
   }
 
-  &:has([aria-expanded="true"]) {
+  &--open {
     z-index: 1001;
   }
 
@@ -99,13 +99,8 @@
 
   button {
     height: 100%;
+    background: none;
     backdrop-filter: none;
-
-    &,
-    &:hover,
-    &:active {
-      background: none !important;
-    }
   }
 
   &__menu {
