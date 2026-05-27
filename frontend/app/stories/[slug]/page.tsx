@@ -174,6 +174,14 @@ export default async function Page({ params }) {
         data={dataWithMatchedDrawings}
         materials={Array.from(relatedMaterials)}
       />
+
+      <SubNav
+        prev={navigation.prev}
+        next={navigation.next}
+        noBorderBottom={true}
+        urlPrefix="/stories"
+        idKey="slug"
+      />
     </>
   );
 }

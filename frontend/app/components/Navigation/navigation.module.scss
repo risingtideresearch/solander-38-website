@@ -87,14 +87,24 @@
     display: block;
   }
 
+  &:has([aria-expanded="true"]) {
+    z-index: 1001;
+  }
+
+  > button {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
   button {
     height: 100%;
-    background: none;
     backdrop-filter: none;
 
+    &,
     &:hover,
     &:active {
-      background: none;
+      background: none !important;
     }
   }
 

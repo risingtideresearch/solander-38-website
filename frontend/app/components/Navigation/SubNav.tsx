@@ -1,9 +1,9 @@
 import { LiaArrowLeftSolid, LiaArrowRightSolid } from "react-icons/lia";
 import styles from "./subnav.module.scss";
 
-export default function SubNav({ next, prev, urlPrefix, idKey = "uuid" }) {
+export default function SubNav({ next, prev, urlPrefix, idKey = "uuid", noBorderBottom = false }) {
   return (
-    <div className={styles["sub-nav"]}>
+    <div className={`${styles["sub-nav"]} ${!noBorderBottom && styles["border-bottom"]}`}>
       <div className={styles["sub-nav__container"]}>
         {prev && (
           <div>
