@@ -91,6 +91,11 @@
     height: 100%;
     background: none;
     backdrop-filter: none;
+
+    &:hover,
+    &:active {
+      background: none;
+    }
   }
 
   &__menu {
