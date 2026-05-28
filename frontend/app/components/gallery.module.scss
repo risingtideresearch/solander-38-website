@@ -26,6 +26,11 @@
     text-decoration: none;
     display: block;
     margin: 0 auto;
+
+    &:hover img {
+      transition: 200ms;
+      opacity: 0.8;
+    }
   }
 }
 

@@ -10,6 +10,10 @@
   &:hover {
     --border-color: var(--black);
     text-decoration: none;
+
+    img {
+      opacity: 1;
+    }
   }
 
   p {
