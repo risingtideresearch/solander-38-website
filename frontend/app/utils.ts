@@ -6,7 +6,6 @@ import { Model } from "./anatomy/three-d/util";
 export function formatDate(date: Date | string) {
   let d;
 
-
   if (typeof date === "string") {
     if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
       d = new Date(date + "T00:00:00Z");
@@ -24,6 +23,37 @@ export function formatDate(date: Date | string) {
   const day = String(d.getUTCDate()).padStart(2, "0");
 
   return `${year}–${month}–${day}`;
+}
+
+const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+export function formatMonthYear(date: string | undefined | null): string {
+  if (!date) return "";
+  let normalized: string;
+  if (/^\d{4}:\d{2}:\d{2}/.test(date)) {
+    // EXIF "YYYY:MM:DD HH:MM:SS" → normalize to ISO
+    normalized = date.substring(0, 10).replace(/:/g, "-") + "T00:00:00Z";
+  } else if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    normalized = date + "T00:00:00Z";
+  } else {
+    normalized = date.endsWith("Z") ? date : date + "Z";
+  }
+  const d = new Date(normalized);
+  if (isNaN(d.getTime())) return "";
+  return `${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }
 
 /**

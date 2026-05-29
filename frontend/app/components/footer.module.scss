@@ -29,53 +29,36 @@
 .inner {
   position: relative;
   z-index: 1;
+  padding: 3rem 2rem;
+
+  p {
+    margin: 0;
+    font-size: 0.75rem;
+    text-wrap: pretty;
+    line-height: 1.4em;
+    max-width: 50ch;
+  }
+
+  .license {
+    margin-top: 1rem;
+    text-align: right;
+    max-width: 100%;
+    &,
+    a {
+      color: var(--muted);
+    }
+  }
 
   @media screen and (max-width: 800px) {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 0;
-  }
-
-  > div:first-child {
-    p {
-      margin: 0;
-      font-size: 0.75rem;
-      text-wrap: pretty;
-      line-height: 1.4em;
-    }
-  }
-
-  > div:nth-child(2) {
-    p {
-      margin: 0.25rem 0;
-    }
-  }
-
-  > div,
-  > div:nth-child(odd),
-  > div:nth-child(even) {
-    padding: 3rem;
-    padding-bottom: 10rem;
-    &:first-child {
-      border-right: 1px solid var(--black);
-      padding: 3rem 2rem 5rem 2rem;
-      @media screen and (max-width: 800px) {
-        border-right: none;
-        padding: 3rem 1rem 5rem;
-      }
-    }
-
-    &:nth-child(2) {
-      @media screen and (max-width: 800px) {
-        padding: 0;
-      }
-    }
+    padding: 3rem 1rem 5rem;
   }
 }
 
 .logo {
+  text-align: right;
+  display: block;
   svg {
-    display: block;
+    max-width: 25rem;
     &:hover {
       background: var(--ocean-fog-blue);
     }

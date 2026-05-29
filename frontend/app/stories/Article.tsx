@@ -7,7 +7,7 @@ import { Image } from "../components/Image";
 import { formatDate } from "../utils";
 import { contextualLayers } from "../anatomy/three-d/util";
 import MaterialsTable from "../components/MaterialsTable";
-import { getPhotoURL } from "../photos/util";
+import { PhotoImage } from "../components/PhotoImage";
 import { URLS } from "../components/Navigation/Navigation";
 import RangeChart from "../components/RangeChart";
 
@@ -19,37 +19,11 @@ const components = {
         {value.caption && <figcaption>{value.caption}</figcaption>}
       </figure>
     ),
-    inlineImage: ({ value }) => {
-      const dims = value.image?.asset?.metadata?.dimensions;
-      const crop = value.image?.crop;
-      const aspectWidth = dims
-        ? dims.width * (1 - (crop?.left ?? 0) - (crop?.right ?? 0))
-        : undefined;
-      const aspectHeight = dims
-        ? dims.height * (1 - (crop?.top ?? 0) - (crop?.bottom ?? 0))
-        : undefined;
-      return (
-        <figure className={styles.inline_image}>
-          <a href={getPhotoURL(value.image.asset)}>
-            <div
-              style={
-                aspectWidth && aspectHeight
-                  ? { aspectRatio: `${aspectWidth} / ${aspectHeight}` }
-                  : undefined
-              }
-            >
-              <Image
-                src={value.image}
-                alt={value.altText || "todo: add alt text"}
-              />
-            </div>
-            {value.image?.asset?.title && (
-              <figcaption>{value.image.asset.title}</figcaption>
-            )}
-          </a>
-        </figure>
-      );
-    },
+    inlineImage: ({ value }) => (
+      <figure className={styles.inline_image}>
+        <PhotoImage image={value.image} altText={value.altText} />
+      </figure>
+    ),
     inlineModel: ({ value }) => (
       <>
         <h2>{value.title}</h2>
