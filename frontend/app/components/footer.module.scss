@@ -47,6 +47,9 @@
     a {
       color: var(--muted);
     }
+    @media screen and (max-width: 800px) {
+      text-align: center;
+    }
   }
 
   @media screen and (max-width: 800px) {
