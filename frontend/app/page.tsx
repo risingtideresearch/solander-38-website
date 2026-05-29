@@ -94,12 +94,6 @@ export default async function Page() {
                     </svg>
                   </h1>
                 </div>
-                <div>
-                  <p>
-                    A self-sufficient, solar-electric, coastal&nbsp;cruising
-                    power catamaran.
-                  </p>
-                </div>
               </div>
             </div>
             <div className={styles["home__columns"]}>
