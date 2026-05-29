@@ -308,9 +308,26 @@ export const articlesQuery = (slug?: string) => {
   }`;
 };
 
-/**
- *
- */
+const articleFirstImageFragment = `
+  "firstImage": content[
+    (_type == 'inlineImage' && !("no-gallery" in coalesce(image.asset->opt.media.tags[]->name.current, []))) ||
+    (_type == 'imageSet' && count(imageSet[_type == 'image' && !("no-gallery" in coalesce(asset->opt.media.tags[]->name.current, []))]) > 0)
+  ][0]{
+    "url": coalesce(
+      image.asset->url,
+      imageSet[_type == 'image' && !("no-gallery" in coalesce(asset->opt.media.tags[]->name.current, []))][0].asset->url
+    ),
+    "width": coalesce(
+      image.asset->metadata.dimensions.width,
+      imageSet[_type == 'image' && !("no-gallery" in coalesce(asset->opt.media.tags[]->name.current, []))][0].asset->metadata.dimensions.width
+    ),
+    "height": coalesce(
+      image.asset->metadata.dimensions.height,
+      imageSet[_type == 'image' && !("no-gallery" in coalesce(asset->opt.media.tags[]->name.current, []))][0].asset->metadata.dimensions.height
+    )
+  }
+`;
+
 export const systemsQuery = (slug?: string) => {
   if (slug) {
     return `
@@ -328,7 +345,8 @@ export const systemsQuery = (slug?: string) => {
           isLive,
           "slug": slug.current,
           relatedModels[],
-          "system": ^.slug.current
+          "system": ^.slug.current,
+          ${articleFirstImageFragment}
         }
       }
     }`;
@@ -349,7 +367,8 @@ export const systemsQuery = (slug?: string) => {
         "slug": slug.current,
         relatedModels[],
         "wordCount": length(pt::text(content)),
-        "system": ^.slug.current
+        "system": ^.slug.current,
+        ${articleFirstImageFragment}
       }
     }
   }`;
@@ -557,6 +576,7 @@ export const allPhotosQuery = (system?: string) => {
   originalFilename,
   metadata,
   title,
+  "photoDate": coalesce(date, metadata.exif.DateTimeOriginal),
   "usedInArticles": ${articleFilter} {
     _id,
     title,
@@ -603,3 +623,21 @@ export const assetWithNavigationQuery = (idPrefix?: string) => {
   "currentId": "${idPrefix}"
 }`;
 };
+
+export const systemNamesQuery = `
+*[_type=="systems"][0].systems[]{
+  name,
+  "slug": slug.current
+}
+`;
+
+export const latestArticlesQuery = `
+*[_type == "article" && isLive == true] | order(coalesce(publishDate, _updatedAt) desc) [0..2] {
+  _id,
+  _updatedAt,
+  "effectiveDate": coalesce(publishDate, _updatedAt),
+  title,
+  subtitle,
+  "slug": slug.current,
+  ${articleFirstImageFragment}
+}`;

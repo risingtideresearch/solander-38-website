@@ -3,7 +3,7 @@ import { AcuminPro } from "./_fonts";
 import { SanityLive } from "@/sanity/lib/live";
 
 import "./globals.scss";
-import "./home.scss";
+import "./home.module.scss";
 
 export const metadata: Metadata = {
   title: "Solander 38 | Rising Tide Research Foundation",
