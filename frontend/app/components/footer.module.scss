@@ -2,7 +2,7 @@
   border-top: 1px solid var(--black);
 
   h6 {
-    margin: 1rem 0 0 0;
+    margin: 0;
 
     a {
       display: inline-block;
@@ -11,8 +11,6 @@
   }
 
   svg {
-    margin-top: 2rem;
-
     @media screen and (max-width: 800px) {
       max-width: 16rem;
       display: block;
@@ -29,14 +27,21 @@
 .inner {
   position: relative;
   z-index: 1;
-  padding: 3rem 2rem;
+  padding: 3rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem 3rem;
+
+  @media screen and (max-width: 800px) { 
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
   p {
     margin: 0;
     font-size: 0.75rem;
     text-wrap: pretty;
     line-height: 1.4em;
-    max-width: 50ch;
   }
 
   .license {
@@ -58,10 +63,9 @@
 }
 
 .logo {
-  text-align: right;
   display: block;
   svg {
-    max-width: 25rem;
+    max-height: 6rem;
     &:hover {
       background: var(--ocean-fog-blue);
     }
