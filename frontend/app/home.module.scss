@@ -26,7 +26,7 @@
       align-content: flex-end;
       &:first-child {
         width: 100%;
-        max-width: 50vw;
+        max-width: calc(30vw - 2rem); 
         @media screen and (max-width: 800px) {
           max-width: 100%;
         }
