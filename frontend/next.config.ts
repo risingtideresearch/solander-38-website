@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  env: {
+    BUILD_DATE: new Date().toISOString(),
+  },
   devIndicators: false,
   turbopack: {
     root: __dirname,

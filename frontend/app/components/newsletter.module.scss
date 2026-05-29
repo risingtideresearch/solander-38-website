@@ -1,0 +1,59 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.input {
+  font-size: 0.875rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--black);
+  background: transparent;
+  outline: none;
+  width: 100%;
+
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &:focus {
+    border-color: var(--ocean-fog-blue);
+  }
+
+  &[type="email"] {
+    min-width: 13rem;
+
+    @media (max-width: 800px) {
+      min-width: 11rem;
+    }
+  }
+}
+
+.button {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--black);
+  background: transparent;
+  cursor: pointer;
+  align-self: flex-start;
+  white-space: nowrap;
+
+  &:hover:not(:disabled) {
+    background: var(--black);
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.error {
+  font-size: 0.75rem;
+  color: #c00;
+  margin-top: 0.25rem;
+}
