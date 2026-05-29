@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./range-chart.module.scss";
 import table from './../MaterialsTable/materials.module.scss';
 
-export default function RangeChart({ title = "Range / Speed / Power"}) {
+export default function RangeChart({ title = "Range / Speed / Power", interactive = true}) {
   const [tooltip, setTooltip] = useState<{
     x: number;
     y: number;

@@ -7,10 +7,12 @@ import {
   assetWithNavigationQuery,
   componentPartQuery,
   homepageQuery,
+  latestArticlesQuery,
   materialsQuery,
   peoplePageQuery,
   peopleQuery,
   photoOrderQuery,
+  systemNamesQuery,
   systemsQuery,
 } from "./queries";
 import { sanityFetch, sanityFetchStatic } from "./live";
@@ -178,6 +180,27 @@ export async function fetchComponents() {
   const { data } = await sanityFetch({ query: componentPartQuery() });
 
   return { data };
+}
+
+export async function fetchSystemNames(): Promise<Array<{ name: string; slug: string }>> {
+  const { data } = await sanityFetch({ query: systemNamesQuery });
+  return data as Array<{ name: string; slug: string }>;
+}
+
+/**
+ * Fetch the 3 most recently published articles for use in the footer
+ */
+export async function fetchLatestArticles() {
+  const { data } = await sanityFetch({ query: latestArticlesQuery });
+  return data as Array<{
+    _id: string;
+    title: string;
+    subtitle: string;
+    slug: string;
+    effectiveDate: string | null;
+    _updatedAt: string;
+    firstImage: { url: string; width: number | null; height: number | null } | null;
+  }>;
 }
 
 type DataAttributeConfig = CreateDataAttributeProps &

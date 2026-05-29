@@ -8,9 +8,10 @@ import { formatDate } from "../utils";
 interface IDrawingCard {
   drawing: Drawing;
   hideMetadata?: boolean;
+  autoScale?: boolean;
 }
 
-export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
+export function DrawingCard({ drawing, hideMetadata, autoScale }: IDrawingCard) {
   return (
     <a
       href={`/drawings/file/${drawing.uuid}`}
@@ -31,7 +32,7 @@ export function DrawingCard({ drawing, hideMetadata }: IDrawingCard) {
       <p style={{ margin: 0 }}>{drawing.clean_filename}</p>
       <div
         style={{
-          aspectRatio: !hideMetadata ? 1.15 : `${drawing.width} / ${drawing.height}`,
+          aspectRatio: !hideMetadata && !autoScale ? 1.15 : `${drawing.width} / ${drawing.height}`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

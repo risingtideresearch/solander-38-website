@@ -13,7 +13,7 @@ export type Drawing = {
     date: string;
     month: number;
     year: number;
-  };
+  } | null;
   author: {
     slug: string;
     name: string;
