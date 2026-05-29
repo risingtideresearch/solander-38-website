@@ -18,15 +18,15 @@
     justify-content: space-between;
     padding: 0 2rem;
 
+    @media screen and (max-width: 800px) {
+      display: block;
+    }
+
     > div {
       align-content: flex-end;
       &:first-child {
         width: 100%;
         max-width: 32rem;
-      }
-      &:last-child {
-        width: 100%;
-        text-align: right;
       }
     }
 
@@ -36,12 +36,11 @@
 
     @media screen and (max-width: 800px) {
       position: relative;
-      padding: 4rem 0.5rem 3rem 0.5rem;
+      padding: 0 1rem;
     }
 
     svg {
       @media screen and (max-width: 800px) {
-        max-width: 18rem;
         display: block;
         margin: 0 auto;
       }
@@ -112,6 +111,14 @@
     display: block;
     background-size: 1vw 1vw;
     margin: 1rem 0;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    @media screen and (max-width: 800px) {
+      background-size: 0.75rem 0.75rem;
+    }
   }
 
   &__people-list {
@@ -146,17 +153,35 @@
     animation: anatomy-crossfade 18s linear infinite;
     animation-fill-mode: backwards;
 
-    &:nth-child(1) { animation-delay: -1.5s; }
-    &:nth-child(2) { animation-delay: 3s; }
-    &:nth-child(3) { animation-delay: 7.5s; }
-    &:nth-child(4) { animation-delay: 12s; }
+    &:nth-child(1) {
+      animation-delay: -1.5s;
+    }
+    &:nth-child(2) {
+      animation-delay: 3s;
+    }
+    &:nth-child(3) {
+      animation-delay: 7.5s;
+    }
+    &:nth-child(4) {
+      animation-delay: 12s;
+    }
   }
 }
 
 @keyframes anatomy-crossfade {
-  0%   { opacity: 0; }
-  8%   { opacity: 1; }
-  25%  { opacity: 1; }
-  33%  { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
