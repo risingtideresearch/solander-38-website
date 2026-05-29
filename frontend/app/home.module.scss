@@ -26,7 +26,10 @@
       align-content: flex-end;
       &:first-child {
         width: 100%;
-        max-width: 32rem;
+        max-width: 50vw;
+        @media screen and (max-width: 800px) {
+          max-width: 100%;
+        }
       }
     }
 
