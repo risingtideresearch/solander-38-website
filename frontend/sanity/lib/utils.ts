@@ -6,6 +6,7 @@ import {
   articlesQuery,
   assetWithNavigationQuery,
   componentPartQuery,
+  firstArticleQuery,
   homepageQuery,
   latestArticlesQuery,
   materialsQuery,
@@ -47,6 +48,11 @@ export async function fetchArticles(slug?: string) {
 export async function fetchArticlesStatic(slug?: string) {
   const { data } = await sanityFetchStatic({ query: articlesQuery(slug) });
   return { data };
+}
+
+export async function fetchFirstArticle(): Promise<{ title: string; slug: string; _updatedAt: string; effectiveDate: string; authors: { name: string; slug: string }[] } | null> {
+  const { data } = await sanityFetch({ query: firstArticleQuery });
+  return data ?? null;
 }
 
 /**

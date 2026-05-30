@@ -1,4 +1,4 @@
-import { fetchArticles, fetchArticlesStatic, fetchSystems } from "@/sanity/lib/utils";
+import { fetchArticles, fetchArticlesStatic, fetchFirstArticle, fetchSystems } from "@/sanity/lib/utils";
 import Article from "../Article";
 import { matchArticleDrawings } from "@/app/stories/util";
 import { getReducedModelSet } from "@/app/utils";
@@ -23,8 +23,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }): Promise<Metadata> {
   const { slug } = await params;
-  const { data } = await fetchArticles(slug);
-  
+  const [{ data }, firstArticle] = await Promise.all([
+    fetchArticles(slug),
+    fetchFirstArticle(),
+  ]);
+
   if (!data || data.length === 0) {
     return {
       title: "Article Not Found | Solander 38",
@@ -33,9 +36,10 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   }
 
   const article = data[0];
-  
+  const isFirstArticle = firstArticle?.slug === slug;
+
   return {
-    title: `${article.title} ${article.title != 'Solander 38' ? '| Solander 38' : ''}`,
+    title: isFirstArticle ? article.title : `${article.title} | Solander 38`,
     description: article.subtitle || "",
     icons: "https://solander38.netlify.app/rising-tide.svg",
     authors: article.authors?.map(author => ({name: author.name})),

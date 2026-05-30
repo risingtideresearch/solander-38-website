@@ -54,6 +54,11 @@ export default function NewsletterForm() {
       {state === "error" && (
         <p className={styles.error}>Something went wrong — please try again.</p>
       )}
+      {state === "blocked" && (
+        <p className={styles.error}>
+          Unable to subscribe — please email us at info@risingtideresearch.org.
+        </p>
+      )}
     </>
   );
 }

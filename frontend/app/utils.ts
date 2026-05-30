@@ -1,5 +1,11 @@
 import { Model } from "./anatomy/three-d/util";
 
+export function sortPeople(people: any[]): any[] {
+  return [...people].sort((a, b) =>
+    a.name === "Avi Bryant" ? -1 : b.name === "Avi Bryant" ? 1 : a.name.localeCompare(b.name)
+  );
+}
+
 /**
  * Format dates consistently
  */

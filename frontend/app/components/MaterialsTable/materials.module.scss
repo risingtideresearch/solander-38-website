@@ -2,7 +2,8 @@
   max-width: 45rem;
   border: 1px solid var(--border);
   margin: 1rem auto;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
+    max-width: 100%;
     margin: 1rem;
   }
   > div {
@@ -12,7 +13,7 @@
     &:not(:last-child) {
       border-bottom: 1px solid var(--border);
     }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       grid-template-columns: 1fr 2fr;
     }
     h6 {
@@ -30,7 +31,7 @@
       padding: 0.5rem;
       font-size: 0.75rem;
       line-height: 1.4;
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 900px) {
         font-size: 0.875rem;
       }
     }

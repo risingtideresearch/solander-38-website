@@ -1,5 +1,6 @@
 .footer {
   border-top: 1px solid var(--black);
+  padding: 5rem 0;
 
   h6 {
     margin: 0;
@@ -10,31 +11,52 @@
     }
   }
 
-  svg {
-    @media screen and (max-width: 800px) {
-      max-width: 16rem;
-      display: block;
-      margin: 3rem auto;
-    }
-  }
-
   img {
     max-width: 16rem;
     margin: 0 auto;
+  }
+  &.minimal {
+    .inner {
+      // padding-top: 12rem;
+      padding-left: 0;
+      grid-template-columns: 1fr;
+
+      > div {
+        padding: 0;
+      }
+
+      .logo {
+        max-width: 20rem;
+        margin: 1rem auto 0 auto;
+      }
+    }
+
+    > div:first-child {
+      width: 100%;
+      padding: 0 1rem;
+      .logo {
+        max-width: 20rem;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
 .inner {
   position: relative;
   z-index: 1;
-  padding: 3rem 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2rem 3rem;
+  max-width: 94rem;
+  margin: 0 auto;
+  padding: 0 2rem 0 21rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem 1rem;
 
-  @media screen and (max-width: 800px) { 
+  @media screen and (max-width: 900px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    max-width: 30rem;
+    margin: 0 auto 0 0;
   }
 
   p {
@@ -52,22 +74,33 @@
     a {
       color: var(--muted);
     }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       text-align: center;
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     padding: 3rem 1rem 5rem;
+  }
+}
+
+.logo__spacer {
+  grid-column: span 2;
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 }
 
 .logo {
   display: block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   svg {
-    max-height: 6rem;
+    display: block;
     &:hover {
       background: var(--ocean-fog-blue);
     }
   }
+
+  
 }
