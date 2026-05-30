@@ -22,7 +22,7 @@
   }
 
   &[type="email"] {
-    min-width: 13rem;
+    min-width: 9rem;
 
     @media (max-width: 800px) {
       min-width: 11rem;

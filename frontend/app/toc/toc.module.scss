@@ -11,7 +11,7 @@
     margin-bottom: 1.5rem;
     transition: opacity 150ms ease;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       opacity: 0;
       top: 2.6875rem;
       left: 0.625rem;
@@ -108,7 +108,7 @@
   margin-top: -2rem;
   top: 4rem;
   border-left: 1px solid rgba(0, 0, 0, 0);
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     position: relative;
     top: 0;
     margin-top: 0;
@@ -117,7 +117,7 @@
   }
 
   ol {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       padding-left: 0.9375rem;
     }
   }

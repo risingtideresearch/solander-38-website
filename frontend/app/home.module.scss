@@ -7,43 +7,20 @@
   }
 
   &__hero {
-    margin: 6rem 0 1rem 0;
+    margin: 6.5rem 0 0 0;
   }
 
   &__title {
-    position: sticky;
-    bottom: 45%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 33vw;
     padding: 0 2rem;
-
-    @media screen and (max-width: 800px) {
-      display: block;
-    }
-
-    > div {
-      align-content: flex-end;
-      &:first-child {
-        width: 100%;
-        max-width: calc(30vw - 2rem); 
-        @media screen and (max-width: 800px) {
-          max-width: 100%;
-        }
-      }
-    }
-
-    p {
-      font-size: 1.125rem;
-    }
-
-    @media screen and (max-width: 800px) {
-      position: relative;
+    @media screen and (max-width: 900px) {
+      max-width: 100%;
       padding: 0 1rem;
     }
 
     svg {
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 900px) {
         display: block;
         margin: 0 auto;
       }
@@ -53,11 +30,11 @@
   &__columns {
     column-count: 3;
     gap: 4rem;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem 12rem 2rem;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       column-count: 1;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 5rem 1rem;
     }
   }
 
@@ -104,7 +81,7 @@
   }
 
   &__article-subtitle {
-    margin-left: 2.5rem;
+    margin-left: 2.25rem;
     font-size: 0.8125rem;
   }
 
@@ -119,7 +96,7 @@
       opacity: 0.85;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       background-size: 0.75rem 0.75rem;
     }
   }

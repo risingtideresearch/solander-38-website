@@ -186,12 +186,16 @@ export const peopleQuery = `
       _id,
       title,
       "slug": slug.current,
+      _updatedAt,
+      "effectiveDate": coalesce(publishDate, _updatedAt),
       "system": *[_type=="systems"][0].systems[references(^._id)][0],
     },
     "articlesMentioned": *[_type=="article" && isLive == true && references(^._id) && !defined(authors[_ref == ^.^._id][0])]{
       _id,
       title,
       "slug": slug.current,
+      _updatedAt,
+      "effectiveDate": coalesce(publishDate, _updatedAt),
       "system": *[_type=="systems"][0].systems[references(^._id)][0],
     }
 }   
@@ -624,6 +628,19 @@ export const assetWithNavigationQuery = (idPrefix?: string) => {
 }`;
 };
 
+export const firstArticleQuery = `
+*[_type=="systems"][0].systems[0].articles[0]->{
+  title,
+  "slug": slug.current,
+  _updatedAt,
+  "effectiveDate": coalesce(publishDate, _updatedAt),
+  authors[]->{
+    name,
+    "slug": slug.current
+  }
+}
+`;
+
 export const systemNamesQuery = `
 *[_type=="systems"][0].systems[]{
   name,
@@ -632,7 +649,7 @@ export const systemNamesQuery = `
 `;
 
 export const latestArticlesQuery = `
-*[_type == "article" && isLive == true] | order(coalesce(publishDate, _updatedAt) desc) [0..2] {
+*[_type == "article" && isLive == true && _id != *[_type=="systems"][0].systems[0].articles[0]->_id] | order(coalesce(publishDate, _updatedAt) desc) [0..2] {
   _id,
   _updatedAt,
   "effectiveDate": coalesce(publishDate, _updatedAt),
