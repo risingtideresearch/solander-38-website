@@ -21,7 +21,7 @@ import Link from "next/link";
 import NewsletterForm from "./components/NewsletterForm";
 
 const OG_IMAGE = {
-  url: "https://cdn.sanity.io/images/qjczz6gi/production/dd359fae6fda1fbc44f2dcd816ef9566b9098efe-2400x1260.png",
+  url: "https://cdn.sanity.io/images/qjczz6gi/production/9db43dd7496f6c4c6a8181674aa728b6d7817285-1200x630.png",
   width: 1200,
   height: 630,
   alt: "Solander 38",

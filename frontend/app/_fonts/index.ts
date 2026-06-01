@@ -7,4 +7,5 @@ export const AcuminPro = localFont({
     { path: "./acuminpro-semibold-webfont.woff2", weight: "600" },
   ],
   variable: "--font-acumin",
+  display: "block",
 });

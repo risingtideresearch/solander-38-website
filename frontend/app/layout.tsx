@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: `https://cdn.sanity.io/images/qjczz6gi/production/63be9a7d70123bdba30eba1b8e1686adaac2c7c2-4032x3024.jpg`,
-        width: 1600,
-        height: 840,
+        url: `https://cdn.sanity.io/images/qjczz6gi/production/9db43dd7496f6c4c6a8181674aa728b6d7817285-1200x630.png`,
+        width: 1200,
+        height: 630,
         alt: `Solander 38`,
       },
     ],
