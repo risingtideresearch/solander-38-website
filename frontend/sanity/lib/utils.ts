@@ -12,6 +12,7 @@ import {
   materialsQuery,
   peoplePageQuery,
   peopleQuery,
+  storiesPageQuery,
   photoOrderQuery,
   systemNamesQuery,
   systemsQuery,
@@ -155,6 +156,12 @@ export async function fetchPeople() {
  */
 export async function fetchPeoplePage() {
   const { data } = await sanityFetch({ query: peoplePageQuery });
+
+  return { data };
+}
+
+export async function fetchStoriesPage() {
+  const { data } = await sanityFetch({ query: storiesPageQuery });
 
   return { data };
 }

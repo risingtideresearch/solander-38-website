@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
 import Footer from "./components/Footer";
 import Navigation, { URLS } from "./components/Navigation/Navigation";
 import styles from "./home.module.scss";
-import articleStyles from "./stories/articles.module.scss";
+import { ArticleRow } from "./components/ArticleRow";
 import {
   fetchArticleIdMap,
   fetchFirstArticle,
@@ -18,6 +19,17 @@ import Image from "next/image";
 import { Drawing } from "./drawings/types";
 import Link from "next/link";
 import NewsletterForm from "./components/NewsletterForm";
+
+const OG_IMAGE = {
+  url: "https://cdn.sanity.io/images/qjczz6gi/production/dd359fae6fda1fbc44f2dcd816ef9566b9098efe-2400x1260.png",
+  width: 1200,
+  height: 630,
+  alt: "Solander 38",
+};
+
+export const metadata: Metadata = {
+  openGraph: { images: [OG_IMAGE] },
+};
 
 export default async function Page() {
   const [
@@ -126,7 +138,7 @@ export default async function Page() {
                 <p>{homepage.data.sectionDescriptions.stories}</p>
                 <p>
                   For an overview by RTRF Research Director{" "}
-                  <Link href={`${URLS.PEOPLE}#${"avi-bryant"}`}>
+                  <Link style={{ whiteSpace: 'nowrap'}} href={`${URLS.PEOPLE}#${"avi-bryant"}`}>
                     Avi Bryant
                   </Link>
                   , read:
@@ -134,27 +146,13 @@ export default async function Page() {
                 <ul className={styles["home__latest-list"]}>
                   {firstArticle && (
                     <li>
-                      <div
-                        className={`${articleStyles["article-header"]} ${articleStyles["article-header--compact"]}`}
-                      >
-                        <h6>1&#8209;A</h6>
-                        <a
-                          href={`${URLS.STORIES}/${firstArticle.slug}`}
-                          className={articleStyles["article-title"]}
-                        >
-                          <p style={{ fontSize: "0.875rem" }}>
-                            {firstArticle.title}
-                          </p>
-
-                          <div></div>
-                          <h6>
-                            {formatDate(
-                              firstArticle.effectiveDate ??
-                                firstArticle._updatedAt,
-                            )}
-                          </h6>
-                        </a>
-                      </div>
+                      <ArticleRow
+                        articleId="1&#8209;A"
+                        href={`${URLS.STORIES}/${firstArticle.slug}`}
+                        title={firstArticle.title}
+                        date={formatDate(firstArticle.effectiveDate ?? firstArticle._updatedAt)}
+                        compact
+                      />
                     </li>
                   )}
                 </ul>
@@ -162,25 +160,13 @@ export default async function Page() {
                 <ul className={styles["home__latest-list"]}>
                   {latestArticles.map((article) => (
                     <li key={article._id}>
-                      <div
-                        className={`${articleStyles["article-header"]} ${articleStyles["article-header--compact"]}`}
-                      >
-                        <h6>{articleIdMap[article._id]}</h6>
-                        <a
-                          href={`${URLS.STORIES}/${article.slug}`}
-                          className={articleStyles["article-title"]}
-                        >
-                          <p style={{ fontSize: "0.875rem" }}>
-                            {article.title}
-                          </p>
-                          <div></div>
-                          <h6>
-                            {formatDate(
-                              article.effectiveDate ?? article._updatedAt,
-                            )}
-                          </h6>
-                        </a>
-                      </div>
+                      <ArticleRow
+                        articleId={articleIdMap[article._id]}
+                        href={`${URLS.STORIES}/${article.slug}`}
+                        title={article.title}
+                        date={formatDate(article.effectiveDate ?? article._updatedAt)}
+                        compact
+                      />
                       <p className={styles["home__article-subtitle"]}>
                         {article.subtitle}
                       </p>

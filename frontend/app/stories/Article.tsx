@@ -26,7 +26,7 @@ const components = {
     ),
     inlineModel: ({ value }) => (
       <>
-        <h2>{value.title}</h2>
+        <h4>{value.title}</h4>
         <AnatomyPane
           defaultStyles={{
             height: "30rem",

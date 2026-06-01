@@ -388,6 +388,12 @@ export const peoplePageQuery = `
 }
 `;
 
+export const storiesPageQuery = `
+*[_type=="homepage"][0]{
+  "description": sectionDescriptions.stories
+}
+`;
+
 export const homepageQuery = () => {
   return `
   *[_type=="homepage"][0]{

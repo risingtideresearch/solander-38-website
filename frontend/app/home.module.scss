@@ -77,19 +77,14 @@
     .article-header {
       grid-template-columns: 2rem 1fr;
     }
-
-    .article-title {
-      font-size: 0.875rem;
-
-      p {
-        font-weight: 400;
-      }
-    }
   }
 
   &__article-subtitle {
     margin-left: 2.25rem;
     font-size: 0.8125rem;
+    @media screen and (max-width: 900px) {
+      font-size: 0.875rem;
+    }
   }
 
   &__anatomy-link {

@@ -1,15 +1,19 @@
 import styles from "./articles.module.scss";
 import { fetchSystems } from "@/sanity/lib/utils";
 import { formatDate } from "../utils";
+import { ArticleRow } from "../components/ArticleRow";
 import RangeChart from "../components/RangeChart";
 import Image from "next/image";
 
-export default async function Articles({ subtitles }) {
+export default async function Articles({ subtitles, description }) {
   const { data } = await fetchSystems();
 
   return (
     <div className={styles.articles}>
-      <h1>Table of contents</h1>
+      <div className={styles.header}>
+        <h1>Stories</h1>
+        <h2>{description}</h2>
+      </div>
       <main>
         {(data.systems || []).map((system, i) => (
           <section className="section--two-col" key={system._key}>
@@ -34,29 +38,15 @@ export default async function Articles({ subtitles }) {
                         />
                       )}
                     </div>
-                    <div className={styles["article-header"]}>
-                      <h6>{article.articleId}</h6>
-                      <a
-                        className={styles["article-title"]}
-                        href={`/stories/${article.slug}`}
-                        style={{ fontSize: "0.875rem" }}
-                      >
-                        <p>{article.title}</p>
-                        <div></div>
-                        <h6>
-                          {article.isLive ? (
-                            formatDate(article.effectiveDate ?? article._updatedAt)
-                          ) : (
-                            <em style={{ color: "var(--muted)" }}>
-                              in progress
-                            </em>
-                          )}
-                        </h6>
-                      </a>
-                    </div>
-                    <div className={styles["article-subtitle"]}>
-                      {subtitles ? <p>{article.subtitle}</p> : null}
-                    </div>
+                    <ArticleRow
+                      articleId={article.articleId}
+                      href={`/stories/${article.slug}`}
+                      title={article.title}
+                      date={formatDate(article.effectiveDate ?? article._updatedAt)}
+                      isLive={article.isLive}
+                      subtitle={article.subtitle}
+                      showSubtitle={subtitles}
+                    />
                   </li>
                 ))}
               </ol>
