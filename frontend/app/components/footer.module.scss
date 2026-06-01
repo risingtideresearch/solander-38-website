@@ -97,10 +97,9 @@
   margin-bottom: 0.5rem;
   svg {
     display: block;
+    overflow: visible;
     &:hover {
       background: var(--ocean-fog-blue);
     }
   }
-
-  
 }
