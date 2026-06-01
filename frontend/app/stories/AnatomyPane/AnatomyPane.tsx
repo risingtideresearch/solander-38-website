@@ -7,6 +7,7 @@ interface AnatomyPaneProps {
   title?: string;
   defaultStyles?: React.CSSProperties;
   url?: string;
+  className?: string;
 }
 
 export default function AnatomyPane({
@@ -14,10 +15,11 @@ export default function AnatomyPane({
   title,
   defaultStyles = {},
   url,
+  className,
 }: AnatomyPaneProps) {
   return (
     <div
-      className={`pane ${styles["anatomy-pane"]}`}
+      className={`pane ${styles["anatomy-pane"]}${className ? ` ${className}` : ""}`}
       style={{ ...defaultStyles, background: "none", backdropFilter: "none" }}
     >
       {title ? <h6>{url ? <a href={url}>{title}</a> : title}</h6> : <></>}

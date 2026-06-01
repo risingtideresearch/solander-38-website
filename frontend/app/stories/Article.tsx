@@ -2,6 +2,7 @@ import { PortableText } from "next-sanity";
 import { Canvas3D } from "../anatomy/three-d/Canvas3D";
 import styles from "./article.module.scss";
 import AnatomyPane from "./AnatomyPane/AnatomyPane";
+import { InlineModel } from "./InlineModel";
 import ImageSet from "../components/ImageSet";
 import { Image } from "../components/Image";
 import { formatDate } from "../utils";
@@ -25,32 +26,7 @@ const components = {
       </figure>
     ),
     inlineModel: ({ value }) => (
-      <>
-        <h4>{value.title}</h4>
-        <AnatomyPane
-          defaultStyles={{
-            height: "30rem",
-            maxWidth: "45rem",
-            margin: "1rem auto",
-          }}
-        >
-          <div
-            className="bg--grid"
-            style={{
-              border: "1px solid #eeeeee",
-              borderLeft: "none",
-              height: "100%",
-              width: "100%",
-            }}
-          >
-            <Canvas3D
-              height={"100%"}
-              filteredLayers={value.models || []}
-              interaction={"limited"}
-            />
-          </div>
-        </AnatomyPane>
-      </>
+      <InlineModel title={value.title} models={value.models || []} />
     ),
     chart: ({ value }) =>
       value.type == "range chart" ? <RangeChart title={value.title} /> : <></>,
@@ -230,7 +206,7 @@ export default async function Article({ data, materials = [] }) {
                 </>
               )}
               <h6>Updated</h6>
-              <h6>{formatDate(data._updatedAt)}</h6>
+              <h6>{formatDate(data.effectiveDate ?? data._updatedAt)}</h6>
             </div>
           </div>
         </div>

@@ -1,0 +1,29 @@
+.pane {
+  max-width: 45rem;
+  margin: 1rem auto;
+  padding: 0;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+}
+
+.container {
+  height: 26rem;
+  margin: 0 auto;
+
+  @media screen and (max-width: 900px) {
+    aspect-ratio: 1.2;
+    max-width: 28rem;
+    height: auto;
+    padding: 0 2rem;
+    padding: 0 1rem;
+  }
+}
+
+.canvas {
+  border: 1px solid #eeeeee;
+  border-left: none;
+  height: 100%;
+  width: 100%;
+}

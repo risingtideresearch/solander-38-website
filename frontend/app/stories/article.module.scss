@@ -23,6 +23,10 @@
     font-size: 0.75rem;
   }
 
+  h4 {
+    margin: 3rem 0 1rem 0;
+  }
+
   p {
     &:first-child {
       margin-top: 0.6875rem;
@@ -31,12 +35,17 @@
 
   figure {
     margin: 2rem auto;
-    max-width: 30rem;
+    max-width: 45rem;
+    text-wrap: pretty;
+
+    @media screen and (max-width: 900px) {
+      max-width: 32rem;
+    }
   }
 
   @media screen and (max-width: 900px) {
     p {
-      font-size: 1rem;
+      font-size: 0.9375rem;
       line-height: 170%;
     }
   }
@@ -125,8 +134,9 @@
   }
   ol,
   ul {
-    padding-left: 1rem;
+    padding-left: 3rem;
     @media screen and (max-width: 900px) {
+      padding-left: 1.5rem;
       margin-left: 0.75rem;
     }
   }

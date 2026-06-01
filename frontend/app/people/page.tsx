@@ -66,20 +66,20 @@ export default async function Page() {
               id={person.slug?.current}
               className={styles.person}
             >
-              <div className={styles.profile}>
-                <div className={styles.photo}>
-                  {person.image ? (
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      square={true}
-                      width={240}
-                      loading={index === 0 ? "eager" : "lazy"}
-                    />
-                  ) : (
-                    <div className={styles.noPhoto} />
-                  )}
-                </div>
+              <div
+                className={`${styles.photo} ${person.image ? "" : styles.noPhoto}`}
+              >
+                {person.image ? (
+                  <Image
+                    src={person.image}
+                    alt={person.name}
+                    square={true}
+                    width={240}
+                    loading={index < 2 ? "eager" : "lazy"}
+                  />
+                ) : (
+                  <div></div>
+                )}
               </div>
               <div className={styles.info}>
                 <p>
