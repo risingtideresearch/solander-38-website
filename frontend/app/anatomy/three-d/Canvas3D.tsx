@@ -80,9 +80,11 @@ export function Canvas3D({
       : new Vector3(0.5, 0.25, 0.625);
 
   useEffect(() => {
-    if (window?.innerWidth < 800) {
-      setIsMobile(true);
-    }
+    const mq = window.matchMedia("(pointer: coarse)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
   }, []);
 
   const handleModelLoad = useCallback((url: string) => {

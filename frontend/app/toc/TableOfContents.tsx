@@ -39,10 +39,10 @@ export default function TableOfContents({
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth < 800 && article) {
+    if (window.innerWidth < 800) {
       setCollapsed(true);
     }
-  }, [article, system]);
+  }, []);
   return (
     <TOCContext.Provider value={{ system, article }}>
       <div

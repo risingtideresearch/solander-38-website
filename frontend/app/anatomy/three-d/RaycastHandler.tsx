@@ -151,6 +151,7 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
 
   const isInsideCanvas = useRef(false);
   const lastTouchedUrl = useRef<string | null>(null);
+  const touchStartPos = useRef<{ x: number; y: number } | null>(null);
 
   const performTouchRaycast = (clientX: number, clientY: number) => {
     const canvas = gl.domElement;
@@ -187,7 +188,6 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
       if (!canvas) return;
       const rect = canvas.getBoundingClientRect();
 
-      // Check if mouse is inside canvas bounds
       const isInside =
         event.clientX >= rect.left &&
         event.clientX <= rect.right &&
@@ -209,19 +209,33 @@ export default function RaycastHandler({ clippingPlanes, setHovered }) {
       resetHoveredObject();
     };
 
-    const onPointerDown = (event: PointerEvent) => {
+    const onTouchStart = (event: PointerEvent) => {
       if (event.pointerType !== "touch") return;
-      performTouchRaycast(event.clientX, event.clientY);
+      touchStartPos.current = { x: event.clientX, y: event.clientY };
+    };
+
+    const onTouchEnd = (event: PointerEvent) => {
+      if (event.pointerType !== "touch") return;
+      if (!touchStartPos.current) return;
+      const dx = event.clientX - touchStartPos.current.x;
+      const dy = event.clientY - touchStartPos.current.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      touchStartPos.current = null;
+      if (dist < 10) {
+        performTouchRaycast(event.clientX, event.clientY);
+      }
     };
 
     canvas.addEventListener("pointermove", onMouseMove);
     canvas.addEventListener("pointerleave", onMouseLeave);
-    canvas.addEventListener("pointerdown", onPointerDown);
+    canvas.addEventListener("pointerdown", onTouchStart);
+    canvas.addEventListener("pointerup", onTouchEnd);
 
     return () => {
       canvas.removeEventListener("pointermove", onMouseMove);
       canvas.removeEventListener("pointerleave", onMouseLeave);
-      canvas.removeEventListener("pointerdown", onPointerDown);
+      canvas.removeEventListener("pointerdown", onTouchStart);
+      canvas.removeEventListener("pointerup", onTouchEnd);
       resetHoveredObject();
     };
   }, [gl]);

@@ -29,24 +29,25 @@ export default function HoverDisplay({
   const { article } = useContext(TOCContext);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const [tooltipSize, setTooltipSize] = useState({ width: 0, height: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(pointer: coarse)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMouse({ x: e.clientX, y: e.clientY });
     };
 
-    const handlePointerDown = (e: PointerEvent) => {
-      if (e.pointerType === "touch") {
-        setMouse({ x: e.clientX, y: e.clientY });
-      }
-    };
-
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("pointerdown", handlePointerDown);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("pointerdown", handlePointerDown);
     };
   }, []);
 
@@ -124,6 +125,111 @@ export default function HoverDisplay({
     return Math.round(num / magnitude) * magnitude;
   };
 
+  const rows = (
+    <>
+      {componentPart ? (
+        <>
+          <div className={styles.row}>
+            <h6 className={`${styles.cell} ${styles["cell--label"]}`}>Part</h6>
+            <h6 className={styles.cell}>{componentPart.title}</h6>
+          </div>
+          {componentPart.componentPart && (
+            <div className={styles.row}>
+              <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
+                Model
+              </h6>
+              <h6 className={styles.cell}>{componentPart.componentPart}</h6>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className={styles.row}>
+          <h6 className={`${styles.cell} ${styles["cell--label"]}`}>Part</h6>
+          <h6 className={`${styles.cell} ${styles["cell--value"]}`}>
+            {last
+              .toLowerCase()
+              .replace(
+                /\b(surfs|surfaces|mesh|simplified|approx\.|outside)\b/g,
+                "",
+              )
+              .replace(/_/g, " ")
+              .replace(/\bctr\b/g, "center")
+              .replace(/\bbhds\b/g, "bulkheads")
+              .replace(/\s{2,}/g, " ")}
+          </h6>
+        </div>
+      )}
+
+      {materials[displayLayer?.filename] && (
+        <div className={styles.row}>
+          <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
+            Material
+          </h6>
+          <h6 className={styles.cell}>
+            {materials[displayLayer?.filename]?.join(", ")}
+          </h6>
+        </div>
+      )}
+
+      {systemWeightData[displayLayer?.system] && !article ? (
+        <div className={styles.row}>
+          <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
+            {`${displayLayer.system} weight (${settings.units == Units.Feet ? "lb" : "kg"})`}
+          </h6>
+          <h6 className={styles.cell}>
+            {roundToSignificantDigit(
+              systemWeightData[displayLayer?.system].weight,
+            )}
+          </h6>
+        </div>
+      ) : weightData[displayLayer?.filename] ? (
+        <>
+          {weightData[displayLayer?.filename].quantity > 1 && (
+            <div className={styles.row}>
+              <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
+                Quantity
+              </h6>
+              <h6 className={styles.cell}>
+                {weightData[displayLayer?.filename].quantity}
+              </h6>
+            </div>
+          )}
+          <div className={styles.row}>
+            <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
+              {`Approx Wt (${settings.units == Units.Feet ? "lb" : "kg"})`}
+            </h6>
+            <h6 className={styles.cell}>
+              {roundToSignificantDigit(
+                weightData[displayLayer?.filename].quantity *
+                  weightData[displayLayer?.filename].weightPerUnit,
+              )}
+              {weightData[displayLayer?.filename].quantity > 1
+                ? ` (${parseFloat(
+                    (
+                      roundToSignificantDigit(
+                        weightData[displayLayer?.filename].quantity *
+                          weightData[displayLayer?.filename].weightPerUnit,
+                      ) / weightData[displayLayer?.filename].quantity
+                    ).toFixed(1),
+                  )} / unit)`
+                : ""}
+            </h6>
+          </div>
+        </>
+      ) : null}
+    </>
+  );
+
+  if (isMobile) {
+    return (
+      <div
+        className={`pane ${styles.panel} ${isVisible ? styles["panel--visible"] : ""}`}
+      >
+        {rows}
+      </div>
+    );
+  }
+
   return (
     <>
       <div
@@ -139,113 +245,13 @@ export default function HoverDisplay({
           width: tooltipWidth,
         }}
       >
-        {componentPart ? (
-          <>
-            <div className={styles.row}>
-              <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
-                Part
-              </h6>
-              <h6 className={styles.cell}>{componentPart.title}</h6>
-            </div>
-            {componentPart.componentPart ? (
-              <>
-                <div className={styles.row}>
-                  <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
-                    Model
-                  </h6>
-                  <h6 className={styles.cell}>{componentPart.componentPart}</h6>
-                </div>
-              </>
-            ) : (
-              <></>
-            )}
-          </>
-        ) : (
-          <div className={styles.row}>
-            <h6 className={`${styles.cell} ${styles["cell--label"]}`}>Part</h6>
-            <h6 className={`${styles.cell} ${styles["cell--value"]}`}>
-              {last
-                .toLowerCase()
-                .replace(
-                  /\b(surfs|surfaces|mesh|simplified|approx\.|outside)\b/g,
-                  "",
-                )
-                .replace(/_/g, " ")
-                .replace(/\bctr\b/g, "center")
-                .replace(/\bbhds\b/g, "bulkheads")
-                .replace(/\s{2,}/g, " ")}
-            </h6>
-          </div>
-        )}
-
-        {materials[displayLayer?.filename] ? (
-          <div className={styles.row}>
-            <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
-              Material
-            </h6>
-            <h6 className={styles.cell}>
-              {materials[displayLayer?.filename]?.join(", ")}
-            </h6>
-          </div>
-        ) : (
-          <></>
-        )}
-
-        {systemWeightData[displayLayer?.system] && !article ? (
-          <div className={styles.row}>
-            <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
-              {`${displayLayer.system} weight (${settings.units == Units.Feet ? "lb" : "kg"})`}
-            </h6>
-            <h6 className={styles.cell}>
-              {roundToSignificantDigit(
-                systemWeightData[displayLayer?.system].weight,
-              )}
-            </h6>
-          </div>
-        ) : weightData[displayLayer?.filename] ? (
-          <>
-            {weightData[displayLayer?.filename].quantity > 1 && (
-              <div className={styles.row}>
-                <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
-                  {"Quantity"}
-                </h6>
-                <h6 className={styles.cell}>
-                  {weightData[displayLayer?.filename].quantity}
-                </h6>
-              </div>
-            )}
-            <div className={styles.row}>
-              <h6 className={`${styles.cell} ${styles["cell--label"]}`}>
-                {`Approx Wt (${settings.units == Units.Feet ? "lb" : "kg"})`}
-              </h6>
-              <h6 className={styles.cell}>
-                {roundToSignificantDigit(
-                  weightData[displayLayer?.filename].quantity *
-                    weightData[displayLayer?.filename].weightPerUnit,
-                )}
-                {weightData[displayLayer?.filename].quantity > 1
-                  ? ` (${parseFloat(
-                      (
-                        roundToSignificantDigit(
-                          weightData[displayLayer?.filename].quantity *
-                            weightData[displayLayer?.filename].weightPerUnit,
-                        ) / weightData[displayLayer?.filename].quantity
-                      ).toFixed(1),
-                    )} / unit)`
-                  : ""}
-              </h6>
-            </div>
-          </>
-        ) : (
-          <></>
-        )}
-
+        {rows}
         <div
           className={`${styles.connector} ${isVisible ? styles["connector--visible"] : ""} ${position.flip == "x" ? styles["connector--right"] : styles["connector--left"]}`}
           style={{
             height: Math.abs(mouse.y - position.y) - tooltipSize.height,
             top: tooltipSize.height,
-            left:  Math.abs(position.x - mouse.x) - (position.flip == 'x' ? 2 : 1)
+            left: Math.abs(position.x - mouse.x) - (position.flip == "x" ? 2 : 1),
           }}
         ></div>
       </div>
