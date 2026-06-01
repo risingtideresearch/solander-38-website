@@ -17,6 +17,7 @@ import { DrawingCard } from "./drawings/DrawingCard";
 import { PhotoImage } from "./components/PhotoImage";
 import Image from "next/image";
 import { Drawing } from "./drawings/types";
+import { getDrawingsManifest } from "./manifest-util";
 import Link from "next/link";
 import NewsletterForm from "./components/NewsletterForm";
 
@@ -30,6 +31,36 @@ const OG_IMAGE = {
 export const metadata: Metadata = {
   openGraph: { images: [OG_IMAGE] },
 };
+
+function renderText(text: string | undefined) {
+  if (!text) return null;
+  return text.split("\n").map((line, i) => <p key={i}>{line}</p>);
+}
+
+function renderDescription(blocks: any[]) {
+  if (!blocks?.length) return null;
+  return blocks.map((block) => {
+    const linkMap = Object.fromEntries(
+      (block.markDefs ?? []).map((m: any) => [m._key, m]),
+    );
+    return (
+      <p key={block._key}>
+        {block.children.map((child: any) => {
+          const link = child.marks
+            ?.map((k: string) => linkMap[k])
+            .find(Boolean);
+          return link ? (
+            <a key={child._key} href={link.href}>
+              {child.text}
+            </a>
+          ) : (
+            child.text
+          );
+        })}
+      </p>
+    );
+  });
+}
 
 export default async function Page() {
   const [
@@ -48,41 +79,9 @@ export default async function Page() {
     fetchFirstArticle(),
   ]);
 
-  const featuredDrawing = {
-    filename: "Solander 38 overview perspective 4-10-25.png",
-    clean_filename: "overview perspective",
-    uuid: "5e37f388270d",
-    rel_path:
-      "/drawings/output_images/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview perspective 4-10-25.png",
-    group: "OVERVIEW",
-    normalized_group: "overview",
-    system_index: 0,
-    source_pdf: "Solander 38 overview perspective 4-10-25.pdf",
-    source_pdf_full_path:
-      "../frontend/public/drawings/OVERVIEW/Full boat overview Spring 2025/Solander 38 overview perspective 4-10-25.pdf",
-    page_number: 1,
-    total_pages_in_pdf: 1,
-    page_set_label: "1 of 1",
-    width: 3400,
-    height: 2200,
-    file_size_bytes: 533626,
-    date_info: {
-      raw_date_string: "4-10-25",
-      date: "2025-04-10",
-      date_iso: "2025-04-10T00:00:00",
-      year: 2025,
-      month: 4,
-      day: 10,
-      formatted: "April 10, 2025",
-      source: "filename",
-    },
-    author: {
-      slug: "henry-nolan",
-      name: "Henry Nolan",
-    },
-    extracted_text: "",
-    id: "DR–6",
-  };
+  const featuredDrawing = getDrawingsManifest().files.find(
+    (f) => f.uuid === homepage.data.drawing,
+  );
 
   return (
     <>
@@ -112,33 +111,18 @@ export default async function Page() {
               </div>
             </div>
             <div className={styles["home__columns"]}>
-              <div>
-                <p>
-                  Solander 38 is a self-sufficient, solar-electric,
-                  coastal&nbsp;cruising power catamaran.
-                </p>
-                <p>
-                  This website is an effort to document and share designs,
-                  processes, and research from Solander 38, the first vessel reference design by&nbsp;
-                  <Link target="_blank" href="https://risingtideresearch.org">
-                    Rising&nbsp;Tide Research Foundation
-                  </Link>. We’ve made this site
-                  to celebrate the work of those involved and to openly share
-                  the ongoing successes, failures, and lessons learned from the
-                  first build of the designs, Catalyst, and its real-world use
-                  over time.
-                </p>
-              </div>
+              <div>{renderDescription(homepage.data.description)}</div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.STORIES}>
-                    Stories
-                  </Link>
+                  <Link href={URLS.STORIES}>Stories</Link>
                 </h4>
-                <p>{homepage.data.sectionDescriptions.stories}</p>
+                {renderText(homepage.data.sectionDescriptions.stories)}
                 <p>
                   For an overview by RTRF Research Director{" "}
-                  <Link style={{ whiteSpace: 'nowrap'}} href={`${URLS.PEOPLE}#${"avi-bryant"}`}>
+                  <Link
+                    style={{ whiteSpace: "nowrap" }}
+                    href={`${URLS.PEOPLE}#${"avi-bryant"}`}
+                  >
                     Avi Bryant
                   </Link>
                   , read:
@@ -150,7 +134,9 @@ export default async function Page() {
                         articleId="1&#8209;A"
                         href={`${URLS.STORIES}/${firstArticle.slug}`}
                         title={firstArticle.title}
-                        date={formatDate(firstArticle.effectiveDate ?? firstArticle._updatedAt)}
+                        date={formatDate(
+                          firstArticle.effectiveDate ?? firstArticle._updatedAt,
+                        )}
                         compact
                       />
                     </li>
@@ -164,7 +150,9 @@ export default async function Page() {
                         articleId={articleIdMap[article._id]}
                         href={`${URLS.STORIES}/${article.slug}`}
                         title={article.title}
-                        date={formatDate(article.effectiveDate ?? article._updatedAt)}
+                        date={formatDate(
+                          article.effectiveDate ?? article._updatedAt,
+                        )}
                         compact
                       />
                       <p className={styles["home__article-subtitle"]}>
@@ -176,9 +164,7 @@ export default async function Page() {
               </div>
 
               <div className={styles["home__section"]}>
-                <h4>
-                  Systems
-                </h4>
+                <h4>Systems</h4>
                 <p>
                   Each section of the site is organized by anatomical system:
                 </p>
@@ -195,17 +181,9 @@ export default async function Page() {
               </div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.ANATOMY}>
-                    Anatomy
-                  </Link>
+                  <Link href={URLS.ANATOMY}>Anatomy</Link>
                 </h4>
-                <p>{homepage.data.sectionDescriptions.anatomy}</p>
-
-                <p>
-                  Rotate, pan, and zoom; use clipping plane controls to view
-                  cross-sections; and hover to see part attributes, including
-                  material and weight.
-                </p>
+                {renderText(homepage.data.sectionDescriptions.anatomy)}
                 <Link
                   href={URLS.ANATOMY}
                   className={`bg--grid ${styles["home__anatomy-link"]}`}
@@ -260,23 +238,21 @@ export default async function Page() {
               </div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.DRAWINGS}>
-                    Drawings
-                  </Link>
+                  <Link href={URLS.DRAWINGS}>Drawings</Link>
                 </h4>
-                <p>{homepage.data.sectionDescriptions.drawings}</p>
-                <DrawingCard
-                  drawing={featuredDrawing as Drawing}
-                  autoScale={true}
-                />
+                {renderText(homepage.data.sectionDescriptions.drawings)}
+                {featuredDrawing && (
+                  <DrawingCard
+                    drawing={featuredDrawing as unknown as Drawing}
+                    autoScale={true}
+                  />
+                )}
               </div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.PHOTOS}>
-                    Photos
-                  </Link>
+                  <Link href={URLS.PHOTOS}>Photos</Link>
                 </h4>
-                <p>{homepage.data.sectionDescriptions.photos}</p>
+                {renderText(homepage.data.sectionDescriptions.photos)}
                 <PhotoImage
                   image={homepage.data.image}
                   width={homepage.data.image.asset.metadata.dimensions.width}
@@ -286,11 +262,9 @@ export default async function Page() {
               </div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.PEOPLE}>
-                    People
-                  </Link>
+                  <Link href={URLS.PEOPLE}>People</Link>
                 </h4>
-                <p>{homepage.data.sectionDescriptions.people}</p>
+                {renderText(homepage.data.sectionDescriptions.people)}
                 <ul className={styles["home__people-list"]}>
                   {people.data
                     .sort((a, b) => a.name.localeCompare(b.name))
@@ -304,28 +278,13 @@ export default async function Page() {
                       </li>
                     ))}
                 </ul>
-                </div>
-              <div className={styles["home__section"]}>
-                <h4>
-                  License
-                </h4>
-                <p>
-                  Except where otherwise noted, content on this site is licensed
-                  under a{" "}
-                  <Link
-                    href="https://creativecommons.org/licenses/by/4.0/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Creative Commons Attribution 4.0 International License
-                  </Link>
-                  , [CC BY 4.0].
-                </p>
               </div>
               <div className={styles["home__section"]}>
-                <h4>
-                  Contact
-                </h4>
+                <h4>License</h4>
+                <div>{renderDescription(homepage.data.license)}</div>
+              </div>
+              <div className={styles["home__section"]}>
+                <h4>Contact</h4>
                 <p>
                   Connect with us via email info@risingtideresearch.org and
                   subscribe to our newsletter:
