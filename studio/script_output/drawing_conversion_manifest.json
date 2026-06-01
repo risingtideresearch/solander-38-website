@@ -1,26 +1,26 @@
 {
   "conversion_info": {
-    "timestamp": "2026-03-04T19:16:35.026728",
+    "timestamp": "2026-06-01T01:04:19.424465",
     "input_directory": "../frontend/public/drawings",
     "output_directory": "../frontend/public/drawings/output_images",
     "dpi": 200,
     "preserve_structure": true,
-    "total_pdfs_processed": 194,
-    "successful_conversions": 194,
+    "total_pdfs_processed": 209,
+    "successful_conversions": 209,
     "failed_conversions": 0,
-    "total_images_created": 199
+    "total_images_created": 214
   },
   "files": [
     {
-      "filename": "Decal locations 10-9-25.png",
-      "clean_filename": "Decal locations",
+      "filename": "decal locations 10-9-25.png",
+      "clean_filename": "decal locations",
       "uuid": "d70aadddfdb6",
-      "rel_path": "/drawings/output_images/OVERVIEW/Decal locations 10-9-25.png",
+      "rel_path": "/drawings/output_images/OVERVIEW/decal locations 10-9-25.png",
       "group": "OVERVIEW",
       "normalized_group": "overview",
       "system_index": 0,
-      "source_pdf": "Decal locations 10-9-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Decal locations 10-9-25.pdf",
+      "source_pdf": "decal locations 10-9-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/decal locations 10-9-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -45,15 +45,15 @@
       "id": "DR–1"
     },
     {
-      "filename": "Solander 38 working CG HJN 7-22-25.png",
-      "clean_filename": "working CG",
+      "filename": "Solander 38 working centre of gravity HJN 7-22-25.png",
+      "clean_filename": "working centre of gravity",
       "uuid": "1229c69df139",
-      "rel_path": "/drawings/output_images/OVERVIEW/WTS & HYDROS/Solander 38 working CG HJN 7-22-25.png",
+      "rel_path": "/drawings/output_images/OVERVIEW/WTS & HYDROS/Solander 38 working centre of gravity HJN 7-22-25.png",
       "group": "OVERVIEW",
       "normalized_group": "overview",
       "system_index": 0,
-      "source_pdf": "Solander 38 working CG HJN 7-22-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/WTS & HYDROS/Solander 38 working CG HJN 7-22-25.pdf",
+      "source_pdf": "Solander 38 working centre of gravity HJN 7-22-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/WTS & HYDROS/Solander 38 working centre of gravity HJN 7-22-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -78,15 +78,15 @@
       "id": "DR–2"
     },
     {
-      "filename": "Solander 38 lift points IBP & PLAN HJN 6-3-25.png",
-      "clean_filename": "lift points IBP & PLAN",
+      "filename": "Solander 38 lift points inboard profile & plan HJN 6-3-25.png",
+      "clean_filename": "lift points inboard profile & plan",
       "uuid": "61e175d45189",
-      "rel_path": "/drawings/output_images/OVERVIEW/Lift points etc/Solander 38 lift points IBP & PLAN HJN 6-3-25.png",
+      "rel_path": "/drawings/output_images/OVERVIEW/Lift points etc/Solander 38 lift points inboard profile & plan HJN 6-3-25.png",
       "group": "OVERVIEW",
       "normalized_group": "overview",
       "system_index": 0,
-      "source_pdf": "Solander 38 lift points IBP & PLAN HJN 6-3-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Lift points etc/Solander 38 lift points IBP & PLAN HJN 6-3-25.pdf",
+      "source_pdf": "Solander 38 lift points inboard profile & plan HJN 6-3-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Lift points etc/Solander 38 lift points inboard profile & plan HJN 6-3-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -111,15 +111,15 @@
       "id": "DR–3"
     },
     {
-      "filename": "Solander 38 lift points OBP HJN 6-3-25.png",
-      "clean_filename": "lift points OBP",
+      "filename": "Solander 38 lift points outboard profile HJN 6-3-25.png",
+      "clean_filename": "lift points outboard profile",
       "uuid": "5d6ad1fc5b6d",
-      "rel_path": "/drawings/output_images/OVERVIEW/Lift points etc/Solander 38 lift points OBP HJN 6-3-25.png",
+      "rel_path": "/drawings/output_images/OVERVIEW/Lift points etc/Solander 38 lift points outboard profile HJN 6-3-25.png",
       "group": "OVERVIEW",
       "normalized_group": "overview",
       "system_index": 0,
-      "source_pdf": "Solander 38 lift points OBP HJN 6-3-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Lift points etc/Solander 38 lift points OBP HJN 6-3-25.pdf",
+      "source_pdf": "Solander 38 lift points outboard profile HJN 6-3-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Lift points etc/Solander 38 lift points outboard profile HJN 6-3-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -375,15 +375,15 @@
       "id": "DR–11"
     },
     {
-      "filename": "Port bow decal detail.png",
-      "clean_filename": "Port bow decal detail",
+      "filename": "port bow decal detail.png",
+      "clean_filename": "port bow decal detail",
       "uuid": "6c22cba6f202",
-      "rel_path": "/drawings/output_images/OVERVIEW/Port bow decal detail.png",
+      "rel_path": "/drawings/output_images/OVERVIEW/port bow decal detail.png",
       "group": "OVERVIEW",
       "normalized_group": "overview",
       "system_index": 0,
-      "source_pdf": "Port bow decal detail.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Port bow decal detail.pdf",
+      "source_pdf": "port bow decal detail.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/port bow decal detail.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -399,15 +399,15 @@
       "id": "DR–12"
     },
     {
-      "filename": "Stbd bow decal detail.png",
-      "clean_filename": "Stbd bow decal detail",
+      "filename": "starboard bow decal detail.png",
+      "clean_filename": "starboard bow decal detail",
       "uuid": "a4aaa633f131",
-      "rel_path": "/drawings/output_images/OVERVIEW/Stbd bow decal detail.png",
+      "rel_path": "/drawings/output_images/OVERVIEW/starboard bow decal detail.png",
       "group": "OVERVIEW",
       "normalized_group": "overview",
       "system_index": 0,
-      "source_pdf": "Stbd bow decal detail.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/Stbd bow decal detail.pdf",
+      "source_pdf": "starboard bow decal detail.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OVERVIEW/starboard bow decal detail.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -558,12 +558,12 @@
       "filename": "Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.png",
       "clean_filename": "fascia flanges sheet 1 of 3 brow and P&S locs",
       "uuid": "097b77a474fe",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.png",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/SUPERSEDED (FASCIA)/Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.png",
       "group": "SUPERSTRUCTURE",
       "normalized_group": "superstructure",
       "system_index": 2,
       "source_pdf": "Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/SUPERSEDED (FASCIA)/Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -591,12 +591,12 @@
       "filename": "Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.png",
       "clean_filename": "fascia flanges sheet 2 of 3 brow clocking",
       "uuid": "0fcad72080fb",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.png",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/SUPERSEDED (FASCIA)/Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.png",
       "group": "SUPERSTRUCTURE",
       "normalized_group": "superstructure",
       "system_index": 2,
       "source_pdf": "Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/SUPERSEDED (FASCIA)/Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -624,12 +624,12 @@
       "filename": "Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.png",
       "clean_filename": "fascia flanges sheet 3 of 3 lobstertail & transv locs",
       "uuid": "984c8881ed55",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.png",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/SUPERSEDED (FASCIA)/Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.png",
       "group": "SUPERSTRUCTURE",
       "normalized_group": "superstructure",
       "system_index": 2,
       "source_pdf": "Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA SUMMER 2025/Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/SUPERSEDED (FASCIA)/Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3384,15 +3384,255 @@
       "id": "DR–103"
     },
     {
-      "filename": "PRELIM steering sheet1 planview HJN 8-20-25.png",
-      "clean_filename": "PRELIM steering sheet1 planview",
+      "filename": "Instrument panel frames persp view 1.png",
+      "clean_filename": "Instrument panel frames persp view 1",
+      "uuid": "d2dcfa35d05d",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames persp view 1.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "Instrument panel frames persp view 1.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames persp view 1.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 1583767,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–104"
+    },
+    {
+      "filename": "Instrument panel frames persp view 2.png",
+      "clean_filename": "Instrument panel frames persp view 2",
+      "uuid": "c5bad4a32ef1",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames persp view 2.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "Instrument panel frames persp view 2.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames persp view 2.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 1877647,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–105"
+    },
+    {
+      "filename": "Instrument panel frames persp view 3.png",
+      "clean_filename": "Instrument panel frames persp view 3",
+      "uuid": "cf828ff0c7d7",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames persp view 3.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "Instrument panel frames persp view 3.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames persp view 3.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 1058155,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–106"
+    },
+    {
+      "filename": "Instrument panel frames persp view 4.png",
+      "clean_filename": "Instrument panel frames persp view 4",
+      "uuid": "02320fcae96b",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames persp view 4.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "Instrument panel frames persp view 4.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/INSTRUMENT PANEL/Instrument panel frames persp view 4.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 1231431,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–107"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 1 of 6 overview 7APR26",
+      "uuid": "f658589e661a",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 541367,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–108"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 2 of 6 welded parts 7APR26",
+      "uuid": "919c0f6d137c",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 741597,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–109"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 3 of 6 flanged rmvbl parts HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 3 of 6 flanged rmvbl parts 7APR26",
+      "uuid": "b3022dd0ccf9",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 3 of 6 flanged rmvbl parts HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 3 of 6 flanged rmvbl parts HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 3 of 6 flanged rmvbl parts HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 612298,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–110"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 4 of 6 tabbed rmvbl parts HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 4 of 6 tabbed rmvbl parts 7APR26",
+      "uuid": "ec987f63f88d",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 4 of 6 tabbed rmvbl parts HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 4 of 6 tabbed rmvbl parts HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 4 of 6 tabbed rmvbl parts HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 792740,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–111"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 5 of 6 sections & details 7APR26",
+      "uuid": "2fc7e418368f",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 871367,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–112"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 6 of 6 brow radius template 7APR26",
+      "uuid": "cf280a0f6f24",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 302487,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–113"
+    },
+    {
+      "filename": "PRELIM steering sheet 1 planview HJN 8-20-25.png",
+      "clean_filename": "PRELIM steering sheet 1 planview",
       "uuid": "1bd9b7975d76",
-      "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet1 planview HJN 8-20-25.png",
+      "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet 1 planview HJN 8-20-25.png",
       "group": "CONTROL",
       "normalized_group": "control",
       "system_index": 3,
-      "source_pdf": "PRELIM steering sheet1 planview HJN 8-20-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/CONTROL/STEERING/PRELIM steering sheet1 planview HJN 8-20-25.pdf",
+      "source_pdf": "PRELIM steering sheet 1 planview HJN 8-20-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/CONTROL/STEERING/PRELIM steering sheet 1 planview HJN 8-20-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3414,18 +3654,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–104"
+      "id": "DR–114"
     },
     {
-      "filename": "PRELIM steering sheet2 transv sect HJN 8-20-25.png",
-      "clean_filename": "PRELIM steering sheet2 transv sect",
+      "filename": "PRELIM steering sheet 2 transverse section HJN 8-20-25.png",
+      "clean_filename": "PRELIM steering sheet 2 transverse section",
       "uuid": "795ca9883ff3",
-      "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet2 transv sect HJN 8-20-25.png",
+      "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet 2 transverse section HJN 8-20-25.png",
       "group": "CONTROL",
       "normalized_group": "control",
       "system_index": 3,
-      "source_pdf": "PRELIM steering sheet2 transv sect HJN 8-20-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/CONTROL/STEERING/PRELIM steering sheet2 transv sect HJN 8-20-25.pdf",
+      "source_pdf": "PRELIM steering sheet 2 transverse section HJN 8-20-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/CONTROL/STEERING/PRELIM steering sheet 2 transverse section HJN 8-20-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3447,18 +3687,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–105"
+      "id": "DR–115"
     },
     {
-      "filename": "PRELIM steering sheet3 long_l sects HJN 8-20-25.png",
-      "clean_filename": "PRELIM steering sheet3 long_l sects",
+      "filename": "PRELIM steering sheet 3 longitudinal sections HJN 8-20-25.png",
+      "clean_filename": "PRELIM steering sheet 3 longitudinal sections",
       "uuid": "fa1f18ea4054",
-      "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet3 long_l sects HJN 8-20-25.png",
+      "rel_path": "/drawings/output_images/CONTROL/STEERING/PRELIM steering sheet 3 longitudinal sections HJN 8-20-25.png",
       "group": "CONTROL",
       "normalized_group": "control",
       "system_index": 3,
-      "source_pdf": "PRELIM steering sheet3 long_l sects HJN 8-20-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/CONTROL/STEERING/PRELIM steering sheet3 long_l sects HJN 8-20-25.pdf",
+      "source_pdf": "PRELIM steering sheet 3 longitudinal sections HJN 8-20-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/CONTROL/STEERING/PRELIM steering sheet 3 longitudinal sections HJN 8-20-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3480,7 +3720,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–106"
+      "id": "DR–116"
     },
     {
       "filename": "Shaftline alignment dims HJN 4-6-25.png",
@@ -3513,7 +3753,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–107"
+      "id": "DR–117"
     },
     {
       "filename": "Shaftline components overview HJN 4-6-25.png",
@@ -3546,7 +3786,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–108"
+      "id": "DR–118"
     },
     {
       "filename": "Solander 38 motor mount details 9-25-24.png",
@@ -3579,7 +3819,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–109"
+      "id": "DR–119"
     },
     {
       "filename": "Solander 38 aft beam access hatch cut-out locations 2-19-25.png",
@@ -3612,7 +3852,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–110"
+      "id": "DR–120"
     },
     {
       "filename": "Solander 38 deck track location planview 11-27-24.png",
@@ -3645,18 +3885,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–111"
+      "id": "DR–121"
     },
     {
-      "filename": "Solander 38 HD foam location in fwd beam 9-6-24.png",
-      "clean_filename": "HD foam location in fwd beam",
+      "filename": "Solander 38 high density foam location in fwd beam 9-6-24.png",
+      "clean_filename": "high density foam location in fwd beam",
       "uuid": "1e4babf2549d",
-      "rel_path": "/drawings/output_images/BODY/BEAM DETAILS FOR LAMINATORS/Solander 38 HD foam location in fwd beam 9-6-24.png",
+      "rel_path": "/drawings/output_images/BODY/BEAM DETAILS FOR LAMINATORS/Solander 38 high density foam location in fwd beam 9-6-24.png",
       "group": "BODY",
       "normalized_group": "body",
       "system_index": 5,
-      "source_pdf": "Solander 38 HD foam location in fwd beam 9-6-24.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/BODY/BEAM DETAILS FOR LAMINATORS/Solander 38 HD foam location in fwd beam 9-6-24.pdf",
+      "source_pdf": "Solander 38 high density foam location in fwd beam 9-6-24.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/BODY/BEAM DETAILS FOR LAMINATORS/Solander 38 high density foam location in fwd beam 9-6-24.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3678,7 +3918,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–112"
+      "id": "DR–122"
     },
     {
       "filename": "Keel cooler locations 5-15-25.png",
@@ -3711,18 +3951,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–113"
+      "id": "DR–123"
     },
     {
-      "filename": "PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW HJN 12-19-25.png",
-      "clean_filename": "PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW",
+      "filename": "prelim aft starboard mast sheet 1 of 2 overview HJN 12-19-25.png",
+      "clean_filename": "prelim aft starboard mast sheet 1 of 2 overview",
       "uuid": "2f80a2f89787",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/AFT STBD MAST/PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW HJN 12-19-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/AFT STBD MAST/prelim aft starboard mast sheet 1 of 2 overview HJN 12-19-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW HJN 12-19-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/AFT STBD MAST/PRELIM AFT STBD MAST SHEET 1 OF 2 OVERVIEW HJN 12-19-25.pdf",
+      "source_pdf": "prelim aft starboard mast sheet 1 of 2 overview HJN 12-19-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/AFT STBD MAST/prelim aft starboard mast sheet 1 of 2 overview HJN 12-19-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3744,18 +3984,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–114"
+      "id": "DR–124"
     },
     {
-      "filename": "PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS HJN 12-19-25.png",
-      "clean_filename": "PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS",
+      "filename": "prelim aft starboard mast sheet 2 of 2 details HJN 12-19-25.png",
+      "clean_filename": "prelim aft starboard mast sheet 2 of 2 details",
       "uuid": "33a66b33a286",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/AFT STBD MAST/PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS HJN 12-19-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/AFT STBD MAST/prelim aft starboard mast sheet 2 of 2 details HJN 12-19-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS HJN 12-19-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/AFT STBD MAST/PRELIM AFT STBD MAST SHEET 2 OF 2 DETAILS HJN 12-19-25.pdf",
+      "source_pdf": "prelim aft starboard mast sheet 2 of 2 details HJN 12-19-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/AFT STBD MAST/prelim aft starboard mast sheet 2 of 2 details HJN 12-19-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3777,18 +4017,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–115"
+      "id": "DR–125"
     },
     {
-      "filename": "Center deck & kiwi grip area HJN 11-6-25.png",
-      "clean_filename": "Center deck & kiwi grip area",
+      "filename": "center deck & kiwi grip area HJN 11-6-25.png",
+      "clean_filename": "center deck & kiwi grip area",
       "uuid": "ee86317eb361",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CTR DECK Q4 2025/Center deck & kiwi grip area HJN 11-6-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CTR DECK Q4 2025/center deck & kiwi grip area HJN 11-6-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Center deck & kiwi grip area HJN 11-6-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CTR DECK Q4 2025/Center deck & kiwi grip area HJN 11-6-25.pdf",
+      "source_pdf": "center deck & kiwi grip area HJN 11-6-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CTR DECK Q4 2025/center deck & kiwi grip area HJN 11-6-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3810,18 +4050,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–116"
+      "id": "DR–126"
     },
     {
-      "filename": "Stbd stairladder sheet 1 overview.png",
-      "clean_filename": "Stbd stairladder sheet 1 overview",
+      "filename": "starboard stairladder sheet 1 overview.png",
+      "clean_filename": "starboard stairladder sheet 1 overview",
       "uuid": "1dfb5f1f4a21",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/STBD STAIRLADDER/Stbd stairladder sheet 1 overview.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/STBD STAIRLADDER/starboard stairladder sheet 1 overview.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Stbd stairladder sheet 1 overview.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/STBD STAIRLADDER/Stbd stairladder sheet 1 overview.pdf",
+      "source_pdf": "starboard stairladder sheet 1 overview.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/STBD STAIRLADDER/starboard stairladder sheet 1 overview.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3843,18 +4083,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–117"
+      "id": "DR–127"
     },
     {
-      "filename": "Stbd stairladder sheet 2 planview loc.png",
-      "clean_filename": "Stbd stairladder sheet 2 planview loc",
+      "filename": "starboard stairladder sheet 2 planview location.png",
+      "clean_filename": "starboard stairladder sheet 2 planview location",
       "uuid": "4107d05a0621",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/STBD STAIRLADDER/Stbd stairladder sheet 2 planview loc.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/STBD STAIRLADDER/starboard stairladder sheet 2 planview location.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Stbd stairladder sheet 2 planview loc.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/STBD STAIRLADDER/Stbd stairladder sheet 2 planview loc.pdf",
+      "source_pdf": "starboard stairladder sheet 2 planview location.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/STBD STAIRLADDER/starboard stairladder sheet 2 planview location.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3876,18 +4116,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–118"
+      "id": "DR–128"
     },
     {
-      "filename": "Custom portlight dims HJN 7-31-25.png",
-      "clean_filename": "Custom portlight dims",
+      "filename": "custom portlight dimensions HJN 7-31-25.png",
+      "clean_filename": "custom portlight dimensions",
       "uuid": "68194dd2be99",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight dims HJN 7-31-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/custom portlight dimensions HJN 7-31-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Custom portlight dims HJN 7-31-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight dims HJN 7-31-25.pdf",
+      "source_pdf": "custom portlight dimensions HJN 7-31-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/custom portlight dimensions HJN 7-31-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3909,18 +4149,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–119"
+      "id": "DR–129"
     },
     {
-      "filename": "Custom portlight location HJN 7-31-25.png",
-      "clean_filename": "Custom portlight location",
+      "filename": "custom portlight location HJN 7-31-25.png",
+      "clean_filename": "custom portlight location",
       "uuid": "e1f089cbe396",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight location HJN 7-31-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/custom portlight location HJN 7-31-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Custom portlight location HJN 7-31-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight location HJN 7-31-25.pdf",
+      "source_pdf": "custom portlight location HJN 7-31-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/custom portlight location HJN 7-31-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3942,18 +4182,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–120"
+      "id": "DR–130"
     },
     {
-      "filename": "Custom portlight full scale template 24x36 AFT.png",
-      "clean_filename": "Custom portlight full scale template 24x36 AFT",
+      "filename": "custom portlight full scale template 24x36 aft.png",
+      "clean_filename": "custom portlight full scale template 24x36 aft",
       "uuid": "1153becbbe8c",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight full scale template 24x36 AFT.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/custom portlight full scale template 24x36 aft.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Custom portlight full scale template 24x36 AFT.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight full scale template 24x36 AFT.pdf",
+      "source_pdf": "custom portlight full scale template 24x36 aft.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/custom portlight full scale template 24x36 aft.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -3975,18 +4215,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–121"
+      "id": "DR–131"
     },
     {
-      "filename": "Custom portlight full scale template 24x36 FWD.png",
-      "clean_filename": "Custom portlight full scale template 24x36 FWD",
+      "filename": "custom portlight full scale template 24x36 forward.png",
+      "clean_filename": "custom portlight full scale template 24x36 forward",
       "uuid": "09200e8560ea",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight full scale template 24x36 FWD.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/custom portlight full scale template 24x36 forward.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Custom portlight full scale template 24x36 FWD.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/Custom portlight full scale template 24x36 FWD.pdf",
+      "source_pdf": "custom portlight full scale template 24x36 forward.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/PORTLIGHTS+ SUMMER 2025/custom portlight full scale template 24x36 forward.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4008,18 +4248,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–122"
+      "id": "DR–132"
     },
     {
-      "filename": "Midships area cabinet locs HJN 7-30-25.png",
-      "clean_filename": "Midships area cabinet locs",
+      "filename": "midships area cabinet locations HJN 7-30-25.png",
+      "clean_filename": "midships area cabinet locations",
       "uuid": "91c611046fef",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Summer 2025/Midships area cabinet locs HJN 7-30-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Summer 2025/midships area cabinet locations HJN 7-30-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Midships area cabinet locs HJN 7-30-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Summer 2025/Midships area cabinet locs HJN 7-30-25.pdf",
+      "source_pdf": "midships area cabinet locations HJN 7-30-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Summer 2025/midships area cabinet locations HJN 7-30-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4041,18 +4281,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–123"
+      "id": "DR–133"
     },
     {
       "filename": "PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects  HJN 7-7-25.png",
       "clean_filename": "PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects",
       "uuid": "eafd7e51d6a6",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects  HJN 7-7-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/battery component transverse conduit summer 2025/PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects  HJN 7-7-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects  HJN 7-7-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects  HJN 7-7-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/battery component transverse conduit summer 2025/PRELIM Batt cmpt transv conduit sheet 1 of 3 transv & longl sects  HJN 7-7-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4074,18 +4314,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–124"
+      "id": "DR–134"
     },
     {
       "filename": "PRELIM Batt cmpt transv conduit sheet 2 of 3 planview HJN 7-7-25.png",
       "clean_filename": "PRELIM Batt cmpt transv conduit sheet 2 of 3 planview",
       "uuid": "d5442a375424",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 2 of 3 planview HJN 7-7-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/battery component transverse conduit summer 2025/PRELIM Batt cmpt transv conduit sheet 2 of 3 planview HJN 7-7-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "PRELIM Batt cmpt transv conduit sheet 2 of 3 planview HJN 7-7-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 2 of 3 planview HJN 7-7-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/battery component transverse conduit summer 2025/PRELIM Batt cmpt transv conduit sheet 2 of 3 planview HJN 7-7-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4107,18 +4347,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–125"
+      "id": "DR–135"
     },
     {
       "filename": "PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview  HJN 7-7-25.png",
       "clean_filename": "PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview",
       "uuid": "d44237a49f99",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview  HJN 7-7-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/battery component transverse conduit summer 2025/PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview  HJN 7-7-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview  HJN 7-7-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt cmpt transv conduit Summer 2025/PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview  HJN 7-7-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/battery component transverse conduit summer 2025/PRELIM Batt cmpt transv conduit sheet 3 of 3 parts overview  HJN 7-7-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4140,18 +4380,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–126"
+      "id": "DR–136"
     },
     {
       "filename": "Batt access panels inbd face HJN 6-19-25.png",
       "clean_filename": "Batt access panels inbd face",
       "uuid": "24b0b3bfa06d",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt access panels summer 2025/Batt access panels inbd face HJN 6-19-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/battery access panels summer 2025/Batt access panels inbd face HJN 6-19-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt access panels inbd face HJN 6-19-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt access panels summer 2025/Batt access panels inbd face HJN 6-19-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/battery access panels summer 2025/Batt access panels inbd face HJN 6-19-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4173,18 +4413,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–127"
+      "id": "DR–137"
     },
     {
       "filename": "Batt access panels planview & transv sections HJN 6-19-25.png",
       "clean_filename": "Batt access panels planview & transv sections",
       "uuid": "77b3b7143113",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt access panels summer 2025/Batt access panels planview & transv sections HJN 6-19-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/battery access panels summer 2025/Batt access panels planview & transv sections HJN 6-19-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt access panels planview & transv sections HJN 6-19-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/Batt access panels summer 2025/Batt access panels planview & transv sections HJN 6-19-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/battery access panels summer 2025/Batt access panels planview & transv sections HJN 6-19-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4206,7 +4446,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–128"
+      "id": "DR–138"
     },
     {
       "filename": "Solander 38 aft cleat location HJN 6-3-25.png",
@@ -4239,18 +4479,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–129"
+      "id": "DR–139"
     },
     {
-      "filename": "Lower WM cab sect 36in aft of fwd bhd 5-16-25.png",
-      "clean_filename": "Lower WM cab sect 36in aft of fwd bhd",
+      "filename": "lower watermaker cabinet section 36in aft of forward bulkhead 5-16-25.png",
+      "clean_filename": "lower watermaker cabinet section 36in aft of forward bulkhead",
       "uuid": "e5f2ca251d54",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Lower WM cab sect 36in aft of fwd bhd 5-16-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker 36in aft of bulkhead 5-16-25/lower watermaker cabinet section 36in aft of forward bulkhead 5-16-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Lower WM cab sect 36in aft of fwd bhd 5-16-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Lower WM cab sect 36in aft of fwd bhd 5-16-25.pdf",
+      "source_pdf": "lower watermaker cabinet section 36in aft of forward bulkhead 5-16-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker 36in aft of bulkhead 5-16-25/lower watermaker cabinet section 36in aft of forward bulkhead 5-16-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4272,18 +4512,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–130"
+      "id": "DR–140"
     },
     {
-      "filename": "Port hull sect 36in aft of fwd bhd 5-16-25.png",
-      "clean_filename": "Port hull sect 36in aft of fwd bhd",
+      "filename": "port hull section 36in aft of forward bulkhead 5-16-25.png",
+      "clean_filename": "port hull section 36in aft of forward bulkhead",
       "uuid": "af1887bb4298",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Port hull sect 36in aft of fwd bhd 5-16-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker 36in aft of bulkhead 5-16-25/port hull section 36in aft of forward bulkhead 5-16-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Port hull sect 36in aft of fwd bhd 5-16-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Port hull sect 36in aft of fwd bhd 5-16-25.pdf",
+      "source_pdf": "port hull section 36in aft of forward bulkhead 5-16-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker 36in aft of bulkhead 5-16-25/port hull section 36in aft of forward bulkhead 5-16-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4305,18 +4545,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–131"
+      "id": "DR–141"
     },
     {
-      "filename": "Upper WM cab sect 36in aft of fwd bhd 5-16-25.png",
-      "clean_filename": "Upper WM cab sect 36in aft of fwd bhd",
+      "filename": "upper watermaker cabinet section 36in aft of forward bulkhead 5-16-25.png",
+      "clean_filename": "upper watermaker cabinet section 36in aft of forward bulkhead",
       "uuid": "e29729624346",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Upper WM cab sect 36in aft of fwd bhd 5-16-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker 36in aft of bulkhead 5-16-25/upper watermaker cabinet section 36in aft of forward bulkhead 5-16-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Upper WM cab sect 36in aft of fwd bhd 5-16-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/WM 36in aft of bhd 5-16-25/Upper WM cab sect 36in aft of fwd bhd 5-16-25.pdf",
+      "source_pdf": "upper watermaker cabinet section 36in aft of forward bulkhead 5-16-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker 36in aft of bulkhead 5-16-25/upper watermaker cabinet section 36in aft of forward bulkhead 5-16-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4338,18 +4578,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–132"
+      "id": "DR–142"
     },
     {
       "filename": "Batt access & nearby struct LONG_L SECT 5-12-25.png",
       "clean_filename": "Batt access & nearby struct LONG_L SECT",
       "uuid": "2f9564c57b23",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct LONG_L SECT 5-12-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/for Avi 5-12-25/Batt access & nearby struct LONG_L SECT 5-12-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt access & nearby struct LONG_L SECT 5-12-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct LONG_L SECT 5-12-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/for Avi 5-12-25/Batt access & nearby struct LONG_L SECT 5-12-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4371,18 +4611,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–133"
+      "id": "DR–143"
     },
     {
       "filename": "Batt access & nearby struct PLANVIEW 5-12-25.png",
       "clean_filename": "Batt access & nearby struct PLANVIEW",
       "uuid": "087c12126618",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct PLANVIEW 5-12-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/for Avi 5-12-25/Batt access & nearby struct PLANVIEW 5-12-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt access & nearby struct PLANVIEW 5-12-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct PLANVIEW 5-12-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/for Avi 5-12-25/Batt access & nearby struct PLANVIEW 5-12-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4404,18 +4644,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–134"
+      "id": "DR–144"
     },
     {
       "filename": "Batt access & nearby struct TRANSV SECT 5-12-25.png",
       "clean_filename": "Batt access & nearby struct TRANSV SECT",
       "uuid": "3a4291e469e9",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct TRANSV SECT 5-12-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/for Avi 5-12-25/Batt access & nearby struct TRANSV SECT 5-12-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt access & nearby struct TRANSV SECT 5-12-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/For Avi 5-12-25/Batt access & nearby struct TRANSV SECT 5-12-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/for Avi 5-12-25/Batt access & nearby struct TRANSV SECT 5-12-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4437,18 +4677,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–135"
+      "id": "DR–145"
     },
     {
       "filename": "Batt cmpt cut-outs IBP 5-6-25.png",
       "clean_filename": "Batt cmpt cut-outs IBP",
       "uuid": "8c1c6588e312",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Jim, Al, etc. 5-6-25/Batt cmpt cut-outs IBP 5-6-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/for Jim, Al, etc. 5-6-25/Batt cmpt cut-outs IBP 5-6-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt cmpt cut-outs IBP 5-6-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/For Jim, Al, etc. 5-6-25/Batt cmpt cut-outs IBP 5-6-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/for Jim, Al, etc. 5-6-25/Batt cmpt cut-outs IBP 5-6-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4470,18 +4710,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–136"
+      "id": "DR–146"
     },
     {
       "filename": "Batt cmpt cut-outs PLANVIEW 5-6-25.png",
       "clean_filename": "Batt cmpt cut-outs PLANVIEW",
       "uuid": "852f810928da",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For Jim, Al, etc. 5-6-25/Batt cmpt cut-outs PLANVIEW 5-6-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/for Jim, Al, etc. 5-6-25/Batt cmpt cut-outs PLANVIEW 5-6-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt cmpt cut-outs PLANVIEW 5-6-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/For Jim, Al, etc. 5-6-25/Batt cmpt cut-outs PLANVIEW 5-6-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/for Jim, Al, etc. 5-6-25/Batt cmpt cut-outs PLANVIEW 5-6-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4503,18 +4743,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–137"
+      "id": "DR–147"
     },
     {
-      "filename": "Bridge deck area planview 5-2-25.png",
-      "clean_filename": "Bridge deck area planview",
+      "filename": "bridge deck area planview 5-2-25.png",
+      "clean_filename": "bridge deck area planview",
       "uuid": "81e082609229",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Bridge deck area for table 5-2-25/Bridge deck area planview 5-2-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/bridge deck area for table 5-2-25/bridge deck area planview 5-2-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Bridge deck area planview 5-2-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Bridge deck area for table 5-2-25/Bridge deck area planview 5-2-25.pdf",
+      "source_pdf": "bridge deck area planview 5-2-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/bridge deck area for table 5-2-25/bridge deck area planview 5-2-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4536,18 +4776,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–138"
+      "id": "DR–148"
     },
     {
-      "filename": "Bridge deck area planview NO ANNO 5-2-25.png",
-      "clean_filename": "Bridge deck area planview NO ANNO",
+      "filename": "bridge deck area planview no annotation 5-2-25.png",
+      "clean_filename": "bridge deck area planview no annotation",
       "uuid": "22cf8b09f500",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Bridge deck area for table 5-2-25/Bridge deck area planview NO ANNO 5-2-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/bridge deck area for table 5-2-25/bridge deck area planview no annotation 5-2-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Bridge deck area planview NO ANNO 5-2-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Bridge deck area for table 5-2-25/Bridge deck area planview NO ANNO 5-2-25.pdf",
+      "source_pdf": "bridge deck area planview no annotation 5-2-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/bridge deck area for table 5-2-25/bridge deck area planview no annotation 5-2-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4569,18 +4809,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–139"
+      "id": "DR–149"
     },
     {
-      "filename": "Elect. cabinet aft face 3in=1ft scale 4-29-25.png",
-      "clean_filename": "Elect. cabinet aft face 3in=1ft scale",
+      "filename": "electrical cabinet aft face 3in=1ft scale 4-29-25.png",
+      "clean_filename": "electrical cabinet aft face 3in=1ft scale",
       "uuid": "e715a1fed21e",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Elect. cabs 4-29-25/Elect. cabinet aft face 3in=1ft scale 4-29-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/electrical cabinets 4-29-25/electrical cabinet aft face 3in=1ft scale 4-29-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Elect. cabinet aft face 3in=1ft scale 4-29-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Elect. cabs 4-29-25/Elect. cabinet aft face 3in=1ft scale 4-29-25.pdf",
+      "source_pdf": "electrical cabinet aft face 3in=1ft scale 4-29-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/electrical cabinets 4-29-25/electrical cabinet aft face 3in=1ft scale 4-29-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4602,18 +4842,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–140"
+      "id": "DR–150"
     },
     {
-      "filename": "Elect. cabinets aft faces 4-29-25.png",
-      "clean_filename": "Elect. cabinets aft faces",
+      "filename": "electrical cabinets aft faces 4-29-25.png",
+      "clean_filename": "electrical cabinets aft faces",
       "uuid": "0e4367bb6b7c",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Elect. cabs 4-29-25/Elect. cabinets aft faces 4-29-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/electrical cabinets 4-29-25/electrical cabinets aft faces 4-29-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Elect. cabinets aft faces 4-29-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Elect. cabs 4-29-25/Elect. cabinets aft faces 4-29-25.pdf",
+      "source_pdf": "electrical cabinets aft faces 4-29-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/electrical cabinets 4-29-25/electrical cabinets aft faces 4-29-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4635,18 +4875,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–141"
+      "id": "DR–151"
     },
     {
       "filename": "port heat pump cabinet aft face 4-17-25.png",
       "clean_filename": "port heat pump cabinet aft face",
       "uuid": "d0a445cd2088",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/port heat pump cabinet aft face 4-17-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/heat pump & wm cabs 4-17-25/port heat pump cabinet aft face 4-17-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "port heat pump cabinet aft face 4-17-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/port heat pump cabinet aft face 4-17-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/heat pump & wm cabs 4-17-25/port heat pump cabinet aft face 4-17-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4668,18 +4908,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–142"
+      "id": "DR–152"
     },
     {
-      "filename": "port heat pump cabinet fwd face revised 4-17-25.png",
-      "clean_filename": "port heat pump cabinet fwd face revised",
+      "filename": "port heat pump cabinet forward face revised 4-17-25.png",
+      "clean_filename": "port heat pump cabinet forward face revised",
       "uuid": "22dec8aac1b3",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/port heat pump cabinet fwd face revised 4-17-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/heat pump & wm cabs 4-17-25/port heat pump cabinet forward face revised 4-17-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "port heat pump cabinet fwd face revised 4-17-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/port heat pump cabinet fwd face revised 4-17-25.pdf",
+      "source_pdf": "port heat pump cabinet forward face revised 4-17-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/heat pump & wm cabs 4-17-25/port heat pump cabinet forward face revised 4-17-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4701,18 +4941,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–143"
+      "id": "DR–153"
     },
     {
-      "filename": "watermaker cabinet fwd face lower 4-17-25.png",
-      "clean_filename": "watermaker cabinet fwd face lower",
+      "filename": "watermaker cabinet forward face lower 4-17-25.png",
+      "clean_filename": "watermaker cabinet forward face lower",
       "uuid": "5a4d8d207085",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/watermaker cabinet fwd face lower 4-17-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/heat pump & wm cabs 4-17-25/watermaker cabinet forward face lower 4-17-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "watermaker cabinet fwd face lower 4-17-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/watermaker cabinet fwd face lower 4-17-25.pdf",
+      "source_pdf": "watermaker cabinet forward face lower 4-17-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/heat pump & wm cabs 4-17-25/watermaker cabinet forward face lower 4-17-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4734,18 +4974,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–144"
+      "id": "DR–154"
     },
     {
-      "filename": "watermaker cabinet fwd face upper 4-17-25.png",
-      "clean_filename": "watermaker cabinet fwd face upper",
+      "filename": "watermaker cabinet forward face upper 4-17-25.png",
+      "clean_filename": "watermaker cabinet forward face upper",
       "uuid": "0c8296fe2444",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/watermaker cabinet fwd face upper 4-17-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/heat pump & wm cabs 4-17-25/watermaker cabinet forward face upper 4-17-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "watermaker cabinet fwd face upper 4-17-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Heat pump & wm cabs 4-17-25/watermaker cabinet fwd face upper 4-17-25.pdf",
+      "source_pdf": "watermaker cabinet forward face upper 4-17-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/heat pump & wm cabs 4-17-25/watermaker cabinet forward face upper 4-17-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4767,18 +5007,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–145"
+      "id": "DR–155"
     },
     {
       "filename": "Steering cmpt cut-out 4-5-25.png",
       "clean_filename": "Steering cmpt cut-out",
       "uuid": "b336cb5796fd",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Steering cmpt cut-out 4-5-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/for initial batt hatch cut-out 4-5-25/Steering cmpt cut-out 4-5-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Steering cmpt cut-out 4-5-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Steering cmpt cut-out 4-5-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/for initial batt hatch cut-out 4-5-25/Steering cmpt cut-out 4-5-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4800,18 +5040,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–146"
+      "id": "DR–156"
     },
     {
       "filename": "Batt hatch & ctr beam 4-3-25.png",
       "clean_filename": "Batt hatch & ctr beam",
       "uuid": "4ab1829a90fb",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Batt hatch & ctr beam 4-3-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/for initial batt hatch cut-out 4-5-25/Batt hatch & ctr beam 4-3-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt hatch & ctr beam 4-3-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Batt hatch & ctr beam 4-3-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/for initial batt hatch cut-out 4-5-25/Batt hatch & ctr beam 4-3-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4833,18 +5073,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–147"
+      "id": "DR–157"
     },
     {
       "filename": "Batt hatch in stbd hull 4-3-25.png",
       "clean_filename": "Batt hatch in stbd hull",
       "uuid": "6f17d471aab1",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Batt hatch in stbd hull 4-3-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/BATT CMPT 2025/for initial batt hatch cut-out 4-5-25/Batt hatch in stbd hull 4-3-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
       "source_pdf": "Batt hatch in stbd hull 4-3-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/For initial batt hatch cut-out 4-5-25/Batt hatch in stbd hull 4-3-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/BATT CMPT 2025/for initial batt hatch cut-out 4-5-25/Batt hatch in stbd hull 4-3-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4866,18 +5106,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–148"
+      "id": "DR–158"
     },
     {
-      "filename": "Cabinet locations planview REV A watermaker 2-26-25.png",
-      "clean_filename": "Cabinet locations planview REV A watermaker",
+      "filename": "cabinet locations planview rev A watermaker 2-26-25.png",
+      "clean_filename": "cabinet locations planview rev A watermaker",
       "uuid": "1396c425304c",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/Cabinet locations planview REV A watermaker 2-26-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/cabinet locations planview rev A watermaker 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet locations planview REV A watermaker 2-26-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/Cabinet locations planview REV A watermaker 2-26-25.pdf",
+      "source_pdf": "cabinet locations planview rev A watermaker 2-26-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/cabinet locations planview rev A watermaker 2-26-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4899,18 +5139,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–149"
+      "id": "DR–159"
     },
     {
-      "filename": "Cabinet locations port hull profile REV A watermaker 2-26-25.png",
-      "clean_filename": "Cabinet locations port hull profile REV A watermaker",
+      "filename": "cabinet locations port hull profile rev A watermaker 2-26-25.png",
+      "clean_filename": "cabinet locations port hull profile rev A watermaker",
       "uuid": "b3be09c65b7f",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/Cabinet locations port hull profile REV A watermaker 2-26-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/cabinet locations port hull profile rev A watermaker 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet locations port hull profile REV A watermaker 2-26-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/Cabinet locations port hull profile REV A watermaker 2-26-25.pdf",
+      "source_pdf": "cabinet locations port hull profile rev A watermaker 2-26-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/cabinet locations port hull profile rev A watermaker 2-26-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4932,18 +5172,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–150"
+      "id": "DR–160"
     },
     {
-      "filename": "WM cabinet ortho views 2-26-25.png",
-      "clean_filename": "WM cabinet ortho views",
+      "filename": "watermaker cabinet orthogonal views 2-26-25.png",
+      "clean_filename": "watermaker cabinet orthogonal views",
       "uuid": "a7e70b0b6e4b",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet ortho views 2-26-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet orthogonal views 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "WM cabinet ortho views 2-26-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet ortho views 2-26-25.pdf",
+      "source_pdf": "watermaker cabinet orthogonal views 2-26-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet orthogonal views 2-26-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4965,18 +5205,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–151"
+      "id": "DR–161"
     },
     {
-      "filename": "WM cabinet partition sect lower 2-26-25.png",
-      "clean_filename": "WM cabinet partition sect lower",
+      "filename": "watermaker cabinet partition section lower 2-26-25.png",
+      "clean_filename": "watermaker cabinet partition section lower",
       "uuid": "976dd492e5f4",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet partition sect lower 2-26-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet partition section lower 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "WM cabinet partition sect lower 2-26-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet partition sect lower 2-26-25.pdf",
+      "source_pdf": "watermaker cabinet partition section lower 2-26-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet partition section lower 2-26-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -4998,18 +5238,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–152"
+      "id": "DR–162"
     },
     {
-      "filename": "WM cabinet partition sect upper 2-26-25.png",
-      "clean_filename": "WM cabinet partition sect upper",
+      "filename": "watermaker cabinet partition section upper 2-26-25.png",
+      "clean_filename": "watermaker cabinet partition section upper",
       "uuid": "7eaaf0114af9",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet partition sect upper 2-26-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet partition section upper 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "WM cabinet partition sect upper 2-26-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet partition sect upper 2-26-25.pdf",
+      "source_pdf": "watermaker cabinet partition section upper 2-26-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet partition section upper 2-26-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5031,18 +5271,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–153"
+      "id": "DR–163"
     },
     {
-      "filename": "WM cabinet parts dims 2-26-25.png",
-      "clean_filename": "WM cabinet parts dims",
+      "filename": "watermaker cabinet parts dimensions 2-26-25.png",
+      "clean_filename": "watermaker cabinet parts dimensions",
       "uuid": "d99e77f2e361",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet parts dims 2-26-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet parts dimensions 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "WM cabinet parts dims 2-26-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet parts dims 2-26-25.pdf",
+      "source_pdf": "watermaker cabinet parts dimensions 2-26-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet parts dimensions 2-26-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5064,18 +5304,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–154"
+      "id": "DR–164"
     },
     {
-      "filename": "WM cabinet persp views 2-26-25.png",
-      "clean_filename": "WM cabinet persp views",
+      "filename": "watermaker cabinet perspective views 2-26-25.png",
+      "clean_filename": "watermaker cabinet perspective views",
       "uuid": "c43eb58860bc",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet persp views 2-26-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet perspective views 2-26-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "WM cabinet persp views 2-26-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Watermaker cabinet package 2-27-25/WM cabinet persp views 2-26-25.pdf",
+      "source_pdf": "watermaker cabinet perspective views 2-26-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/watermaker cabinet package 2-27-25/watermaker cabinet perspective views 2-26-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5097,18 +5337,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–155"
+      "id": "DR–165"
     },
     {
-      "filename": "Port hull work bench planview 1-9-25.png",
-      "clean_filename": "Port hull work bench planview",
+      "filename": "port hull work bench planview 1-9-25.png",
+      "clean_filename": "port hull work bench planview",
       "uuid": "29b42c7e1cd8",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview 1-9-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/port hull work bench planview 1-9-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Port hull work bench planview 1-9-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview 1-9-25.pdf",
+      "source_pdf": "port hull work bench planview 1-9-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/port hull work bench planview 1-9-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5130,51 +5370,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–156"
+      "id": "DR–166"
     },
     {
-      "filename": "Port hull work bench planview MORE DIMS 1-9-25.png",
-      "clean_filename": "Port hull work bench planview MORE DIMS",
-      "uuid": "19e94a561ed2",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview MORE DIMS 1-9-25.png",
-      "group": "OUTFITTING & INTERIOR",
-      "normalized_group": "outfitting & interior",
-      "system_index": 7,
-      "source_pdf": "Port hull work bench planview MORE DIMS 1-9-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview MORE DIMS 1-9-25.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 2200,
-      "height": 1700,
-      "file_size_bytes": 216047,
-      "date_info": {
-        "raw_date_string": "1-9-25",
-        "date": "2025-01-09",
-        "date_iso": "2025-01-09T00:00:00",
-        "year": 2025,
-        "month": 1,
-        "day": 9,
-        "formatted": "January 09, 2025",
-        "source": "filename"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–157"
-    },
-    {
-      "filename": "Port hull work bench planview P.M. revisions 1-9-25.png",
-      "clean_filename": "Port hull work bench planview P.M. revisions",
+      "filename": "port hull work bench planview PM revisions 1-9-25.png",
+      "clean_filename": "port hull work bench planview PM revisions",
       "uuid": "2b1ccfff2289",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview P.M. revisions 1-9-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/port hull work bench planview PM revisions 1-9-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Port hull work bench planview P.M. revisions 1-9-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Port hull work bench planview P.M. revisions 1-9-25.pdf",
+      "source_pdf": "port hull work bench planview PM revisions 1-9-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/port hull work bench planview PM revisions 1-9-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5196,18 +5403,51 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–158"
+      "id": "DR–167"
     },
     {
-      "filename": "Cabinet & partition locations planview 1-2-25.png",
-      "clean_filename": "Cabinet & partition locations planview",
-      "uuid": "669583c7bc0d",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations planview 1-2-25.png",
+      "filename": "port hull work bench planview more dimensions 1-9-25.png",
+      "clean_filename": "port hull work bench planview more dimensions",
+      "uuid": "19e94a561ed2",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/port hull work bench planview more dimensions 1-9-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet & partition locations planview 1-2-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations planview 1-2-25.pdf",
+      "source_pdf": "port hull work bench planview more dimensions 1-9-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/port hull work bench planview more dimensions 1-9-25.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 2200,
+      "height": 1700,
+      "file_size_bytes": 216047,
+      "date_info": {
+        "raw_date_string": "1-9-25",
+        "date": "2025-01-09",
+        "date_iso": "2025-01-09T00:00:00",
+        "year": 2025,
+        "month": 1,
+        "day": 9,
+        "formatted": "January 09, 2025",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–168"
+    },
+    {
+      "filename": "cabinet & partition locations planview 1-2-25.png",
+      "clean_filename": "cabinet & partition locations planview",
+      "uuid": "669583c7bc0d",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet & partition locations planview 1-2-25.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "cabinet & partition locations planview 1-2-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet & partition locations planview 1-2-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5229,18 +5469,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–159"
+      "id": "DR–169"
     },
     {
-      "filename": "Cabinet & partition locations port hull profiles 1-2-25.png",
-      "clean_filename": "Cabinet & partition locations port hull profiles",
+      "filename": "cabinet & partition locations port hull profiles 1-2-25.png",
+      "clean_filename": "cabinet & partition locations port hull profiles",
       "uuid": "f11f431dfe7f",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations port hull profiles 1-2-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet & partition locations port hull profiles 1-2-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet & partition locations port hull profiles 1-2-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations port hull profiles 1-2-25.pdf",
+      "source_pdf": "cabinet & partition locations port hull profiles 1-2-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet & partition locations port hull profiles 1-2-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5262,18 +5502,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–160"
+      "id": "DR–170"
     },
     {
-      "filename": "Cabinet & partition locations stbd hull profiles 1-2-25.png",
-      "clean_filename": "Cabinet & partition locations stbd hull profiles",
+      "filename": "cabinet & partition locations starboard hull profiles 1-2-25.png",
+      "clean_filename": "cabinet & partition locations starboard hull profiles",
       "uuid": "42d41b0dcf9c",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations stbd hull profiles 1-2-25.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet & partition locations starboard hull profiles 1-2-25.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet & partition locations stbd hull profiles 1-2-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet & partition locations stbd hull profiles 1-2-25.pdf",
+      "source_pdf": "cabinet & partition locations starboard hull profiles 1-2-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet & partition locations starboard hull profiles 1-2-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5295,18 +5535,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–161"
+      "id": "DR–171"
     },
     {
-      "filename": "Full sections at partitions 5, 6, 8, 9.png",
-      "clean_filename": "Full sections at partitions 5, 6, 8, 9",
+      "filename": "full sections at partitions 5, 6, 8, 9.png",
+      "clean_filename": "full sections at partitions 5, 6, 8, 9",
       "uuid": "7128e69f1cfa",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Full sections at partitions 5, 6, 8, 9.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/full sections at partitions 5, 6, 8, 9.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Full sections at partitions 5, 6, 8, 9.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Full sections at partitions 5, 6, 8, 9.pdf",
+      "source_pdf": "full sections at partitions 5, 6, 8, 9.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/full sections at partitions 5, 6, 8, 9.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5328,18 +5568,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–162"
+      "id": "DR–172"
     },
     {
-      "filename": "Revised cabinet locations PLANVIEW 12-30-24.png",
-      "clean_filename": "Revised cabinet locations PLANVIEW",
+      "filename": "revised cabinet locations planview 12-30-24.png",
+      "clean_filename": "revised cabinet locations planview",
       "uuid": "95981c1148d2",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations PLANVIEW 12-30-24.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet locations for paint 12-30-24/revised cabinet locations planview 12-30-24.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Revised cabinet locations PLANVIEW 12-30-24.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations PLANVIEW 12-30-24.pdf",
+      "source_pdf": "revised cabinet locations planview 12-30-24.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet locations for paint 12-30-24/revised cabinet locations planview 12-30-24.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5361,18 +5601,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–163"
+      "id": "DR–173"
     },
     {
-      "filename": "Revised cabinet locations PORT HULL PROFILES 12-30-24.png",
-      "clean_filename": "Revised cabinet locations PORT HULL PROFILES",
+      "filename": "revised cabinet locations port hull profiles 12-30-24.png",
+      "clean_filename": "revised cabinet locations port hull profiles",
       "uuid": "38361bb99da9",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations PORT HULL PROFILES 12-30-24.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet locations for paint 12-30-24/revised cabinet locations port hull profiles 12-30-24.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Revised cabinet locations PORT HULL PROFILES 12-30-24.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations PORT HULL PROFILES 12-30-24.pdf",
+      "source_pdf": "revised cabinet locations port hull profiles 12-30-24.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet locations for paint 12-30-24/revised cabinet locations port hull profiles 12-30-24.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5394,18 +5634,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–164"
+      "id": "DR–174"
     },
     {
-      "filename": "Revised cabinet locations STBD HULL PROFILES 12-30-24.png",
-      "clean_filename": "Revised cabinet locations STBD HULL PROFILES",
+      "filename": "revised cabinet locations starboard hull profiles 12-30-24.png",
+      "clean_filename": "revised cabinet locations starboard hull profiles",
       "uuid": "11757ce598c5",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations STBD HULL PROFILES 12-30-24.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet locations for paint 12-30-24/revised cabinet locations starboard hull profiles 12-30-24.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Revised cabinet locations STBD HULL PROFILES 12-30-24.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet locs for paint 12-30-24/Revised cabinet locations STBD HULL PROFILES 12-30-24.pdf",
+      "source_pdf": "revised cabinet locations starboard hull profiles 12-30-24.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet locations for paint 12-30-24/revised cabinet locations starboard hull profiles 12-30-24.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5427,18 +5667,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–165"
+      "id": "DR–175"
     },
     {
-      "filename": "Cabinet 1.png",
-      "clean_filename": "Cabinet 1",
+      "filename": "cabinet 1.png",
+      "clean_filename": "cabinet 1",
       "uuid": "a66ca263c3d4",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 1.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/cabinet 1.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet 1.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 1.pdf",
+      "source_pdf": "cabinet 1.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/cabinet 1.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5460,18 +5700,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–166"
+      "id": "DR–176"
     },
     {
-      "filename": "Cabinet 2.png",
-      "clean_filename": "Cabinet 2",
+      "filename": "cabinet 2.png",
+      "clean_filename": "cabinet 2",
       "uuid": "e87e3534405a",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 2.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/cabinet 2.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet 2.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 2.pdf",
+      "source_pdf": "cabinet 2.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/cabinet 2.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5493,18 +5733,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–167"
+      "id": "DR–177"
     },
     {
-      "filename": "Cabinet 3 & 4.png",
-      "clean_filename": "Cabinet 3 & 4",
+      "filename": "cabinet 3 & 4.png",
+      "clean_filename": "cabinet 3 & 4",
       "uuid": "67ec2ecd9f5d",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 3 & 4.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/cabinet 3 & 4.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet 3 & 4.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 3 & 4.pdf",
+      "source_pdf": "cabinet 3 & 4.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/cabinet 3 & 4.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5526,18 +5766,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–168"
+      "id": "DR–178"
     },
     {
-      "filename": "Cabinet 5.png",
-      "clean_filename": "Cabinet 5",
+      "filename": "cabinet 5.png",
+      "clean_filename": "cabinet 5",
       "uuid": "965259d30aba",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 5.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/cabinet 5.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet 5.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Cabinet 5.pdf",
+      "source_pdf": "cabinet 5.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/cabinet 5.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5559,18 +5799,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–169"
+      "id": "DR–179"
     },
     {
-      "filename": "Solander 38 Cabinet Location Map 11-6-24.png",
-      "clean_filename": "Cabinet Location Map",
+      "filename": "Solander 38 cabinet location map 11-6-24.png",
+      "clean_filename": "cabinet location map",
       "uuid": "16739ab54ed1",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinet Location Map 11-6-24.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/Solander 38 cabinet location map 11-6-24.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Solander 38 Cabinet Location Map 11-6-24.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinet Location Map 11-6-24.pdf",
+      "source_pdf": "Solander 38 cabinet location map 11-6-24.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/Solander 38 cabinet location map 11-6-24.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5592,18 +5832,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–170"
+      "id": "DR–180"
     },
     {
-      "filename": "Solander 38 Cabinets 1 & 2 11-6-24.png",
-      "clean_filename": "Cabinets 1 & 2",
+      "filename": "Solander 38 cabinets 1 & 2 11-6-24.png",
+      "clean_filename": "cabinets 1 & 2",
       "uuid": "c73b18f6337b",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinets 1 & 2 11-6-24.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/Solander 38 cabinets 1 & 2 11-6-24.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Solander 38 Cabinets 1 & 2 11-6-24.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinets 1 & 2 11-6-24.pdf",
+      "source_pdf": "Solander 38 cabinets 1 & 2 11-6-24.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/Solander 38 cabinets 1 & 2 11-6-24.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5625,18 +5865,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–171"
+      "id": "DR–181"
     },
     {
-      "filename": "Solander 38 Cabinets 3, 4, & 5 11-6-24.png",
-      "clean_filename": "Cabinets 3, 4, & 5",
+      "filename": "Solander 38 cabinets 3, 4, & 5 11-6-24.png",
+      "clean_filename": "cabinets 3, 4, & 5",
       "uuid": "d3f246d5de51",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinets 3, 4, & 5 11-6-24.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/Solander 38 cabinets 3, 4, & 5 11-6-24.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Solander 38 Cabinets 3, 4, & 5 11-6-24.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet package Nov 2024/Solander 38 Cabinets 3, 4, & 5 11-6-24.pdf",
+      "source_pdf": "Solander 38 cabinets 3, 4, & 5 11-6-24.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet package Nov 2024/Solander 38 cabinets 3, 4, & 5 11-6-24.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5658,7 +5898,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–172"
+      "id": "DR–182"
     },
     {
       "filename": "Solander 38 profile & planview for cabinet design 9-27-24.png",
@@ -5691,7 +5931,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–173"
+      "id": "DR–183"
     },
     {
       "filename": "Solander 38 sections for cabinet design 9-27-24.png",
@@ -5724,18 +5964,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–174"
+      "id": "DR–184"
     },
     {
-      "filename": "BHD D section - full.png",
-      "clean_filename": "BHD D section - full",
+      "filename": "bulkhead D section - full.png",
+      "clean_filename": "bulkhead D section - full",
       "uuid": "047c36533943",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - full.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - full.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "BHD D section - full.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/BHD D section - full.pdf",
+      "source_pdf": "bulkhead D section - full.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - full.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5748,18 +5988,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–175"
+      "id": "DR–185"
     },
     {
-      "filename": "BHD D section - port (inbd) counter.png",
-      "clean_filename": "BHD D section - port (inbd) counter",
+      "filename": "bulkhead D section - port (inboard) counter.png",
+      "clean_filename": "bulkhead D section - port (inboard) counter",
       "uuid": "da0eedadfe83",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - port (inbd) counter.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - port (inboard) counter.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "BHD D section - port (inbd) counter.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/BHD D section - port (inbd) counter.pdf",
+      "source_pdf": "bulkhead D section - port (inboard) counter.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - port (inboard) counter.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5772,18 +6012,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–176"
+      "id": "DR–186"
     },
     {
-      "filename": "BHD D section - stbd (outbd) counter.png",
-      "clean_filename": "BHD D section - stbd (outbd) counter",
+      "filename": "bulkhead D section - stbd (outboard) counter.png",
+      "clean_filename": "bulkhead D section - stbd (outboard) counter",
       "uuid": "8ea7363cc587",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - stbd (outbd) counter.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - stbd (outboard) counter.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "BHD D section - stbd (outbd) counter.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/BHD D section - stbd (outbd) counter.pdf",
+      "source_pdf": "bulkhead D section - stbd (outboard) counter.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - stbd (outboard) counter.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5796,18 +6036,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–177"
+      "id": "DR–187"
     },
     {
-      "filename": "BHD D section - upper port cupboard.png",
-      "clean_filename": "BHD D section - upper port cupboard",
+      "filename": "bulkhead D section - upper port cupboard.png",
+      "clean_filename": "bulkhead D section - upper port cupboard",
       "uuid": "ae7f6b521c85",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - upper port cupboard.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - upper port cupboard.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "BHD D section - upper port cupboard.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/BHD D section - upper port cupboard.pdf",
+      "source_pdf": "bulkhead D section - upper port cupboard.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - upper port cupboard.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5820,18 +6060,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–178"
+      "id": "DR–188"
     },
     {
-      "filename": "BHD D section - upper stbd spice rack.png",
-      "clean_filename": "BHD D section - upper stbd spice rack",
+      "filename": "bulkhead D section - upper starboard spice rack.png",
+      "clean_filename": "bulkhead D section - upper starboard spice rack",
       "uuid": "311a91a08356",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/BHD D section - upper stbd spice rack.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - upper starboard spice rack.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "BHD D section - upper stbd spice rack.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/BHD D section - upper stbd spice rack.pdf",
+      "source_pdf": "bulkhead D section - upper starboard spice rack.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/bulkhead D section - upper starboard spice rack.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5844,18 +6084,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–179"
+      "id": "DR–189"
     },
     {
-      "filename": "Cabinet partition 1 with cl msmt.png",
-      "clean_filename": "Cabinet partition 1 with cl msmt",
+      "filename": "cabinet partition 1 with centerline measurement.png",
+      "clean_filename": "cabinet partition 1 with centerline measurement",
       "uuid": "e867dbe632f5",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 1 with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 1 with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 1 with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 1 with cl msmt.pdf",
+      "source_pdf": "cabinet partition 1 with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 1 with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5868,18 +6108,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–180"
+      "id": "DR–190"
     },
     {
-      "filename": "Cabinet partition 1 with scale.png",
-      "clean_filename": "Cabinet partition 1 with scale",
+      "filename": "cabinet partition 1 with scale.png",
+      "clean_filename": "cabinet partition 1 with scale",
       "uuid": "50d404d26e9d",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 1 with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 1 with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 1 with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 1 with scale.pdf",
+      "source_pdf": "cabinet partition 1 with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 1 with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5892,18 +6132,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–181"
+      "id": "DR–191"
     },
     {
-      "filename": "Cabinet partition 10 11X17IN with cl msmt.png",
-      "clean_filename": "Cabinet partition 10 11X17IN with cl msmt",
+      "filename": "cabinet partition 10 11X17IN with centerline measurement.png",
+      "clean_filename": "cabinet partition 10 11X17IN with centerline measurement",
       "uuid": "5d50665164eb",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 10 11X17IN with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 10 11X17IN with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 10 11X17IN with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 10 11X17IN with cl msmt.pdf",
+      "source_pdf": "cabinet partition 10 11X17IN with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 10 11X17IN with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5916,18 +6156,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–182"
+      "id": "DR–192"
     },
     {
-      "filename": "Cabinet partition 10 11X17IN with scale.png",
-      "clean_filename": "Cabinet partition 10 11X17IN with scale",
+      "filename": "cabinet partition 10 11X17IN with scale.png",
+      "clean_filename": "cabinet partition 10 11X17IN with scale",
       "uuid": "502ad45891c5",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 10 11X17IN with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 10 11X17IN with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 10 11X17IN with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 10 11X17IN with scale.pdf",
+      "source_pdf": "cabinet partition 10 11X17IN with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 10 11X17IN with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5940,18 +6180,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–183"
+      "id": "DR–193"
     },
     {
-      "filename": "Cabinet partition 2 11X17IN with cl msmt.png",
-      "clean_filename": "Cabinet partition 2 11X17IN with cl msmt",
+      "filename": "cabinet partition 2 11X17IN with centerline measurement.png",
+      "clean_filename": "cabinet partition 2 11X17IN with centerline measurement",
       "uuid": "39ac5fe49fe0",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 2 11X17IN with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 2 11X17IN with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 2 11X17IN with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 2 11X17IN with cl msmt.pdf",
+      "source_pdf": "cabinet partition 2 11X17IN with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 2 11X17IN with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5964,18 +6204,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–184"
+      "id": "DR–194"
     },
     {
-      "filename": "Cabinet partition 2 11X17IN with scale.png",
-      "clean_filename": "Cabinet partition 2 11X17IN with scale",
+      "filename": "cabinet partition 2 11X17IN with scale.png",
+      "clean_filename": "cabinet partition 2 11X17IN with scale",
       "uuid": "565b2c80bacd",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 2 11X17IN with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 2 11X17IN with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 2 11X17IN with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 2 11X17IN with scale.pdf",
+      "source_pdf": "cabinet partition 2 11X17IN with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 2 11X17IN with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -5988,18 +6228,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–185"
+      "id": "DR–195"
     },
     {
-      "filename": "Cabinet partition 3 with cl msmt.png",
-      "clean_filename": "Cabinet partition 3 with cl msmt",
+      "filename": "cabinet partition 3 with centerline measurement.png",
+      "clean_filename": "cabinet partition 3 with centerline measurement",
       "uuid": "c948f9e2bb11",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 3 with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 3 with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 3 with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 3 with cl msmt.pdf",
+      "source_pdf": "cabinet partition 3 with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 3 with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6012,18 +6252,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–186"
+      "id": "DR–196"
     },
     {
-      "filename": "Cabinet partition 3 with scale.png",
-      "clean_filename": "Cabinet partition 3 with scale",
+      "filename": "cabinet partition 3 with scale.png",
+      "clean_filename": "cabinet partition 3 with scale",
       "uuid": "2c5caa27ab54",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 3 with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 3 with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 3 with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 3 with scale.pdf",
+      "source_pdf": "cabinet partition 3 with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 3 with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6036,18 +6276,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–187"
+      "id": "DR–197"
     },
     {
-      "filename": "Cabinet partition 4 with cl msmt.png",
-      "clean_filename": "Cabinet partition 4 with cl msmt",
+      "filename": "cabinet partition 4 with centerline measurement.png",
+      "clean_filename": "cabinet partition 4 with centerline measurement",
       "uuid": "740097a40e4b",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 4 with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 4 with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 4 with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 4 with cl msmt.pdf",
+      "source_pdf": "cabinet partition 4 with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 4 with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6060,18 +6300,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–188"
+      "id": "DR–198"
     },
     {
-      "filename": "Cabinet partition 4 with scale.png",
-      "clean_filename": "Cabinet partition 4 with scale",
+      "filename": "cabinet partition 4 with scale.png",
+      "clean_filename": "cabinet partition 4 with scale",
       "uuid": "cf21f5fcbab5",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 4 with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 4 with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 4 with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 4 with scale.pdf",
+      "source_pdf": "cabinet partition 4 with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 4 with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6084,18 +6324,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–189"
+      "id": "DR–199"
     },
     {
-      "filename": "Cabinet partition 5 with cl msmt.png",
-      "clean_filename": "Cabinet partition 5 with cl msmt",
+      "filename": "cabinet partition 5 with centerline measurement.png",
+      "clean_filename": "cabinet partition 5 with centerline measurement",
       "uuid": "2a92b938fb9b",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 5 with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 5 with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 5 with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 5 with cl msmt.pdf",
+      "source_pdf": "cabinet partition 5 with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 5 with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6108,18 +6348,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–190"
+      "id": "DR–200"
     },
     {
-      "filename": "Cabinet partition 5 with scale.png",
-      "clean_filename": "Cabinet partition 5 with scale",
+      "filename": "cabinet partition 5 with scale.png",
+      "clean_filename": "cabinet partition 5 with scale",
       "uuid": "14500fdd9abc",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 5 with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 5 with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 5 with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 5 with scale.pdf",
+      "source_pdf": "cabinet partition 5 with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 5 with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6132,18 +6372,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–191"
+      "id": "DR–201"
     },
     {
-      "filename": "Cabinet partition 6 with cl msmt.png",
-      "clean_filename": "Cabinet partition 6 with cl msmt",
+      "filename": "cabinet partition 6 with centerline measurement.png",
+      "clean_filename": "cabinet partition 6 with centerline measurement",
       "uuid": "a32ac85fbf59",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 6 with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 6 with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 6 with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 6 with cl msmt.pdf",
+      "source_pdf": "cabinet partition 6 with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 6 with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6156,18 +6396,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–192"
+      "id": "DR–202"
     },
     {
-      "filename": "Cabinet partition 6 with scale.png",
-      "clean_filename": "Cabinet partition 6 with scale",
+      "filename": "cabinet partition 6 with scale.png",
+      "clean_filename": "cabinet partition 6 with scale",
       "uuid": "8a0f052e6e59",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 6 with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 6 with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 6 with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 6 with scale.pdf",
+      "source_pdf": "cabinet partition 6 with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 6 with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6180,18 +6420,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–193"
+      "id": "DR–203"
     },
     {
-      "filename": "Cabinet partition 7 with cl msmt.png",
-      "clean_filename": "Cabinet partition 7 with cl msmt",
+      "filename": "cabinet partition 7 with centerline measurement.png",
+      "clean_filename": "cabinet partition 7 with centerline measurement",
       "uuid": "da60f7fa0254",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 7 with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 7 with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 7 with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 7 with cl msmt.pdf",
+      "source_pdf": "cabinet partition 7 with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 7 with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6204,18 +6444,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–194"
+      "id": "DR–204"
     },
     {
-      "filename": "Cabinet partition 7 with scale.png",
-      "clean_filename": "Cabinet partition 7 with scale",
+      "filename": "cabinet partition 7 with scale.png",
+      "clean_filename": "cabinet partition 7 with scale",
       "uuid": "ddba2aa3f5e6",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 7 with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 7 with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 7 with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 7 with scale.pdf",
+      "source_pdf": "cabinet partition 7 with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 7 with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6228,18 +6468,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–195"
+      "id": "DR–205"
     },
     {
-      "filename": "Cabinet partition 8 with cl msmt.png",
-      "clean_filename": "Cabinet partition 8 with cl msmt",
+      "filename": "cabinet partition 8 with centerline measurement.png",
+      "clean_filename": "cabinet partition 8 with centerline measurement",
       "uuid": "570d3f1d194c",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 8 with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 8 with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 8 with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 8 with cl msmt.pdf",
+      "source_pdf": "cabinet partition 8 with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 8 with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6252,18 +6492,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–196"
+      "id": "DR–206"
     },
     {
-      "filename": "Cabinet partition 8 with scale.png",
-      "clean_filename": "Cabinet partition 8 with scale",
+      "filename": "cabinet partition 8 with scale.png",
+      "clean_filename": "cabinet partition 8 with scale",
       "uuid": "10cc5f87ba60",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 8 with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 8 with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 8 with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 8 with scale.pdf",
+      "source_pdf": "cabinet partition 8 with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 8 with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6276,18 +6516,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–197"
+      "id": "DR–207"
     },
     {
-      "filename": "Cabinet partition 9 with cl msmt.png",
-      "clean_filename": "Cabinet partition 9 with cl msmt",
+      "filename": "cabinet partition 9 with centerline measurement.png",
+      "clean_filename": "cabinet partition 9 with centerline measurement",
       "uuid": "7295b41bbce3",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 9 with cl msmt.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 9 with centerline measurement.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 9 with cl msmt.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/REVISED CABINET LOC PACKAGE FOR KEITH 1-2-2025/Cabinet partition 9 with cl msmt.pdf",
+      "source_pdf": "cabinet partition 9 with centerline measurement.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/revised cabinet loc package for Keith 1-2-2025/cabinet partition 9 with centerline measurement.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6300,18 +6540,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–198"
+      "id": "DR–208"
     },
     {
-      "filename": "Cabinet partition 9 with scale.png",
-      "clean_filename": "Cabinet partition 9 with scale",
+      "filename": "cabinet partition 9 with scale.png",
+      "clean_filename": "cabinet partition 9 with scale",
       "uuid": "98316292c3f1",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 9 with scale.png",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 9 with scale.png",
       "group": "OUTFITTING & INTERIOR",
       "normalized_group": "outfitting & interior",
       "system_index": 7,
-      "source_pdf": "Cabinet partition 9 with scale.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/Cabinet partition templates for Keith 12-13-24/Cabinet partition 9 with scale.pdf",
+      "source_pdf": "cabinet partition 9 with scale.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/CABINETS/cabinet partition templates for Keith 12-13-24/cabinet partition 9 with scale.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -6324,11 +6564,131 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–199"
+      "id": "DR–209"
+    },
+    {
+      "filename": "companionway hatch overview.png",
+      "clean_filename": "companionway hatch overview",
+      "uuid": "c7758342bce0",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/COMPANIONWAY HATCH/companionway hatch overview.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "companionway hatch overview.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/COMPANIONWAY HATCH/companionway hatch overview.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 2248366,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–210"
+    },
+    {
+      "filename": "forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.png",
+      "clean_filename": "forward mast rev A sheet 1 OF 4 overview 20MAY26",
+      "uuid": "443f34d128c9",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 2200,
+      "height": 3400,
+      "file_size_bytes": 2060060,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–211"
+    },
+    {
+      "filename": "forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.png",
+      "clean_filename": "forward mast rev A sheet 2 of 4 IBP 20MAY26",
+      "uuid": "e42ba9db1833",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 2200,
+      "height": 3400,
+      "file_size_bytes": 2521733,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–212"
+    },
+    {
+      "filename": "forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.png",
+      "clean_filename": "forward mast rev A sheet 3 of 4 aluminum parts dimensions 20MAY26",
+      "uuid": "cfa50ab79395",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 2200,
+      "height": 3400,
+      "file_size_bytes": 1464095,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–213"
+    },
+    {
+      "filename": "forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.png",
+      "clean_filename": "forward mast rev A sheet 4 of 4 perspective views 20MAY26",
+      "uuid": "af9147fd1719",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 1713647,
+      "date_info": null,
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–214"
     }
   ],
   "summary_statistics": {
-    "total_images": 199,
+    "total_images": 214,
     "unique_dimensions": [
       [
         2200,
@@ -6355,21 +6715,21 @@
         2200
       ]
     ],
-    "total_file_size_bytes": 75096950,
-    "average_width": 2979.899497487437,
-    "average_height": 2354.2713567839196,
-    "average_pages_per_pdf": 1.0257731958762886,
+    "total_file_size_bytes": 94717707,
+    "average_width": 2992.5233644859813,
+    "average_height": 2360.2803738317757,
+    "average_pages_per_pdf": 1.0239234449760766,
     "files_with_dates": 171,
-    "files_without_dates": 28,
+    "files_without_dates": 43,
     "files_by_system": {
       "overview": 13,
       "power architecture": 0,
-      "superstructure": 90,
+      "superstructure": 100,
       "control": 3,
       "propulsion": 3,
       "body": 3,
       "water & heating systems": 1,
-      "outfitting & interior": 86
+      "outfitting & interior": 91
     }
   }
 }

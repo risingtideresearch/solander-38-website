@@ -57,10 +57,11 @@ def rename_files_with_hash(root_directory):
     
     items_to_rename = []
     for root, dirs, files in os.walk(root_directory, topdown=False):
-        # Skip SUPERSEDED directories
-        if "SUPERSEDED" in root.split(os.sep):
+        # Skip SUPERSEDED and EXTRA directories
+        parts = root.split(os.sep)
+        if "SUPERSEDED" in parts or "EXTRA" in parts:
             continue
-            
+
         # Collect directories that need renaming
         for dirname in dirs:
             if '#' in dirname:
@@ -341,23 +342,25 @@ def convert_pdf_to_png(pdf_path, output_folder="output_images", dpi=200, thumbna
 def find_all_pdfs_recursive(root_directory):
     """
     Recursively find all PDF files in a directory and its subdirectories.
-    Ignores any files in directories named "SUPERSEDED" or subdirectories within.
-    
+    Ignores any files in directories named "SUPERSEDED" or "EXTRA" or subdirectories within.
+
     Args:
         root_directory (str): The root directory to search.
-    
+
     Returns:
         list: List of paths to PDF files.
     """
     pdf_files = []
     for root, dirs, files in os.walk(root_directory):
-        # Skip SUPERSEDED directories
-        if "SUPERSEDED" in root.split(os.sep):
+        # Skip SUPERSEDED and EXTRA directories
+        parts = root.split(os.sep)
+        if "SUPERSEDED" in parts or "EXTRA" in parts:
             continue
-        
-        # Remove SUPERSEDED from dirs to prevent os.walk from entering them
-        if "SUPERSEDED" in dirs:
-            dirs.remove("SUPERSEDED")
+
+        # Remove SUPERSEDED and EXTRA from dirs to prevent os.walk from entering them
+        for skip in ("SUPERSEDED", "EXTRA"):
+            if skip in dirs:
+                dirs.remove(skip)
         
         for file in files:
             if file.lower().endswith('.pdf'):
