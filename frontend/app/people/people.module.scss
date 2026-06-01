@@ -1,15 +1,16 @@
 .people {
   h1 {
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 2rem 5rem 2rem;
     margin: 6rem auto 0 auto;
     max-width: 120rem;
+
+    @media screen and (max-width: 900px) {
+      padding: 0 1rem 3.75rem 1rem;
+    }
   }
 }
 
 .table {
-  padding-bottom: 8rem;
-  padding-right: 2rem;
-  padding-left: 8.5rem;
   margin: 0 auto;
   // border-top: 1px solid var(--border);
 
@@ -20,25 +21,31 @@
 
 .row {
   margin-top: -2rem;
-  padding-top: 2rem;
-  padding-left: 0.875rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 10rem 8rem 1fr 1fr 1.75fr;
-  align-items: start;
+  padding: 2rem 2rem 4rem 9rem;
+  border-top: 1px solid;
 
   @media screen and (max-width: 900px) {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 2rem;
+    padding: 1rem;
     margin-bottom: 2rem;
+  }
+
+  &__inner {
+    max-width: 94rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+    grid-template-columns: 10rem 6rem 1fr 1fr 1.75fr;
+    @media screen and (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
 }
 
 .photo {
   overflow: hidden;
-  padding: 1rem;
   aspect-ratio: 1;
 
   @media screen and (max-width: 900px) {
@@ -54,7 +61,7 @@
 }
 
 .noPhoto {
-  background: var(--ocean-fog-blue);
+  // background: var(--ocean-fog-blue);
   opacity: 0.4;
   width: 100%;
   height: 100%;
@@ -62,19 +69,19 @@
 }
 
 .cell {
-  padding: 1rem 0;
-  font-size: 0.8125rem;
-  line-height: 1.4;
-
-   @media screen and (max-width: 900px) {
-    padding: 0;
+  @media screen and (max-width: 900px) {
     width: 100%;
   }
 
-  p {
+  &,
+  p,
+  a {
     margin: 0;
     font-size: 0.8125rem;
-    line-height: 1.4;
+
+    @media screen and (max-width: 900px) {
+      font-size: 0.9375rem;
+    }
   }
 
   svg {
@@ -91,4 +98,15 @@
 
 .cell--name {
   font-weight: 600;
+}
+
+.cell--stories {
+  @media screen and (max-width: 900px) {
+    > div {
+      &:first-child {
+        margin-top: 2rem;
+      }
+      margin-bottom: 1rem;
+    }
+  }
 }
