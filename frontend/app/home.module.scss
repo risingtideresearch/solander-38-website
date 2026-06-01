@@ -15,15 +15,17 @@
     max-width: 33vw;
     padding: 0 2rem;
     @media screen and (max-width: 900px) {
+      max-width: 50%;
+      padding: 0 1rem;
+    }
+    @media screen and (max-width: 767px) {
       max-width: 100%;
       padding: 0 1rem;
     }
 
     svg {
-      @media screen and (max-width: 900px) {
-        display: block;
-        margin: 0 auto;
-      }
+      display: block;
+      margin: 0 auto;
     }
   }
 
@@ -33,6 +35,11 @@
     padding: 3rem 2rem 12rem 2rem;
 
     @media screen and (max-width: 900px) {
+      column-count: 2;
+      padding: 2rem 1rem 5rem 1rem;
+    }
+
+    @media screen and (max-width: 767px) {
       column-count: 1;
       padding: 2rem 1rem 5rem 1rem;
     }
@@ -91,6 +98,7 @@
     display: block;
     background-size: 1vw 1vw;
     margin: 1rem 0;
+    padding: 1rem 0;
 
     &:hover {
       opacity: 0.85;
@@ -121,10 +129,9 @@
 
 .anatomy-crossfade {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 12;
   width: 100%;
   overflow: hidden;
-  padding: 0 2rem;
 
   img {
     position: absolute;
@@ -133,7 +140,6 @@
     opacity: 0;
     animation: anatomy-crossfade 28s linear infinite;
     animation-fill-mode: backwards;
-    max-width: 85%;
     margin: 0 auto;
 
     &:nth-child(1) {
