@@ -124,26 +124,38 @@
   aspect-ratio: 4 / 3;
   width: 100%;
   overflow: hidden;
+  padding: 0 2rem;
 
   img {
     position: absolute;
     inset: 0;
     object-fit: cover;
     opacity: 0;
-    animation: anatomy-crossfade 18s linear infinite;
+    animation: anatomy-crossfade 28s linear infinite;
     animation-fill-mode: backwards;
+    max-width: 85%;
+    margin: 0 auto;
 
     &:nth-child(1) {
-      animation-delay: -1.5s;
+      animation-delay: -1s;
     }
     &:nth-child(2) {
       animation-delay: 3s;
     }
     &:nth-child(3) {
-      animation-delay: 7.5s;
+      animation-delay: 7s;
     }
     &:nth-child(4) {
-      animation-delay: 12s;
+      animation-delay: 11s;
+    }
+    &:nth-child(5) {
+      animation-delay: 15s;
+    }
+    &:nth-child(6) {
+      animation-delay: 19s;
+    }
+    &:nth-child(7) {
+      animation-delay: 23s;
     }
   }
 }
@@ -152,13 +164,13 @@
   0% {
     opacity: 0;
   }
-  8% {
+  3.57% {
     opacity: 1;
   }
-  25% {
+  14.29% {
     opacity: 1;
   }
-  33% {
+  17.86% {
     opacity: 0;
   }
   100% {

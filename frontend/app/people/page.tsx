@@ -37,88 +37,90 @@ export default async function Page() {
               id={person.slug?.current}
               className={styles.row}
             >
-              <div className={styles.photo}>
-                {person.image ? (
-                  <Image
-                    src={person.image}
-                    alt={person.name}
-                    square={true}
-                    width={160}
-                    loading={index === 0 ? "eager" : "lazy"}
-                  />
-                ) : (
-                  <div className={styles.noPhoto} />
-                )}
-              </div>
-
-              <div className={`${styles.cell} ${styles["cell--name"]}`}>
-                {person.name}
-              </div>
-
-              <div className={styles.cell}>{person.role}</div>
-
-              <div className={`${styles.cell} ${styles.list}`}>
-                {person.affiliations?.map((item: any) =>
-                  item.url ? (
-                    <p key={item.url}>
-                      <a href={item.url} target="_blank">
-                        {item.label ||
-                          item.url.replace("https://", "").replace(/\/$/, "")}
-                        <LiaArrowUpSolid
-                          style={{
-                            transform: "rotate(45deg)",
-                            marginLeft: "0.2rem",
-                          }}
-                          size={12}
-                        />
-                      </a>
-                    </p>
+              <div className={styles.row__inner}>
+                <div className={styles.photo}>
+                  {person.image ? (
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      square={true}
+                      width={160}
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
                   ) : (
-                    <p key={item.label}>{item.label}</p>
-                  ),
-                )}
-              </div>
+                    <div className={styles.noPhoto} />
+                  )}
+                </div>
 
-              <div className={styles.cell}>
-                {[
-                  ...sortedArticles(authored),
-                  ...sortedArticles(mentioned),
-                ].map((article: any) => (
-                  <div
-                    key={article._id}
-                    className={`${articleStyles["article-header"]} ${articleStyles["article-header--compact"]}`}
-                  >
-                    <h6>{articleIdMap[article._id]}</h6>
-                    <a
-                      href={`/stories/${article.slug}`}
-                      className={articleStyles["article-title"]}
-                    >
-                      <p>{article.title}</p>
-                      <div></div>
-                      <h6>
-                        {formatDate(
-                          article.effectiveDate ?? article._updatedAt,
-                        )}
-                      </h6>
-                    </a>
-                  </div>
-                ))}
+                <div className={`${styles.cell} ${styles["cell--name"]}`}>
+                  {person.name}
+                </div>
 
-                {drawingCount > 0 && (
-                  <div
-                    className={`${articleStyles["article-header"]} ${articleStyles["article-header--compact"]}`}
-                  >
-                    <h6>&nbsp;</h6>
-                    <a
-                      href={URLS.DRAWINGS}
-                      className={articleStyles["article-title"]}
+                <div className={styles.cell}>{person.role}</div>
+
+                <div className={`${styles.cell} ${styles.list}`}>
+                  {person.affiliations?.map((item: any) =>
+                    item.url ? (
+                      <p key={item.url}>
+                        <a href={item.url} target="_blank">
+                          {item.label ||
+                            item.url.replace("https://", "").replace(/\/$/, "")}
+                          <LiaArrowUpSolid
+                            style={{
+                              transform: "rotate(45deg)",
+                              marginLeft: "0.2rem",
+                            }}
+                            size={12}
+                          />
+                        </a>
+                      </p>
+                    ) : (
+                      <p key={item.label}>{item.label}</p>
+                    ),
+                  )}
+                </div>
+
+                <div className={`${styles.cell} ${styles["cell--stories"]}`}>
+                  {[
+                    ...sortedArticles(authored),
+                    ...sortedArticles(mentioned),
+                  ].map((article: any) => (
+                    <div
+                      key={article._id}
+                      className={`${articleStyles["article-header"]} ${articleStyles["article-header--compact"]}`}
                     >
-                      <p>Drawings</p>
-                      <div></div>
-                      <h6>{drawingCount} </h6>
-                    </a>
-                  </div>
-                )}
+                      <h6>{articleIdMap[article._id]}</h6>
+                      <a
+                        href={`/stories/${article.slug}`}
+                        className={articleStyles["article-title"]}
+                      >
+                        <p>{article.title}</p>
+                        <div></div>
+                        <h6>
+                          {formatDate(
+                            article.effectiveDate ?? article._updatedAt,
+                          )}
+                        </h6>
+                      </a>
+                    </div>
+                  ))}
+
+                  {drawingCount > 0 && (
+                    <div
+                      className={`${articleStyles["article-header"]} ${articleStyles["article-header--compact"]}`}
+                    >
+                      <h6>&nbsp;</h6>
+                      <a
+                        href={URLS.DRAWINGS}
+                        className={articleStyles["article-title"]}
+                      >
+                        <p>Drawings</p>
+                        <div></div>
+                        <h6>{drawingCount} </h6>
+                      </a>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           );

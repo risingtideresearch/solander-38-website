@@ -40,7 +40,7 @@ export default async function Footer({ minimal = false }) {
               <h6>This website</h6>
               <p>
                 is an effort to document and share designs, processes, and
-                research from Solander 38, the first reference design by
+                research from Solander 38, the first vessel reference design by
                 Rising&nbsp;Tide Research Foundation.
               </p>
             </div>

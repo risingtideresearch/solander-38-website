@@ -11,16 +11,12 @@ import {
   fetchSystemNames,
 } from "@/sanity/lib/utils";
 import Search from "./components/Search/Search";
-import { formatDate, sortPeople } from "./utils";
+import { formatDate } from "./utils";
 import { DrawingCard } from "./drawings/DrawingCard";
 import { PhotoImage } from "./components/PhotoImage";
-import Logo from "./components/Logo";
-import NextImage from "next/image";
 import Image from "next/image";
 import { Drawing } from "./drawings/types";
-import LogoStacked from "./components/LogoStacked";
 import Link from "next/link";
-import RangeChart from "./components/RangeChart";
 import NewsletterForm from "./components/NewsletterForm";
 
 export default async function Page() {
@@ -111,7 +107,7 @@ export default async function Page() {
                 </p>
                 <p>
                   This website is an effort to document and share designs,
-                  processes, and research from Solander 38, the first reference design by&nbsp;
+                  processes, and research from Solander 38, the first vessel reference design by&nbsp;
                   <Link target="_blank" href="https://risingtideresearch.org">
                     Rising&nbsp;Tide Research Foundation
                   </Link>. We’ve made this site
@@ -232,26 +228,46 @@ export default async function Page() {
                     <Image
                       fill
                       sizes="(max-width: 800px) 100vw, 50vw"
-                      src="/homepage/overview.png"
-                      alt="Solander 38 3D model, full overview"
+                      src="/homepage/solander-38-overview.png"
+                      alt="Solander 38 3D model, overview"
                     />
+
                     <Image
                       fill
                       sizes="(max-width: 800px) 100vw, 50vw"
-                      src="/homepage/body.png"
-                      alt="Solander 38 3D model, body"
-                    />
-                    <Image
-                      fill
-                      sizes="(max-width: 800px) 100vw, 50vw"
-                      src="/homepage/superstructure.png"
+                      src="/homepage/solander-38-superstructure.png"
                       alt="Solander 38 3D model, superstructure"
                     />
                     <Image
                       fill
                       sizes="(max-width: 800px) 100vw, 50vw"
-                      src="/homepage/propulsion.png"
-                      alt="Solander 38 3D model, propulsion system"
+                      src="/homepage/solander-38-body.png"
+                      alt="Solander 38 3D model, body"
+                    />
+
+                    <Image
+                      fill
+                      sizes="(max-width: 800px) 100vw, 50vw"
+                      src="/homepage/solander-38-cross-section.png"
+                      alt="Solander 38 3D model, cross-section"
+                    />
+                    <Image
+                      fill
+                      sizes="(max-width: 800px) 100vw, 50vw"
+                      src="/homepage/solander-38-soles-and-bulkheads.png"
+                      alt="Solander 38 3D model, soles and bulkheads"
+                    />
+                    <Image
+                      fill
+                      sizes="(max-width: 800px) 100vw, 50vw"
+                      src="/homepage/solander-38-propulsion.png"
+                      alt="Solander 38 3D model, propulsion"
+                    />
+                    <Image
+                      fill
+                      sizes="(max-width: 800px) 100vw, 50vw"
+                      src="/homepage/solander-38-steering.png"
+                      alt="Solander 38 3D model, steering"
                     />
                   </div>
                 </Link>
@@ -302,7 +318,7 @@ export default async function Page() {
                       </li>
                     ))}
                 </ul>
-              </div>
+                </div>
               <div className={styles["home__section"]}>
                 <h4>
                   License

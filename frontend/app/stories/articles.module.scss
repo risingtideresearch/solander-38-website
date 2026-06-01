@@ -3,6 +3,9 @@
     padding: 0 2rem 3.75rem 2rem;
     margin: 6rem auto 0 auto;
     max-width: 100rem;
+    @media screen and (max-width: 900px) {
+    padding: 0 1rem 3.75rem 1rem;
+    }
   }
 
   main {
@@ -42,7 +45,7 @@
       // border-left: 1px solid var(--border);
       margin-bottom: -1px;
       margin-left: -1px;
-      padding: 2rem;
+      padding: 2rem 2rem 2rem 0;
       @media screen and (max-width: 900px) {
         padding: 0;
         border: none;
@@ -117,13 +120,13 @@
   > div:not(.article-preview) {
     flex: 1 1 auto;
     border-bottom: 1px solid var(--border);
-    min-width: 0.5rem;
+    min-width: 3rem;
   }
 }
 
 .article-preview {
   position: absolute;
-  right: calc(100% + 5rem);
+  right: calc(100% + 2rem);
   top: 50%;
   transform: translateY(-40%);
   width: 18rem;
