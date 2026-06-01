@@ -9,6 +9,19 @@ from datetime import datetime
 from pathlib import Path
 from pypdf import PdfReader
 
+# PDF files to exclude from conversion (relative to frontend/public/drawings)
+EXCLUDED_FILES = [
+    "SUPERSTRUCTURE/INSTRUMENT PANEL/instrument panel frames persp view 1.pdf",
+    "SUPERSTRUCTURE/INSTRUMENT PANEL/instrument panel frames perspective view 2.pdf",
+    "SUPERSTRUCTURE/INSTRUMENT PANEL/instrument panel frames perspective view 3.pdf",
+    "SUPERSTRUCTURE/INSTRUMENT PANEL/instrument panel frames perspective view 4.pdf",
+    "PROPULSION/strut palm section.pdf",
+    "PROPULSION/shaft log section.pdf",
+    "PROPULSION/rudder tube section.pdf",
+    "PROPULSION/quarter inch fwd of shaft log.pdf",
+    "PROPULSION/quarter inch aft of shaft log.pdf"
+]
+
 # System order for organizing drawings
 SYSTEM_ORDER = [
     "overview",
@@ -364,7 +377,12 @@ def find_all_pdfs_recursive(root_directory):
         
         for file in files:
             if file.lower().endswith('.pdf'):
-                pdf_files.append(os.path.join(root, file))
+                full_path = os.path.join(root, file)
+                rel = os.path.relpath(full_path)
+                if any(rel.endswith(excl) or rel == excl for excl in EXCLUDED_FILES):
+                    print(f"  Skipping excluded file: {rel}")
+                    continue
+                pdf_files.append(full_path)
     return pdf_files
 
 def sort_files_by_system_and_date(all_files_info):
@@ -440,6 +458,40 @@ def sort_files_by_system_and_date(all_files_info):
     
     return final_sorted
 
+def cleanup_source_directory(root_directory):
+    """
+    Remove excluded PDFs and any non-PDF files from the source drawings directory.
+    Skips SUPERSEDED, EXTRA, and output_images directories.
+    """
+    skip_dirs = {"SUPERSEDED", "EXTRA", "output_images"}
+    deleted = []
+
+    for root, dirs, files in os.walk(root_directory):
+        parts = root.split(os.sep)
+        if any(d in parts for d in skip_dirs):
+            continue
+        dirs[:] = [d for d in dirs if d not in skip_dirs]
+
+        for file in files:
+            full_path = os.path.join(root, file)
+            rel_from_drawings = os.path.relpath(full_path, root_directory)
+
+            is_excluded = any(
+                rel_from_drawings == excl or rel_from_drawings.replace("\\", "/") == excl
+                for excl in EXCLUDED_FILES
+            )
+            is_non_pdf = not file.lower().endswith('.pdf')
+
+            if is_excluded or is_non_pdf:
+                reason = "excluded" if is_excluded else "non-PDF"
+                print(f"  Deleting ({reason}): {rel_from_drawings}")
+                os.remove(full_path)
+                deleted.append(full_path)
+
+    print(f"Deleted {len(deleted)} file(s) from source directory")
+    return deleted
+
+
 def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbnail_size=(300, 300), thumbnail_dpi=300):
     
     """
@@ -468,7 +520,11 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
         print(f"Renamed {len(renames)} items to remove # characters")
     else:
         print("No files/directories with # characters found")
-    
+
+    # Remove excluded PDFs and non-PDF files from source directory
+    print("\nCleaning up source directory...")
+    cleanup_source_directory(input_directory)
+
     # Clear output directory if requested
     if clear_output and os.path.exists(output_folder):
         print(f"Clearing output directory: {output_folder}")
