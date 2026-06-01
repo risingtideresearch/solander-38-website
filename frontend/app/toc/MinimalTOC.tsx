@@ -2,7 +2,7 @@ import styles from './toc.module.scss';
 
 export default function MinimalTOC({ systems, system, url }) {
   return (
-    <div className={`${styles.toc__container} ${styles.minimal}`}>
+    <div className={`${styles.toc__container} ${styles.minimal}`} data-mounted={true}>
       <div className={`${styles.toc}`}>
         <ol>
           {systems.map((s) => {
