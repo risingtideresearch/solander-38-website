@@ -2,19 +2,14 @@ import DrawingMetadata from "./DrawingMetadata";
 import SubNav from "../components/Navigation/SubNav";
 import { URLS } from "../components/Navigation/Navigation";
 import Image from "next/image";
-import { SwipeNavigation } from "../components/SwipeNavigation";
 
 export function DrawingPage({ asset, next, prev, drawingsArticleDictionary }) {
   if (!asset) {
     return <></>;
   }
 
-  const prevUrl = prev ? `${URLS.DRAWINGS}/file/${prev.uuid}` : null;
-  const nextUrl = next ? `${URLS.DRAWINGS}/file/${next.uuid}` : null;
-
   return (
     <>
-      <SwipeNavigation prevUrl={prevUrl} nextUrl={nextUrl} />
       <SubNav prev={prev} next={next} urlPrefix={`${URLS.DRAWINGS}/file`} />
       <div className="section--two-col detail-page">
         <div>
