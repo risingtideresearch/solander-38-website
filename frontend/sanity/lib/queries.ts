@@ -208,6 +208,7 @@ export const articlesQuery = (slug?: string) => {
   if (slug) {
     return `*[_type=="article" && slug.current == "${slug}"]{
       ...,
+      "effectiveDate": coalesce(publishDate, _updatedAt),
       isLive,
       hideMaterials,
       "system": *[_type=="systems"][0].systems[references(^._id)][0],
