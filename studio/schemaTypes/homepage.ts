@@ -93,6 +93,12 @@ export const homepage = defineType({
           rows: 2,
           validation: (rule: any) => rule.required(),
         },
+        {
+          name: 'systems',
+          type: 'text',
+          rows: 2,
+          validation: (rule: any) => rule.required(),
+        }
       ],
     }),
     defineField({

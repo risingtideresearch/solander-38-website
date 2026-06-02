@@ -165,9 +165,7 @@ export default async function Page() {
 
               <div className={styles["home__section"]}>
                 <h4>Systems</h4>
-                <p>
-                  Each section of the site is organized by anatomical system:
-                </p>
+                {renderText(homepage.data.sectionDescriptions.systems)}
                 <ul className={styles["home__systems-list"]}>
                   {systems.map((s, i) => (
                     <li key={s.slug}>
