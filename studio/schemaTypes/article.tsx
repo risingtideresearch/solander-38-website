@@ -153,6 +153,9 @@ export const article = defineType({
                   type: 'object',
                   name: 'drawingImage',
                   title: 'Drawing',
+                  options: {
+                    modal: {type: 'inline'},
+                  },
                   fields: [
                     defineField({
                       name: 'drawing',
@@ -179,6 +182,7 @@ export const article = defineType({
                   type: 'image',
                   name: 'image',
                   options: {
+                    modal: {type: 'popover'},
                     hotspot: true,
                     metadata: ['blurhash', 'lqip', 'palette', 'exif', 'location'],
                   },
