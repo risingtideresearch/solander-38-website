@@ -104,7 +104,8 @@ export async function fetchSystemsStatic(slug?: string) {
  * @returns
  */
 export async function fetchPhotos(section?: string) {
-  const { data } = await sanityFetch({ query: allPhotosQuery(section) });
+  const isPreview = process.env.NEXT_PUBLIC_PREVIEW_SITE === "true";
+  const { data } = await sanityFetch({ query: allPhotosQuery(section, isPreview) });
 
   return { data };
 }
@@ -114,7 +115,8 @@ export async function fetchPhotos(section?: string) {
  * @returns
  */
 export async function fetchPhotosStatic(section?: string) {
-  const { data } = await sanityFetchStatic({ query: allPhotosQuery(section) });
+  const isPreview = process.env.NEXT_PUBLIC_PREVIEW_SITE === "true";
+  const { data } = await sanityFetchStatic({ query: allPhotosQuery(section, isPreview) });
 
   return { data };
 }

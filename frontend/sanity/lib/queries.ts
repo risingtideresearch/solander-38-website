@@ -572,14 +572,20 @@ export const searchQuery = () => `
 /**
  *
  */
-export const allPhotosQuery = (system?: string) => {
+export const allPhotosQuery = (system?: string, isPreview = false) => {
+  const liveFilter = isPreview ? "" : " && isLive == true";
+
   const articleFilter = system
-    ? `*[_type == "article" && isLive == true && references(^._id) && _id in *[_type == "systems"][0].systems[slug.current == "${system}"].articles[]._ref]`
-    : `*[_type == "article" && isLive == true && references(^._id)]`;
+    ? `*[_type == "article"${liveFilter} && references(^._id) && _id in *[_type == "systems"][0].systems[slug.current == "${system}"].articles[]._ref]`
+    : `*[_type == "article"${liveFilter} && references(^._id)]`;
+
+  const articleFilterNoLive = system
+    ? `*[_type == "article" && references(^._id) && _id in *[_type == "systems"][0].systems[slug.current == "${system}"].articles[]._ref]`
+    : `*[_type == "article" && references(^._id)]`;
 
   const taggedNoStoryCondition = system
-    ? ` || ("${system}" in coalesce(opt.media.tags[]->name.current, []) && count(*[_type == "article" && isLive == true && references(^._id)]) == 0)`
-    : ` || (count(opt.media.tags) > 0 && count(*[_type == "article" && isLive == true && references(^._id)]) == 0 && count(*[_type == "homepage" && references(^._id)]) == 0)`;
+    ? ` || ("${system}" in coalesce(opt.media.tags[]->name.current, []) && count(${articleFilterNoLive}) == 0)`
+    : ` || (count(opt.media.tags) > 0 && count(${articleFilterNoLive}) == 0 && count(*[_type == "homepage" && references(^._id)]) == 0)`;
 
   return `*[_type == "sanity.imageAsset" && (count(${articleFilter}) > 0${taggedNoStoryCondition}) && !("no-gallery" in coalesce(opt.media.tags[]->name.current, []))] {
   _id,
