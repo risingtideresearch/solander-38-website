@@ -16,6 +16,7 @@ interface HoverDisplayProps {
   materials: MaterialIndex;
   settings: ControlSettings;
   componentParts: Array<Component>;
+  lockedAt?: { x: number; y: number } | null;
 }
 
 export default function HoverDisplay({
@@ -23,6 +24,7 @@ export default function HoverDisplay({
   materials,
   settings,
   componentParts,
+  lockedAt,
 }: HoverDisplayProps) {
   const [displayLayer, setDisplayLayer] = useState(layer);
   const [isVisible, setIsVisible] = useState(false);
@@ -78,16 +80,17 @@ export default function HoverDisplay({
 
     const tooltipHeight = tooltipSize.height || 200;
 
-    let x = Math.round(mouse.x + offset);
+    const pos = lockedAt ?? mouse;
+    let x = Math.round(pos.x + offset);
     let y = window?.innerWidth < 800 ? 130 : 80;
 
     if (x + tooltipWidth + padding > viewportWidth) {
-      x = mouse.x - tooltipWidth - offset;
+      x = pos.x - tooltipWidth - offset;
       flip = "x";
     }
 
     if (y + tooltipHeight + padding > viewportHeight) {
-      y = mouse.y - tooltipHeight - offset;
+      y = pos.y - tooltipHeight - offset;
       flip = "y";
     }
 
@@ -249,9 +252,9 @@ export default function HoverDisplay({
         <div
           className={`${styles.connector} ${isVisible ? styles["connector--visible"] : ""} ${position.flip == "x" ? styles["connector--right"] : styles["connector--left"]}`}
           style={{
-            height: Math.abs(mouse.y - position.y) - tooltipSize.height,
+            height: Math.abs((lockedAt ?? mouse).y - position.y) - tooltipSize.height,
             top: tooltipSize.height,
-            left: Math.abs(position.x - mouse.x) - (position.flip == "x" ? 2 : 1),
+            left: Math.abs(position.x - (lockedAt ?? mouse).x) - (position.flip == "x" ? 2 : 1),
           }}
         ></div>
       </div>

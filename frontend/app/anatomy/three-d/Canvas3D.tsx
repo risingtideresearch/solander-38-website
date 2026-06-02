@@ -68,6 +68,15 @@ export function Canvas3D({
   const [hovered, setHovered] = useState<Model | null>(null);
   const [autoRotate, setAutoRotate] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [lockedAt, setLockedAt] = useState<{ x: number; y: number } | null>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 900px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   const tempBox = useRef(new Box3());
   const tempCenter = useRef(new Vector3());
@@ -79,13 +88,6 @@ export function Canvas3D({
       ? new Vector3(0.1, 0.1, 0.5)
       : new Vector3(0.5, 0.25, 0.625);
 
-  useEffect(() => {
-    const mq = window.matchMedia("(pointer: coarse)");
-    setIsMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
 
   const handleModelLoad = useCallback((url: string) => {
     setModelsLoaded((prev) => {
@@ -173,6 +175,10 @@ export function Canvas3D({
   }, [interaction]);
 
   useEffect(() => {
+    setLockedAt(null);
+  }, [filteredLayers]);
+
+  useEffect(() => {
     try {
       if (
         modelsLoaded.size >= filteredLayers.length &&
@@ -254,6 +260,8 @@ export function Canvas3D({
           {interaction == "all" && (
             <RaycastHandler
               clippingPlanes={clippingPlanes}
+              filteredLayers={filteredLayers}
+              isMobile={isMobile}
               setHovered={(layer) => {
                 setHovered(
                   layer
@@ -263,6 +271,7 @@ export function Canvas3D({
                     : null,
                 );
               }}
+              onLock={setLockedAt}
             />
           )}
 
@@ -340,8 +349,8 @@ export function Canvas3D({
           />
           {interaction == "all" && (
             <GizmoHelper
-              alignment="bottom-right"
-              margin={isMobile ? [60, 150] : [110, 90]}
+              alignment={isMobile ? "top-right" : "bottom-right"}
+              margin={isMobile ? [60, 180] : [110, 90]}
             >
               <group scale={isMobile ? [1, 1, 1] : [1.2, 1.2, 1.2]}>
                 <GizmoViewcube
@@ -361,6 +370,7 @@ export function Canvas3D({
             materials={materials}
             settings={settings}
             componentParts={componentParts ?? []}
+            lockedAt={lockedAt}
           />
         )}
       </div>

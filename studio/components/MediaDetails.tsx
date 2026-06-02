@@ -75,21 +75,27 @@ export function MediaDetails({renderDefaultDetails, currentAsset, formUpdating, 
     }
   }, [formUpdating, client, currentAsset?._id])
 
-  const hint = date && exifDate
+  const hintLabel = date && exifDate
     ? 'Overrides EXIF date'
     : exifDate
-      ? `EXIF date: ${exifDate}`
+      ? 'EXIF date'
       : exifDate === null
         ? 'No EXIF date defined'
         : ''
+  const hintDate = !date && exifDate ? exifDate : null
 
   return (
-    <Stack gap={3}>
+    <Stack space={3}>
       {renderDefaultDetails({currentAsset, formUpdating, ...props})}
       <Box>
-        <Stack gap={2} paddingTop={3}>
+        <Stack space={2} paddingTop={3}>
           <Text size={1} weight='semibold'>Date</Text>
-          <Text size={1} muted>{hint}</Text>
+          {hintLabel ? (
+            <Stack space={1} paddingTop={1} paddingBottom={1}>
+              <Text size={1} muted>{hintLabel}
+              {hintDate ? <>&nbsp;{hintDate}</> : null}</Text>
+            </Stack>
+          ) : null}
           <TextInput
             disabled={formUpdating}
             onChange={(e) => {
