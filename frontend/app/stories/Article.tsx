@@ -206,7 +206,7 @@ export default async function Article({ data, materials = [] }) {
                 </>
               )}
               <h6>Updated</h6>
-              <h6>{formatDate(data.effectiveDate ?? data._updatedAt)}</h6>
+              <h6>{formatDate(data._updatedAt)}</h6>
             </div>
           </div>
         </div>
