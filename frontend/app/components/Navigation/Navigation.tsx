@@ -17,13 +17,10 @@ export const nav = [
   {
     url: URLS.STORIES,
     label: "Stories",
-    nav2dStory: true,
   },
   {
     url: URLS.ANATOMY,
     label: "Anatomy",
-    nav2d: true,
-    nav2dStory: true,
   },
   {
     url: URLS.DRAWINGS,
