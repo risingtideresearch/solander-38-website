@@ -82,10 +82,10 @@ export default function RaycastHandler({ clippingPlanes, setHovered, onLock, fil
     if (mat?.color) {
       mat.color.copy(savedColor.current);
       mat.map = savedMap.current;
-      if (savedEmissive.current) mat.emissive.copy(savedEmissive.current);
-      mat.emissiveIntensity = savedEmissiveIntensity.current;
-      mat.metalness = savedMetalness.current;
-      mat.roughness = savedRoughness.current;
+      if (savedEmissive.current && mat.emissive) mat.emissive.copy(savedEmissive.current);
+      if (mat.emissiveIntensity !== undefined) mat.emissiveIntensity = savedEmissiveIntensity.current;
+      if (mat.metalness !== undefined) mat.metalness = savedMetalness.current;
+      if (mat.roughness !== undefined) mat.roughness = savedRoughness.current;
       mat.needsUpdate = true;
     }
     paintedMesh.current = null;
@@ -106,18 +106,20 @@ export default function RaycastHandler({ clippingPlanes, setHovered, onLock, fil
 
     savedColor.current = mat.color.clone();
     savedMap.current = mat.map;
-    savedEmissive.current = mat.emissive.clone();
-    savedEmissiveIntensity.current = mat.emissiveIntensity;
-    savedMetalness.current = mat.metalness;
-    savedRoughness.current = mat.roughness;
+    savedEmissive.current = mat.emissive?.clone() ?? null;
+    savedEmissiveIntensity.current = mat.emissiveIntensity ?? 0;
+    savedMetalness.current = mat.metalness ?? 0;
+    savedRoughness.current = mat.roughness ?? 1;
     paintedMesh.current = object;
 
     mat.color.set(0x888888);
     mat.map = null;
-    mat.emissive.set("#65a5b4");
-    mat.emissiveIntensity = 0.4;
-    mat.metalness = 0.9;
-    mat.roughness = 1.0;
+    if (mat.emissive) {
+      mat.emissive.set("#65a5b4");
+      mat.emissiveIntensity = 0.4;
+    }
+    if (mat.metalness !== undefined) mat.metalness = 0.9;
+    if (mat.roughness !== undefined) mat.roughness = 1.0;
     mat.needsUpdate = true;
   };
 
