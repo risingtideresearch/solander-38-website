@@ -34,6 +34,7 @@ def load_env():
             if not line or line.startswith("#") or "=" not in line:
                 continue
             key, _, val = line.partition("=")
+            val = val.split(" #")[0].split("\t#")[0]
             env[key.strip()] = val.strip().strip('"').strip("'")
     return env
 
