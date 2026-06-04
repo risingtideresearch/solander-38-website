@@ -17,9 +17,7 @@ export default function DrawingMetadata({
     <div className={`${styles.metadata}`}>
       <div className={styles.metadata__table}>
         <h6>Name</h6>
-        <p className={styles.metadata__filename}>
-          {drawing.clean_filename}
-        </p>
+        <p className={styles.metadata__filename}>{drawing.clean_filename}</p>
         <h6>ID</h6>
         <h6>{drawing.id}</h6>
         <h6>Date</h6>
@@ -30,7 +28,9 @@ export default function DrawingMetadata({
           <>
             <h6>Author</h6>
             <h6>
-              <a href={`/people#${drawing.author.slug}`}>{drawing.author?.name}</a>
+              <a href={`/people#${drawing.author.slug}`}>
+                {drawing.author?.name}
+              </a>
             </h6>
           </>
         ) : (
@@ -59,7 +59,7 @@ export default function DrawingMetadata({
               )
             }
           >
-            PDF
+            <span>PDF</span>
             <LiaDownloadSolid size={16} />
           </a>
         </h6>

@@ -223,6 +223,12 @@
     display: grid;
     grid-template-columns: 4rem 1fr;
 
+    a[download] {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
     > * {
       align-items: flex-start;
       display: inline-flex;
