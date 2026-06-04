@@ -1,6 +1,6 @@
 {
   "conversion_info": {
-    "timestamp": "2026-06-01T16:27:40.639663",
+    "timestamp": "2026-06-03T17:42:23.787997",
     "input_directory": "../frontend/public/drawings",
     "output_directory": "../frontend/public/drawings/output_images",
     "dpi": 200,
@@ -423,6 +423,204 @@
       "id": "DR–13"
     },
     {
+      "filename": "PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 1 of 6 overview",
+      "uuid": "f658589e661a",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 541367,
+      "date_info": {
+        "raw_date_string": "7APR26",
+        "date": "2026-04-07",
+        "date_iso": "2026-04-07T00:00:00",
+        "year": 2026,
+        "month": 4,
+        "day": 7,
+        "formatted": "April 07, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–14"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 2 of 6 welded parts",
+      "uuid": "919c0f6d137c",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 741597,
+      "date_info": {
+        "raw_date_string": "7APR26",
+        "date": "2026-04-07",
+        "date_iso": "2026-04-07T00:00:00",
+        "year": 2026,
+        "month": 4,
+        "day": 7,
+        "formatted": "April 07, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–15"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 3 of 6 flanged removable parts",
+      "uuid": "b3022dd0ccf9",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 612298,
+      "date_info": {
+        "raw_date_string": "7APR26",
+        "date": "2026-04-07",
+        "date_iso": "2026-04-07T00:00:00",
+        "year": 2026,
+        "month": 4,
+        "day": 7,
+        "formatted": "April 07, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–16"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 4 of 6 tabbed removable parts",
+      "uuid": "ec987f63f88d",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 792740,
+      "date_info": {
+        "raw_date_string": "7APR26",
+        "date": "2026-04-07",
+        "date_iso": "2026-04-07T00:00:00",
+        "year": 2026,
+        "month": 4,
+        "day": 7,
+        "formatted": "April 07, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–17"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 5 of 6 sections & details",
+      "uuid": "2fc7e418368f",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 871367,
+      "date_info": {
+        "raw_date_string": "7APR26",
+        "date": "2026-04-07",
+        "date_iso": "2026-04-07T00:00:00",
+        "year": 2026,
+        "month": 4,
+        "day": 7,
+        "formatted": "April 07, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–18"
+    },
+    {
+      "filename": "PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.png",
+      "clean_filename": "PRELIM  fascia sheet 6 of 6 brow radius template",
+      "uuid": "cf280a0f6f24",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 302487,
+      "date_info": {
+        "raw_date_string": "7APR26",
+        "date": "2026-04-07",
+        "date_iso": "2026-04-07T00:00:00",
+        "year": 2026,
+        "month": 4,
+        "day": 7,
+        "formatted": "April 07, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–19"
+    },
+    {
       "filename": "instrument panel frames & flanges overview HJN 9-19-25.png",
       "clean_filename": "instrument panel frames & flanges overview",
       "uuid": "6655c1d55aed",
@@ -453,7 +651,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–14"
+      "id": "DR–20"
     },
     {
       "filename": "G10 backing palte sheet 1 planview 8-14-25.png",
@@ -486,7 +684,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–15"
+      "id": "DR–21"
     },
     {
       "filename": "G10 backing plate sheet 2 sizing 8-14-25.png",
@@ -519,7 +717,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–16"
+      "id": "DR–22"
     },
     {
       "filename": "G10 backing plate sheet 3 gussets 8-14-25.png",
@@ -552,7 +750,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–17"
+      "id": "DR–23"
     },
     {
       "filename": "Solander 38 fascia flanges sheet 1 of 3 brow and P&S locs HJN 7-25-25.png",
@@ -585,7 +783,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–18"
+      "id": "DR–24"
     },
     {
       "filename": "Solander 38 fascia flanges sheet 2 of 3 brow clocking HJN 7-25-25.png",
@@ -618,7 +816,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–19"
+      "id": "DR–25"
     },
     {
       "filename": "Solander 38 fascia flanges sheet 3 of 3 lobstertail & transv locs HJN 7-25-25.png",
@@ -651,7 +849,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–20"
+      "id": "DR–26"
     },
     {
       "filename": "rail & stanchion planset sheet 1 of 6 overview HJN 7-17-25.png",
@@ -684,7 +882,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–21"
+      "id": "DR–27"
     },
     {
       "filename": "rail & stanchion planset sheet 2 of 6 deck landing locations HJN 7-17-25.png",
@@ -717,7 +915,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–22"
+      "id": "DR–28"
     },
     {
       "filename": "rail & stanchion planset sheet 3 of 6 forward deck HJN 7-17-25.png",
@@ -750,7 +948,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–23"
+      "id": "DR–29"
     },
     {
       "filename": "rail & stanchion planset sheet 4 of 6 midships & aft deck HJN 7-17-25.png",
@@ -783,7 +981,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–24"
+      "id": "DR–30"
     },
     {
       "filename": "rail & stanchion planset sheet 5 of 6 REV A aft center beam & lobstertail HJN 7-17-25.png",
@@ -816,7 +1014,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–25"
+      "id": "DR–31"
     },
     {
       "filename": "rail & stanchion planset sheet 6 of 6 forward deck stanchion flanges HJN 7-17-25.png",
@@ -849,7 +1047,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–26"
+      "id": "DR–32"
     },
     {
       "filename": "solar panel location sheet 1 of 2 planview HJN 6-5-25.png",
@@ -882,7 +1080,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–27"
+      "id": "DR–33"
     },
     {
       "filename": "solar panel location sheet 2 of 2 longitudinal section HJN 6-5-25.png",
@@ -915,40 +1113,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–28"
-    },
-    {
-      "filename": "Solander 38 addendum rev G SHEET 2 OF 2 canopy plating labels 5-22-25.png",
-      "clean_filename": "addendum rev G SHEET 2 OF 2 canopy plating labels",
-      "uuid": "d24938e490b2",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV G - canopy plating locs/Solander 38 addendum rev G SHEET 2 OF 2 canopy plating labels 5-22-25.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "Solander 38 addendum rev G SHEET 2 OF 2 canopy plating labels 5-22-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV G - canopy plating locs/Solander 38 addendum rev G SHEET 2 OF 2 canopy plating labels 5-22-25.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 298231,
-      "date_info": {
-        "raw_date_string": "5-22-25",
-        "date": "2025-05-22",
-        "date_iso": "2025-05-22T00:00:00",
-        "year": 2025,
-        "month": 5,
-        "day": 22,
-        "formatted": "May 22, 2025",
-        "source": "filename"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–29"
+      "id": "DR–34"
     },
     {
       "filename": "Solander 38 addendum rev G sheet 1 OF 2 canopy plating locations 5-22-25.png",
@@ -981,7 +1146,40 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–30"
+      "id": "DR–35"
+    },
+    {
+      "filename": "Solander 38 addendum rev G sheet 2 OF 2 canopy plating labels 5-22-25.png",
+      "clean_filename": "addendum rev G sheet 2 OF 2 canopy plating labels",
+      "uuid": "d24938e490b2",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV G - canopy plating locs/Solander 38 addendum rev G sheet 2 OF 2 canopy plating labels 5-22-25.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "Solander 38 addendum rev G sheet 2 OF 2 canopy plating labels 5-22-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV G - canopy plating locs/Solander 38 addendum rev G sheet 2 OF 2 canopy plating labels 5-22-25.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 298231,
+      "date_info": {
+        "raw_date_string": "5-22-25",
+        "date": "2025-05-22",
+        "date_iso": "2025-05-22T00:00:00",
+        "year": 2025,
+        "month": 5,
+        "day": 22,
+        "formatted": "May 22, 2025",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–36"
     },
     {
       "filename": "Shelf lip planview location & details 5-16-25.png",
@@ -1014,18 +1212,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–31"
+      "id": "DR–37"
     },
     {
-      "filename": "Add rev F sht 1 - wireway pens & skylight ledge REVISED 5-15-25.png",
-      "clean_filename": "Add rev F sht 1 - wireway pens & skylight ledge REVISED",
+      "filename": "addendum rev F sheet 1 - wireway pens & skylight ledge revised 5-15-25.png",
+      "clean_filename": "addendum rev F sheet 1 - wireway pens & skylight ledge revised",
       "uuid": "551b4e01111f",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV F - wireway pens/Add rev F sht 1 - wireway pens & skylight ledge REVISED 5-15-25.png",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV F - wireway pens/addendum rev F sheet 1 - wireway pens & skylight ledge revised 5-15-25.png",
       "group": "SUPERSTRUCTURE",
       "normalized_group": "superstructure",
       "system_index": 2,
-      "source_pdf": "Add rev F sht 1 - wireway pens & skylight ledge REVISED 5-15-25.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV F - wireway pens/Add rev F sht 1 - wireway pens & skylight ledge REVISED 5-15-25.pdf",
+      "source_pdf": "addendum rev F sheet 1 - wireway pens & skylight ledge revised 5-15-25.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV F - wireway pens/addendum rev F sheet 1 - wireway pens & skylight ledge revised 5-15-25.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -1047,7 +1245,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–32"
+      "id": "DR–38"
     },
     {
       "filename": "P5 foothold dimensions 4-29-25.png",
@@ -1080,7 +1278,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–33"
+      "id": "DR–39"
     },
     {
       "filename": "oval cut-out template 4-29-25.png",
@@ -1113,7 +1311,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–34"
+      "id": "DR–40"
     },
     {
       "filename": "addendum rev E forward windscreen baseplate.png",
@@ -1146,7 +1344,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–35"
+      "id": "DR–41"
     },
     {
       "filename": "addendum rev E sheet 1 of 9 center & windscreen framing overview.png",
@@ -1179,7 +1377,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–36"
+      "id": "DR–42"
     },
     {
       "filename": "addendum rev E sheet 2 of 9 wireway pens.png",
@@ -1212,7 +1410,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–37"
+      "id": "DR–43"
     },
     {
       "filename": "addendum rev E sheet 3 of 9 IBP.png",
@@ -1245,7 +1443,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–38"
+      "id": "DR–44"
     },
     {
       "filename": "addendum rev E sheet 4 of 9 planview.png",
@@ -1278,7 +1476,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–39"
+      "id": "DR–45"
     },
     {
       "filename": "addendum rev E sheet 5 of 9 level canopy framing.png",
@@ -1311,7 +1509,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–40"
+      "id": "DR–46"
     },
     {
       "filename": "addendum rev E sheet 6 of 9 view looking forward.png",
@@ -1344,7 +1542,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–41"
+      "id": "DR–47"
     },
     {
       "filename": "addendum rev E sheet 8 of 9 view looking aft.png",
@@ -1377,7 +1575,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–42"
+      "id": "DR–48"
     },
     {
       "filename": "addendum rev E sheet 9 of 9 windscreen frame parts.png",
@@ -1410,7 +1608,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–43"
+      "id": "DR–49"
     },
     {
       "filename": "port upright bevels 4-11-25.png",
@@ -1443,7 +1641,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–44"
+      "id": "DR–50"
     },
     {
       "filename": "revised section 3 with inch and a half sq tubes 4-11-25.png",
@@ -1476,7 +1674,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–45"
+      "id": "DR–51"
     },
     {
       "filename": "upright framing compound bevel details 4-10-25.png",
@@ -1509,18 +1707,18 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–46"
+      "id": "DR–52"
     },
     {
-      "filename": "Superstructure Addendum Rev D sheet 1B of 6 - upright locs true views to curvature.png",
-      "clean_filename": "Superstructure Addendum Rev D sheet 1B of 6 - upright locs true views to curvature",
+      "filename": "superstructure addendum rev D sheet 1B of 6 - upright locations true views to curvature.png",
+      "clean_filename": "superstructure addendum rev D sheet 1B of 6 - upright locations true views to curvature",
       "uuid": "51e31e76f187",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 1B of 6 - upright locs true views to curvature.png",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 1B of 6 - upright locations true views to curvature.png",
       "group": "SUPERSTRUCTURE",
       "normalized_group": "superstructure",
       "system_index": 2,
-      "source_pdf": "Superstructure Addendum Rev D sheet 1B of 6 - upright locs true views to curvature.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 1B of 6 - upright locs true views to curvature.pdf",
+      "source_pdf": "superstructure addendum rev D sheet 1B of 6 - upright locations true views to curvature.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 1B of 6 - upright locations true views to curvature.pdf",
       "page_number": 1,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
@@ -1542,172 +1740,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–47"
-    },
-    {
-      "filename": "Superstructure Addendum Rev D sheet 2 of 6 - stbd frmg profile.png",
-      "clean_filename": "Superstructure Addendum Rev D sheet 2 of 6 - stbd frmg profile",
-      "uuid": "bea685c783bf",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 2 of 6 - stbd frmg profile.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "Superstructure Addendum Rev D sheet 2 of 6 - stbd frmg profile.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 2 of 6 - stbd frmg profile.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 243830,
-      "date_info": {
-        "raw_date_string": "4/8/25",
-        "date": "2025-04-08",
-        "date_iso": "2025-04-08T00:00:00",
-        "year": 2025,
-        "month": 4,
-        "day": 8,
-        "formatted": "April 08, 2025",
-        "source": "full_text"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–48"
-    },
-    {
-      "filename": "Superstructure Addendum Rev D sheet 3 of 6 - port frmg profile.png",
-      "clean_filename": "Superstructure Addendum Rev D sheet 3 of 6 - port frmg profile",
-      "uuid": "2e8d8cf0fec2",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 3 of 6 - port frmg profile.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "Superstructure Addendum Rev D sheet 3 of 6 - port frmg profile.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 3 of 6 - port frmg profile.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 280895,
-      "date_info": {
-        "raw_date_string": "4/8/25",
-        "date": "2025-04-08",
-        "date_iso": "2025-04-08T00:00:00",
-        "year": 2025,
-        "month": 4,
-        "day": 8,
-        "formatted": "April 08, 2025",
-        "source": "full_text"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–49"
-    },
-    {
-      "filename": "Superstructure Addendum Rev D sheet 4 of 6 - port, stbd, fwd frmg planview.png",
-      "clean_filename": "Superstructure Addendum Rev D sheet 4 of 6 - port, stbd, fwd frmg planview",
-      "uuid": "a979808ca7a2",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 4 of 6 - port, stbd, fwd frmg planview.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "Superstructure Addendum Rev D sheet 4 of 6 - port, stbd, fwd frmg planview.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 4 of 6 - port, stbd, fwd frmg planview.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 425878,
-      "date_info": {
-        "raw_date_string": "4/8/25",
-        "date": "2025-04-08",
-        "date_iso": "2025-04-08T00:00:00",
-        "year": 2025,
-        "month": 4,
-        "day": 8,
-        "formatted": "April 08, 2025",
-        "source": "full_text"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–50"
-    },
-    {
-      "filename": "Superstructure Addendum Rev D sheet 5 of 6 - port, stbd, fwd frmg view lkg aft.png",
-      "clean_filename": "Superstructure Addendum Rev D sheet 5 of 6 - port, stbd, fwd frmg view lkg aft",
-      "uuid": "a74bce610d57",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 5 of 6 - port, stbd, fwd frmg view lkg aft.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "Superstructure Addendum Rev D sheet 5 of 6 - port, stbd, fwd frmg view lkg aft.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 5 of 6 - port, stbd, fwd frmg view lkg aft.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 255774,
-      "date_info": {
-        "raw_date_string": "4/8/25",
-        "date": "2025-04-08",
-        "date_iso": "2025-04-08T00:00:00",
-        "year": 2025,
-        "month": 4,
-        "day": 8,
-        "formatted": "April 08, 2025",
-        "source": "full_text"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–51"
-    },
-    {
-      "filename": "Superstructure Addendum Rev D sheet 6 of 6 - sections.png",
-      "clean_filename": "Superstructure Addendum Rev D sheet 6 of 6 - sections",
-      "uuid": "c864d0b6077e",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 6 of 6 - sections.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "Superstructure Addendum Rev D sheet 6 of 6 - sections.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/Superstructure Addendum Rev D sheet 6 of 6 - sections.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 586732,
-      "date_info": {
-        "raw_date_string": "4/8/25",
-        "date": "2025-04-08",
-        "date_iso": "2025-04-08T00:00:00",
-        "year": 2025,
-        "month": 4,
-        "day": 8,
-        "formatted": "April 08, 2025",
-        "source": "full_text"
-      },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–52"
+      "id": "DR–53"
     },
     {
       "filename": "superstructure addendum rev D sheet 1 of 6 - upright locations on baseplate.png",
@@ -1740,7 +1773,172 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–53"
+      "id": "DR–54"
+    },
+    {
+      "filename": "superstructure addendum rev D sheet 2 of 6 - starboard framing profile.png",
+      "clean_filename": "superstructure addendum rev D sheet 2 of 6 - starboard framing profile",
+      "uuid": "bea685c783bf",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 2 of 6 - starboard framing profile.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "superstructure addendum rev D sheet 2 of 6 - starboard framing profile.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 2 of 6 - starboard framing profile.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 243830,
+      "date_info": {
+        "raw_date_string": "4/8/25",
+        "date": "2025-04-08",
+        "date_iso": "2025-04-08T00:00:00",
+        "year": 2025,
+        "month": 4,
+        "day": 8,
+        "formatted": "April 08, 2025",
+        "source": "full_text"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–55"
+    },
+    {
+      "filename": "superstructure addendum rev D sheet 3 of 6 - port framing profile.png",
+      "clean_filename": "superstructure addendum rev D sheet 3 of 6 - port framing profile",
+      "uuid": "2e8d8cf0fec2",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 3 of 6 - port framing profile.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "superstructure addendum rev D sheet 3 of 6 - port framing profile.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 3 of 6 - port framing profile.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 280895,
+      "date_info": {
+        "raw_date_string": "4/8/25",
+        "date": "2025-04-08",
+        "date_iso": "2025-04-08T00:00:00",
+        "year": 2025,
+        "month": 4,
+        "day": 8,
+        "formatted": "April 08, 2025",
+        "source": "full_text"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–56"
+    },
+    {
+      "filename": "superstructure addendum rev D sheet 4 of 6 - port, starboard, forward framing planview.png",
+      "clean_filename": "superstructure addendum rev D sheet 4 of 6 - port, starboard, forward framing planview",
+      "uuid": "a979808ca7a2",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 4 of 6 - port, starboard, forward framing planview.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "superstructure addendum rev D sheet 4 of 6 - port, starboard, forward framing planview.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 4 of 6 - port, starboard, forward framing planview.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 425878,
+      "date_info": {
+        "raw_date_string": "4/8/25",
+        "date": "2025-04-08",
+        "date_iso": "2025-04-08T00:00:00",
+        "year": 2025,
+        "month": 4,
+        "day": 8,
+        "formatted": "April 08, 2025",
+        "source": "full_text"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–57"
+    },
+    {
+      "filename": "superstructure addendum rev D sheet 5 of 6 - port, starboard, forward framing view looking aft.png",
+      "clean_filename": "superstructure addendum rev D sheet 5 of 6 - port, starboard, forward framing view looking aft",
+      "uuid": "a74bce610d57",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 5 of 6 - port, starboard, forward framing view looking aft.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "superstructure addendum rev D sheet 5 of 6 - port, starboard, forward framing view looking aft.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 5 of 6 - port, starboard, forward framing view looking aft.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 255774,
+      "date_info": {
+        "raw_date_string": "4/8/25",
+        "date": "2025-04-08",
+        "date_iso": "2025-04-08T00:00:00",
+        "year": 2025,
+        "month": 4,
+        "day": 8,
+        "formatted": "April 08, 2025",
+        "source": "full_text"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–58"
+    },
+    {
+      "filename": "superstructure addendum rev D sheet 6 of 6 - sections.png",
+      "clean_filename": "superstructure addendum rev D sheet 6 of 6 - sections",
+      "uuid": "c864d0b6077e",
+      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 6 of 6 - sections.png",
+      "group": "SUPERSTRUCTURE",
+      "normalized_group": "superstructure",
+      "system_index": 2,
+      "source_pdf": "superstructure addendum rev D sheet 6 of 6 - sections.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/ADDENDUM REV D/superstructure addendum rev D sheet 6 of 6 - sections.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 586732,
+      "date_info": {
+        "raw_date_string": "4/8/25",
+        "date": "2025-04-08",
+        "date_iso": "2025-04-08T00:00:00",
+        "year": 2025,
+        "month": 4,
+        "day": 8,
+        "formatted": "April 08, 2025",
+        "source": "full_text"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–59"
     },
     {
       "filename": "superstucture addendum rev C sheet 1 of 4.png",
@@ -1773,7 +1971,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–54"
+      "id": "DR–60"
     },
     {
       "filename": "superstucture addendum rev C sheet 2 of 4.png",
@@ -1806,7 +2004,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–55"
+      "id": "DR–61"
     },
     {
       "filename": "superstucture addendum rev C sheet 3 of 4.png",
@@ -1839,7 +2037,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–56"
+      "id": "DR–62"
     },
     {
       "filename": "superstucture addendum rev C sheet 4 of 4.png",
@@ -1872,7 +2070,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–57"
+      "id": "DR–63"
     },
     {
       "filename": "superstucture addendum rev B sheet 3 of 4.png",
@@ -1905,7 +2103,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–58"
+      "id": "DR–64"
     },
     {
       "filename": "superstucture addendum rev B sheet 4 of 4.png",
@@ -1938,7 +2136,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–59"
+      "id": "DR–65"
     },
     {
       "filename": "superstucture addendum rev B sheet 1 of 4.png",
@@ -1971,7 +2169,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–60"
+      "id": "DR–66"
     },
     {
       "filename": "superstucture addendum rev B sheet 2 of 4.png",
@@ -2004,7 +2202,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–61"
+      "id": "DR–67"
     },
     {
       "filename": "superstructure addendum rev A sheet 1 of 6.png",
@@ -2037,7 +2235,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–62"
+      "id": "DR–68"
     },
     {
       "filename": "superstructure addendum rev A sheet 2 of 6.png",
@@ -2070,7 +2268,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–63"
+      "id": "DR–69"
     },
     {
       "filename": "superstructure addendum rev A sheet 3 of 6.png",
@@ -2103,7 +2301,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–64"
+      "id": "DR–70"
     },
     {
       "filename": "superstructure addendum rev A sheet 4 of 6.png",
@@ -2136,7 +2334,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–65"
+      "id": "DR–71"
     },
     {
       "filename": "superstructure addendum rev A sheet 5 of 6.png",
@@ -2169,7 +2367,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–66"
+      "id": "DR–72"
     },
     {
       "filename": "superstructure addendum rev A sheet 6 of 6.png",
@@ -2202,7 +2400,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–67"
+      "id": "DR–73"
     },
     {
       "filename": "plate sheet nesting 2-28-25.png",
@@ -2235,7 +2433,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–68"
+      "id": "DR–74"
     },
     {
       "filename": "canopy panel CNC parts overview 2-20-25.png",
@@ -2268,7 +2466,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–69"
+      "id": "DR–75"
     },
     {
       "filename": "arch flanges dimensions & locations on jig 2-17-25.png",
@@ -2301,7 +2499,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–70"
+      "id": "DR–76"
     },
     {
       "filename": "baseplate dimensions & curvature 2-17-25.png",
@@ -2334,7 +2532,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–71"
+      "id": "DR–77"
     },
     {
       "filename": "baseplate location on jig 2-17-25.png",
@@ -2367,7 +2565,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–72"
+      "id": "DR–78"
     },
     {
       "filename": "baseplate overview 2-17-25.png",
@@ -2400,7 +2598,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–73"
+      "id": "DR–79"
     },
     {
       "filename": "Solander 38 superstructure sheet 2 of 12 REVISED 2-6-25.png",
@@ -2433,7 +2631,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–74"
+      "id": "DR–80"
     },
     {
       "filename": "jig frames 1-7 revised 1-14-25 HJN.png",
@@ -2466,7 +2664,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–75"
+      "id": "DR–81"
     },
     {
       "filename": "jig frames 14-20 revised HJN 1-14-25.png",
@@ -2499,7 +2697,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–76"
+      "id": "DR–82"
     },
     {
       "filename": "jig frames 8-13 revised 1-14-25 HJN.png",
@@ -2532,7 +2730,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–77"
+      "id": "DR–83"
     },
     {
       "filename": "baseplate & HD foam core locations planview 1-6-25.png",
@@ -2565,7 +2763,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–78"
+      "id": "DR–84"
     },
     {
       "filename": "Solander 38 superstructure sheet 1 of 12 PRELIM.png",
@@ -2598,7 +2796,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–79"
+      "id": "DR–85"
     },
     {
       "filename": "Solander 38 superstructure sheet 10 of 12 PRELIM.png",
@@ -2631,7 +2829,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–80"
+      "id": "DR–86"
     },
     {
       "filename": "Solander 38 superstructure sheet 11 of 12 PRELIM.png",
@@ -2664,7 +2862,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–81"
+      "id": "DR–87"
     },
     {
       "filename": "Solander 38 superstructure sheet 12 of 12 PRELIM.png",
@@ -2697,7 +2895,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–82"
+      "id": "DR–88"
     },
     {
       "filename": "Solander 38 superstructure sheet 3 of 12 PRELIM.png",
@@ -2730,7 +2928,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–83"
+      "id": "DR–89"
     },
     {
       "filename": "Solander 38 superstructure sheet 4 of 12 PRELIM.png",
@@ -2763,7 +2961,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–84"
+      "id": "DR–90"
     },
     {
       "filename": "Solander 38 superstructure sheet 5 of 12 PRELIM.png",
@@ -2796,7 +2994,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–85"
+      "id": "DR–91"
     },
     {
       "filename": "Solander 38 superstructure sheet 6 of 12 PRELIM.png",
@@ -2829,7 +3027,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–86"
+      "id": "DR–92"
     },
     {
       "filename": "Solander 38 superstructure sheet 7 of 12 PRELIM.png",
@@ -2862,7 +3060,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–87"
+      "id": "DR–93"
     },
     {
       "filename": "Solander 38 superstructure sheet 8 of 12 PRELIM.png",
@@ -2895,7 +3093,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–88"
+      "id": "DR–94"
     },
     {
       "filename": "Solander 38 superstructure sheet 9 of 12 PRELIM.png",
@@ -2928,7 +3126,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–89"
+      "id": "DR–95"
     },
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 1.png",
@@ -2961,7 +3159,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–90"
+      "id": "DR–96"
     },
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 2.png",
@@ -2994,7 +3192,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–91"
+      "id": "DR–97"
     },
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 3.png",
@@ -3027,7 +3225,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–92"
+      "id": "DR–98"
     },
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 4.png",
@@ -3060,7 +3258,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–93"
+      "id": "DR–99"
     },
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 5.png",
@@ -3093,7 +3291,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–94"
+      "id": "DR–100"
     },
     {
       "filename": "Jig Drawing Booklet 8-26-24 page 6.png",
@@ -3126,7 +3324,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–95"
+      "id": "DR–101"
     },
     {
       "filename": "jig frames, hd foam, base plates & flanges planview 8-23-24.png",
@@ -3159,7 +3357,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–96"
+      "id": "DR–102"
     },
     {
       "filename": "jig planview 8-23-24.png",
@@ -3192,7 +3390,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–97"
+      "id": "DR–103"
     },
     {
       "filename": "jig & hull profile & persp 8-22-24.png",
@@ -3225,7 +3423,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–98"
+      "id": "DR–104"
     },
     {
       "filename": "jig frames 1-7 Aug-22-24.png",
@@ -3258,7 +3456,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–99"
+      "id": "DR–105"
     },
     {
       "filename": "jig frames 14-20 Aug-22-24.png",
@@ -3291,7 +3489,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–100"
+      "id": "DR–106"
     },
     {
       "filename": "jig frames 8-13 Aug-22-24.png",
@@ -3324,7 +3522,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–101"
+      "id": "DR–107"
     },
     {
       "filename": "baseplate bolt layout & control points 2-17-24.png",
@@ -3352,150 +3550,6 @@
         "formatted": "February 17, 2024",
         "source": "filename"
       },
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–102"
-    },
-    {
-      "filename": "PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.png",
-      "clean_filename": "PRELIM  fascia sheet 1 of 6 overview 7APR26",
-      "uuid": "f658589e661a",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 541367,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–103"
-    },
-    {
-      "filename": "PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.png",
-      "clean_filename": "PRELIM  fascia sheet 2 of 6 welded parts 7APR26",
-      "uuid": "919c0f6d137c",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 741597,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–104"
-    },
-    {
-      "filename": "PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.png",
-      "clean_filename": "PRELIM  fascia sheet 3 of 6 flanged removable parts 7APR26",
-      "uuid": "b3022dd0ccf9",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 612298,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–105"
-    },
-    {
-      "filename": "PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.png",
-      "clean_filename": "PRELIM  fascia sheet 4 of 6 tabbed removable parts 7APR26",
-      "uuid": "ec987f63f88d",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 792740,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–106"
-    },
-    {
-      "filename": "PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.png",
-      "clean_filename": "PRELIM  fascia sheet 5 of 6 sections & details 7APR26",
-      "uuid": "2fc7e418368f",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 871367,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–107"
-    },
-    {
-      "filename": "PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.png",
-      "clean_filename": "PRELIM  fascia sheet 6 of 6 brow radius template 7APR26",
-      "uuid": "cf280a0f6f24",
-      "rel_path": "/drawings/output_images/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.png",
-      "group": "SUPERSTRUCTURE",
-      "normalized_group": "superstructure",
-      "system_index": 2,
-      "source_pdf": "PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/SUPERSTRUCTURE/FASCIA/PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 302487,
-      "date_info": null,
       "author": {
         "slug": "henry-nolan",
         "name": "Henry Nolan"
@@ -3858,6 +3912,138 @@
       "id": "DR–119"
     },
     {
+      "filename": "forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.png",
+      "clean_filename": "forward mast rev A sheet 1 OF 4 overview",
+      "uuid": "443f34d128c9",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 2200,
+      "height": 3400,
+      "file_size_bytes": 2060060,
+      "date_info": {
+        "raw_date_string": "20MAY26",
+        "date": "2026-05-20",
+        "date_iso": "2026-05-20T00:00:00",
+        "year": 2026,
+        "month": 5,
+        "day": 20,
+        "formatted": "May 20, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–120"
+    },
+    {
+      "filename": "forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.png",
+      "clean_filename": "forward mast rev A sheet 2 of 4 IBP",
+      "uuid": "e42ba9db1833",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 2200,
+      "height": 3400,
+      "file_size_bytes": 2521733,
+      "date_info": {
+        "raw_date_string": "20MAY26",
+        "date": "2026-05-20",
+        "date_iso": "2026-05-20T00:00:00",
+        "year": 2026,
+        "month": 5,
+        "day": 20,
+        "formatted": "May 20, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–121"
+    },
+    {
+      "filename": "forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.png",
+      "clean_filename": "forward mast rev A sheet 3 of 4 aluminum parts dimensions",
+      "uuid": "cfa50ab79395",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 2200,
+      "height": 3400,
+      "file_size_bytes": 1464095,
+      "date_info": {
+        "raw_date_string": "20MAY26",
+        "date": "2026-05-20",
+        "date_iso": "2026-05-20T00:00:00",
+        "year": 2026,
+        "month": 5,
+        "day": 20,
+        "formatted": "May 20, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–122"
+    },
+    {
+      "filename": "forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.png",
+      "clean_filename": "forward mast rev A sheet 4 of 4 perspective views",
+      "uuid": "af9147fd1719",
+      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.png",
+      "group": "OUTFITTING & INTERIOR",
+      "normalized_group": "outfitting & interior",
+      "system_index": 7,
+      "source_pdf": "forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.pdf",
+      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.pdf",
+      "page_number": 1,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 1713647,
+      "date_info": {
+        "raw_date_string": "20MAY26",
+        "date": "2026-05-20",
+        "date_iso": "2026-05-20T00:00:00",
+        "year": 2026,
+        "month": 5,
+        "day": 20,
+        "formatted": "May 20, 2026",
+        "source": "filename"
+      },
+      "author": {
+        "slug": "henry-nolan",
+        "name": "Henry Nolan"
+      },
+      "extracted_text": "",
+      "id": "DR–123"
+    },
+    {
       "filename": "prelim aft starboard mast sheet 1 of 2 overview HJN 12-19-25.png",
       "clean_filename": "prelim aft starboard mast sheet 1 of 2 overview",
       "uuid": "2f80a2f89787",
@@ -3888,7 +4074,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–120"
+      "id": "DR–124"
     },
     {
       "filename": "prelim aft starboard mast sheet 2 of 2 details HJN 12-19-25.png",
@@ -3921,7 +4107,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–121"
+      "id": "DR–125"
     },
     {
       "filename": "center deck & kiwi grip area HJN 11-6-25.png",
@@ -3954,7 +4140,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–122"
+      "id": "DR–126"
     },
     {
       "filename": "starboard stairladder sheet 1 overview.png",
@@ -3987,7 +4173,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–123"
+      "id": "DR–127"
     },
     {
       "filename": "starboard stairladder sheet 2 planview location.png",
@@ -4020,7 +4206,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–124"
+      "id": "DR–128"
     },
     {
       "filename": "custom portlight dimensions HJN 7-31-25.png",
@@ -4053,7 +4239,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–125"
+      "id": "DR–129"
     },
     {
       "filename": "custom portlight location HJN 7-31-25.png",
@@ -4086,7 +4272,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–126"
+      "id": "DR–130"
     },
     {
       "filename": "custom portlight full scale template 24x36 aft.png",
@@ -4119,7 +4305,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–127"
+      "id": "DR–131"
     },
     {
       "filename": "custom portlight full scale template 24x36 forward.png",
@@ -4152,7 +4338,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–128"
+      "id": "DR–132"
     },
     {
       "filename": "midships area cabinet locations HJN 7-30-25.png",
@@ -4185,7 +4371,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–129"
+      "id": "DR–133"
     },
     {
       "filename": "PRELIM battery component transverse conduit sheet 1 of 3 transverse & longitudinal sections HJN 7-7-25.png",
@@ -4218,7 +4404,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–130"
+      "id": "DR–134"
     },
     {
       "filename": "PRELIM battery component transverse conduit sheet 2 of 3 planview HJN 7-7-25.png",
@@ -4251,7 +4437,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–131"
+      "id": "DR–135"
     },
     {
       "filename": "PRELIM battery component transverse conduit sheet 3 of 3 parts overview  HJN 7-7-25.png",
@@ -4284,7 +4470,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–132"
+      "id": "DR–136"
     },
     {
       "filename": "battery access panels inbd face HJN 6-19-25.png",
@@ -4317,7 +4503,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–133"
+      "id": "DR–137"
     },
     {
       "filename": "battery access panels planview & transverse sections HJN 6-19-25.png",
@@ -4350,7 +4536,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–134"
+      "id": "DR–138"
     },
     {
       "filename": "Solander 38 aft cleat location HJN 6-3-25.png",
@@ -4383,7 +4569,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–135"
+      "id": "DR–139"
     },
     {
       "filename": "lower watermaker cabinet section 36in aft of forward bulkhead 5-16-25.png",
@@ -4416,7 +4602,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–136"
+      "id": "DR–140"
     },
     {
       "filename": "port hull section 36in aft of forward bulkhead 5-16-25.png",
@@ -4449,7 +4635,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–137"
+      "id": "DR–141"
     },
     {
       "filename": "upper watermaker cabinet section 36in aft of forward bulkhead 5-16-25.png",
@@ -4482,7 +4668,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–138"
+      "id": "DR–142"
     },
     {
       "filename": "battery access & nearby struct longitudinal section 5-12-25.png",
@@ -4515,7 +4701,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–139"
+      "id": "DR–143"
     },
     {
       "filename": "battery access & nearby structure planview 5-12-25.png",
@@ -4548,7 +4734,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–140"
+      "id": "DR–144"
     },
     {
       "filename": "battery access & nearby structure transverse section 5-12-25.png",
@@ -4581,7 +4767,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–141"
+      "id": "DR–145"
     },
     {
       "filename": "battery component cut-outs IBP 5-6-25.png",
@@ -4614,7 +4800,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–142"
+      "id": "DR–146"
     },
     {
       "filename": "battery component cut-outs PLANVIEW 5-6-25.png",
@@ -4647,7 +4833,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–143"
+      "id": "DR–147"
     },
     {
       "filename": "bridge deck area planview 5-2-25.png",
@@ -4680,7 +4866,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–144"
+      "id": "DR–148"
     },
     {
       "filename": "bridge deck area planview no annotation 5-2-25.png",
@@ -4713,7 +4899,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–145"
+      "id": "DR–149"
     },
     {
       "filename": "electrical cabinet aft face 3in=1ft scale 4-29-25.png",
@@ -4746,7 +4932,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–146"
+      "id": "DR–150"
     },
     {
       "filename": "electrical cabinets aft faces 4-29-25.png",
@@ -4779,7 +4965,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–147"
+      "id": "DR–151"
     },
     {
       "filename": "port heat pump cabinet aft face 4-17-25.png",
@@ -4812,7 +4998,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–148"
+      "id": "DR–152"
     },
     {
       "filename": "port heat pump cabinet forward face revised 4-17-25.png",
@@ -4845,7 +5031,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–149"
+      "id": "DR–153"
     },
     {
       "filename": "watermaker cabinet forward face lower 4-17-25.png",
@@ -4878,7 +5064,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–150"
+      "id": "DR–154"
     },
     {
       "filename": "watermaker cabinet forward face upper 4-17-25.png",
@@ -4911,7 +5097,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–151"
+      "id": "DR–155"
     },
     {
       "filename": "steering component cut-out 4-5-25.png",
@@ -4944,7 +5130,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–152"
+      "id": "DR–156"
     },
     {
       "filename": "battery hatch & center beam 4-3-25.png",
@@ -4977,7 +5163,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–153"
+      "id": "DR–157"
     },
     {
       "filename": "battery hatch in starboard hull 4-3-25.png",
@@ -5010,7 +5196,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–154"
+      "id": "DR–158"
     },
     {
       "filename": "cabinet locations planview rev A watermaker 2-26-25.png",
@@ -5043,7 +5229,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–155"
+      "id": "DR–159"
     },
     {
       "filename": "cabinet locations port hull profile rev A watermaker 2-26-25.png",
@@ -5076,7 +5262,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–156"
+      "id": "DR–160"
     },
     {
       "filename": "watermaker cabinet orthogonal views 2-26-25.png",
@@ -5109,7 +5295,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–157"
+      "id": "DR–161"
     },
     {
       "filename": "watermaker cabinet partition section lower 2-26-25.png",
@@ -5142,7 +5328,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–158"
+      "id": "DR–162"
     },
     {
       "filename": "watermaker cabinet partition section upper 2-26-25.png",
@@ -5175,7 +5361,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–159"
+      "id": "DR–163"
     },
     {
       "filename": "watermaker cabinet parts dimensions 2-26-25.png",
@@ -5208,7 +5394,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–160"
+      "id": "DR–164"
     },
     {
       "filename": "watermaker cabinet perspective views 2-26-25.png",
@@ -5241,7 +5427,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–161"
+      "id": "DR–165"
     },
     {
       "filename": "port hull work bench planview 1-9-25.png",
@@ -5274,7 +5460,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–162"
+      "id": "DR–166"
     },
     {
       "filename": "port hull work bench planview PM revisions 1-9-25.png",
@@ -5307,7 +5493,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–163"
+      "id": "DR–167"
     },
     {
       "filename": "port hull work bench planview more dimensions 1-9-25.png",
@@ -5340,7 +5526,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–164"
+      "id": "DR–168"
     },
     {
       "filename": "cabinet & partition locations planview 1-2-25.png",
@@ -5373,7 +5559,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–165"
+      "id": "DR–169"
     },
     {
       "filename": "cabinet & partition locations port hull profiles 1-2-25.png",
@@ -5406,7 +5592,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–166"
+      "id": "DR–170"
     },
     {
       "filename": "cabinet & partition locations starboard hull profiles 1-2-25.png",
@@ -5439,7 +5625,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–167"
+      "id": "DR–171"
     },
     {
       "filename": "full sections at partitions 5, 6, 8, 9.png",
@@ -5472,7 +5658,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–168"
+      "id": "DR–172"
     },
     {
       "filename": "revised cabinet locations planview 12-30-24.png",
@@ -5505,7 +5691,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–169"
+      "id": "DR–173"
     },
     {
       "filename": "revised cabinet locations port hull profiles 12-30-24.png",
@@ -5538,7 +5724,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–170"
+      "id": "DR–174"
     },
     {
       "filename": "revised cabinet locations starboard hull profiles 12-30-24.png",
@@ -5571,7 +5757,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–171"
+      "id": "DR–175"
     },
     {
       "filename": "cabinet 1.png",
@@ -5604,7 +5790,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–172"
+      "id": "DR–176"
     },
     {
       "filename": "cabinet 2.png",
@@ -5637,7 +5823,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–173"
+      "id": "DR–177"
     },
     {
       "filename": "cabinet 3 & 4.png",
@@ -5670,7 +5856,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–174"
+      "id": "DR–178"
     },
     {
       "filename": "cabinet 5.png",
@@ -5703,7 +5889,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–175"
+      "id": "DR–179"
     },
     {
       "filename": "Solander 38 cabinet location map 11-6-24.png",
@@ -5736,7 +5922,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–176"
+      "id": "DR–180"
     },
     {
       "filename": "Solander 38 cabinets 1 & 2 11-6-24.png",
@@ -5769,7 +5955,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–177"
+      "id": "DR–181"
     },
     {
       "filename": "Solander 38 cabinets 3, 4, & 5 11-6-24.png",
@@ -5802,7 +5988,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–178"
+      "id": "DR–182"
     },
     {
       "filename": "Solander 38 profile & planview for cabinet design 9-27-24.png",
@@ -5835,7 +6021,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–179"
+      "id": "DR–183"
     },
     {
       "filename": "Solander 38 sections for cabinet design 9-27-24.png",
@@ -5868,7 +6054,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–180"
+      "id": "DR–184"
     },
     {
       "filename": "bulkhead D section - full.png",
@@ -5892,7 +6078,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–181"
+      "id": "DR–185"
     },
     {
       "filename": "bulkhead D section - port (inboard) counter.png",
@@ -5916,7 +6102,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–182"
+      "id": "DR–186"
     },
     {
       "filename": "bulkhead D section - stbd (outboard) counter.png",
@@ -5940,7 +6126,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–183"
+      "id": "DR–187"
     },
     {
       "filename": "bulkhead D section - upper port cupboard.png",
@@ -5964,7 +6150,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–184"
+      "id": "DR–188"
     },
     {
       "filename": "bulkhead D section - upper starboard spice rack.png",
@@ -5988,7 +6174,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–185"
+      "id": "DR–189"
     },
     {
       "filename": "cabinet partition 1 with centerline measurement.png",
@@ -6012,7 +6198,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–186"
+      "id": "DR–190"
     },
     {
       "filename": "cabinet partition 1 with scale.png",
@@ -6036,7 +6222,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–187"
+      "id": "DR–191"
     },
     {
       "filename": "cabinet partition 10 11X17IN with centerline measurement.png",
@@ -6060,7 +6246,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–188"
+      "id": "DR–192"
     },
     {
       "filename": "cabinet partition 10 11X17IN with scale.png",
@@ -6084,7 +6270,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–189"
+      "id": "DR–193"
     },
     {
       "filename": "cabinet partition 2 11X17IN with centerline measurement.png",
@@ -6108,7 +6294,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–190"
+      "id": "DR–194"
     },
     {
       "filename": "cabinet partition 2 11X17IN with scale.png",
@@ -6132,7 +6318,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–191"
+      "id": "DR–195"
     },
     {
       "filename": "cabinet partition 3 with centerline measurement.png",
@@ -6156,7 +6342,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–192"
+      "id": "DR–196"
     },
     {
       "filename": "cabinet partition 3 with scale.png",
@@ -6180,7 +6366,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–193"
+      "id": "DR–197"
     },
     {
       "filename": "cabinet partition 4 with centerline measurement.png",
@@ -6204,7 +6390,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–194"
+      "id": "DR–198"
     },
     {
       "filename": "cabinet partition 4 with scale.png",
@@ -6228,7 +6414,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–195"
+      "id": "DR–199"
     },
     {
       "filename": "cabinet partition 5 with centerline measurement.png",
@@ -6252,7 +6438,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–196"
+      "id": "DR–200"
     },
     {
       "filename": "cabinet partition 5 with scale.png",
@@ -6276,7 +6462,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–197"
+      "id": "DR–201"
     },
     {
       "filename": "cabinet partition 6 with centerline measurement.png",
@@ -6300,7 +6486,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–198"
+      "id": "DR–202"
     },
     {
       "filename": "cabinet partition 6 with scale.png",
@@ -6324,7 +6510,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–199"
+      "id": "DR–203"
     },
     {
       "filename": "cabinet partition 7 with centerline measurement.png",
@@ -6348,7 +6534,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–200"
+      "id": "DR–204"
     },
     {
       "filename": "cabinet partition 7 with scale.png",
@@ -6372,7 +6558,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–201"
+      "id": "DR–205"
     },
     {
       "filename": "cabinet partition 8 with centerline measurement.png",
@@ -6396,7 +6582,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–202"
+      "id": "DR–206"
     },
     {
       "filename": "cabinet partition 8 with scale.png",
@@ -6420,7 +6606,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–203"
+      "id": "DR–207"
     },
     {
       "filename": "cabinet partition 9 with centerline measurement.png",
@@ -6444,7 +6630,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–204"
+      "id": "DR–208"
     },
     {
       "filename": "cabinet partition 9 with scale.png",
@@ -6468,7 +6654,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–205"
+      "id": "DR–209"
     },
     {
       "filename": "companionway hatch overview.png",
@@ -6486,102 +6672,6 @@
       "width": 3400,
       "height": 2200,
       "file_size_bytes": 2248366,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–206"
-    },
-    {
-      "filename": "forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.png",
-      "clean_filename": "forward mast rev A sheet 1 OF 4 overview 20MAY26",
-      "uuid": "443f34d128c9",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.png",
-      "group": "OUTFITTING & INTERIOR",
-      "normalized_group": "outfitting & interior",
-      "system_index": 7,
-      "source_pdf": "forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 2200,
-      "height": 3400,
-      "file_size_bytes": 2060060,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–207"
-    },
-    {
-      "filename": "forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.png",
-      "clean_filename": "forward mast rev A sheet 2 of 4 IBP 20MAY26",
-      "uuid": "e42ba9db1833",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.png",
-      "group": "OUTFITTING & INTERIOR",
-      "normalized_group": "outfitting & interior",
-      "system_index": 7,
-      "source_pdf": "forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 2200,
-      "height": 3400,
-      "file_size_bytes": 2521733,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–208"
-    },
-    {
-      "filename": "forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.png",
-      "clean_filename": "forward mast rev A sheet 3 of 4 aluminum parts dimensions 20MAY26",
-      "uuid": "cfa50ab79395",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.png",
-      "group": "OUTFITTING & INTERIOR",
-      "normalized_group": "outfitting & interior",
-      "system_index": 7,
-      "source_pdf": "forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 2200,
-      "height": 3400,
-      "file_size_bytes": 1464095,
-      "date_info": null,
-      "author": {
-        "slug": "henry-nolan",
-        "name": "Henry Nolan"
-      },
-      "extracted_text": "",
-      "id": "DR–209"
-    },
-    {
-      "filename": "forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.png",
-      "clean_filename": "forward mast rev A sheet 4 of 4 perspective views 20MAY26",
-      "uuid": "af9147fd1719",
-      "rel_path": "/drawings/output_images/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.png",
-      "group": "OUTFITTING & INTERIOR",
-      "normalized_group": "outfitting & interior",
-      "system_index": 7,
-      "source_pdf": "forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.pdf",
-      "source_pdf_full_path": "../frontend/public/drawings/OUTFITTING & INTERIOR/FWD MAST/forward mast rev A sheet 4 of 4 perspective views HJN 20MAY26.pdf",
-      "page_number": 1,
-      "total_pages_in_pdf": 1,
-      "page_set_label": "1 of 1",
-      "width": 3400,
-      "height": 2200,
-      "file_size_bytes": 1713647,
       "date_info": null,
       "author": {
         "slug": "henry-nolan",
@@ -6623,8 +6713,8 @@
     "average_width": 2984.7619047619046,
     "average_height": 2363.3333333333335,
     "average_pages_per_pdf": 1.024390243902439,
-    "files_with_dates": 171,
-    "files_without_dates": 39,
+    "files_with_dates": 181,
+    "files_without_dates": 29,
     "files_by_system": {
       "overview": 13,
       "power architecture": 0,

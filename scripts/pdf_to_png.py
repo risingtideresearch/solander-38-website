@@ -22,6 +22,11 @@ EXCLUDED_FILES = [
     "PROPULSION/quarter inch aft of shaft log.pdf"
 ]
 
+MONTH_ABBR = {
+    'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6,
+    'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12
+}
+
 # System order for organizing drawings
 SYSTEM_ORDER = [
     "overview",
@@ -51,10 +56,11 @@ def clean_filename(name):
     """Clean filename for display by removing common patterns"""
     clean = name
     clean = clean.replace("Solander 38", "")
-    clean = re.sub(r'\d{1,2}-\d{1,2}-\d{2}', '', clean)  # Remove date pattern
-    clean = re.sub(r'\s*\.png', '', clean)  # Remove .png with optional whitespace
+    clean = re.sub(r'\d{1,2}-\d{1,2}-\d{2}', '', clean)
+    clean = re.sub(r'\d{1,2}(?:JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\d{2,4}', '', clean, flags=re.IGNORECASE)
+    clean = re.sub(r'\s*\.png', '', clean)
     clean = clean.replace(" HJN", "")
-    return clean.strip()  # Remove leading/trailing whitespace
+    return clean.strip()
 
 def rename_files_with_hash(root_directory):
     """
@@ -124,45 +130,14 @@ def extract_text_from_pdf(pdf_path):
 
 def parse_date(filename, full_text):
     """
-    Parse date from filename or full_text. Supports various date formats.
-    
-    Args:
-        filename (str): The filename to parse (without extension)
-        full_text (str): Extracted text from file
-    
+    Parse date from filename or full_text. Supports M-D-YY, DDMMMYY (e.g. 6APR26), and MM/DD/YY formats.
+
     Returns:
-        dict: Dictionary with parsed date info, or None if no date found
+        dict: Parsed date info, or None if no date found.
     """
-    # Remove file extension if present
     name_without_ext = os.path.splitext(filename)[0]
-    
-    # Pattern to match date at end of file name
-    date_patterns = [
-        r'(\d{1,2})[-._](\d{1,2})[-._](\d{2})$',  # M-D-YY or MM-DD-YY format
-    ]
-    
-    match = None
-    for pattern in date_patterns:
-        match = re.search(pattern, name_without_ext)
-        if match:
-            month, day, year = int(match.group(1)), int(match.group(2)), int(match.group(3))
-            year += 2000
-            
-            source = "filename"
-            break
-    
-    # If no date found in filename, search full_text for mm/dd/yy format
-    if full_text and not match:
-        text_date_pattern = r'(\d{1,2})/(\d{1,2})/(\d{2})'
-        match = re.search(text_date_pattern, full_text)
-        if match:
-            month, day, year = int(match.group(1)), int(match.group(2)), int(match.group(3))
-            year += 2000
-            
-            source = "full_text"
-            
-    if match:  
-        # Validate date
+
+    def make_result(match, month, day, year, source):
         try:
             parsed_date = datetime(year, month, day)
             return {
@@ -172,13 +147,47 @@ def parse_date(filename, full_text):
                 "year": year,
                 "month": month,
                 "day": day,
-                "formatted": parsed_date.strftime("%B %d, %Y"),  # e.g., "June 3, 2025"
-                "source": source
+                "formatted": parsed_date.strftime("%B %d, %Y"),
+                "source": source,
             }
         except ValueError:
-            # Invalid date
-            pass
-    
+            return None
+
+    # 1. Numeric M-D-YY at end of filename
+    m = re.search(r'(\d{1,2})[-._](\d{1,2})[-._](\d{2})$', name_without_ext)
+    if m:
+        result = make_result(m, int(m.group(1)), int(m.group(2)), int(m.group(3)) + 2000, "filename")
+        if result:
+            return result
+
+    # 2. DDMMMYY / DDMMMYYYY at end of filename (e.g. 6APR26, 14JAN2025)
+    m = re.search(r'(\d{1,2})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(\d{2,4})$', name_without_ext, re.IGNORECASE)
+    if m:
+        yr = int(m.group(3))
+        year = yr if yr > 999 else yr + 2000
+        result = make_result(m, MONTH_ABBR[m.group(2).upper()], int(m.group(1)), year, "filename")
+        if result:
+            return result
+
+    if not full_text:
+        return None
+
+    # 3. MM/DD/YY in text
+    m = re.search(r'(\d{1,2})/(\d{1,2})/(\d{2})', full_text)
+    if m:
+        result = make_result(m, int(m.group(1)), int(m.group(2)), int(m.group(3)) + 2000, "full_text")
+        if result:
+            return result
+
+    # 4. DDMMMYY / DDMMMYYYY anywhere in text
+    m = re.search(r'(\d{1,2})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(\d{2,4})', full_text, re.IGNORECASE)
+    if m:
+        yr = int(m.group(3))
+        year = yr if yr > 999 else yr + 2000
+        result = make_result(m, MONTH_ABBR[m.group(2).upper()], int(m.group(1)), year, "full_text")
+        if result:
+            return result
+
     return None
 
 def normalize_group_name(group):
