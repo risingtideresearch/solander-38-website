@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 
     system.articles.forEach((article) => {
       slugs.push({
-        slug: [system.slug, article.slug],
+        slug: [article.slug],
       });
     });
   });
