@@ -215,6 +215,7 @@ export const articlesQuery = (slug?: string) => {
       authors[]->{
         name,
         slug,
+        role,
         image {
           ...,
           asset -> {

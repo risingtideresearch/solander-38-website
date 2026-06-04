@@ -90,7 +90,9 @@ export default async function Article({ data, materials = [] }) {
       <div className={`bg--grid ${styles.header}`}>
         <div>
           <div>
-            <h6>{data.articleId} {data.system?.name}</h6>
+            <h6>
+              {data.articleId} {data.system?.name}
+            </h6>
             <h1>{data.title}</h1>
 
             {data.subtitle ? (
@@ -117,12 +119,12 @@ export default async function Article({ data, materials = [] }) {
                         <Image
                           square
                           style={{
-                            width: "61px",
+                            width: "81px",
                             // borderRadius: "100%",
                             // overflow: "hidden",
                           }}
-                          height={61}
-                          width={61}
+                          height={81}
+                          width={81}
                           src={author.image}
                           alt={`Photo of ${author.name}`}
                         />
@@ -130,7 +132,8 @@ export default async function Article({ data, materials = [] }) {
                         <></>
                       )}
                       <span style={{ marginTop: "0.1875rem" }}>
-                        {author.name}
+                        {author.name}<br/>
+                        <span style={{textTransform: 'none'}}>{author.role}</span> 
                       </span>
                     </a>
                   ))}
@@ -174,7 +177,12 @@ export default async function Article({ data, materials = [] }) {
           <div className={`${styles.metadata}`}>
             {!data.isLive ? (
               <div className={styles["in-progress-banner"]}>
-                <h6>Story in progress{isPreviewSite ? " — written content below will not be visible on production site" : ""}</h6>
+                <h6>
+                  Story in progress
+                  {isPreviewSite
+                    ? " — written content below will not be visible on production site"
+                    : ""}
+                </h6>
               </div>
             ) : (
               <></>
