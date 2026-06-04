@@ -8,13 +8,11 @@ export default function MinimalTOC({ systems, system, url }) {
     >
       <div className={`${styles.toc}`}>
         <ol>
-          {systems.map((s) => {
+          {systems.map((s, i) => {
             return (
-              <li
-                key={s.name}
-                data-selected={s.slug == system}
-              >
+              <li key={s.name} data-selected={s.slug == system}>
                 <a href={`${url}/${s.slug}`}>
+                  <span>{i + 1}.</span>
                   <h6>{s.name}</h6>
                 </a>
               </li>

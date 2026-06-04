@@ -95,7 +95,7 @@ export default function TableOfContents({
             style={{ display: hide ? "none" : "" }}
           >
             <ol>
-              {systems.map((s) => (
+              {systems.map((s, i) => (
                 <li key={s.slug} data-selected={s.slug == system.slug}>
                   <button
                     onClick={() => {
@@ -104,7 +104,7 @@ export default function TableOfContents({
                     }}
                     aria-pressed={s.slug == system.slug}
                   >
-                    {s.name}
+                    <span>{i+ 1}.</span> {s.name}
                   </button>
                 </li>
               ))}
