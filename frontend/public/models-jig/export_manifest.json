@@ -3,18 +3,20 @@
     {
       "layer_name": "DECK JIG::TRANSV FRAMES",
       "filename": "DECK JIG__TRANSV FRAMES.glb",
-      "file_size": 761788,
+      "file_size": 408240,
       "object_count": 35,
       "export_method": "standard",
-      "notes": ""
+      "notes": "",
+      "original_file_size": 761788
     },
     {
       "layer_name": "DECK JIG::DECK SKINS",
       "filename": "DECK JIG__DECK SKINS.glb",
-      "file_size": 1517040,
+      "file_size": 1285504,
       "object_count": 6,
       "export_method": "standard",
-      "notes": ""
+      "notes": "",
+      "original_file_size": 1517040
     }
   ],
   "failed_layers": [],
@@ -28,6 +30,6 @@
     "successful_exports": 2,
     "failed_exports": 0,
     "skipped_exports": 0,
-    "total_file_size": 2278828
+    "total_file_size": 1693744
   }
 }

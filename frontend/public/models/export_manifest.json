@@ -4632,8 +4632,8 @@
       "original_file_size": 453396
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CTR BEAM TABLE::inlay map::land",
-      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CTR BEAM TABLE__inlay map__land.glb",
+      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CTR BEAM TABLE::inlay map::inlay map land",
+      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CTR BEAM TABLE__inlay map__inlay map land.glb",
       "file_size": 641336,
       "object_count": 76,
       "bounding_box": {
@@ -4670,11 +4670,11 @@
       },
       "export_method": "standard",
       "notes": "",
-      "original_file_size": 2821044
+      "original_file_size": 2821052
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CTR BEAM TABLE::inlay map::water",
-      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CTR BEAM TABLE__inlay map__water.glb",
+      "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::CTR BEAM TABLE::inlay map::inlay map water",
+      "filename": "OUTFITTING_INTERIOR__galley, workbench, shelving, etc.__CTR BEAM TABLE__inlay map__inlay map water.glb",
       "file_size": 579600,
       "object_count": 1,
       "bounding_box": {
@@ -4711,7 +4711,7 @@
       },
       "export_method": "standard",
       "notes": "",
-      "original_file_size": 2630188
+      "original_file_size": 2630196
     },
     {
       "layer_name": "OUTFITTING/INTERIOR::galley, workbench, shelving, etc.::SHELF SURFS",
@@ -5370,49 +5370,8 @@
       "original_file_size": 434964
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::fwd mast constr",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__fwd mast constr.glb",
-      "file_size": 1424,
-      "object_count": 4,
-      "bounding_box": {
-        "min": {
-          "x": -187.39397191704168,
-          "y": -2.7499197750880056,
-          "z": 87.34255449009511
-        },
-        "max": {
-          "x": -186.90997191704167,
-          "y": -2.749919774009288,
-          "z": 88.3717771999434
-        },
-        "center": {
-          "x": -187.1519719170417,
-          "y": -2.749919774548647,
-          "z": 87.85716584501925
-        },
-        "dimensions": {
-          "width": 0.48400000000000887,
-          "depth": 1.0787175597215537e-09,
-          "height": 1.029222709848284
-        }
-      },
-      "normalized_size": {
-        "length": 1.029222709848284,
-        "width": 0.48400000000000887,
-        "height": 1.0787175597215537e-09,
-        "world_aligned": {
-          "x": 0.48400000000000887,
-          "y": 1.0787175597215537e-09,
-          "z": 1.029222709848284
-        }
-      },
-      "export_method": "standard",
-      "notes": "",
-      "original_file_size": 1324
-    },
-    {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::1/8\" ALUM. 5052",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__1_8_ ALUM. 5052.glb",
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::FWD MAST 1/8\" PARTS",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__FWD MAST 1_8_ PARTS.glb",
       "file_size": 12288,
       "object_count": 11,
       "bounding_box": {
@@ -5449,11 +5408,11 @@
       },
       "export_method": "standard",
       "notes": "",
-      "original_file_size": 166152
+      "original_file_size": 166156
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::1/4\" ALUM. 5052",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__1_4_ ALUM. 5052.glb",
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::FWD MAST 1/4\" PARTS",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__FWD MAST 1_4_ PARTS.glb",
       "file_size": 12008,
       "object_count": 6,
       "bounding_box": {
@@ -5490,11 +5449,11 @@
       },
       "export_method": "standard",
       "notes": "",
-      "original_file_size": 140336
+      "original_file_size": 140340
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::1\" NOM SCH40 PIPE",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__1_ NOM SCH40 PIPE.glb",
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::FWD MAST 1\" NOMINAL SCH40 PIPE",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__FWD MAST 1_ NOMINAL SCH40 PIPE.glb",
       "file_size": 20936,
       "object_count": 1,
       "bounding_box": {
@@ -5531,11 +5490,11 @@
       },
       "export_method": "standard",
       "notes": "",
-      "original_file_size": 177416
+      "original_file_size": 177432
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::3\" OD X 1/8\" WALL 6061 TUBE",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__3_ OD X 1_8_ WALL 6061 TUBE.glb",
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::ALUM. PARTS::FWD MAST 3\" OD X 1/8\" WALL 6061 TUBE",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__ALUM. PARTS__FWD MAST 3_ OD X 1_8_ WALL 6061 TUBE.glb",
       "file_size": 5160,
       "object_count": 1,
       "bounding_box": {
@@ -5572,7 +5531,7 @@
       },
       "export_method": "standard",
       "notes": "",
-      "original_file_size": 29924
+      "original_file_size": 29932
     },
     {
       "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::INSTRUMENTS::MARINCO INTERNATIONAL SHORTY HORN FISHERIES SKU: 00368",
@@ -5657,8 +5616,8 @@
       "original_file_size": 256884
     },
     {
-      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::INSTRUMENTS::Steaming light::SL surfs",
-      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__INSTRUMENTS__Steaming light__SL surfs.glb",
+      "layer_name": "OUTFITTING/INTERIOR::EXT. INSTRUMENTS::FWD MAST::HV2::INSTRUMENTS::Steaming light::Steaming light surfs",
+      "filename": "OUTFITTING_INTERIOR__EXT. INSTRUMENTS__FWD MAST__HV2__INSTRUMENTS__Steaming light__Steaming light surfs.glb",
       "file_size": 20104,
       "object_count": 1,
       "bounding_box": {
@@ -5695,7 +5654,7 @@
       },
       "export_method": "standard",
       "notes": "",
-      "original_file_size": 160028
+      "original_file_size": 160040
     },
     {
       "layer_name": "OUTFITTING/INTERIOR::helm seat",
@@ -5963,18 +5922,18 @@
     }
   ],
   "export_info": {
-    "total_layers_found": 331,
-    "timestamp_start": "2026-05-26 10:16:52",
+    "total_layers_found": 309,
+    "timestamp_start": "2026-06-03 17:46:30",
     "format": "GLB",
-    "timestamp_end": "2026-05-26 10:31:33",
+    "timestamp_end": "2026-06-03 17:53:43",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
     },
-    "successful_exports": 145,
+    "successful_exports": 144,
     "failed_exports": 0,
     "skipped_exports": 3,
-    "total_file_size": 7682832,
+    "total_file_size": 7681408,
     "units": {
       "id": 8,
       "name": "inch"
