@@ -3,11 +3,20 @@ import { useState } from "react";
 import styles from "./range-chart.module.scss";
 import table from './../MaterialsTable/materials.module.scss';
 
+interface TooltipData {
+  label: string;
+  sublabel?: string;
+  kWh: number;
+  speed: number;
+  range: number;
+  kw: number;
+}
+
 export default function RangeChart({ title = "Range / Speed / Power", interactive = true}) {
   const [tooltip, setTooltip] = useState<{
     x: number;
     y: number;
-    data: unknown;
+    data: TooltipData;
   } | null>(null);
 
   const xTicks = [5, 6, 7, 8, 9, 10];
@@ -123,8 +132,8 @@ export default function RangeChart({ title = "Range / Speed / Power", interactiv
   };
 
   return (
-    <div className={styles.chartContainer}>
-      <div className={styles.chartWrapper}>
+    <div className={styles.chart_container}>
+      <div className={styles.chart_wrapper}>
         <h2>{title}</h2>
         <svg viewBox={`0 0 ${dim[0]} ${dim[1]}`}>
           {/* <defs>

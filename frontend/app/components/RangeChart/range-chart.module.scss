@@ -1,9 +1,9 @@
-.chartContainer {
+.chart_container {
   padding: 0;
   position: relative;
 }
 
-.chartWrapper {
+.chart_wrapper {
   max-width: 36rem;
   margin: 0 auto;
 
@@ -41,9 +41,9 @@
 }
 
 .tick {
-    line {
-        stroke: var(--border);
-    }
+  line {
+    stroke: var(--border);
+  }
 }
 
 .tooltip {
@@ -58,32 +58,4 @@
   > div {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-.tooltipHeader {
-  grid-template-columns: 1fr;
-
-  h6 {
-    margin: 0;
-  }
-}
-
-.tooltipLabel {
-  font-weight: 600;
-}
-
-.tooltipSublabel {
-  text-transform: none;
-}
-
-.tooltipRow {
-  grid-template-columns: 1fr 1fr;
-
-  h6 {
-    margin: 0;
-  }
-}
-
-.tooltipUnit {
-  text-transform: none;
 }

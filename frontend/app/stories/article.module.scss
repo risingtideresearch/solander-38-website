@@ -290,14 +290,3 @@
   position: relative;
   white-space: nowrap;
 }
-
-.metadata__filename {
-  font-size: 0.75rem;
-  line-height: 1.2;
-}
-
-.metadata__download {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0.125rem;
-}

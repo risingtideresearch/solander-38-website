@@ -1,6 +1,5 @@
 .toc {
   padding: 0 0.25rem;
-  counter-reset: sublist-counter;
 
   &__container {
     z-index: 1;
@@ -64,11 +63,6 @@
         font-weight: 600;
       }
     }
-  }
-
-  p {
-    margin: 0;
-    padding-left: 0.5rem;
   }
 
   ol {

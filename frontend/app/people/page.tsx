@@ -67,7 +67,7 @@ export default async function Page() {
               className={styles.person}
             >
               <div
-                className={`${styles.photo} ${person.image ? "" : styles.noPhoto}`}
+                className={`${styles.photo} ${person.image ? "" : styles.no_photo}`}
               >
                 {person.image ? (
                   <Image
