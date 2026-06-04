@@ -48,6 +48,14 @@ cd scripts && ./optimize-glb.sh
 ```
 - The front end (`Model3D.tsx`) uses `useGLTF(..., undefined, true)` to decompress meshopt files automatically via `meshoptimizer`
 
+#### 1c. `scripts/audit-related-models.py`
+- After updating models, checks that all `relatedModels` values stored in Sanity articles still exist in the manifests
+- Covers both `models/` and `models-jig/` manifests
+- Prints stale references with fuzzy suggestions for renamed files
+```bash
+cd scripts && python3 audit-related-models.py
+```
+
 #### 2. `scripts/main.py`
 Orchestrator — runs steps 2a and 2b, then copies all manifests to the Sanity studio directory.
 ```bash
