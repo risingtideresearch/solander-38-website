@@ -107,7 +107,7 @@ export default function RangeChart({ title = "Range / Speed / Power", interactiv
   const handleMouseEnter = (datasetKey, point, e) => {
     const dataset = allData[datasetKey];
     setTooltip({
-      x: Math.min(e.clientX, window.innerWidth - 280),
+      x: Math.min(e.clientX, window.innerWidth - 296),
       y: Math.max(240, e.clientY - 40),
       data: {
         ...dataset,

@@ -2,7 +2,7 @@ import styles from "./articles.module.scss";
 import { fetchSystems } from "@/sanity/lib/utils";
 import { formatDate } from "../utils";
 import { ArticleRow } from "../components/ArticleRow";
-import RangeChart from "../components/RangeChart";
+import RangeChart from "../components/RangeChart/RangeChart";
 import Image from "next/image";
 
 export default async function Articles({ subtitles, description }) {

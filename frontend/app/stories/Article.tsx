@@ -10,7 +10,7 @@ import { contextualLayers } from "../anatomy/three-d/util";
 import MaterialsTable from "../components/MaterialsTable";
 import { PhotoImage } from "../components/PhotoImage";
 import { URLS } from "../components/Navigation/Navigation";
-import RangeChart from "../components/RangeChart";
+import RangeChart from "../components/RangeChart/RangeChart";
 
 const components = {
   types: {
