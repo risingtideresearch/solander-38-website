@@ -60,7 +60,7 @@
     border-right: 1px solid #eee;
   }
   > div {
-    padding: 0.125rem 3rem 2.375rem 1.625rem;
+    padding: 0.125rem 3rem 2.375rem 1.25rem;
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 30rem;
@@ -99,7 +99,7 @@
     }
 
     p {
-      max-width: 68ch;
+      max-width: 87ch;
     }
 
     @media screen and (max-width: 900px) {
@@ -121,6 +121,10 @@
 
   &_author {
     margin-top: 1rem;
+
+    img {
+      margin-top: 1px;
+    }
   }
 }
 
