@@ -63,7 +63,7 @@ export function Modal({
           width: fullScreen ? "100%" : "calc(100vw - 1rem)",
           height: fullScreen ? "100vh" : "auto",
           maxWidth: fullScreen ? "100%" : "32rem",
-          maxHeight: fullScreen ? "100dvh" : "90dvh",
+          maxHeight: fullScreen ? "100dvh" : "85dvh",
         }}
       >
         {children}
