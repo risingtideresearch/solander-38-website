@@ -100,8 +100,8 @@ export default function AnatomyControls({
         <TransparencyIcon on={settings.transparent} />
       </button>
       <button
-        aria-label="Toggle clipping plane"
-        data-tooltip="Toggle clipping plane"
+        aria-label="Toggle clipping planes"
+        data-tooltip="Toggle clipping planes"
         onClick={() =>
           setSettings({ ...settings, showClipping: !settings.showClipping })
         }
