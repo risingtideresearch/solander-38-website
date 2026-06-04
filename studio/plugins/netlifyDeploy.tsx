@@ -27,16 +27,19 @@ function DeployTool() {
   }
 
   return (
-    <Box padding={4} style={{ maxWidth: 700, margin: '0 auto'}}>
+    <Box padding={4} style={{maxWidth: 700, margin: '0 auto'}}>
       <Card padding={4} radius={2} shadow={1}>
-        <Stack gap={4}>
-          <Text size={2} weight="semibold">
-            Deploy to Production
-          </Text>
-          <Text size={1} muted>
-            Triggers a full rebuild and deploy of the production site with all <strong>published</strong> content.
-          </Text>
-          <Flex gap={4}>
+        <Stack padding={4}>
+          <Stack space={3}>
+            <Text size={2} weight="semibold">
+              Deploy to Production
+            </Text>
+            <Text size={1} muted>
+              Triggers a full rebuild and deploy of the production site with all{' '}
+              <strong>published</strong> content.
+            </Text>
+          </Stack>
+          <Flex gap={4} paddingTop={4}>
             <Button
               as="a"
               href={PREVIEW_SITE_URL}
