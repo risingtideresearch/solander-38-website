@@ -299,4 +299,34 @@
 .person {
   position: relative;
   white-space: nowrap;
+
+  &__label {
+    position: absolute;
+    opacity: 0;
+    background: #fff;
+    top: -2.25rem;
+    min-height: 2rem;
+    left: 0;
+    z-index: 10;
+    font-size: 0.8125rem;
+    border: 1px solid var(--black);
+    padding: 0 0.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    img {
+      margin-left: -0.25rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .person__label {
+      opacity: 1;
+    }
+  }
 }
