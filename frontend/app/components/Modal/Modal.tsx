@@ -56,15 +56,14 @@ export function Modal({
       style={style}
     >
       <div
+
+      className={`${styles["modal-container"]}`}
         onClick={(e) => e.stopPropagation()}
         style={{
-          position: "relative",
           width: fullScreen ? "100%" : "calc(100vw - 1rem)",
           height: fullScreen ? "100vh" : "auto",
           maxWidth: fullScreen ? "100%" : "32rem",
           maxHeight: fullScreen ? "100dvh" : "90dvh",
-          overflow: "auto",
-          border: '1px solid #000'
         }}
       >
         {children}
