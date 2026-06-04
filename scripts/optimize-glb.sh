@@ -2,6 +2,7 @@
 set -e
 
 MODELS_DIR="$(dirname "$0")/../frontend/public/models"
+MODELS_JIG_DIR="$(dirname "$0")/../frontend/public/models-jig"
 GLTFPACK_BIN="$(dirname "$0")/gltfpack"
 SIMPLIFY=0.92  # retain 92% of triangles; lower = smaller files
 DRY_RUN=0
@@ -81,26 +82,30 @@ if [ "$DRY_RUN" -eq 0 ]; then
   echo "Done. ${BEFORE_SIZE}K → ${AFTER_SIZE}K  (-${TOTAL_SAVED}%)"
   [ "$FAILED" -gt 0 ] && echo "  $FAILED file(s) failed to optimize"
 
-  # Update manifest with new file sizes
-  MANIFEST="$MODELS_DIR/export_manifest.json"
-  if [ -f "$MANIFEST" ]; then
-    python3 -c "
+  # Update manifests with new file sizes
+  python3 -c "
 import json, os
-with open('$MANIFEST') as f:
-    manifest = json.load(f)
-updated = 0
-for layer in manifest['exported_layers']:
-    filepath = os.path.join('$MODELS_DIR', layer['filename'])
-    if os.path.exists(filepath):
-        new_size = os.path.getsize(filepath)
-        if new_size != layer['file_size']:
-            layer['original_file_size'] = layer.get('original_file_size', layer['file_size'])
-            layer['file_size'] = new_size
-            updated += 1
-manifest['export_info']['total_file_size'] = sum(l['file_size'] for l in manifest['exported_layers'])
-with open('$MANIFEST', 'w') as f:
-    json.dump(manifest, f, indent=2)
-print(f'  Updated manifest: {updated} entries')
+
+def update_manifest(manifest_path, models_dir):
+    if not os.path.exists(manifest_path):
+        return
+    with open(manifest_path) as f:
+        manifest = json.load(f)
+    updated = 0
+    for layer in manifest['exported_layers']:
+        filepath = os.path.join(models_dir, layer['filename'])
+        if os.path.exists(filepath):
+            new_size = os.path.getsize(filepath)
+            if new_size != layer['file_size']:
+                layer['original_file_size'] = layer.get('original_file_size', layer['file_size'])
+                layer['file_size'] = new_size
+                updated += 1
+    manifest['export_info']['total_file_size'] = sum(l['file_size'] for l in manifest['exported_layers'])
+    with open(manifest_path, 'w') as f:
+        json.dump(manifest, f, indent=2)
+    print(f'  Updated {os.path.basename(os.path.dirname(manifest_path))}/export_manifest.json: {updated} entries')
+
+update_manifest('$MODELS_DIR/export_manifest.json', '$MODELS_DIR')
+update_manifest('$MODELS_JIG_DIR/export_manifest.json', '$MODELS_DIR')
 "
-  fi
 fi
