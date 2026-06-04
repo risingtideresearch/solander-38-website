@@ -214,7 +214,6 @@ export async function fetchLatestArticles() {
     slug: string;
     effectiveDate: string | null;
     _updatedAt: string;
-    firstImage: { url: string; width: number | null; height: number | null } | null;
   }>;
 }
 

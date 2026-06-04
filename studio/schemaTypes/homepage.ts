@@ -66,37 +66,37 @@ export const homepage = defineType({
         {
           name: 'stories',
           type: 'text',
-          rows: 2,
+          rows: 3,
           validation: (rule: any) => rule.required(),
         },
         {
           name: 'anatomy',
           type: 'text',
-          rows: 2,
+          rows: 3,
           validation: (rule: any) => rule.required(),
         },
         {
           name: 'drawings',
           type: 'text',
-          rows: 2,
+          rows: 3,
           validation: (rule: any) => rule.required(),
         },
         {
           name: 'photos',
           type: 'text',
-          rows: 2,
+          rows: 3,
           validation: (rule: any) => rule.required(),
         },
         {
           name: 'people',
           type: 'text',
-          rows: 2,
+          rows: 3,
           validation: (rule: any) => rule.required(),
         },
         {
           name: 'systems',
           type: 'text',
-          rows: 2,
+          rows: 3,
           validation: (rule: any) => rule.required(),
         }
       ],

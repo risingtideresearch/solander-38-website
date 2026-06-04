@@ -1,23 +1,27 @@
-import styles from './toc.module.scss';
+import styles from "./toc.module.scss";
 
 export default function MinimalTOC({ systems, system, url }) {
   return (
-    <div className={`${styles.toc__container} ${styles.minimal}`} data-mounted={true}>
+    <nav
+      aria-label="Table of contents"
+      className={`${styles.toc__container} ${styles.minimal}`}
+    >
       <div className={`${styles.toc}`}>
         <ol>
           {systems.map((s) => {
             return (
-              <li style={{ cursor: "pointer" }} key={s.name}>
+              <li
+                key={s.name}
+                data-selected={s.slug == system}
+              >
                 <a href={`${url}/${s.slug}`}>
-                  <h6 style={{ fontWeight: s.slug == system ? 600 : '' }}>
-                    {s.name}
-                  </h6>
+                  <h6>{s.name}</h6>
                 </a>
               </li>
             );
           })}
         </ol>
       </div>
-    </div>
+    </nav>
   );
 }

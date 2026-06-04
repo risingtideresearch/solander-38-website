@@ -120,6 +120,10 @@ button {
   color: var(--black);
 }
 
+*[role="button"] {
+  cursor: pointer;
+}
+
 .pane button {
   backdrop-filter: none;
 }
@@ -183,10 +187,10 @@ a,
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3125em;
   color: var(--black);
+}
 
-  &:hover {
-    text-decoration: underline var(--black) 1px;
-  }
+:where(a, .link):hover {
+  text-decoration: underline var(--black) 1px;
 }
 
 details summary::marker {

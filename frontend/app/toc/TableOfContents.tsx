@@ -2,19 +2,27 @@
 
 import { BiCollapseAlt, BiExpandAlt } from "react-icons/bi";
 import styles from "./toc.module.scss";
-import { createContext, useEffect, useLayoutEffect, useState } from "react";
+import React, { createContext, useLayoutEffect, useState } from "react";
+import { URLS } from "../components/Navigation/Navigation";
 
 interface TOCArticle {
+  relatedModels: string[];
   _id: string;
   slug: string;
   title: string;
 }
 
+interface TOCSystem {
+  slug: string;
+  name: string;
+  articles?: TOCArticle[];
+}
+
 export const TOCContext = createContext<{
-  system: any;
+  system: TOCSystem;
   article: TOCArticle | null;
 }>({
-  system: { slug: "overview", relatedArticles: [] },
+  system: { slug: "overview", name: "" },
   article: null,
 });
 
@@ -25,6 +33,13 @@ export default function TableOfContents({
   defaultArticle = null,
   hide = false,
   showArticles = true,
+}: {
+  children?: React.ReactNode;
+  systems: TOCSystem[];
+  defaultSystem?: string;
+  defaultArticle?: TOCArticle | null;
+  hide?: boolean;
+  showArticles?: boolean;
 }) {
   const [collapsed, setCollapsed] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -38,14 +53,10 @@ export default function TableOfContents({
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (window.innerWidth < 800) {
-      setCollapsed(true);
-    }
-  }, []);
   return (
     <TOCContext.Provider value={{ system, article }}>
-      <div
+      <nav
+        aria-label="Table of contents"
         className={`${styles.toc__container} pane ${styles.outline} ${collapsed ? styles.collapsed : ""}`}
         data-mounted={mounted}
       >
@@ -53,21 +64,25 @@ export default function TableOfContents({
           className={styles.toc__collapse_button}
           onClick={() => setCollapsed((prev) => !prev)}
           aria-expanded={!collapsed}
-          aria-label={collapsed ? "Expand table of contents" : "Collapse table of contents"}
+          aria-label={
+            collapsed
+              ? "Expand table of contents"
+              : "Collapse table of contents"
+          }
         >
           {collapsed ? (
             <>
-              <h6>
+              <span className={styles.toc__label}>
                 {system.name}
                 {article ? (
                   <span style={{ textTransform: "none" }}>
-                    {" "}
+                    <br />
                     / {article?.title}
                   </span>
                 ) : (
                   ""
                 )}
-              </h6>
+              </span>
               <BiExpandAlt size={16} />
             </>
           ) : (
@@ -80,65 +95,65 @@ export default function TableOfContents({
             style={{ display: hide ? "none" : "" }}
           >
             <ol>
-              {systems.map((s) => {
-                return (
-                  <li key={s.slug}>
-                    <h6
-                      onClick={() => {
-                        setSystem(s);
-                        setArticle(null);
-                      }}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") {
-                          e.preventDefault();
-                          setSystem(s);
-                          setArticle(null);
-                        }
-                      }}
-                      role="button"
-                      tabIndex={0}
-                      style={{
-                        fontWeight:
-                          !article && s.slug == system.slug ? 600 : "",
-                      }}
-                    >
-                      {s.name}
-                    </h6>
-                    {showArticles && (
-                      <ol
-                        style={{ height: s.slug == system.slug ? "auto" : 0 }}
-                      >
-                        {s.articles?.map((a: TOCArticle) => (
-                          <li key={a._id}>
-                            <span
-                              onClick={() => setArticle(a)}
-                              onKeyDown={(e) => {
-                                if (e.key === "Enter" || e.key === " ") {
-                                  e.preventDefault();
-                                  setArticle(a);
-                                }
-                              }}
-                              role="button"
-                              tabIndex={0}
-                              style={{
-                                fontWeight: a.slug == article?.slug ? 600 : "",
-                              }}
-                            >
-                              {a.title}
-                            </span>
-                          </li>
-                        ))}
-                      </ol>
-                    )}
-                  </li>
-                );
-              })}
+              {systems.map((s) => (
+                <li key={s.slug} data-selected={s.slug == system.slug}>
+                  <button
+                    onClick={() => {
+                      setSystem(s);
+                      setArticle(null);
+                    }}
+                    aria-pressed={s.slug == system.slug}
+                  >
+                    {s.name}
+                  </button>
+                </li>
+              ))}
             </ol>
           </div>
-        ) : (
-          <></>
-        )}
-      </div>
+        ) : null}
+
+        {showArticles && !collapsed ? (
+          <div className={`${styles.toc} ${styles.toc__stories}`}>
+            <h6>Stories</h6>
+            <ol>
+              {systems.map((s, i) =>
+                s.slug == system.slug ? (
+                  <React.Fragment key={s.slug}>
+                    {s.articles?.map((a, j) => (
+                      <li
+                        key={a._id}
+                        data-selected={a.slug == article?.slug}
+                      >
+                        <div className={styles.toc__story_row}>
+                          <button
+                            onClick={() => setArticle(a)}
+                            aria-pressed={a.slug == article?.slug}
+                          >
+                            <span>
+                              {i + 1}&mdash;{String.fromCharCode(j + 65)}
+                            </span>
+                            <span>{a.title}</span>
+                          </button>
+                          <div>
+                            {article?.slug == a.slug ? (
+                              <a
+                                href={`${URLS.STORIES}/${a.slug}`}
+                                aria-label={`Read ${a.title}`}
+                              >
+                                Read
+                              </a>
+                            ) : null}
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </React.Fragment>
+                ) : null,
+              )}
+            </ol>
+          </div>
+        ) : null}
+      </nav>
       {children}
     </TOCContext.Provider>
   );

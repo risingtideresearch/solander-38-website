@@ -2,6 +2,7 @@ import TableOfContents from "@/app/toc/TableOfContents";
 import {
   fetchArticles,
   fetchComponents,
+  fetchHomepage,
   fetchSystems,
   fetchSystemsStatic,
 } from "@/sanity/lib/utils";
@@ -41,11 +42,12 @@ export default async function Page({
   const models_manifest: ModelManifest = getModelManifest();
   const materials_index = getMaterialsManifest();
 
-  const systems = await fetchSystems();
-
-  const articles = await fetchArticles();
-
-  const componentParts = await fetchComponents();
+  const [systems, articles, componentParts, homepage] = await Promise.all([
+    fetchSystems(),
+    fetchArticles(),
+    fetchComponents(),
+    fetchHomepage(),
+  ]);
 
   let defaultSystem = systems.data.systems.find(
     (system) => system.slug == slug,
@@ -69,6 +71,7 @@ export default async function Page({
               material_index: materials_index.material_index,
               articles: articles.data,
               componentParts: componentParts.data,
+              anatomyDescription: homepage.data.sectionDescriptions?.anatomy,
             }}
           />
         </TableOfContents>

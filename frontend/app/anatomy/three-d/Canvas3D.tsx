@@ -347,12 +347,12 @@ export function Canvas3D({
             zoomSpeed={0.7}
             makeDefault
           />
-          {interaction == "all" && (
+          {interaction == "all" && !isMobile && (
             <GizmoHelper
-              alignment={isMobile ? "top-right" : "bottom-right"}
-              margin={isMobile ? [60, 180] : [110, 90]}
+              alignment={isMobile ? "top-left" : "bottom-right"}
+              margin={isMobile ? [68, 160] : [110, 90]}
             >
-              <group scale={isMobile ? [1, 1, 1] : [1.2, 1.2, 1.2]}>
+              <group scale={[1.2, 1.2, 1.2]}>
                 <GizmoViewcube
                   faces={["Bow", "Stern", "Deck", "Keel", "Starboard", "Port"]}
                   color="rgb(255, 255, 255)"

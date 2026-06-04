@@ -313,26 +313,6 @@ export const articlesQuery = (slug?: string) => {
   }`;
 };
 
-const articleFirstImageFragment = `
-  "firstImage": content[
-    (_type == 'inlineImage' && !("no-gallery" in coalesce(image.asset->opt.media.tags[]->name.current, []))) ||
-    (_type == 'imageSet' && count(imageSet[_type == 'image' && !("no-gallery" in coalesce(asset->opt.media.tags[]->name.current, []))]) > 0)
-  ][0]{
-    "url": coalesce(
-      image.asset->url,
-      imageSet[_type == 'image' && !("no-gallery" in coalesce(asset->opt.media.tags[]->name.current, []))][0].asset->url
-    ),
-    "width": coalesce(
-      image.asset->metadata.dimensions.width,
-      imageSet[_type == 'image' && !("no-gallery" in coalesce(asset->opt.media.tags[]->name.current, []))][0].asset->metadata.dimensions.width
-    ),
-    "height": coalesce(
-      image.asset->metadata.dimensions.height,
-      imageSet[_type == 'image' && !("no-gallery" in coalesce(asset->opt.media.tags[]->name.current, []))][0].asset->metadata.dimensions.height
-    )
-  }
-`;
-
 export const systemsQuery = (slug?: string) => {
   if (slug) {
     return `
@@ -350,8 +330,7 @@ export const systemsQuery = (slug?: string) => {
           isLive,
           "slug": slug.current,
           relatedModels[],
-          "system": ^.slug.current,
-          ${articleFirstImageFragment}
+          "system": ^.slug.current
         }
       }
     }`;
@@ -372,8 +351,7 @@ export const systemsQuery = (slug?: string) => {
         "slug": slug.current,
         relatedModels[],
         "wordCount": length(pt::text(content)),
-        "system": ^.slug.current,
-        ${articleFirstImageFragment}
+        "system": ^.slug.current
       }
     }
   }`;
@@ -668,6 +646,5 @@ export const latestArticlesQuery = `
   "effectiveDate": coalesce(publishDate, _updatedAt),
   title,
   subtitle,
-  "slug": slug.current,
-  ${articleFirstImageFragment}
+  "slug": slug.current
 }`;

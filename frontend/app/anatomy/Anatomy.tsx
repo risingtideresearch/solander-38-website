@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useEffect, useMemo, useState, useCallback } from "react";
+import { useContext, useEffect, useLayoutEffect, useMemo, useState, useCallback } from "react";
 import { Plane, Vector3 } from "three";
 import { TOCContext } from "../toc/TableOfContents";
 import {
@@ -16,7 +16,6 @@ import { Article, Component } from "@/sanity/sanity.types";
 import { Canvas3D } from "./three-d/Canvas3D";
 import { getReducedModelSet, slugToRhinoSystem } from "../utils";
 import AnatomyControls from "./AnatomyControls";
-import Info from "./Info";
 import Navigation, { URLS } from "../components/Navigation/Navigation";
 
 type AnatomyContent = {
@@ -24,6 +23,7 @@ type AnatomyContent = {
   models_manifest: ModelManifest;
   articles: Array<Article>;
   componentParts: Array<Component>;
+  anatomyDescription?: string;
 };
 
 interface IAnatomy {
@@ -35,6 +35,7 @@ export type ControlSettings = {
   // expand: boolean;
   units?: Units;
   scalingLines?: boolean;
+  showClipping?: boolean;
   // monochrome?: boolean;
 };
 
@@ -56,7 +57,12 @@ export default function Anatomy({ content }: IAnatomy) {
     transparent: isDefaultTransparentBody(toc),
     units: Units.Feet,
     scalingLines: true,
+    showClipping: false,
   });
+
+  useLayoutEffect(() => {
+    setSettings((prev) => ({ ...prev, showClipping: window.innerWidth >= 900 }));
+  }, []);
   const [clippingValues, setClippingValues] = useState<{
     value: [number, number];
     axis: "x" | "y" | "z";
@@ -66,10 +72,10 @@ export default function Anatomy({ content }: IAnatomy) {
   });
 
   useEffect(() => {
-    if (!settings.scalingLines) {
+    if (!settings.scalingLines || !settings.showClipping) {
       setClippingValues((prev) => ({ ...prev, value: [0, 1] }));
     }
-  }, [settings.scalingLines]);
+  }, [settings.scalingLines, settings.showClipping]);
 
   const active =
     toc.system?.slug != "overview"
@@ -84,7 +90,7 @@ export default function Anatomy({ content }: IAnatomy) {
       ...prev,
       transparent: isDefaultTransparentBody(toc),
     }));
-  }, [toc.article, toc.system]);
+  }, [toc.article, toc.system, toc]);
 
   const filteredLayers = useMemo(() => {
     let allModels = memoModels;
@@ -210,7 +216,7 @@ export default function Anatomy({ content }: IAnatomy) {
       />
 
       <Canvas3D
-        clippingPlanes={getClippingPlanes()}
+        clippingPlanes={settings.showClipping ? getClippingPlanes() : []}
         clippingValues={clippingValues}
         filteredLayers={layersToRender}
         settings={settings}
@@ -228,9 +234,9 @@ export default function Anatomy({ content }: IAnatomy) {
         clippingValues={clippingValues}
         setClippingValues={setClippingValues}
         loaded={loaded}
+        anatomyDescription={content.anatomyDescription}
+        lastUpdated={content.models_manifest.export_info.timestamp_end}
       />
-
-      <Info lastUpdated={content.models_manifest.export_info.timestamp_end} />
     </div>
   );
 }

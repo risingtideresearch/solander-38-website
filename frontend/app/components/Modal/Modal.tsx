@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, ReactNode } from "react";
+import { createPortal } from "react-dom";
 import styles from "./modal.module.scss";
 
 interface ModalProps {
@@ -22,7 +23,6 @@ export function Modal({
 }: ModalProps) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      console.log(e.key);
       if (e.key === "Escape") {
         onClose();
       }
@@ -49,28 +49,27 @@ export function Modal({
 
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <div
       className={`${styles["modal-overlay"]} ${className}`}
       onClick={onClose}
-      style={{
-        padding: fullScreen ? 0 : "1rem",
-        ...style,
-      }}
+      style={style}
     >
       <div
         onClick={(e) => e.stopPropagation()}
         style={{
           position: "relative",
-          width: fullScreen ? "100%" : "auto",
+          width: fullScreen ? "100%" : "calc(100vw - 1rem)",
           height: fullScreen ? "100vh" : "auto",
-          maxWidth: fullScreen ? "100%" : "90vw",
-          maxHeight: fullScreen ? "100vh" : "90vh",
+          maxWidth: fullScreen ? "100%" : "32rem",
+          maxHeight: fullScreen ? "100dvh" : "90dvh",
           overflow: "auto",
+          border: '1px solid #000'
         }}
       >
         {children}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

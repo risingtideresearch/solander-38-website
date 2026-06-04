@@ -1,7 +1,7 @@
 "use client";
 import { AxisSlider } from "@/app/components/AxisSlider";
-import { MdOutlineFlip } from "react-icons/md";
 import styles from "./anatomy-controls.module.scss";
+import { BsArrowsVertical } from "react-icons/bs";
 
 interface ClippingPlaneControlsProps {
   clippingValues: { axis: "x" | "y" | "z"; value: [number, number] };
@@ -77,6 +77,8 @@ export function ClippingPlaneControls({
         </h6>
       </span>
       <button
+        aria-label="Rotate clipping plane axis"
+        data-tooltip="Rotate clipping plane axis"
         style={{ border: "1px solid var(--black)" }}
         onClick={() =>
           setClippingValues(
@@ -89,9 +91,9 @@ export function ClippingPlaneControls({
           )
         }
       >
-        <MdOutlineFlip
+        <BsArrowsVertical
           style={{
-            transform: `rotate(${clippingValues.axis == "y" ? "90deg" : clippingValues.axis == "z" ? "180deg" : "0deg"})`,
+            transform: `rotate(${clippingValues.axis == "y" ? "180deg" : clippingValues.axis == "z" ? "90deg" : "-45deg"})`,
           }}
           size={18}
         />
