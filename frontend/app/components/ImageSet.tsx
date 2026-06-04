@@ -23,6 +23,7 @@ export default function ImageSet({ assets, title }: ImageSetProps) {
           (asset as SanityAsset)._type === "image" ? (
             <div
               key={asset._key}
+              style={index == assets.length - 1 && assets.length % 2 == 1 ? { gridColumn: 'span 2'} : {}}
               className={`${styles.photo} ${
                 asset.asset.metadata?.dimensions?.height /
                   asset.asset.metadata?.dimensions?.width >
@@ -46,7 +47,7 @@ export default function ImageSet({ assets, title }: ImageSetProps) {
                 asset.height / asset.width > 1.1 ? " image-set--portrait" : ""
               }
             >
-              <DrawingCard drawing={asset as Drawing} hideMetadata={true} />
+              <DrawingCard drawing={asset as Drawing} autoScale={true}/>
             </div>
           ),
         )}

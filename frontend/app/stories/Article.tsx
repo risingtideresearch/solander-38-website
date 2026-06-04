@@ -39,6 +39,20 @@ const components = {
           {value?.name}
           {/* {value.role || value.link ? (
             <span className={styles.person__label}>
+              {value.image ? (
+                <Image
+                  square
+                  style={{
+                    width: "31px",
+                  }}
+                  height={31}
+                  width={31}
+                  src={value.image}
+                  alt={`Photo of ${value.name}`}
+                />
+              ) : (
+                <></>
+              )}
               {value.link ? (
                 <span>
                   {value?.link.label}
@@ -132,8 +146,11 @@ export default async function Article({ data, materials = [] }) {
                         <></>
                       )}
                       <span style={{ marginTop: "0.1875rem" }}>
-                        {author.name}<br/>
-                        <span style={{textTransform: 'none'}}>{author.role}</span> 
+                        {author.name}
+                        <br />
+                        <span style={{ textTransform: "none" }}>
+                          {author.role}
+                        </span>
                       </span>
                     </a>
                   ))}
