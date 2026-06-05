@@ -27,7 +27,7 @@ export function ArticleRow({
         className={`${styles["article-header"]}${compact ? ` ${styles["article-header--compact"]}` : ""}`}
       >
         <h6>{articleId}</h6>
-        <a className={styles["article-title"]} href={href}>
+        <a className={styles["article-title"]}  href={href}>
           <p>
             <span>{title}</span>
           </p>
@@ -36,12 +36,12 @@ export function ArticleRow({
             {isLive ? (
               date
             ) : (
-              <em className={styles["in-progress"]}>in progress</em>
+              <span className={styles["in-progress"]}>in progress</span>
             )}
           </h6>
         </a>
       </div>
-      {showSubtitle && (
+      {showSubtitle && isLive && (
         <div className={styles["article-subtitle"]}>
           {subtitle ? <p>{subtitle}</p> : null}
         </div>

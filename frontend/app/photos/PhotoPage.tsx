@@ -18,7 +18,10 @@ export function PhotoPage({ asset, next, prev }) {
           </div>
         </div>
         <div>
-          <div className="detail-page__image-container">
+          <div
+            className="detail-page__image-container"
+            style={{ maxWidth: asset.metadata?.dimensions?.width ? `${asset.metadata.dimensions.width}px` : undefined }}
+          >
             <Image
               loading="eager"
               src={{ asset: asset }}
