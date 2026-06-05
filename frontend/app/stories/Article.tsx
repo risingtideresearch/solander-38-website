@@ -11,7 +11,7 @@ import MaterialsTable from "../components/MaterialsTable";
 import { PhotoImage } from "../components/PhotoImage";
 import { URLS } from "../components/Navigation/Navigation";
 import RangeChart from "../components/RangeChart/RangeChart";
-import { LiaArrowRightSolid } from "react-icons/lia";
+import { LiaArrowUpSolid } from "react-icons/lia";
 
 const components = {
   types: {
@@ -82,9 +82,9 @@ const components = {
     },
     link: ({ value, children }: { value?: any; children?: any }) => {
       return (
-        <a href={value.href} target="_blank" className="icon-link">
+        <a href={value.href} target="_blank" className="icon-link external-link">
           {children}
-          <LiaArrowRightSolid size={14} style={{ transform: "rotate(-45deg)" }} />
+          <LiaArrowUpSolid size={16} style={{ marginTop: '-0.5em', marginRight: '-0.125em' }} />
         </a>
       );
     },

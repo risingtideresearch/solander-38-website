@@ -325,10 +325,19 @@ img {
 
   svg {
     fill: var(--link);
+    vertical-align: middle;
+    flex-shrink: 0;
   }
 
   &:hover svg {
     fill: #000;
+  }
+}
+
+.external-link {
+  gap: 0;
+  svg {
+    transform: rotate(45deg);
   }
 }
 
