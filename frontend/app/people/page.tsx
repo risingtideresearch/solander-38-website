@@ -91,14 +91,14 @@ export default async function Page() {
                     {person.affiliations.map((item: any) =>
                       item.url ? (
                         <p key={item.url}>
-                          <a href={item.url} target="_blank">
+                          <a href={item.url} target="_blank" className="icon-link">
                             {item.label ||
                               item.url
                                 .replace("https://", "")
                                 .replace(/\/$/, "")}
                             <LiaArrowUpSolid
                               className={styles["external-icon"]}
-                              size={12}
+                              size={18}
                             />
                           </a>
                         </p>

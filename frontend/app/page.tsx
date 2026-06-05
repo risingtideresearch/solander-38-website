@@ -20,6 +20,7 @@ import { Drawing } from "./drawings/types";
 import { getDrawingsManifest } from "./manifest-util";
 import Link from "next/link";
 import NewsletterForm from "./components/NewsletterForm";
+import { LiaArrowRightSolid } from "react-icons/lia";
 
 const OG_IMAGE = {
   url: "https://cdn.sanity.io/images/qjczz6gi/production/5d507d27f9b7a0f0cd351429c559057b92b7c23e-1200x630.png",
@@ -114,7 +115,7 @@ export default async function Page() {
               <div>{renderDescription(homepage.data.description)}</div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.STORIES}>Stories</Link>
+                  <Link className="icon-link" href={URLS.STORIES}>Stories<LiaArrowRightSolid size={18} /></Link>
                 </h4>
                 {renderText(homepage.data.sectionDescriptions.stories)}
                 <p>
@@ -179,7 +180,7 @@ export default async function Page() {
               </div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.ANATOMY}>Anatomy</Link>
+                  <Link className="icon-link" href={URLS.ANATOMY}>Anatomy<LiaArrowRightSolid size={18} /></Link>
                 </h4>
                 {renderText(homepage.data.sectionDescriptions.anatomy)}
                 <Link
@@ -236,7 +237,7 @@ export default async function Page() {
               </div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.DRAWINGS}>Drawings</Link>
+                  <Link className="icon-link" href={URLS.DRAWINGS}>Drawings<LiaArrowRightSolid size={18} /></Link>
                 </h4>
                 {renderText(homepage.data.sectionDescriptions.drawings)}
                 {featuredDrawing && (
@@ -248,7 +249,7 @@ export default async function Page() {
               </div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.PHOTOS}>Photos</Link>
+                  <Link className="icon-link" href={URLS.PHOTOS}>Photos<LiaArrowRightSolid size={18} /></Link>
                 </h4>
                 {renderText(homepage.data.sectionDescriptions.photos)}
                 <PhotoImage
@@ -260,7 +261,7 @@ export default async function Page() {
               </div>
               <div className={styles["home__section"]}>
                 <h4>
-                  <Link href={URLS.PEOPLE}>People</Link>
+                  <Link className="icon-link" href={URLS.PEOPLE}>People<LiaArrowRightSolid size={18} /></Link>
                 </h4>
                 {renderText(homepage.data.sectionDescriptions.people)}
                 <ul className={styles["home__people-list"]}>

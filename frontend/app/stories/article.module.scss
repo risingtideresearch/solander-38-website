@@ -180,7 +180,7 @@
 
   a {
     display: block;
-    // text-decoration: underline #c9c9c9;
+    // text-decoration: underline var(--link);
     &:hover {
       // text-decoration: underline var(--black) 1px;
       text-decoration: none;
