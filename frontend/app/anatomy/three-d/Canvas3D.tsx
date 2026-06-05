@@ -68,7 +68,9 @@ export function Canvas3D({
   const [hovered, setHovered] = useState<Model | null>(null);
   const [autoRotate, setAutoRotate] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
-  const [lockedAt, setLockedAt] = useState<{ x: number; y: number } | null>(null);
+  const [lockedAt, setLockedAt] = useState<{ x: number; y: number } | null>(
+    null,
+  );
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 900px)");
@@ -87,7 +89,6 @@ export function Canvas3D({
     interaction == "none"
       ? new Vector3(0.1, 0.1, 0.5)
       : new Vector3(0.5, 0.25, 0.625);
-
 
   const handleModelLoad = useCallback((url: string) => {
     setModelsLoaded((prev) => {
@@ -140,9 +141,9 @@ export function Canvas3D({
 
     tempBox.current.setFromObject(groupRef.current);
     const center = tempBox.current.getCenter(tempCenter.current);
-    if (interaction != "all") {
-      center.y -= 0.5;
-    }
+    // adjust visual center
+    center.y -= 0.5;
+
     const size = tempBox.current.getSize(tempSize.current);
 
     const camera = cameraRef.current;
