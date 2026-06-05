@@ -4,6 +4,7 @@
   --black: #030303;
   --green: #098b23;
   --border: #e0e0e0;
+  --link: #cecece;
   --muted: #757575;
   --ocean-fog-blue: #b6cad3;
 }
@@ -183,7 +184,7 @@ div.range-slider {
 a,
 .link {
   cursor: pointer;
-  text-decoration: underline #c9c9c9;
+  text-decoration: underline var(--link);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3125em;
   color: var(--black);
@@ -315,6 +316,20 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  svg {
+    fill: var(--link);
+  }
+
+  &:hover svg {
+    fill: #000;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
