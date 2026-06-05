@@ -43,7 +43,7 @@
     }
 
     @media screen and (max-width: 900px) {
-      max-width: 32rem;
+      max-width: 34rem;
     }
   }
 
@@ -250,6 +250,20 @@
     max-width: 26rem;
     width: 100%;
     padding: 0;
+    margin: 0.75rem auto 0 auto;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    .metadata__table {
+      grid-template-columns: 7rem 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+    h6 {
+      border-top: 1px solid var(--border);
+
+      &:nth-child(2n) {
+        border-left: 1px solid var(--border);
+      }
+    }
   }
 }
 

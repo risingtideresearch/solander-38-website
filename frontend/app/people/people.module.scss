@@ -34,7 +34,7 @@
 
 .person {
   display: grid;
-  grid-template-columns: 10rem 1fr 1.5fr;
+  grid-template-columns: 12rem 1fr 1.5fr;
   gap: 2rem;
   border-bottom: 1px solid var(--border);
   padding: 4rem 0 2rem 0;
@@ -65,7 +65,7 @@
 .photo {
   overflow: hidden;
   aspect-ratio: 1;
-  width: 10rem;
+  width: 12rem;
   flex-shrink: 0;
 
   img {

@@ -10,7 +10,7 @@ import { Metadata } from "next";
 export async function generateStaticParams() {
   const photos = await fetchPhotosStatic();
 
-  return photos.data.map((photo) => ({ slug: photo._id.split("-")[1] }));
+  return photos.data.map((photo: { _id: string }) => ({ slug: photo._id.split("-")[1] }));
 }
 
 export async function generateMetadata({ params }): Promise<Metadata> {
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   const idPrefix = "image-" + slug;
 
   const { data } = await fetchAssetWithNavigation(idPrefix);
-  const current = data.allImages.find((img) => img._id.startsWith(idPrefix));
+  const current = data.allImages.find((img: { _id: string }) => img._id.startsWith(idPrefix));
 
   return {
     title: `${current.title || current.originalFilename} | | Solander 38`,
@@ -88,8 +88,7 @@ export default async function Page({
   const current = allSorted.find((img) => img._id.startsWith(idPrefix));
 
   const isNoGallery = current.tags?.includes("no-gallery");
-  const systemTag = current.tags?.find((t) => t !== "no-gallery") ?? null;
-  const system = (!isNoGallery && (current.usedInArticles[0]?.system || (systemTag ? { name: systemTag, slug: systemTag } : null))) || {};
+  const system = (!isNoGallery && (current.usedInArticles[0]?.system || current.taggedSystem || null)) || {};
 
   const navigableImages = allSorted.filter((img) => !img.tags?.includes("no-gallery"));
 

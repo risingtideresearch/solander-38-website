@@ -606,6 +606,10 @@ export const assetWithNavigationQuery = (idPrefix?: string) => {
     altText,
     title,
     "tags": opt.media.tags[]->name.current,
+    "taggedSystem": *[_type == "systems"][0].systems[slug.current in ^.opt.media.tags[]->name.current][0] {
+      name,
+      "slug": slug.current
+    },
     "usedInArticles": ${articleFilter} {
       _id,
       title,

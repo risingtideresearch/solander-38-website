@@ -52,11 +52,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem 1rem;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     max-width: 30rem;
-    margin: 0 auto 0 0;
+    margin: 0 auto 0 auto;
+    padding: 3rem 1rem 5rem;
   }
 
   p {
@@ -64,6 +65,10 @@
     font-size: 0.75rem;
     text-wrap: pretty;
     line-height: 1.4em;
+    max-width: 49ch;
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
   }
 
   .license {
@@ -74,19 +79,15 @@
     a {
       color: var(--muted);
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1024px) {
       text-align: center;
     }
-  }
-
-  @media screen and (max-width: 900px) {
-    padding: 3rem 1rem 5rem;
   }
 }
 
 .logo__spacer {
   grid-column: span 2;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 }
