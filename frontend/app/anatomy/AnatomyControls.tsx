@@ -53,6 +53,7 @@ export default function AnatomyControls({
         lastUpdated={lastUpdated}
       />
 
+      <div className={styles["model-controls"]} data-mounted={loaded || undefined}>
       <button
         aria-label="Toggle scale lines"
         data-tooltip="Toggle scale lines"
@@ -132,6 +133,7 @@ export default function AnatomyControls({
       ) : (
         <></>
       )}
+      </div>
     </div>
   );
 }

@@ -14,7 +14,9 @@ import {
 } from "./three-d/util";
 import { Article, Component } from "@/sanity/sanity.types";
 import { Canvas3D } from "./three-d/Canvas3D";
+import { useGLTF } from "@react-three/drei";
 import { getReducedModelSet, slugToRhinoSystem } from "../utils";
+import { getModelURL } from "../manifest-util";
 import AnatomyControls from "./AnatomyControls";
 import Navigation, { URLS } from "../components/Navigation/Navigation";
 
@@ -49,6 +51,7 @@ const isDefaultTransparentBody = (toc) => {
 
 export default function Anatomy({ content }: IAnatomy) {
   const toc = useContext(TOCContext);
+  const { setModelLoaded } = toc;
   const [search, setSearch] = useState("");
   const memoModels = useMemo(() => processModels(content.models_manifest), []);
   const systems = useMemo(() => getSystemMap(memoModels), [memoModels]);
@@ -162,6 +165,10 @@ export default function Anatomy({ content }: IAnatomy) {
     ];
   }, [filteredLayers]);
 
+  useEffect(() => {
+    layersToRender.forEach((url) => useGLTF.preload(getModelURL(url)));
+  }, [layersToRender]);
+
   const getClippingPlanes = useCallback(() => {
     if (!boundingBox) return [];
 
@@ -224,7 +231,7 @@ export default function Anatomy({ content }: IAnatomy) {
         materials={content.material_index}
         componentParts={content.componentParts}
         memoModels={memoModels}
-        handleLoaded={() => setLoaded(true)}
+        handleLoaded={() => { setLoaded(true); setModelLoaded(true); }}
         loaded={loaded}
       />
 

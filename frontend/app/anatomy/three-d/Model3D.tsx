@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useMemo, useCallback } from "react";
 import { useGLTF } from "@react-three/drei";
+import { getModelURL } from "@/app/manifest-util";
 import { DoubleSide, Mesh, MeshStandardMaterial, Plane, Color, Group } from "three";
 
 type Model3DProps = {
@@ -20,7 +21,7 @@ export function Model3D({
   clippingPlanes = [],
   transparent,
 }: Model3DProps) {
-  const { scene } = useGLTF("/models/" + url, undefined, true);
+  const { scene } = useGLTF(getModelURL(url), undefined, true);
 
   const ref = useRef<Group>(null);
   const isInitialized = useRef(false);

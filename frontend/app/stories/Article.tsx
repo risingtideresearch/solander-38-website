@@ -84,7 +84,7 @@ const components = {
       return (
         <a href={value.href} target="_blank" className="icon-link external-link">
           {children}
-          <LiaArrowUpSolid size={16} style={{ marginTop: '-0.5em', marginRight: '-0.125em' }} />
+          <LiaArrowUpSolid size={14} style={{ marginRight: '-0.125em' }} />
         </a>
       );
     },

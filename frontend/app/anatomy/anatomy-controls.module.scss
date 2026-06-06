@@ -19,8 +19,8 @@
       transform: translateY(-50%);
       white-space: nowrap;
       background: rgb(255, 255, 255, 0.8);
-      border: 1px solid #000;
-      color: #000;
+      border: 1px solid var(--border);
+      color: var(--muted);
       height: 1rem;
       text-transform: uppercase;
       font-weight: 400;
@@ -44,6 +44,20 @@
     button[data-tooltip]::after {
       display: none;
     }
+  }
+}
+
+.model-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+
+  &[data-mounted] {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 

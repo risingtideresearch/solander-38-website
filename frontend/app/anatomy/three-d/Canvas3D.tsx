@@ -20,6 +20,7 @@ import HoverDisplay from "../HoverDisplay";
 import { ControlSettings } from "../Anatomy";
 import { GizmoViewcube } from "./GizmoViewcube";
 import { Component } from "@/sanity/sanity.types";
+import styles from "./canvas3d.module.scss";
 
 export type ClippingValues = { value: [number, number]; axis: "x" | "y" | "z" };
 
@@ -232,53 +233,25 @@ export function Canvas3D({
   // };
 
   return (
-    <div style={{ height: height, position: "relative" }}>
+    <div style={{ height: height }} className={styles.container}>
       {/* <button style={{ position: "fixed", zIndex: 10000, top: '50%' }} onClick={downloadImage}>
         download{" "}
       </button> */}
-      {!centered && (
-        <div
-          className="delayed-fade-in"
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "0.5rem",
-            pointerEvents: "none",
-          }}
-        >
-          <span
+      <div className={styles["loading-overlay"]} data-mounted={!centered || undefined}>
+        <span className={styles["loading-label"]}>Loading</span>
+        <div className={styles["progress-track"]}>
+          <div
+            className={styles["progress-fill"]}
             style={{
-              fontSize: "0.6875rem",
-              color: "var(--muted)",
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
+              width: `${filteredLayers.length > 0 ? (modelsLoaded.size / filteredLayers.length) * 100 : 0}%`,
             }}
-          >
-            {'Loading'}
-          </span>
-          <div style={{ width: "4rem", height: "5px", background: "var(--border)" }}>
-            <div
-              style={{
-                height: "100%",
-                background: "var(--muted)",
-                width: `${filteredLayers.length > 0 ? (modelsLoaded.size / filteredLayers.length) * 100 : 0}%`,
-                transition: "width 200ms ease",
-              }}
-            />
-          </div>
+          />
         </div>
-      )}
+      </div>
       <div
-        style={{
-          opacity: centered ? 1 : 0,
-          transition: "opacity 500ms",
-          height: height,
-          cursor: "crosshair",
-        }}
+        style={{ height: height }}
+        className={styles["canvas-wrapper"]}
+        data-mounted={centered || undefined}
       >
         <Canvas
           ref={canvasRef}
