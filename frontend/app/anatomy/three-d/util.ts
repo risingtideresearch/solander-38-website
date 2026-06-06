@@ -30,6 +30,7 @@ export type ModelManifest = {
   }>;
   export_info: {
     timestamp_end: Date;
+    models_folder?: string;
   };
 };
 
