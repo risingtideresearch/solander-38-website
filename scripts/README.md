@@ -50,15 +50,16 @@ The front end uses `useGLTF(..., undefined, true)` to decompress meshopt files a
 Orchestrator — runs material extraction, PDF conversion, manifest copying, and Sanity audit.
 
 ```bash
-python main.py
-python main.py --skip-pdf       # skip PDF conversion
+python main.py                  # full pipeline (skips unchanged PDFs)
+python main.py --skip-pdf       # skip PDF conversion entirely
+python main.py --full-pdf       # force reconvert all PDFs (clear output first)
 python main.py --skip-audit     # skip Sanity reference audit
 ```
 
 Steps:
 1. Reads `models_folder` from `models/export_manifest.json` and extracts material info from the versioned GLB folder → `frontend/public/script-output/material_index_simple.json`
 2. Copies model manifest to `studio/script_output/`
-3. Converts PDFs in `frontend/public/drawings/` to PNGs (skippable with `--skip-pdf`)
+3. Converts new/changed PDFs in `frontend/public/drawings/` to PNGs; skips unchanged ones
 4. Copies drawing and material manifests to `studio/script_output/`
 5. Runs `audit-sanity-refs.py` to check Sanity references (skippable with `--skip-audit`)
 
@@ -68,7 +69,9 @@ Requires `NEXT_PUBLIC_SANITY_PROJECT_ID` and `SANITY_API_READ_TOKEN` in `fronten
 
 #### 2a. `pdf_to_png.py`
 
-Called by `main.py`. Converts drawing PDFs in `frontend/public/drawings/` to PNGs under `frontend/public/drawings/output_images/`. Maintains a `conversion_manifest.json` with UUIDs, filenames, and metadata used by the Sanity drawings dropdowns. ~90 seconds to complete.
+Called by `main.py`. Converts drawing PDFs in `frontend/public/drawings/` to PNGs under `frontend/public/drawings/output_images/`. Maintains a `conversion_manifest.json` with UUIDs, filenames, and metadata used by the Sanity drawings dropdowns.
+
+Skips PDFs whose output PNG is already newer than the source file — only new or modified PDFs are converted. Use `--full-pdf` in `main.py` to force a clean rebuild (e.g. after changing DPI). UUIDs are derived from image content so they remain stable across incremental runs.
 
 ---
 

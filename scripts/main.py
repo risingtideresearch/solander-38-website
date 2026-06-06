@@ -14,6 +14,8 @@ if __name__ == "__main__":
                         help='Skip PDF conversion and only process models')
     parser.add_argument('--skip-audit', action='store_true',
                         help='Skip Sanity reference audit')
+    parser.add_argument('--full-pdf', action='store_true',
+                        help='Clear output directory and reconvert all PDFs (default: skip unchanged)')
     args = parser.parse_args()
 
     manifest_dir = '../frontend/public/models'
@@ -45,7 +47,7 @@ if __name__ == "__main__":
     
     # Convert drawings to pngs (skip if flag is set)
     if not args.skip_pdf:
-        convert_all_pdfs()
+        convert_all_pdfs(clear_output=args.full_pdf)
         
         # Copy drawing manifest
         if os.path.exists(drawing_manifest_path):
