@@ -348,6 +348,15 @@ img {
   }
 } */
 
+.delayed-fade-in {
+  animation: delayed-fade-in 0.25s ease 0.5s both;
+}
+
+@keyframes delayed-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 // use for screen readers
 .sr-only {
   position: absolute;

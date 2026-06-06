@@ -232,10 +232,46 @@ export function Canvas3D({
   // };
 
   return (
-    <div style={{ height: height }}>
+    <div style={{ height: height, position: "relative" }}>
       {/* <button style={{ position: "fixed", zIndex: 10000, top: '50%' }} onClick={downloadImage}>
         download{" "}
       </button> */}
+      {!centered && (
+        <div
+          className="delayed-fade-in"
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.5rem",
+            pointerEvents: "none",
+          }}
+        >
+          <span
+            style={{
+              fontSize: "0.6875rem",
+              color: "var(--muted)",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+            }}
+          >
+            {'Loading'}
+          </span>
+          <div style={{ width: "4rem", height: "5px", background: "var(--border)" }}>
+            <div
+              style={{
+                height: "100%",
+                background: "var(--muted)",
+                width: `${filteredLayers.length > 0 ? (modelsLoaded.size / filteredLayers.length) * 100 : 0}%`,
+                transition: "width 200ms ease",
+              }}
+            />
+          </div>
+        </div>
+      )}
       <div
         style={{
           opacity: centered ? 1 : 0,
