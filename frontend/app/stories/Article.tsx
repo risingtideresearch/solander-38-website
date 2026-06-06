@@ -206,7 +206,7 @@ export default async function Article({ data, materials = [] }) {
             ) : (
               <></>
             )}
-            <div className={styles.metadata__table}>
+            <div className={`${styles.metadata__table} ${styles.article_metadata}`}>
               <h6>Title</h6>
               <h6>{data.title}</h6>
               <h6>System</h6>
