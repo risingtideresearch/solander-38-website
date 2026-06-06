@@ -5923,9 +5923,10 @@
   ],
   "export_info": {
     "total_layers_found": 309,
-    "timestamp_start": "2026-06-03 17:46:30",
+    "timestamp_start": "2026-06-06 13:31:55",
     "format": "GLB",
-    "timestamp_end": "2026-06-03 17:53:43",
+    "timestamp_end": "2026-06-06 13:46:04",
+    "models_folder": "models-1780777915",
     "bounding_box_units": {
       "id": 8,
       "name": "inch"
