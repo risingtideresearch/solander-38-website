@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./footer.module.scss";
 import Logo from "./Logo";
 import LogoStacked from "./LogoStacked";
-import NewsletterForm from "./NewsletterFormClient";
+import NewsletterForm from "./NewsletterForm";
 
 export default async function Footer({ minimal = false }) {
   return (
