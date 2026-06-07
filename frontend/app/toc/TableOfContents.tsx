@@ -21,9 +21,11 @@ interface TOCSystem {
 export const TOCContext = createContext<{
   system: TOCSystem;
   article: TOCArticle | null;
+  setModelLoaded: (loaded: boolean) => void;
 }>({
   system: { slug: "overview", name: "" },
   article: null,
+  setModelLoaded: () => {},
 });
 
 export default function TableOfContents({
@@ -43,6 +45,7 @@ export default function TableOfContents({
 }) {
   const [collapsed, setCollapsed] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [modelLoaded, setModelLoaded] = useState(false);
   const [system, setSystem] = useState(
     systems.find((system) => system.slug == defaultSystem) || systems[0],
   );
@@ -54,11 +57,11 @@ export default function TableOfContents({
   }, []);
 
   return (
-    <TOCContext.Provider value={{ system, article }}>
+    <TOCContext.Provider value={{ system, article, setModelLoaded }}>
       <nav
         aria-label="Table of contents"
         className={`${styles.toc__container} pane ${styles.outline} ${collapsed ? styles.collapsed : ""}`}
-        data-mounted={mounted}
+        data-mounted={(mounted && modelLoaded) || undefined}
       >
         <button
           className={styles.toc__collapse_button}

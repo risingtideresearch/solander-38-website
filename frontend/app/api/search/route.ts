@@ -1,7 +1,10 @@
 import { client } from "@/sanity/lib/client";
 import { searchQuery } from "@/sanity/lib/queries";
 import { fetchArticleIdMap } from "@/sanity/lib/utils";
+import { getDrawingsManifest } from "@/app/manifest-util";
 import { NextResponse } from "next/server";
+
+const { files: allDrawings } = getDrawingsManifest();
 
 export async function POST(request: Request) {
   try {
@@ -22,7 +25,14 @@ export async function POST(request: Request) {
         : result
     );
 
-    return NextResponse.json({ results: enriched });
+    const lowerQuery = query.toLowerCase();
+    const pattern = new RegExp(`\\b${lowerQuery}`, "i");
+    const drawingResults = allDrawings
+      .filter((f) => pattern.test(f.clean_filename) || f.id.toLowerCase().includes(lowerQuery))
+      .slice(0, 20)
+      .map((f) => ({ clean_filename: f.clean_filename, uuid: f.uuid, id: f.id, _type: "drawing" }));
+
+    return NextResponse.json({ results: enriched.concat(drawingResults) });
   } catch (error) {
     console.error("Sanity search error:", error);
     return NextResponse.json(

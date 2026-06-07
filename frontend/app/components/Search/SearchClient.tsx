@@ -3,12 +3,11 @@
 import { BiSearch, BiX } from "react-icons/bi";
 import styles from "./search.module.scss";
 import { useEffect, useRef, useState } from "react";
-import { searchDrawings } from "./util";
 import { getPhotoURL } from "@/app/photos/util";
 import { MdPerson } from "react-icons/md";
 import { URLS } from "../Navigation/Navigation";
 
-export default function SearchClient({ drawings, type }) {
+export default function SearchClient({ type }) {
   const [active, setActive] = useState(false);
   const [value, setValue] = useState("");
   const [results, setResults] = useState([]);
@@ -80,9 +79,7 @@ export default function SearchClient({ drawings, type }) {
         });
 
         const data = await response.json();
-        const otherResults = searchDrawings(drawings, value);
-
-        setResults((data.results || []).concat(otherResults));
+        setResults(data.results || []);
       } catch (error) {
         console.error("Search error:", error);
         setResults([]);
@@ -93,7 +90,7 @@ export default function SearchClient({ drawings, type }) {
 
     const timeoutId = setTimeout(searchDocuments, 200);
     return () => clearTimeout(timeoutId);
-  }, [value, drawings]);
+  }, [value]);
 
   const handleClose = () => {
     setActive(false);

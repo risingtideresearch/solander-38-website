@@ -243,46 +243,81 @@ def generate_image_uuid_from_content(img_path, uuids):
     
     return content_hash
 
-def convert_pdf_to_png(pdf_path, output_folder="output_images", dpi=200, thumbnail_size=(300, 300), thumbnail_dpi=300, global_uuids=None):
+def convert_pdf_to_png(pdf_path, output_folder="output_images", dpi=200, global_uuids=None):
     """
     Converts a PDF file into a series of PNG images, one for each page.
-    Also creates thumbnail versions of each image.
     Returns a list of dictionaries containing file info and dimensions.
+    Skips conversion if output PNGs already exist and are newer than the source PDF.
 
     Args:
         pdf_path (str): The path to the input PDF file.
         output_folder (str): The directory to save the output PNG images.
         dpi (int): The resolution (dots per inch) for the output images.
-                   Higher DPI results in better quality but larger file sizes.
-        thumbnail_size (tuple): Maximum dimensions (width, height) for thumbnails.
-        thumbnail_dpi (int): DPI to use when generating thumbnails from PDF.
-                            Higher values produce sharper thumbnails.
         global_uuids (set): Set of UUIDs used across all PDFs for duplicate detection.
-    
+
     Returns:
         list: List of dictionaries with file information (without IDs), or None if conversion failed.
     """
     # Initialize global_uuids if not provided
     if global_uuids is None:
         global_uuids = set()
-    
+
     # Sanitize output folder path
     output_folder = sanitize_path(output_folder)
-    
+
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
-    
-    # Create thumbnails subdirectory
-    thumbnails_folder = os.path.join(output_folder, "thumbnails")
-    if not os.path.exists(thumbnails_folder):
-        os.makedirs(thumbnails_folder)
+
+    # Check if all output PNGs already exist and are newer than the source PDF
+    pdf_base_name = sanitize_path(os.path.splitext(os.path.basename(pdf_path))[0])
+    try:
+        reader = PdfReader(pdf_path)
+        n_pages = len(reader.pages)
+        pdf_mtime = os.path.getmtime(pdf_path)
+        expected = [
+            os.path.join(output_folder, f"{pdf_base_name}{'' if n_pages == 1 else f' page {i+1}'}.png")
+            for i in range(n_pages)
+        ]
+        if all(os.path.exists(f) and os.path.getmtime(f) > pdf_mtime for f in expected):
+            date_info = parse_date(pdf_path, "")
+            group = sanitize_path(expected[0].split('/')[6]) if len(expected[0].split('/')) > 6 else "unknown"
+            if len(group) < 2:
+                group = "unknown"
+            file_info_list = []
+            for i, out_f in enumerate(expected):
+                img = Image.open(out_f)
+                width, height = img.size
+                img.close()
+                uuid = generate_image_uuid_from_content(str(os.path.relpath(out_f)), global_uuids)
+                global_uuids.add(uuid)
+                file_info_list.append({
+                    "filename": os.path.basename(out_f),
+                    "clean_filename": clean_filename(os.path.basename(out_f)),
+                    "uuid": uuid,
+                    "rel_path": sanitize_path(os.path.relpath(out_f).replace('../frontend/public', '')),
+                    "group": group,
+                    "normalized_group": normalize_group_name(group),
+                    "system_index": get_system_index(group),
+                    "source_pdf": sanitize_path(os.path.basename(pdf_path)),
+                    "source_pdf_full_path": sanitize_path(os.path.relpath(pdf_path)),
+                    "page_number": i + 1,
+                    "total_pages_in_pdf": n_pages,
+                    "page_set_label": f"{i + 1} of {n_pages}",
+                    "width": width,
+                    "height": height,
+                    "file_size_bytes": os.path.getsize(out_f),
+                    "date_info": date_info,
+                    "author": {"slug": "henry-nolan", "name": "Henry Nolan"},
+                    "extracted_text": "",
+                })
+            print(f"  (unchanged, skipped)")
+            return file_info_list
+    except Exception:
+        pass  # fall through to full conversion
 
     try:
         # Convert PDF pages to PIL Image objects
         images = convert_from_path(pdf_path, dpi=dpi)
-        
-        # Also generate higher resolution images for thumbnails
-        thumbnail_source_images = convert_from_path(pdf_path, dpi=thumbnail_dpi)
 
         # Get the base name of the PDF file for naming output images
         pdf_base_name = os.path.splitext(os.path.basename(pdf_path))[0]
@@ -501,21 +536,15 @@ def cleanup_source_directory(root_directory):
     return deleted
 
 
-def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbnail_size=(300, 300), thumbnail_dpi=300):
-    
+def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=False):
     """
-    Converts all PDF files in a directory (including subdirectories) to PNG images 
-    and generates a manifest file.
+    Converts all PDF files in a directory (including subdirectories) to PNG images
+    and generates a manifest file. Skips unchanged PDFs unless clear_output=True.
 
     Args:
-        input_directory (str): The directory containing PDF files to convert.
-        output_folder (str): The directory to save the output PNG images.
         dpi (int): The resolution for the output images.
         preserve_structure (bool): If True, preserves the subfolder structure in output.
-                                  If False, all images go to the same output folder.
-        clear_output (bool): If True, clears the output directory before conversion.
-        thumbnail_size (tuple): Maximum dimensions (width, height) for thumbnails.
-        thumbnail_dpi (int): DPI to use when generating thumbnails from PDF.
+        clear_output (bool): If True, clears the output directory and reconverts everything.
     """
         
     # Configuration
@@ -572,7 +601,7 @@ def convert_all_pdfs(dpi=200, preserve_structure=True, clear_output=True, thumbn
             # All images go to the same output folder
             current_output_folder = output_folder
         
-        file_info_list = convert_pdf_to_png(pdf_file, current_output_folder, dpi, thumbnail_size, thumbnail_dpi, global_uuids)
+        file_info_list = convert_pdf_to_png(pdf_file, current_output_folder, dpi, global_uuids)
         
         if file_info_list:
             successful_conversions += 1

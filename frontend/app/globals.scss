@@ -184,14 +184,15 @@ div.range-slider {
 a,
 .link {
   cursor: pointer;
-  text-decoration: underline var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--link);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3125em;
   color: var(--black);
 }
 
 :where(a, .link):hover {
-  text-decoration: underline var(--black) 1px;
+  text-decoration-color: var(--black);
 }
 
 details summary::marker {
@@ -346,6 +347,7 @@ img {
     color-scheme: dark;
   }
 } */
+
 
 // use for screen readers
 .sr-only {

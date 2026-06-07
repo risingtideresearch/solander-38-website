@@ -131,11 +131,20 @@ def get_bounding_box_info(objs):
 def export_all_layers_to_glb():
     rs.UnselectAllObjects()
     
-    export_path = rs.BrowseForFolder(rs.WorkingFolder(), 'Destination', 'Export GLB')
+    export_path = rs.BrowseForFolder(rs.WorkingFolder(), 'Select models folder (GLBs will go to a versioned subfolder)', 'Export GLB')
     if not export_path:
         print("Export path not selected.")
         return
-    
+
+    # Create a timestamped sibling folder for GLBs; write manifest to the selected folder
+    folder_name = os.path.basename(export_path)
+    parent_path = os.path.dirname(export_path)
+    timestamp = int(time.time())
+    versioned_folder = os.path.join(parent_path, "{}-{}".format(folder_name, timestamp))
+    os.makedirs(versioned_folder, exist_ok=True)
+    print("GLBs: {}".format(versioned_folder))
+    print("Manifest: {}".format(export_path))
+
     layers = rs.LayerNames()
     if not layers:
         print("No layers found.")
@@ -275,7 +284,7 @@ def export_all_layers_to_glb():
         
         # Try a quick export first without isolation
         layer_export_name = sanitize_filename(layer)
-        filename = os.path.abspath(os.path.join(export_path, layer_export_name + ".glb"))
+        filename = os.path.abspath(os.path.join(versioned_folder, layer_export_name + ".glb"))
         print(f"  Exporting {len(mesh_objs)} objects to: {filename}")
         
         # Try multiple export approaches
@@ -443,6 +452,7 @@ def export_all_layers_to_glb():
     manifest_filename = os.path.join(export_path, "export_manifest.json")
 
     manifest["export_info"]["timestamp_end"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    manifest["export_info"]["models_folder"] = "{}-{}".format(folder_name, timestamp)
 
     # Add unit info
     manifest["export_info"]["bounding_box_units"] = {
@@ -473,7 +483,7 @@ def export_all_layers_to_glb():
 
     # Final cleanup of any remaining backup files
     print("\nCleaning up backup files...")
-    for root, dirs, files in os.walk(export_path):
+    for root, dirs, files in os.walk(versioned_folder):
         for file in files:
             if file.endswith('.glbbak'):
                 backup_path = os.path.join(root, file)

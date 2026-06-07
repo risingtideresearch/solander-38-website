@@ -20,6 +20,7 @@ import HoverDisplay from "../HoverDisplay";
 import { ControlSettings } from "../Anatomy";
 import { GizmoViewcube } from "./GizmoViewcube";
 import { Component } from "@/sanity/sanity.types";
+import styles from "./canvas3d.module.scss";
 
 export type ClippingValues = { value: [number, number]; axis: "x" | "y" | "z" };
 
@@ -232,17 +233,25 @@ export function Canvas3D({
   // };
 
   return (
-    <div style={{ height: height }}>
+    <div style={{ height: height }} className={styles.container}>
       {/* <button style={{ position: "fixed", zIndex: 10000, top: '50%' }} onClick={downloadImage}>
         download{" "}
       </button> */}
+      <div className={styles["loading-overlay"]} data-mounted={!centered || undefined}>
+        <span className={styles["loading-label"]}>Loading</span>
+        <div className={styles["progress-track"]}>
+          <div
+            className={styles["progress-fill"]}
+            style={{
+              width: `${filteredLayers.length > 0 ? (modelsLoaded.size / filteredLayers.length) * 100 : 0}%`,
+            }}
+          />
+        </div>
+      </div>
       <div
-        style={{
-          opacity: centered ? 1 : 0,
-          transition: "opacity 500ms",
-          height: height,
-          cursor: "crosshair",
-        }}
+        style={{ height: height }}
+        className={styles["canvas-wrapper"]}
+        data-mounted={centered || undefined}
       >
         <Canvas
           ref={canvasRef}

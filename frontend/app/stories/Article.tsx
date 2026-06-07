@@ -84,7 +84,7 @@ const components = {
       return (
         <a href={value.href} target="_blank" className="icon-link external-link">
           {children}
-          <LiaArrowUpSolid size={16} style={{ marginTop: '-0.5em', marginRight: '-0.125em' }} />
+          <LiaArrowUpSolid size={14} style={{ marginRight: '-0.125em' }} />
         </a>
       );
     },
@@ -206,7 +206,7 @@ export default async function Article({ data, materials = [] }) {
             ) : (
               <></>
             )}
-            <div className={styles.metadata__table}>
+            <div className={`${styles.metadata__table} ${styles.article_metadata}`}>
               <h6>Title</h6>
               <h6>{data.title}</h6>
               <h6>System</h6>

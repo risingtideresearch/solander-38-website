@@ -4,13 +4,13 @@ Codebase for both the website CMS and UI/front end. Using https://github.com/san
 <!-- <img src="./architecture-diagram.svg" /> -->
 
 ### CMS (Sanity Studio)
-[/studio/](/studio/)
+[/studio/](/studio/) — [README](studio/README.md)
 
 https://rising-tide.sanity.studio
 
 
 ### Front end (Next.js/React)
-[/frontend/](/frontend/)
+[/frontend/](/frontend/) — [README](frontend/README.md)
 
 ### Deployments
 
@@ -26,53 +26,9 @@ Two separate Netlify sites share the same codebase and Sanity dataset but behave
 
 **There is no automatic webhook from Sanity to Netlify.** Production content only updates when a build is manually triggered from the Studio's Deploy tool (which calls a Netlify build hook). The preview site rebuilds on every `git push` and shows live draft content without a rebuild via the Sanity Live API.
 
+---
+
 ### Python scripts
-[/scripts/](/scripts/)
+[/scripts/](/scripts/) — [README](scripts/README.md)
 
-#### 1. `scripts/export-layers-glb.py`
-- Converts Rhino layers to GLB files in `frontend/public/models/`
-- Creates `export-manifest.json`
-- This must be run inside of Rhino (type `script` to bring up Script Editor)
-- ~8 minutes to complete
-
-#### 1b. `scripts/optimize-glb.sh`
-- Run after `export-layers-glb.py` to compress all GLB files for web delivery
-- Uses [gltfpack](https://github.com/zeux/meshoptimizer) — binary is downloaded automatically on first run
-- Applies meshopt compression + mesh simplification (~81% size reduction, 43MB → 8MB)
-- Files are processed in-place; no separate output directory
-```bash
-cd scripts && ./optimize-glb.sh
-# Options:
-# --dry-run          preview files without modifying them
-# --simplify=0.8     set triangle retention ratio (default 0.9)
-```
-- The front end (`Model3D.tsx`) uses `useGLTF(..., undefined, true)` to decompress meshopt files automatically via `meshoptimizer`
-
-#### 1c. `scripts/audit-sanity-refs.py`
-- After updating models or drawings, checks that Sanity article references still exist in the local manifests
-- Checks `relatedModels` (GLB filenames) against `models/` and `models-jig/` export manifests
-- Checks drawing UUIDs in story image sets against the drawings conversion manifest
-- Prints stale references with fuzzy suggestions for renamed model files
-```bash
-cd scripts && python3 audit-sanity-refs.py
-```
-
-#### 2. `scripts/main.py`
-Orchestrator — runs steps 2a and 2b, then copies all manifests to the Sanity studio directory.
-```bash
-cd scripts && python main.py
-# Options:
-# --skip-pdf    skip PDF conversion and only process materials
-```
-
-2a. `pdf_to_png.py`
-- Converts all drawing PDFs in `frontend/public/drawings/` to PNGs under `frontend/public/drawings/output_images`
-- Original PDF is preserved in the directory
-- Creates `conversion_manifest.json`
-- ~90 seconds to complete
-
-2b. `extract_materials.py`
-- Extracts material info from GLB layers
-- Creates `material_index_simple.json`
-
-2c. Copies manifests to `studio/script_output/` for Drawing and Material dropdowns
+Post-export pipeline: GLB optimization, material extraction, PDF-to-PNG conversion, manifest copying, and Sanity reference audit.

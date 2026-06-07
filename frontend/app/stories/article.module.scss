@@ -247,16 +247,19 @@
   @media screen and (max-width: 900px) {
     position: relative;
     top: 0;
-    max-width: 26rem;
     width: 100%;
     padding: 0;
+  }
+}
+
+.article_metadata {
+  @media screen and (max-width: 900px) {
     margin: 0.75rem auto 0 auto;
+    max-width: 26rem;
     border-left: 1px solid var(--border);
     border-right: 1px solid var(--border);
-    .metadata__table {
-      grid-template-columns: 7rem 1fr;
-      border-bottom: 1px solid var(--border);
-    }
+    grid-template-columns: 7rem 1fr;
+    border-bottom: 1px solid var(--border);
     h6 {
       border-top: 1px solid var(--border);
 

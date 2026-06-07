@@ -1,8 +1,5 @@
 import SearchClient from "./SearchClient";
-import { getDrawingsManifest } from "@/app/manifest-util";
 
-export default async function Search({ type = ''}) {
-  const drawings = getDrawingsManifest()
-  
-  return <SearchClient type={type} drawings={drawings.files} />;
+export default function Search({ type = '' }) {
+  return <SearchClient type={type} />;
 }

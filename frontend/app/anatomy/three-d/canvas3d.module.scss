@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  &[data-mounted] {
+    opacity: 1;
+    transition: opacity 0.25s ease 0.5s;
+  }
+}
+
+.canvas-wrapper {
+  opacity: 0;
+  transition: opacity 500ms;
+  cursor: crosshair;
+
+  &[data-mounted] {
+    opacity: 1;
+  }
+}
+
+.loading-label {
+  font-size: 0.6875rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.progress-track {
+  width: 4rem;
+  height: 2px;
+  background: var(--border);
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--muted);
+  transition: width 200ms ease;
+}
