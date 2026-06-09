@@ -1,6 +1,6 @@
 import styles from "./articles.module.scss";
 import { fetchSystems } from "@/sanity/lib/utils";
-import { formatDate } from "../utils";
+import { formatDate, toISODate } from "../utils";
 import { ArticleRow } from "../components/ArticleRow";
 import RangeChart from "../components/RangeChart/RangeChart";
 import Image from "next/image";
@@ -42,7 +42,7 @@ export default async function Articles({ subtitles, description }) {
                       articleId={article.articleId}
                       href={`/stories/${article.slug}`}
                       title={article.title}
-                      date={formatDate(article.effectiveDate ?? article._updatedAt)}
+                      date={<time dateTime={toISODate(article.effectiveDate ?? article._updatedAt)}>{formatDate(article.effectiveDate ?? article._updatedAt)}</time>}
                       isLive={article.isLive}
                       subtitle={article.subtitle}
                       showSubtitle={subtitles}

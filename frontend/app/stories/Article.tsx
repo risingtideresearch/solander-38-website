@@ -5,7 +5,7 @@ import AnatomyPane from "./AnatomyPane/AnatomyPane";
 import { InlineModel } from "./InlineModel";
 import ImageSet from "../components/ImageSet";
 import { Image } from "../components/Image";
-import { formatDate } from "../utils";
+import { formatDate, toISODate } from "../utils";
 import { contextualLayers } from "../anatomy/three-d/util";
 import MaterialsTable from "../components/MaterialsTable";
 import { PhotoImage } from "../components/PhotoImage";
@@ -233,7 +233,7 @@ export default async function Article({ data, materials = [] }) {
                 </>
               )}
               <h6>Published</h6>
-              <h6>{formatDate(data.effectiveDate ?? data._updatedAt)}</h6>
+              <h6><time dateTime={toISODate(data.effectiveDate ?? data._updatedAt)}>{formatDate(data.effectiveDate ?? data._updatedAt)}</time></h6>
             </div>
           </div>
         </div>

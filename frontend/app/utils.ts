@@ -6,9 +6,40 @@ export function sortPeople(people: any[]): any[] {
   );
 }
 
-/**
- * Format dates consistently
- */
+export function toISODate(date: Date | string): string {
+  let d: Date;
+  if (typeof date === "string") {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      d = new Date(date + "T00:00:00Z");
+    } else {
+      d = new Date(date.endsWith("Z") ? date : date + "Z");
+    }
+  } else if (date instanceof Date) {
+    d = date;
+  } else {
+    return "";
+  }
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+export function toISOYearMonth(date: string | undefined | null): string {
+  if (!date) return "";
+  let normalized: string;
+  if (/^\d{4}:\d{2}:\d{2}/.test(date)) {
+    normalized = date.substring(0, 10).replace(/:/g, "-") + "T00:00:00Z";
+  } else if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    normalized = date + "T00:00:00Z";
+  } else {
+    normalized = date.endsWith("Z") ? date : date + "Z";
+  }
+  const d = new Date(normalized);
+  if (isNaN(d.getTime())) return "";
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
+}
+
 export function formatDate(date: Date | string) {
   let d;
 
