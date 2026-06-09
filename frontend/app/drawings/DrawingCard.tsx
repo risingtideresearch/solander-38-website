@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Drawing } from "./types";
 import styles from "./drawings.module.scss";
-import { formatDate } from "../utils";
+import { formatDate, toISODate } from "../utils";
 
 interface IDrawingCard {
   drawing: Drawing;
