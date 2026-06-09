@@ -255,7 +255,7 @@ export function Canvas3D({
       >
         <Canvas
           ref={canvasRef}
-          gl={{ preserveDrawingBuffer: true, antialias: true }}
+          gl={{ antialias: true }}
           camera={{ position: CAMERA_INITIAL_POSITION, fov: CAMERA_FOV }}
           onCreated={handleCanvasCreated}
           onPointerEnter={() => setAutoRotate(false)}

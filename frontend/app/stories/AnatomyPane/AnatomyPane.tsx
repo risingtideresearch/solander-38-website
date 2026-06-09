@@ -19,8 +19,8 @@ export default function AnatomyPane({
 }: AnatomyPaneProps) {
   return (
     <div
-      className={`pane ${styles["anatomy-pane"]}${className ? ` ${className}` : ""}`}
-      style={{ ...defaultStyles, background: "none", backdropFilter: "none" }}
+      className={`${styles["anatomy-pane"]}${className ? ` ${className}` : ""}`}
+      style={{ ...defaultStyles, background: "none" }}
     >
       {title ? <h6>{url ? <a href={url}>{title}</a> : title}</h6> : <></>}
       {children}

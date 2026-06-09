@@ -190,6 +190,7 @@ export default async function Page() {
                   <div className={styles["anatomy-crossfade"]}>
                     <Image
                       fill
+                      priority
                       sizes="(max-width: 800px) 100vw, 50vw"
                       src="/homepage/solander-38-overview.png"
                       alt="Solander 38 3D model, overview"

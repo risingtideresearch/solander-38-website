@@ -338,9 +338,9 @@ export const systemsQuery = (slug?: string) => {
   }
   return `
   *[_type=="systems"][0]{
-    ...,
     systems[]{
-      ...,
+      _key,
+      name,
       "slug": slug.current,
       articles[]->{
         _id,
@@ -351,8 +351,6 @@ export const systemsQuery = (slug?: string) => {
         isLive,
         "slug": slug.current,
         relatedModels[],
-        "wordCount": length(pt::text(content)),
-        "system": ^.slug.current
       }
     }
   }`;

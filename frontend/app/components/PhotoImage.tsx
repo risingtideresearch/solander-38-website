@@ -26,6 +26,7 @@ interface PhotoImageProps {
   className?: string;
   photoDate?: string;
   loading?: "eager" | "lazy";
+  priority?: boolean;
 }
 
 export function PhotoImage({
@@ -36,7 +37,9 @@ export function PhotoImage({
   className,
   photoDate,
   loading,
+  priority,
 }: PhotoImageProps) {
+  const resolvedLoading = priority ? "eager" : loading;
   const dims = image.asset.metadata?.dimensions;
   const crop = image.crop;
   const aspectWidth = dims
@@ -62,7 +65,7 @@ export function PhotoImage({
           alt={altText || image.asset.altText || image.alt || ""}
           width={width}
           height={height}
-          loading={loading}
+          loading={resolvedLoading}
         />
       </div>
       {(image.asset.title || monthYear) && (
