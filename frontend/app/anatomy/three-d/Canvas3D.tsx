@@ -234,9 +234,8 @@ export function Canvas3D({
 
   return (
     <div style={{ height: height }} className={styles.container}>
-      {/* <button style={{ position: "fixed", zIndex: 10000, top: '50%' }} onClick={downloadImage}>
-        download{" "}
-      </button> */}
+      <div className={`${styles["scroll-edge"]} ${styles["scroll-edge--left"]}`} />
+      <div className={`${styles["scroll-edge"]} ${styles["scroll-edge--right"]}`} />
       <div className={styles["loading-overlay"]} data-mounted={!centered || undefined}>
         <span className={styles["loading-label"]}>Loading</span>
         <div className={styles["progress-track"]}>

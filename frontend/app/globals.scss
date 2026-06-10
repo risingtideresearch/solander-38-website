@@ -90,6 +90,10 @@ h6 {
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
+
+  @media screen and (max-width: 900px) {
+    font-size: 0.8125rem;
+  }
 }
 
 p,
@@ -99,6 +103,10 @@ h4 {
   line-height: 1.6em;
   text-wrap: pretty;
   font-size: 0.9375rem;
+
+  @media screen and (max-width: 900px) {
+    font-size: 1rem;
+  }
 }
 
 figure {
@@ -336,8 +344,11 @@ img {
 }
 
 .external-link {
+  display: inline;
   gap: 0;
   svg {
+    display: inline-block;
+    vertical-align: -0.1em;
     transform: rotate(45deg);
   }
 }
@@ -347,7 +358,6 @@ img {
     color-scheme: dark;
   }
 } */
-
 
 // use for screen readers
 .sr-only {

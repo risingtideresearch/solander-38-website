@@ -1,13 +1,11 @@
 .anatomy-pane {
   position: relative;
   @media screen and (max-width: 900px) {
-    max-height: 25rem;
-    max-width: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
-    margin-top: -2rem;
-    display: flex;
-    justify-content: center;
+    margin: -0.5rem auto 0.25rem auto;
+    width: 100vw;
+    max-width: 38rem;
+    aspect-ratio: 1.1 !important;
+    position: relative;
   }
   &__header {
     border: 1px solid var(--black);
