@@ -162,7 +162,7 @@ export default async function Page() {
                   </li>
                 )}
               </ul>
-              <p>Recent stories:</p>
+              <p  style={{ marginTop: '1.5em'}}>Recent stories:</p>
               <ul className={styles["home__latest-list"]}>
                 {latestArticles.map((article) => (
                   <li key={article._id}>
