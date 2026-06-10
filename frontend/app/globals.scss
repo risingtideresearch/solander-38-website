@@ -344,8 +344,11 @@ img {
 }
 
 .external-link {
+  display: inline;
   gap: 0;
   svg {
+    display: inline-block;
+    vertical-align: -0.1em;
     transform: rotate(45deg);
   }
 }

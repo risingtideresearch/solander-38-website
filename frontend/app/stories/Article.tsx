@@ -87,8 +87,7 @@ const components = {
           target="_blank"
           className="icon-link external-link"
         >
-          {children}
-          <LiaArrowUpSolid size={14} style={{ marginRight: "-0.125em" }} />
+          {children}<span style={{ whiteSpace: 'nowrap' }}>{'\u2060'}<LiaArrowUpSolid size={14} style={{ marginRight: "-0.125em" }} /></span>
         </a>
       );
     },
