@@ -82,9 +82,13 @@ const components = {
     },
     link: ({ value, children }: { value?: any; children?: any }) => {
       return (
-        <a href={value.href} target="_blank" className="icon-link external-link">
+        <a
+          href={value.href}
+          target="_blank"
+          className="icon-link external-link"
+        >
           {children}
-          <LiaArrowUpSolid size={14} style={{ marginRight: '-0.125em' }} />
+          <LiaArrowUpSolid size={14} style={{ marginRight: "-0.125em" }} />
         </a>
       );
     },
@@ -110,7 +114,6 @@ export default async function Article({ data, materials = [] }) {
               {data.articleId} {data.system?.name}
             </h6>
             <h1>{data.title}</h1>
-
             {data.subtitle ? (
               <div className={styles.header_subtitle}>
                 <p>{data.subtitle}</p>
@@ -118,6 +121,17 @@ export default async function Article({ data, materials = [] }) {
             ) : (
               <></>
             )}
+
+            <div className={styles.header_date}>
+              <h6>
+                Published &nbsp;
+                <time
+                  dateTime={toISODate(data.effectiveDate ?? data._updatedAt)}
+                >
+                  {formatDate(data.effectiveDate ?? data._updatedAt)}
+                </time>
+              </h6>
+            </div>
             {data.authors ? (
               <div className={styles.header_author}>
                 <h6>
@@ -150,7 +164,12 @@ export default async function Article({ data, materials = [] }) {
                       <span style={{ marginTop: "0.1875rem" }}>
                         {author.name}
                         <br />
-                        <span style={{ textTransform: "none", fontSize: '0.875rem' }}>
+                        <span
+                          style={{
+                            textTransform: "none",
+                            fontSize: "0.875rem",
+                          }}
+                        >
                           {author.role}
                         </span>
                       </span>
@@ -206,7 +225,9 @@ export default async function Article({ data, materials = [] }) {
             ) : (
               <></>
             )}
-            <div className={`${styles.metadata__table} ${styles.article_metadata}`}>
+            <div
+              className={`${styles.metadata__table} ${styles.article_metadata}`}
+            >
               <h6>Title</h6>
               <h6>{data.title}</h6>
               <h6>System</h6>
@@ -233,7 +254,13 @@ export default async function Article({ data, materials = [] }) {
                 </>
               )}
               <h6>Published</h6>
-              <h6><time dateTime={toISODate(data.effectiveDate ?? data._updatedAt)}>{formatDate(data.effectiveDate ?? data._updatedAt)}</time></h6>
+              <h6>
+                <time
+                  dateTime={toISODate(data.effectiveDate ?? data._updatedAt)}
+                >
+                  {formatDate(data.effectiveDate ?? data._updatedAt)}
+                </time>
+              </h6>
             </div>
           </div>
         </div>

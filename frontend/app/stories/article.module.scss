@@ -30,6 +30,9 @@
   p {
     &:first-child {
       margin-top: 0.6875rem;
+      @media screen and (max-width: 900px) {
+        margin-top: 0;
+      }
     }
   }
 
@@ -112,6 +115,14 @@
     margin-top: 1.25rem;
   }
 
+  &_date {
+    display: none;
+    @media screen and (max-width: 900px) {
+      display: block;
+      margin-top: 1.25rem;
+    }
+  }
+
   &_author {
     margin-top: 1rem;
 
@@ -158,7 +169,6 @@
       padding-right: 1.875rem;
       @media screen and (max-width: 900px) {
         padding-right: 0;
-        border-top: 1px solid var(--border);
       }
     }
   }
@@ -244,10 +254,7 @@
 
 .article_metadata {
   @media screen and (max-width: 900px) {
-    margin: 0 auto;
-    max-width: 26rem;
-    grid-template-columns: 7rem 1fr;
-    
+    display: none;
   }
 }
 
