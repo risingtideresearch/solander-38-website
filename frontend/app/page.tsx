@@ -61,7 +61,14 @@ function renderDescription(blocks: any[]) {
               target="_blank"
               className="icon-link external-link"
             >
-              {child.text}<span style={{ whiteSpace: 'nowrap' }}>{'\u2060'}<LiaArrowUpSolid size={14} style={{ marginRight: "-0.125em" }} /></span>
+              {child.text}
+              <span style={{ whiteSpace: "nowrap" }}>
+                {"\u2060"}
+                <LiaArrowUpSolid
+                  size={14}
+                  style={{ marginRight: "-0.125em" }}
+                />
+              </span>
             </a>
           ) : (
             child.text
@@ -118,15 +125,6 @@ export default async function Page() {
                   />
                 </svg>
               </h1>
-
-              <div>
-                <img
-                  priority
-                  sizes="(max-width: 800px) 100vw, 50vw"
-                  src="https://homepage--rising-tide-research.netlify.app/_next/image?url=%2Fsolander-drawing-2.png&w=1000&q=75"
-                  alt="Solander 38 3D model, overview"
-                />
-              </div>
             </div>
           </div>
           <div className={styles["home__columns"]}>
