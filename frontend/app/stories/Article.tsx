@@ -150,7 +150,7 @@ export default async function Article({ data, materials = [] }) {
                       <span style={{ marginTop: "0.1875rem" }}>
                         {author.name}
                         <br />
-                        <span style={{ textTransform: "none" }}>
+                        <span style={{ textTransform: "none", fontSize: '0.875rem' }}>
                           {author.role}
                         </span>
                       </span>

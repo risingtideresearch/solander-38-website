@@ -20,7 +20,7 @@ import { Drawing } from "./drawings/types";
 import { getDrawingsManifest } from "./manifest-util";
 import Link from "next/link";
 import NewsletterForm from "./components/NewsletterForm";
-import { LiaArrowRightSolid } from "react-icons/lia";
+import { LiaArrowRightSolid, LiaArrowUpSolid } from "react-icons/lia";
 
 const OG_IMAGE = {
   url: "https://cdn.sanity.io/images/qjczz6gi/production/5d507d27f9b7a0f0cd351429c559057b92b7c23e-1200x630.png",
@@ -51,8 +51,9 @@ function renderDescription(blocks: any[]) {
             ?.map((k: string) => linkMap[k])
             .find(Boolean);
           return link ? (
-            <a key={child._key} href={link.href}>
+            <a key={child._key} href={link.href} target="_blank" className="icon-link external-link">
               {child.text}
+              <LiaArrowUpSolid size={14} style={{ marginRight: '-0.125em' }} />
             </a>
           ) : (
             child.text
