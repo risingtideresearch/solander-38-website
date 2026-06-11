@@ -45,6 +45,9 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     authors: article.authors?.map(author => ({name: author.name})),
     publisher: 'Rising Tide Research Foundation',
     openGraph: {
+      type: 'article',
+      description: article.subtitle || "",
+      modifiedTime: article.effectiveDate ?? article._updatedAt,
       images: [
         {
           url: `https://solander38.netlify.app/preview/${article.slug?.current}.png`,

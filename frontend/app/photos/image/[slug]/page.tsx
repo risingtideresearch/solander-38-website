@@ -25,6 +25,9 @@ export async function generateMetadata({ params }): Promise<Metadata> {
     title: `${current.title || current.originalFilename} | | Solander 38`,
     description: `${current.description || `Photo of ${current.title}`}`,
     openGraph: {
+      type: 'article',
+      description: current.description || `Photo of ${current.title}`,
+      modifiedTime: current.metadata?.date ?? current._updatedAt,
       images: [
         {
           url: current.url,

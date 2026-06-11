@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   title: "Solander 38 | Rising Tide Research Foundation",
   openGraph: {
     title: "Solander 38 | Rising Tide Research Foundation",
+    description: "A self-sufficient, solar-electric, coastal cruising power catamaran.",
     images: [OG_IMAGE],
   },
 };
