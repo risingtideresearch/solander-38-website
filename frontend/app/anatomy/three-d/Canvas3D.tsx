@@ -43,7 +43,7 @@ type Canvas3DProps = {
 const CAMERA_INITIAL_POSITION = [0, 0, 0] as const;
 const CAMERA_FOV = 30;
 const LIGHT_POSITIONS: Vector3[] = [
-  new Vector3(2, 4, -4),
+  new Vector3(0, 12, 4),
   // new Vector3(-14, -2, 5),
 ];
 
@@ -206,12 +206,21 @@ export function Canvas3D({
   const directionalLights = useMemo(
     () =>
       LIGHT_POSITIONS.map((pos, index) => (
+        <>
         <directionalLight
           key={index}
           position={pos}
-          intensity={0.2}
+          intensity={0.8}
           color={"#ffffff"}
         />
+        {/* <group key={index} position={pos}>
+          <directionalLight intensity={0.8} color={"#ffffff"} />
+          <mesh>
+            <sphereGeometry args={[0.3, 16, 16]} />
+            <meshBasicMaterial color="yellow" />
+          </mesh>
+        </group> */}
+        </>
       )),
     [],
   );
@@ -261,9 +270,10 @@ export function Canvas3D({
           onPointerLeave={() => setAutoRotate(true)}
         >
           <Environment
-            blur={100}
+            // background
+            blur={0.02}
             backgroundRotation={[0, -Math.PI / 6, 0]}
-            preset="sunset"
+            files="/hdri/kloofendal_48d_partly_cloudy_puresky_2k.hdr"
           />
 
           {interaction == "all" && (
@@ -317,32 +327,6 @@ export function Canvas3D({
               </Suspense>
             ))}
           </group>
-          {/* <mesh
-            position={[-6, -49, 0]}
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={[220, 220, 100]}
-          >
-            <boxGeometry />
-            <meshBasicMaterial
-              color="rgba(31, 64, 103, 1)"
-              opacity={0.8}
-              transparent={true}
-              side={THREE.DoubleSide}
-            />
-          </mesh> */}
-          {/* 
-          {LIGHT_POSITIONS.map((light, i) => (
-            <mesh
-              position={light}
-              key={i}
-            >
-              <boxGeometry args={[0.5, 0.5, 0.5]} />
-              <meshBasicMaterial
-                color="rgb(31, 64, 103)"
-                side={THREE.DoubleSide}
-              />
-            </mesh>
-          ))} */}
 
           <OrbitControls
             ref={controlsRef}
