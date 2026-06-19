@@ -13,6 +13,7 @@ export default async function Footer({ minimal = false }) {
             className={styles.logo}
             target="_blank"
             href="https://risingtideresearch.org"
+            aria-label="Rising Tide Research Foundation"
           >
             {minimal ? <LogoStacked /> : <Logo />}
           </Link>

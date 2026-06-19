@@ -75,6 +75,7 @@ export default function Navigation({
               viewBox="0 0 59 78"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 fillRule="evenodd"
