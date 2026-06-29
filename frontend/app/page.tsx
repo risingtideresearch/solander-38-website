@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   title: "Solander 38 | Rising Tide Research Foundation",
   openGraph: {
     title: "Solander 38 | Rising Tide Research Foundation",
-    description: "A self-sufficient, solar-electric, coastal cruising power catamaran.",
+    description:
+      "A self-sufficient, solar-electric, coastal cruising power catamaran.",
     images: [OG_IMAGE],
   },
 };
@@ -112,7 +113,6 @@ export default async function Page() {
           <div className={styles["home__hero"]}>
             <div className={styles["home__title"]}>
               <h1>
-                <span className="sr-only">Solander 38</span>
                 <svg
                   viewBox="0 0 326 37"
                   fill="none"
@@ -129,6 +129,14 @@ export default async function Page() {
             </div>
           </div>
           <div className={styles["home__columns"]}>
+            <Image
+              src="/images/solander-drawing.png"
+              alt="Solander 38 drawing"
+              width={874}
+              height={2054}
+              priority
+              className={styles["home__hero__img"]}
+            />
             <div>{renderDescription(homepage.data.description)}</div>
             <div className={styles["home__section"]}>
               <h4>
@@ -163,7 +171,7 @@ export default async function Page() {
                   </li>
                 )}
               </ul>
-              <p  style={{ marginTop: '1.5em'}}>Recent stories:</p>
+              <p style={{ marginTop: "1.5em" }}>Recent stories:</p>
               <ul className={styles["home__latest-list"]}>
                 {latestArticles.map((article) => (
                   <li key={article._id}>

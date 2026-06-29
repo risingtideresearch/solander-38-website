@@ -224,17 +224,17 @@ export default async function Article({ data, materials = [] }) {
             ) : (
               <></>
             )}
-            <div
+            <dl
               className={`${styles.metadata__table} ${styles.article_metadata}`}
             >
-              <h6>Title</h6>
-              <h6>{data.title}</h6>
-              <h6>System</h6>
-              <h6>{data.system?.name}</h6>
+              <dt>Title</dt>
+              <dd>{data.title}</dd>
+              <dt>System</dt>
+              <dd>{data.system?.name}</dd>
               {data.authors && (
                 <>
-                  <h6>Author</h6>
-                  <h6>
+                  <dt>Author</dt>
+                  <dd>
                     {data.authors.map((author) => (
                       <a
                         key={author._id}
@@ -249,18 +249,18 @@ export default async function Article({ data, materials = [] }) {
                         {author.name}
                       </a>
                     ))}
-                  </h6>
+                  </dd>
                 </>
               )}
-              <h6>Published</h6>
-              <h6>
+              <dt>Published</dt>
+              <dd>
                 <time
                   dateTime={toISODate(data.effectiveDate ?? data._updatedAt)}
                 >
                   {formatDate(data.effectiveDate ?? data._updatedAt)}
                 </time>
-              </h6>
-            </div>
+              </dd>
+            </dl>
           </div>
         </div>
         <div>

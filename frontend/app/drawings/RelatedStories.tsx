@@ -15,7 +15,7 @@ export default async function RelatedStories({
 
   return (
     <>
-      <h6>Stories</h6>
+      <dt>Stories</dt>
       <div className={styles.related_stories}>
         {stories.map((story: Article) => (
           <div key={story._id}>

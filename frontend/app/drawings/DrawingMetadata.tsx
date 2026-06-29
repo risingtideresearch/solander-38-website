@@ -15,37 +15,37 @@ export default function DrawingMetadata({
 }) {
   return (
     <div className={`${styles.metadata}`}>
-      <div className={styles.metadata__table}>
-        <h6>Name</h6>
-        <p className={styles.metadata__filename}>{drawing.clean_filename}</p>
-        <h6>ID</h6>
-        <h6>{drawing.id}</h6>
-        <h6>Date</h6>
-        <h6>
+      <dl className={styles.metadata__table}>
+        <dt>Name</dt>
+        <dd className={styles.metadata__filename}>{drawing.clean_filename}</dd>
+        <dt>ID</dt>
+        <dd>{drawing.id}</dd>
+        <dt>Date</dt>
+        <dd>
           {drawing.date_info ? formatDate(drawing.date_info.date) : "<no date>"}
-        </h6>
+        </dd>
         {drawing.author ? (
           <>
-            <h6>Author</h6>
-            <h6>
+            <dt>Author</dt>
+            <dd>
               <a href={`/people#${drawing.author.slug}`}>
                 {drawing.author?.name}
               </a>
-            </h6>
+            </dd>
           </>
         ) : (
           <></>
         )}
-        <h6>System</h6>
-        <h6>
+        <dt>System</dt>
+        <dd>
           <a
             href={`/drawings/${getSlugFromDrawingGroup(drawing.group).toLowerCase()}`}
           >
             {drawing.group}
           </a>
-        </h6>
-        <h6>Download</h6>
-        <h6>
+        </dd>
+        <dt>Download</dt>
+        <dd>
           <a
             className={styles.metadata__download}
             download
@@ -62,9 +62,9 @@ export default function DrawingMetadata({
             <span>PDF</span>
             <LiaDownloadSolid size={16} />
           </a>
-        </h6>
+        </dd>
         <RelatedStories stories={stories} />
-      </div>
+      </dl>
     </div>
   );
 }

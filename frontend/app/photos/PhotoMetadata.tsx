@@ -8,36 +8,36 @@ export default function PhotoMetadata({ asset, stories }) {
   const system = asset.usedInArticles[0]?.system || asset.taggedSystem || {};
   return (
     <div className={`${styles.metadata}`}>
-      <div className={styles.metadata__table}>
-        <h6>Name</h6>
-        <p>{asset.title || asset.originalFilename}</p>
+      <dl className={styles.metadata__table}>
+        <dt>Name</dt>
+        <dd>{asset.title || asset.originalFilename}</dd>
 
         {asset.metadata.date ? (
           <>
-            <h6>Date</h6>
-            <h6>{formatDate(asset.metadata.date)}</h6>
+            <dt>Date</dt>
+            <dd>{formatDate(asset.metadata.date)}</dd>
           </>
         ) : (
           <></>
         )}
         {!isNoGallery && system.name && (
           <>
-            <h6>System</h6>
-            <h6>
+            <dt>System</dt>
+            <dd>
               <a href={`/photos/${system.slug}`}>{system.name}</a>
-            </h6>
+            </dd>
           </>
         )}
         {asset.description ? (
           <>
-            <h6>Desc</h6>
-            <p>{asset.description}</p>
+            <dt>Desc</dt>
+            <dd>{asset.description}</dd>
           </>
         ) : (
           <></>
         )}
         <RelatedStories stories={stories} />
-      </div>
+      </dl>
     </div>
   );
 }

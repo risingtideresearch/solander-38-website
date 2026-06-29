@@ -7,13 +7,23 @@
   }
 
   &__hero {
-    margin: 6.5rem 0 0 0;
+    margin: 5rem 0 0 0;
+
+    &__img {
+      display: none;
+      margin: 1rem 0;
+
+      @media screen and (max-width: 900px) {
+        display: block;
+      }
+    }
   }
 
   &__title {
     width: 100%;
-    max-width: 33vw;
+    max-width: 33%;
     padding: 0 2rem;
+    align-items: end;
     @media screen and (max-width: 900px) {
       max-width: 50%;
       padding: 0 1rem;
@@ -32,18 +42,18 @@
   &__columns {
     column-count: 3;
     gap: 4rem;
-    padding: 3rem 2rem 12rem 2rem;
+    padding: 2rem 2rem 12rem 2rem;
 
     @media screen and (max-width: 900px) {
       column-count: 2;
-      padding: 2rem 1rem 5rem 1rem;
+      padding: 1rem 1rem 5rem 1rem;
     }
 
     @media screen and (max-width: 767px) {
       display: flex;
       flex-direction: column;
       gap: 0;
-      padding: 2rem 1rem 5rem 1rem;
+      padding: 0 1rem 5rem 1rem;
     }
   }
 
