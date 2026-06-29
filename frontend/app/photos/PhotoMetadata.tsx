@@ -23,7 +23,7 @@ export default function PhotoMetadata({ asset, stories }) {
         {!isNoGallery && system.name && (
           <>
             <dt>System</dt>
-            <dd>
+            <dd style={{ textTransform: "uppercase" }}>
               <a href={`/photos/${system.slug}`}>{system.name}</a>
             </dd>
           </>

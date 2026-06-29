@@ -37,7 +37,7 @@ export default function DrawingMetadata({
           <></>
         )}
         <dt>System</dt>
-        <dd>
+        <dd style={{ textTransform: "uppercase" }}>
           <a
             href={`/drawings/${getSlugFromDrawingGroup(drawing.group).toLowerCase()}`}
           >

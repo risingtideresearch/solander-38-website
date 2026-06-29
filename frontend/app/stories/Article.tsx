@@ -133,7 +133,7 @@ export default async function Article({ data, materials = [] }) {
             </div>
             {data.authors ? (
               <div className={styles.header_author}>
-                <h6>
+                <p>
                   {data.authors.map((author) => (
                     <a
                       key={author._id}
@@ -160,13 +160,12 @@ export default async function Article({ data, materials = [] }) {
                       ) : (
                         <></>
                       )}
-                      <span style={{ marginTop: "0.1875rem" }}>
+                      <span style={{ marginTop: "0.125rem" }}>
                         {author.name}
                         <br />
                         <span
                           style={{
                             textTransform: "none",
-                            fontSize: "0.875rem",
                           }}
                         >
                           {author.role}
@@ -174,7 +173,7 @@ export default async function Article({ data, materials = [] }) {
                       </span>
                     </a>
                   ))}
-                </h6>
+                </p>
               </div>
             ) : (
               <></>
@@ -227,10 +226,10 @@ export default async function Article({ data, materials = [] }) {
             <dl
               className={`${styles.metadata__table} ${styles.article_metadata}`}
             >
+              <dt>System</dt>
+              <dd style={{ textTransform: 'uppercase'}}>{data.system?.name}</dd>
               <dt>Title</dt>
               <dd>{data.title}</dd>
-              <dt>System</dt>
-              <dd>{data.system?.name}</dd>
               {data.authors && (
                 <>
                   <dt>Author</dt>
