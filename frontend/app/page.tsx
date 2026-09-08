@@ -285,8 +285,6 @@ export default async function Page() {
               {renderText(homepage.data.sectionDescriptions.photos)}
               <PhotoImage
                 image={homepage.data.image}
-                width={homepage.data.image.asset.metadata.dimensions.width}
-                height={homepage.data.image.asset.metadata.dimensions.height}
                 loading="eager"
               />
             </div>
