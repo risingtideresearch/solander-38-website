@@ -26,7 +26,10 @@ EXCLUDED_FILES = [
     "OUTFITTING & INTERIOR/COMPANIONWAY HATCH/companionway hatch overview.pdf"
 ]
 
-KEEP_EXTENSIONS = {".pdf", ".svg"}
+KEEP_EXTENSIONS = {".pdf", ".svg", ".png"}
+
+# Already web-renderable: copied into the output tree as-is instead of rasterised.
+COPIED_EXTENSIONS = {".svg", ".png"}
 
 SKIP_DIR_KEYWORDS = ("SUPERSEDED", "EXTRA")
 
@@ -74,6 +77,10 @@ AUTHOR_FOLDERS = {
 # exports have no such block, so extraction is skipped for his drawings entirely.
 TITLE_BLOCK_AUTHOR_SLUGS = {"adam-james"}
 
+# Authors who name files with hyphens instead of spaces ("battery-crate-mockup").
+# Their filename-derived titles have the hyphens turned into spaces for display.
+HYPHENATED_FILENAME_AUTHOR_SLUGS = {"adam-james"}
+
 # Used in Sanity dropdown
 THUMBNAIL_MAX_WIDTH = 400
 THUMBNAIL_DIR_NAME = "thumbnails"
@@ -112,12 +119,16 @@ def clean_filename(name):
     """Clean filename for display by removing common patterns"""
     clean = name
     clean = clean.replace("Solander 38", "")
+    # ISO dates first, or the M-D-YY rule below eats the middle of "2025-10-09" and leaves "20"
+    clean = re.sub(r'(?<!\d)\d{4}[-._]\d{1,2}[-._]\d{1,2}(?!\d)', '', clean)
     clean = re.sub(r'\d{1,2}-\d{1,2}-\d{2}', '', clean)
     clean = re.sub(r'\d{1,2}(?:JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\d{2,4}', '', clean, flags=re.IGNORECASE)
     clean = re.sub(r'\s*\.(png|svg|pdf)$', '', clean, flags=re.IGNORECASE)
     for initials in AUTHOR_FOLDERS:
         clean = clean.replace(f" {initials}", "")
-    return clean.strip()
+    # a removed date leaves a dangling separator or a double space behind
+    clean = re.sub(r'\s{2,}', ' ', clean)
+    return clean.strip(" -_.")
 
 
 def drawings_relative_path(path):
@@ -299,7 +310,7 @@ def get_title_block(pdf_path, author):
     return extract_title_block(pdf_path)
 
 
-def get_title(title_block, png_filename):
+def get_title(title_block, png_filename, author=None):
     """
     The drawing's display title, fully formatted.
 
@@ -310,8 +321,15 @@ def get_title(title_block, png_filename):
 
     Only the first character is upper-cased; the rest is left alone so existing
     capitalisation survives ("4 Module Battery Crate", "PRELIM battery component").
+
+    Authors in HYPHENATED_FILENAME_AUTHOR_SLUGS get hyphens read as word breaks,
+    but only in the filename fallback -- a title block is shown verbatim.
     """
-    title = title_block or clean_filename(png_filename)
+    title = title_block
+    if not title:
+        title = clean_filename(png_filename)
+        if author and author["slug"] in HYPHENATED_FILENAME_AUTHOR_SLUGS:
+            title = title.replace("-", " ")
     return title[:1].upper() + title[1:] if title else title
 
 def rename_files_with_hash(root_directory):
@@ -404,14 +422,21 @@ def parse_date(filename, full_text):
         except ValueError:
             return None
 
-    # 1. Numeric M-D-YY at end of filename
+    # 1. ISO YYYY-MM-DD anywhere in the filename (unambiguous, so it need not be at the end)
+    m = re.search(r'(?<!\d)(\d{4})[-._](\d{1,2})[-._](\d{1,2})(?!\d)', name_without_ext)
+    if m:
+        result = make_result(m, int(m.group(2)), int(m.group(3)), int(m.group(1)), "filename")
+        if result:
+            return result
+
+    # 2. Numeric M-D-YY at end of filename
     m = re.search(r'(\d{1,2})[-._](\d{1,2})[-._](\d{2})$', name_without_ext)
     if m:
         result = make_result(m, int(m.group(1)), int(m.group(2)), int(m.group(3)) + 2000, "filename")
         if result:
             return result
 
-    # 2. DDMMMYY / DDMMMYYYY at end of filename (e.g. 6APR26, 14JAN2025)
+    # 3. DDMMMYY / DDMMMYYYY at end of filename (e.g. 6APR26, 14JAN2025)
     m = re.search(r'(\d{1,2})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(\d{2,4})$', name_without_ext, re.IGNORECASE)
     if m:
         yr = int(m.group(3))
@@ -423,14 +448,14 @@ def parse_date(filename, full_text):
     if not full_text:
         return None
 
-    # 3. MM/DD/YY in text
+    # 4. MM/DD/YY in text
     m = re.search(r'(\d{1,2})/(\d{1,2})/(\d{2})', full_text)
     if m:
         result = make_result(m, int(m.group(1)), int(m.group(2)), int(m.group(3)) + 2000, "full_text")
         if result:
             return result
 
-    # 4. DDMMMYY / DDMMMYYYY anywhere in text
+    # 5. DDMMMYY / DDMMMYYYY anywhere in text
     m = re.search(r'(\d{1,2})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(\d{2,4})', full_text, re.IGNORECASE)
     if m:
         yr = int(m.group(3))
@@ -543,7 +568,7 @@ def convert_pdf_to_png(pdf_path, output_folder="output_images", dpi=200, global_
                 global_uuids.add(uuid)
                 file_info_list.append({
                     "filename": os.path.basename(out_f),
-                    "title": get_title(title_block, os.path.basename(out_f)),
+                    "title": get_title(title_block, os.path.basename(out_f), author),
                     "uuid": uuid,
                     "rel_path": sanitize_path(os.path.relpath(out_f).replace('../frontend/public', '')),
                     "group": group,
@@ -613,7 +638,7 @@ def convert_pdf_to_png(pdf_path, output_folder="output_images", dpi=200, global_
             # Create file info dictionary WITHOUT id (will be assigned later)
             file_info = {
                 "filename": os.path.basename(output_filename),
-                "title": get_title(title_block, os.path.basename(output_filename)),
+                "title": get_title(title_block, os.path.basename(output_filename), author),
                 "uuid": uuid,
                 "rel_path": rel_path,
                 "group": group,
@@ -639,13 +664,22 @@ def convert_pdf_to_png(pdf_path, output_folder="output_images", dpi=200, global_
         return None
 
 
-def copy_svg_to_output(svg_path, output_folder, global_uuids=None):
-    """
-    Copy an SVG into the output tree and describe it like a converted page.
+def read_raster(raster_path):
+    """(width, height) of a raster image, or (None, None) if it cannot be read."""
+    try:
+        with Image.open(raster_path) as img:
+            return img.size
+    except (OSError, ValueError):
+        return None, None
 
-    SVGs are already web-renderable, so there is nothing to rasterise -- they are
-    copied alongside the PNGs so every drawing is served from one joined-by-system
-    folder, and so the manifest entry looks the same to the frontend.
+
+def copy_asset_to_output(asset_path, output_folder, global_uuids=None):
+    """
+    Copy an SVG or PNG into the output tree and describe it like a converted page.
+
+    These are already web-renderable, so there is nothing to rasterise -- they are
+    copied alongside the converted PDF pages so every drawing is served from one
+    joined-by-system folder, and so the manifest entry looks the same to the frontend.
 
     Returns a one-item list to match convert_pdf_to_png(), or None on failure.
     """
@@ -658,33 +692,37 @@ def copy_svg_to_output(svg_path, output_folder, global_uuids=None):
 
     try:
         output_filename = os.path.join(
-            output_folder, sanitize_path(os.path.basename(svg_path))
+            output_folder, sanitize_path(os.path.basename(asset_path))
         )
-        svg_mtime = os.path.getmtime(svg_path)
+        asset_mtime = os.path.getmtime(asset_path)
         if not (os.path.exists(output_filename)
-                and os.path.getmtime(output_filename) > svg_mtime):
-            shutil.copy2(svg_path, output_filename)
+                and os.path.getmtime(output_filename) > asset_mtime):
+            shutil.copy2(asset_path, output_filename)
 
-        width, height, embedded_title = read_svg(output_filename)
-        group = group_from_path(svg_path)
-        author = get_author(svg_path)
+        if output_filename.lower().endswith(".svg"):
+            width, height, embedded_title = read_svg(output_filename)
+        else:
+            width, height = read_raster(output_filename)
+            embedded_title = None
+        group = group_from_path(asset_path)
+        author = get_author(asset_path)
         uuid = generate_image_uuid_from_content(
             str(os.path.relpath(output_filename)), global_uuids
         )
         global_uuids.add(uuid)
-        date_info = parse_date(svg_path, "")
+        date_info = parse_date(asset_path, "")
 
         return [{
             "filename": os.path.basename(output_filename),
-            "title": get_title(embedded_title, os.path.basename(output_filename)),
+            "title": get_title(embedded_title, os.path.basename(output_filename), author),
             "uuid": uuid,
             "rel_path": sanitize_path(
                 os.path.relpath(output_filename).replace('../frontend/public', '')
             ),
             "group": group,
             "system_index": get_system_index(group),
-            "source_path": sanitize_path(os.path.relpath(svg_path)),
-            "source_size_bytes": os.path.getsize(svg_path),
+            "source_path": sanitize_path(os.path.relpath(asset_path)),
+            "source_size_bytes": os.path.getsize(asset_path),
             "total_pages_in_pdf": 1,
             "page_set_label": "1 of 1",
             "width": width,
@@ -696,7 +734,7 @@ def copy_svg_to_output(svg_path, output_folder, global_uuids=None):
         }]
 
     except Exception as e:
-        print(f"Error copying {svg_path}: {e}")
+        print(f"Error copying {asset_path}: {e}")
         return None
 
 
@@ -1010,7 +1048,7 @@ def transform_all_drawings(dpi=200, preserve_structure=True, clear_output=False,
     else:
         print("No files/directories with # characters found")
 
-    # Remove excluded PDFs and non-PDF files from source directory
+    # Remove excluded drawings and file types we never publish (see KEEP_EXTENSIONS)
     print("\nCleaning up source directory...")
     cleanup_source_directory(input_directory)
 
@@ -1047,8 +1085,8 @@ def transform_all_drawings(dpi=200, preserve_structure=True, clear_output=False,
             # All images go to the same output folder
             current_output_folder = output_folder
 
-        if os.path.splitext(source_file)[1].lower() == ".svg":
-            file_info_list = copy_svg_to_output(source_file, current_output_folder, global_uuids)
+        if os.path.splitext(source_file)[1].lower() in COPIED_EXTENSIONS:
+            file_info_list = copy_asset_to_output(source_file, current_output_folder, global_uuids)
         else:
             file_info_list = convert_pdf_to_png(source_file, current_output_folder, dpi, global_uuids)
 
