@@ -1,14 +1,14 @@
 {
   "conversion_info": {
-    "timestamp": "2026-09-08T13:28:12.420082",
+    "timestamp": "2026-09-12T11:07:09.061393",
     "input_directory": "../frontend/public/drawings",
     "output_directory": "../frontend/public/drawings/output_images",
     "dpi": 200,
     "preserve_structure": true,
-    "total_pdfs_processed": 211,
-    "successful_conversions": 211,
+    "total_pdfs_processed": 215,
+    "successful_conversions": 215,
     "failed_conversions": 0,
-    "total_images_created": 216
+    "total_images_created": 221
   },
   "files": [
     {
@@ -334,19 +334,19 @@
       "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/2025-10-09-battery-crate-mockup.png"
     },
     {
-      "filename": "battery-crate-frame-v2.png",
-      "title": "Battery crate frame v2",
-      "uuid": "edad7bf2e217",
-      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-crate-frame-v2.png",
+      "filename": "BYD-blade-cell-reference.png",
+      "title": "BYD Blade Cell Reference",
+      "uuid": "3b398412428e",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/BYD-blade-cell-reference.png",
       "group": "POWER ARCHITECTURE",
       "system_index": 1,
-      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/battery-crate-frame-v2.pdf",
-      "source_size_bytes": 587874,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/BYD-blade-cell-reference.pdf",
+      "source_size_bytes": 219889,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
       "width": 3400,
       "height": 2200,
-      "file_size_bytes": 463829,
+      "file_size_bytes": 391460,
       "date": null,
       "author": {
         "slug": "adam-james",
@@ -354,22 +354,22 @@
       },
       "extracted_text": "",
       "id": "DR–15",
-      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-crate-frame-v2.png"
+      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/BYD-blade-cell-reference.png"
     },
     {
-      "filename": "battery-crate-v2.png",
-      "title": "4 Module Battery Crate",
-      "uuid": "1da84a81fb11",
-      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-crate-v2.png",
+      "filename": "battery-crate-frame-v2.png",
+      "title": "Battery crate frame v2",
+      "uuid": "8aa21394f45c",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-crate-frame-v2.png",
       "group": "POWER ARCHITECTURE",
       "system_index": 1,
-      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/battery-crate-v2.PDF",
-      "source_size_bytes": 2611457,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V2/battery-crate-frame-v2.pdf",
+      "source_size_bytes": 587874,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
       "width": 3400,
       "height": 2200,
-      "file_size_bytes": 767681,
+      "file_size_bytes": 449216,
       "date": null,
       "author": {
         "slug": "adam-james",
@@ -377,22 +377,22 @@
       },
       "extracted_text": "",
       "id": "DR–16",
-      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-crate-v2.png"
+      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-crate-frame-v2.png"
     },
     {
-      "filename": "battery-frame-shelf-asm-v1.png",
-      "title": "Battery frame shelf asm v1",
-      "uuid": "fbeec39381c7",
-      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-frame-shelf-asm-v1.png",
+      "filename": "battery-crate-v2.png",
+      "title": "4 Module Battery Crate",
+      "uuid": "a582d2404584",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-crate-v2.png",
       "group": "POWER ARCHITECTURE",
       "system_index": 1,
-      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/battery-frame-shelf-asm-v1.pdf",
-      "source_size_bytes": 154090,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V2/battery-crate-v2.PDF",
+      "source_size_bytes": 2611457,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
-      "width": 1700,
+      "width": 3400,
       "height": 2200,
-      "file_size_bytes": 627640,
+      "file_size_bytes": 756244,
       "date": null,
       "author": {
         "slug": "adam-james",
@@ -400,22 +400,22 @@
       },
       "extracted_text": "",
       "id": "DR–17",
-      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-frame-shelf-asm-v1.png"
+      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-crate-v2.png"
     },
     {
-      "filename": "battery-frame-shelf-v1.png",
-      "title": "Battery frame shelf v1",
-      "uuid": "dd3c2501150f",
-      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-frame-shelf-v1.png",
+      "filename": "battery-frame-shelf-asm-v1.png",
+      "title": "Battery frame shelf asm v1",
+      "uuid": "bb7c8ec3bb08",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-frame-shelf-asm-v1.png",
       "group": "POWER ARCHITECTURE",
       "system_index": 1,
-      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/battery-frame-shelf-v1.pdf",
-      "source_size_bytes": 64641,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V1/battery-frame-shelf-asm-v1.pdf",
+      "source_size_bytes": 154090,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
-      "width": 3400,
+      "width": 1700,
       "height": 2200,
-      "file_size_bytes": 274324,
+      "file_size_bytes": 618261,
       "date": null,
       "author": {
         "slug": "adam-james",
@@ -423,22 +423,22 @@
       },
       "extracted_text": "",
       "id": "DR–18",
-      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-frame-shelf-v1.png"
+      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-frame-shelf-asm-v1.png"
     },
     {
-      "filename": "clamp-asm-v2.png",
-      "title": "Battery Module Clamp Assembly",
-      "uuid": "4c8a9ea99788",
-      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/clamp-asm-v2.png",
+      "filename": "battery-frame-shelf-v1.png",
+      "title": "Battery frame shelf v1",
+      "uuid": "602ee4a54b87",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-frame-shelf-v1.png",
       "group": "POWER ARCHITECTURE",
       "system_index": 1,
-      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/clamp-asm-v2.pdf",
-      "source_size_bytes": 537352,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V1/battery-frame-shelf-v1.pdf",
+      "source_size_bytes": 64641,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
       "width": 3400,
       "height": 2200,
-      "file_size_bytes": 523429,
+      "file_size_bytes": 268857,
       "date": null,
       "author": {
         "slug": "adam-james",
@@ -446,6 +446,75 @@
       },
       "extracted_text": "",
       "id": "DR–19",
+      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-frame-shelf-v1.png"
+    },
+    {
+      "filename": "battery-module-v2 page 1.png",
+      "title": "Catalyst Battery Module-8cell",
+      "uuid": "da879beba15d",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-module-v2 page 1.png",
+      "group": "POWER ARCHITECTURE",
+      "system_index": 1,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V2/battery-module-v2.pdf",
+      "source_size_bytes": 1683552,
+      "total_pages_in_pdf": 2,
+      "page_set_label": "1 of 2",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 707203,
+      "date": null,
+      "author": {
+        "slug": "adam-james",
+        "name": "Adam Vermeer"
+      },
+      "extracted_text": "",
+      "id": "DR–20",
+      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-module-v2 page 1.png"
+    },
+    {
+      "filename": "battery-module-v2 page 2.png",
+      "title": "Catalyst Battery Module-8cell",
+      "uuid": "2ecad4bdbc51",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/battery-module-v2 page 2.png",
+      "group": "POWER ARCHITECTURE",
+      "system_index": 1,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V2/battery-module-v2.pdf",
+      "source_size_bytes": 1683552,
+      "total_pages_in_pdf": 2,
+      "page_set_label": "2 of 2",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 736917,
+      "date": null,
+      "author": {
+        "slug": "adam-james",
+        "name": "Adam Vermeer"
+      },
+      "extracted_text": "",
+      "id": "DR–21",
+      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/battery-module-v2 page 2.png"
+    },
+    {
+      "filename": "clamp-asm-v2.png",
+      "title": "Battery Module Clamp Assembly",
+      "uuid": "948946ed7abe",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/clamp-asm-v2.png",
+      "group": "POWER ARCHITECTURE",
+      "system_index": 1,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V2/clamp-asm-v2.pdf",
+      "source_size_bytes": 724854,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 849129,
+      "date": null,
+      "author": {
+        "slug": "adam-james",
+        "name": "Adam Vermeer"
+      },
+      "extracted_text": "",
+      "id": "DR–22",
       "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/clamp-asm-v2.png"
     },
     {
@@ -468,54 +537,100 @@
         "name": "Adam Vermeer"
       },
       "extracted_text": "",
-      "id": "DR–20",
+      "id": "DR–23",
       "thumbnail_path": "/drawings/output_images/POWER ARCHITECTURE/drill-template.svg"
     },
     {
       "filename": "frame-asm-busbars-v1.png",
       "title": "Frame asm busbars v1",
-      "uuid": "c37a7db29d91",
+      "uuid": "1e27d2af491d",
       "rel_path": "/drawings/output_images/POWER ARCHITECTURE/frame-asm-busbars-v1.png",
       "group": "POWER ARCHITECTURE",
       "system_index": 1,
-      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/frame-asm-busbars-v1.pdf",
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V1/frame-asm-busbars-v1.pdf",
       "source_size_bytes": 521884,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
       "width": 3400,
       "height": 2200,
-      "file_size_bytes": 737881,
+      "file_size_bytes": 725279,
       "date": null,
       "author": {
         "slug": "adam-james",
         "name": "Adam Vermeer"
       },
       "extracted_text": "",
-      "id": "DR–21",
+      "id": "DR–24",
       "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/frame-asm-busbars-v1.png"
     },
     {
       "filename": "frame-asm-v1.png",
       "title": "Catalyst Battery Frame Assembly",
-      "uuid": "575312710620",
+      "uuid": "59f521ab3801",
       "rel_path": "/drawings/output_images/POWER ARCHITECTURE/frame-asm-v1.png",
       "group": "POWER ARCHITECTURE",
       "system_index": 1,
-      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/frame-asm-v1.pdf",
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V1/frame-asm-v1.pdf",
       "source_size_bytes": 137036,
       "total_pages_in_pdf": 1,
       "page_set_label": "1 of 1",
       "width": 3400,
       "height": 2200,
-      "file_size_bytes": 764829,
+      "file_size_bytes": 746165,
       "date": null,
       "author": {
         "slug": "adam-james",
         "name": "Adam Vermeer"
       },
       "extracted_text": "",
-      "id": "DR–22",
+      "id": "DR–25",
       "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/frame-asm-v1.png"
+    },
+    {
+      "filename": "module-electrical-connection-components-v2.png",
+      "title": "Catalyst Battery Module",
+      "uuid": "f0341dc1f5cc",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/module-electrical-connection-components-v2.png",
+      "group": "POWER ARCHITECTURE",
+      "system_index": 1,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/V2/module-electrical-connection-components-v2.pdf",
+      "source_size_bytes": 542714,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 3400,
+      "height": 2200,
+      "file_size_bytes": 655628,
+      "date": null,
+      "author": {
+        "slug": "adam-james",
+        "name": "Adam Vermeer"
+      },
+      "extracted_text": "",
+      "id": "DR–26",
+      "thumbnail_path": "/drawings/output_images/thumbnails/POWER ARCHITECTURE/module-electrical-connection-components-v2.png"
+    },
+    {
+      "filename": "solar-panel-drill-template.svg",
+      "title": "Solar panel drill template",
+      "uuid": "cc4142b0ab9f-1",
+      "rel_path": "/drawings/output_images/POWER ARCHITECTURE/solar-panel-drill-template.svg",
+      "group": "POWER ARCHITECTURE",
+      "system_index": 1,
+      "source_path": "../frontend/public/drawings/AJV/POWER ARCHITECTURE/solar-panel-drill-template.svg",
+      "source_size_bytes": 404758,
+      "total_pages_in_pdf": 1,
+      "page_set_label": "1 of 1",
+      "width": 816.0,
+      "height": 478.89142,
+      "file_size_bytes": 404758,
+      "date": null,
+      "author": {
+        "slug": "adam-james",
+        "name": "Adam Vermeer"
+      },
+      "extracted_text": "",
+      "id": "DR–27",
+      "thumbnail_path": "/drawings/output_images/POWER ARCHITECTURE/solar-panel-drill-template.svg"
     },
     {
       "filename": "PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.png",
@@ -537,7 +652,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–23",
+      "id": "DR–28",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/PRELIM Solander 38 fascia sheet 1 of 6 overview HJN 7APR26.png"
     },
     {
@@ -560,7 +675,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–24",
+      "id": "DR–29",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/PRELIM Solander 38 fascia sheet 2 of 6 welded parts HJN 7APR26.png"
     },
     {
@@ -583,7 +698,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–25",
+      "id": "DR–30",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/PRELIM Solander 38 fascia sheet 3 of 6 flanged removable parts HJN 7APR26.png"
     },
     {
@@ -606,7 +721,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–26",
+      "id": "DR–31",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/PRELIM Solander 38 fascia sheet 4 of 6 tabbed removable parts HJN 7APR26.png"
     },
     {
@@ -629,7 +744,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–27",
+      "id": "DR–32",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/PRELIM Solander 38 fascia sheet 5 of 6 sections & details HJN 7APR26.png"
     },
     {
@@ -652,7 +767,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–28",
+      "id": "DR–33",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/PRELIM Solander 38 fascia sheet 6 of 6 brow radius template HJN 7APR26.png"
     },
     {
@@ -675,7 +790,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–29",
+      "id": "DR–34",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/instrument panel frames & flanges overview HJN 9-19-25.png"
     },
     {
@@ -698,7 +813,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–30",
+      "id": "DR–35",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/G10 backing palte sheet 1 planview 8-14-25.png"
     },
     {
@@ -721,7 +836,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–31",
+      "id": "DR–36",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/G10 backing plate sheet 2 sizing 8-14-25.png"
     },
     {
@@ -744,7 +859,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–32",
+      "id": "DR–37",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/G10 backing plate sheet 3 gussets 8-14-25.png"
     },
     {
@@ -767,7 +882,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–33",
+      "id": "DR–38",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/rail & stanchion planset sheet 1 of 6 overview HJN 7-17-25.png"
     },
     {
@@ -790,7 +905,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–34",
+      "id": "DR–39",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/rail & stanchion planset sheet 2 of 6 deck landing locations HJN 7-17-25.png"
     },
     {
@@ -813,7 +928,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–35",
+      "id": "DR–40",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/rail & stanchion planset sheet 3 of 6 forward deck HJN 7-17-25.png"
     },
     {
@@ -836,7 +951,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–36",
+      "id": "DR–41",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/rail & stanchion planset sheet 4 of 6 midships & aft deck HJN 7-17-25.png"
     },
     {
@@ -859,7 +974,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–37",
+      "id": "DR–42",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/rail & stanchion planset sheet 5 of 6 REV A aft center beam & lobstertail HJN 7-17-25.png"
     },
     {
@@ -882,7 +997,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–38",
+      "id": "DR–43",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/rail & stanchion planset sheet 6 of 6 forward deck stanchion flanges HJN 7-17-25.png"
     },
     {
@@ -905,7 +1020,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–39",
+      "id": "DR–44",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/solar panel location sheet 1 of 2 planview HJN 6-5-25.png"
     },
     {
@@ -928,7 +1043,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–40",
+      "id": "DR–45",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/solar panel location sheet 2 of 2 longitudinal section HJN 6-5-25.png"
     },
     {
@@ -951,7 +1066,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–41",
+      "id": "DR–46",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 addendum rev G sheet 1 OF 2 canopy plating locations 5-22-25.png"
     },
     {
@@ -974,7 +1089,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–42",
+      "id": "DR–47",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 addendum rev G sheet 2 OF 2 canopy plating labels 5-22-25.png"
     },
     {
@@ -997,7 +1112,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–43",
+      "id": "DR–48",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Shelf lip planview location & details 5-16-25.png"
     },
     {
@@ -1020,7 +1135,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–44",
+      "id": "DR–49",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev F sheet 1 - wireway pens & skylight ledge revised 5-15-25.png"
     },
     {
@@ -1043,7 +1158,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–45",
+      "id": "DR–50",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/P5 foothold dimensions 4-29-25.png"
     },
     {
@@ -1066,7 +1181,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–46",
+      "id": "DR–51",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/oval cut-out template 4-29-25.png"
     },
     {
@@ -1089,7 +1204,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–47",
+      "id": "DR–52",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/port upright bevels 4-11-25.png"
     },
     {
@@ -1112,7 +1227,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–48",
+      "id": "DR–53",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/revised section 3 with inch and a half sq tubes 4-11-25.png"
     },
     {
@@ -1135,7 +1250,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–49",
+      "id": "DR–54",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/upright framing compound bevel details 4-10-25.png"
     },
     {
@@ -1158,7 +1273,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–50",
+      "id": "DR–55",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/plate sheet nesting 2-28-25.png"
     },
     {
@@ -1181,7 +1296,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–51",
+      "id": "DR–56",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/canopy panel CNC parts overview 2-20-25.png"
     },
     {
@@ -1204,7 +1319,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–52",
+      "id": "DR–57",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/arch flanges dimensions & locations on jig 2-17-25.png"
     },
     {
@@ -1227,7 +1342,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–53",
+      "id": "DR–58",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/baseplate dimensions & curvature 2-17-25.png"
     },
     {
@@ -1250,7 +1365,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–54",
+      "id": "DR–59",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/baseplate location on jig 2-17-25.png"
     },
     {
@@ -1273,7 +1388,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–55",
+      "id": "DR–60",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/baseplate overview 2-17-25.png"
     },
     {
@@ -1296,7 +1411,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–56",
+      "id": "DR–61",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 2 of 12 REVISED 2-6-25.png"
     },
     {
@@ -1319,7 +1434,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–57",
+      "id": "DR–62",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig frames 14-20 revised HJN 1-14-25.png"
     },
     {
@@ -1342,7 +1457,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–58",
+      "id": "DR–63",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/baseplate & HD foam core locations planview 1-6-25.png"
     },
     {
@@ -1365,7 +1480,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–59",
+      "id": "DR–64",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Jig Drawing Booklet 8-26-24 page 1.png"
     },
     {
@@ -1388,7 +1503,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–60",
+      "id": "DR–65",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Jig Drawing Booklet 8-26-24 page 2.png"
     },
     {
@@ -1411,7 +1526,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–61",
+      "id": "DR–66",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Jig Drawing Booklet 8-26-24 page 3.png"
     },
     {
@@ -1434,7 +1549,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–62",
+      "id": "DR–67",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Jig Drawing Booklet 8-26-24 page 4.png"
     },
     {
@@ -1457,7 +1572,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–63",
+      "id": "DR–68",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Jig Drawing Booklet 8-26-24 page 5.png"
     },
     {
@@ -1480,7 +1595,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–64",
+      "id": "DR–69",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Jig Drawing Booklet 8-26-24 page 6.png"
     },
     {
@@ -1503,7 +1618,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–65",
+      "id": "DR–70",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig frames, hd foam, base plates & flanges planview 8-23-24.png"
     },
     {
@@ -1526,7 +1641,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–66",
+      "id": "DR–71",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig planview 8-23-24.png"
     },
     {
@@ -1549,7 +1664,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–67",
+      "id": "DR–72",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig & hull profile & persp 8-22-24.png"
     },
     {
@@ -1572,7 +1687,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–68",
+      "id": "DR–73",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/baseplate bolt layout & control points 2-17-24.png"
     },
     {
@@ -1595,7 +1710,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–69",
+      "id": "DR–74",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 1 of 12 PRELIM.png"
     },
     {
@@ -1618,7 +1733,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–70",
+      "id": "DR–75",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 10 of 12 PRELIM.png"
     },
     {
@@ -1641,7 +1756,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–71",
+      "id": "DR–76",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 11 of 12 PRELIM.png"
     },
     {
@@ -1664,7 +1779,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–72",
+      "id": "DR–77",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 12 of 12 PRELIM.png"
     },
     {
@@ -1687,7 +1802,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–73",
+      "id": "DR–78",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 3 of 12 PRELIM.png"
     },
     {
@@ -1710,7 +1825,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–74",
+      "id": "DR–79",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 4 of 12 PRELIM.png"
     },
     {
@@ -1733,7 +1848,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–75",
+      "id": "DR–80",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 5 of 12 PRELIM.png"
     },
     {
@@ -1756,7 +1871,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–76",
+      "id": "DR–81",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 6 of 12 PRELIM.png"
     },
     {
@@ -1779,7 +1894,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–77",
+      "id": "DR–82",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 7 of 12 PRELIM.png"
     },
     {
@@ -1802,7 +1917,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–78",
+      "id": "DR–83",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 8 of 12 PRELIM.png"
     },
     {
@@ -1825,7 +1940,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–79",
+      "id": "DR–84",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/Solander 38 superstructure sheet 9 of 12 PRELIM.png"
     },
     {
@@ -1848,7 +1963,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–80",
+      "id": "DR–85",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E forward windscreen baseplate.png"
     },
     {
@@ -1871,7 +1986,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–81",
+      "id": "DR–86",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 1 of 9 center & windscreen framing overview.png"
     },
     {
@@ -1894,7 +2009,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–82",
+      "id": "DR–87",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 2 of 9 wireway pens.png"
     },
     {
@@ -1917,7 +2032,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–83",
+      "id": "DR–88",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 3 of 9 IBP.png"
     },
     {
@@ -1940,7 +2055,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–84",
+      "id": "DR–89",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 4 of 9 planview.png"
     },
     {
@@ -1963,7 +2078,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–85",
+      "id": "DR–90",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 5 of 9 level canopy framing.png"
     },
     {
@@ -1986,7 +2101,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–86",
+      "id": "DR–91",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 6 of 9 view looking forward.png"
     },
     {
@@ -2009,7 +2124,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–87",
+      "id": "DR–92",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 7 of 9 center frame parts.png"
     },
     {
@@ -2032,7 +2147,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–88",
+      "id": "DR–93",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 8 of 9 view looking aft.png"
     },
     {
@@ -2055,7 +2170,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–89",
+      "id": "DR–94",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/addendum rev E sheet 9 of 9 windscreen frame parts.png"
     },
     {
@@ -2078,7 +2193,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–90",
+      "id": "DR–95",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig frames 1-7 Aug-22-24.png"
     },
     {
@@ -2101,7 +2216,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–91",
+      "id": "DR–96",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig frames 1-7 revised 1-14-25 HJN.png"
     },
     {
@@ -2124,7 +2239,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–92",
+      "id": "DR–97",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig frames 14-20 Aug-22-24.png"
     },
     {
@@ -2147,7 +2262,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–93",
+      "id": "DR–98",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig frames 8-13 Aug-22-24.png"
     },
     {
@@ -2170,7 +2285,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–94",
+      "id": "DR–99",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/jig frames 8-13 revised 1-14-25 HJN.png"
     },
     {
@@ -2193,7 +2308,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–95",
+      "id": "DR–100",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev A sheet 1 of 6.png"
     },
     {
@@ -2216,7 +2331,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–96",
+      "id": "DR–101",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev A sheet 2 of 6.png"
     },
     {
@@ -2239,7 +2354,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–97",
+      "id": "DR–102",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev A sheet 3 of 6.png"
     },
     {
@@ -2262,7 +2377,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–98",
+      "id": "DR–103",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev A sheet 4 of 6.png"
     },
     {
@@ -2285,7 +2400,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–99",
+      "id": "DR–104",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev A sheet 5 of 6.png"
     },
     {
@@ -2308,7 +2423,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–100",
+      "id": "DR–105",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev A sheet 6 of 6.png"
     },
     {
@@ -2331,7 +2446,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–101",
+      "id": "DR–106",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev D sheet 1 of 6 - upright locations on baseplate.png"
     },
     {
@@ -2354,7 +2469,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–102",
+      "id": "DR–107",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev D sheet 1B of 6 - upright locations true views to curvature.png"
     },
     {
@@ -2377,7 +2492,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–103",
+      "id": "DR–108",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev D sheet 2 of 6 - starboard framing profile.png"
     },
     {
@@ -2400,7 +2515,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–104",
+      "id": "DR–109",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev D sheet 3 of 6 - port framing profile.png"
     },
     {
@@ -2423,7 +2538,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–105",
+      "id": "DR–110",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev D sheet 4 of 6 - port, starboard, forward framing planview.png"
     },
     {
@@ -2446,7 +2561,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–106",
+      "id": "DR–111",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev D sheet 5 of 6 - port, starboard, forward framing view looking aft.png"
     },
     {
@@ -2469,7 +2584,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–107",
+      "id": "DR–112",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstructure addendum rev D sheet 6 of 6 - sections.png"
     },
     {
@@ -2492,7 +2607,7 @@
         "name": "Adam Vermeer"
       },
       "extracted_text": "",
-      "id": "DR–108",
+      "id": "DR–113",
       "thumbnail_path": "/drawings/output_images/SUPERSTRUCTURE/superstructure-isometric.svg"
     },
     {
@@ -2515,7 +2630,7 @@
         "name": "Adam Vermeer"
       },
       "extracted_text": "",
-      "id": "DR–109",
+      "id": "DR–114",
       "thumbnail_path": "/drawings/output_images/SUPERSTRUCTURE/superstructure-top.svg"
     },
     {
@@ -2538,7 +2653,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–110",
+      "id": "DR–115",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstucture addendum rev B sheet 1 of 4.png"
     },
     {
@@ -2561,7 +2676,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–111",
+      "id": "DR–116",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstucture addendum rev B sheet 2 of 4.png"
     },
     {
@@ -2584,7 +2699,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–112",
+      "id": "DR–117",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstucture addendum rev B sheet 3 of 4.png"
     },
     {
@@ -2607,7 +2722,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–113",
+      "id": "DR–118",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstucture addendum rev B sheet 4 of 4.png"
     },
     {
@@ -2630,7 +2745,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–114",
+      "id": "DR–119",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstucture addendum rev C sheet 1 of 4.png"
     },
     {
@@ -2653,7 +2768,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–115",
+      "id": "DR–120",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstucture addendum rev C sheet 2 of 4.png"
     },
     {
@@ -2676,7 +2791,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–116",
+      "id": "DR–121",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstucture addendum rev C sheet 3 of 4.png"
     },
     {
@@ -2699,7 +2814,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–117",
+      "id": "DR–122",
       "thumbnail_path": "/drawings/output_images/thumbnails/SUPERSTRUCTURE/superstucture addendum rev C sheet 4 of 4.png"
     },
     {
@@ -2722,7 +2837,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–118",
+      "id": "DR–123",
       "thumbnail_path": "/drawings/output_images/thumbnails/CONTROL/PRELIM steering sheet 1 planview HJN 8-20-25.png"
     },
     {
@@ -2745,7 +2860,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–119",
+      "id": "DR–124",
       "thumbnail_path": "/drawings/output_images/thumbnails/CONTROL/PRELIM steering sheet 2 transverse section HJN 8-20-25.png"
     },
     {
@@ -2768,7 +2883,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–120",
+      "id": "DR–125",
       "thumbnail_path": "/drawings/output_images/thumbnails/CONTROL/PRELIM steering sheet 3 longitudinal sections HJN 8-20-25.png"
     },
     {
@@ -2791,7 +2906,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–121",
+      "id": "DR–126",
       "thumbnail_path": "/drawings/output_images/thumbnails/PROPULSION/shaftline alignment dimensions HJN 4-6-25.png"
     },
     {
@@ -2814,7 +2929,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–122",
+      "id": "DR–127",
       "thumbnail_path": "/drawings/output_images/thumbnails/PROPULSION/shaftline components overview HJN 4-6-25.png"
     },
     {
@@ -2837,7 +2952,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–123",
+      "id": "DR–128",
       "thumbnail_path": "/drawings/output_images/thumbnails/PROPULSION/Solander 38 motor mount details 9-25-24.png"
     },
     {
@@ -2860,7 +2975,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–124",
+      "id": "DR–129",
       "thumbnail_path": "/drawings/output_images/thumbnails/BODY/Solander 38 aft beam access hatch cut-out locations 2-19-25.png"
     },
     {
@@ -2883,7 +2998,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–125",
+      "id": "DR–130",
       "thumbnail_path": "/drawings/output_images/thumbnails/BODY/Solander 38 deck track location planview 11-27-24.png"
     },
     {
@@ -2906,7 +3021,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–126",
+      "id": "DR–131",
       "thumbnail_path": "/drawings/output_images/thumbnails/BODY/Solander 38 high density foam location in fwd beam 9-6-24.png"
     },
     {
@@ -2929,7 +3044,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–127",
+      "id": "DR–132",
       "thumbnail_path": "/drawings/output_images/thumbnails/WATER & HEATING SYSTEMS/keel cooler locations 5-15-25.png"
     },
     {
@@ -2952,7 +3067,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–128",
+      "id": "DR–133",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/forward mast rev A sheet 1 OF 4 overview HJN 20MAY26.png"
     },
     {
@@ -2975,7 +3090,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–129",
+      "id": "DR–134",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/forward mast rev A sheet 2 of 4 IBP HJN 20MAY26.png"
     },
     {
@@ -2998,7 +3113,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–130",
+      "id": "DR–135",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/forward mast rev A sheet 3 of 4 aluminum parts dimensions HJN 20MAY26.png"
     },
     {
@@ -3021,7 +3136,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–131",
+      "id": "DR–136",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/prelim aft starboard mast sheet 1 of 2 overview HJN 12-19-25.png"
     },
     {
@@ -3044,7 +3159,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–132",
+      "id": "DR–137",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/prelim aft starboard mast sheet 2 of 2 details HJN 12-19-25.png"
     },
     {
@@ -3067,7 +3182,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–133",
+      "id": "DR–138",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/center deck & kiwi grip area HJN 11-6-25.png"
     },
     {
@@ -3090,7 +3205,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–134",
+      "id": "DR–139",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/custom portlight dimensions HJN 7-31-25.png"
     },
     {
@@ -3113,7 +3228,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–135",
+      "id": "DR–140",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/custom portlight location HJN 7-31-25.png"
     },
     {
@@ -3136,7 +3251,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–136",
+      "id": "DR–141",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/midships area cabinet locations HJN 7-30-25.png"
     },
     {
@@ -3159,7 +3274,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–137",
+      "id": "DR–142",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/PRELIM battery component transverse conduit sheet 1 of 3 transverse & longitudinal sections HJN 7-7-25.png"
     },
     {
@@ -3182,7 +3297,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–138",
+      "id": "DR–143",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/PRELIM battery component transverse conduit sheet 2 of 3 planview HJN 7-7-25.png"
     },
     {
@@ -3205,7 +3320,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–139",
+      "id": "DR–144",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/PRELIM battery component transverse conduit sheet 3 of 3 parts overview  HJN 7-7-25.png"
     },
     {
@@ -3228,7 +3343,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–140",
+      "id": "DR–145",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery access panels inbd face HJN 6-19-25.png"
     },
     {
@@ -3251,7 +3366,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–141",
+      "id": "DR–146",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery access panels planview & transverse sections HJN 6-19-25.png"
     },
     {
@@ -3274,7 +3389,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–142",
+      "id": "DR–147",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/Solander 38 aft cleat location HJN 6-3-25.png"
     },
     {
@@ -3297,7 +3412,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–143",
+      "id": "DR–148",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/lower watermaker cabinet section 36in aft of forward bulkhead 5-16-25.png"
     },
     {
@@ -3320,7 +3435,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–144",
+      "id": "DR–149",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/port hull section 36in aft of forward bulkhead 5-16-25.png"
     },
     {
@@ -3343,7 +3458,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–145",
+      "id": "DR–150",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/upper watermaker cabinet section 36in aft of forward bulkhead 5-16-25.png"
     },
     {
@@ -3366,7 +3481,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–146",
+      "id": "DR–151",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery access & nearby struct longitudinal section 5-12-25.png"
     },
     {
@@ -3389,7 +3504,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–147",
+      "id": "DR–152",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery access & nearby structure planview 5-12-25.png"
     },
     {
@@ -3412,7 +3527,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–148",
+      "id": "DR–153",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery access & nearby structure transverse section 5-12-25.png"
     },
     {
@@ -3435,7 +3550,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–149",
+      "id": "DR–154",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery component cut-outs IBP 5-6-25.png"
     },
     {
@@ -3458,7 +3573,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–150",
+      "id": "DR–155",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery component cut-outs PLANVIEW 5-6-25.png"
     },
     {
@@ -3481,7 +3596,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–151",
+      "id": "DR–156",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/bridge deck area planview 5-2-25.png"
     },
     {
@@ -3504,7 +3619,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–152",
+      "id": "DR–157",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/bridge deck area planview no annotation 5-2-25.png"
     },
     {
@@ -3527,7 +3642,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–153",
+      "id": "DR–158",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/electrical cabinet aft face 3in=1ft scale 4-29-25.png"
     },
     {
@@ -3550,7 +3665,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–154",
+      "id": "DR–159",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/electrical cabinets aft faces 4-29-25.png"
     },
     {
@@ -3573,7 +3688,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–155",
+      "id": "DR–160",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/port heat pump cabinet aft face 4-17-25.png"
     },
     {
@@ -3596,7 +3711,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–156",
+      "id": "DR–161",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/port heat pump cabinet forward face revised 4-17-25.png"
     },
     {
@@ -3619,7 +3734,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–157",
+      "id": "DR–162",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/watermaker cabinet forward face lower 4-17-25.png"
     },
     {
@@ -3642,7 +3757,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–158",
+      "id": "DR–163",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/watermaker cabinet forward face upper 4-17-25.png"
     },
     {
@@ -3665,7 +3780,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–159",
+      "id": "DR–164",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/steering component cut-out 4-5-25.png"
     },
     {
@@ -3688,7 +3803,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–160",
+      "id": "DR–165",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery hatch & center beam 4-3-25.png"
     },
     {
@@ -3711,7 +3826,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–161",
+      "id": "DR–166",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/battery hatch in starboard hull 4-3-25.png"
     },
     {
@@ -3734,7 +3849,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–162",
+      "id": "DR–167",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet locations planview rev A watermaker 2-26-25.png"
     },
     {
@@ -3757,7 +3872,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–163",
+      "id": "DR–168",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet locations port hull profile rev A watermaker 2-26-25.png"
     },
     {
@@ -3780,7 +3895,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–164",
+      "id": "DR–169",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/watermaker cabinet orthogonal views 2-26-25.png"
     },
     {
@@ -3803,7 +3918,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–165",
+      "id": "DR–170",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/watermaker cabinet partition section lower 2-26-25.png"
     },
     {
@@ -3826,7 +3941,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–166",
+      "id": "DR–171",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/watermaker cabinet partition section upper 2-26-25.png"
     },
     {
@@ -3849,7 +3964,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–167",
+      "id": "DR–172",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/watermaker cabinet parts dimensions 2-26-25.png"
     },
     {
@@ -3872,7 +3987,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–168",
+      "id": "DR–173",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/watermaker cabinet perspective views 2-26-25.png"
     },
     {
@@ -3895,7 +4010,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–169",
+      "id": "DR–174",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/port hull work bench planview 1-9-25.png"
     },
     {
@@ -3918,7 +4033,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–170",
+      "id": "DR–175",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/port hull work bench planview PM revisions 1-9-25.png"
     },
     {
@@ -3941,7 +4056,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–171",
+      "id": "DR–176",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/port hull work bench planview more dimensions 1-9-25.png"
     },
     {
@@ -3964,7 +4079,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–172",
+      "id": "DR–177",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet & partition locations planview 1-2-25.png"
     },
     {
@@ -3987,7 +4102,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–173",
+      "id": "DR–178",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet & partition locations port hull profiles 1-2-25.png"
     },
     {
@@ -4010,7 +4125,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–174",
+      "id": "DR–179",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet & partition locations starboard hull profiles 1-2-25.png"
     },
     {
@@ -4033,7 +4148,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–175",
+      "id": "DR–180",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/revised cabinet locations planview 12-30-24.png"
     },
     {
@@ -4056,7 +4171,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–176",
+      "id": "DR–181",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/revised cabinet locations port hull profiles 12-30-24.png"
     },
     {
@@ -4079,7 +4194,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–177",
+      "id": "DR–182",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/revised cabinet locations starboard hull profiles 12-30-24.png"
     },
     {
@@ -4102,7 +4217,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–178",
+      "id": "DR–183",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/Solander 38 cabinet location map 11-6-24.png"
     },
     {
@@ -4125,7 +4240,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–179",
+      "id": "DR–184",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/Solander 38 cabinets 1 & 2 11-6-24.png"
     },
     {
@@ -4148,7 +4263,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–180",
+      "id": "DR–185",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/Solander 38 cabinets 3, 4, & 5 11-6-24.png"
     },
     {
@@ -4171,7 +4286,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–181",
+      "id": "DR–186",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/Solander 38 profile & planview for cabinet design 9-27-24.png"
     },
     {
@@ -4194,7 +4309,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–182",
+      "id": "DR–187",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/Solander 38 sections for cabinet design 9-27-24.png"
     },
     {
@@ -4217,7 +4332,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–183",
+      "id": "DR–188",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/bulkhead D section - full.png"
     },
     {
@@ -4240,7 +4355,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–184",
+      "id": "DR–189",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/bulkhead D section - port (inboard) counter.png"
     },
     {
@@ -4263,7 +4378,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–185",
+      "id": "DR–190",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/bulkhead D section - stbd (outboard) counter.png"
     },
     {
@@ -4286,7 +4401,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–186",
+      "id": "DR–191",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/bulkhead D section - upper port cupboard.png"
     },
     {
@@ -4309,7 +4424,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–187",
+      "id": "DR–192",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/bulkhead D section - upper starboard spice rack.png"
     },
     {
@@ -4332,7 +4447,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–188",
+      "id": "DR–193",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet 1.png"
     },
     {
@@ -4355,7 +4470,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–189",
+      "id": "DR–194",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet 2.png"
     },
     {
@@ -4378,7 +4493,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–190",
+      "id": "DR–195",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet 3 & 4.png"
     },
     {
@@ -4401,7 +4516,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–191",
+      "id": "DR–196",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet 5.png"
     },
     {
@@ -4424,7 +4539,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–192",
+      "id": "DR–197",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 1 with centerline measurement.png"
     },
     {
@@ -4447,7 +4562,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–193",
+      "id": "DR–198",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 1 with scale.png"
     },
     {
@@ -4470,7 +4585,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–194",
+      "id": "DR–199",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 10 11X17IN with centerline measurement.png"
     },
     {
@@ -4493,7 +4608,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–195",
+      "id": "DR–200",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 10 11X17IN with scale.png"
     },
     {
@@ -4516,7 +4631,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–196",
+      "id": "DR–201",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 2 11X17IN with centerline measurement.png"
     },
     {
@@ -4539,7 +4654,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–197",
+      "id": "DR–202",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 2 11X17IN with scale.png"
     },
     {
@@ -4562,7 +4677,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–198",
+      "id": "DR–203",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 3 with centerline measurement.png"
     },
     {
@@ -4585,7 +4700,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–199",
+      "id": "DR–204",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 3 with scale.png"
     },
     {
@@ -4608,7 +4723,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–200",
+      "id": "DR–205",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 4 with centerline measurement.png"
     },
     {
@@ -4631,7 +4746,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–201",
+      "id": "DR–206",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 4 with scale.png"
     },
     {
@@ -4654,7 +4769,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–202",
+      "id": "DR–207",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 5 with centerline measurement.png"
     },
     {
@@ -4677,7 +4792,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–203",
+      "id": "DR–208",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 5 with scale.png"
     },
     {
@@ -4700,7 +4815,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–204",
+      "id": "DR–209",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 6 with centerline measurement.png"
     },
     {
@@ -4723,7 +4838,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–205",
+      "id": "DR–210",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 6 with scale.png"
     },
     {
@@ -4746,7 +4861,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–206",
+      "id": "DR–211",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 7 with centerline measurement.png"
     },
     {
@@ -4769,7 +4884,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–207",
+      "id": "DR–212",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 7 with scale.png"
     },
     {
@@ -4792,7 +4907,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–208",
+      "id": "DR–213",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 8 with centerline measurement.png"
     },
     {
@@ -4815,7 +4930,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–209",
+      "id": "DR–214",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 8 with scale.png"
     },
     {
@@ -4838,7 +4953,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–210",
+      "id": "DR–215",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 9 with centerline measurement.png"
     },
     {
@@ -4861,7 +4976,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–211",
+      "id": "DR–216",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/cabinet partition 9 with scale.png"
     },
     {
@@ -4884,7 +4999,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–212",
+      "id": "DR–217",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/custom portlight full scale template 24x36 aft.png"
     },
     {
@@ -4907,7 +5022,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–213",
+      "id": "DR–218",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/custom portlight full scale template 24x36 forward.png"
     },
     {
@@ -4930,7 +5045,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–214",
+      "id": "DR–219",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/full sections at partitions 5, 6, 8, 9.png"
     },
     {
@@ -4953,7 +5068,7 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–215",
+      "id": "DR–220",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/starboard stairladder sheet 1 overview.png"
     },
     {
@@ -4976,12 +5091,12 @@
         "name": "Henry Nolan"
       },
       "extracted_text": "",
-      "id": "DR–216",
+      "id": "DR–221",
       "thumbnail_path": "/drawings/output_images/thumbnails/OUTFITTING & INTERIOR/starboard stairladder sheet 2 planview location.png"
     }
   ],
   "summary_statistics": {
-    "total_images": 216,
+    "total_images": 221,
     "unique_dimensions": [
       [
         2200,
@@ -5024,15 +5139,15 @@
         2200
       ]
     ],
-    "total_file_size_bytes": 89311436,
-    "average_width": 2944.2824074074074,
-    "average_height": 2332.3514468055555,
-    "average_pages_per_pdf": 1.0236966824644549,
+    "total_file_size_bytes": 92460940,
+    "average_width": 2942.9004524886877,
+    "average_height": 2321.5692485520362,
+    "average_pages_per_pdf": 1.027906976744186,
     "files_with_dates": 123,
-    "files_without_dates": 93,
+    "files_without_dates": 98,
     "files_by_system": {
       "overview": 13,
-      "power architecture": 9,
+      "power architecture": 14,
       "superstructure": 95,
       "control": 3,
       "propulsion": 3,
@@ -5042,7 +5157,7 @@
     },
     "files_by_author": {
       "Henry Nolan": 205,
-      "Adam Vermeer": 11
+      "Adam Vermeer": 16
     }
   }
 }
