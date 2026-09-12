@@ -113,11 +113,22 @@ def audit_related_models(valid_filenames):
         print()
 
 
+def inline_entry_valid(entry, valid_filenames):
+    """
+    An inline-model entry is either a group prefix ("BATTERY MODULE V2__"),
+    valid while any layer sits under it, or an exact filename.
+    """
+    if entry.endswith("__"):
+        return any(v.startswith(entry) for v in valid_filenames)
+    return entry in valid_filenames
+
+
 def audit_inline_models(valid_filenames):
     """
-    Inline model blocks in article bodies. These hold plain filenames like
-    relatedModels, so re-exporting a layer under a new name silently unlinks
-    them — the block renders empty rather than erroring.
+    Inline model blocks in article bodies. A group prefix survives renames
+    below it, but a plain filename is linked exactly like relatedModels, so
+    re-exporting that layer under a new name silently unlinks it — the block
+    renders empty rather than erroring.
     """
     print("--- inlineModel blocks ---")
     articles = query_sanity(
@@ -129,7 +140,8 @@ def audit_inline_models(valid_filenames):
     stale = []
     for article in articles:
         for block in article.get("blocks", []):
-            bad = [m for m in (block.get("models") or []) if m not in valid_filenames]
+            bad = [m for m in (block.get("models") or [])
+                   if not inline_entry_valid(m, valid_filenames)]
             if bad:
                 stale.append((article, block, bad))
 
@@ -144,6 +156,18 @@ def audit_inline_models(valid_filenames):
               f" → \"{block.get('title', '(untitled block)')}\"")
         for m in bad_models:
             print(f"      ✗ {m}")
+            if m.endswith("__"):
+                # a stale group: offer the prefixes that still exist at the
+                # same depth under the same top-level system
+                system, depth = m.split("__")[0], m.count("__")
+                prefixes = sorted({
+                    "__".join(v.split("__")[:depth]) + "__"
+                    for v in valid_filenames
+                    if v.startswith(system + "__") and v.count("__") >= depth
+                })
+                for s in prefixes[:6]:
+                    print(f"          → {s}?")
+                continue
             stem = m.replace(".glb", "")
             for s in [v for v in valid_filenames if v.startswith(stem + "__")][:6]:
                 print(f"          → {s}?")

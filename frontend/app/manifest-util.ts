@@ -77,6 +77,31 @@ export function knownModels(filenames: string[]): string[] {
   return filenames.filter((filename) => allFilenames.has(filename));
 }
 
+/**
+ * Resolve inline-model entries to filenames. An entry ending in "__" is a path
+ * prefix ("BATTERY MODULE V2__", "BODY__CTR BEAM__") and expands to every layer
+ * under it, so the block survives renames below that path. Anything else is an
+ * exact filename and is kept only if a manifest lists it.
+ */
+export function expandModels(entries: string[]): string[] {
+  const out: string[] = [];
+  const seen = new Set<string>();
+  for (const entry of entries) {
+    const matches = entry.endsWith("__")
+      ? [...allFilenames].filter((filename) => filename.startsWith(entry))
+      : allFilenames.has(entry)
+        ? [entry]
+        : [];
+    for (const filename of matches) {
+      if (!seen.has(filename)) {
+        seen.add(filename);
+        out.push(filename);
+      }
+    }
+  }
+  return out;
+}
+
 /** Manifest entries across all three collections, for mapping a hover to a layer. */
 export function getModelsByFilename(filenames: string[]): Model[] {
   const wanted = new Set(filenames);

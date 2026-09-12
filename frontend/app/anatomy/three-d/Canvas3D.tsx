@@ -16,7 +16,7 @@ import { Model3D } from "./Model3D";
 import ScalingLines3D from "./ScalingLines3D";
 import RaycastHandler from "./RaycastHandler";
 import { ModelBoundary } from "./ModelBoundary";
-import { contextualLayers, MaterialIndex, Model } from "./util";
+import { contextualLayers, MaterialIndex, Model, ignoredForScalingLines } from "./util";
 import HoverDisplay from "../HoverDisplay";
 import { ControlSettings } from "../Anatomy";
 import { GizmoViewcube } from "./GizmoViewcube";
@@ -137,6 +137,16 @@ function fitDistanceForBox(
   return distance;
 }
 
+/** Bounds of the loaded layers that count toward the dimension lines, or null if none do. */
+function scalingExtent(group: Group): Box3 | null {
+  const box = new Box3();
+  for (const child of group.children) {
+    if (ignoredForScalingLines(child.userData?.url)) continue;
+    box.expandByObject(child);
+  }
+  return box.isEmpty() ? null : box;
+}
+
 // ScalingLines3D destructures this, so an unclipped scene still has to pass one
 const FULL_EXTENT = { axis: "x", value: [0, 1] } as ClippingValues;
 
@@ -144,10 +154,17 @@ const VESSEL_LENGTH_M = 12;
 
 const CAMERA_INITIAL_POSITION = [0, 0, 0] as const;
 const CAMERA_FOV = 30;
+// Object lighting, for story models. The vessel scene keeps ACES filmic, but
+// at this exposure ACES lifts and desaturates mid-tones, so CAD colours come out
+// chalky; Khronos PBR Neutral reproduces them as authored. Lights are ~1.3× the
+// original values to compensate for Neutral not brightening the way ACES does.
+const OBJECT_TONE_MAPPING = THREE.NeutralToneMapping;
+const OBJECT_ENVIRONMENT_INTENSITY = 0.45;
+const OBJECT_AMBIENT_INTENSITY = 0.23;
 const LIGHT_POSITIONS: { pos: Vector3; intensity: number }[] = [
-  { pos: new Vector3(8, 6, 4), intensity: 0.5 },   // key
-  { pos: new Vector3(-8, 4, -4), intensity: 0.4 },  // fill (dark side)
-  { pos: new Vector3(0, -4, 6), intensity: 0.2 },   // bounce
+  { pos: new Vector3(8, 6, 4), intensity: 0.65 },   // key
+  { pos: new Vector3(-8, 4, -4), intensity: 0.52 },  // fill (dark side)
+  { pos: new Vector3(0, -4, 6), intensity: 0.26 },   // bounce
 ];
 
 export function Canvas3D({
@@ -186,6 +203,8 @@ export function Canvas3D({
     null,
   );
   const [derivedBox, setDerivedBox] = useState<Box3 | null>(null);
+  // the loaded extent minus layers excluded from the dimension lines
+  const [derivedScalingBox, setDerivedScalingBox] = useState<Box3 | null>(null);
   // the framing distance, which is as far out as a story model may be zoomed
   const [zoomOutLimit, setZoomOutLimit] = useState<number | null>(null);
 
@@ -263,6 +282,7 @@ export function Canvas3D({
       tempBox.current.setFromObject(groupRef.current);
     }
     setDerivedBox(tempBox.current.clone());
+    setDerivedScalingBox(scalingExtent(groupRef.current) ?? tempBox.current.clone());
     const center = tempBox.current.getCenter(tempCenter.current);
     const size = tempBox.current.getSize(tempSize.current);
 
@@ -356,7 +376,7 @@ export function Canvas3D({
     [],
   );
 
-  const scalingBox = boundingBox ?? derivedBox;
+  const scalingBox = boundingBox ?? derivedScalingBox;
 
   const annotationScale = useMemo(() => {
     if (boundingBox || !derivedBox) return 1;
@@ -369,7 +389,7 @@ export function Canvas3D({
   // a fraction of the framing distance, so how close you can get scales with
   // the model rather than being fixed at the vessel's 0.8m
   const minDistance =
-    interaction == "all" || !zoomOutLimit ? 0.8 : zoomOutLimit * 0.5;
+    interaction == "all" || !zoomOutLimit ? 0.8 : zoomOutLimit * 0.34;
 
   const captureRef = useRef<(() => string) | null>(null);
 
@@ -474,7 +494,12 @@ export function Canvas3D({
         suppressHydrationWarning
       >
         <Canvas
-          gl={{ antialias: true, alpha: true, preserveDrawingBuffer: true }}
+          gl={{
+            antialias: true,
+            alpha: true,
+            preserveDrawingBuffer: true,
+            toneMapping: lighting == "object" ? OBJECT_TONE_MAPPING : THREE.ACESFilmicToneMapping,
+          }}
           dpr={capture ? capture.dpr : undefined}
           camera={{ position: CAMERA_INITIAL_POSITION, fov: CAMERA_FOV }}
           onCreated={handleCanvasCreated}
@@ -484,7 +509,7 @@ export function Canvas3D({
           <Environment
             // background
             blur={0.02}
-            environmentIntensity={lighting == "object" ? 0.35 : 1}
+            environmentIntensity={lighting == "object" ? OBJECT_ENVIRONMENT_INTENSITY : 1}
             backgroundRotation={[0, -Math.PI / 6, 0]}
             files="/hdri/kloofendal_48d_partly_cloudy_puresky_2k.hdr"
           />
@@ -509,7 +534,7 @@ export function Canvas3D({
           )}
 
           {/* the sky HDRI is strongly top-lit, so vertical faces fall to black */}
-          <ambientLight intensity={lighting == "object" ? 0.18 : 0.75} />
+          <ambientLight intensity={lighting == "object" ? OBJECT_AMBIENT_INTENSITY : 0.75} />
           {lighting == "object" && directionalLights}
 
           <Suspense fallback={null}>

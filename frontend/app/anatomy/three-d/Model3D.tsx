@@ -14,13 +14,17 @@ type Model3DProps = {
 };
 
 const ORIGINAL_POSITION = [0, 0, 0] as const;
+// A stable empty default. A fresh `[]` per render would re-run the material
+// effect below on every parent re-render — and Canvas3D re-renders on each
+// hover — which restored the original colour over the hover highlight.
+const NO_CLIPPING: Plane[] = [];
 const TRANSPARENT_OPACITY = 0.18;
 const OPAQUE_OPACITY = 1.0;
 
 export function Model3D({
   url,
   onLoad,
-  clippingPlanes = [],
+  clippingPlanes = NO_CLIPPING,
   transparent,
   partHover = false,
 }: Model3DProps) {

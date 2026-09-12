@@ -80,10 +80,10 @@ SOURCES = [
         "step": "../step/module-asm-v1.stp",
         "system": "BATTERY MODULE V1",
         "rename": {
-            "battery-cell": "CELLS",
-            "busbar_16A": "BUSBAR",
-            "spine-assembly": "SPINE",
-            "clamp-assembly": "CLAMP ASSEMBLY",
+            # "battery-cell": "CELLS",
+            # "busbar_16A": "BUSBAR",
+            # "spine-assembly": "SPINE",
+            # "clamp-assembly": "CLAMP ASSEMBLY",
         },
     },
     {
@@ -91,10 +91,16 @@ SOURCES = [
         "step": "../step/module-asm-v2.stp",
         "system": "BATTERY MODULE V2",
         "rename": {
-            "battery-cell-base": "CELLS",
-            "spine_asm": "SPINE",
-            "spine_asm_front-stop": "SPINE FRONT STOP",
+            # "battery-cell-base": "CELLS",
+            # "spine_asm": "SPINE",
+            # "spine_asm_front-stop": "SPINE FRONT STOP",
         },
+    },
+    {
+        "key": "crate",
+        "step": "../step/battery-crate-stack-v2.stp",
+        "system": "BATTERY CRATE STACK V2",
+        "rename": {},
     },
 ]
 
@@ -124,6 +130,11 @@ ZUP_TO_YUP_QUAT = [-math.sqrt(0.5), 0.0, 0.0, math.sqrt(0.5)]
 
 def label_name(label) -> str:
     """Read the TDataStd_Name off an XCAF label, or '?' when it has none."""
+    # IsAttribute first: the OCP binding of FindAttribute segfaults when the
+    # label has no name at all, which happens for sub-shape labels the reader
+    # creates for colored-but-unnamed faces.
+    if not label.IsAttribute(TDataStd_Name.GetID_s()):
+        return "?"
     attr = TDataStd_Name()
     if label.FindAttribute(TDataStd_Name.GetID_s(), attr):
         return attr.Get().ToExtString()

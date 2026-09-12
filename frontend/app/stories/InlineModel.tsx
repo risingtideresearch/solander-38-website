@@ -1,20 +1,21 @@
 import { Canvas3D } from "../anatomy/three-d/Canvas3D";
 import {
+  expandModels,
   getMaterialsManifest,
   getModelsByFilename,
-  knownModels,
 } from "../manifest-util";
 import AnatomyPane from "./AnatomyPane/AnatomyPane";
 import styles from "./inline-model.module.scss";
 
 interface InlineModelProps {
   title: string;
+  /** Filenames and "__"-terminated path prefixes, as stored in Sanity */
   models: string[];
   tooltips?: boolean;
 }
 
 export function InlineModel({ title, models, tooltips }: InlineModelProps) {
-  const layers = knownModels(models);
+  const layers = expandModels(models);
   return (
     <>
       <h4>{title}</h4>

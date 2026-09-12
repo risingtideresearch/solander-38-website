@@ -320,6 +320,8 @@ export const article = defineType({
             {
               name: 'models',
               type: 'array',
+              description:
+                'A set (jig, battery module, …) includes every model under that system and keeps working when parts inside it are renamed. A single Rhino layer is linked by exact filename.',
               components: {
                 input: ModelListInput,
               },

@@ -12,6 +12,31 @@ export const contextualLayers = [
   "BODY__HULLS & DECKS__MESH H&D (for website)__DECK.glb",
 ];
 
+/**
+ * Layers left out of the scaling-line extent, per model system. An entry names
+ * any segment of a layer's path, so naming a sub-assembly drops every part in
+ * it. The crate's connection cable assemblies C and E (cable, lugs, hardware)
+ * hang past the frame, so they would stretch the dimensions the lines report
+ * without being part of the crate's footprint. Camera framing still includes
+ * them.
+ */
+export const scalingLinesIgnored: { system: string; segments: string[] }[] = [
+  {
+    system: "BATTERY CRATE STACK V2",
+    segments: ["MODULE CONNECTION CABLE ASM C", "MODULE CONNECTION CABLE ASM E"],
+  },
+];
+
+export function ignoredForScalingLines(filename?: string): boolean {
+  if (!filename) return false;
+  const path = filename.replace(/\.glb$/, "").split("__");
+  return scalingLinesIgnored.some(
+    (rule) =>
+      rule.system === path[0] &&
+      path.some((segment) => rule.segments.includes(segment)),
+  );
+}
+
 export type Model = {
   filename: string;
   layer_name: string;

@@ -4,68 +4,60 @@ import {TrashIcon} from '@sanity/icons'
 import {set, unset} from 'sanity'
 import type {ArrayOfPrimitivesInputProps} from 'sanity'
 
-import {MODEL_SETS, ModelSet, modelTitle, rhinoModels, setForFile} from './modelSets'
-
-const SET_PREFIX = 'set:'
+import {
+  MODEL_GROUPS,
+  groupForPrefix,
+  isGroup,
+  modelTitle,
+  parentPath,
+  rhinoModels,
+} from './modelSets'
 
 type Option = {value: string; title: string; subtitle: string}
 
+const groupSubtitle = (path: string[], count: number) =>
+  `Complete set — all ${count} models under ${path.join(' / ')}`
+
 const options: Option[] = [
-  ...MODEL_SETS.map((modelSet) => ({
-    value: SET_PREFIX + modelSet.title,
-    title: modelSet.title,
-    subtitle: `Complete set — ${modelSet.files.length} models`,
+  ...MODEL_GROUPS.map((group) => ({
+    value: group.prefix,
+    title: group.title,
+    subtitle: groupSubtitle(group.path, group.count),
   })),
   ...rhinoModels.map((filename) => ({
     value: filename,
     title: modelTitle(filename),
-    subtitle: filename.replace('.glb', '').split('__').slice(0, -1).join(' / '),
+    subtitle: parentPath(filename),
   })),
 ]
 
-/** A chosen entry: either a whole set, or one Rhino layer. */
-type Row = {key: string; title: string; subtitle: string; files: string[]}
+/** A stored entry: a set prefix, or one Rhino layer linked by exact filename. */
+type Row = {key: string; title: string; subtitle: string}
 
-/** Collapse the stored filenames into rows, one per complete set. */
-function toRows(files: string[]): Row[] {
-  const rows: Row[] = []
-  const claimed = new Set<string>()
-
-  for (const modelSet of MODEL_SETS) {
-    if (modelSet.files.every((f) => files.includes(f))) {
-      modelSet.files.forEach((f) => claimed.add(f))
-      rows.push({
-        key: SET_PREFIX + modelSet.title,
-        title: modelSet.title,
-        subtitle: `${modelSet.files.length} models`,
-        files: modelSet.files,
-      })
+function toRow(entry: string): Row {
+  if (isGroup(entry)) {
+    const group = groupForPrefix(entry)
+    const path = entry.slice(0, -2).split('__')
+    return {
+      key: entry,
+      title: group?.title ?? path[path.length - 1],
+      subtitle: group
+        ? groupSubtitle(group.path, group.count)
+        : `${path.join(' / ')} — no models under this path`,
     }
   }
-
-  for (const file of files) {
-    if (claimed.has(file)) continue
-    const partial = setForFile(file)
-    rows.push({
-      key: file,
-      title: modelTitle(file),
-      subtitle: partial ? `${partial.title} — incomplete set` : file,
-      files: [file],
-    })
-  }
-
-  return rows
+  return {key: entry, title: modelTitle(entry), subtitle: parentPath(entry) || entry}
 }
 
 export default function ModelListInput(props: ArrayOfPrimitivesInputProps<string>) {
   const {value, onChange, readOnly} = props
   const [query, setQuery] = useState('')
 
-  const files = useMemo(
+  const entries = useMemo(
     () => (value || []).filter((v): v is string => typeof v === 'string'),
     [value],
   )
-  const rows = useMemo(() => toRows(files), [files])
+  const rows = useMemo(() => entries.map(toRow), [entries])
 
   const commit = useCallback(
     (next: string[]) => onChange(next.length ? set(next) : unset()),
@@ -74,15 +66,10 @@ export default function ModelListInput(props: ArrayOfPrimitivesInputProps<string
 
   const handleAdd = useCallback(
     (selected: string) => {
-      const modelSet: ModelSet | undefined = selected.startsWith(SET_PREFIX)
-        ? MODEL_SETS.find((s) => SET_PREFIX + s.title === selected)
-        : undefined
-      const incoming = modelSet ? modelSet.files : [selected]
-      const added = incoming.filter((f) => !files.includes(f))
-      if (added.length) commit([...files, ...added])
+      if (!entries.includes(selected)) commit([...entries, selected])
       setQuery('')
     },
-    [files, commit],
+    [entries, commit],
   )
 
   const filtered = options.filter((option) =>
@@ -122,7 +109,7 @@ export default function ModelListInput(props: ArrayOfPrimitivesInputProps<string
                   tone="critical"
                   disabled={readOnly}
                   title={`Remove ${row.title}`}
-                  onClick={() => commit(files.filter((f) => !row.files.includes(f)))}
+                  onClick={() => commit(entries.filter((e) => e !== row.key))}
                 />
               </Flex>
             </Card>
@@ -139,7 +126,7 @@ export default function ModelListInput(props: ArrayOfPrimitivesInputProps<string
         onQueryChange={(q) => setQuery(q || '')}
         renderOption={renderOption}
         filterOption={() => true}
-        placeholder="Add a model or set…"
+        placeholder="Add a set or model…"
         openButton
       />
     </Stack>
