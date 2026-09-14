@@ -3,7 +3,7 @@
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::CELL",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__CELL.glb",
-      "file_size": 9024,
+      "file_size": 9296,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -38,12 +38,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 9024
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::NEG STUDS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__NEG STUDS.glb",
-      "file_size": 14188,
+      "file_size": 10348,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -78,12 +79,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 14188
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::NEG TERMINAL STUD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__NEG TERMINAL STUD.glb",
-      "file_size": 19628,
+      "file_size": 11508,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -118,12 +120,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 19628
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::POS STUDS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__POS STUDS.glb",
-      "file_size": 27100,
+      "file_size": 18664,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -158,12 +161,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 27100
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::POS TERMINAL STUD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__POS TERMINAL STUD.glb",
-      "file_size": 19612,
+      "file_size": 11400,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -198,12 +202,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 19612
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::PRESSURE RELEASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__PRESSURE RELEASE.glb",
-      "file_size": 14456,
+      "file_size": 10480,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -238,12 +243,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 14456
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::BUSBAR V2 SINGLE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__BUSBAR V2 SINGLE.glb",
-      "file_size": 94940,
+      "file_size": 19200,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -278,12 +284,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 94940
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::M6 HEX NUT 94150A345",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__M6 HEX NUT 94150A345.glb",
-      "file_size": 47876,
+      "file_size": 26832,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -318,12 +325,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47876
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::M6 WASHER 90965A211",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__M6 WASHER 90965A211.glb",
-      "file_size": 88944,
+      "file_size": 33876,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -358,12 +366,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 88944
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::FRONT BAR",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__FRONT BAR.glb",
-      "file_size": 12672,
+      "file_size": 6300,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -398,12 +407,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 12672
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::NUT",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__NUT.glb",
-      "file_size": 29216,
+      "file_size": 14556,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -438,12 +448,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 29216
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::PAN HEAD SCREW",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__PAN HEAD SCREW.glb",
-      "file_size": 37936,
+      "file_size": 17484,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -478,12 +489,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 37936
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::ROD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__ROD.glb",
-      "file_size": 47652,
+      "file_size": 13532,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -518,12 +530,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47652
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE BASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE BASE.glb",
-      "file_size": 45452,
+      "file_size": 16608,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -558,12 +571,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 45452
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP A",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP A.glb",
-      "file_size": 144424,
+      "file_size": 26732,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -598,12 +612,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 144424
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP B",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP B.glb",
-      "file_size": 144412,
+      "file_size": 26740,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -638,12 +653,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 144412
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM::NUT",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM__NUT.glb",
-      "file_size": 28728,
+      "file_size": 14164,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -678,12 +694,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 28728
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM::PAN HEAD SCREW",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM__PAN HEAD SCREW.glb",
-      "file_size": 37432,
+      "file_size": 17096,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -718,12 +735,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 37432
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM::ROD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM__ROD.glb",
-      "file_size": 47148,
+      "file_size": 13140,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -758,12 +776,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47148
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM::SPINE BASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM__SPINE BASE.glb",
-      "file_size": 44956,
+      "file_size": 16216,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -798,12 +817,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 44956
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY MODULE V2 CLAMPS::SPINE ASM::SPINE SIDE SIMPLE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY MODULE V2 CLAMPS__SPINE ASM__SPINE SIDE SIMPLE.glb",
-      "file_size": 131428,
+      "file_size": 26356,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -838,12 +858,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 131428
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME LAYER SIDE MAIN",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME LAYER SIDE MAIN.glb",
-      "file_size": 175524,
+      "file_size": 25068,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -878,12 +899,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 175524
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79220,
+      "file_size": 12968,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -918,12 +940,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79220
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK MIDPLATE POST",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK MIDPLATE POST.glb",
-      "file_size": 8932,
+      "file_size": 3688,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -958,12 +981,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 8932
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 38948,
+      "file_size": 7732,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -998,12 +1022,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38948
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM B::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM B__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79220,
+      "file_size": 12968,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -1038,12 +1063,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79220
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM B::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM B__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 39184,
+      "file_size": 7972,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1078,12 +1104,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39184
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM C::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM C__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79220,
+      "file_size": 12968,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -1118,12 +1145,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79220
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM C::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM C__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 38984,
+      "file_size": 7756,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -1158,12 +1186,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38984
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM D::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM D__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79232,
+      "file_size": 12968,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -1198,12 +1227,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79232
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM D::BATTERY PACK MIDPLATE POST",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM D__BATTERY PACK MIDPLATE POST.glb",
-      "file_size": 8948,
+      "file_size": 3688,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1238,12 +1268,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 8948
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 38792,
+      "file_size": 7576,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -1278,12 +1309,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38792
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::BATTERY PACK FRAME ASM 1LAYER::MODULE RAIL",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__BATTERY PACK FRAME ASM 1LAYER__MODULE RAIL.glb",
-      "file_size": 88200,
+      "file_size": 14432,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -1318,12 +1350,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 88200
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM A::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM A__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65136,
+      "file_size": 13744,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1358,12 +1391,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65136
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM A::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM A__CABLE LUG.glb",
-      "file_size": 39880,
+      "file_size": 9364,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1398,12 +1432,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39880
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM A::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM A__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15708,
+      "file_size": 5152,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1438,12 +1473,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15708
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM A::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM A__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64836,
+      "file_size": 14144,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1478,12 +1514,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64836
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM A::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM A__M8 WASHER 90965A214.glb",
-      "file_size": 66576,
+      "file_size": 14200,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1518,12 +1555,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66576
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM A::MODULE CONNECTION CABLE A",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM A__MODULE CONNECTION CABLE A.glb",
-      "file_size": 124768,
+      "file_size": 27584,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -1558,12 +1596,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 124768
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM B::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM B__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 66132,
+      "file_size": 14572,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -1598,12 +1637,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66132
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM B::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM B__CABLE LUG.glb",
-      "file_size": 40836,
+      "file_size": 10164,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -1638,12 +1678,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 40836
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM B::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM B__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 16848,
+      "file_size": 6028,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -1678,12 +1719,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 16848
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM B::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM B__M8 LOCK NUT 94205A260.glb",
-      "file_size": 65804,
+      "file_size": 14976,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -1718,12 +1760,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65804
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM B::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM B__M8 WASHER 90965A214.glb",
-      "file_size": 67572,
+      "file_size": 15052,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -1758,12 +1801,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 67572
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM B::MODULE CONNECTION CABLE B",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM B__MODULE CONNECTION CABLE B.glb",
-      "file_size": 131012,
+      "file_size": 29104,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1798,12 +1842,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 131012
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM C::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM C__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65132,
+      "file_size": 13748,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1838,12 +1883,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65132
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM C::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM C__CABLE LUG.glb",
-      "file_size": 39876,
+      "file_size": 9360,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1878,12 +1924,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39876
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM C::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM C__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15916,
+      "file_size": 5292,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1918,12 +1965,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15916
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM C::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM C__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64824,
+      "file_size": 14152,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1958,12 +2006,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64824
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM C::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM C__M8 WASHER 90965A214.glb",
-      "file_size": 66572,
+      "file_size": 14196,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -1998,12 +2047,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66572
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM C::MODULE CONNECTION CABLE C",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM C__MODULE CONNECTION CABLE C.glb",
-      "file_size": 496160,
+      "file_size": 99984,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -2038,12 +2088,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 496160
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM D::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM D__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65136,
+      "file_size": 13748,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -2078,12 +2129,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65136
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM D::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM D__CABLE LUG.glb",
-      "file_size": 39892,
+      "file_size": 9364,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -2118,12 +2170,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39892
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM D::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM D__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15924,
+      "file_size": 5300,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -2158,12 +2211,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15924
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM D::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM D__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64836,
+      "file_size": 14156,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -2198,12 +2252,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64836
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM D::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM D__M8 WASHER 90965A214.glb",
-      "file_size": 66576,
+      "file_size": 14200,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -2238,12 +2293,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66576
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L1::MODULE CONNECTION CABLE ASM D::MODULE CONNECTION CABLE D",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L1__MODULE CONNECTION CABLE ASM D__MODULE CONNECTION CABLE D.glb",
-      "file_size": 247448,
+      "file_size": 52448,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -2278,12 +2334,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 247448
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::CELL",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__CELL.glb",
-      "file_size": 9136,
+      "file_size": 9264,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2318,12 +2375,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 9136
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::NEG STUDS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__NEG STUDS.glb",
-      "file_size": 14300,
+      "file_size": 10316,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2358,12 +2416,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 14300
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::NEG TERMINAL STUD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__NEG TERMINAL STUD.glb",
-      "file_size": 19736,
+      "file_size": 11476,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2398,12 +2457,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 19736
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::POS STUDS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__POS STUDS.glb",
-      "file_size": 27320,
+      "file_size": 18600,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -2438,12 +2498,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 27320
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::POS TERMINAL STUD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__POS TERMINAL STUD.glb",
-      "file_size": 19724,
+      "file_size": 11368,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2478,12 +2539,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 19724
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::PRESSURE RELEASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__PRESSURE RELEASE.glb",
-      "file_size": 14568,
+      "file_size": 10448,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2518,12 +2580,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 14568
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::BUSBAR V2 SINGLE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__BUSBAR V2 SINGLE.glb",
-      "file_size": 95040,
+      "file_size": 19236,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -2558,12 +2621,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 95040
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::M6 HEX NUT 94150A345",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__M6 HEX NUT 94150A345.glb",
-      "file_size": 47972,
+      "file_size": 26868,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -2598,12 +2662,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47972
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::M6 WASHER 90965A211",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__M6 WASHER 90965A211.glb",
-      "file_size": 89044,
+      "file_size": 33908,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -2638,12 +2703,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 89044
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::FRONT BAR",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__FRONT BAR.glb",
-      "file_size": 12772,
+      "file_size": 6332,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -2678,12 +2744,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 12772
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::NUT",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__NUT.glb",
-      "file_size": 29312,
+      "file_size": 14588,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2718,12 +2785,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 29312
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::PAN HEAD SCREW",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__PAN HEAD SCREW.glb",
-      "file_size": 38036,
+      "file_size": 17520,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2758,12 +2826,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38036
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::ROD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__ROD.glb",
-      "file_size": 47752,
+      "file_size": 13564,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -2798,12 +2867,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47752
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE BASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE BASE.glb",
-      "file_size": 45552,
+      "file_size": 16640,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2838,12 +2908,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 45552
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP A",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP A.glb",
-      "file_size": 144524,
+      "file_size": 26764,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -2878,12 +2949,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 144524
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP B",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP B.glb",
-      "file_size": 144508,
+      "file_size": 26772,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -2918,12 +2990,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 144508
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM::NUT",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM__NUT.glb",
-      "file_size": 28824,
+      "file_size": 14200,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2958,12 +3031,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 28824
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM::PAN HEAD SCREW",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM__PAN HEAD SCREW.glb",
-      "file_size": 37532,
+      "file_size": 17128,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -2998,12 +3072,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 37532
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM::ROD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM__ROD.glb",
-      "file_size": 47248,
+      "file_size": 13176,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -3038,12 +3113,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47248
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM::SPINE BASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM__SPINE BASE.glb",
-      "file_size": 45052,
+      "file_size": 16252,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -3078,12 +3154,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 45052
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY MODULE V2 CLAMPS::SPINE ASM::SPINE SIDE SIMPLE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY MODULE V2 CLAMPS__SPINE ASM__SPINE SIDE SIMPLE.glb",
-      "file_size": 131528,
+      "file_size": 26388,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -3118,12 +3195,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 131528
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME LAYER SIDE MAIN",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME LAYER SIDE MAIN.glb",
-      "file_size": 175568,
+      "file_size": 25100,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3158,12 +3236,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 175568
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79264,
+      "file_size": 13004,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -3198,12 +3277,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79264
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK MIDPLATE POST",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK MIDPLATE POST.glb",
-      "file_size": 8980,
+      "file_size": 3720,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3238,12 +3318,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 8980
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 38992,
+      "file_size": 7764,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -3278,12 +3359,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38992
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM B::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM B__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79264,
+      "file_size": 13004,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -3318,12 +3400,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79264
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM B::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM B__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 39228,
+      "file_size": 8004,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3358,12 +3441,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39228
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM C::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM C__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79268,
+      "file_size": 13004,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -3398,12 +3482,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79268
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM C::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM C__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 39032,
+      "file_size": 7792,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -3438,12 +3523,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39032
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM D::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM D__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79280,
+      "file_size": 13004,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -3478,12 +3564,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79280
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM D::BATTERY PACK MIDPLATE POST",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM D__BATTERY PACK MIDPLATE POST.glb",
-      "file_size": 8992,
+      "file_size": 3720,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3518,12 +3605,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 8992
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 38840,
+      "file_size": 7608,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -3558,12 +3646,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38840
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::BATTERY PACK FRAME ASM 1LAYER::MODULE RAIL",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__BATTERY PACK FRAME ASM 1LAYER__MODULE RAIL.glb",
-      "file_size": 88248,
+      "file_size": 14468,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -3598,12 +3687,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 88248
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM A::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM A__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 66180,
+      "file_size": 14608,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -3638,12 +3728,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66180
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM A::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM A__CABLE LUG.glb",
-      "file_size": 40876,
+      "file_size": 10196,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -3678,12 +3769,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 40876
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM A::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM A__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 16564,
+      "file_size": 5896,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -3718,12 +3810,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 16564
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM A::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM A__M8 LOCK NUT 94205A260.glb",
-      "file_size": 65888,
+      "file_size": 15016,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -3758,12 +3851,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65888
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM A::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM A__M8 WASHER 90965A214.glb",
-      "file_size": 67620,
+      "file_size": 15080,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -3798,12 +3892,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 67620
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM A::MODULE CONNECTION CABLE A",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM A__MODULE CONNECTION CABLE A.glb",
-      "file_size": 125376,
+      "file_size": 28032,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3838,12 +3933,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 125376
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM B::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM B__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65184,
+      "file_size": 13776,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3878,12 +3974,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65184
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM B::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM B__CABLE LUG.glb",
-      "file_size": 39928,
+      "file_size": 9400,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3918,12 +4015,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39928
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM B::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM B__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15920,
+      "file_size": 5268,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3958,12 +4056,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15920
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM B::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM B__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64868,
+      "file_size": 14176,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -3998,12 +4097,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64868
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM B::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM B__M8 WASHER 90965A214.glb",
-      "file_size": 66624,
+      "file_size": 14236,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -4038,12 +4138,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66624
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM B::MODULE CONNECTION CABLE B",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM B__MODULE CONNECTION CABLE B.glb",
-      "file_size": 130416,
+      "file_size": 28672,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -4078,12 +4179,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 130416
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM D::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM D__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65176,
+      "file_size": 13780,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -4118,12 +4220,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65176
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM D::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM D__CABLE LUG.glb",
-      "file_size": 39932,
+      "file_size": 9400,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -4158,12 +4261,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39932
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM D::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM D__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15960,
+      "file_size": 5332,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -4198,12 +4302,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15960
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM D::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM D__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64872,
+      "file_size": 14188,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -4238,12 +4343,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64872
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM D::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM D__M8 WASHER 90965A214.glb",
-      "file_size": 66616,
+      "file_size": 14232,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -4278,12 +4384,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66616
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L2::MODULE CONNECTION CABLE ASM D::MODULE CONNECTION CABLE D",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L2__MODULE CONNECTION CABLE ASM D__MODULE CONNECTION CABLE D.glb",
-      "file_size": 247488,
+      "file_size": 52484,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -4318,12 +4425,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 247488
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::CELL",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__CELL.glb",
-      "file_size": 9200,
+      "file_size": 9264,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4358,12 +4466,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 9200
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::NEG STUDS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__NEG STUDS.glb",
-      "file_size": 14364,
+      "file_size": 10316,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4398,12 +4507,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 14364
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::NEG TERMINAL STUD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__NEG TERMINAL STUD.glb",
-      "file_size": 19804,
+      "file_size": 11476,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4438,12 +4548,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 19804
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::POS STUDS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__POS STUDS.glb",
-      "file_size": 27452,
+      "file_size": 18600,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -4478,12 +4589,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 27452
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::POS TERMINAL STUD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__POS TERMINAL STUD.glb",
-      "file_size": 19788,
+      "file_size": 11368,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4518,12 +4630,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 19788
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::PRESSURE RELEASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__PRESSURE RELEASE.glb",
-      "file_size": 14632,
+      "file_size": 10448,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4558,12 +4671,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 14632
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::BUSBAR V2 SINGLE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__BUSBAR V2 SINGLE.glb",
-      "file_size": 95056,
+      "file_size": 19248,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -4598,12 +4712,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 95056
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::M6 HEX NUT 94150A345",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__M6 HEX NUT 94150A345.glb",
-      "file_size": 47992,
+      "file_size": 26880,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -4638,12 +4753,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47992
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::M6 WASHER 90965A211",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__M6 WASHER 90965A211.glb",
-      "file_size": 89060,
+      "file_size": 33924,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -4678,12 +4794,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 89060
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::FRONT BAR",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__FRONT BAR.glb",
-      "file_size": 12788,
+      "file_size": 6344,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -4718,12 +4835,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 12788
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::NUT",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__NUT.glb",
-      "file_size": 29332,
+      "file_size": 14600,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4758,12 +4876,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 29332
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::PAN HEAD SCREW",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__PAN HEAD SCREW.glb",
-      "file_size": 38052,
+      "file_size": 17532,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4798,12 +4917,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38052
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::ROD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__ROD.glb",
-      "file_size": 47768,
+      "file_size": 13576,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -4838,12 +4958,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47768
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE BASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE BASE.glb",
-      "file_size": 45568,
+      "file_size": 16652,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4878,12 +4999,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 45568
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP A",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP A.glb",
-      "file_size": 144540,
+      "file_size": 26776,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -4918,12 +5040,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 144540
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP B",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP B.glb",
-      "file_size": 144524,
+      "file_size": 26784,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -4958,12 +5081,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 144524
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM::NUT",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM__NUT.glb",
-      "file_size": 28840,
+      "file_size": 14212,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -4998,12 +5122,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 28840
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM::PAN HEAD SCREW",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM__PAN HEAD SCREW.glb",
-      "file_size": 37548,
+      "file_size": 17144,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -5038,12 +5163,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 37548
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM::ROD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM__ROD.glb",
-      "file_size": 47264,
+      "file_size": 13188,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -5078,12 +5204,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47264
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM::SPINE BASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM__SPINE BASE.glb",
-      "file_size": 45072,
+      "file_size": 16264,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -5118,12 +5245,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 45072
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY MODULE V2 CLAMPS::SPINE ASM::SPINE SIDE SIMPLE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY MODULE V2 CLAMPS__SPINE ASM__SPINE SIDE SIMPLE.glb",
-      "file_size": 131544,
+      "file_size": 26400,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -5158,12 +5286,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 131544
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME LAYER SIDE MAIN",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME LAYER SIDE MAIN.glb",
-      "file_size": 175588,
+      "file_size": 25112,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5198,12 +5327,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 175588
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79284,
+      "file_size": 13016,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5238,12 +5368,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79284
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK MIDPLATE POST",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK MIDPLATE POST.glb",
-      "file_size": 8996,
+      "file_size": 3732,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5278,12 +5409,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 8996
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 39012,
+      "file_size": 7780,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5318,12 +5450,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39012
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM B::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM B__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79284,
+      "file_size": 13016,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5358,12 +5491,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79284
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM B::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM B__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 39248,
+      "file_size": 8016,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5398,12 +5532,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39248
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM C::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM C__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79284,
+      "file_size": 13016,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5438,12 +5573,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79284
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM C::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM C__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 39048,
+      "file_size": 7804,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5478,12 +5614,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39048
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM D::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM D__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79296,
+      "file_size": 13016,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5518,12 +5655,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79296
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM D::BATTERY PACK MIDPLATE POST",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM D__BATTERY PACK MIDPLATE POST.glb",
-      "file_size": 9008,
+      "file_size": 3736,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5558,12 +5696,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 9008
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 38856,
+      "file_size": 7620,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5598,12 +5737,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38856
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::BATTERY PACK FRAME ASM 1LAYER::MODULE RAIL",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__BATTERY PACK FRAME ASM 1LAYER__MODULE RAIL.glb",
-      "file_size": 88264,
+      "file_size": 14480,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -5638,12 +5778,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 88264
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM A::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM A__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65200,
+      "file_size": 13792,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5678,12 +5819,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65200
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM A::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM A__CABLE LUG.glb",
-      "file_size": 39940,
+      "file_size": 9412,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5718,12 +5860,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39940
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM A::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM A__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15768,
+      "file_size": 5200,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5758,12 +5901,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15768
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM A::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM A__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64900,
+      "file_size": 14192,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5798,12 +5942,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64900
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM A::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM A__M8 WASHER 90965A214.glb",
-      "file_size": 66640,
+      "file_size": 14248,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -5838,12 +5983,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66640
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM A::MODULE CONNECTION CABLE A",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM A__MODULE CONNECTION CABLE A.glb",
-      "file_size": 124832,
+      "file_size": 27628,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -5878,12 +6024,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 124832
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM B::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM B__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 66196,
+      "file_size": 14620,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -5918,12 +6065,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66196
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM B::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM B__CABLE LUG.glb",
-      "file_size": 40900,
+      "file_size": 10212,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -5958,12 +6106,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 40900
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM B::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM B__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 16916,
+      "file_size": 6076,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -5998,12 +6147,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 16916
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM B::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM B__M8 LOCK NUT 94205A260.glb",
-      "file_size": 65872,
+      "file_size": 15024,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -6038,12 +6188,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65872
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM B::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM B__M8 WASHER 90965A214.glb",
-      "file_size": 67636,
+      "file_size": 15100,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -6078,12 +6229,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 67636
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM B::MODULE CONNECTION CABLE B",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM B__MODULE CONNECTION CABLE B.glb",
-      "file_size": 131076,
+      "file_size": 29152,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -6118,12 +6270,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 131076
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM D::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM D__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65200,
+      "file_size": 13796,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -6158,12 +6311,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65200
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM D::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM D__CABLE LUG.glb",
-      "file_size": 39956,
+      "file_size": 9412,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -6198,12 +6352,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39956
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM D::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM D__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15984,
+      "file_size": 5348,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -6238,12 +6393,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15984
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM D::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM D__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64896,
+      "file_size": 14204,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -6278,12 +6434,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64896
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM D::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM D__M8 WASHER 90965A214.glb",
-      "file_size": 66640,
+      "file_size": 14248,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -6318,12 +6475,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66640
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L3::MODULE CONNECTION CABLE ASM D::MODULE CONNECTION CABLE D",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L3__MODULE CONNECTION CABLE ASM D__MODULE CONNECTION CABLE D.glb",
-      "file_size": 247512,
+      "file_size": 52496,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -6358,12 +6516,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 247512
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::CELL",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__CELL.glb",
-      "file_size": 9136,
+      "file_size": 9264,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -6398,12 +6557,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 9136
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::NEG STUDS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__NEG STUDS.glb",
-      "file_size": 14300,
+      "file_size": 10316,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -6438,12 +6598,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 14300
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::NEG TERMINAL STUD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__NEG TERMINAL STUD.glb",
-      "file_size": 19736,
+      "file_size": 11476,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -6478,12 +6639,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 19736
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::POS STUDS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__POS STUDS.glb",
-      "file_size": 27320,
+      "file_size": 18600,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -6518,12 +6680,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 27320
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::POS TERMINAL STUD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__POS TERMINAL STUD.glb",
-      "file_size": 19724,
+      "file_size": 11368,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -6558,12 +6721,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 19724
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BATTERY CELL BASE::PRESSURE RELEASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BATTERY CELL BASE__PRESSURE RELEASE.glb",
-      "file_size": 14568,
+      "file_size": 10448,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -6598,12 +6762,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 14568
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::BUSBAR V2 SINGLE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__BUSBAR V2 SINGLE.glb",
-      "file_size": 95036,
+      "file_size": 19236,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -6638,12 +6803,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 95036
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::M6 HEX NUT 94150A345",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__M6 HEX NUT 94150A345.glb",
-      "file_size": 47972,
+      "file_size": 26868,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -6678,12 +6844,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47972
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::BUSBAR V2 ASM::M6 WASHER 90965A211",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__BUSBAR V2 ASM__M6 WASHER 90965A211.glb",
-      "file_size": 89040,
+      "file_size": 33908,
       "object_count": 64,
       "bounding_box": {
         "min": {
@@ -6718,12 +6885,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 89040
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::FRONT BAR",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__FRONT BAR.glb",
-      "file_size": 12768,
+      "file_size": 6332,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -6758,12 +6926,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 12768
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::NUT",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__NUT.glb",
-      "file_size": 29312,
+      "file_size": 14588,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -6798,12 +6967,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 29312
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::PAN HEAD SCREW",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__PAN HEAD SCREW.glb",
-      "file_size": 38036,
+      "file_size": 17520,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -6838,12 +7008,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38036
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::ROD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__ROD.glb",
-      "file_size": 47752,
+      "file_size": 13564,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -6878,12 +7049,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47752
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE BASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE BASE.glb",
-      "file_size": 45548,
+      "file_size": 16640,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -6918,12 +7090,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 45548
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP A",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP A.glb",
-      "file_size": 144524,
+      "file_size": 26764,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -6958,12 +7131,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 144524
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP B",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP B.glb",
-      "file_size": 144508,
+      "file_size": 26772,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -6998,12 +7172,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 144508
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM::NUT",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM__NUT.glb",
-      "file_size": 28824,
+      "file_size": 14200,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -7038,12 +7213,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 28824
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM::PAN HEAD SCREW",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM__PAN HEAD SCREW.glb",
-      "file_size": 37528,
+      "file_size": 17128,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -7078,12 +7254,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 37528
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM::ROD",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM__ROD.glb",
-      "file_size": 47244,
+      "file_size": 13176,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -7118,12 +7295,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 47244
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM::SPINE BASE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM__SPINE BASE.glb",
-      "file_size": 45052,
+      "file_size": 16252,
       "object_count": 32,
       "bounding_box": {
         "min": {
@@ -7158,12 +7336,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 45052
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY MODULE V2 CLAMPS::SPINE ASM::SPINE SIDE SIMPLE",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY MODULE V2 CLAMPS__SPINE ASM__SPINE SIDE SIMPLE.glb",
-      "file_size": 131524,
+      "file_size": 26388,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -7198,12 +7377,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 131524
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME LAYER SIDE MAIN",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME LAYER SIDE MAIN.glb",
-      "file_size": 175568,
+      "file_size": 25100,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -7238,12 +7418,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 175568
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79264,
+      "file_size": 13004,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -7278,12 +7459,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79264
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK MIDPLATE POST",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK MIDPLATE POST.glb",
-      "file_size": 8976,
+      "file_size": 3720,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -7318,12 +7500,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 8976
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM A::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM A__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 38992,
+      "file_size": 7764,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -7358,12 +7541,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38992
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM B::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM B__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79264,
+      "file_size": 13004,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -7398,12 +7582,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79264
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM B::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM B__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 39228,
+      "file_size": 8004,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -7438,12 +7623,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39228
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM C::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM C__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79264,
+      "file_size": 13004,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -7478,12 +7664,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79264
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM C::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM C__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 39028,
+      "file_size": 7792,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -7518,12 +7705,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39028
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM D::BATTERY PACK FRAME PLATE 1LAYER",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM D__BATTERY PACK FRAME PLATE 1LAYER.glb",
-      "file_size": 79280,
+      "file_size": 13004,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -7558,12 +7746,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 79280
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK FRAME PLATE ASM D::BATTERY PACK MIDPLATE POST",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK FRAME PLATE ASM D__BATTERY PACK MIDPLATE POST.glb",
-      "file_size": 8992,
+      "file_size": 3720,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -7598,12 +7787,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 8992
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::BATTERY PACK MIDPLATE TRUSS",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__BATTERY PACK MIDPLATE TRUSS.glb",
-      "file_size": 38836,
+      "file_size": 7608,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -7638,12 +7828,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 38836
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::BATTERY PACK FRAME ASM 1LAYER::MODULE RAIL",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__BATTERY PACK FRAME ASM 1LAYER__MODULE RAIL.glb",
-      "file_size": 88248,
+      "file_size": 14468,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -7678,12 +7869,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 88248
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM A::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM A__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 66180,
+      "file_size": 14608,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -7718,12 +7910,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66180
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM A::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM A__CABLE LUG.glb",
-      "file_size": 40876,
+      "file_size": 10196,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -7758,12 +7951,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 40876
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM A::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM A__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 16564,
+      "file_size": 5896,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -7798,12 +7992,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 16564
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM A::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM A__M8 LOCK NUT 94205A260.glb",
-      "file_size": 65892,
+      "file_size": 15016,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -7838,12 +8033,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65892
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM A::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM A__M8 WASHER 90965A214.glb",
-      "file_size": 67624,
+      "file_size": 15080,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -7878,12 +8074,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 67624
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM A::MODULE CONNECTION CABLE A",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM A__MODULE CONNECTION CABLE A.glb",
-      "file_size": 125380,
+      "file_size": 28032,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -7918,12 +8115,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 125380
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM B::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM B__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65180,
+      "file_size": 13776,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -7958,12 +8156,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65180
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM B::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM B__CABLE LUG.glb",
-      "file_size": 39928,
+      "file_size": 9400,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -7998,12 +8197,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39928
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM B::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM B__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15920,
+      "file_size": 5268,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8038,12 +8238,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15920
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM B::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM B__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64864,
+      "file_size": 14176,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8078,12 +8279,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64864
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM B::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM B__M8 WASHER 90965A214.glb",
-      "file_size": 66620,
+      "file_size": 14236,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8118,12 +8320,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66620
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM B::MODULE CONNECTION CABLE B",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM B__MODULE CONNECTION CABLE B.glb",
-      "file_size": 130416,
+      "file_size": 28672,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -8158,12 +8361,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 130416
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM E::CABLE LUG SHRINK WRAP",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM E__CABLE LUG SHRINK WRAP.glb",
-      "file_size": 65172,
+      "file_size": 13780,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8198,12 +8402,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 65172
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM E::CABLE LUG",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM E__CABLE LUG.glb",
-      "file_size": 39916,
+      "file_size": 9392,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8238,12 +8443,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 39916
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM E::M8 HEX HEAD BOLT 93635A319",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM E__M8 HEX HEAD BOLT 93635A319.glb",
-      "file_size": 15952,
+      "file_size": 5324,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8278,12 +8484,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 15952
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM E::M8 LOCK NUT 94205A260",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM E__M8 LOCK NUT 94205A260.glb",
-      "file_size": 64868,
+      "file_size": 14188,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8318,12 +8525,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 64868
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM E::M8 WASHER 90965A214",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM E__M8 WASHER 90965A214.glb",
-      "file_size": 66608,
+      "file_size": 14228,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8358,12 +8566,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 66608
     },
     {
       "layer_name": "BATTERY CRATE STACK V2::BATTERY CRATE L4::MODULE CONNECTION CABLE ASM E::MODULE CONNECTION CABLE E",
       "filename": "BATTERY CRATE STACK V2__BATTERY CRATE L4__MODULE CONNECTION CABLE ASM E__MODULE CONNECTION CABLE E.glb",
-      "file_size": 938560,
+      "file_size": 191524,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -8398,12 +8607,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from battery-crate-stack-v2.stp"
+      "notes": "converted from battery-crate-stack-v2.stp",
+      "original_file_size": 938560
     },
     {
       "layer_name": "BATTERY MODULE V1::BATTERY CELL",
       "filename": "BATTERY MODULE V1__BATTERY CELL.glb",
-      "file_size": 229536,
+      "file_size": 35464,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -8438,12 +8648,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 229536
     },
     {
       "layer_name": "BATTERY MODULE V1::BUSBAR 16A",
       "filename": "BATTERY MODULE V1__BUSBAR 16A.glb",
-      "file_size": 90256,
+      "file_size": 14612,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -8478,12 +8689,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 90256
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::CLAMP ASSEMBLY::CLAMP",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__CLAMP ASSEMBLY__CLAMP.glb",
-      "file_size": 27044,
+      "file_size": 6848,
       "object_count": 6,
       "bounding_box": {
         "min": {
@@ -8518,12 +8730,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 27044
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::CLAMP ASSEMBLY::COMPRESSION PLATE",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__CLAMP ASSEMBLY__COMPRESSION PLATE.glb",
-      "file_size": 14448,
+      "file_size": 5448,
       "object_count": 6,
       "bounding_box": {
         "min": {
@@ -8558,12 +8771,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 14448
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::CLAMP ASSEMBLY::FLAT WASHER TYPE A NARROW",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__CLAMP ASSEMBLY__FLAT WASHER TYPE A NARROW.glb",
-      "file_size": 15744,
+      "file_size": 7084,
       "object_count": 12,
       "bounding_box": {
         "min": {
@@ -8598,12 +8812,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 15744
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::CLAMP ASSEMBLY::HEX NUT",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__CLAMP ASSEMBLY__HEX NUT.glb",
-      "file_size": 29580,
+      "file_size": 10216,
       "object_count": 12,
       "bounding_box": {
         "min": {
@@ -8638,12 +8853,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 29580
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::CLAMP ASSEMBLY::TENSION ROD",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__CLAMP ASSEMBLY__TENSION ROD.glb",
-      "file_size": 13760,
+      "file_size": 5516,
       "object_count": 6,
       "bounding_box": {
         "min": {
@@ -8678,12 +8894,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 13760
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::FLAT WASHER TYPE A NARROW",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__FLAT WASHER TYPE A NARROW.glb",
-      "file_size": 12844,
+      "file_size": 4720,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -8718,12 +8935,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 12844
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::HEX NUT",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__HEX NUT.glb",
-      "file_size": 26548,
+      "file_size": 7620,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -8758,12 +8976,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 26548
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::SPINE L",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__SPINE L.glb",
-      "file_size": 14800,
+      "file_size": 3916,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -8798,12 +9017,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 14800
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::SPINE R",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__SPINE R.glb",
-      "file_size": 14832,
+      "file_size": 3936,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -8838,12 +9058,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 14832
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE ASSEMBLY::TENSION ROD",
       "filename": "BATTERY MODULE V1__SPINE ASSEMBLY__TENSION ROD.glb",
-      "file_size": 12288,
+      "file_size": 4156,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -8878,12 +9099,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 12288
     },
     {
       "layer_name": "BATTERY MODULE V1::SPINE M",
       "filename": "BATTERY MODULE V1__SPINE M.glb",
-      "file_size": 12648,
+      "file_size": 3508,
       "object_count": 1,
       "bounding_box": {
         "min": {
@@ -8918,12 +9140,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v1.stp"
+      "notes": "converted from module-asm-v1.stp",
+      "original_file_size": 12648
     },
     {
       "layer_name": "BATTERY MODULE V2::BATTERY CELL BASE::CELL",
       "filename": "BATTERY MODULE V2__BATTERY CELL BASE__CELL.glb",
-      "file_size": 3568,
+      "file_size": 3672,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -8958,12 +9181,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 3568
     },
     {
       "layer_name": "BATTERY MODULE V2::BATTERY CELL BASE::NEG STUDS",
       "filename": "BATTERY MODULE V2__BATTERY CELL BASE__NEG STUDS.glb",
-      "file_size": 8596,
+      "file_size": 4576,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -8998,12 +9222,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 8596
     },
     {
       "layer_name": "BATTERY MODULE V2::BATTERY CELL BASE::NEG TERMINAL STUD",
       "filename": "BATTERY MODULE V2__BATTERY CELL BASE__NEG TERMINAL STUD.glb",
-      "file_size": 13832,
+      "file_size": 5548,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9038,12 +9263,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 13832
     },
     {
       "layer_name": "BATTERY MODULE V2::BATTERY CELL BASE::POS STUDS",
       "filename": "BATTERY MODULE V2__BATTERY CELL BASE__POS STUDS.glb",
-      "file_size": 15944,
+      "file_size": 7376,
       "object_count": 16,
       "bounding_box": {
         "min": {
@@ -9078,12 +9304,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 15944
     },
     {
       "layer_name": "BATTERY MODULE V2::BATTERY CELL BASE::POS TERMINAL STUD",
       "filename": "BATTERY MODULE V2__BATTERY CELL BASE__POS TERMINAL STUD.glb",
-      "file_size": 13832,
+      "file_size": 5516,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9118,12 +9345,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 13832
     },
     {
       "layer_name": "BATTERY MODULE V2::BATTERY CELL BASE::PRESSURE RELEASE",
       "filename": "BATTERY MODULE V2__BATTERY CELL BASE__PRESSURE RELEASE.glb",
-      "file_size": 8684,
+      "file_size": 4584,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9158,12 +9386,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 8684
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM FRONT STOP::FRONT BAR",
       "filename": "BATTERY MODULE V2__SPINE ASM FRONT STOP__FRONT BAR.glb",
-      "file_size": 10300,
+      "file_size": 3920,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -9198,12 +9427,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 10300
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM FRONT STOP::NUT",
       "filename": "BATTERY MODULE V2__SPINE ASM FRONT STOP__NUT.glb",
-      "file_size": 21836,
+      "file_size": 7728,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9238,12 +9468,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 21836
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM FRONT STOP::PAN HEAD SCREW",
       "filename": "BATTERY MODULE V2__SPINE ASM FRONT STOP__PAN HEAD SCREW.glb",
-      "file_size": 28728,
+      "file_size": 9236,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9278,12 +9509,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 28728
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM FRONT STOP::ROD",
       "filename": "BATTERY MODULE V2__SPINE ASM FRONT STOP__ROD.glb",
-      "file_size": 44308,
+      "file_size": 10276,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -9318,12 +9550,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 44308
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM FRONT STOP::SPINE BASE",
       "filename": "BATTERY MODULE V2__SPINE ASM FRONT STOP__SPINE BASE.glb",
-      "file_size": 37944,
+      "file_size": 9824,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9358,12 +9591,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 37944
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP A",
       "filename": "BATTERY MODULE V2__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP A.glb",
-      "file_size": 140584,
+      "file_size": 23648,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -9398,12 +9632,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 140584
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM FRONT STOP::SPINE SIDE SIMPLE FRONT STOP B",
       "filename": "BATTERY MODULE V2__SPINE ASM FRONT STOP__SPINE SIDE SIMPLE FRONT STOP B.glb",
-      "file_size": 140912,
+      "file_size": 23764,
       "object_count": 2,
       "bounding_box": {
         "min": {
@@ -9438,12 +9673,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 140912
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM::NUT",
       "filename": "BATTERY MODULE V2__SPINE ASM__NUT.glb",
-      "file_size": 21420,
+      "file_size": 7544,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9478,12 +9714,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 21420
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM::PAN HEAD SCREW",
       "filename": "BATTERY MODULE V2__SPINE ASM__PAN HEAD SCREW.glb",
-      "file_size": 28468,
+      "file_size": 9056,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9518,12 +9755,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 28468
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM::ROD",
       "filename": "BATTERY MODULE V2__SPINE ASM__ROD.glb",
-      "file_size": 43916,
+      "file_size": 10000,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -9558,12 +9796,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 43916
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM::SPINE BASE",
       "filename": "BATTERY MODULE V2__SPINE ASM__SPINE BASE.glb",
-      "file_size": 37668,
+      "file_size": 9660,
       "object_count": 8,
       "bounding_box": {
         "min": {
@@ -9598,12 +9837,13 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 37668
     },
     {
       "layer_name": "BATTERY MODULE V2::SPINE ASM::SPINE SIDE SIMPLE",
       "filename": "BATTERY MODULE V2__SPINE ASM__SPINE SIDE SIMPLE.glb",
-      "file_size": 126224,
+      "file_size": 21824,
       "object_count": 4,
       "bounding_box": {
         "min": {
@@ -9638,7 +9878,8 @@
         }
       },
       "export_method": "step",
-      "notes": "converted from module-asm-v2.stp"
+      "notes": "converted from module-asm-v2.stp",
+      "original_file_size": 126224
     }
   ],
   "failed_layers": [],
@@ -9656,7 +9897,7 @@
     "successful_exports": 241,
     "failed_exports": 0,
     "skipped_exports": 0,
-    "total_file_size": 15138376,
+    "total_file_size": 3685204,
     "source": "step-to-glb.py"
   }
 }
