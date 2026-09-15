@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {RiArticleLine} from 'react-icons/ri'
-import {ChartUpwardIcon, CubeIcon, InlineIcon, PlayIcon} from '@sanity/icons'
+import {ChartUpwardIcon, CubeIcon, InlineIcon, PlayIcon, ThListIcon} from '@sanity/icons'
 import ModelDropdownInput from '../components/ModelDropdownInput'
 import ModelListInput from '../components/ModelListInput'
 import DrawingDropdownInput, {
@@ -375,6 +375,55 @@ export const article = defineType({
               },
             }),
           ],
+        }),
+        defineField({
+          name: 'specsTable',
+          type: 'object',
+          title: 'Specs table',
+          icon: ThListIcon,
+          fields: [
+            defineField({
+              name: 'title',
+              type: 'string',
+              description: 'Optional heading shown above the table.',
+            }),
+            defineField({
+              name: 'rows',
+              type: 'array',
+              validation: (rule) => rule.required().min(1),
+              of: [
+                defineField({
+                  name: 'row',
+                  type: 'object',
+                  fields: [
+                    defineField({
+                      name: 'label',
+                      type: 'string',
+                      validation: (rule) => rule.required(),
+                    }),
+                    defineField({
+                      name: 'value',
+                      type: 'string',
+                      validation: (rule) => rule.required(),
+                    }),
+                  ],
+                  preview: {
+                    select: {title: 'label', subtitle: 'value'},
+                  },
+                }),
+              ],
+            }),
+          ],
+          preview: {
+            select: {title: 'title', rows: 'rows'},
+            prepare({title, rows}) {
+              const count = rows?.length || 0
+              return {
+                title: title || 'Specs table',
+                subtitle: `${count} row${count == 1 ? '' : 's'}`,
+              }
+            },
+          },
         }),
       ],
     }),

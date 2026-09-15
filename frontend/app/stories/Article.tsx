@@ -13,6 +13,7 @@ import { PhotoImage } from "../components/PhotoImage";
 import { InlineVideo } from "../components/InlineVideo";
 import { URLS } from "../components/Navigation/Navigation";
 import RangeChart from "../components/RangeChart/RangeChart";
+import tableStyles from "../components/MaterialsTable/materials.module.scss";
 import { LiaArrowUpSolid } from "react-icons/lia";
 
 const components = {
@@ -44,6 +45,22 @@ const components = {
     ),
     chart: ({ value }) =>
       value.type == "range chart" ? <RangeChart title={value.title} /> : <></>,
+    specsTable: ({ value }) =>
+      value.rows?.length ? (
+        <div>
+          {value.title ? <h2>{value.title}</h2> : <></>}
+          <div className={tableStyles.materials}>
+            {value.rows.map((row) => (
+              <div key={row._key}>
+                <h6>{row.label}</h6>
+                <p className="font-sans">{row.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <></>
+      ),
     person: ({ value }) => {
       return (
         <a
@@ -193,7 +210,7 @@ export default async function Article({ data, materials = [] }) {
             )}
           </div>
           <AnatomyPane
-            title={`Anatomy / ${data.title}`}
+            title={`Anatomy / ${data.usesSystemModels && data.system?.name ? data.system.name : data.title}`}
             url={`/anatomy/${data.slug.current}`}
             defaultStyles={{
               // width: "100%",

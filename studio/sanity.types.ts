@@ -12,6 +12,8 @@
  * ---------------------------------------------------------------------------------
  */
 
+export declare const internalGroqTypeReferenceTo: unique symbol
+
 // Source: schema.json
 export type SanityImageAssetReference = {
   _ref: string
@@ -26,29 +28,74 @@ export type Homepage = {
   _createdAt: string
   _updatedAt: string
   _rev: string
-  image?: {
+  description: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'normal'
+    listItem?: never
+    markDefs?: Array<{
+      href: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+  image: {
     asset?: SanityImageAssetReference
     media?: unknown
     hotspot?: SanityImageHotspot
     crop?: SanityImageCrop
     _type: 'image'
   }
+  drawing: string
+  sectionDescriptions: {
+    stories: string
+    anatomy: string
+    drawings: string
+    photos: string
+    people: string
+    systems: string
+  }
+  license: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'normal'
+    listItem?: never
+    markDefs?: Array<{
+      href: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
 }
 
 export type SanityImageCrop = {
   _type: 'sanity.imageCrop'
-  top?: number
-  bottom?: number
-  left?: number
-  right?: number
+  top: number
+  bottom: number
+  left: number
+  right: number
 }
 
 export type SanityImageHotspot = {
   _type: 'sanity.imageHotspot'
-  x?: number
-  y?: number
-  height?: number
-  width?: number
+  x: number
+  y: number
+  height: number
+  width: number
 }
 
 export type Systems = {
@@ -73,7 +120,7 @@ export type ArticleReference = {
 
 export type System = {
   _type: 'system'
-  name?:
+  name:
     | 'overview'
     | 'power architecture'
     | 'superstructure'
@@ -82,7 +129,7 @@ export type System = {
     | 'body'
     | 'water & heating systems'
     | 'outfitting & interior'
-  slug?: Slug
+  slug: Slug
   articles?: Array<
     {
       _key: string
@@ -92,7 +139,7 @@ export type System = {
 
 export type Slug = {
   _type: 'slug'
-  current?: string
+  current: string
   source?: string
 }
 
@@ -111,7 +158,7 @@ export type Person = {
     crop?: SanityImageCrop
     _type: 'image'
   }
-  slug?: Slug
+  slug: Slug
   affiliations?: Array<{
     label?: string
     url?: string
@@ -122,12 +169,12 @@ export type Person = {
 
 export type Material = {
   _type: 'material'
-  name?:
+  name:
     | 'Acrylic'
     | 'Aluminum'
     | 'Aluminum 5052'
     | 'Aluminum 6061'
-    | 'Aluminum AlMgSi1'
+    | 'Aluminum 6082'
     | 'Bronze'
     | 'Carbon Fiber'
     | 'Composite Sandwich'
@@ -137,14 +184,15 @@ export type Material = {
     | 'Fiberglass'
     | 'Glass'
     | 'Naval Brass'
-    | 'Particle Board'
     | 'Plastic'
-    | 'Plywood'
     | 'Solar Panels'
     | 'Stainless Steel'
     | 'Starboard (HDPE)'
+    | 'Trampoline'
     | 'Turcite'
     | 'Wood'
+    | 'Wood (map Land)'
+    | 'Wood (map Water)'
   description?: string
 }
 
@@ -187,8 +235,8 @@ export type Location = {
   _rev: string
   title?: string
   location?: {
-    lat?: number
-    lng?: number
+    lat: number
+    lng: number
   }
 }
 
@@ -199,6 +247,13 @@ export type PersonReference = {
   [internalGroqTypeReferenceTo]?: 'person'
 }
 
+export type SanityFileAssetReference = {
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'sanity.fileAsset'
+}
+
 export type Article = {
   _id: string
   _type: 'article'
@@ -206,10 +261,10 @@ export type Article = {
   _updatedAt: string
   _rev: string
   title?: string
+  publishDate?: string
   isLive?: boolean
-  hideMaterials?: boolean
   subtitle?: string
-  slug?: Slug
+  slug: Slug
   authors?: Array<
     {
       _key: string
@@ -249,9 +304,9 @@ export type Article = {
     | {
         title?: string
         caption?: string
-        imageSet?: Array<
+        imageSet: Array<
           | {
-              drawing?: string
+              drawing: string
               _type: 'drawingImage'
               _key: string
             }
@@ -279,7 +334,18 @@ export type Article = {
         _key: string
       }
     | {
+        video: {
+          asset?: SanityFileAssetReference
+          media?: unknown
+          _type: 'file'
+        }
+        caption?: string
+        _type: 'inlineVideo'
+        _key: string
+      }
+    | {
         title?: string
+        tooltips?: boolean
         models?: Array<string>
         _type: 'inlineModel'
         _key: string
@@ -290,8 +356,20 @@ export type Article = {
         _type: 'chart'
         _key: string
       }
+    | {
+        title?: string
+        rows: Array<{
+          label: string
+          value: string
+          _type: 'row'
+          _key: string
+        }>
+        _type: 'specsTable'
+        _key: string
+      }
   >
   relatedModels?: Array<string>
+  hideMaterials?: boolean
 }
 
 export type MediaTag = {
@@ -324,9 +402,9 @@ export type SanityImagePalette = {
 
 export type SanityImageDimensions = {
   _type: 'sanity.imageDimensions'
-  height?: number
-  width?: number
-  aspectRatio?: number
+  height: number
+  width: number
+  aspectRatio: number
 }
 
 export type SanityImageMetadata = {
@@ -352,14 +430,14 @@ export type SanityFileAsset = {
   title?: string
   description?: string
   altText?: string
-  sha1hash?: string
-  extension?: string
-  mimeType?: string
-  size?: number
-  assetId?: string
+  sha1hash: string
+  extension: string
+  mimeType: string
+  size: number
+  assetId: string
   uploadId?: string
-  path?: string
-  url?: string
+  path: string
+  url: string
   source?: SanityAssetSourceData
 }
 
@@ -381,14 +459,14 @@ export type SanityImageAsset = {
   title?: string
   description?: string
   altText?: string
-  sha1hash?: string
-  extension?: string
-  mimeType?: string
-  size?: number
-  assetId?: string
+  sha1hash: string
+  extension: string
+  mimeType: string
+  size: number
+  assetId: string
   uploadId?: string
-  path?: string
-  url?: string
+  path: string
+  url: string
   metadata?: SanityImageMetadata
   source?: SanityAssetSourceData
 }
@@ -415,6 +493,7 @@ export type AllSanitySchemaTypes =
   | Component
   | Location
   | PersonReference
+  | SanityFileAssetReference
   | Article
   | MediaTag
   | SanityImagePaletteSwatch
@@ -425,4 +504,3 @@ export type AllSanitySchemaTypes =
   | SanityAssetSourceData
   | SanityImageAsset
   | Geopoint
-export declare const internalGroqTypeReferenceTo: unique symbol

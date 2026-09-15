@@ -113,6 +113,8 @@ export default async function Page({ params }) {
   );
 
   if (!dataWithMatchedDrawings.relatedModels) {
+    // no CMS-defined models: fall back to the system's default model set
+    dataWithMatchedDrawings.usesSystemModels = true;
     const articleSystem = (
       dataWithMatchedDrawings.system?.slug?.current || ""
     ).replace(" & ", "_");
