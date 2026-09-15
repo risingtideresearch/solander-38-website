@@ -28,7 +28,7 @@ export default async function Articles({ subtitles, description }) {
                 {(system.articles || []).map((article) => (
                   <li key={article._id}>
                     <div className={styles["article-preview"]}>
-                      {article.slug == "range" ? (
+                      {article.slug == "frequently-asked-questions" ? (
                         <RangeChart title={""} />
                       ) : (
                         <Image

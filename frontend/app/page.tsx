@@ -5,6 +5,7 @@ import styles from "./home.module.scss";
 import { ArticleRow } from "./components/ArticleRow";
 import {
   fetchArticleIdMap,
+  fetchFAQArticle,
   fetchFirstArticle,
   fetchHomepage,
   fetchLatestArticles,
@@ -89,6 +90,7 @@ export default async function Page() {
     systems,
     articleIdMap,
     firstArticle,
+    faqArticle,
   ] = await Promise.all([
     fetchPeople(),
     fetchLatestArticles(),
@@ -96,6 +98,7 @@ export default async function Page() {
     fetchSystemNames(),
     fetchArticleIdMap(),
     fetchFirstArticle(),
+    fetchFAQArticle(),
   ]);
 
   const anatomyStills = getHomepageStills();
@@ -103,7 +106,8 @@ export default async function Page() {
   const HOLD = 4;
   const FADE = 1;
   const crossfade = anatomyStills.length * HOLD;
-  const at = (seconds: number) => `${((seconds / crossfade) * 100).toFixed(3)}%`;
+  const at = (seconds: number) =>
+    `${((seconds / crossfade) * 100).toFixed(3)}%`;
   const crossfadeKeyframes = `@keyframes anatomy-crossfade {
     0% { opacity: 0 }
     ${at(FADE)} { opacity: 1 }
@@ -160,31 +164,33 @@ export default async function Page() {
                 </Link>
               </h4>
               {renderText(homepage.data.sectionDescriptions.stories)}
-              <p>
-                For an overview by RTRF Research Director{" "}
-                <Link
-                  style={{ whiteSpace: "nowrap" }}
-                  href={`${URLS.PEOPLE}#${"avi-bryant"}`}
-                >
-                  Avi Bryant
-                </Link>
-                , read:
-              </p>
-              <ul className={styles["home__latest-list"]}>
-                {firstArticle && (
-                  <li>
-                    <ArticleRow
-                      articleId="1&#8209;A"
-                      href={`${URLS.STORIES}/${firstArticle.slug}`}
-                      title={firstArticle.title}
-                      date={formatDate(
-                        firstArticle.effectiveDate ?? firstArticle._updatedAt,
-                      )}
-                      compact
-                    />
-                  </li>
-                )}
-              </ul>
+              {firstArticle && (
+                <>
+                  <p>
+                    For an overview by RTRF Research Director{" "}
+                    <Link
+                      style={{ whiteSpace: "nowrap" }}
+                      href={`${URLS.PEOPLE}#${"avi-bryant"}`}
+                    >
+                      Avi Bryant
+                    </Link>
+                    , read:
+                  </p>
+                  <ul className={styles["home__latest-list"]}>
+                    <li>
+                      <ArticleRow
+                        articleId={articleIdMap[firstArticle._id]}
+                        href={`${URLS.STORIES}/${firstArticle.slug}`}
+                        title={firstArticle.title}
+                        date={formatDate(
+                          firstArticle.effectiveDate ?? firstArticle._updatedAt,
+                        )}
+                        compact
+                      />
+                    </li>
+                  </ul>
+                </>
+              )}
               <p style={{ marginTop: "1.5em" }}>Recent stories:</p>
               <ul className={styles["home__latest-list"]}>
                 {latestArticles.map((article) => (
@@ -204,6 +210,27 @@ export default async function Page() {
                   </li>
                 ))}
               </ul>
+              {faqArticle && (
+                <>
+                  <p>FAQs:</p>
+                  <ul className={styles["home__latest-list"]}>
+                    <li>
+                      <ArticleRow
+                        articleId={articleIdMap[faqArticle._id]}
+                        href={`${URLS.STORIES}/${faqArticle.slug}`}
+                        title={faqArticle.title}
+                        date={formatDate(
+                          faqArticle.effectiveDate ?? faqArticle._updatedAt,
+                        )}
+                        compact
+                      />
+                      <p className={styles["home__article-subtitle"]}>
+                        {faqArticle.subtitle}
+                      </p>
+                    </li>
+                  </ul>
+                </>
+              )}
             </div>
 
             <div className={styles["home__section"]}>
@@ -222,14 +249,14 @@ export default async function Page() {
             </div>
             <div className={styles["home__section"]}>
               <h4>
-                <Link className="icon-link" href={URLS.ANATOMY + '/overview'}>
+                <Link className="icon-link" href={URLS.ANATOMY + "/overview"}>
                   Anatomy
                   <LiaArrowRightSolid size={18} />
                 </Link>
               </h4>
               {renderText(homepage.data.sectionDescriptions.anatomy)}
               <Link
-                href={URLS.ANATOMY + '/overview'}
+                href={URLS.ANATOMY + "/overview"}
                 className={`bg--grid ${styles["home__anatomy-link"]}`}
               >
                 <div
@@ -262,7 +289,7 @@ export default async function Page() {
             </div>
             <div className={styles["home__section"]}>
               <h4>
-                <Link className="icon-link" href={URLS.DRAWINGS + '/overview'}>
+                <Link className="icon-link" href={URLS.DRAWINGS + "/overview"}>
                   Drawings
                   <LiaArrowRightSolid size={18} />
                 </Link>
@@ -277,16 +304,13 @@ export default async function Page() {
             </div>
             <div className={styles["home__section"]}>
               <h4>
-                <Link className="icon-link" href={URLS.PHOTOS + '/overview'}>
+                <Link className="icon-link" href={URLS.PHOTOS + "/overview"}>
                   Photos
                   <LiaArrowRightSolid size={18} />
                 </Link>
               </h4>
               {renderText(homepage.data.sectionDescriptions.photos)}
-              <PhotoImage
-                image={homepage.data.image}
-                loading="eager"
-              />
+              <PhotoImage image={homepage.data.image} loading="eager" />
             </div>
             <div className={styles["home__section"]}>
               <h4>

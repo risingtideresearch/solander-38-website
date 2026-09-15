@@ -732,6 +732,7 @@ export const videoWithNavigationQuery = (idPrefix?: string) => {
 
 export const firstArticleQuery = `
 *[_type=="systems"][0].systems[0].articles[0]->{
+  _id,
   title,
   "slug": slug.current,
   _updatedAt,
@@ -740,6 +741,17 @@ export const firstArticleQuery = `
     name,
     "slug": slug.current
   }
+}
+`;
+
+export const FAQStoryQuery = `
+*[_type=="article" && slug.current == "frequently-asked-questions"][0]{
+  _id,
+  title,
+  "slug": slug.current,
+  _updatedAt,
+  "effectiveDate": coalesce(publishDate, _updatedAt),
+  subtitle
 }
 `;
 
