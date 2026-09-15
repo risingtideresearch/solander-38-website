@@ -144,6 +144,51 @@
     }
   }
 
+  &__media-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 1.5rem 0;
+
+    a {
+      text-decoration: none;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+      align-items: start;
+
+      &:not(:has(img)) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    li {
+      margin: 0 0 1.25rem 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__media-title {
+    margin: 0 0 0.125rem 0;
+  }
+
+  &__media-description {
+    font-size: 0.8125rem;
+    margin: 0.375rem 0 0 0;
+
+    @media screen and (max-width: 900px) {
+      font-size: 0.875rem;
+    }
+  }
+
   &__people-list {
     list-style: none;
     padding-left: 0;

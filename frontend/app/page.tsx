@@ -16,6 +16,7 @@ import Search from "./components/Search/Search";
 import { formatDate } from "./utils";
 import { DrawingCard } from "./drawings/DrawingCard";
 import { PhotoImage } from "./components/PhotoImage";
+import { Image as SanityImage } from "./components/Image";
 import Image from "next/image";
 import { Drawing } from "./drawings/types";
 import { getDrawingsManifest, getHomepageStills } from "./manifest-util";
@@ -39,6 +40,15 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
   },
 };
+
+function ExternalLinkArrow() {
+  return (
+    <span style={{ whiteSpace: "nowrap" }}>
+      {"⁠"}
+      <LiaArrowUpSolid size={14} style={{ marginRight: "-0.125em" }} />
+    </span>
+  );
+}
 
 function renderText(text: string | undefined) {
   if (!text) return null;
@@ -65,13 +75,7 @@ function renderDescription(blocks: any[]) {
               className="icon-link external-link"
             >
               {child.text}
-              <span style={{ whiteSpace: "nowrap" }}>
-                {"\u2060"}
-                <LiaArrowUpSolid
-                  size={14}
-                  style={{ marginRight: "-0.125em" }}
-                />
-              </span>
+              <ExternalLinkArrow />
             </a>
           ) : (
             child.text
@@ -232,21 +236,45 @@ export default async function Page() {
                 </>
               )}
             </div>
+            {/* Media */}
+            {!!homepage.data.mediaLinks?.length && (
+              <div className={styles["home__section"]}>
+                <h4>Media</h4>
+                <ul className={styles["home__media-list"]}>
+                  {homepage.data.mediaLinks.map((link: any) => (
+                    <li key={link._key}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="icon-link external-link"
+                      >
+                        {link.image?.asset && (
+                          <SanityImage
+                            src={link.image}
+                            alt={link.image.alt || link.title}
+                          />
+                        )}
+                        <div>
+                          <h6>{link.publisher}</h6>
+                          <p className={styles["home__media-title"] + " link"}>
+                            {link.title}
+                            <ExternalLinkArrow />
+                          </p>
+                        </div>
+                      </a>
+                      {link.description && (
+                        <p className={styles["home__media-description"]}>
+                          {link.description}
+                        </p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-            <div className={styles["home__section"]}>
-              <h4>Systems</h4>
-              {renderText(homepage.data.sectionDescriptions.systems)}
-              <ul className={styles["home__systems-list"]}>
-                {systems.map((s, i) => (
-                  <li key={s.slug}>
-                    <h6>
-                      {i + 1}.&nbsp;&nbsp;&nbsp;
-                      <Link href={`${URLS.ANATOMY}/${s.slug}`}>{s.name}</Link>
-                    </h6>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Anatomy */}
             <div className={styles["home__section"]}>
               <h4>
                 <Link className="icon-link" href={URLS.ANATOMY + "/overview"}>
@@ -287,6 +315,8 @@ export default async function Page() {
                 </div>
               </Link>
             </div>
+
+            {/* Drawings */}
             <div className={styles["home__section"]}>
               <h4>
                 <Link className="icon-link" href={URLS.DRAWINGS + "/overview"}>
@@ -302,6 +332,24 @@ export default async function Page() {
                 />
               )}
             </div>
+
+            {/* Systems */}
+            {/* <div className={styles["home__section"]}>
+              <h4>Systems</h4>
+              {renderText(homepage.data.sectionDescriptions.systems)}
+              <ul className={styles["home__systems-list"]}>
+                {systems.map((s, i) => (
+                  <li key={s.slug}>
+                    <h6>
+                      {i + 1}.&nbsp;&nbsp;&nbsp;
+                      <Link href={`${URLS.ANATOMY}/${s.slug}`}>{s.name}</Link>
+                    </h6>
+                  </li>
+                ))}
+              </ul>
+            </div> */}
+
+            {/* Photos */}
             <div className={styles["home__section"]}>
               <h4>
                 <Link className="icon-link" href={URLS.PHOTOS + "/overview"}>
@@ -312,6 +360,8 @@ export default async function Page() {
               {renderText(homepage.data.sectionDescriptions.photos)}
               <PhotoImage image={homepage.data.image} loading="eager" />
             </div>
+
+            {/* People */}
             <div className={styles["home__section"]}>
               <h4>
                 <Link className="icon-link" href={URLS.PEOPLE}>
@@ -334,6 +384,8 @@ export default async function Page() {
                   ))}
               </ul>
             </div>
+
+            {/* License */}
             <div className={styles["home__section"]}>
               <h4>License</h4>
               <div>{renderDescription(homepage.data.license)}</div>

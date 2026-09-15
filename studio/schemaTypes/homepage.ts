@@ -102,6 +102,57 @@ export const homepage = defineType({
       ],
     }),
     defineField({
+      name: 'mediaLinks',
+      title: 'Media links',
+      description: 'Press and media coverage, shown on the homepage.',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          name: 'mediaLink',
+          type: 'object',
+          title: 'Media link',
+          fields: [
+            defineField({
+              name: 'title',
+              type: 'string',
+              title: 'Title',
+              validation: (rule) => rule.required(),
+            }),
+            defineField({
+              name: 'publisher',
+              type: 'string',
+              title: 'Publisher',
+              validation: (rule) => rule.required(),
+            }),
+            defineField({
+              name: 'url',
+              type: 'url',
+              title: 'URL',
+              validation: (rule) => rule.required(),
+            }),
+            // defineField({
+            //   name: 'description',
+            //   type: 'text',
+            //   title: 'Description',
+            //   rows: 3,
+            // }),
+            defineField({
+              name: 'image',
+              type: 'image',
+              title: 'Image',
+              options: {
+                hotspot: true,
+                metadata: ['blurhash', 'lqip', 'palette', 'exif', 'location'],
+              },
+            }),
+          ],
+          preview: {
+            select: {title: 'title', subtitle: 'publisher', media: 'image'},
+          },
+        }),
+      ],
+    }),
+    defineField({
       name: 'license',
       type: 'array',
       validation: (rule) => rule.required(),

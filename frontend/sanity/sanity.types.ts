@@ -62,6 +62,21 @@ export type Homepage = {
     people: string
     systems: string
   }
+  mediaLinks?: Array<{
+    title: string
+    publisher: string
+    url: string
+    description?: string
+    image?: {
+      asset?: SanityImageAssetReference
+      media?: unknown
+      hotspot?: SanityImageHotspot
+      crop?: SanityImageCrop
+      _type: 'image'
+    }
+    _type: 'mediaLink'
+    _key: string
+  }>
   license: Array<{
     children?: Array<{
       marks?: Array<string>

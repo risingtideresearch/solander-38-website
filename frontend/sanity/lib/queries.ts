@@ -417,6 +417,18 @@ export const homepageQuery = () => {
         }
       }
     },
+    mediaLinks[]{
+      ...,
+      image {
+        ...,
+        asset -> {
+          ...,
+          metadata {
+            ...,
+          }
+        }
+      }
+    },
   }`;
 };
 
