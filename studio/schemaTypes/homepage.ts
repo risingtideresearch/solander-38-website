@@ -104,7 +104,7 @@ export const homepage = defineType({
     defineField({
       name: 'mediaLinks',
       title: 'Media links',
-      description: 'Press and media coverage, shown on the homepage.',
+      description: 'Links to external articles.',
       type: 'array',
       of: [
         defineArrayMember({
