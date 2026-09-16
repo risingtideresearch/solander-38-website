@@ -775,7 +775,7 @@ export const systemNamesQuery = `
 `;
 
 export const latestArticlesQuery = `
-*[_type == "article" && isLive == true && _id != *[_type=="systems"][0].systems[0].articles[0]->_id] | order(coalesce(publishDate, _updatedAt) desc) [0..2] {
+*[_type == "article" && isLive == true && _id != *[_type=="systems"][0].systems[0].articles[0]->_id && slug.current != "frequently-asked-questions"] | order(coalesce(publishDate, _updatedAt) desc) [0..2] {
   _id,
   _updatedAt,
   "effectiveDate": coalesce(publishDate, _updatedAt),
