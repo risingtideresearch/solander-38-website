@@ -1,4 +1,5 @@
 import { formatDate } from "../utils";
+import { URLS } from "../components/Navigation/Navigation";
 import styles from "./../stories/article.module.scss";
 import RelatedStories from "../drawings/RelatedStories";
 
@@ -26,7 +27,7 @@ export default function VideoMetadata({ asset, stories }) {
           <>
             <dt>System</dt>
             <dd style={{ textTransform: "uppercase" }}>
-              <a href={`/photos/${system.slug}`}>{system.name}</a>
+              <a href={`${URLS.PHOTOGRAPHY}/${system.slug}`}>{system.name}</a>
             </dd>
           </>
         )}

@@ -3,5 +3,5 @@ import { URLS } from "../components/Navigation/Navigation";
 
 export const getPhotoURL = (asset: SanityAsset) => {
   const slug = asset?._id?.split("-")[1] || "";
-  return `${URLS.PHOTOS}/image/${slug}`;
+  return `${URLS.PHOTOGRAPHY}/image/${slug}`;
 };

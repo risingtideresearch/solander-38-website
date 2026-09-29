@@ -2,6 +2,7 @@ import Gallery from "../components/Gallery";
 import { Image } from "../components/Image";
 import { VideoThumbnail } from "../components/VideoThumbnail";
 import { formatMonthYear } from "../utils";
+import { URLS } from "../components/Navigation/Navigation";
 import { getVideoURL } from "../videos/util";
 
 interface Photo {
@@ -28,7 +29,7 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
           photo.title && photo.title !== photo.originalFilename ? photo.title : null;
         return (
           <div key={photo._id}>
-            <a href={isVideo ? getVideoURL(photo) : `/photos/image/${url[1]}`}>
+            <a href={isVideo ? getVideoURL(photo) : `${URLS.PHOTOGRAPHY}/image/${url[1]}`}>
               {isVideo ? (
                 <VideoThumbnail
                   url={photo.url}

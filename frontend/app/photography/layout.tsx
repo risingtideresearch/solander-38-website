@@ -6,7 +6,7 @@ import { AcuminPro } from "../_fonts";
 import { SITE_URL } from "@/app/consts";
 
 export const metadata: Metadata = {
-  title: "Photos | Solander 38",
+  title: "Photography | Solander 38",
   description: "",
   icons: `${SITE_URL}/rising-tide.svg`,
 };

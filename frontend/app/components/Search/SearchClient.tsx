@@ -3,7 +3,7 @@
 import { BiSearch, BiX } from "react-icons/bi";
 import styles from "./search.module.scss";
 import { useEffect, useRef, useState } from "react";
-import { getPhotoURL } from "@/app/photos/util";
+import { getPhotoURL } from "@/app/photography/util";
 import { getVideoURL } from "@/app/videos/util";
 import { MdPerson, MdPlayCircleOutline } from "react-icons/md";
 import Image from "next/image";
@@ -259,7 +259,7 @@ export default function SearchClient({ type }) {
                     <div key={resultType}>
                       <h6>
                         {resultType == "sanity.imageAsset"
-                          ? "Photos"
+                          ? "Photography"
                           : resultType == "sanity.fileAsset"
                             ? "Videos"
                           : resultType == "person"

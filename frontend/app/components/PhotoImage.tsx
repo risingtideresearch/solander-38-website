@@ -1,5 +1,5 @@
 import { Image } from "./Image";
-import { getPhotoURL } from "../photos/util";
+import { getPhotoURL } from "../photography/util";
 import { formatMonthYear } from "../utils";
 
 interface PhotoImageProps {

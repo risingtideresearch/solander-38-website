@@ -6,7 +6,7 @@ export enum URLS {
   STORIES = "/stories",
   ANATOMY = "/anatomy",
   DRAWINGS = "/drawings",
-  PHOTOS = "/photos",
+  PHOTOGRAPHY = "/photography",
   VIDEO = "/videos",
   PEOPLE = "/people",
 }
@@ -29,7 +29,7 @@ export const nav = [
     nav2d: true,
   },
   {
-    url: URLS.PHOTOS,
+    url: URLS.PHOTOGRAPHY,
     label: "Photography",
     nav2d: true,
   },

@@ -10,7 +10,7 @@ export function PhotoPage({ asset, next, prev }) {
 
   return (
     <>
-      <SubNav prev={prev} next={next} urlPrefix={`${URLS.PHOTOS}/image`} />
+      <SubNav prev={prev} next={next} urlPrefix={`${URLS.PHOTOGRAPHY}/image`} />
       <div className="section--two-col detail-page">
         <div>
           <div style={{ position: "sticky", top: "3rem" }}>

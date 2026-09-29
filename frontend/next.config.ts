@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
     BUILD_DATE: new Date().toISOString(),
   },
   devIndicators: false,
+  async redirects() {
+    return [
+      // /photos was renamed to /photography
+      { source: "/photos", destination: "/photography", permanent: true },
+      { source: "/photos/:path*", destination: "/photography/:path*", permanent: true },
+    ];
+  },
   turbopack: {
     root: __dirname,
   },

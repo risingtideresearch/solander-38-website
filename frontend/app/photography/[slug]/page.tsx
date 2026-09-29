@@ -55,11 +55,11 @@ export default async function Page({
 
   return (
     <>
-      <Navigation type={"top-bar"} active={URLS.PHOTOS} system={slug} />
+      <Navigation type={"top-bar"} active={URLS.PHOTOGRAPHY} system={slug} />
        <main className={styles.main}>
         <div className="section--two-col">
           <div>
-            <MinimalTOC systems={systems.data.systems} url={URLS.PHOTOS} system={slug} />
+            <MinimalTOC systems={systems.data.systems} url={URLS.PHOTOGRAPHY} system={slug} />
           </div>
           <div>
             <PhotoGallery photos={sortedPhotos} />

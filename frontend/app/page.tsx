@@ -352,8 +352,8 @@ export default async function Page() {
             {/* Photos */}
             <div className={styles["home__section"]}>
               <h4>
-                <Link className="icon-link" href={URLS.PHOTOS + "/overview"}>
-                  Photos
+                <Link className="icon-link" href={URLS.PHOTOGRAPHY + "/overview"}>
+                  Photography
                   <LiaArrowRightSolid size={18} />
                 </Link>
               </h4>

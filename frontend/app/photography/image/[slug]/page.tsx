@@ -75,7 +75,7 @@ export default async function Page({
     <>
       <Navigation
         type={"top-bar"}
-        active={URLS.PHOTOS}
+        active={URLS.PHOTOGRAPHY}
         system={system?.slug}
       />
       <PhotoPage asset={current} next={next} prev={prev} />

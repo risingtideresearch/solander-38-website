@@ -1,8 +1,8 @@
-import { getPhotoURL } from "./photos/util";
+import { getPhotoURL } from "./photography/util";
 import { getVideoURL } from "./videos/util";
 
 /**
- * Photos and videos share one gallery sequence, so the /photos/image/[slug]
+ * Photos and videos share one gallery sequence, so the /photography/image/[slug]
  * and /video/[uuid] pages have to walk that same combined list — stepping
  * "next" off a photo can land on a video and vice versa.
  */
@@ -38,7 +38,7 @@ export const isVideoAsset = (asset?: { _type?: string }) =>
 export const getMediaURL = (asset: MediaAsset) =>
   isVideoAsset(asset) ? getVideoURL(asset) : getPhotoURL(asset);
 
-/** The id fragment used in both /photos/image/<uuid> and /video/<uuid>. */
+/** The id fragment used in both /photography/image/<uuid> and /video/<uuid>. */
 export const getMediaUUID = (asset: MediaAsset) => asset._id.split("-")[1] || "";
 
 /**

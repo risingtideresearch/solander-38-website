@@ -3,7 +3,7 @@ import { DrawingCard } from "../drawings/DrawingCard";
 import { Image } from "../components/Image";
 import { Drawing } from "../drawings/types";
 import styles from "./image-set.module.scss";
-import { getPhotoURL } from "../photos/util";
+import { getPhotoURL } from "../photography/util";
 
 interface SanityImageAsset {
   _type: "image";
