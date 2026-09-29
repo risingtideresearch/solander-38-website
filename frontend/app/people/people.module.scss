@@ -11,14 +11,13 @@
 .list {
   max-width: 120rem;
   margin: 0 auto 6rem auto;
-  border-top: 1px solid var(--black);
 }
 
 .person {
   display: grid;
   grid-template-columns: 12rem 1fr 1.5fr;
-  border-bottom: 1px solid var(--black);
   scroll-margin-top: 2rem;
+  margin-bottom: 1rem;
   // the gutter keeps the content on the 94rem column the header uses, while the
   // rule above and below spans the whole list
   padding: 0 max(2.5rem, calc((100% - 89rem) / 2));
